@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.0">
+<meta name="podcast-version" content="1.1">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -165,7 +165,14 @@ function estado() {
 }
 
 $('#volver').onclick = () => { audio.pause(); location.hash = ''; $('#player').classList.add('hidden'); $('#lista').classList.remove('hidden'); cargar(); };
-$('#voz').onchange = e => ponerVoz(e.target.value, audio.currentTime, !audio.paused);
+function equivalente(t, deCaps, aCaps) {
+  // mismo capitulo y misma fraccion adentro: cada voz dura distinto
+  let i = 0; deCaps.forEach((k, j) => { if (t >= k.t) i = j; });
+  const de = deCaps[i], a = aCaps[i];
+  if (!de || !a || !de.duracion) return t;
+  return a.t + Math.min(1, (t - de.t) / de.duracion) * a.duracion;
+}
+$('#voz').onchange = e => ponerVoz(e.target.value, equivalente(audio.currentTime, caps, ep.voces[e.target.value].capitulos || []), !audio.paused);
 $('#play').onclick = () => audio.paused ? audio.play() : audio.pause();
 $('#atras').onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); };
 $('#adelante').onclick = () => { audio.currentTime = Math.min(audio.duration || 1e9, audio.currentTime + 30); };
