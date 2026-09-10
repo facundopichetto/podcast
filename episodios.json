@@ -271,7 +271,34 @@
     }
    },
    "duracion": 1175.3
+  },
+  {
+   "id": "ep2-2-awtomic",
+   "fecha": "2026-09-10",
+   "titulo": "episodio 2, bloque 2: awtomic: lo que quedó abierto, ticket por ticket",
+   "temas": [
+    "awtomic",
+    "cx",
+    "verify",
+    "verificador"
+   ],
+   "palabras": 659,
+   "guion": "episodio-2-bloque-2.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep2-2-awtomic.daniela.mp3",
+     "duracion": 170.0,
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
+       "duracion": 170.0
+      }
+     ]
+    }
+   },
+   "duracion": 170.0
   }
  ],
- "actualizado": "2026-09-10 17:58"
+ "actualizado": "2026-09-10 18:03"
 }
