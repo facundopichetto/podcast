@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.1">
+<meta name="podcast-version" content="1.2">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -51,6 +51,16 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 .cap.actual { color: var(--acc); }
 .cap.actual .t { color: var(--acc); }
 .cap .d { margin-left:auto; color: var(--dim); font-size: 13px; font-variant-numeric: tabular-nums; }
+.fila { display:flex; align-items:stretch; border-bottom:1px solid var(--line); }
+.fila .cap { border-bottom:none; flex:1; }
+.fila .solo { background:none; border:none; border-left:1px solid var(--line); color:var(--acc); font: inherit; font-size: 20px; padding: 0 16px; cursor:pointer; }
+.fila.actual .solo { background: var(--acc); color:#000; }
+#modo { display:flex; align-items:center; justify-content:space-between; gap:10px; color:var(--dim); font-size:14px; margin: 4px 0 14px; }
+#modo b { color: var(--acc2); font-weight: 500; }
+#modo button { font: inherit; font-size: 14px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor:pointer; }
+#modo button.on { border-color: var(--acc); color: var(--acc); }
+#bloque { color: var(--acc); font-size: 15px; margin: -8px 0 10px; }
+#bloque.hidden { display:none; }
 #guion { color: var(--dim); font-size: 13px; margin-top: 20px; }
 </style>
 </head>
@@ -63,6 +73,7 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
   <button id="volver">‹ episodios</button>
   <div id="pt"></div>
   <div id="pf"></div>
+  <div id="bloque" class="hidden"></div>
   <label class="voz">voz <select id="voz"></select></label>
   <audio id="audio" preload="metadata" playsinline></audio>
   <input id="barra" type="range" min="0" max="100" step="0.1" value="0">
@@ -73,6 +84,7 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
     <button id="adelante">30 ›<small>segundos</small></button>
   </div>
   <h2>capítulos</h2>
+  <div id="modo"><span id="modotxt">episodio entero</span><button id="seguir" class="on">al terminar, sigue</button></div>
   <div id="caps"></div>
   <div id="guion"></div>
 </section>
@@ -81,6 +93,8 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 const $ = s => document.querySelector(s);
 const audio = $('#audio');
 let datos = null, ep = null, voz = localStorage.voz || 'daniela', caps = [];
+// modo bloque: bloque = indice del capitulo que suena solo (-1 = episodio entero)
+let bloque = -1, seguir = localStorage.seguir !== 'no';
 const VELS = [1, 1.15, 1.3];
 
 const fmt = s => { s = Math.max(0, Math.floor(s || 0)); const m = Math.floor(s / 60), r = s % 60; const h = Math.floor(m / 60); return (h ? h + ':' + String(m % 60).padStart(2, '0') : m) + ':' + String(r).padStart(2, '0'); };
@@ -115,47 +129,92 @@ function abrir(e) {
   Object.keys(e.voces).forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = (datos.voces || {})[v] || v; sel.appendChild(o); });
   if (!e.voces[voz]) voz = Object.keys(e.voces)[0];
   sel.value = voz;
+  bloque = -1;
   ponerVoz(voz, +localStorage['pos:' + e.id] || 0, false);
   $('#guion').innerHTML = e.guion ? `guión: <a href="guiones/${e.guion}">${e.guion}</a>` : '';
   window.scrollTo(0, 0);
 }
 
-function ponerVoz(v, t, seguir) {
+function ponerVoz(v, t, play) {
   voz = v; localStorage.voz = v;
   const d = ep.voces[v];
   caps = d.capitulos || [];
-  audio.src = d.archivo;
+  if (bloque >= 0 && !(caps[bloque] || {}).archivo) bloque = -1;
+  audio.src = bloque >= 0 ? caps[bloque].archivo : d.archivo;
   audio.load();
-  const ir = () => { try { audio.currentTime = t; } catch (_) {} if (seguir) audio.play(); pintarCaps(); };
+  const ir = () => { try { audio.currentTime = t; } catch (_) {} if (play) audio.play(); pintarCaps(); };
   audio.addEventListener('loadedmetadata', ir, { once: true });
   pintarCaps();
   sesion();
 }
 
+// reproduce solo el bloque i (su propio mp3). al terminar sigue con el siguiente si `seguir`.
+function ponerBloque(i, play) {
+  if (!caps[i] || !caps[i].archivo) return;
+  bloque = i;
+  localStorage['bloque:' + ep.id] = i;
+  ponerVoz(voz, 0, play);
+}
+
+function siguienteBloque(paso) {
+  if (bloque < 0) {
+    // episodio entero: saltar al capitulo anterior / siguiente
+    let i = 0; caps.forEach((k, j) => { if (audio.currentTime >= k.t + (paso < 0 ? 3 : 0)) i = j; });
+    const k = caps[Math.max(0, Math.min(caps.length - 1, i + paso))];
+    if (k) audio.currentTime = k.t;
+    return;
+  }
+  const n = bloque + paso;
+  if (n < 0 || n >= caps.length) { audio.pause(); return; }
+  ponerBloque(n, true);
+}
+
 function pintarCaps() {
   const c = $('#caps'); c.innerHTML = '';
   const t = audio.currentTime || 0;
-  let actual = -1;
-  caps.forEach((k, i) => { if (t >= k.t - 0.5) actual = i; });
+  let actual = bloque;
+  if (bloque < 0) caps.forEach((k, i) => { if (t >= k.t - 0.5) actual = i; });
   caps.forEach((k, i) => {
+    const f = document.createElement('div'); f.className = 'fila' + (i === actual ? ' actual' : '');
     const b = document.createElement('button'); b.className = 'cap' + (i === actual ? ' actual' : '');
-    b.innerHTML = `<span class="t">${fmt(k.t)}</span><span>${k.titulo}</span><span class="d">${min(k.duracion)}</span>`;
-    b.onclick = () => { audio.currentTime = k.t; audio.play(); };
-    c.appendChild(b);
+    b.innerHTML = `<span class="t">${bloque >= 0 ? (i + 1) + '/' + caps.length : fmt(k.t)}</span><span>${k.titulo}</span><span class="d">${min(k.duracion)}</span>`;
+    b.onclick = () => { if (bloque >= 0) { ponerBloque(i, true); } else { audio.currentTime = k.t; audio.play(); } };
+    f.appendChild(b);
+    if (k.archivo) {
+      const s = document.createElement('button'); s.className = 'solo'; s.title = 'reproducir solo este bloque';
+      s.textContent = (i === bloque && !audio.paused) ? '❚❚' : '▶';
+      s.onclick = () => { if (i === bloque) { audio.paused ? audio.play() : audio.pause(); } else ponerBloque(i, true); };
+      f.appendChild(s);
+    }
+    c.appendChild(f);
   });
+  const bl = $('#bloque');
+  if (bloque >= 0) { bl.classList.remove('hidden'); bl.textContent = `bloque ${bloque + 1} de ${caps.length}: ${caps[bloque].titulo}`; }
+  else bl.classList.add('hidden');
+  $('#modotxt').innerHTML = bloque >= 0 ? `<a href="#" id="entero">por bloques</a> <b>· ${seguir ? 'sigue solo' : 'para al terminar'}</b>` : 'episodio entero';
+  const en = $('#entero');
+  if (en) en.onclick = ev => { ev.preventDefault(); const t = (caps[bloque] || {}).t + (audio.currentTime || 0), p = !audio.paused; bloque = -1; ponerVoz(voz, t, p); };
+  $('#seguir').className = seguir ? 'on' : '';
+  $('#seguir').textContent = seguir ? 'al terminar, sigue' : 'al terminar, para';
 }
 
 function sesion() {
   if (!('mediaSession' in navigator)) return;
   const ms = navigator.mediaSession;
-  ms.metadata = new MediaMetadata({ title: ep.titulo, artist: 'podcast del agente · ' + ((datos.voces || {})[voz] || voz), album: ep.fecha,
+  const k = bloque >= 0 ? caps[bloque] : null;
+  ms.metadata = new MediaMetadata({
+    title: k ? `${bloque + 1}/${caps.length} ${k.titulo}` : ep.titulo,
+    artist: (k ? ep.titulo + ' · ' : 'podcast del agente · ') + ((datos.voces || {})[voz] || voz), album: ep.fecha,
     artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] });
   ms.setActionHandler('play', () => audio.play());
   ms.setActionHandler('pause', () => audio.pause());
   ms.setActionHandler('seekbackward', d => { audio.currentTime = Math.max(0, audio.currentTime - (d.seekOffset || 10)); });
   ms.setActionHandler('seekforward', d => { audio.currentTime = Math.min(audio.duration || 1e9, audio.currentTime + (d.seekOffset || 30)); });
   try { ms.setActionHandler('seekto', d => { if (d.seekTime != null) audio.currentTime = d.seekTime; }); } catch (_) {}
-  try { ms.setActionHandler('previoustrack', null); ms.setActionHandler('nexttrack', null); } catch (_) {}
+  try {
+    ms.setActionHandler('previoustrack', caps.length > 1 ? () => siguienteBloque(-1) : null);
+    ms.setActionHandler('nexttrack', caps.length > 1 ? () => siguienteBloque(1) : null);
+  } catch (_) {}
 }
 
 function estado() {
@@ -172,22 +231,32 @@ function equivalente(t, deCaps, aCaps) {
   if (!de || !a || !de.duracion) return t;
   return a.t + Math.min(1, (t - de.t) / de.duracion) * a.duracion;
 }
-$('#voz').onchange = e => ponerVoz(e.target.value, equivalente(audio.currentTime, caps, ep.voces[e.target.value].capitulos || []), !audio.paused);
+$('#voz').onchange = e => {
+  const nc = ep.voces[e.target.value].capitulos || [];
+  const t = bloque >= 0 ? Math.min(1, audio.currentTime / ((caps[bloque] || {}).duracion || 1)) * ((nc[bloque] || {}).duracion || 0)
+                        : equivalente(audio.currentTime, caps, nc);
+  ponerVoz(e.target.value, t, !audio.paused);
+};
+$('#seguir').onclick = () => { seguir = !seguir; localStorage.seguir = seguir ? 'si' : 'no'; pintarCaps(); };
 $('#play').onclick = () => audio.paused ? audio.play() : audio.pause();
 $('#atras').onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); };
 $('#adelante').onclick = () => { audio.currentTime = Math.min(audio.duration || 1e9, audio.currentTime + 30); };
 $('#vel').onclick = () => { const i = (VELS.indexOf(audio.playbackRate) + 1) % VELS.length; audio.playbackRate = VELS[i]; localStorage.vel = VELS[i]; $('#vel').textContent = VELS[i] + 'x'; };
 audio.playbackRate = +localStorage.vel || 1; $('#vel').textContent = audio.playbackRate + 'x';
-audio.onplay = () => { $('#play').textContent = 'pausa'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; };
-audio.onpause = () => { $('#play').textContent = 'play'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; };
+audio.onplay = () => { $('#play').textContent = 'pausa'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; pintarCaps(); };
+audio.onpause = () => { $('#play').textContent = 'play'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; pintarCaps(); };
 let ult = 0;
 audio.ontimeupdate = () => {
   const t = audio.currentTime, d = audio.duration || 0;
   $('#t0').textContent = fmt(t); $('#t1').textContent = '-' + fmt(d - t);
   if (!arrastrando) $('#barra').value = d ? (t / d * 100) : 0;
-  if (Math.abs(t - ult) > 2) { localStorage['pos:' + ep.id] = t; ult = t; pintarCaps(); estado(); }
+  if (Math.abs(t - ult) > 2) { ult = t; if (bloque < 0) { localStorage['pos:' + ep.id] = t; pintarCaps(); } estado(); }
 };
-audio.onended = () => { localStorage['pos:' + ep.id] = 0; };
+audio.onended = () => {
+  if (bloque < 0) { localStorage['pos:' + ep.id] = 0; return; }
+  if (seguir && bloque + 1 < caps.length) ponerBloque(bloque + 1, true);
+  else { pintarCaps(); }
+};
 audio.ondurationchange = () => { $('#t1').textContent = '-' + fmt(audio.duration); };
 let arrastrando = false;
 $('#barra').oninput = () => { arrastrando = true; $('#t0').textContent = fmt($('#barra').value / 100 * (audio.duration || 0)); };

@@ -28,7 +28,8 @@
       {
        "t": 0,
        "titulo": "optimizar: herramientas, servidor, delegar, plata",
-       "duracion": 1096.3
+       "duracion": 1096.3,
+       "archivo": "audio/ep1-daniela.mp3"
       }
      ]
     },
@@ -39,7 +40,8 @@
       {
        "t": 0.0,
        "titulo": "parte 1",
-       "duracion": 1498.9
+       "duracion": 1498.9,
+       "archivo": "audio/ep1-claude.mp3"
       }
      ]
     },
@@ -50,7 +52,8 @@
       {
        "t": 0.0,
        "titulo": "parte 1",
-       "duracion": 1397.3
+       "duracion": 1397.3,
+       "archivo": "audio/ep1-davefx.mp3"
       }
      ]
     },
@@ -61,7 +64,8 @@
       {
        "t": 0.0,
        "titulo": "parte 1",
-       "duracion": 1239.0
+       "duracion": 1239.0,
+       "archivo": "audio/ep1-sharvard.mp3"
       }
      ]
     }
@@ -92,42 +96,50 @@
       {
        "t": 0.0,
        "titulo": "hoy: tools y awtomic",
-       "duracion": 279.0
+       "duracion": 279.0,
+       "archivo": "audio/ep2-1-hoy-tools-y-awtomic.daniela.mp3"
       },
       {
        "t": 279.0,
        "titulo": "el podcast: cómo se arma y cómo escucharlo",
-       "duracion": 145.7
+       "duracion": 145.7,
+       "archivo": "audio/ep2-2-el-podcast-como-se-arma.daniela.mp3"
       },
       {
        "t": 424.7,
        "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
-       "duracion": 170.6
+       "duracion": 170.6,
+       "archivo": "audio/ep2-3-awtomic-lo-que-quedo.daniela.mp3"
       },
       {
        "t": 595.3,
        "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
-       "duracion": 146.6
+       "duracion": 146.6,
+       "archivo": "audio/ep2-4-fuzzer-el-show-de-hoy.daniela.mp3"
       },
       {
        "t": 741.9,
        "titulo": "juegos: black, el backup y lo que falta decidir",
-       "duracion": 117.5
+       "duracion": 117.5,
+       "archivo": "audio/ep2-5-juegos-black-el-backup.daniela.mp3"
       },
       {
        "t": 859.4,
        "titulo": "plata y flabs",
-       "duracion": 53.4
+       "duracion": 53.4,
+       "archivo": "audio/ep2-6-plata-y-flabs.daniela.mp3"
       },
       {
        "t": 912.7,
        "titulo": "lo que propone el agente",
-       "duracion": 124.1
+       "duracion": 124.1,
+       "archivo": "audio/ep2-7-lo-que-propone-el-agente.daniela.mp3"
       },
       {
        "t": 1036.8,
        "titulo": "prioridades y a, b, c",
-       "duracion": 138.5
+       "duracion": 138.5,
+       "archivo": "audio/ep2-8-prioridades-y-a-b-c.daniela.mp3"
       }
      ]
     },
@@ -138,42 +150,50 @@
       {
        "t": 0.0,
        "titulo": "hoy: tools y awtomic",
-       "duracion": 390.0
+       "duracion": 390.0,
+       "archivo": "audio/ep2-1-hoy-tools-y-awtomic.claude.mp3"
       },
       {
        "t": 390.0,
        "titulo": "el podcast: cómo se arma y cómo escucharlo",
-       "duracion": 206.7
+       "duracion": 206.7,
+       "archivo": "audio/ep2-2-el-podcast-como-se-arma.claude.mp3"
       },
       {
        "t": 596.7,
        "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
-       "duracion": 236.4
+       "duracion": 236.4,
+       "archivo": "audio/ep2-3-awtomic-lo-que-quedo.claude.mp3"
       },
       {
        "t": 833.1,
        "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
-       "duracion": 204.3
+       "duracion": 204.3,
+       "archivo": "audio/ep2-4-fuzzer-el-show-de-hoy.claude.mp3"
       },
       {
        "t": 1037.4,
        "titulo": "juegos: black, el backup y lo que falta decidir",
-       "duracion": 167.8
+       "duracion": 167.8,
+       "archivo": "audio/ep2-5-juegos-black-el-backup.claude.mp3"
       },
       {
        "t": 1205.2,
        "titulo": "plata y flabs",
-       "duracion": 75.2
+       "duracion": 75.2,
+       "archivo": "audio/ep2-6-plata-y-flabs.claude.mp3"
       },
       {
        "t": 1280.4,
        "titulo": "lo que propone el agente",
-       "duracion": 174.1
+       "duracion": 174.1,
+       "archivo": "audio/ep2-7-lo-que-propone-el-agente.claude.mp3"
       },
       {
        "t": 1454.5,
        "titulo": "prioridades y a, b, c",
-       "duracion": 196.2
+       "duracion": 196.2,
+       "archivo": "audio/ep2-8-prioridades-y-a-b-c.claude.mp3"
       }
      ]
     },
@@ -184,42 +204,50 @@
       {
        "t": 0.0,
        "titulo": "hoy: tools y awtomic",
-       "duracion": 353.6
+       "duracion": 353.6,
+       "archivo": "audio/ep2-1-hoy-tools-y-awtomic.davefx.mp3"
       },
       {
        "t": 353.6,
        "titulo": "el podcast: cómo se arma y cómo escucharlo",
-       "duracion": 193.0
+       "duracion": 193.0,
+       "archivo": "audio/ep2-2-el-podcast-como-se-arma.davefx.mp3"
       },
       {
        "t": 546.6,
        "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
-       "duracion": 213.6
+       "duracion": 213.6,
+       "archivo": "audio/ep2-3-awtomic-lo-que-quedo.davefx.mp3"
       },
       {
        "t": 760.2,
        "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
-       "duracion": 193.2
+       "duracion": 193.2,
+       "archivo": "audio/ep2-4-fuzzer-el-show-de-hoy.davefx.mp3"
       },
       {
        "t": 953.3,
        "titulo": "juegos: black, el backup y lo que falta decidir",
-       "duracion": 156.4
+       "duracion": 156.4,
+       "archivo": "audio/ep2-5-juegos-black-el-backup.davefx.mp3"
       },
       {
        "t": 1109.8,
        "titulo": "plata y flabs",
-       "duracion": 72.7
+       "duracion": 72.7,
+       "archivo": "audio/ep2-6-plata-y-flabs.davefx.mp3"
       },
       {
        "t": 1182.5,
        "titulo": "lo que propone el agente",
-       "duracion": 153.1
+       "duracion": 153.1,
+       "archivo": "audio/ep2-7-lo-que-propone-el-agente.davefx.mp3"
       },
       {
        "t": 1335.6,
        "titulo": "prioridades y a, b, c",
-       "duracion": 167.2
+       "duracion": 167.1,
+       "archivo": "audio/ep2-8-prioridades-y-a-b-c.davefx.mp3"
       }
      ]
     },
@@ -230,42 +258,50 @@
       {
        "t": 0.0,
        "titulo": "hoy: tools y awtomic",
-       "duracion": 325.0
+       "duracion": 325.0,
+       "archivo": "audio/ep2-1-hoy-tools-y-awtomic.sharvard.mp3"
       },
       {
        "t": 325.0,
        "titulo": "el podcast: cómo se arma y cómo escucharlo",
-       "duracion": 166.7
+       "duracion": 166.7,
+       "archivo": "audio/ep2-2-el-podcast-como-se-arma.sharvard.mp3"
       },
       {
        "t": 491.6,
        "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
-       "duracion": 198.8
+       "duracion": 198.8,
+       "archivo": "audio/ep2-3-awtomic-lo-que-quedo.sharvard.mp3"
       },
       {
        "t": 690.5,
        "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
-       "duracion": 172.6
+       "duracion": 172.6,
+       "archivo": "audio/ep2-4-fuzzer-el-show-de-hoy.sharvard.mp3"
       },
       {
        "t": 863.1,
        "titulo": "juegos: black, el backup y lo que falta decidir",
-       "duracion": 136.5
+       "duracion": 136.5,
+       "archivo": "audio/ep2-5-juegos-black-el-backup.sharvard.mp3"
       },
       {
        "t": 999.5,
        "titulo": "plata y flabs",
-       "duracion": 60.3
+       "duracion": 60.3,
+       "archivo": "audio/ep2-6-plata-y-flabs.sharvard.mp3"
       },
       {
        "t": 1059.8,
        "titulo": "lo que propone el agente",
-       "duracion": 145.3
+       "duracion": 145.3,
+       "archivo": "audio/ep2-7-lo-que-propone-el-agente.sharvard.mp3"
       },
       {
        "t": 1205.1,
        "titulo": "prioridades y a, b, c",
-       "duracion": 159.1
+       "duracion": 159.1,
+       "archivo": "audio/ep2-8-prioridades-y-a-b-c.sharvard.mp3"
       }
      ]
     }
@@ -292,7 +328,8 @@
       {
        "t": 0,
        "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
-       "duracion": 170.0
+       "duracion": 170.0,
+       "archivo": "audio/ep2-2-awtomic.daniela.mp3"
       }
      ]
     }
@@ -300,5 +337,5 @@
    "duracion": 170.0
   }
  ],
- "actualizado": "2026-09-10 18:03"
+ "actualizado": "2026-09-10 18:30"
 }
