@@ -1,0 +1,277 @@
+{
+ "voces": {
+  "daniela": "daniela, argentina",
+  "claude": "claude, mexico",
+  "davefx": "davefx, españa",
+  "sharvard": "sharvard, españa"
+ },
+ "episodios": [
+  {
+   "id": "ep1",
+   "fecha": "2026-09-10",
+   "titulo": "optimizar: herramientas, servidor, delegar, plata",
+   "temas": [
+    "tools",
+    "server",
+    "delegar",
+    "plata",
+    "errores",
+    "ideas"
+   ],
+   "palabras": 4138,
+   "guion": "episodio-1-2026-09-10.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep1-daniela.mp3",
+     "duracion": 1096.3,
+     "capitulos": [
+      {
+       "t": 0,
+       "titulo": "optimizar: herramientas, servidor, delegar, plata",
+       "duracion": 1096.3
+      }
+     ]
+    },
+    "claude": {
+     "archivo": "audio/ep1-claude.mp3",
+     "duracion": 1498.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "parte 1",
+       "duracion": 1498.9
+      }
+     ]
+    },
+    "davefx": {
+     "archivo": "audio/ep1-davefx.mp3",
+     "duracion": 1397.3,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "parte 1",
+       "duracion": 1397.3
+      }
+     ]
+    },
+    "sharvard": {
+     "archivo": "audio/ep1-sharvard.mp3",
+     "duracion": 1239.0,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "parte 1",
+       "duracion": 1239.0
+      }
+     ]
+    }
+   },
+   "duracion": 1096.3
+  },
+  {
+   "id": "ep2",
+   "fecha": "2026-09-10",
+   "titulo": "episodio 2: el día, el podcast, cada tema y las decisiones",
+   "temas": [
+    "tools",
+    "awtomic",
+    "fuzzer",
+    "juegos",
+    "plata",
+    "flabs",
+    "propuestas",
+    "a/b/c"
+   ],
+   "palabras": 4608,
+   "guion": "episodio-2-2026-09-10.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep2-daniela.mp3",
+     "duracion": 1175.3,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "hoy: tools y awtomic",
+       "duracion": 279.0
+      },
+      {
+       "t": 279.0,
+       "titulo": "el podcast: cómo se arma y cómo escucharlo",
+       "duracion": 145.7
+      },
+      {
+       "t": 424.7,
+       "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
+       "duracion": 170.6
+      },
+      {
+       "t": 595.3,
+       "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
+       "duracion": 146.6
+      },
+      {
+       "t": 741.9,
+       "titulo": "juegos: black, el backup y lo que falta decidir",
+       "duracion": 117.5
+      },
+      {
+       "t": 859.4,
+       "titulo": "plata y flabs",
+       "duracion": 53.4
+      },
+      {
+       "t": 912.7,
+       "titulo": "lo que propone el agente",
+       "duracion": 124.1
+      },
+      {
+       "t": 1036.8,
+       "titulo": "prioridades y a, b, c",
+       "duracion": 138.5
+      }
+     ]
+    },
+    "claude": {
+     "archivo": "audio/ep2-claude.mp3",
+     "duracion": 1650.8,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "hoy: tools y awtomic",
+       "duracion": 390.0
+      },
+      {
+       "t": 390.0,
+       "titulo": "el podcast: cómo se arma y cómo escucharlo",
+       "duracion": 206.7
+      },
+      {
+       "t": 596.7,
+       "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
+       "duracion": 236.4
+      },
+      {
+       "t": 833.1,
+       "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
+       "duracion": 204.3
+      },
+      {
+       "t": 1037.4,
+       "titulo": "juegos: black, el backup y lo que falta decidir",
+       "duracion": 167.8
+      },
+      {
+       "t": 1205.2,
+       "titulo": "plata y flabs",
+       "duracion": 75.2
+      },
+      {
+       "t": 1280.4,
+       "titulo": "lo que propone el agente",
+       "duracion": 174.1
+      },
+      {
+       "t": 1454.5,
+       "titulo": "prioridades y a, b, c",
+       "duracion": 196.2
+      }
+     ]
+    },
+    "davefx": {
+     "archivo": "audio/ep2-davefx.mp3",
+     "duracion": 1502.7,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "hoy: tools y awtomic",
+       "duracion": 353.6
+      },
+      {
+       "t": 353.6,
+       "titulo": "el podcast: cómo se arma y cómo escucharlo",
+       "duracion": 193.0
+      },
+      {
+       "t": 546.6,
+       "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
+       "duracion": 213.6
+      },
+      {
+       "t": 760.2,
+       "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
+       "duracion": 193.2
+      },
+      {
+       "t": 953.3,
+       "titulo": "juegos: black, el backup y lo que falta decidir",
+       "duracion": 156.4
+      },
+      {
+       "t": 1109.8,
+       "titulo": "plata y flabs",
+       "duracion": 72.7
+      },
+      {
+       "t": 1182.5,
+       "titulo": "lo que propone el agente",
+       "duracion": 153.1
+      },
+      {
+       "t": 1335.6,
+       "titulo": "prioridades y a, b, c",
+       "duracion": 167.2
+      }
+     ]
+    },
+    "sharvard": {
+     "archivo": "audio/ep2-sharvard.mp3",
+     "duracion": 1364.2,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "hoy: tools y awtomic",
+       "duracion": 325.0
+      },
+      {
+       "t": 325.0,
+       "titulo": "el podcast: cómo se arma y cómo escucharlo",
+       "duracion": 166.7
+      },
+      {
+       "t": 491.6,
+       "titulo": "awtomic: lo que quedó abierto, ticket por ticket",
+       "duracion": 198.8
+      },
+      {
+       "t": 690.5,
+       "titulo": "fuzzer: el show de hoy, meta, youtube y spotify",
+       "duracion": 172.6
+      },
+      {
+       "t": 863.1,
+       "titulo": "juegos: black, el backup y lo que falta decidir",
+       "duracion": 136.5
+      },
+      {
+       "t": 999.5,
+       "titulo": "plata y flabs",
+       "duracion": 60.3
+      },
+      {
+       "t": 1059.8,
+       "titulo": "lo que propone el agente",
+       "duracion": 145.3
+      },
+      {
+       "t": 1205.1,
+       "titulo": "prioridades y a, b, c",
+       "duracion": 159.1
+      }
+     ]
+    }
+   },
+   "duracion": 1175.3
+  }
+ ],
+ "actualizado": "2026-09-10 17:58"
+}
