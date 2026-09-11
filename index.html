@@ -35,7 +35,6 @@ a { color: var(--acc); text-decoration: none; }
 #volver { background:none; border:none; color:var(--dim); font: inherit; font-size: 15px; padding: 0; margin-bottom: 10px; cursor:pointer; }
 #pt { font-size: 21px; font-weight: 600; margin: 0 0 2px; }
 #pf { color: var(--dim); font-size: 13px; margin-bottom: 14px; }
-label.voz { display:flex; align-items:center; gap:10px; color:var(--dim); font-size:14px; margin-bottom: 16px; }
 select { flex:1; font: inherit; font-size: 15px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
 #barra { width:100%; margin: 6px 0 2px; accent-color: var(--acc); height: 28px; }
 #tiempos { display:flex; justify-content:space-between; color:var(--dim); font-size: 13px; font-variant-numeric: tabular-nums; margin-bottom: 12px; }
@@ -74,7 +73,6 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
   <div id="pt"></div>
   <div id="pf"></div>
   <div id="bloque" class="hidden"></div>
-  <label class="voz">voz <select id="voz"></select></label>
   <audio id="audio" preload="metadata" playsinline></audio>
   <input id="barra" type="range" min="0" max="100" step="0.1" value="0">
   <div id="tiempos"><span id="t0">0:00</span><button id="vel">1x</button><span id="t1">0:00</span></div>
@@ -92,7 +90,9 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 <script>
 const $ = s => document.querySelector(s);
 const audio = $('#audio');
-let datos = null, ep = null, voz = localStorage.voz || 'daniela', caps = [];
+// voz fija daniela: la web ya no tiene selector (facundo, 2026-09-11)
+const VOZ = 'daniela';
+let datos = null, ep = null, voz = VOZ, caps = [];
 // modo bloque: bloque = indice del capitulo que suena solo (-1 = episodio entero)
 let bloque = -1, seguir = localStorage.seguir !== 'no';
 const VELS = [1, 1.15, 1.3];
@@ -103,13 +103,18 @@ const min = s => Math.round((s || 0) / 60) + ' min';
 async function cargar() {
   const r = await fetch('episodios.json?t=' + Date.now(), { cache: 'no-store' });
   datos = await r.json();
-  $('#ver').textContent = (datos.episodios || []).length + ' episodios';
+  const eps = datos.episodios || [];
+  $('#ver').textContent = eps.length === 1 ? eps[0].fecha : eps.length + ' episodios';
+  const unico = eps.length === 1;
+  $('#volver').classList.toggle('hidden', unico);
+  if (!eps.length) { $('#lista').textContent = 'todavia no hay episodio'; return; }
+  if (unico) { abrir(eps[0]); return; }
   const l = $('#lista'); l.innerHTML = '';
   [...datos.episodios].reverse().forEach(e => {
     const b = document.createElement('button'); b.className = 'ep';
     const pos = +localStorage['pos:' + e.id] || 0;
     b.innerHTML = `<div class="fecha">${e.fecha}</div><div class="titulo">${e.titulo}</div>
-      <div class="meta"><b>${min(e.duracion)}</b> · ${Object.keys(e.voces).length} voces · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}</div>
+      <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}</div>
       <div class="temas">${(e.temas || []).map(t => `<span class="tema">${t}</span>`).join('')}</div>`;
     b.onclick = () => abrir(e);
     l.appendChild(b);
@@ -125,10 +130,7 @@ function abrir(e) {
   $('#lista').classList.add('hidden'); $('#player').classList.remove('hidden');
   $('#pt').textContent = e.titulo;
   $('#pf').textContent = `${e.fecha} · ${min(e.duracion)} · ${e.palabras || '?'} palabras`;
-  const sel = $('#voz'); sel.innerHTML = '';
-  Object.keys(e.voces).forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = (datos.voces || {})[v] || v; sel.appendChild(o); });
-  if (!e.voces[voz]) voz = Object.keys(e.voces)[0];
-  sel.value = voz;
+  voz = e.voces[VOZ] ? VOZ : Object.keys(e.voces)[0];
   bloque = -1;
   ponerVoz(voz, +localStorage['pos:' + e.id] || 0, false);
   $('#guion').innerHTML = e.guion ? `guión: <a href="guiones/${e.guion}">${e.guion}</a>` : '';
@@ -136,7 +138,7 @@ function abrir(e) {
 }
 
 function ponerVoz(v, t, play) {
-  voz = v; localStorage.voz = v;
+  voz = v;
   const d = ep.voces[v];
   caps = d.capitulos || [];
   if (bloque >= 0 && !(caps[bloque] || {}).archivo) bloque = -1;
@@ -204,7 +206,7 @@ function sesion() {
   const k = bloque >= 0 ? caps[bloque] : null;
   ms.metadata = new MediaMetadata({
     title: k ? `${bloque + 1}/${caps.length} ${k.titulo}` : ep.titulo,
-    artist: (k ? ep.titulo + ' · ' : 'podcast del agente · ') + ((datos.voces || {})[voz] || voz), album: ep.fecha,
+    artist: k ? ep.titulo : 'podcast del agente', album: ep.fecha,
     artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] });
   ms.setActionHandler('play', () => audio.play());
   ms.setActionHandler('pause', () => audio.pause());
@@ -224,19 +226,6 @@ function estado() {
 }
 
 $('#volver').onclick = () => { audio.pause(); location.hash = ''; $('#player').classList.add('hidden'); $('#lista').classList.remove('hidden'); cargar(); };
-function equivalente(t, deCaps, aCaps) {
-  // mismo capitulo y misma fraccion adentro: cada voz dura distinto
-  let i = 0; deCaps.forEach((k, j) => { if (t >= k.t) i = j; });
-  const de = deCaps[i], a = aCaps[i];
-  if (!de || !a || !de.duracion) return t;
-  return a.t + Math.min(1, (t - de.t) / de.duracion) * a.duracion;
-}
-$('#voz').onchange = e => {
-  const nc = ep.voces[e.target.value].capitulos || [];
-  const t = bloque >= 0 ? Math.min(1, audio.currentTime / ((caps[bloque] || {}).duracion || 1)) * ((nc[bloque] || {}).duracion || 0)
-                        : equivalente(audio.currentTime, caps, nc);
-  ponerVoz(e.target.value, t, !audio.paused);
-};
 $('#seguir').onclick = () => { seguir = !seguir; localStorage.seguir = seguir ? 'si' : 'no'; pintarCaps(); };
 $('#play').onclick = () => audio.paused ? audio.play() : audio.pause();
 $('#atras').onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); };

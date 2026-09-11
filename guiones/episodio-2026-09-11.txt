@@ -1,0 +1,47 @@
+# lo de hoy en una
+
+jueves once de septiembre, casi ocho de la noche en buenos aires. tres frentes abiertos: awtomic, el server, y la interfaz nueva. de los tres, el que mas se movio fue la interfaz: hoy tiene nombre propio y por fin se llama claudio board.
+
+esto es un episodio solo. el que viene lo reemplaza. una voz, sin selector, sin lista de episodios viejos.
+
+# awtomic: hafner, ponzi, penfolds
+
+hafner. el ticket del formulario de sign up del wine club se destrabo a la mañana. el agente de brian habia frenado en la revision seis porque la especificacion de emily no coincidia con el shop: el add on de rose no tenia plan propio, y dos checkboxes daban cuatro estados contra tres variantes. emily contesto a las diez y cuarenta y tres: rehicieron el shop. ahora cada variante tiene un prepaid plan con dos selling plans, con rose y sin rose, y el blanc de blancs paso a ser un subscription attribute.
+
+con esa especificacion se le volvio a pedir al agente, y a las cuatro y media mando la revision ocho: un patch de cinco archivos. la orden para aplicarlo y probarlo de punta a punta arranco a las seis y nueve de la tarde, pero quedo marcada con error. no fallo el patch: la mataron los reinicios del daemon. hay que volver a correrla.
+
+ponzi. el fix de estilos del customer portal esta listo, pero no en el live: esta en un theme de preview, sin publicar, con las dos reglas de css del agente aplicadas tal cual. dieciseis lineas agregadas, un solo archivo. lo que se verifico con los ojos es el fondo del body, que pasa de blanco a un beige en el preview, en desktop y en mobile. lo que no se verifico es el portal logueado, porque no hay un customer nuestro en ponzi, que es produccion de un merchant. hay otro detalle: el theme del live esta conectado a un repositorio de github, asi que si en algun momento hay que publicarlo, el push va por ahi y no por el cli. nada posteado todavia.
+
+penfolds. el diff de la pagina de producto de vinos esta pusheado a una copia completa del live, sin tocar el live. los dos archivos estan confirmados en el remoto. el bloqueo es tonto y real: el storefront de penfolds esta con password y no la tenemos, asi que no hay preview ni handle del producto. la logica del link si se probo, en un harness local con los ids de verdad. hasta que aparezca esa password, el ticket se queda quieto.
+
+# server: la iso ahora si
+
+el server. hoy hubo una leccion cara. la iso de xubuntu que se habia grabado no servia: el instalador de las isos de escritorio no lee el archivo de autoinstalacion. facundo enchufo el pendrive, boto a un escritorio live y no paso nada. la regla que quedo escrita es dura: si se dice listo para enchufar, primero se bootea en una maquina virtual y se mira al instalador terminar solo.
+
+la iso nueva va sobre ubuntu server veinticuatro cero cuatro, que es la que si lee el autoinstall, y esta vez se probo de punta a punta en una maquina virtual con uefi antes de grabar nada. el disco virtual crecio, la instalacion termino, y recien despues se paso al pendrive. el escritorio lo instala el script de bootstrap, no la iso.
+
+la geekom llega en unos dias. cuando llegue el plan es enchufar, botear el pendrive y esperar.
+
+# tools: claudio board
+
+y la interfaz. ahora se llama claudio board, y hoy le entraron unas quince cosas.
+
+lo mas importante es el contexto. hasta esta tarde cada pestaña perdia el hilo: la web armaba el chat con los comentarios de las ultimas horas y despues los repartia por tema, asi que un tema tranquilo abria vacio y lo primero que se veia era cache vieja. ahora hay un log por tema, completo, y el daemon lo publica entero en el buzon. cada pestaña baja el suyo antes de pintar, en una sola pasada. se abre en el celu, se sigue en la compu, y es la misma conversacion.
+
+lo mismo con las pestañas y con el borrador del input: viajan por el buzon, no por el navegador. se empieza a escribir en la compu, se agarra el celu, y el texto esta ahi con el cursor al final.
+
+tambien quedo el vocabulario. claudio es el producto. los temas son los hijos: awtomic, fuzzer, plata, server, tools. los nietos son motores, un laburo repetible adentro de un tema, escrito tema barra motor. el verificador paso a ser awtomic barra qa. la regla es corta: el nombre es la ruta.
+
+y el bug del dia: habia tareas zombies. el daemon se reiniciaba, las tareas quedaban marcadas como corriendo para siempre, y una orden se pisaba a si misma. ahora al arrancar las marca, reencola una sola vez las recientes, y el reinicio espera a que no quede ninguna viva en ningun carril.
+
+# lo que queda abierto
+
+tres cosas esperando a facundo.
+
+una, la password del storefront de penfolds, que es lo unico que frena ese ticket.
+
+dos, volver a correr hafner revision ocho, que quedo a mitad de camino por los reinicios.
+
+tres, el pendrive. la iso ya esta probada; falta enchufar y dejar que corra.
+
+y una cuarta, mas chica: escuchar este episodio y decir si las palabras en ingles suenan bien. merchant, shopify, spotify. estan escritas a mano para que la voz las lea parecido al ingles, pero eso no se puede verificar leyendo. hace falta una oreja.
