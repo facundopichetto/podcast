@@ -2,15 +2,20 @@
 
 salieron de facundo el 2026-09-11. si cambia algo, se edita aca y se ajusta `recetas/podcast.py`.
 
-## un solo episodio
+## un solo episodio, salvo que facundo pida otro
 
-**hay un episodio visible a la vez: el nuevo reemplaza al anterior.** no hay archivo historico ni
-lista de episodios viejos. `recetas.podcast nuevo` borra los mp3 del anterior y lo saca de
-`episodios.json` (`--conservar` lo deja, solo para probar). el respaldo de lo borrado es
+**el default es un episodio visible a la vez: el nuevo reemplaza al anterior.** `recetas.podcast
+nuevo` borra los mp3 del anterior y lo saca de `episodios.json`. el respaldo de lo borrado es
 `backup-<fecha>/`, que git ignora y no se publica.
 
+**la excepcion es `--conservar`** (facundo, 2026-09-11 19:50: "haceme otro episodio que no reemplace
+este, mientras escucho el que hay"): deja el anterior con su mp3 intacto y suma el nuevo. se usa
+**solo cuando facundo pide otro que no reemplace**; si no lo pide, va el default. `--conservar` no
+toca ni el audio ni la entrada del episodio viejo.
+
 la web: con un solo episodio no muestra lista, abre el reproductor directo y esconde el boton
-`‹ episodios`. si algun dia hay mas de uno, la lista vuelve sola.
+`‹ episodios`. **con mas de uno la lista vuelve sola** y aparece el boton (verificado con
+`episodios.json` de dos episodios, `cargar()` de `index.html`: `unico = eps.length === 1`).
 
 ## una voz, sin selector
 

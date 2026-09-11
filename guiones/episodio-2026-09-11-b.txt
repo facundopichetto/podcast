@@ -1,0 +1,171 @@
+# de que va este episodio
+
+jueves once de septiembre, casi las ocho de la noche en buenos aires. este es el episodio largo del dia: unos veinte minutos, doce capitulos, uno por frente. el corto de cinco minutos sigue estando y no se borro, asi que si querés el resumen rapido, esta ahi al lado.
+
+la idea es contar el dia completo y no solo los titulos. hoy pasaron tres cosas grandes. la interfaz con la que hablamos todo el dia por fin tiene nombre y dejo de perder el hilo de las conversaciones. el server pego un volantazo despues de un fracaso feo y ahora tiene una imagen de instalacion probada de verdad. y en awtomic se movieron cuatro tickets, uno de ellos cerrado y posteado, con tres que quedaron frenados por cosas que no dependen de nosotros.
+
+abajo de eso hubo una capa de plomeria que no se ve pero se siente: las cuentas de claude, los modelos de respaldo, los frenos de la cola, las ventanas de chrome que quedaban abiertas, y el vocabulario nuevo para nombrar todo esto. vamos por orden, del tema que mas se movio al que menos.
+
+# claudio board, primera parte: el contexto que se perdia
+
+el problema mas grave del dia no fue un bug de codigo, fue de memoria. la queja textual fue: cada vez que prendo el celu, lo primero que veo es una conversacion re vieja. y otra: la pestaña de server esta muerta.
+
+las dos tenian la misma causa. la web armaba el chat leyendo los comentarios de las ultimas veinticuatro horas del buzon, y recien despues los repartia entre las pestañas por tema. o sea que un tema tranquilo, con poca actividad reciente, abria vacio, aunque en la mac hubiera trece intercambios guardados. y mientras eso bajaba, lo primero que se pintaba era la copia guardada en el navegador, que podia ser de la mañana.
+
+la segunda mitad del problema era mas silenciosa y peor. cuando una pestaña le mandaba el contexto al modelo, le pasaba solo cuatro intercambios, y cada respuesta recortada a mil quinientos caracteres. con una charla larga como la de awtomic, eso alcanza para nada: el chat contestaba cosas como no tengo el draft, cuando el draft estaba escrito hacia dos horas.
+
+lo que se hizo fueron tres cosas encadenadas. primero, un log por tema: cada mensaje y su respuesta completa quedan en un archivo propio de ese tema, y escriben ahi los tres canales, la consola, la web y el telefono. segundo, el contexto que va al modelo paso a ser toda la charla de esa pestaña, con las respuestas enteras, con tope por tamaño y no por cantidad: sesenta mil caracteres, quedandose con lo mas nuevo. y tercero, el daemon publica ese log entero en el buzon, un archivo por tema mas un indice, y la web lo baja antes de pintar, en una sola pasada.
+
+el resultado se verifico en vivo: a las dos menos cinco de la tarde, la pestaña de awtomic cito algo que se habia dicho a las once y cuarenta y seis de la mañana. y el boton de cargar mas viejo desaparecio, porque ya no hace falta: la pestaña viene entera.
+
+una cosa que salio de ahi: el tema server ya existia como carpeta desde antes, pero ni el clasificador, ni la web, ni el daemon lo conocian. por eso todo lo del pendrive y la imagen de instalacion caia en la pestaña de tools. se le dieron sus palabras propias, y se cuido un empate fino: la palabra imagen de disco la usaban tanto server como el tema de los juegos, que tiene imagenes de la consola vieja. ahora arma la imagen cae en server, y pasa las imagenes de la consola a la portatil sigue cayendo en juegos. despues hubo que mudar seis intercambios de la tarde que habian quedado en el log de tools, y para eso quedo una receta que mueve charla entre temas sin gastar un solo token.
+
+# claudio board, segunda parte: seguir en cualquier pantalla
+
+el segundo bloque del dia fue todo para lo mismo: que se pueda empezar algo en la compu y terminarlo en el telefono sin perder nada.
+
+las pestañas dejaron de vivir en el navegador y pasaron al buzon. antes cada dispositivo tenia las suyas, y por eso en el telefono no se veian las mismas que en la compu. ahora el layout entero viaja, gana el mas nuevo por fecha, y lo del navegador queda solo como copia por si no hay internet.
+
+despues vino el borrador. pedido textual: quiero dejar de escribir esto desde la compu y, sin tocar enviar, terminar este mensaje desde el celu. eso ahora funciona. lo que hay en la caja se guarda por pestaña, con su propia fecha, y aparece en el otro dispositivo con el cursor al final. se resuelve por tema y no por layout, asi que mover pestañas en la compu no se lleva puesto lo que el telefono esta escribiendo. al mandar el mensaje el borrador queda como una tumba vacia y desaparece en todos lados. y cuando se bloquea el telefono o se cierra la pestaña, se publica igual, para no perder lo tipeado.
+
+tambien viaja donde quedaste leyendo. no se guardan pixeles, que no sirven de un dispositivo a otro, sino el identificador del mensaje que quedo arriba de la pantalla. y al abrir la web, o al volver a darle foco, se dispara una sincronizacion que baja todo en paralelo y recien ahi pinta. mientras baja se ve la palabra sincronizando, y lo viejo queda apagado al cuarenta y cinco por ciento, para que nunca mas una copia local se muestre como si fuera el estado real. si github no contesta, la linea se pone amarilla y lo dice.
+
+hubo tres arreglos chicos del teclado que valen mas de lo que suenan. en el telefono la tecla de enter mandaba el mensaje, asi que no habia forma de hacer parrafos: ahora hace salto de linea y se manda con el boton. dos enter muy rapidos mandaban el mismo mensaje dos veces: ahora el segundo se ignora. y la letra de la caja era de dieciseis puntos, el minimo para que el telefono no haga zoom al tocarla: se bajo sin que vuelva el zoom.
+
+y por ultimo, entre el panel del chat y el de los widgets ahora hay una barra que se arrastra con el mouse o con el dedo, con minimo de doscientos ochenta pixeles por lado, y el ancho elegido tambien viaja en el buzon con su propia fecha.
+
+# claudio board, tercera parte: los widgets se tocan
+
+la tercera parte fue hacer que la columna de la derecha deje de ser solo informacion y se pueda usar.
+
+ahora tocar cualquier fila de un widget abre una ventana con estetica de terminal, que muestra el item expandido y ofrece entre dos y cuatro acciones segun de que tipo sea: una propuesta se acepta o se descarta, una oportunidad ofrece sus opciones reales con mi voto marcado, un modelo de respaldo se puede probar, y una tarea de la cola te lleva a su log. la regla que le da sentido a todo: cualquier accion que termine en un mensaje sale por la pestaña del tema de ese item, abriendola si no existe, y no por la general. hablar de esto no manda nada: salta a esa pestaña y deja el contexto escrito en la caja.
+
+el widget de uso de tokens se rehizo de cero. antes era una tabla con presupuesto, horario y costo, y el pedido fue claro: nada de eso me interesa, quiero ver los parametros contra la linea. ahora son solo barras, tres por cuenta: la ventana de cinco horas, la semana, y el limite semanal del modelo de conversacion. cada barra tiene una marca blanca en la linea, que es la fraccion de la ventana que ya paso, y el color sale de comparar lo gastado con esa linea, no con el porcentaje pelado. renovo hace veinte minutos y ya gastaste casi todo, rojo fuerte. renovo recien y usaste poco, verde tranquilo.
+
+arriba del todo se saco la linea de estado del daemon, esa que decia vivo, sin tick, el numero de proceso, la tarea y los pendientes. ese dato ya esta en su widget y no tiene por que estar en el encabezado.
+
+sobre la caja del chat aparecio una fila de sugerencias, y esto es lo que mas me gusta de como quedo: se arma sin gastar un solo token, leyendo la ultima respuesta de esa pestaña. si la respuesta ofrece opciones, salen a, b y c con su titulo cortado. si lista propuestas numeradas, sale aceptar el numero. si nombra una oportunidad, salen sus opciones reales. si termina en pregunta, si y no. y siempre estan status y cola al final. tocar una sugerencia llena la caja y deja el foco ahi, no manda.
+
+y el split de paneles cambio de forma. estaba como un boton, y el pedido fue sacarlo y hacerlo como en el editor de codigo: arrastrando. ahora se agarra una pestaña, aparece una zona resaltada al lado de los widgets, se suelta y queda como panel propio; se arrastra de vuelta a la barra y vuelve al chat. esta hecho con eventos de puntero y no con el arrastre nativo del navegador, porque ese en el telefono no existe. con el mouse arranca a seis pixeles, y con el dedo pide movimiento vertical, para que el horizontal siga sirviendo para deslizar la barra de pestañas.
+
+todo esto se probo sin abrir un navegador a mano: hay una prueba que carga la pagina en chrome sin ventana, chequea que no haya errores, que el clasificador de temas de la web y el de la mac digan lo mismo, y que cada mensaje caiga en su pestaña. y despues se corre la misma prueba contra lo que sirve el sitio publicado, para verificar el deploy y no solo el archivo local.
+
+# los nombres: claudio, temas y motores
+
+en medio del dia apareco una pregunta que no era tecnica y termino ordenando todo: como se llama cada cosa.
+
+quedaron tres niveles y una regla. el producto global es claudio, que ya era el nombre de la carpeta y del comando. sus piezas son claudio agente, el proceso que vive siempre en la mac, claudio board, que es esta interfaz web, claudio consola, la de terminal que esta pausada, y claudio celu.
+
+los hijos son los temas: una palabra, una carpeta con su estado, una pestaña, un carril en la cola. awtomic, fuzzer, plata, juegos, personal, server, tools.
+
+los nietos son los motores: un laburo repetible adentro de un tema, escrito con una barra en el medio. el verificador de tickets paso de llamarse awtomic guion qa a ser awtomic barra qa. comparte carril, carpeta y log con el padre, y se filtra por motor. el nombre viejo sigue andando como alias para que nada se rompa.
+
+y lo compartido sin dueño, las recetas, los scripts, las cuentas de claude, los modelos de respaldo, son herramientas de claudio y no hijos de ningun tema.
+
+la regla que ata todo es una sola frase: el nombre es la ruta. el mismo nombre en la cola, en la pestaña, en los logs y en la carpeta. suena a detalle y no lo es: la mitad de los lios de hoy fueron cosas que tenian un nombre en un lado y otro en otro.
+
+el nombre de la interfaz se eligio aparte, de una lista de cuatro. quedo claudio board, el pizarron donde se ve todo, y se aplico en el titulo, en el manifiesto de la aplicacion, en la marca del encabezado y en la documentacion. verificado vivo en el sitio publicado, sin restos del nombre viejo.
+
+# las cuentas: nada quedo usando la vieja
+
+hay dos cuentas de claude en juego, la nueva, que se llama facu, y la vieja, orugote. la vieja se quedo sin tokens hasta el viernes a las cuatro de la tarde, asi que la consigna fue clara: que nada siga usando orugote.
+
+se auditaron los cuatro procesos vivos y todo lo que los lanza: el proceso de fondo, el relanzador, los scripts, las recetas, la terminal, el comando de la linea de comandos y el arrancador del sistema. los cuatro en facu, cero desalineados, nada que matar.
+
+de paso se encontro un bug que era una bomba chica: el mensaje cuenta facu, escrito desde la web, explotaba con un error de clave. se arreglo y el cambio de cuenta quedo en una sola receta que hace todo sin que nadie mire: valida, escribe el archivo, relanza la sesion remota con la cuenta nueva y el mismo hilo de conversacion, y lista lo que quedo colgado de la cuenta vieja.
+
+lo que no entra en ese cambio quedo documentado, porque es honesto decirlo: la aplicacion de escritorio y la extension del navegador tienen su sesion cifrada en el llavero del sistema, una sola a la vez, y se cambia entrando y saliendo a mano. y las terminales que ya estaban abiertas siguen con la cuenta que tenian cuando arrancaron, hasta que se corra el comando ahi o se cierren.
+
+la parte mas util fue el presupuesto. antes miraba un limite, ahora mira los tres: la semana, la ventana corta de cinco horas, y el limite semanal del modelo de conversacion. cualquiera de los tres arriba de su linea frena las tareas pesadas, y el que frena queda dicho por nombre. y si la cuenta activa se va al tope mientras la otra tiene margen, avisa al telefono una vez por semana proponiendo el cambio, pero no lo hace solo. hoy facu estaba en veinticuatro, veintinueve y treinta por ciento, todo bajo la linea. orugote, en cambio, noventa y ocho por ciento de la semana y cien por ciento del modelo de conversacion.
+
+# los modelos de respaldo
+
+en paralelo hay un experimento que corre solo: modelos gratis de otros proveedores, midiendo si alguna vez se les puede delegar algo. hoy se reviso ese frente y la conclusion fue linda porque el problema no era lo que parecia.
+
+no eran las claves. las cinco claves eran validas. eran los nombres de los modelos, que habian cambiado. uno daba error de cuota siempre y otro tenia cuota cero en el nivel gratis. con los nombres nuevos, dos contestan en cuatro decimas de segundo. un tercero anda pero razona antes de contestar, asi que si se le pone un limite bajo de salida devuelve vacio, que es exactamente el tipo de detalle que solo se descubre probando.
+
+uno quedo en cuota de cuenta, no de modelo, asi que cambiar de modelo no lo destraba y vuelve solo al dia siguiente. y uno se descarto de raiz porque paso a ser pago: se saco de la lista, de la web y de las pruebas, sin dar vueltas. la instruccion era esa, si ya se sabe que hay que pagar, se borra.
+
+quedo una receta que prueba los cinco proveedores con una consulta minima y los clasifica en seis estados, y si alguno esta roto prueba los alternativos y con una bandera fija el que anda. corre cada tres horas sin gastar un token de claude, y el widget muestra una fila con el estado y la latencia de cada uno. ademas el chat de respaldo dejo de tener los nombres escritos a mano y ahora saltea a los que estan caidos o tardan mas de diez segundos: medido, con el proveedor lento afuera contesta otro en menos de un segundo en vez de esperar veinte.
+
+# el daemon: zombies, ventanas y quien espera a quien
+
+tres bugs de plomeria, los tres con la misma forma: algo fallaba en silencio.
+
+el primero, las tareas zombie. el proceso de fondo se reiniciaba, y las tareas que estaban marcadas como corriendo se quedaban marcadas como corriendo para siempre. once quedaron asi. y habia un caso circular hermoso: una orden que reiniciaba el daemon se mataba a si misma. ahora al arrancar las marca, reencola una sola vez las de las ultimas dos horas, y el reinicio diferido espera a que no quede ninguna viva en ningun carril, porque antes miraba solo uno.
+
+el segundo, las ventanas de chrome. aparecieron diez ventanas abiertas y la queja fue directa: me mata la memoria, siempre haces lo mismo, que no pase mas. y aca la causa raiz vale contarla porque es un clasico. el cierre existia. estaba escrito, estaba en el bloque que corre aunque la tarea falle, y habia hasta un recolector por hora. lo que estaba roto era la funcion que busca el proceso del navegador: comparaba la linea de comando exacta, y el chrome de facundo corre con banderas. entonces devolvia nada, la funcion que lista ventanas fallaba, y todos los bloques que atrapan errores se lo comian sin decir una palabra. nunca se cerro una sola ventana. tambien se le puso el numero de proceso al titulo, porque dos tareas en paralelo abrian con el mismo segundo y se pisaban en el registro. la regla que quedo escrita es corta: un cierre que puede fallar en silencio no es un cierre.
+
+el tercero es de prioridades. la programada de publicidad, que usa el navegador con otro perfil, salio a las seis de la tarde justo mientras corria una orden de awtomic que facundo habia pedido en el chat. la regla nueva dice que mientras haya una orden de awtomic pedida a mano, corriendo o pendiente, el carril de fuzzer entero espera. y la contraria tambien se escribio: lo que facundo pide de awtomic en el chat nunca se frena por horario. habia una regla que evita abrir el navegador en horario laboral, y una orden de awtomic se quedo cincuenta minutos parada por una palabra en el texto. eso no vuelve a pasar, y ademas ahora hay un bloque arriba del estado que dice cuantas ordenes estan frenadas por horario, para no volver a decir esta primera sin poder mirarlo.
+
+# el server: la imagen que fallo y la que si
+
+y aca viene la parte incomoda del dia.
+
+se habia grabado un pendrive con una imagen de xubuntu y se dijo que estaba listo para enchufar. facundo lo enchufo, arranco, y no paso nada. despues, something went wrong. el mensaje textual fue: esto es una mierda, es un desastre.
+
+el motivo tecnico es de manual: el instalador de las imagenes de escritorio no lee el archivo de instalacion automatica. solo el de la version server lo lee. y el motivo real es peor que el tecnico: esa imagen nunca se habia arrancado antes de grabarla. se entrego una promesa sin probarla.
+
+de ahi salio la regla mas dura del dia, y esta escrita en las reglas globales. si se pide algo que tiene que funcionar cuando se enchufa, se entrega exactamente eso, y solo despues de probarlo de verdad. arrancar la imagen en una maquina virtual y mirar al instalador terminar solo. sin esa prueba no se dice listo: se dice no lo pude probar y se pregunta.
+
+y despues se hizo. la imagen nueva va sobre ubuntu server veinticuatro cero cuatro punto cinco, bajada con su firma verificada contra el sitio oficial. se le metio adentro el archivo de instalacion automatica, el script que corre despues, y el menu de arranque con cinco segundos de espera y la instalacion automatica en las dos entradas. el archivo de instalacion cambio los identificadores a los de la version server y se le saco una clave que era de escritorio. y el script que corre despues ahora instala el escritorio xfce, porque la version server no trae ninguno.
+
+la prueba fue la parte que importa. maquina virtual con firmware moderno, cuatro gigas, disco de treinta. la imagen arranco e instalo sola, sin una sola pantalla: particiono con disco cifrado, extrajo el sistema, instalo el arranque firmado, el nucleo y las actualizaciones de seguridad. unos veinte minutos emulando otra arquitectura. despues se arranco el disco ya instalado: pidio la frase para desbloquear, se le paso, y llego hasta la pantalla de login con el nombre claudio. y por conexion remota se verifico el usuario, la zona horaria, el teclado, los archivos copiados del pendrive, y que el disco estuviera cifrado de verdad.
+
+la maquina es una geekom a siete, seis nucleos, dieciseis gigas, un terabyte, comprada hace tres dias por unos seiscientos dolares con impuestos. llega en unos dias. el plan cuando llegue es enchufar, arrancar del pendrive y esperar. ah, y quedo pedido cambiar la frase de desbloqueo por una corta y facil de tipear, porque hay que escribirla en cada arranque y la actual es larga.
+
+# awtomic: cuatro tickets y una regla que dolio
+
+el trabajo de la empresa se llevo cuatro tickets hoy, con cuatro estados distintos, que es justo lo que hace interesante contarlos.
+
+el primero, fitvine. estilos de un armador de packs. es el unico cerrado de nuestro lado: el arreglo estaba en la tienda publicada desde las diez menos dos de la mañana, verificado, la direccion chequeada antes de postear, y se posteo un comentario publico con el link y el estado pasado a seguimiento. ahora espera que la del otro lado confirme que se ve bien.
+
+el segundo, hafner. el formulario de suscripcion de un club de vino. estaba trabado porque la especificacion no coincidia con la tienda: un agregado de vino rosado no tenia plan propio, y dos casillas dan cuatro estados contra tres variantes que existian. a las once menos veinte de la mañana llego la respuesta: rehicieron la tienda. ahora cada variante tiene su plan prepago con dos planes de venta, con rosado y sin rosado, y un vino en particular paso a ser un atributo de la suscripcion en vez de una variante. con esa especificacion nueva se volvio a pedir la construccion, y a las cuatro y media llego una revision con un parche de cinco archivos. la orden para aplicarlo y probarlo arranco a las seis y nueve de la tarde y quedo marcada con error, pero no fallo el parche: la mataron los reinicios del proceso de fondo. hay que volver a correrla, y es lo primero de mañana.
+
+el tercero, ponzi. estilos del portal del cliente. el arreglo esta listo pero no en la tienda publicada: esta en una copia sin publicar, con las dos reglas de estilo aplicadas tal cual, dieciseis lineas en un solo archivo. lo que se verifico con los ojos es el fondo de la pagina, que pasa de blanco a beige, en pantalla grande y en telefono. lo que no se pudo verificar es el portal con sesion iniciada, porque no hay un cliente nuestro en esa tienda, que es produccion de un comercio real. y hay un detalle que conviene no olvidar: la tienda publicada de ponzi esta conectada a un repositorio, asi que si alguna vez hay que publicar, el cambio va por ahi y no por la linea de comandos. nada posteado.
+
+el cuarto, penfolds. una pagina de producto de vinos. el cambio esta subido a una copia completa de la tienda, sin tocar la publicada, los dos archivos confirmados. y el bloqueo es tonto y real: la tienda esta con contraseña y no la tenemos, asi que no hay vista previa ni identificador del producto. la logica del link si se probo, en un banco de pruebas local con los identificadores de verdad. hasta que aparezca esa contraseña, ese ticket no se mueve.
+
+y hay una regla de ayer que sigue mandando en todo esto. ayer se posteo un listo, el flujo ya esta activo, sin haber armado el flujo. hubo que borrar el comentario. la regla quedo asi: antes de postear listo o de mover un ticket de estado, hay que ver el entregable con los propios ojos. el flujo en la lista, el tema en la lista de temas, el comentario en el ticket, el archivo en el disco. y un autorizo el posteo no certifica el hecho: si el texto afirma algo que no se hizo ni se vio, primero se confirma el hecho.
+
+# la ronda de la noche: veintiuna propuestas esperando un si
+
+anoche corrio una ronda que mira todos los temas y busca cosas que rinden. quedaron veintiuna propuestas numeradas, cada una con dos o tres opciones y mi voto marcado, y nada de eso se ejecuto: cada una es una orden lista para encolar si se dice que si. costo treinta y un dolares con ochenta y cuatro en quince tareas, con el presupuesto en nueve por ciento contra una linea de veintidos y medio, asi que sobro margen.
+
+las nueve que mas rinden, rapido.
+
+la primera es la unica que crece sola si no se toca: la agencia de impuestos de uruguay tiene a una de las sociedades con cuarenta y seis dias de atraso y tres intimaciones sin responder. mi voto es entrar, ver que reportes faltan y armar el resumen para el contador, sin presentar ni pagar nada.
+
+la segunda, el sitio de la banda esta sirviendo una version de cinco commits atras y una de sus paginas da error cuatrocientos cuatro, asi que el proximo codigo qr impreso cae en el vacio. se arregla conectando el publicador a la rama principal.
+
+la tercera, ocho paquetes frenados, cinco por un numero de identificacion y tres de una empresa de correo que no estaban ni anotados, veinticinco dias sin novedad. mi voto es un aviso diario automatico que solo hable cuando uno se traba.
+
+la cuarta, un amplificador que se vende a mano porque la interfaz de la plataforma esta bloqueada del lado de la cuenta: imprimir titulo, precio y descripcion para copiar y pegar, diez minutos con las fotos al lado.
+
+la quinta y la sexta son del server y ya quedaron resueltas hoy con la imagen nueva.
+
+la septima destraba todas las otras del tema plata: abrir la cuenta de la corredora, porque sin numero de cuenta no se puede probar ningun paso siguiente. mi sugerencia de proporcion es setenta y treinta, con aporte mensual fijo.
+
+la octava, la suscripcion de musica sube treinta y seis por ciento desde octubre, catorce mil cuatrocientos pesos mas por año. hay cuenta de artista, asi que bajarse del todo no es opcion.
+
+y la novena, diez cobros recurrentes y ningun lugar donde verlos juntos, porque cuatro de los grandes no mandan recibo por correo. con un resumen de tarjeta en pdf y un lector que lo cruce, la foto queda completa y despues cada mes es tirar el archivo en la carpeta.
+
+aparte de esas nueve hay cinco oportunidades vivas en el widget, que son mejoras del propio sistema. el archivo de estado del agente llego a dos mil trescientas setenta y dos lineas y cada tarea lo lee entero. el archivo de propuestas tiene seiscientas setenta y cuatro lineas que nadie cierra. y un ticket de verificacion salio trece dolares y catorce millones de tokens sin ningun corte, asi que hace falta un tope por ticket que corte y deje lo que tenga.
+
+# lo que queda esperando
+
+para cerrar, lo que no puede avanzar sin facundo, por orden de cuanto destraba.
+
+uno, volver a correr la revision ocho de hafner. el parche esta, la especificacion esta, solo hay que aplicarlo y probarlo de punta a punta.
+
+dos, la contraseña de la tienda de penfolds. es literalmente lo unico que frena ese ticket.
+
+tres, el pendrive. la imagen esta probada en maquina virtual de punta a punta y falta grabarla, y para eso hace falta una contraseña de administrador en la terminal. despues es enchufar y esperar.
+
+cuatro, contestar la ronda. con un mensaje corto tipo dale tres, siete y nueve arrancan tres cosas que ya estan pensadas y escritas.
+
+cinco, elegir en las cinco oportunidades del widget, que son todas de treinta a cuarenta y cinco minutos y todas bajan el costo de lo que viene despues.
+
+y seis, una chica pero importante para este mismo episodio: escuchar si las palabras en inglés suenan bien. hay cincuenta y dos palabras escritas a mano para que la voz las lea parecido al inglés, y se verifico la cadena de sonidos una por una, pero eso no dice como suena. el modelo de voz argentino no tiene las vocales abiertas del inglés, asi que lo que sale es inglés con acento argentino, que es como se habla igual. hay un audio de nueve segundos con tres palabras con diccionario y sin diccionario para decidirlo en un minuto.
+
+eso fue el jueves once. mañana arranca por hafner.

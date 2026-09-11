@@ -56,7 +56,103 @@
     }
    },
    "duracion": 299.5
+  },
+  {
+   "id": "ep-2026-09-11-b",
+   "fecha": "2026-09-11",
+   "titulo": "el dia largo: claudio board, las cuentas, la iso probada y cuatro tickets",
+   "temas": [
+    "tools",
+    "server",
+    "awtomic",
+    "plata",
+    "personal",
+    "fuzzer"
+   ],
+   "palabras": 4787,
+   "guion": "episodio-2026-09-11-b.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-11-b-daniela.mp3",
+     "duracion": 1466.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va este episodio",
+       "duracion": 57.7,
+       "archivo": "audio/ep-2026-09-11-b-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 57.7,
+       "titulo": "claudio board, primera parte: el contexto que se perdia",
+       "duracion": 145.9,
+       "archivo": "audio/ep-2026-09-11-b-2-claudio-board-primera.daniela.mp3"
+      },
+      {
+       "t": 203.6,
+       "titulo": "claudio board, segunda parte: seguir en cualquier pantalla",
+       "duracion": 127.0,
+       "archivo": "audio/ep-2026-09-11-b-3-claudio-board-segunda.daniela.mp3"
+      },
+      {
+       "t": 330.6,
+       "titulo": "claudio board, tercera parte: los widgets se tocan",
+       "duracion": 171.0,
+       "archivo": "audio/ep-2026-09-11-b-4-claudio-board-tercera.daniela.mp3"
+      },
+      {
+       "t": 501.6,
+       "titulo": "los nombres: claudio, temas y motores",
+       "duracion": 94.8,
+       "archivo": "audio/ep-2026-09-11-b-5-los-nombres-claudio.daniela.mp3"
+      },
+      {
+       "t": 596.4,
+       "titulo": "las cuentas: nada quedo usando la vieja",
+       "duracion": 105.0,
+       "archivo": "audio/ep-2026-09-11-b-6-las-cuentas-nada-quedo.daniela.mp3"
+      },
+      {
+       "t": 701.4,
+       "titulo": "los modelos de respaldo",
+       "duracion": 84.4,
+       "archivo": "audio/ep-2026-09-11-b-7-los-modelos-de-respaldo.daniela.mp3"
+      },
+      {
+       "t": 785.8,
+       "titulo": "el daemon: zombies, ventanas y quien espera a quien",
+       "duracion": 126.4,
+       "archivo": "audio/ep-2026-09-11-b-8-el-daemon-zombies.daniela.mp3"
+      },
+      {
+       "t": 912.2,
+       "titulo": "el server: la imagen que fallo y la que si",
+       "duracion": 147.4,
+       "archivo": "audio/ep-2026-09-11-b-9-el-server-la-imagen-que.daniela.mp3"
+      },
+      {
+       "t": 1059.7,
+       "titulo": "awtomic: cuatro tickets y una regla que dolio",
+       "duracion": 177.2,
+       "archivo": "audio/ep-2026-09-11-b-10-awtomic-cuatro-tickets.daniela.mp3"
+      },
+      {
+       "t": 1236.9,
+       "titulo": "la ronda de la noche: veintiuna propuestas esperando un si",
+       "duracion": 148.8,
+       "archivo": "audio/ep-2026-09-11-b-11-la-ronda-de-la-noche.daniela.mp3"
+      },
+      {
+       "t": 1385.7,
+       "titulo": "lo que queda esperando",
+       "duracion": 80.7,
+       "archivo": "audio/ep-2026-09-11-b-12-lo-que-queda-esperando.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1466.4
   }
  ],
- "actualizado": "2026-09-11 19:37"
+ "actualizado": "2026-09-11 20:00"
 }
