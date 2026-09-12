@@ -1,0 +1,105 @@
+# de qué va este episodio
+
+hola facundo. esto es claudio, episodio express para el paseo, sábado doce de septiembre al mediodía. hoy no hay noticias, no hay awtomic, no hay banda. hay una sola cosa: el server y yo. qué ya corre solo desde tu mini pc, qué sigue colgando de la mac, qué podés resolver hoy en diez minutos, qué es más largo, qué modelos conviene usar para qué, cómo ordenar el flujo de trabajo, y al final unas propuestas concretas en formato a, b, c para que decidas cuando vuelvas. son unos catorce minutos, capítulos cortos, así saltás el que no te interese.
+
+# lo que ya corre solo desde el server
+
+arranco por lo bueno, que es mucho. la geekom, que ahora se llama claudio, está instalada con ubuntu server, disco cifrado con luks atado al tpm, así que después de un corte de luz arranca sola sin pedir passphrase. tiene escritorio xfce, xrdp para verlo desde la mac, tailscale con la ip cien punto setenta y siete, y ssh con llave.
+
+el daemon del agente, el que atiende el chat, la cola de órdenes, los scripts periódicos y los widgets, corre en el server como usuario agente. en la mac no queda ningún daemon vivo. cuando me escribís desde el celu, el que contesta soy yo desde acá. anoche lo probaste tres veces con el ping y las tres veces contesté con el hostname claudio.
+
+claude y github están logueados en el server con su propio login, uno por máquina. eso fue una lección cara: el oauth copiado desde el llavero de la mac rotó el token y mató la sesión de la mac. ahora la regla es que un secreto de login vive en una sola máquina y no se copia nunca.
+
+el chrome del agente corre en una pantalla virtual, la noventa y nueve, con la cuenta nueva de google, la de las cuatro u y las diez o. es un solo perfil, el de claudio, y tus cuentas entran adentro de ese perfil. desde el server ya andan mercadolibre con tu sesión, google, gmail y youtube por api con las cookies que la mac vuelca cada seis horas, el slack de awtomic, el ads manager de meta con la cuenta de fuzzer, capturas por cdp y el chrome de qa headless. también quedaron montados en solo lectura los tres discos que enchufaste: el black de cinco teras, el de dos teras y la sd de la retroid. y el podcast que estás escuchando se renderizó en el server con piper, sin tocar la mac.
+
+# lo que todavía cuelga de la mac
+
+ahora lo que falta, que es menos pero importa. primero, jira. en el server no hay mcp de atlassian y las cookies de atlassian no viajan, dicen page unavailable. hoy jira llega por un puente a la sesión gráfica de la mac, que funciona pero depende de que la mac esté prendida. lo definitivo es un api token en jira punto json, que sirve en las dos máquinas y no necesita oauth.
+
+segundo, shopify. el admin de shopify ata la sesión al dispositivo, así que las cookies tampoco viajan. hace falta un login por vnc, una sola vez, en el chrome del agente. sin eso, los previews de theme y el qa de awtomic no corren enteros desde el server.
+
+tercero, tus chromes. los perfiles awtomic, orugote y fuzzer viven en la mac y ahí se quedan. lo que se hereda son las cookies, no los perfiles. entonces todo lo que necesita tu extensión de claude in chrome, como los tickets con tu perfil, sigue siendo cosa de la mac.
+
+cuarto, la bios. restore on ac power loss todavía no está en on. si se corta la luz y vuelve, el server no prende solo. este es el único que no puedo tocar yo de ninguna manera: hay que apretar suprimir con el teclado de santi.
+
+y quinto, cosas menores: la mac todavía tiene el librespot de spotify connect y el vigilar en launchd, el syncthing del server no está emparejado con la mac, y el backup diario no tiene destino porque falta el host de la mac en la config.
+
+# pasos fáciles, para hoy
+
+esto es lo que rinde más por minuto tuyo. lo ordeno por lo que destraba.
+
+uno, el token de jira. entrás a id punto atlassian punto com, seguridad, api tokens, creás uno, y me lo pegás en el chat. yo lo guardo con la receta guardar jira token y desde ese momento jira anda desde el server aunque la mac esté apagada. dos minutos.
+
+dos, el login de shopify por vnc. corrés ver chrome punto sh en la mac, password del vnc claudio uno, y en el chrome que ves te logueás en admin punto shopify punto com, pasás la verificación de dispositivo, y cerrás. cinco minutos, una sola vez.
+
+tres, la bios. suprimir al prender, restore on ac power loss en power on, ftpm on, y de paso una password de supervisor y boot solo del nvme. tres minutos con el teclado de santi.
+
+cuatro, la consola de tailscale: desactivar la expiración de la llave de claudio, prender device approval, y limitar la acl a tus dispositivos. dos minutos desde el celu.
+
+cinco, las compras. la lista está en compras punto md. lo mínimo útil es un ups con avr, mi voto la lyonn de mil doscientos va, más el mini ups del router y un enchufe wifi tapo p ciento diez para poder cortarle la energía desde el celu si se cuelga. son unos doscientos ochenta y cinco mil pesos. nada está comprado, espera tu a, b o c.
+
+# pasos no tan fáciles
+
+ahora lo que es de más laburo, casi todo mío, pero conviene que sepas dónde estamos.
+
+guards contra caídas. la regla de oro de anoche: cada pieza que depende de algo externo, buzón de github, oauth de claude, tailscale, ssh con la mac, tokens de jira, tiene que tener un guard escrito de antemano. qué pasa si falla, cómo se detecta sin modelo, cómo se degrada y cómo se recupera solo. hoy hay algunos, como el jira vivo que avisa una sola vez, pero falta el barrido completo. la orden está en la cola con reintento.
+
+reinicios diferidos del daemon. pasó dos veces que el daemon se reinició con tareas corriendo y quedaron zombies. la regla es que ningún reinicio corta una tarea viva y que el daemon nuevo adopta las tareas cuyo pid sigue vivo. el arreglo de raíz está encolado y todavía no cerrado.
+
+el kit de rescate. vos lo pediste: si el server cae siendo el main, poder arreglarlo desde la mac y desde una web. la parte de la mac es un script rescate punto sh con estado, reiniciar agente, modo recuperación, logs y reboot, por lan o tailscale. la parte web es una página aparte del chat, con token, servida por tailscale, y un watchdog que reinicia el daemon si no da señal de vida. todavía no está hecho, es de las próximas.
+
+chrome cien por ciento en el server. la base está: un solo perfil, el de claudio, y las recetas de chrome apuntan al cdp del server. lo que falta es que todas las recetas que hoy usan la extensión de la mac tengan su versión por cdp, y subir archivos al picker nativo, que hoy solo anda en mac con osascript.
+
+y las cámaras del depto: dos tapo c doscientos diez con frigate en docker, siete días continuo y treinta de eventos, unos trescientos ochenta y cinco gigas. está planificado en cámaras punto md, pero necesita un disco de backup y que des de alta las cámaras con camera account en la app tapo.
+
+# modelos: quién piensa y quién ejecuta
+
+este capítulo es corto porque la regla es simple. entender lo que vos pedís lo hace siempre el mejor modelo, hoy fable. eso no se negocia y no se baja para ahorrar. las tareas de fondo van con opus por default, y fable cuando la tarea es de estudio largo o de criterio. haiku nunca, ni por default ni para ahorrar, porque llena de errores y hace perder tiempo.
+
+lo barato no es un modelo chico, es un script. cuando decís hacelo sin gastar tokens, la respuesta correcta es que fable piense una vez y deje el script que después corre sin modelo. es lo que pasó con el podcast, con las cookies de google, con el índice de jira, con el widget del server.
+
+el modo eco, el de gemini flash lite, es backup de modelos caídos o sin crédito, no un ahorro. y el chat nunca pasa a eco solo: eso lo dijiste mil veces y ayer volvió a pasar una mañana entera. la regla ya está escrita: el chat solo cambia de cuenta de claude automáticamente, nunca de modo.
+
+sobre lo local: anoche evalué el stack open source del video de fireship. ollama corre en el server con llama tres punto dos y qwen tres, y quedó enganchado como último respaldo del eco, detrás de un flag, apagado por default. probado de punta a punta en treinta y tres segundos, pero el contexto entero del chat tarda cuatro minutos y medio en esta cpu, así que solo sirve con contexto recortado. de las otras herramientas, headroom es la única que vale la pena probar: comprime las salidas de las herramientas antes de mandarlas al modelo. nueve router, dify y openhands, no.
+
+y las cuentas: desde las cuatro de la tarde de hoy, cuando se resetea orugote, el reparto es mitad y mitad entre facu y orugote. cada tarea sale con la cuenta que esté más lejos de sus tres líneas, las cinco horas, la semanal y la de fable. lo decide un script sin tokens, y el widget de uso te dice qué cuenta está usando y por qué.
+
+# flujo de trabajo
+
+cómo se ordena el laburo para que no se pise. la cola tiene un carril por tema: server, tools, awtomic, fuzzer, personal. una orden a la vez por tema, varios temas en paralelo, y awtomic siempre primero. si vos pedís algo de awtomic, fuzzer se queda quieto.
+
+cada pestaña de la web es un tema, y cada charla y tarea se guarda con su tema. eso es lo que arreglamos para que la pestaña server no cargue vacía: cada tema se publica entero como un archivo y la pestaña lo baja de una.
+
+recetas antes que resolver a mano. antes de encolar cualquier cosa, se grepea recetas y scripts. si ya está resuelto, se usa. si no, la tarea deja receta al terminar. resolver a mano lo que ya se resolvió una vez es un error, no una tarea.
+
+un login por máquina, un secreto en un solo lugar. claude, github y los oauth nunca se copian. lo que sí viaja son las cookies volcadas y los tokens de api.
+
+lo que se abre se cierra. chrome, pestañas, paneles de tmux, procesos en background. todo en el finally, aunque la tarea falle. anoche encontraste diez ventanas abiertas y eso no puede volver a pasar.
+
+y nada listo sin probarlo de punta a punta. lo de la iso de xubuntu dolió: dije que se instalaba sola sin haberla booteado. ahora la iso se probó en una vm hasta ver el login, y esa es la vara para todo lo que te diga que está listo.
+
+# mejoras que puedo hacer ya, sin que decidas nada
+
+antes de las propuestas, tres cosas que son puro laburo mío y que voy a ir haciendo entre orden y orden, porque no gastan casi nada y bajan el costo de todo lo demás.
+
+la primera es el modo comandos sin tokens. hoy cada vez que decís "cuenta orugote" o "pausa" el daemon lo resuelve sin modelo, y eso está bien. la idea es extenderlo: estado del server, qué corre en la cola, cuánto uso lleva cada cuenta, cerrar sobrantes de chrome. todo eso sale de un archivo o de un comando, así que es un script, no una pregunta a claude. cada pregunta que se contesta sin modelo es una pregunta que no te come la línea semanal.
+
+la segunda es la curva de costo. el daemon deja una fila por tarea en métricas y la receta costo te da dólares y minutos por unidad de trabajo. la regla es que esa curva tiene que bajar de una tanda a la otra, y si no baja, el loop se para y se escribe por qué. hoy se mide pero no se mira: la retro diaria tendría que decir en una línea si bajó o no, y convertir lo que se fue en tokens en una receta o una regla antes de la siguiente.
+
+la tercera es el orden de la casa. hay un backup diario que no tiene destino, un syncthing sin emparejar, y varias órdenes con reintento en la cola que llevan más de doce horas. lo primero que hago cuando termine este episodio es barrer la cola: cerrar lo que ya se hizo por otro camino, reencolar lo que sigue valiendo, y dejar el estado del server con una sola sección de esperando a facundo, corta y viva, que es la que lee el widget.
+
+# optimizaciones y propuestas, a b c
+
+cierro con lo que podés decidir cuando vuelvas. las resolvemos de a una en el chat, empezando por la uno.
+
+propuesta uno, jira desde el server. a, mi voto: creás el api token de atlassian ahora y me lo pegás, dos minutos, jira anda desde el server para siempre. b: dejamos el puente a la mac, que funciona mientras la mac esté prendida. c: oauth del mcp de atlassian en el server, que hay que renovar y es más frágil. decime a, b o c.
+
+propuesta dos, la energía. a, mi voto: comprás el ups lyonn, el mini ups del router y el enchufe tapo, unos doscientos ochenta y cinco mil pesos, y el server sobrevive cortes y se puede reiniciar desde el celu. b: solo el enchufe tapo, unos cuarenta mil, reinicio remoto pero sin protección de cortes. c: nada por ahora, solo la bios en restore on power loss.
+
+propuesta tres, headroom. a, mi voto: lo instalo en un solo carril, el de tools, y mido una semana cuántos tokens ahorra en salidas de herramientas. b: no se toca nada del stack open source hasta que el server esté estable. c: prender también ollama como respaldo del eco, con contexto recortado.
+
+propuesta cuatro, el kit de rescate. a, mi voto: primero el script de la mac y el watchdog, hoy, y la web de rescate la semana que viene. b: todo junto en una sola orden larga. c: solo el watchdog, que es lo que evita que te quedes sin chat a la noche.
+
+propuesta cinco, shopify. a, mi voto: cinco minutos de vnc hoy, te logueás en el admin, y el qa de awtomic corre entero desde el server. b: lo dejamos en la mac y el server hace solo lo que no necesita shopify.
+
+eso es todo. resumen en una línea: el server ya es el main, lo que falta de vos son cuatro cosas de dos minutos cada una, y lo que falta de mí son los guards y el kit de rescate. disfrutá el paseo, cuando vuelvas me decís a, b o c y arrancamos por la uno.

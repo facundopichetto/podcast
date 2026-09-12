@@ -130,3 +130,35 @@ celu. el chat ademas limpia el texto antes de leerlo (sin codigo, rutas ni urls)
 
 verificar igual que siempre: `python3 -m recetas.podcast pronunciacion`. para escuchar como queda una
 respuesta: `python3 -m recetas.audio_respuesta "el texto"`.
+
+## el podcast siempre tiene guion preparado (facundo, 2026-09-12)
+
+**al emitir se filtra, no se arma de cero.** facundo: "que el podcast tenga siempre una version
+preescrita de lo proximo". o sea que cuando pide un episodio no se sale a juntar material: ya hay un
+borrador vivo en **`~/.claudio/tools/podcast/PROXIMO.md`**, mas largo de lo necesario, y lo unico que
+gasta modelo es **un solo pase** para redactar el guion final sobre ese borrador.
+
+- **lo mantiene un script, no el modelo**: `podcast_proximo` en `SCRIPTS` de `daemon.py` (cada 2 h,
+  cero tokens) llama a `python3 -m recetas.podcast_proximo actualizar`, que rehace el borrador entero
+  con: `EN CURSO` / `PENDIENTE` / `ESPERANDO A FACUNDO` del `ESTADO.md` de cada tema, la cola de
+  `ordenes.md` (corriendo y pendientes), `avisos.md`, las ultimas lineas de `log.md` y el material de
+  `podcast_noticias.py` (cacheado 3 h, para no pegarle a 8 feeds cada vuelta).
+- **cada capitulo lleva su tema**, para poder filtrar: el borrador es markdown con
+  `## [tema] titulo` y el cuerpo abajo. temas: `noticias`, `server`, `tools`, `awtomic`, `fuzzer`,
+  `juegos`, `plata`, `personal`, `cola`, `avisos`.
+- **el flujo de "dame un podcast"**: `python3 -m recetas.podcast_proximo emitir [--temas server,tools]`.
+  filtra el borrador (si no se pide nada, entra todo), arma el prompt con estas reglas y el material,
+  **un pase de modelo** y despues `recetas.podcast nuevo` **sin `--conservar`** (episodio unico, como
+  siempre: `--conservar` solo si facundo pide otro que no reemplace).
+  `--auto` hace el pase de modelo el script mismo (`claude -p`, cuenta por `reparto_cuentas`); sin
+  `--auto` no gasta nada, deja el prompt en `tmp/` para que lo redacte el modelo que ya esta corriendo.
+- **noticias entra siempre** aunque se filtre por tema (el episodio arranca con las noticias del dia),
+  salvo `--sin-noticias`.
+
+```
+python3 -m recetas.podcast_proximo actualizar          # rehace el borrador (cero tokens)
+python3 -m recetas.podcast_proximo ver --temas server  # que diria el episodio de server
+python3 -m recetas.podcast_proximo emitir --temas server,tools --auto
+```
+
+probar sin gastar nada: **`python3 -m recetas.prueba_podcast_proximo`**.

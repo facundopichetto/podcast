@@ -7,359 +7,79 @@
  },
  "episodios": [
   {
-   "id": "ep-2026-09-11",
-   "fecha": "2026-09-11",
-   "titulo": "claudio board, la iso que si, y tres tickets",
+   "id": "ep-2026-09-12-server",
+   "fecha": "2026-09-12",
+   "titulo": "express: el server, claudio y lo que sigue",
    "temas": [
-    "awtomic",
     "server",
     "tools"
    ],
-   "palabras": 945,
-   "guion": "episodio-2026-09-11.txt",
+   "palabras": 2580,
+   "guion": "episodio-2026-09-12-server.txt",
    "voces": {
     "daniela": {
-     "archivo": "audio/ep-2026-09-11-daniela.mp3",
-     "duracion": 299.5,
+     "archivo": "audio/ep-2026-09-12-server-daniela.mp3",
+     "duracion": 786.4,
      "capitulos": [
       {
        "t": 0.0,
-       "titulo": "lo de hoy en una",
-       "duracion": 22.6,
-       "archivo": "audio/ep-2026-09-11-1-lo-de-hoy-en-una.daniela.mp3"
+       "titulo": "de qué va este episodio",
+       "duracion": 32.5,
+       "archivo": "audio/ep-2026-09-12-server-1-de-que-va-este-episodio.daniela.mp3"
       },
       {
-       "t": 22.6,
-       "titulo": "awtomic: hafner, ponzi, penfolds",
-       "duracion": 113.5,
-       "archivo": "audio/ep-2026-09-11-2-awtomic-hafner-ponzi.daniela.mp3"
+       "t": 32.5,
+       "titulo": "lo que ya corre solo desde el server",
+       "duracion": 93.0,
+       "archivo": "audio/ep-2026-09-12-server-2-lo-que-ya-corre-solo.daniela.mp3"
       },
       {
-       "t": 136.2,
-       "titulo": "server: la iso ahora si",
-       "duracion": 47.5,
-       "archivo": "audio/ep-2026-09-11-3-server-la-iso-ahora-si.daniela.mp3"
-      },
-      {
-       "t": 183.6,
-       "titulo": "tools: claudio board",
-       "duracion": 81.3,
-       "archivo": "audio/ep-2026-09-11-4-tools-claudio-board.daniela.mp3"
-      },
-      {
-       "t": 264.9,
-       "titulo": "lo que queda abierto",
-       "duracion": 34.6,
-       "archivo": "audio/ep-2026-09-11-5-lo-que-queda-abierto.daniela.mp3"
-      }
-     ]
-    }
-   },
-   "duracion": 299.5
-  },
-  {
-   "id": "ep-2026-09-11-b",
-   "fecha": "2026-09-11",
-   "titulo": "el dia largo: claudio board, las cuentas, la iso probada y cuatro tickets",
-   "temas": [
-    "tools",
-    "server",
-    "awtomic",
-    "plata",
-    "personal",
-    "fuzzer"
-   ],
-   "palabras": 4787,
-   "guion": "episodio-2026-09-11-b.txt",
-   "voces": {
-    "daniela": {
-     "archivo": "audio/ep-2026-09-11-b-daniela.mp3",
-     "duracion": 1466.4,
-     "capitulos": [
-      {
-       "t": 0.0,
-       "titulo": "de que va este episodio",
-       "duracion": 57.7,
-       "archivo": "audio/ep-2026-09-11-b-1-de-que-va-este-episodio.daniela.mp3"
-      },
-      {
-       "t": 57.7,
-       "titulo": "claudio board, primera parte: el contexto que se perdia",
-       "duracion": 145.9,
-       "archivo": "audio/ep-2026-09-11-b-2-claudio-board-primera.daniela.mp3"
-      },
-      {
-       "t": 203.6,
-       "titulo": "claudio board, segunda parte: seguir en cualquier pantalla",
-       "duracion": 127.0,
-       "archivo": "audio/ep-2026-09-11-b-3-claudio-board-segunda.daniela.mp3"
-      },
-      {
-       "t": 330.6,
-       "titulo": "claudio board, tercera parte: los widgets se tocan",
-       "duracion": 171.0,
-       "archivo": "audio/ep-2026-09-11-b-4-claudio-board-tercera.daniela.mp3"
-      },
-      {
-       "t": 501.6,
-       "titulo": "los nombres: claudio, temas y motores",
-       "duracion": 94.8,
-       "archivo": "audio/ep-2026-09-11-b-5-los-nombres-claudio.daniela.mp3"
-      },
-      {
-       "t": 596.4,
-       "titulo": "las cuentas: nada quedo usando la vieja",
-       "duracion": 105.0,
-       "archivo": "audio/ep-2026-09-11-b-6-las-cuentas-nada-quedo.daniela.mp3"
-      },
-      {
-       "t": 701.4,
-       "titulo": "los modelos de respaldo",
-       "duracion": 84.4,
-       "archivo": "audio/ep-2026-09-11-b-7-los-modelos-de-respaldo.daniela.mp3"
-      },
-      {
-       "t": 785.8,
-       "titulo": "el daemon: zombies, ventanas y quien espera a quien",
-       "duracion": 126.4,
-       "archivo": "audio/ep-2026-09-11-b-8-el-daemon-zombies.daniela.mp3"
-      },
-      {
-       "t": 912.2,
-       "titulo": "el server: la imagen que fallo y la que si",
-       "duracion": 147.4,
-       "archivo": "audio/ep-2026-09-11-b-9-el-server-la-imagen-que.daniela.mp3"
-      },
-      {
-       "t": 1059.7,
-       "titulo": "awtomic: cuatro tickets y una regla que dolio",
-       "duracion": 177.2,
-       "archivo": "audio/ep-2026-09-11-b-10-awtomic-cuatro-tickets.daniela.mp3"
-      },
-      {
-       "t": 1236.9,
-       "titulo": "la ronda de la noche: veintiuna propuestas esperando un si",
-       "duracion": 148.8,
-       "archivo": "audio/ep-2026-09-11-b-11-la-ronda-de-la-noche.daniela.mp3"
-      },
-      {
-       "t": 1385.7,
-       "titulo": "lo que queda esperando",
+       "t": 125.4,
+       "titulo": "lo que todavía cuelga de la mac",
        "duracion": 80.7,
-       "archivo": "audio/ep-2026-09-11-b-12-lo-que-queda-esperando.daniela.mp3"
+       "archivo": "audio/ep-2026-09-12-server-3-lo-que-todavia-cuelga.daniela.mp3"
+      },
+      {
+       "t": 206.2,
+       "titulo": "pasos fáciles, para hoy",
+       "duracion": 80.1,
+       "archivo": "audio/ep-2026-09-12-server-4-pasos-faciles-para-hoy.daniela.mp3"
+      },
+      {
+       "t": 286.2,
+       "titulo": "pasos no tan fáciles",
+       "duracion": 107.6,
+       "archivo": "audio/ep-2026-09-12-server-5-pasos-no-tan-faciles.daniela.mp3"
+      },
+      {
+       "t": 393.8,
+       "titulo": "modelos: quién piensa y quién ejecuta",
+       "duracion": 108.3,
+       "archivo": "audio/ep-2026-09-12-server-6-modelos-quien-piensa-y.daniela.mp3"
+      },
+      {
+       "t": 502.1,
+       "titulo": "flujo de trabajo",
+       "duracion": 82.3,
+       "archivo": "audio/ep-2026-09-12-server-7-flujo-de-trabajo.daniela.mp3"
+      },
+      {
+       "t": 584.4,
+       "titulo": "mejoras que puedo hacer ya, sin que decidas nada",
+       "duracion": 83.8,
+       "archivo": "audio/ep-2026-09-12-server-8-mejoras-que-puedo-hacer.daniela.mp3"
+      },
+      {
+       "t": 668.2,
+       "titulo": "optimizaciones y propuestas, a b c",
+       "duracion": 118.2,
+       "archivo": "audio/ep-2026-09-12-server-9-optimizaciones-y.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 1466.4
-  },
-  {
-   "id": "ep-2026-09-11-noche",
-   "fecha": "2026-09-11",
-   "titulo": "nocturno: las noticias del viernes, jamiroquai y el server vivo",
-   "temas": [
-    "noticias",
-    "plata",
-    "tools",
-    "server"
-   ],
-   "palabras": 2008,
-   "guion": "episodio-2026-09-11-noche.txt",
-   "voces": {
-    "daniela": {
-     "archivo": "audio/ep-2026-09-11-noche-daniela.mp3",
-     "duracion": 608.1,
-     "capitulos": [
-      {
-       "t": 0.0,
-       "titulo": "arranque",
-       "duracion": 11.1,
-       "archivo": "audio/ep-2026-09-11-noche-1-arranque.daniela.mp3"
-      },
-      {
-       "t": 11.1,
-       "titulo": "argentina: dólar quieto, inflación en uno coma siete",
-       "duracion": 95.6,
-       "archivo": "audio/ep-2026-09-11-noche-2-argentina-dolar-quieto.daniela.mp3"
-      },
-      {
-       "t": 106.6,
-       "titulo": "el mundo en tres titulares",
-       "duracion": 72.8,
-       "archivo": "audio/ep-2026-09-11-noche-3-el-mundo-en-tres.daniela.mp3"
-      },
-      {
-       "t": 179.4,
-       "titulo": "tecnología: fable cinco punto uno y la carrera de los agentes",
-       "duracion": 81.0,
-       "archivo": "audio/ep-2026-09-11-noche-4-tecnologia-fable-cinco.daniela.mp3"
-      },
-      {
-       "t": 260.4,
-       "titulo": "música en buenos aires",
-       "duracion": 85.3,
-       "archivo": "audio/ep-2026-09-11-noche-5-musica-en-buenos-aires.daniela.mp3"
-      },
-      {
-       "t": 345.7,
-       "titulo": "lo tuyo: plata, trámites y paquetes",
-       "duracion": 81.5,
-       "archivo": "audio/ep-2026-09-11-noche-6-lo-tuyo-plata-tramites.daniela.mp3"
-      },
-      {
-       "t": 427.2,
-       "titulo": "claudio board, lo de hoy",
-       "duracion": 58.3,
-       "archivo": "audio/ep-2026-09-11-noche-7-claudio-board-lo-de-hoy.daniela.mp3"
-      },
-      {
-       "t": 485.6,
-       "titulo": "server y cuentas",
-       "duracion": 59.1,
-       "archivo": "audio/ep-2026-09-11-noche-8-server-y-cuentas.daniela.mp3"
-      },
-      {
-       "t": 544.7,
-       "titulo": "el dj de la noche",
-       "duracion": 32.3,
-       "archivo": "audio/ep-2026-09-11-noche-9-el-dj-de-la-noche.daniela.mp3"
-      },
-      {
-       "t": 577.0,
-       "titulo": "lo que te espera mañana",
-       "duracion": 31.0,
-       "archivo": "audio/ep-2026-09-11-noche-10-lo-que-te-espera-manana.daniela.mp3"
-      }
-     ]
-    }
-   },
-   "duracion": 608.1
-  },
-  {
-   "id": "ep-2026-09-12-largo",
-   "fecha": "2026-09-12",
-   "titulo": "largo: las noticias del sábado, la hora sin tokens y el server vivo",
-   "temas": [
-    "tools",
-    "server",
-    "fuzzer",
-    "awtomic",
-    "plata"
-   ],
-   "palabras": 4835,
-   "guion": "episodio-2026-09-12-largo.txt",
-   "voces": {
-    "daniela": {
-     "archivo": "audio/ep-2026-09-12-largo-daniela.mp3",
-     "duracion": 1489.2,
-     "capitulos": [
-      {
-       "t": 0.0,
-       "titulo": "arranque",
-       "duracion": 25.1,
-       "archivo": "audio/ep-2026-09-12-largo-1-arranque.daniela.mp3"
-      },
-      {
-       "t": 25.1,
-       "titulo": "argentina: dólar quieto, inflación en uno coma siete, y el salario que no llega",
-       "duracion": 143.6,
-       "archivo": "audio/ep-2026-09-12-largo-2-argentina-dolar-quieto.daniela.mp3"
-      },
-      {
-       "t": 168.7,
-       "titulo": "el mundo: veinticinco años del once de septiembre, y dos estrechos complicados",
-       "duracion": 73.4,
-       "archivo": "audio/ep-2026-09-12-largo-3-el-mundo-veinticinco.daniela.mp3"
-      },
-      {
-       "t": 242.1,
-       "titulo": "tecnología: fable, la api de agentes, y el investigador que se fue",
-       "duracion": 141.5,
-       "archivo": "audio/ep-2026-09-12-largo-4-tecnologia-fable-la-api.daniela.mp3"
-      },
-      {
-       "t": 383.6,
-       "titulo": "música en buenos aires",
-       "duracion": 104.2,
-       "archivo": "audio/ep-2026-09-12-largo-5-musica-en-buenos-aires.daniela.mp3"
-      },
-      {
-       "t": 487.8,
-       "titulo": "lo tuyo: plata, trámites y paquetes",
-       "duracion": 68.6,
-       "archivo": "audio/ep-2026-09-12-largo-6-lo-tuyo-plata-tramites.daniela.mp3"
-      },
-      {
-       "t": 556.4,
-       "titulo": "claudio board: el día en que la interfaz creció",
-       "duracion": 182.0,
-       "archivo": "audio/ep-2026-09-12-largo-7-claudio-board-el-dia-en.daniela.mp3"
-      },
-      {
-       "t": 738.4,
-       "titulo": "nombres: claudio, temas y motores",
-       "duracion": 61.0,
-       "archivo": "audio/ep-2026-09-12-largo-8-nombres-claudio-temas-y.daniela.mp3"
-      },
-      {
-       "t": 799.4,
-       "titulo": "cuentas y modelos de respaldo",
-       "duracion": 81.0,
-       "archivo": "audio/ep-2026-09-12-largo-9-cuentas-y-modelos-de.daniela.mp3"
-      },
-      {
-       "t": 880.4,
-       "titulo": "el daemon: zombies, ventanas y reinicios",
-       "duracion": 74.6,
-       "archivo": "audio/ep-2026-09-12-largo-10-el-daemon-zombies.daniela.mp3"
-      },
-      {
-       "t": 955.0,
-       "titulo": "la hora sin tokens",
-       "duracion": 99.5,
-       "archivo": "audio/ep-2026-09-12-largo-11-la-hora-sin-tokens.daniela.mp3"
-      },
-      {
-       "t": 1054.5,
-       "titulo": "el server: de la iso que falló a la máquina viva",
-       "duracion": 156.0,
-       "archivo": "audio/ep-2026-09-12-largo-12-el-server-de-la-iso-que.daniela.mp3"
-      },
-      {
-       "t": 1210.5,
-       "titulo": "fuzzer barra de yei: el dj de la noche",
-       "duracion": 70.0,
-       "archivo": "audio/ep-2026-09-12-largo-13-fuzzer-barra-de-yei-el.daniela.mp3"
-      },
-      {
-       "t": 1280.5,
-       "titulo": "awtomic: cuatro tickets",
-       "duracion": 85.1,
-       "archivo": "audio/ep-2026-09-12-largo-14-awtomic-cuatro-tickets.daniela.mp3"
-      },
-      {
-       "t": 1365.5,
-       "titulo": "lo que te espera cuando vuelvas del paseo",
-       "duracion": 53.7,
-       "archivo": "audio/ep-2026-09-12-largo-15-lo-que-te-espera-cuando.daniela.mp3"
-      },
-      {
-       "t": 1419.2,
-       "titulo": "una regla para leer todo esto",
-       "duracion": 50.3,
-       "archivo": "audio/ep-2026-09-12-largo-16-una-regla-para-leer.daniela.mp3"
-      },
-      {
-       "t": 1469.5,
-       "titulo": "cierre",
-       "duracion": 19.6,
-       "archivo": "audio/ep-2026-09-12-largo-17-cierre.daniela.mp3"
-      }
-     ]
-    }
-   },
-   "duracion": 1489.2
+   "duracion": 786.4
   }
  ],
- "actualizado": "2026-09-12 01:37"
+ "actualizado": "2026-09-12 12:29"
 }
