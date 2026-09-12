@@ -1,0 +1,169 @@
+# arranque
+
+son la una y media de la madrugada del sábado doce de septiembre. esto es claudio, versión larga del nocturno, veinticinco minutos para escuchar caminando con eva. el orden es el de siempre desde anoche: primero las noticias del día, después lo tuyo, y recién al final todo lo que hicimos entre el viernes y esta madrugada, que fue mucho, incluida una hora en la que me quedé sin tokens en el peor momento. lo cuento todo, lo bueno y lo que salió mal.
+
+# argentina: dólar quieto, inflación en uno coma siete, y el salario que no llega
+
+arranco por el dólar, con datos de dolar api de las seis de la tarde del viernes. el oficial cerró en mil cuatrocientos ochenta la compra y mil quinientos treinta la venta. el blue, mil quinientos veinticinco y mil quinientos cuarenta y cinco. el mep en mil quinientos cuarenta, el contado con liquidación en mil quinientos noventa y siete, y el dólar tarjeta, que es el que te importa para amazon y las suscripciones, en mil novecientos ochenta y nueve. la brecha entre el oficial y el blue es de un uno por ciento: prácticamente no existe. dos semanas de septiembre sin saltos.
+
+el número grande de la semana sigue siendo la inflación de agosto que publicó el indec el jueves: uno coma siete por ciento en el mes, el valor más bajo en catorce meses, veintiuno coma tres acumulado en el año y treinta y tres coma cinco interanual. lo que más subió fue vivienda y servicios, con dos coma ocho.
+
+pero el viernes ámbito publicó el otro lado de ese número, y vale la pena escucharlo junto. el salario real del sector privado cayó tres por ciento en un año, y la mitad de los trabajadores formales cobra menos de un millón trescientos ochenta y cinco mil pesos por mes. en el primer semestre de dos mil veintiséis cerraron casi ocho mil ochocientas empresas. y la importación de bienes de capital productivo cayó por segundo trimestre seguido. o sea: la inflación baja, pero la economía real está chica.
+
+del lado de las finanzas del estado, la nación cuenta que el gobierno renovó toda la deuda en pesos que le vencía y bajó la tasa fija, que es una señal de que el mercado le está creyendo, al menos esta semana. y para el que mira crédito: los hipotecarios uva en capital tienen una tasa nueva del seis coma cinco por ciento para primera vivienda. lo digo porque en algún momento el plan de plata puede pasar por ahí.
+
+dos más, cortas. sturzenegger le dijo al fainánshal taims que proyecta una migración de cuatro millones de personas del conurbano al interior. y la nación advierte que el súper niño gana fuerza y crece el riesgo de lluvias excesivas en la argentina en los próximos meses: si tenés equipos o discos en el piso, es el momento de subirlos.
+
+en política, el viernes fue el día del maestro y milei habló en un acto: la argentina que queremos se construye en las aulas. bullrich se mostró preocupada por la velocidad de la recuperación y pidió que la baja de impuestos llegue a todos, y un medio inglés de malvinas calificó de táctica de distracción el reclamo por la soberanía de las islas. todo esto de ámbito y la nación, del viernes once y la madrugada del doce.
+
+# el mundo: veinticinco años del once de septiembre, y dos estrechos complicados
+
+el viernes fue el aniversario número veinticinco del once de septiembre, y las dos fuentes internacionales que sigo, demócrasi náu y ene pe erre, dedicaron casi todo el día a eso. el dato que más quedó: las guerras posteriores al once de septiembre costaron cuatro millones setecientas mil vidas y ocho billones de dólares, según el conteo que citó demócrasi náu el jueves. ene pe erre lo contó desde el otro lado, con afganos que todavía viven bajo la sombra de esos veinte años.
+
+lo que sí es noticia nueva y te toca en el bolsillo es el mar rojo. los hutíes, apoyados por irán, tomaron un puerto estratégico y una isla en yemen, y abrieron un nuevo frente de batalla. ene pe erre explica por qué eso puede empujar el precio del combustible todavía más arriba: controlan el acceso a bab el mandeb, por donde pasa buena parte del comercio entre asia y europa. si el flete sube, los paquetes de amazon y el courier suben con él.
+
+en irán, entre la guerra y las sanciones, mucha gente está perdiendo el trabajo. la guerra comercial entre estados unidos y canadá está desarmando la cadena de autopartes, que estaba integrada entre los dos países. y en hong kong un tribunal condenó a prisión a tres organizadores de la vigilia por tiananmen. todo esto del viernes once, de ene pe erre.
+
+# tecnología: fable, la api de agentes, y el investigador que se fue
+
+esto es lo que te sirve a vos, que corrés claude code todo el día.
+
+la noticia de la semana sigue siendo claude fable cinco punto uno, el modelo con el que estás hablando ahora mismo. mejor en programación y en investigación, precio más bajo, y una versión hermana, mitos cinco punto uno, que queda en acceso restringido. lo concreto para nosotros ya está pasando: la curva de costo por tarea que medimos baja sola.
+
+la segunda, del miércoles diez: open ei ai abrió la beta pública de su éiyents api. es el mismo armazón que usa códex, pero como servicio en la nube: sesiones largas, orquestación, compactación de contexto, herramientas y subagentes. es exactamente lo que venimos construyendo a mano con el daemon. no digo que lo usemos, digo que hay que mirarlo, porque las decisiones que ellos tomaron sobre reinicios y contexto son las mismas que nos costaron caro esta madrugada.
+
+la tercera es humana. jacob coxon, un investigador británico de veintisiete años que trabajó tres años en preentrenamiento, primero en open ei ai y desde este año en anthropic, renunció y publicó en equis que ninguna de las dos empresas está actuando responsablemente, y que van a toda velocidad hacia una superinteligencia capaz de mejorarse sola. el mensaje pasó los cuarenta y cuatro millones de vistas en nueve horas. y tuvo efecto: el gobernador de california, niusom, firmó la ley ese be ochocientos trece, que crea organizaciones de verificación independientes y una comisión de estándares y seguridad de inteligencia artificial. anthropic la apoyaba desde agosto, open ei ai la respaldó justo antes de la firma. en paralelo, anthropic reportó que detectó y bloqueó varios usos de sus modelos durante el año que podían contribuir a crear patógenos peligrosos. esto es de emol, infobae y de niurón, del nueve al once de septiembre.
+
+del lado del negocio, tec cranch del viernes: meca ei ai, una empresa de datos de entrenamiento para robots, se acerca a una valuación de quinientos millones con secoia, señal de que la próxima fiebre es la robótica física. gari tan, de uai combineitor, pide que los laboratorios de pesos abiertos de estados unidos destilen los modelos de frontera, que es buena noticia para nuestro proyecto de modelos de respaldo gratuitos. y la pelea entre open ei ai y los matemáticos sigue escalando, por el uso de sus problemas como datos de prueba.
+
+una aclaración honesta: hacker news no contestó esta noche, dio error quinientos dos, así que esa fuente hoy no está.
+
+# música en buenos aires
+
+miré la agenda con dos ojos: lo que escuchás vos y lo que le sirve a fuzzer.
+
+lo más cerca es yamirocuai, el jueves diecisiete de septiembre en el hipódromo de san isidro, primera vez en nueve años. las entradas por ol ácses: campo delantero ciento noventa mil pesos, platea dos ciento setenta mil, platea uno doscientos cincuenta mil, y el pit frente al escenario trescientos veinte mil, todo sin cargo de servicio.
+
+más en tu palo, dos en salas chicas. sudán árcaivs el jueves veinticuatro en niceto, presentando disco nuevo, por venti. y el sábado veintiséis, gruper, en el teatro margarita xirgu, chacabuco ochocientos setenta y cinco, también por venti. de esos dos el precio no está publicado, así que no te lo invento.
+
+en octubre, di toten josen el sábado diez en el movistar arena con su gira de despedida, y cadena perpetua de teloneros. bts, los días veintiuno, veintitrés y veinticuatro en el estadio único de la plata, con entradas desde trescientos noventa y dos mil pesos según tíketel. y callejero fino el veinticuatro en el complejo art media, setenta y ocho mil.
+
+y lo grande del año: primavera sáund buenos aires, el veintiocho y veintinueve de noviembre en el club ciudad. sábado gorilas y yang lin, domingo de strouks, efe ka ei twigs y lili alen, con cortni barnet, juana molina y santiago motorizado. abono general en fase tres desde trescientos diez mil más cargos, día suelto ciento ochenta y cinco mil, vip novecientos mil, por enigma tíkets, seis cuotas sin interés con bbva.
+
+una para fuzzer, de indie hoy del viernes: la banda sonora del i ei sports efe ce veintisiete sorprendió por la cantidad de artistas argentinos. es un canal de descubrimiento real para bandas chicas, y cuando tengamos los números de spotify for artists lo anoto como objetivo para el año que viene.
+
+# lo tuyo: plata, trámites y paquetes
+
+cuatro cosas que se mueven solas mientras no mirás.
+
+spotify. desde la facturación de octubre pasa de tres mil doscientos noventa y nueve a cuatro mil cuatrocientos noventa y nueve pesos por mes, un treinta y seis por ciento más. la cuenta anual pasa de casi cuarenta mil a casi cincuenta y cuatro mil.
+
+el marshall. el borrador de la publicación está escrito y el precio cerrado, y ya está verificado que la api de mercado libre no te deja publicar con esa cuenta, así que el camino es el manual. falta lo tuyo: las fotos, el peso del ampli con la caja y el código de barras. y con la inflación de agosto publicada, conviene rechequear los comparables, porque los netos que tenemos son del cuatro de septiembre.
+
+los trámites. efe labs sociedad por acciones simplificada figura omisa en la dirección general impositiva de uruguay desde el primero de julio, con tres intimaciones sin responder. hay ocho paquetes frenados: cinco de mail americas esperando que actualices el cuil, y tres de de hache ele demorados desde fines de agosto. paypal pidió actualizar la tarjeta.
+
+y lo que destraba todo el plan de inversión sigue siendo abrir la cuenta de ibi ka er. hasta que exista el número de cuenta, el resto no arranca.
+
+# claudio board: el día en que la interfaz creció
+
+ahora sí, lo nuestro. la interfaz web se llama claudio board desde el viernes a la tarde, lo elegiste vos, y en un solo día pasó de la versión cuatro punto nueve a la cuatro punto cuarenta y tres. voy por partes, porque fueron muchas.
+
+lo primero y lo más grave era el contexto. a la mañana me dijiste que la charla de awtomic perdía el hilo constantemente y que no podías trabajar así. el diagnóstico fue doble: el chat guardaba todo en una bolsa por fecha sin tema, y al modelo le llegaban solo cuatro intercambios cortados a mil quinientos caracteres. ahora cada pestaña tiene su propio archivo de chat, el modelo recibe la charla entera de esa pestaña con tope por tamaño y no por cantidad, y la reconstrucción de lo viejo se hizo con un script que lee el buzón de la web, sin gastar un token.
+
+lo segundo, seguir en cualquier pantalla. las pestañas dejaron de vivir en el navegador de cada dispositivo y pasaron al buzón, así el celu y la compu ven lo mismo. el borrador de lo que estás escribiendo también viaja: dejás de tipear en la compu y terminás la frase desde el celu sin haber tocado enviar. y el historial de cada pestaña ya no se arma con las últimas horas de comentarios, se publica entero por tema y la pestaña aparece llena de una sola pasada. eso resolvió lo de la pestaña de server que abría vacía y lo de ver una conversación vieja cada vez que prendías el celu.
+
+lo tercero, la interfaz en sí. se sacó la línea de estado del header, la del pid y los pendientes, y también la marca de arriba a la izquierda. el widget de uso pasó a ser gráfico: tres barras por cuenta, cinco horas, semana y fable, y el color sale de comparar lo gastado contra el tiempo transcurrido de la ventana, verde si vas tranquilo y rojo fuerte si quemaste todo en veinte minutos. hay un separador arrastrable entre el chat y los widgets. el botón de mandar es un ícono. la caja de texto perdió el borde verde y la fuente grande. enter manda en la compu, hace salto de línea en el celu, y dos enter rápidos ya no mandan dos veces. hay fichas de sugerencia arriba de la caja que salen de la última respuesta sin gastar tokens. y los widgets se tocan: cualquier fila abre un modal con look terminal que expande el ítem y te da acciones a, be, ce.
+
+lo cuarto, lo que llegó a la noche. el botón de cámara al lado del input, como en whatsapp: la foto se achica, sube al buzón y me llega como ruta local. el menú contextual: mantené apretado un mensaje en el celu o clic derecho en la compu, y podés responder con cita, copiar, editar o mandar a otra pestaña. y el split de pestañas ya no tiene botón: arrastrás la pestaña hasta la zona de los widgets y queda al lado, como en vi ese cod.
+
+y un detalle que me pediste y quedó: cuando escribís un mensaje que toca dos temas, la primera mitad de awtomic y la segunda de tools, la web lo detecta y ofrece partirlo, cada mitad a su pestaña.
+
+lo que está pedido y no llegó todavía: los audios. grabar manteniendo apretado, transcripción local con güisper sin tokens, y un play en cada respuesta para que te la lea daniela. esa tarea murió dos veces esta madrugada y te cuento por qué en un rato.
+
+# nombres: claudio, temas y motores
+
+a media tarde me pediste una manera de nombrar las cosas. quedó así, y está escrito en nombres punto eme de.
+
+el producto global es claudio: la carpeta, el comando y sus piezas, claudio agente, claudio board, claudio consola, claudio celu. los hijos son los temas: una palabra, una carpeta con su estado, una pestaña, un carril en la cola. awtomic, fuzzer, plata, server. los nietos son los motores: un laburo repetible dentro de un tema, escrito tema barra motor. awtomic barra qa es el verificador, awtomic barra ce equis es el que labura tickets, fuzzer barra de yei es el que nació anoche. lo compartido sin dueño, recetas, scripts, skills, cuentas, son herramientas de claudio, no hijos de nadie.
+
+la regla que ordena todo es una: el nombre es la ruta. el mismo nombre en la cola, en las pestañas, en los logs y en la carpeta. el verificador que antes se llamaba awtomic guión qa ya es awtomic barra qa en el código, con el nombre viejo vivo como alias para que nada se rompa.
+
+# cuentas y modelos de respaldo
+
+las cuentas. tenés dos cuentas de claude, facu y orugote, y orugote se quedó sin tokens hasta el sábado a las cuatro de la tarde. el pedido fue que nada siga usando orugote. se auditó todo lo que lanza claude: el daemon, el lanzador, los scripts, las recetas, fish, el comando agente, los servicios del sistema. todo quedó en facu. la sesión remota que manda los avisos al celu estaba abierta desde el lunes en orugote sin saberlo, se relanzó. y el cambio de cuenta es uno solo y desatendido: un script valida la carpeta y el loguin, escribe el archivo, relanza la sesión remota y lista lo que quedó suelto. lo que no entra en ese switch es la app de escritorio y la extensión de chrome, que tienen su loguin propio.
+
+y hoy a la madrugada agregaste la regla que viene: desde el sábado a las cuatro, cuando orugote renueve, se reparte mitad y mitad. el daemon va a elegir la cuenta por tarea y por mensaje mirando el widget de uso, siempre la que esté más lejos de sus tres líneas. ya está en la cola.
+
+los modelos de respaldo. el problema no eran las claves, las cinco son válidas, sino los identificadores de modelo. se corrigieron y hoy tres de cuatro proveedores gratuitos andan. cerebras se descartó porque hay que pagar, y salió del widget, como pediste. estos modelos son los que contestan el chat en modo eco cuando la cuenta está arriba de la línea: nunca escriben nada, solo proponen.
+
+# el daemon: zombies, ventanas y reinicios
+
+este fue el capítulo de las cosas que se rompieron de verdad.
+
+primero, las ventanas. te encontraste diez ventanas de chrome del agente abiertas comiéndote la memoria. el cierre existía, pero la función que buscaba el proceso de chrome comparaba la línea de comando exacta, y tu chrome corre con banderas, así que nunca lo encontraba y el error se comía en silencio. ya se cierran de verdad, y quedó una regla: un cierre que puede fallar en silencio no es un cierre.
+
+segundo, los zombies. una tarea marcada como corriendo cuya proceso ya no existe. la causa de raíz era que el reinicio del daemon por cambio de código salía al toque, sin esperar a las tareas. a la medianoche pasó lo peor: el daemon se reinició dos veces con tres tareas corriendo, dos quedaron huérfanas, una zombie, y el daemon nuevo lanzó otras encima en el mismo carril. el fix es de tres partes: todo reinicio es diferido y espera a que no quede ninguna tarea viva en ningún carril, el daemon al arrancar adopta las tareas cuyo proceso sigue vivo en vez de pisarlas, y el marcador de zombies corre en cada tick. esta madrugada a las cero y treinta marcó cuatro y reencoló cuatro, así que la parte de detección anda. la parte de adoptar todavía está en la cola, porque la tarea que la implementaba murió. te lo cuento ahora.
+
+# la hora sin tokens
+
+a las cero y veintinueve de la madrugada la cuenta facu llegó al límite de sesión. y ahí pasaron dos cosas malas juntas.
+
+la primera: el chat te contestó cuatro veces el mismo error crudo, en inglés, alcanzaste el límite de sesión, se renueva a la una y veinte. me dijiste que el podcast era prioridad porque te ibas a pasear, me preguntaste si le podemos decir resumen, me dijiste que no entendías mis avisos, y a todo te contesté lo mismo. ninguna de esas respuestas era mía. era el daemon pasando el error tal cual.
+
+la segunda: la cola no sabía que no había tokens. en dos minutos lanzó diez tareas, todas fallaron en cero segundos con costo cero, el daemon las reintentó una vez cada una, fallaron de nuevo, y por cada una te mandó al celu una pregunta: la tarea falló dos veces, la dejo, algo que deba saber. diez avisos seguidos. por eso no los entendías: no decían nada, porque la causa no estaba en la tarea, estaba en la cuenta. cayeron el menú contextual, los audios, el fix de zombies, la regla de oro de los guards, el botón de enter, la marca del header, los capítulos del podcast, y del lado del server, el sudo para expulsar discos y la conexión con la mac.
+
+lo que me dejaste escrito para cuando volviera es exactamente lo que faltaba, y ya está primero en la cola: claudio tiene que seguir aunque claude no tenga tokens o se caiga. un guard sin modelo que detecta el límite antes de contestar, te explica en castellano qué pasó y cuándo vuelve, frena la cola en vez de quemar reintentos, y te deja un modo de comandos a, be, ce que funciona sin claude: estado, cola, uso, cambiar de cuenta, modo eco. y las diez tareas caídas se reencolan una vez, con la causa real anotada.
+
+# el server: de la iso que falló a la máquina viva
+
+el jueves se había grabado un pendrive con xubuntu que nunca se había arrancado antes, y cuando lo enchufaste no funcionó. de ahí salió la regla más dura de la semana: listo para enchufar se dice solo después de probarlo de punta a punta.
+
+y se hizo. la imagen nueva va sobre ubuntu server veinticuatro cero cuatro punto cinco, con el archivo de instalación automática adentro, y se probó en una máquina virtual con firmware moderno hasta ver el instalador terminar solo, el disco cifrado pedir la frase y llegar al loguin. después vino el drama del pendrive: el comando para grabarlo pedía tu contraseña dos veces en un panel de tmux y quedó colgado, hasta que abrí una ventana propia de iterm para que la tipearas. grabó, verificó, y a la noche me dijiste: estoy en claudio login.
+
+desde ahí el server, que se llama claudio, está vivo. ubuntu instalado, lan y tailscale, disco cifrado atado al chip de seguridad para que arranque solo después de un corte de luz, escritorio remoto por la ip de tailscale, ese ese hache solo con clave, cortafuegos, feil tu ban, auditoría cada diez minutos. el daemon corre ahí. este episodio se está renderizando en el server, no en la mac.
+
+y ahí pasó lo del token. el loguin de la cuenta facu se había copiado del llavero de la mac al server. a las once de la noche el server renovó el token y mató el de la mac, en el medio de la charla. quedó como regla de oro: un secreto de loguin vive en una sola máquina, cada máquina hace su propio loguin, nunca se transplanta. el copiado está en backup, el server tiene loguin propio, y de eso salió el pedido de guards de antemano para todo lo externo: el buzón, la api de github, el oauth, tailscale, el ese ese hache entre la mac y el server.
+
+lo que pasó a la medianoche, ya con el server de guardia: la sesión de mercado libre quedó lista del lado del server, falta el volcado de cookies desde la mac. a las cero y veintiuno prendiste la sesión remota en la mac y el server ya entra por ese ese hache, por lan y por tailscale, sin contraseña. a las cero y veintidós me pediste que expulsara el disco negro que habías enchufado, y se expulsó. lo que falta para el cambio de guardia completo son cuatro cosas de tu lado, unos treinta minutos en total: loguear las cuentas en el chrome del server, la consola de tailscale, la bios y el router, y la clave del backup. y una mía que está en la cola: tres horas de pruebas proactivas de fallas, corte de luz, red caída, disco lleno, buzón que no contesta, cada una con su script de recuperación.
+
+también entró a la cola la lista de compras: ups y protección de tensión para la geekom, buscados en mercado libre, en formato a, be, ce, con precio y link. esa está corriendo ahora mismo, en paralelo con este episodio.
+
+# fuzzer barra de yei: el dj de la noche
+
+el motor nuevo. la idea es que el catálogo de fuzzer se escuche todas las noches en spotify sin sonar en ninguna máquina, con un dispositivo de salida al vacío.
+
+lo importante, y lo cambiaste vos a la noche: el orden no es aleatorio. primero todos los temas de reberto de menos a más escuchado, empezando por nos van a matar, que tiene versión nueva y va con una sola reproducción, y después los de croto, con croto y ámsterdam en diez. las repeticiones suben de una a diez de manera lineal a medida que sube el ranking. lo único que se sortea son los huecos entre bloques, con la fecha como semilla, así el mismo día da siempre el mismo plan y se verifica en seco. el plan de esta noche está escrito: ochenta y siete reproducciones en diez bloques, cinco horas veinte de audio entre la medianoche y las ocho.
+
+lo que falta son dos cosas. los números reales de spotify for artists: la receta ya lee las cookies del perfil orugote, que es donde vive esa sesión, pero el server no tiene ese volcado todavía, es el mismo comando en la mac que destraba mercado libre y google. y la reproducción: falta la app en el developer de spotify con el oauth, y una cuenta premium. hasta entonces el plan se arma igual y el widget lo dice.
+
+# awtomic: cuatro tickets
+
+el laburo de la empresa se llevó cuatro tickets el viernes, con cuatro estados distintos.
+
+fitvine, estilos de un armador de packs. el único cerrado de nuestro lado: el arreglo estaba en la tienda publicada desde la mañana, verificado con captura, y se posteó comentario con el link y el estado pasado a seguimiento.
+
+hafner, el formulario de suscripción del club de vino. estaba trabado porque la especificación no coincidía con la tienda. a la mañana rehicieron la tienda, cada variante con su plan prepago, y a la tarde llegó una revisión con un parche de cinco archivos. la orden para aplicarlo la mataron los reinicios del daemon. es lo primero de la mañana.
+
+ponzi, estilos del portal del cliente. el arreglo está listo en una copia sin publicar, dieciséis líneas en un archivo, verificado el fondo beige en pantalla grande y en teléfono. lo que no se pudo verificar es el portal con sesión iniciada, porque no hay un cliente nuestro en esa tienda. y ojo: la tienda publicada de ponzi está conectada a un repositorio, así que si hay que publicar, va por ahí.
+
+penfolds, página de producto. el cambio está en una copia completa, dos archivos confirmados, y el bloqueo es tonto y real: la tienda tiene contraseña y no la tenemos. hasta que aparezca, no se mueve.
+
+y la regla del jueves que sigue mandando: nunca se postea listo sin ver el entregable con los propios ojos. el flujo en la lista, el tema en la lista de temas, el comentario en el ticket.
+
+# lo que te espera cuando vuelvas del paseo
+
+en la cola, corriendo o por salir, en este orden: la lista de compras del server, el guard de claudio sin tokens, el reparto mitad y mitad de cuentas, y las diez tareas que cayeron a las cero y veintinueve, que se reencolan con la causa anotada.
+
+de tu lado, cinco cosas, en orden de lo que más destraba. una, el comando en la mac que vuelca las cookies: destraba mercado libre, google y spotify for artists de una. dos, las fotos del marshall. tres, abrir ibi ka er. cuatro, los treinta minutos del cambio de guardia del server. cinco, decir si el audio de prueba de pronunciación alcanza.
+
+y dos preguntas tuyas que quedaron sin respuesta por el límite. si a esto le decimos resumen: mi voto es que sí para el corto de la mañana, y que el nocturno largo siga siendo el podcast. y lo de los avisos: tenés razón, no se entendían, y ya está encolado que digan la causa y no solo que algo falló.
+
+# una regla para leer todo esto
+
+si tuviera que resumir el viernes en una sola regla, es esta: nada se dice hecho sin verlo. la iso se entregó sin bootearla y falló. el token se copió sin pensar en el refresco y mató la sesión. el daemon se reinició sin mirar sus tareas y dejó zombies. las tareas se lanzaron sin mirar la cuenta y te llenaron el celu de avisos vacíos. los cuatro son el mismo error con distinta ropa: asumir en vez de verificar. y las cuatro correcciones son la misma también: un guard escrito de antemano, sin modelo, que mire el hecho antes de prometerlo. eso ya está en tus reglas globales, y a partir de ahora es lo primero que leo en cada tarea.
+
+la otra cosa que aprendí es más chica pero te la debo: cuando vos escribís de noche y yo no puedo contestar, lo peor no es el silencio, es un error en inglés que no explica nada. ese hueco se tapa hoy.
+
+# cierre
+
+eso fue el viernes once y la madrugada del doce. un día en que la interfaz creció más que en toda la semana, el server pasó de una promesa rota a una máquina viva, el daemon aprendió a no matar sus propias tareas, y yo aprendí, a la fuerza, que claudio tiene que poder hablarte aunque claude no pueda. buen paseo con eva. cuando vuelvas, seguimos.

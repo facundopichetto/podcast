@@ -234,7 +234,132 @@
     }
    },
    "duracion": 608.1
+  },
+  {
+   "id": "ep-2026-09-12-largo",
+   "fecha": "2026-09-12",
+   "titulo": "largo: las noticias del sábado, la hora sin tokens y el server vivo",
+   "temas": [
+    "tools",
+    "server",
+    "fuzzer",
+    "awtomic",
+    "plata"
+   ],
+   "palabras": 4835,
+   "guion": "episodio-2026-09-12-largo.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-12-largo-daniela.mp3",
+     "duracion": 1489.2,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "arranque",
+       "duracion": 25.1,
+       "archivo": "audio/ep-2026-09-12-largo-1-arranque.daniela.mp3"
+      },
+      {
+       "t": 25.1,
+       "titulo": "argentina: dólar quieto, inflación en uno coma siete, y el salario que no llega",
+       "duracion": 143.6,
+       "archivo": "audio/ep-2026-09-12-largo-2-argentina-dolar-quieto.daniela.mp3"
+      },
+      {
+       "t": 168.7,
+       "titulo": "el mundo: veinticinco años del once de septiembre, y dos estrechos complicados",
+       "duracion": 73.4,
+       "archivo": "audio/ep-2026-09-12-largo-3-el-mundo-veinticinco.daniela.mp3"
+      },
+      {
+       "t": 242.1,
+       "titulo": "tecnología: fable, la api de agentes, y el investigador que se fue",
+       "duracion": 141.5,
+       "archivo": "audio/ep-2026-09-12-largo-4-tecnologia-fable-la-api.daniela.mp3"
+      },
+      {
+       "t": 383.6,
+       "titulo": "música en buenos aires",
+       "duracion": 104.2,
+       "archivo": "audio/ep-2026-09-12-largo-5-musica-en-buenos-aires.daniela.mp3"
+      },
+      {
+       "t": 487.8,
+       "titulo": "lo tuyo: plata, trámites y paquetes",
+       "duracion": 68.6,
+       "archivo": "audio/ep-2026-09-12-largo-6-lo-tuyo-plata-tramites.daniela.mp3"
+      },
+      {
+       "t": 556.4,
+       "titulo": "claudio board: el día en que la interfaz creció",
+       "duracion": 182.0,
+       "archivo": "audio/ep-2026-09-12-largo-7-claudio-board-el-dia-en.daniela.mp3"
+      },
+      {
+       "t": 738.4,
+       "titulo": "nombres: claudio, temas y motores",
+       "duracion": 61.0,
+       "archivo": "audio/ep-2026-09-12-largo-8-nombres-claudio-temas-y.daniela.mp3"
+      },
+      {
+       "t": 799.4,
+       "titulo": "cuentas y modelos de respaldo",
+       "duracion": 81.0,
+       "archivo": "audio/ep-2026-09-12-largo-9-cuentas-y-modelos-de.daniela.mp3"
+      },
+      {
+       "t": 880.4,
+       "titulo": "el daemon: zombies, ventanas y reinicios",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-09-12-largo-10-el-daemon-zombies.daniela.mp3"
+      },
+      {
+       "t": 955.0,
+       "titulo": "la hora sin tokens",
+       "duracion": 99.5,
+       "archivo": "audio/ep-2026-09-12-largo-11-la-hora-sin-tokens.daniela.mp3"
+      },
+      {
+       "t": 1054.5,
+       "titulo": "el server: de la iso que falló a la máquina viva",
+       "duracion": 156.0,
+       "archivo": "audio/ep-2026-09-12-largo-12-el-server-de-la-iso-que.daniela.mp3"
+      },
+      {
+       "t": 1210.5,
+       "titulo": "fuzzer barra de yei: el dj de la noche",
+       "duracion": 70.0,
+       "archivo": "audio/ep-2026-09-12-largo-13-fuzzer-barra-de-yei-el.daniela.mp3"
+      },
+      {
+       "t": 1280.5,
+       "titulo": "awtomic: cuatro tickets",
+       "duracion": 85.1,
+       "archivo": "audio/ep-2026-09-12-largo-14-awtomic-cuatro-tickets.daniela.mp3"
+      },
+      {
+       "t": 1365.5,
+       "titulo": "lo que te espera cuando vuelvas del paseo",
+       "duracion": 53.7,
+       "archivo": "audio/ep-2026-09-12-largo-15-lo-que-te-espera-cuando.daniela.mp3"
+      },
+      {
+       "t": 1419.2,
+       "titulo": "una regla para leer todo esto",
+       "duracion": 50.3,
+       "archivo": "audio/ep-2026-09-12-largo-16-una-regla-para-leer.daniela.mp3"
+      },
+      {
+       "t": 1469.5,
+       "titulo": "cierre",
+       "duracion": 19.6,
+       "archivo": "audio/ep-2026-09-12-largo-17-cierre.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1489.2
   }
  ],
- "actualizado": "2026-09-12 00:16"
+ "actualizado": "2026-09-12 01:37"
 }

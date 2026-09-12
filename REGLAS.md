@@ -116,3 +116,17 @@ fuentes que contestan hoy (verificadas 2026-09-12):
   la ticketera (allaccess, enigma tickets, venti). **si el precio no esta publicado, se dice que no
   esta**, no se inventa.
 - una fuente que no contesta no rompe el bloque: queda listada en `errores`.
+
+## la voz del chat es la misma (2026-09-11)
+
+desde que cada respuesta del chat tiene su `[▶]` (`recetas/audio_respuesta.py`), **daniela lee las dos
+cosas con las mismas reglas**: `length_scale 1.2`, 0,45 s entre oraciones y `pronunciacion.json`
+aplicado antes de renderizar. o sea que **una indicacion de facundo sobre como suena una palabra se
+escribe una sola vez, aca**, y vale para el podcast y para el chat.
+
+la unica diferencia es el empaquetado: el podcast va en mp3 por capitulos y el chat en **aac mono 32
+kbps** (`.m4a`, ~250 kb por minuto), que es el formato mas chico que reproduce seguro el safari del
+celu. el chat ademas limpia el texto antes de leerlo (sin codigo, rutas ni urls) y corta a 3 minutos.
+
+verificar igual que siempre: `python3 -m recetas.podcast pronunciacion`. para escuchar como queda una
+respuesta: `python3 -m recetas.audio_respuesta "el texto"`.
