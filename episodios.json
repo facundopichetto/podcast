@@ -152,7 +152,89 @@
     }
    },
    "duracion": 1466.4
+  },
+  {
+   "id": "ep-2026-09-11-noche",
+   "fecha": "2026-09-11",
+   "titulo": "nocturno: las noticias del viernes, jamiroquai y el server vivo",
+   "temas": [
+    "noticias",
+    "plata",
+    "tools",
+    "server"
+   ],
+   "palabras": 2008,
+   "guion": "episodio-2026-09-11-noche.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-11-noche-daniela.mp3",
+     "duracion": 608.1,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "arranque",
+       "duracion": 11.1,
+       "archivo": "audio/ep-2026-09-11-noche-1-arranque.daniela.mp3"
+      },
+      {
+       "t": 11.1,
+       "titulo": "argentina: dólar quieto, inflación en uno coma siete",
+       "duracion": 95.6,
+       "archivo": "audio/ep-2026-09-11-noche-2-argentina-dolar-quieto.daniela.mp3"
+      },
+      {
+       "t": 106.6,
+       "titulo": "el mundo en tres titulares",
+       "duracion": 72.8,
+       "archivo": "audio/ep-2026-09-11-noche-3-el-mundo-en-tres.daniela.mp3"
+      },
+      {
+       "t": 179.4,
+       "titulo": "tecnología: fable cinco punto uno y la carrera de los agentes",
+       "duracion": 81.0,
+       "archivo": "audio/ep-2026-09-11-noche-4-tecnologia-fable-cinco.daniela.mp3"
+      },
+      {
+       "t": 260.4,
+       "titulo": "música en buenos aires",
+       "duracion": 85.3,
+       "archivo": "audio/ep-2026-09-11-noche-5-musica-en-buenos-aires.daniela.mp3"
+      },
+      {
+       "t": 345.7,
+       "titulo": "lo tuyo: plata, trámites y paquetes",
+       "duracion": 81.5,
+       "archivo": "audio/ep-2026-09-11-noche-6-lo-tuyo-plata-tramites.daniela.mp3"
+      },
+      {
+       "t": 427.2,
+       "titulo": "claudio board, lo de hoy",
+       "duracion": 58.3,
+       "archivo": "audio/ep-2026-09-11-noche-7-claudio-board-lo-de-hoy.daniela.mp3"
+      },
+      {
+       "t": 485.6,
+       "titulo": "server y cuentas",
+       "duracion": 59.1,
+       "archivo": "audio/ep-2026-09-11-noche-8-server-y-cuentas.daniela.mp3"
+      },
+      {
+       "t": 544.7,
+       "titulo": "el dj de la noche",
+       "duracion": 32.3,
+       "archivo": "audio/ep-2026-09-11-noche-9-el-dj-de-la-noche.daniela.mp3"
+      },
+      {
+       "t": 577.0,
+       "titulo": "lo que te espera mañana",
+       "duracion": 31.0,
+       "archivo": "audio/ep-2026-09-11-noche-10-lo-que-te-espera-manana.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 608.1
   }
  ],
- "actualizado": "2026-09-11 20:00"
+ "actualizado": "2026-09-12 00:16"
 }

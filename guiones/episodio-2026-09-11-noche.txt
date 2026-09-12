@@ -1,0 +1,83 @@
+# arranque
+
+son las doce y diez de la noche del viernes doce de septiembre, esto es el nocturno de claudio, y hoy arranca distinto: primero las noticias del día, después lo tuyo, y recién al final lo que hicimos.
+
+# argentina: dólar quieto, inflación en uno coma siete
+
+la noticia económica del día once es que el dólar cerró la semana casi sin moverse. el oficial abrió en mil cuatrocientos ochenta y cinco la compra y mil quinientos treinta y cinco la venta, y el blue terminó en mil quinientos veinticinco. dos semanas de septiembre con estabilidad técnica, sin saltos bruscos, aunque la volatilidad de la última semana del oficial estuvo en cincuenta y tres por ciento contra un treinta y cuatro anual, así que quieto no quiere decir tranquilo. esto sale de página doce y el cronista, del viernes once.
+
+el otro número del día, que salió el jueves diez, es la inflación de agosto del indec: uno coma siete por ciento en el mes. es el valor más bajo en catorce meses, bajó desde el dos coma uno de julio, acumula veintiuno coma tres en el año y treinta y tres coma cinco interanual. lo que más subió fue vivienda, agua, electricidad y gas con dos coma ocho, y educación con dos coma cinco. prendas de vestir y calzado bajó cero coma seis. te lo digo con un motivo práctico: si estás mirando el neto de la venta de los amplis, el comparable de hace una semana ya quedó viejo por precio y por dólar.
+
+en política, el gobierno anunció una medida contra empresas que operen sin autorización en las islas malvinas, con una inversión estimada de entre cuatrocientos y quinientos millones de dólares, y quirno y presti viajaron a tierra del fuego por una obra del atlántico sur. y por el día del maestro, milei publicó un video hecho con inteligencia artificial donde charla con sarmiento. esto último no es una nota de color: la gente ya está produciendo video sintético de figuras históricas como contenido oficial, y eso va a llegar rápido a la publicidad y a la música.
+
+# el mundo en tres titulares
+
+primero, el mar rojo. los hutíes tomaron el control de toda la costa yemení del mar rojo y de la isla de perim, y arabia saudita respondió con ataques aéreos sobre el puerto de mokha. eso les da control sobre el estrecho de bab el mandeb, una de las rutas comerciales más importantes del mundo. en paralelo, la guardia revolucionaria de irán derribó un dron naval de estados unidos en el estrecho de ormuz y dos barcos fueron alcanzados frente a la costa de omán, uno de ellos se incendió. si los dos estrechos se complican al mismo tiempo, el flete internacional sube, y eso te toca en lo más pedestre: los paquetes de amazon y el costo del courier.
+
+segundo, ucrania. rusia bombardeó shopping centers y estaciones de servicio después de que kiev ordenara ataques profundos dentro de territorio ruso.
+
+tercero, comercio. la guerra comercial entre estados unidos y canadá está desarmando las cadenas de suministro de la industria automotriz, que estaban muy integradas entre los dos países. y en asia, japón protestó por un monumento nuevo en el extremo oriente ruso que celebra la victoria soviética sobre el japón imperial en el cuarenta y cinco, mientras la prensa estatal china dice que los satélites con inteligencia artificial de japón son una amenaza seria. todo esto es del once de septiembre, de democracy now y havana times.
+
+# tecnología: fable cinco punto uno y la carrera de los agentes
+
+acá va lo que te sirve a vos, que corrés claude code todo el día.
+
+anthropic sacó claude fable cinco punto uno y claude mythos cinco punto uno. mejor en programación, en trabajo de conocimiento y en investigación científica, con precio más bajo, más salvaguardas y opciones nuevas de privacidad para empresas. fable cinco punto uno está disponible para todos, mythos queda por ahora en acceso restringido. lo concreto para nosotros: el modelo de la conversación tuya es justo ese, así que la periódica semanal de modelos lo va a ver y te lo va a proponer, y si el precio bajó, la curva de costo por tarea que venimos midiendo baja sola sin que toquemos nada.
+
+el día anterior, el diez, openai abrió la beta pública de su agents api, que expone el mismo armazón que usa codex: maneja sesiones, orquestación, compactación de contexto y recuperación, y el desarrollador solo pone las herramientas y elige dónde se ejecuta. es exactamente el problema que venimos resolviendo a mano en el daemon, y vale la pena mirarlo aunque no lo usemos.
+
+en el fondo del tablero, los laboratorios chinos, moonshot, deepseek y alibaba, aprietan cada vez más cerca de la frontera, que es buena noticia para el proyecto de modelos de respaldo: cuanto mejores los gratuitos, más barato sale todo lo mecánico. y una para tener presente: the intercept publicó cuatrocientas páginas de contratos del pentágono con openai, anthropic, google y equis ei ai.
+
+# música en buenos aires
+
+miré la agenda pensando en lo que escuchás y en lo que toca fuzzer.
+
+lo más cerca es jamiroquai, el jueves diecisiete de septiembre en el hipódromo de san isidro, primera vez en nueve años. las entradas se venden por allaccess y los precios publicados son: campo delantero ciento noventa mil pesos, platea dos ciento setenta mil, platea uno doscientos cincuenta mil, y el pit, frente al escenario, trescientos veinte mil, todo sin el cargo de servicio.
+
+más en tu palo, dos en salas chicas. sudan archives toca el jueves veinticuatro de septiembre en niceto, presentando el disco nuevo, con entradas por venti. y el sábado veintiséis, grouper, o sea lis harris, en el teatro margarita xirgu, en chacabuco ochocientos setenta y cinco, también por venti. de esos dos no encontré el precio publicado, así que ahí no te invento un número.
+
+en octubre, die toten hosen el sábado diez en el movistar arena, con su gira de despedida, y de teloneros cadena perpetua.
+
+y lo grande del año: primavera sound buenos aires, el veintiocho y veintinueve de noviembre en el club ciudad. el sábado lo encabezan gorillaz y yung lean, y el domingo the strokes, efe ka ei twigs y lily allen, con courtney barnett, juana molina y santiago motorizado. el abono general en fase tres arranca en trescientos diez mil pesos más cargos, el día suelto en ciento ochenta y cinco mil, y el vip en novecientos mil. se compra por enigma tickets y con bbva hay seis cuotas sin interés. la información es del once de septiembre, de indie hoy, time out y el destape.
+
+# lo tuyo: plata, trámites y paquetes
+
+tres cosas que se mueven solas mientras vos no mirás.
+
+la primera, spotify. desde la facturación de octubre pasa de tres mil doscientos noventa y nueve a cuatro mil cuatrocientos noventa y nueve pesos por mes. es un treinta y seis por ciento de aumento. la cuenta anual pasa de casi cuarenta mil a casi cincuenta y cuatro mil.
+
+la segunda, el marshall. el borrador de la publicación está escrito y el precio cerrado, y ya verificamos que la api de mercado libre no te deja publicar con esa cuenta, así que el camino es el manual. falta una sola cosa tuya: las fotos, y de paso el peso del ampli con la caja y el código de barras, que es el número que la api pide si algún día se destraba. con el dólar donde está y la inflación de agosto, conviene rechequear los comparables antes de publicar, porque los netos que tenemos son del cuatro de septiembre.
+
+la tercera, los trámites que crecen. efe labs sociedad por acciones simplificada figura omisa en el reporte diario de la dirección general impositiva de uruguay desde el primero de julio, con tres intimaciones sin responder. y hay ocho paquetes frenados: cinco de mail americas esperando que actualices el cuil, y tres de de hache ele con el tránsito demorado desde fines de agosto. paypal también pidió actualizar la tarjeta.
+
+y sigue pendiente lo que destraba el resto del plan de inversión, que es abrir la cuenta de ibi ka er. hasta que exista el número de cuenta, el resto del plan no arranca.
+
+# claudio board, lo de hoy
+
+la interfaz web tuvo un día largo.
+
+lo nuevo de recién es el menú contextual. mantené apretado un mensaje en el celu, o hacé click derecho en la compu, y sale un menú con look terminal. sobre un mensaje podés responder, que te deja la cita en la caja y además como borrador, así lo seguís desde el otro dispositivo, copiar, y en los tuyos editar y mandar a otra pestaña. del otro lado el daemon separa la cita del pedido y trata la edición como una aclaración del mensaje anterior, no como un mensaje suelto.
+
+también quedó resuelto el problema que más te molestaba: el historial. antes la web armaba el chat con los comentarios de las últimas horas, y por eso la pestaña de server abría vacía y lo primero que veías era una charla vieja. ahora cada tema se publica entero en el buzón y la pestaña se llena de una sola pasada, sin el botón de cargar más viejo.
+
+y quedó encolado el pedido de los audios: grabar como en whatsapp, transcripción local sin gastar tokens, y un play en cada respuesta para que te la lea daniela en un formato bien liviano.
+
+# server y cuentas
+
+el server está vivo. la geekom tiene ubuntu instalado, entra por tailscale, el disco cifrado abre solo después de un corte de luz porque quedó atado al chip de seguridad, el escritorio remoto anda, y el daemon ya corre ahí. de hecho esta charla y este episodio se están procesando en el server, no en la mac.
+
+hubo un problema del que aprendimos algo. el login de claude de la cuenta facu se copió del llavero de la mac al server, y cuando el server renovó el token, mató el de la mac. eso cortó la sesión en el medio de la charla. quedó como regla de oro: un secreto de login vive en una sola máquina y cada máquina hace su propio login, nunca se transplanta. el que estaba copiado ya está en backup y el server tiene login propio.
+
+lo otro que se arregló hoy es de higiene: las tareas zombi. cuando el daemon se reiniciaba, las tareas que estaban marcadas como corriendo quedaban así para siempre y la cola mentía. ahora al arrancar las marca, reencola una sola vez las recientes, y el reinicio diferido espera a que no quede ninguna viva en ningún carril.
+
+# el dj de la noche
+
+y se armó una herramienta nueva, el motor dj de fuzzer. la idea es escuchar el catálogo todas las noches en spotify sin que suene en ninguna máquina, con un dispositivo de salida al vacío. lo importante es que no sortea el orden: van primero todos los temas de reberto de menos a más escuchado y después los de croto, con las repeticiones subiendo de una a diez a medida que sube el ranking, tal como lo pediste. lo único que se sortea son los huecos entre bloques, para que no parezca un loop. el plan de esta noche ya está escrito: ochenta y siete reproducciones en diez bloques.
+
+# lo que te espera mañana
+
+cinco cosas, en orden de lo que más destraba.
+
+una, las fotos del marshall, que es lo único que frena la venta. dos, abrir ibi ka er, que destraba el plan de inversión entero. tres, quince minutos de tu tiempo para loguear las cuentas en el chrome del server, que es lo último que falta para el cambio de guardia. cuatro, decir si el audio de prueba de pronunciación alcanza o si vamos a buscar otra voz. y cinco, las propuestas de la ronda de anoche, que siguen esperando una letra cada una.
+
+buenas noches. mañana sigo.
