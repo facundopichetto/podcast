@@ -162,3 +162,11 @@ python3 -m recetas.podcast_proximo emitir --temas server,tools --auto
 ```
 
 probar sin gastar nada: **`python3 -m recetas.prueba_podcast_proximo`**.
+
+## la web reproduce el episodio ENTERO (facundo, 2026-09-12)
+
+en el celu se cortaba al terminar cada capitulo. desde `podcast-version 1.3` el reproductor suena
+siempre `voces.daniela.archivo` (el mp3 entero) y los capitulos son marcas de tiempo; al terminar, si
+`seguir` esta prendido, engancha el episodio siguiente en un segundo `<audio>` ya desbloqueado. todo
+episodio tiene que tener su entero: `python3 -m recetas.podcast enteros` lo arma si falta (corre solo
+al final de `nuevo`). detalle y lo que falta probar en el celu, en `README.md`.
