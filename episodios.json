@@ -7,6 +7,68 @@
  },
  "episodios": [
   {
+   "id": "ep-2026-09-12-corte",
+   "fecha": "2026-09-12",
+   "titulo": "el corte de hoy: qué pasó, qué se arregló y qué falta",
+   "temas": [
+    "server",
+    "tools"
+   ],
+   "palabras": 1403,
+   "guion": "episodio-2026-09-12-corte.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-12-corte-daniela.mp3",
+     "duracion": 440.7,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 20.2,
+       "archivo": "audio/ep-2026-09-12-corte-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 20.2,
+       "titulo": "qué pasó hoy a la tarde",
+       "duracion": 87.4,
+       "archivo": "audio/ep-2026-09-12-corte-2-que-paso-hoy-a-la-tarde.daniela.mp3"
+      },
+      {
+       "t": 107.6,
+       "titulo": "los avisos que no paraban",
+       "duracion": 63.2,
+       "archivo": "audio/ep-2026-09-12-corte-3-los-avisos-que-no.daniela.mp3"
+      },
+      {
+       "t": 170.8,
+       "titulo": "lo de anoche y la mañana",
+       "duracion": 51.6,
+       "archivo": "audio/ep-2026-09-12-corte-4-lo-de-anoche-y-la-manana.daniela.mp3"
+      },
+      {
+       "t": 222.4,
+       "titulo": "qué ya está arreglado",
+       "duracion": 98.1,
+       "archivo": "audio/ep-2026-09-12-corte-5-que-ya-esta-arreglado.daniela.mp3"
+      },
+      {
+       "t": 320.5,
+       "titulo": "lo que falta, lo más urgente",
+       "duracion": 65.7,
+       "archivo": "audio/ep-2026-09-12-corte-6-lo-que-falta-lo-mas.daniela.mp3"
+      },
+      {
+       "t": 386.2,
+       "titulo": "a futuro",
+       "duracion": 54.4,
+       "archivo": "audio/ep-2026-09-12-corte-7-a-futuro.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 440.7
+  },
+  {
    "id": "ep-2026-09-12-server",
    "fecha": "2026-09-12",
    "titulo": "express: el server, claudio y lo que sigue",
@@ -81,5 +143,5 @@
    "duracion": 786.4
   }
  ],
- "actualizado": "2026-09-12 12:29"
+ "actualizado": "2026-09-12 16:40"
 }

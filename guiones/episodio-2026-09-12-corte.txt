@@ -1,0 +1,79 @@
+# de qué va este episodio
+
+hola facundo. esto es claudio, sábado doce de septiembre, cinco menos veinte de la tarde. este episodio no reemplaza al de la mañana, se suma. es sobre el corte de hoy y lo de anoche. tres partes: qué pasó, qué ya está arreglado, y qué falta para que no vuelva a pasar. son unos siete minutos. voy directo.
+
+# qué pasó hoy a la tarde
+
+a las tres y cinco el server empezó a perder internet. volvió del todo a las tres y cuarenta y uno. treinta y seis minutos con cortes intermitentes.
+
+la causa fue una tarea mía: el alta de la cámara tapo. para configurarla, la tarea conectó la wifi del server a la red propia de la cámara. y lo hizo con la configuración por defecto de network manager. la cámara le dio al server una ruta por defecto y un dns, y esa ruta le ganó al cable. o sea, todo el tráfico del server se fue a una cámara que no tiene internet. sin internet no hay api de claude, y sin claude no hay chat.
+
+por qué duró tanto y no un minuto. primero, la tarea se conectaba y desconectaba varias veces de la cámara, así que el corte iba y venía. segundo, a las tres y ocho un reinicio del daemon mató la tarea, y la cola la relanzó sola, así que volvió a conectarse. tercero, al terminar dijo wifi restaurada, pero no verificó que el cable volviera a ser la ruta principal, y no había vuelto. y cuarto, a las tres y treinta y siete hubo otro reinicio, que mató justo la tarea que estaba armando el guard de red. al final volvió porque un servicio de respaldo, que apaga la wifi si hay cable, hizo su vuelta de dos minutos.
+
+mientras tanto, el chat te contestó cinco veces lo mismo: red, dns o certificado, no hace falta que hagas nada. eso estuvo mal por tres lados. no decía la causa, no decía cuándo volvía, y afirmaba algo falso, porque nadie lo estaba arreglando.
+
+# los avisos que no paraban
+
+los avisos que te llegaban en loop no eran del corte. eran otra falla, que arrancó antes, a las dos y cincuenta y cuatro.
+
+cuando apagaste el server para la bios, en cada arranque el daemon empezó antes de que hubiera dns. entonces un chequeo concluyó que jira estaba caído y mandó un aviso. ese aviso era falso. y la función que despacha avisos solo marcaba un aviso como enviado si había telegram o un segundo panel de tmux. en el server no hay ninguno de los dos. resultado: cada cuatro segundos volvía a mandar el mismo aviso. unos ochocientos veinte comentarios en una hora.
+
+eso terminó a las tres y cincuenta y cinco, pero no porque lo frenara un guard: lo frenó github, que bloqueó el token por abuso. y como ese token es el mismo que usa la web, tu chat también rebotó hasta las cuatro y cuatro. eso fue lo de github frenó, vuelvo a intentar.
+
+y lo peor de todo: no tuviste forma de revivirme. la web depende de github, y github depende de que el server tenga internet. el único botón que tocaste, reinicia, mató la tarea del guard.
+
+# lo de anoche y la mañana
+
+tres cosas más, con el mismo patrón.
+
+anoche copié el login de claude de la mac al server. el server refrescó la sesión, eso rotó el token, y la sesión de la mac murió. regla nueva: un login por máquina, nunca se copia.
+
+después, dos daemons vivos escribiendo al mismo buzón, uno huérfano en la mac. de ahí los errores cuatrocientos nueve. y un watchdog que leía al daemon apagándose como si estuviera caído, lo reiniciaba, eso le mandaba otra señal de apagado, y así tres vueltas hasta modo recuperación.
+
+y a la mañana, el chat pasó solo a modo eco con gemini por el uso semanal alto. eso ya está sacado de raíz: el chat cambia de cuenta solo, nunca de modo.
+
+el patrón común es este: cada pieza tenía una forma de fallar que nadie probó antes de enchufarla. los guards llegaron después del golpe. eso es lo que hay que dar vuelta.
+
+# qué ya está arreglado
+
+esto está instalado y verificado hoy.
+
+uno. un hook de network manager: cualquier wifi que suba en el server nace sin poder ser ruta principal y sin tocar el dns. ni una receta mal escrita puede repetir lo de hoy.
+
+dos. un guard de red que corre como root cada treinta segundos, independiente del daemon. si la ruta se va del cable, baja la wifi al toque. corre aunque el daemon esté caído o reiniciando.
+
+tres. permisos acotados. el usuario del agente puede conectar la wifi solo por un helper que ya pone las banderas seguras. no puede tocar el cable, ni rutas, ni dns. eso lo instalaste vos a las cuatro y diez.
+
+cuatro. cambio sistema, una receta por la que pasa todo cambio de red, systemd, docker, discos o firewall. hace backup, programa la vuelta atrás antes de aplicar, y si en tres minutos el server no confirma cable, dns, claude y tailscale, se deshace solo, aunque la tarea haya muerto. el revert real se probó dos veces.
+
+cinco. caos, un script que a las tres y media de la madrugada rompe a propósito cada modo de falla conocido y verifica que el guard recupere. hoy da diez de diez.
+
+seis. una wifi de respaldo, la de casa, conectada siempre con prioridad baja. si se cae el cable, tailscale y claude siguen por wifi.
+
+siete. el despacho de avisos ahora marca el aviso como enviado siempre. y el buzón tiene un solo escritor, con tope de escrituras por minuto y un freno compartido si github corta.
+
+y además siguen el reparto de cuentas, que saca sola a una cuenta con el login roto, y el modo sin claude, que contesta con comandos y aparca tus preguntas.
+
+# lo que falta, lo más urgente
+
+esto pasó hoy y puede volver a pasar mañana si no se hace.
+
+uno. avisos una sola vez, con causa y con cuándo vuelve, con tope de seis por hora. y una prueba de que cien vueltas dan un solo mensaje.
+
+dos. que el modo sin claude diga la causa concreta. por ejemplo: la tarea tal conectó la wifi a la cámara, el guard la bajó, vuelve en treinta segundos. y la frase no hace falta que hagas nada queda prohibida salvo que el guard ya lo haya arreglado.
+
+tres. un canal de emergencia que no dependa de github. mi voto: el kit web escuchando también en la red de casa, con dos botones, reparar red y frenar tareas que tocan red, más ssh por tailscale desde el celu. la otra opción es un bot de telegram, que necesita que lo crees vos.
+
+cuatro. que ninguna señal de apagado corte una tarea. venga de donde venga, se convierte en reinicio diferido, y el daemon nuevo adopta las tareas vivas.
+
+y cinco. las tareas que tocan red o sistema van por un carril propio: una sola a la vez, nunca se reintentan solas, y te avisan en el chat antes de empezar, con el riesgo en una línea.
+
+# a futuro
+
+más largo, pero cierra huecos conocidos.
+
+un solo watchdog del daemon, porque hoy hay dos y se pueden pisar. arranque sin falsos avisos, esperando que la red dé ok antes de declarar algo caído. el watchdog de hardware de la placa, para que si el kernel se cuelga reinicie sola. un detector de un mismo login en dos máquinas. y un token de github para el daemon separado del de la web, así un freno al daemon no te deja sin chat.
+
+y hay dos decisiones tuyas. la wifi de respaldo usa el mismo router, así que no cubre que se caiga el proveedor. las opciones son aceptarlo, que es mi voto por ahora, usar el celu como hotspot automático, o un modem cuatro g. y del lado físico, sigue en la lista de compras la ups y la protección de tensión, más la bios en restore on ac power loss, para que después de un corte de luz el server prenda solo.
+
+el análisis completo, con la línea de tiempo y cada orden, está en el postmortem del server. eso fue todo.
