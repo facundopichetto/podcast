@@ -86,3 +86,33 @@ python3 -m recetas.podcast nuevo guiones/<guion>.txt --id ep-<fecha> \
 
 el guion se escribe con bloques `# titulo`: cada uno queda como capitulo con su propio mp3, asi la
 web puede reproducir uno solo y saltar al siguiente con los botones del celu bloqueado.
+
+## el bloque de noticias (desde 2026-09-11, episodio nocturno)
+
+facundo pidio que el podcast arranque con **noticias del dia**, no con el resumen del laburo: argentina
+y buenos aires (economia, dolar, politica si es grande), 2 o 3 titulares internacionales, tecnologia e
+ia pensado para alguien que corre claude code todo el dia, y un bloque de **musica en buenos aires**
+(bandas de las proximas semanas, con fecha, lugar y **precio de la entrada en pesos**). siempre se dice
+la fuente y la fecha de la info. el analisis de lo que se hizo va **al final** y corto.
+
+**el material lo junta un script, no el modelo**: `python3 -m recetas.podcast_noticias` (cero tokens)
+trae el dolar por api y los titulares por rss, con fuente y fecha en cada linea; `--json` para
+procesarlo, `--seccion <x>` para una sola, `--n` para cuantos titulares por fuente. lo que el script
+no cubre (precios de entradas, un numero puntual como el ipc del indec) se completa con `WebSearch`.
+
+fuentes que contestan hoy (verificadas 2026-09-12):
+
+| seccion | fuente |
+|---|---|
+| dolar | `dolarapi.com/v1/dolares` (oficial, blue, mep, ccl, mayorista, cripto, tarjeta) |
+| argentina | ambito economia, la nacion economia, la nacion politica (rss) |
+| mundo | democracy now, npr world (rss) |
+| tecnologia | techcrunch, hacker news (`hnrss.org`, 250+ puntos) |
+| musica | indie hoy (rss) |
+
+- **pagina 12 y infobae no tienen rss vivo** (404 en todas las rutas viejas): no volver a agregarlos
+  sin probarlos.
+- la agenda de shows con precio no sale de ningun feed: va con `WebSearch` sobre indie hoy, time out y
+  la ticketera (allaccess, enigma tickets, venti). **si el precio no esta publicado, se dice que no
+  esta**, no se inventa.
+- una fuente que no contesta no rompe el bloque: queda listada en `errores`.
