@@ -70,6 +70,185 @@
    "ts": "2026-09-12T16:40:15-03:00"
   },
   {
+   "id": "ep-2026-09-12-medianoche",
+   "fecha": "2026-09-12",
+   "titulo": "medianoche: lo nuevo desde las 21:30",
+   "temas": [
+    "server",
+    "tools",
+    "podcast"
+   ],
+   "palabras": 1886,
+   "guion": "episodio-2026-09-12-medianoche.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-12-medianoche-daniela.mp3",
+     "duracion": 589.1,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 35.4,
+       "archivo": "audio/ep-2026-09-12-medianoche-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 35.4,
+       "titulo": "whatsapp ya es de claudio",
+       "duracion": 95.3,
+       "archivo": "audio/ep-2026-09-12-medianoche-2-whatsapp-ya-es-de.daniela.mp3"
+      },
+      {
+       "t": 130.7,
+       "titulo": "cloud: la segunda casa de claudio",
+       "duracion": 95.0,
+       "archivo": "audio/ep-2026-09-12-medianoche-3-cloud-la-segunda-casa.daniela.mp3"
+      },
+      {
+       "t": 225.7,
+       "titulo": "github y la cuenta en cloud",
+       "duracion": 81.9,
+       "archivo": "audio/ep-2026-09-12-medianoche-4-github-y-la-cuenta-en.daniela.mp3"
+      },
+      {
+       "t": 307.6,
+       "titulo": "herramientas: escribir desde un widget",
+       "duracion": 90.8,
+       "archivo": "audio/ep-2026-09-12-medianoche-5-herramientas-escribir.daniela.mp3"
+      },
+      {
+       "t": 398.4,
+       "titulo": "el podcast, arreglado para caminar",
+       "duracion": 70.7,
+       "archivo": "audio/ep-2026-09-12-medianoche-6-el-podcast-arreglado.daniela.mp3"
+      },
+      {
+       "t": 469.1,
+       "titulo": "cómo agregarlo a inicio",
+       "duracion": 63.2,
+       "archivo": "audio/ep-2026-09-12-medianoche-7-como-agregarlo-a-inicio.daniela.mp3"
+      },
+      {
+       "t": 532.3,
+       "titulo": "lo que queda esperándote",
+       "duracion": 56.7,
+       "archivo": "audio/ep-2026-09-12-medianoche-8-lo-que-queda-esperandote.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 589.1,
+   "ts": "2026-09-12T23:47:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-12-noche",
+   "fecha": "2026-09-12",
+   "titulo": "el sábado completo: noticias y lo que se hizo por tema",
+   "temas": [
+    "noticias",
+    "server",
+    "tools",
+    "awtomic",
+    "fuzzer",
+    "podcast"
+   ],
+   "palabras": 3015,
+   "guion": "episodio-2026-09-12-noche.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-12-noche-daniela.mp3",
+     "duracion": 918.6,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 38.3,
+       "archivo": "audio/ep-2026-09-12-noche-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 38.3,
+       "titulo": "el dólar esta noche",
+       "duracion": 65.8,
+       "archivo": "audio/ep-2026-09-12-noche-2-el-dolar-esta-noche.daniela.mp3"
+      },
+      {
+       "t": 104.1,
+       "titulo": "argentina: economía",
+       "duracion": 84.5,
+       "archivo": "audio/ep-2026-09-12-noche-3-argentina-economia.daniela.mp3"
+      },
+      {
+       "t": 188.6,
+       "titulo": "argentina: política",
+       "duracion": 43.6,
+       "archivo": "audio/ep-2026-09-12-noche-4-argentina-politica.daniela.mp3"
+      },
+      {
+       "t": 232.2,
+       "titulo": "el mundo",
+       "duracion": 61.0,
+       "archivo": "audio/ep-2026-09-12-noche-5-el-mundo.daniela.mp3"
+      },
+      {
+       "t": 293.2,
+       "titulo": "tecnología e inteligencia artificial",
+       "duracion": 91.5,
+       "archivo": "audio/ep-2026-09-12-noche-6-tecnologia-e.daniela.mp3"
+      },
+      {
+       "t": 384.7,
+       "titulo": "shows en buenos aires",
+       "duracion": 83.8,
+       "archivo": "audio/ep-2026-09-12-noche-7-shows-en-buenos-aires.daniela.mp3"
+      },
+      {
+       "t": 468.5,
+       "titulo": "server: el día del corte",
+       "duracion": 72.0,
+       "archivo": "audio/ep-2026-09-12-noche-8-server-el-dia-del-corte.daniela.mp3"
+      },
+      {
+       "t": 540.5,
+       "titulo": "server: lo que se construyó arriba",
+       "duracion": 80.4,
+       "archivo": "audio/ep-2026-09-12-noche-9-server-lo-que-se.daniela.mp3"
+      },
+      {
+       "t": 620.9,
+       "titulo": "tools",
+       "duracion": 73.1,
+       "archivo": "audio/ep-2026-09-12-noche-10-tools.daniela.mp3"
+      },
+      {
+       "t": 694.0,
+       "titulo": "awtomic",
+       "duracion": 51.5,
+       "archivo": "audio/ep-2026-09-12-noche-11-awtomic.daniela.mp3"
+      },
+      {
+       "t": 745.5,
+       "titulo": "fuzzer",
+       "duracion": 50.2,
+       "archivo": "audio/ep-2026-09-12-noche-12-fuzzer.daniela.mp3"
+      },
+      {
+       "t": 795.7,
+       "titulo": "el podcast",
+       "duracion": 61.7,
+       "archivo": "audio/ep-2026-09-12-noche-13-el-podcast.daniela.mp3"
+      },
+      {
+       "t": 857.4,
+       "titulo": "lo que está esperando a facundo",
+       "duracion": 61.2,
+       "archivo": "audio/ep-2026-09-12-noche-14-lo-que-esta-esperando-a.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 918.6,
+   "ts": "2026-09-12T21:31:00-03:00"
+  },
+  {
    "id": "ep-2026-09-12-server",
    "fecha": "2026-09-12",
    "titulo": "express: el server, claudio y lo que sigue",
@@ -145,5 +324,5 @@
    "ts": "2026-09-12T12:29:10-03:00"
   }
  ],
- "actualizado": "2026-09-12 22:44"
+ "actualizado": "2026-09-12 23:56"
 }

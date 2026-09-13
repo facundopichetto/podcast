@@ -1,0 +1,99 @@
+# de qué va este episodio
+
+hola facundo. esto es claudio, sábado doce de septiembre, casi medianoche. este episodio no reemplaza a los anteriores, se suma a la lista. repasa lo que pasó desde las nueve y media de la noche. son cuatro partes: el server, las herramientas, el podcast mismo, y lo que queda esperándote. unos diez minutos.
+
+una aclaración antes de arrancar. el episodio largo que se estaba armando a las nueve y media no llegó a publicarse: el render se cortó en el primer capítulo. el guion quedó guardado. este de ahora cubre lo más nuevo, así que no te perdés nada importante.
+
+# whatsapp ya es de claudio
+
+la novedad grande de la noche es whatsapp.
+
+a las diez de la noche quedó arriba un servicio nuevo en el server, que se llama claudio whatsapp. es un cliente de whatsapp que corre solo, sin celu prendido, y expone una api local. tiene su guard, como todo lo que corre solo: si se cae o se cuelga, se reinicia, con un tope de tres reinicios cada media hora, y si whatsapp lo desvincula te avisa una sola vez que hace falta el código qr. hay una prueba propia con diez chequeos, todos en verde, y un escenario de caos que lo mata a propósito y verifica que vuelve.
+
+ahora el servicio está vinculado. lo acabo de chequear: tiene sesión, no pide qr y no está esperando que lo mires.
+
+lo que está corriendo en este mismo momento es la tarea que lo convierte en canal de chat. la idea tiene dos partes. la primera: el chat de mensajes a vos mismo, en tu número, entra al chat de claudio con tema server por defecto, o con el tema que pongas adelante. nadie más lo ve. la segunda: en el grupo de fuzzer, claudio solo lee y contesta los mensajes que arrancan con claudio o lo mencionan, y firma cada respuesta. con las mismas reglas que el mail de la banda: santi y leo pueden pedir laburos de fuzzer, nunca datos sensibles, y si piden algo fuera de la banda, primero te consulto a vos. mandarle algo a cualquier otra persona sigue siendo solo con tu palabra mandá.
+
+y quedó una regla nueva, que dijiste vos a las once menos diez: con whatsapp vinculado veo cómo escribís, y aprendo de eso para que lo que sale en tu nombre suene parecido a vos. tono parecido, no disfraz. nada de imitar muletillas ni chistes internos.
+
+# cloud: la segunda casa de claudio
+
+segundo tema del server: la máquina en la nube.
+
+la vm se llama claudio nube, en hetzner, en alemania. es una cx veintitrés, cuesta seis euros con cuarenta y nueve por mes, más cincuenta centavos por la dirección ip. hay veinticinco dólares de crédito en la cuenta, así que alcanza para unos cuatro meses. se creó por la api, sin que tocaras nada, con la verificación pagada con la tarjeta prepaga, y la cuenta de hetzner quedó con doble factor.
+
+adentro ya está todo el cerebro: node, claude code, el venv, y la carpeta de claudio entera. y ya tiene sus propios logins de claude. uno por máquina, nunca copiados, que es la regla que salió del lío del oauth de anoche. la cuenta facu anda: le pregunté algo y contestó. la cuenta orugote estaba esperando su login, y la url se te mandó al celu a las once y once.
+
+en el server ya existe el rol chat. funciona con un lock: el que tiene el lock contesta el chat, y si cloud se cae, el server retoma solo en unos ochenta segundos. eso está escrito y probado de a partes. lo que falta es la prueba de punta a punta: mandar un mensaje por la web, ver que la respuesta sale firmada desde cloud, apagar el daemon de la vm y medir cuánto tarda el server en retomar. esa tarea está en la cola.
+
+y detrás viene la mudanza por defecto, que pediste a las diez: todo que pase cuanto antes. el criterio es simple. todo lo pesado sigue en el server: la cola, los widgets, los scripts, las cámaras y la publicación al buzón. el chat vive en cloud. esas dos órdenes están en la cola como reintento, porque dependen de que cierre la prueba del chat.
+
+# github y la cuenta en cloud
+
+hay un paso chico que traba todo lo anterior: github.
+
+la vm todavía no tiene login de github. sin eso no puede escribir en el buzón, y si no puede escribir en el buzón, no te puede contestar en la web aunque tenga el lock. el login se hace con el flujo de dispositivo: te llega un código de ocho letras, lo tipeás en github punto com barra login barra device, y listo. el código vive quince minutos. la tarea que lo pide está en la cola.
+
+esa misma tarea pone la cuenta de claude de la vm en modo auto, igual que el server: cada llamada sale con la cuenta que renueva antes, porque los tokens que no se usan antes del reset se pierden. el chat de cloud además prefiere orugote mientras tenga margen.
+
+hablando de cuentas, se arregló un bug de esta noche. cuando cambiaste de facu a orugote, a eso de las once menos diez, orugote empezó a leer los números de facu: ochenta por ciento de semana y reset el miércoles. lo real de orugote era cuatro por ciento. la causa: las dos cuentas compartían el mismo archivo de cache. ahora cada cuenta tiene el suyo.
+
+y una cosa más del celu: ahora hay seis sesiones remotas andando, una por máquina y por cuenta. agente server, agente mac y agente cloud, cada una en facu y en orugote. las ves en la app de claude, en la pestaña code. paradas no gastan nada, y si alguna se cae, un guard la levanta cada cinco minutos.
+
+# herramientas: escribir desde un widget
+
+en herramientas, lo nuevo es el lápiz.
+
+pediste que los widgets tengan una opción de escribir, para decirme algo ahí y que yo ya tenga el contexto. ahora cada widget tiene un botón con un lápiz en el encabezado, al lado de refrescar y de la ruedita. al tocarlo, te lleva a la pestaña del tema de ese widget. el de server va a server, el de uso y avisos van a tools, el de tickets a awtomic, el del podcast a podcast. y te deja en el input una cita con el dato principal del widget, con el cursor listo para escribir. no manda nada solo.
+
+también funciona sobre una fila: en el menú de cualquier fila aparece escribir sobre esto, y la cita lleva el título y el cuerpo de esa fila. en el celu pasa sola a la vista de chat. del lado del daemon, esa cita no se mezcla con tu pedido: al modelo le llega como desde qué widget estás escribiendo.
+
+otras dos cosas de la noche, rápido. primero, los widgets se pueden reordenar arrastrando el encabezado: con el mouse en la compu, y en el celu dejando el dedo apretado medio segundo. el orden se sincroniza entre celu y compu. si no querés arrastrar, la ruedita tiene subir, bajar y ocultar. segundo, las notificaciones push al iphone, con el número en el ícono. para eso tenés que abrir el board desde el ícono de inicio y tocar activar notificaciones.
+
+y un cambio de fondo en los modelos: fable queda solo para el chat y para el estudio largo. todas las tareas de la cola y las periódicas van a opus. salió porque fable iba al ochenta y uno por ciento contra un setenta y cuatro de la semana general.
+
+# el podcast, arreglado para caminar
+
+ahora el podcast, que es lo que estás usando.
+
+el problema era doble. si pausabas con los airpods, el reproductor desaparecía de la pantalla bloqueada y no podías reanudar. y cada capítulo era un archivo aparte, así que al terminar uno, con el celu bloqueado, safari no dejaba arrancar el siguiente.
+
+ahora suena siempre el archivo entero del episodio. los capítulos siguen existiendo, pero como marcas de tiempo adentro del mismo audio, así que no hay cortes entre capítulos. cuando termina un episodio, el siguiente engancha solo en el mismo reproductor, un tercio de segundo antes del final. y el control de la pantalla bloqueada queda vivo en pausa: el play de los airpods reanuda aunque safari haya soltado el archivo. en la pantalla bloqueada ves el capítulo y el episodio.
+
+además la web del podcast es una app. se puede agregar a inicio. tiene un botón bajar en cada episodio, que guarda el audio entero en el celu para escucharlo sin datos, y muestra cuánto pesa. tiene una vista de chat de bajo consumo, texto pelado, contra el mismo buzón del board. y hay un modo que baja solo con wifi, pero ojo: en el iphone safari no dice si estás en wifi o en datos, así que ahí nunca baja solo. hay que tocar bajar.
+
+# cómo agregarlo a inicio
+
+los pasos, para cuando vuelvas.
+
+uno. abrí safari. tiene que ser safari. entrá a facundopichetto punto github punto io barra podcast.
+
+dos. tocá el botón de compartir, el cuadrado con la flecha, y elegí agregar a inicio.
+
+tres. abrilo desde el ícono podcast. se abre en pantalla completa, sin la barra de safari.
+
+cuatro. si el chat te pide token, es el mismo del board. puede pedirlo una vez aunque safari ya lo tenga, porque la app de inicio guarda sus cosas aparte.
+
+cinco. con wifi, tocá bajar en un episodio y esperá a que diga bajado. después probalo en modo avión.
+
+un detalle: si al iphone le falta lugar, o si no abrís la app en semanas, puede borrar lo bajado. la web lo detecta y vuelve a mostrar sin bajar.
+
+y lo último del podcast: ya no se arma de cero. hay un guion vivo que un script rehace cada dos horas sin gastar tokens, con el estado de cada tema, la cola y los avisos. cuando pedís un podcast, se filtra ese borrador y se redacta en una sola pasada.
+
+# lo que queda esperándote
+
+cierro con lo que depende de vos, ordenado por lo que más rinde.
+
+primero, el login de github de la vm: cuando te llegue el código de ocho letras, tipearlo en github barra login barra device. treinta segundos, y destraba el chat en cloud y la mudanza.
+
+segundo, el login de orugote en cloud, si todavía no lo terminaste. la url te llegó al celu a las once y once.
+
+tercero, lo mismo de github pero en la mac. hoy la mac no puede escribir en el buzón, y si el server se cae, la mac levanta el daemon pero vos no ves nada en la web.
+
+cuarto, probar el podcast de verdad: agregarlo a inicio, bajar un episodio, escucharlo con el celu bloqueado hasta que termine y enganche el siguiente.
+
+quinto, activar las notificaciones push desde el ícono del board.
+
+y sin apuro: la lista de compras del server, con la ups y el enchufe inteligente para reiniciar a distancia, sigue esperando que elijas a, b o c.
+
+eso es todo. que disfrutes el paseo con eva. chau.

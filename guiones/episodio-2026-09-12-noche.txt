@@ -1,0 +1,105 @@
+# de qué va este episodio
+hola facundo. es sábado doce de septiembre, pasadas las nueve y media de la noche, y este es el episodio completo del día. no reemplaza a los de hoy: el del corte y el express del server siguen en la lista.
+arranca con las noticias: el dólar, argentina, el mundo, tecnología e inteligencia artificial, y los shows que vienen en buenos aires con precio. después, corto, lo que se hizo hoy en cada tema: server, tools, awtomic, fuzzer y el podcast. y al final, lo que está esperando que decidas vos.
+toda la info de noticias es de esta noche, y en cada caso te digo de dónde sale. lo que no está publicado no lo invento.
+
+# el dólar esta noche
+empezamos por el dólar, con los números de dolarapi, la cotización que tomé a las nueve y media.
+el blue cierra la semana en mil quinientos veinticinco para comprar y mil quinientos cuarenta y cinco para vender.
+el oficial quedó el viernes en mil cuatrocientos ochenta la compra y mil quinientos treinta la venta. el mayorista, también del viernes, en mil quinientos ocho y medio.
+el dólar bolsa, o mep, está en mil quinientos cuarenta para vender, pegado al blue. el contado con liquidación va más arriba, en mil quinientos noventa y siete. el cripto anda en mil quinientos noventa y cuatro.
+y el dólar tarjeta, el que pagás cuando cobran algo afuera, está en mil novecientos ochenta y nueve.
+en limpio: la brecha entre el oficial y el blue sigue muy chica, poco más de uno por ciento. el que se despega es el contado con liquidación, casi cuatro por ciento arriba del oficial. para lo tuyo de plata: los números netos de la venta de los amplis se habían calculado con un blue de mil quinientos cuarenta y cinco el cuatro de septiembre, y hoy está exactamente igual. no hace falta recalcular por el dólar, solo chequear los comparables de mercado libre antes de publicar.
+
+# argentina: economía
+ahora argentina, con los titulares de ámbito y la nación de hoy sábado.
+el más fuerte de economía viene de la nación: en junio volvió a caer la cantidad de empresas registradas, y ya son treinta y un mil trescientas cuarenta y dos menos desde que asumió milei. es un número que sale de los registros de empleadores, y la tendencia no cambió de signo.
+en la misma línea, ámbito publica esta tarde que en las empresas se quintuplicó la morosidad en menos de dos años. o sea, además de haber menos empresas, las que quedan pagan peor sus créditos.
+otro de ámbito: las importaciones ya abastecen el setenta por ciento del mercado textil, mientras cae la llegada de insumos. traducido, se trae ropa hecha y se fabrica menos acá.
+también en ámbito hay una nota sobre el crédito hipotecario, con la idea de que el problema de la vivienda es financiero y no económico: que hay demanda, pero falta financiamiento a largo plazo.
+y del campo, en la nación: el súper niño gana fuerza y crece el riesgo de lluvias excesivas en la argentina. para la primavera y el verano se espera más agua de lo normal, lo que es bueno para la cosecha hasta que se vuelve inundación.
+una más de la nación campo, de las raras: un senador libertario cerró la actividad de sus empresas después de veinticinco años, puso en venta una planta y acusó a un gobernador. y en la otra punta, un negocio de bajo perfil que multiplicó por veinte sus exportaciones a estados unidos y puso al país en un ranking mundial.
+
+# argentina: política
+en política, los titulares de la nación de hoy.
+máximo kirchner está recorriendo la provincia de buenos aires. hoy estuvo en magdalena con jóvenes y dijo que no puede ser que el debate solo gire en torno a los mercados.
+en el mismo diario, una nota sobre uno de los fundadores de la cámpora, que tiene un departamento en el edificio donde cristina kirchner cumple la prisión domiciliaria.
+el sindicalista gerardo martínez compartió un evento con el papa y dijo que la argentina está triste.
+la nación también publica una investigación sobre la derecha diario, el medio de la militancia libertaria: habla de agresiones y de negocios poco claros.
+y sobre la base naval integrada, el gobierno salió a decir que la obra pertenece cien por ciento a la argentina y que no incluye a otros países.
+
+# el mundo
+ahora el mundo. las fuentes son npr y democracy now.
+el titular más pesado para la economía global viene de npr: arabia saudita tuvo que cerrar un oleoducto clave que llega al mar rojo, después de una serie de ataques. eso le pega directo al precio del petróleo y a las rutas de transporte, así que es de esas noticias que después aparecen en los números de todos lados.
+también en npr: los líderes de los brics se reúnen en india, con las guerras y la tensión con estados unidos poniendo a prueba al bloque. es el foro de las economías emergentes que busca hacerle contrapeso a occidente.
+ayer se cumplieron veinticinco años del once de septiembre. democracy now dedicó la semana a eso: una entrevista con juan gonzález, que cubrió los atentados para el daily news, y un informe sobre el costo de las guerras que vinieron después, que calculan en cuatro coma siete millones de muertos y ocho billones de dólares.
+y una de npr más chica pero linda: la búsqueda casi secreta para preservar los diarios del escritor palestino raja shehadeh, que terminaron en un archivo en escocia.
+
+# tecnología e inteligencia artificial
+tecnología, y acá hay una que te toca de cerca. las fuentes son techcrunch y hacker news.
+dario amodei, el ceo de anthropic, publicó hoy un ensayo que se llama algo así como "tenemos que marcar el ritmo de la frontera". techcrunch lo resume como un plan para desacelerar el desarrollo de la inteligencia artificial, y en hacker news fue de lo más votado del día. no leí el texto entero, así que no te digo qué propone en detalle. lo que sí: es la empresa del modelo que usás todo el día diciendo públicamente que quiere ir más despacio en la punta. vale la pena leerlo.
+en la misma línea, sam altman dijo que sería poco aconsejable que openai salga a la bolsa en dos mil veintiséis.
+en el mundo de las plataformas, automattic, la empresa detrás de wordpress, confirmó que matt mullenweg volvió como ceo después de que el directorio intentó sacarlo.
+seguridad: revolut confirmó una filtración de datos de clientes, hecha con pedidos falsos que se hacían pasar por requerimientos del gobierno. o sea, por lo que dice el titular, no fue un hackeo técnico sino alguien que pidió los datos haciéndose pasar por una autoridad.
+tesla dice que presenta, por fin, la segunda generación del roadster el primero de octubre.
+de hacker news, tres que te pueden gustar: una nota de the economist que dice que nvidia es el banco central de la inteligencia artificial; un anuncio del instituto clay sobre el problema de navier stokes, uno de los problemas del milenio, que está generando mucho ruido; y lg negando que sus televisores espíen y graben audio, después de una investigación que hablaba de doscientos dieciséis millones de teles.
+
+# shows en buenos aires
+música en buenos aires. el feed de indie hoy hoy trae notas de historia, no agenda, así que la agenda la busqué aparte, en indie hoy y en las notas de precios de el destape. los precios son de venta general y no incluyen el cargo de servicio.
+mañana domingo trece toca helloween en el movistar arena, a las nueve de la noche, festejando cuarenta años. el campo sale ciento diez mil pesos, y las plateas bajas van de ciento treinta mil a ciento sesenta mil. las entradas en la página del movistar arena.
+el lunes y martes, catorce y quince, está stray kids, y el miércoles dieciséis, five seconds of summer. de esos dos no busqué precio.
+el jueves diecisiete viene jamiroquai al hipódromo de san isidro, por los treinta años de virtual insanity. es por all access. el campo delantero sale ciento noventa mil, la platea dos ciento setenta mil, la platea uno doscientos cincuenta mil, y el pit, pegado al escenario, trescientos veinte mil.
+y el viernes dieciocho, alex anwandter en el gran rex a las ocho y media, por los veinte años de carrera, con invitados. es el más accesible de la semana: las ubicaciones arrancan en veintiocho mil pesos, y con la comunidad de indie hoy hay treinta por ciento de descuento en algunas. se compra en tu entrada.
+para más adelante en el mes, la agenda de indie hoy y los listados de movistar arena tienen fechas del veinticuatro al veintinueve de septiembre, con entradas cerca de ciento cuarenta y nueve mil, pero no quedó claro de qué artista, así que no te lo digo.
+
+# server: el día del corte
+ahora lo que se hizo hoy. arranco por el server, que fue el protagonista, para bien y para mal.
+a la tarde hubo un corte. una tarea que daba de alta la cámara conectó la wifi del server a la red de la cámara, y esa conexión se llevó la ruta por defecto y el dns. el server quedó sin internet un buen rato y el chat te contestaba "sin tokens". encima, el aviso de ese problema se reposteó cientos de veces, y github bloqueó el token, incluido el de la web.
+lo que se arregló: toda wifi ahora se conecta sin poder robarle la ruta al cable. hay tres capas de root para eso: un hook de network manager que se lo impone a cualquier wifi que suba, un guard que corre cada treinta segundos aunque el daemon esté caído, y un helper que baja la wifi rebelde al instante. además, cualquier cambio de red, systemd, docker o montajes pasa ahora por un mecanismo que hace backup y deja el revert programado antes de aplicar. si en tres minutos el server no tiene cable, dns, anthropic y tailscale sanos, se deshace solo.
+y los guards se prueban solos: a las tres y media de la mañana un script rompe a propósito cada modo de falla y verifica que se recupere. los avisos, por su parte, se marcan como enviados antes de salir, así cien vueltas dan un solo mensaje.
+
+# server: lo que se construyó arriba
+además del arreglo, a la noche se sumaron cosas nuevas.
+el chat se salva solo: el login de claude se refresca media hora antes de vencer, un fallo pasajero se reintenta y prueba la otra cuenta antes de rendirse, y hay un comando nuevo, "salvame", que corre el rescate entero en orden sin gastar modelo. también está "caídas", que te dice cuántas veces y cuánto rato estuvo claude sin contestar hoy.
+claudio tiene versiones: el código está bajo git, con un comando para ver la versión y un canary, que se probó con una rama de prueba y se volvió atrás limpio.
+el nodo de guardia, el que toma la posta si el server se cae, ahora mira cada dos minutos con tres señales y hay un lock en el buzón para que nunca publiquen dos a la vez. hace su propio login de github, sin copiar secretos de otra máquina.
+el nodo en la nube ya existe: una máquina chica en hetzner, a unos seis euros y medio por mes. le falta un solo paso, que es de vos, y te lo cuento al final.
+y las cámaras: las dos graban, y desde las ocho y media de la noche te llegan avisos al celu cuando detectan una persona, con foto y sin repetir durante dos minutos. de hecho, a las ocho y treinta y tres ya saltó uno en la cámara uno.
+en la cola del server siguen: el failover en cadena con la nube primero, whatsapp del server como dispositivo vinculado, la subida de clips de las cámaras a la nube, y aplicar los cambios chicos de la migración al código.
+
+# tools
+tools, que es claude code, la web y el daemon.
+la decisión grande de hoy fue de modelos. viste que en la cuenta facu el límite de fable iba en ochenta y uno por ciento contra setenta y cuatro del semanal general, y pediste aprovechar opus. así que desde las nueve y veinte fable queda solo para el chat y para estudios largos, y las periódicas y las órdenes van con opus. se probó y quedó andando. el reparto de cuentas también cambió hoy: cada llamada sale con la cuenta que renueva antes, porque lo que no se usa antes del reset se pierde, con topes de ochenta y cinco por ciento para tareas y noventa para el chat.
+la web tuvo varias versiones hoy, de la cuatro ciento ochenta y cuatro a la cuatro ciento ochenta y seis solo después de las ocho y media. se sumó el board de nodos, server, mac y nube, y un widget de qué ver con youtube y prime video.
+en la cola de tools hay cinco cosas: el resumen rodante del contexto del chat, que ya está corriendo; que la cola fusione pedidos parecidos en vez de duplicarlos; una opción de escribir directo desde cada widget; y dos arreglos visuales del board de nodos, colores y tamaño de botones.
+lo que sigue flojo: la prueba de las pestañas de la web contra el deploy da resultados distintos de una corrida a otra. está anotado para estabilizarlo.
+
+# awtomic
+awtomic, corto, porque hoy fue sábado.
+lo importante es que el server ya puede trabajar awtomic: tiene el cli de shopify y los ocho repos de la organización clonados. le falta el login del cli, que es interactivo. intenté hacerlo solo y no se puede: shopify pide una credencial fresca, tu password, la passkey del celu o tu google, y ninguna está en el server.
+con eso relacionado, el server ya pasa el segundo factor de shopify con una llave de seguridad de software, y shopify la puso como método principal. la app autenticadora del celu quedó de respaldo.
+el ticket de penfolds sigue trabado: el cambio está en una copia del theme, sin tocar el live, pero no se pudo verificar porque el storefront tiene password y la sesión del admin estaba muerta.
+y en pendientes de fondo siguen la limpieza del store de qa, esperando a que se cierren dos tickets, y los scripts sin commitear en el repo de migraciones.
+
+# fuzzer
+fuzzer. hoy hubo movimiento por mail con santi.
+para el post del año de croto, le gusta la idea pero quiere la tipografía más cerca del fuzzer de la tapa, y ofreció el archivo del logo. le dije que sí. le avisé que el aniversario ya pasó, fue el miércoles nueve, y le di dos opciones: que salga igual esta semana sin decir "hoy", que es mi voto, o guardarlo para engancharlo con la fecha del salón. espera respuesta. nada se publica sin que lo digas vos.
+para el flyer del salón de noviembre, dice que tiene perfiles de instagram de referencia. le pedí esos perfiles, fecha y horario, las tres bandas y su orden, precio, link de venta y los logos.
+y del lado del sistema, el mail de fuzzer ahora se mira cada quince minutos, y cada dos cuando hay una charla abierta, y las conversaciones que atiendo yo se archivan solas para que ustedes no las vean en el inbox.
+
+# el podcast
+el podcast, que desde hoy es un tema propio, con su pestaña.
+tres cambios. primero, siempre hay un guion preparado: un script lo rehace cada dos horas con el estado de cada tema, la cola, los avisos y las noticias, y cuando pedís un episodio se filtra y se redacta en una sola pasada. este episodio salió de ahí.
+segundo, el reproductor del celu ahora suena el episodio entero y no capítulo por capítulo, que era lo que te cortaba cada un par de minutos. al terminar un episodio engancha el siguiente, y al pausar no suelta el player, así el toque de los airpods reanuda. eso solo se puede confirmar escuchando en el celu con la pantalla bloqueada, así que ahora es un buen momento para probarlo.
+y tercero, desde este episodio cada uno muestra la fecha y la hora en que salió, en la lista y arriba del título, para que sepas de cuándo es lo que estás escuchando. los anteriores tomaron la hora de su archivo.
+pendiente, la versión app instalable, con descarga de episodios para escuchar sin datos y un chat liviano. elegiste esa opción sobre la app nativa, y está en la lista.
+
+# lo que está esperando a facundo
+y cierro con lo que depende de vos, ordenado por lo que más destraba por minuto.
+uno, el login de claude del nodo en la nube. es abrir un link que te dejé en el chat y pegarme el código. con eso la nube puede tomar la guardia si el server se cae. un minuto.
+dos, el login de github de la mac, para que pueda escribir en el buzón. entrar a la página de dispositivos de github y tipear el código de ocho letras que te paso. treinta segundos, y el código vence a los quince minutos.
+tres, el login del cli de shopify en el server, que destraba trabajar themes de awtomic desde acá. necesita tu credencial, no lo puedo hacer solo.
+cuatro, la reserva de ip de las dos cámaras en el router, así un reinicio no les cambia la dirección. dos minutos, y al router no llego yo.
+cinco, en la retroid, aceptar el cartel de depuración usb, que destraba el índice de juegos.
+y seis, las propuestas de la ronda de la noche del once, en plata y en personal, que siguen sin letra. no son urgentes.
+eso es todo por hoy. buen paseo.

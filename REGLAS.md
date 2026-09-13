@@ -152,6 +152,11 @@ gasta modelo es **un solo pase** para redactar el guion final sobre ese borrador
   siempre: `--conservar` solo si facundo pide otro que no reemplace).
   `--auto` hace el pase de modelo el script mismo (`claude -p`, cuenta por `reparto_cuentas`); sin
   `--auto` no gasta nada, deja el prompt en `tmp/` para que lo redacte el modelo que ya esta corriendo.
+- **nunca en segundo plano, nunca "ok" sin la web** (2026-09-12: los episodios de las 21:31 y 23:47
+  quedaron cortados en el capitulo 1 porque la tarea lanzo el render en background y termino con rc=0).
+  `emitir` y `nuevo` bloquean hasta pushear y ver el episodio en github pages (`verificar --vivo`) y
+  salen 1 si no esta. renders cortados: `python3 -m recetas.podcast huerfanos`; se rehacen con
+  `nuevo <guion> --id <id> --conservar --ts <hora original>`.
 - **noticias entra siempre** aunque se filtre por tema (el episodio arranca con las noticias del dia),
   salvo `--sin-noticias`.
 
