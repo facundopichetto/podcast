@@ -1,0 +1,81 @@
+# de que va
+
+buen día. esto es el resumen de lo que pasó ayer, sábado doce de septiembre, contado en unos diez minutos. no hay noticias acá, no hay nada de afuera: solo lo que hicimos vos y yo, qué se cerró, qué se rompió y qué quedó esperándote.
+
+fue un sábado largo y raro, porque arrancó a la madrugada y siguió hasta la noche, con tres frentes bien distintos: el server, que ya está haciendo laburo de verdad; la banda, que se activó por mail a la tarde; y el podcast, que se rompió, se arregló y se volvió a romper. también hubo awtomic, algo de plata y personal, y un rato de juegos con discos enchufados.
+
+vamos por partes.
+
+# la madrugada: tokens, guards y el board
+
+lo primero de la madrugada fue en tools. se cerró el guard grande: claudio sigue vivo aunque claude se quede sin tokens o se caiga. antes, cuando la sesión chocaba contra el límite, el chat te devolvía el error crudo, tal cual, como si fuera una respuesta. ahora el error se detecta sin gastar modelo, se clasifica, y contesta claudio con un menú de opciones: esperar el reset, cambiarte de cuenta, o pasar a eco si vos lo pedís. además hay un modo comandos que responde status, cola, usage, cuenta y log sin llamar a claude para nada. eso quedó andando y probado.
+
+a las dos y media se hizo el header de los widgets del board: cada caja tiene ahora su fila de título con un dato esencial a la izquierda. y a las tres menos cuarto se sacó el drag and drop de las pestañas del chat, que era algo que habías pedido explícito: el chat es un panel único, las pestañas no se arrastran ni se mandan al lado de los widgets. eso ya está afuera.
+
+y la última de esa tanda fue el reparto de cuentas. desde el sábado a las cuatro de la tarde, que es cuando renueva orugote, el daemon elige la cuenta por tarea y por mensaje de chat según cómo viene el uso. después eso evolucionó: hoy manda la cuenta que renueva antes, porque lo que no se gasta se pierde, y el reparto va por modelo, así una cuenta con fable al tope sigue haciendo tareas de opus.
+
+hay una cosa de tools que quedó pendiente y te la digo porque viene arrastrándose: la prueba de la web contra el deploy en vivo viene inestable. en local da verde, contra lo publicado falla, y falla distinto cada vez. hay que estabilizarla, no está resuelto.
+
+# el server empezó a trabajar solo
+
+el server fue el tema más movido de la madrugada. se trajo tu sesión de mercadolibre desde el chrome de la mac al chrome del server, reusando la infra de cookies que ya existía. se le dio al usuario agente permiso de sudo sin password pero solo para una cosa muy puntual: expulsar discos usb. nada más que eso, y con un script que recibe la etiqueta o el dispositivo, desmonta, sincroniza y apaga el usb.
+
+también se armó la lista de compras para que el server aguante solo y a prueba de fallas: una ups con regulación de tensión para la mini pc, el router y el modem, ordenada por prioridad y con precios de mercadolibre argentina. eso se investigó sin abrir chrome.
+
+y la orden grande: que todo lo que usa chrome corra cien por ciento desde el server, sin depender más del chrome de la mac. eso tuvo una corrección importante a las tres y media, y vale la pena que la sepas: en el server no se crean perfiles separados de awtomic, orugote y fuzzer. hay un solo perfil, el del agente. tus cuentas entran adentro de ese perfil.
+
+el estado del server hoy tiene cuatro cosas abiertas. las cámaras: el script de avisos por persona está hecho, falta la subida de clips a la nube y la reserva de dhcp de las dos direcciones en el router. el espacio: el disco raíz son cien gigas de los novecientos cincuenta del nvme, y quedan unos trescientos cincuenta sin asignar, así que si queda corto se agranda en caliente. falta aplicar los cambios de migración al código, que son chicos. y falta el destino del backup diario: hasta que se autorice la clave del agente en la mac, el backup no tiene a dónde ir.
+
+# la banda se despertó a la tarde
+
+a la tarde el foco se movió entero a fuzzer, y fue por mail. santi escribió a las siete y veinte diciendo que el sitio de la banda está caído y lo quieren usar. él aceptó la invitación, pero cloudflare solo le deja conectar repos creados por su propia cuenta, así que hubo que redactarle una respuesta explicándole el camino.
+
+y eso destrabó una tanda de cambios en cómo leo el mail de la banda. antes miraba solo lo que llegaba a la dirección con el sufijo de claudio o con la etiqueta puesta. ahora reviso todo mail nuevo que entra a la casilla de fuzzer, guardo el último procesado para no repetir, y resumo cada uno en una línea. arriba de eso se aplicó la regla nueva: santi y leo pueden pedirme laburos por mail, pero solo cosas de la banda. diseño, la web, flyers. si piden algo que no puedo o que no sé si debo hacer, no les contesto que no por mi cuenta: te pregunto primero a vos y recién después les respondo.
+
+y la última, a las ocho: todo hilo que atienda yo se archiva del inbox, dejando la etiqueta puesta. santi y leo no ven esas conversaciones entrando al mail, yo las sigo viendo.
+
+del estado de la banda queda pendiente lo de siempre. el post por el año de croto: a santi le gusta la idea pero quiere la tipografía más cerca del fuzzer de la tapa, y ofreció pasar el archivo. el aniversario ya pasó, fue el nueve, así que te di dos opciones: sale igual esta semana sin decir hoy, o se guarda y se engancha con la fecha del salón. mi voto es que salga igual. espera respuesta de santi, y nada se publica sin que lo digas vos.
+
+el flyer del salón de noviembre sigue esperando material: fecha y horario, las tres bandas y su orden, precio y link, y los logos. y queda pasar el meta verified de apple a meta, que te está comiendo como treinta por ciento de comisión.
+
+# el podcast, que es el que más se rompió
+
+este capítulo es medio autorreferencial pero es lo que más movimiento tuvo.
+
+a las nueve y media de la noche salió la orden del episodio completo del sábado, como episodio nuevo, sin reemplazar el anterior. después se arregló el player en el celu: el problema era que cada capítulo es un archivo aparte, y con la pantalla bloqueada el safari del iphone no arranca un audio nuevo sin que vos toques algo, así que se cortaba al terminar cada capítulo. eso se atacó.
+
+a las once se convirtió la web del podcast en una aplicación instalable de verdad para el iphone: iconos, pantalla completa, los meta tags para agregar a inicio, y un service worker con cache para que funcione sin depender de la conexión.
+
+y después, casi a medianoche, lo importante: el episodio de las nueve y media nunca se publicó. la tarea terminó diciendo que estaba renderizando, con código de salida cero, pero en el disco solo quedaron el guion y el primer capítulo de audio. o sea, dijo que estaba bien y no estaba. eso se detectó y se encoló como urgente, junto con un capítulo nuevo con lo que había pasado desde las nueve y media.
+
+hay una cosa tuya de la madrugada que quedó registrada: pediste que el nocturno, que duraba diez minutos, tuviera una versión de veinticinco, y la respuesta que recibiste fue el límite de sesión de claude, en crudo. eso es exactamente el problema que el guard de la una y cincuenta vino a resolver. la queja y el arreglo pasaron la misma madrugada.
+
+# awtomic, juegos y lo doméstico
+
+en awtomic hubo cinco tareas y un bloqueo que sigue vivo. el ticket de penfolds: la contraseña del storefront sigue sin conseguirse. se intentó por el admin con el chrome y la sesión de shopify de tu chrome está muerta: el estado da sin sesión incluso después de resembrar las cookies, y el admin cae en el login completo. hay un diff de la página de producto pusheado a una copia del theme, con los dos archivos confirmados en el remoto, pero sin verificar en el storefront justamente por la contraseña. el theme live no se tocó.
+
+el ticket de ponzi se cerró con un post autorizado por vos, pero condicionado: primero leer el ticket y confirmar quién es el reporter, y si no era emily, no postear nada. y apareció algo de emily por slack sin ticket: dice que el mínimo de tres botellas de turley puede haberse pisado con los cambios últimos. eso se abrió como tarea de investigación.
+
+también se trabajó el login de shopify en el chrome del server usando el authenticator de tu perfil personal, que autorizaste. igual, al día de hoy el cli de shopify en el server sigue sin sesión: es interactivo y lo tenés que hacer vos. hasta entonces, en el server no hay lista, bajada ni subida de themes. lo bueno es que el resto ya está: la herramienta instalada, los ocho repos clonados.
+
+de juegos: el server ahora ve y monta los cuatro volúmenes, el disco de cinco teras, el toshiba de dos, y las dos particiones de la consolita. el backup de la primera tarjeta está hecho y verificado, ciento setenta y un megas, cinco mil trescientas entradas, abierto y listado después de escribirlo. y quedó una lección cara: el disco grande tiene bloques de dos megas, así que un archivo de un byte ocupa dos megas. el backup suelto, que eran doscientos cincuenta y nueve megas reales, terminó ocupando ocho gigas y medio y dejó el disco en cero libre. se borró y se rehizo como un archivo único comprimido. regla nueva: antes de escribir muchos archivos chicos en cualquier disco, mirar el tamaño de bloque.
+
+y de lo personal, lo de eva. relevé mercadolibre y el resultado es que los masticables que le convienen no se consiguen ahí, porque son orales bajo receta: van a veterinaria. en mercadolibre solo hay pipetas y collares.
+
+# lo que te espera
+
+esto es lo que depende de vos, corto y ordenado.
+
+del server, tres cosas de un minuto cada una. la primera: habilitar el nodo de salida del server para la máquina en la nube, que son dos pasos, uno en el server y uno en el panel de tailscale. la segunda: decir vincular whatsapp nube y escanear el código, y eso lo prende, lo verifica y lo apaga solo. la tercera: la mac no puede escribir en el buzón, y se arregla abriendo el device login de github y tipeando un código de ocho letras que te paso por el chat. ese código vence en quince minutos, así que avisame cuando estés y lo genero.
+
+de awtomic: el login del cli de shopify en el server, que es interactivo y solo lo podés hacer vos.
+
+de juegos: aceptar el cartel de depuración usb en la retroid, poner la otra tarjeta de la consolita si querés su backup, y tres decisiones que tenés anotadas sobre archivos huérfanos y capturas.
+
+de plata: elegir letra en los tres puntos que te dejé, y sacar las fotos de los amplis. el marshall es el que más deja y está listo para publicar a mano, solo faltan las fotos. cuando las saques, pesá el ampli con la caja y anotá el código de barras, que es lo que pide la interfaz.
+
+y de personal: contestar las ocho propuestas de la ronda nocturna, actualizar la tarjeta en paypal a mano, y pasar el documento de roberto para cerrar el trámite del correo.
+
+una última cosa que no es tuya pero la tenés que saber: esta madrugada el buzón empezó a devolver error quinientos al publicar los widgets, dos veces, con reintento automático. y la prueba de caos detectó que hay guards que no recuperan si una tarea toca el cable de red: el server se cae y no queda nadie de guardia. eso lo tengo anotado y lo voy a atacar.
+
+eso fue el sábado. hablamos.

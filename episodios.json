@@ -7,6 +7,81 @@
  },
  "episodios": [
   {
+   "id": "ep-2026-09-12-server",
+   "fecha": "2026-09-12",
+   "titulo": "express: el server, claudio y lo que sigue",
+   "temas": [
+    "server",
+    "tools"
+   ],
+   "palabras": 2580,
+   "guion": "episodio-2026-09-12-server.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-12-server-daniela.mp3",
+     "duracion": 786.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 32.5,
+       "archivo": "audio/ep-2026-09-12-server-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 32.5,
+       "titulo": "lo que ya corre solo desde el server",
+       "duracion": 93.0,
+       "archivo": "audio/ep-2026-09-12-server-2-lo-que-ya-corre-solo.daniela.mp3"
+      },
+      {
+       "t": 125.4,
+       "titulo": "lo que todavía cuelga de la mac",
+       "duracion": 80.7,
+       "archivo": "audio/ep-2026-09-12-server-3-lo-que-todavia-cuelga.daniela.mp3"
+      },
+      {
+       "t": 206.2,
+       "titulo": "pasos fáciles, para hoy",
+       "duracion": 80.1,
+       "archivo": "audio/ep-2026-09-12-server-4-pasos-faciles-para-hoy.daniela.mp3"
+      },
+      {
+       "t": 286.2,
+       "titulo": "pasos no tan fáciles",
+       "duracion": 107.6,
+       "archivo": "audio/ep-2026-09-12-server-5-pasos-no-tan-faciles.daniela.mp3"
+      },
+      {
+       "t": 393.8,
+       "titulo": "modelos: quién piensa y quién ejecuta",
+       "duracion": 108.3,
+       "archivo": "audio/ep-2026-09-12-server-6-modelos-quien-piensa-y.daniela.mp3"
+      },
+      {
+       "t": 502.1,
+       "titulo": "flujo de trabajo",
+       "duracion": 82.3,
+       "archivo": "audio/ep-2026-09-12-server-7-flujo-de-trabajo.daniela.mp3"
+      },
+      {
+       "t": 584.4,
+       "titulo": "mejoras que puedo hacer ya, sin que decidas nada",
+       "duracion": 83.8,
+       "archivo": "audio/ep-2026-09-12-server-8-mejoras-que-puedo-hacer.daniela.mp3"
+      },
+      {
+       "t": 668.2,
+       "titulo": "optimizaciones y propuestas, a b c",
+       "duracion": 118.2,
+       "archivo": "audio/ep-2026-09-12-server-9-optimizaciones-y.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 786.4,
+   "ts": "2026-09-12T12:29:10-03:00"
+  },
+  {
    "id": "ep-2026-09-12-corte",
    "fecha": "2026-09-12",
    "titulo": "el corte de hoy: qué pasó, qué se arregló y qué falta",
@@ -68,76 +143,6 @@
    },
    "duracion": 440.7,
    "ts": "2026-09-12T16:40:15-03:00"
-  },
-  {
-   "id": "ep-2026-09-12-medianoche",
-   "fecha": "2026-09-12",
-   "titulo": "medianoche: lo nuevo desde las 21:30",
-   "temas": [
-    "server",
-    "tools",
-    "podcast"
-   ],
-   "palabras": 1886,
-   "guion": "episodio-2026-09-12-medianoche.txt",
-   "voces": {
-    "daniela": {
-     "archivo": "audio/ep-2026-09-12-medianoche-daniela.mp3",
-     "duracion": 589.1,
-     "capitulos": [
-      {
-       "t": 0.0,
-       "titulo": "de qué va este episodio",
-       "duracion": 35.4,
-       "archivo": "audio/ep-2026-09-12-medianoche-1-de-que-va-este-episodio.daniela.mp3"
-      },
-      {
-       "t": 35.4,
-       "titulo": "whatsapp ya es de claudio",
-       "duracion": 95.3,
-       "archivo": "audio/ep-2026-09-12-medianoche-2-whatsapp-ya-es-de.daniela.mp3"
-      },
-      {
-       "t": 130.7,
-       "titulo": "cloud: la segunda casa de claudio",
-       "duracion": 95.0,
-       "archivo": "audio/ep-2026-09-12-medianoche-3-cloud-la-segunda-casa.daniela.mp3"
-      },
-      {
-       "t": 225.7,
-       "titulo": "github y la cuenta en cloud",
-       "duracion": 81.9,
-       "archivo": "audio/ep-2026-09-12-medianoche-4-github-y-la-cuenta-en.daniela.mp3"
-      },
-      {
-       "t": 307.6,
-       "titulo": "herramientas: escribir desde un widget",
-       "duracion": 90.8,
-       "archivo": "audio/ep-2026-09-12-medianoche-5-herramientas-escribir.daniela.mp3"
-      },
-      {
-       "t": 398.4,
-       "titulo": "el podcast, arreglado para caminar",
-       "duracion": 70.7,
-       "archivo": "audio/ep-2026-09-12-medianoche-6-el-podcast-arreglado.daniela.mp3"
-      },
-      {
-       "t": 469.1,
-       "titulo": "cómo agregarlo a inicio",
-       "duracion": 63.2,
-       "archivo": "audio/ep-2026-09-12-medianoche-7-como-agregarlo-a-inicio.daniela.mp3"
-      },
-      {
-       "t": 532.3,
-       "titulo": "lo que queda esperándote",
-       "duracion": 56.7,
-       "archivo": "audio/ep-2026-09-12-medianoche-8-lo-que-queda-esperandote.daniela.mp3"
-      }
-     ]
-    }
-   },
-   "duracion": 589.1,
-   "ts": "2026-09-12T23:47:00-03:00"
   },
   {
    "id": "ep-2026-09-12-noche",
@@ -249,80 +254,148 @@
    "ts": "2026-09-12T21:31:00-03:00"
   },
   {
-   "id": "ep-2026-09-12-server",
+   "id": "ep-2026-09-12-medianoche",
    "fecha": "2026-09-12",
-   "titulo": "express: el server, claudio y lo que sigue",
+   "titulo": "medianoche: lo nuevo desde las 21:30",
    "temas": [
     "server",
-    "tools"
+    "tools",
+    "podcast"
    ],
-   "palabras": 2580,
-   "guion": "episodio-2026-09-12-server.txt",
+   "palabras": 1886,
+   "guion": "episodio-2026-09-12-medianoche.txt",
    "voces": {
     "daniela": {
-     "archivo": "audio/ep-2026-09-12-server-daniela.mp3",
-     "duracion": 786.4,
+     "archivo": "audio/ep-2026-09-12-medianoche-daniela.mp3",
+     "duracion": 589.1,
      "capitulos": [
       {
        "t": 0.0,
        "titulo": "de qué va este episodio",
-       "duracion": 32.5,
-       "archivo": "audio/ep-2026-09-12-server-1-de-que-va-este-episodio.daniela.mp3"
+       "duracion": 35.4,
+       "archivo": "audio/ep-2026-09-12-medianoche-1-de-que-va-este-episodio.daniela.mp3"
       },
       {
-       "t": 32.5,
-       "titulo": "lo que ya corre solo desde el server",
-       "duracion": 93.0,
-       "archivo": "audio/ep-2026-09-12-server-2-lo-que-ya-corre-solo.daniela.mp3"
+       "t": 35.4,
+       "titulo": "whatsapp ya es de claudio",
+       "duracion": 95.3,
+       "archivo": "audio/ep-2026-09-12-medianoche-2-whatsapp-ya-es-de.daniela.mp3"
       },
       {
-       "t": 125.4,
-       "titulo": "lo que todavía cuelga de la mac",
-       "duracion": 80.7,
-       "archivo": "audio/ep-2026-09-12-server-3-lo-que-todavia-cuelga.daniela.mp3"
+       "t": 130.7,
+       "titulo": "cloud: la segunda casa de claudio",
+       "duracion": 95.0,
+       "archivo": "audio/ep-2026-09-12-medianoche-3-cloud-la-segunda-casa.daniela.mp3"
       },
       {
-       "t": 206.2,
-       "titulo": "pasos fáciles, para hoy",
-       "duracion": 80.1,
-       "archivo": "audio/ep-2026-09-12-server-4-pasos-faciles-para-hoy.daniela.mp3"
+       "t": 225.7,
+       "titulo": "github y la cuenta en cloud",
+       "duracion": 81.9,
+       "archivo": "audio/ep-2026-09-12-medianoche-4-github-y-la-cuenta-en.daniela.mp3"
       },
       {
-       "t": 286.2,
-       "titulo": "pasos no tan fáciles",
-       "duracion": 107.6,
-       "archivo": "audio/ep-2026-09-12-server-5-pasos-no-tan-faciles.daniela.mp3"
+       "t": 307.6,
+       "titulo": "herramientas: escribir desde un widget",
+       "duracion": 90.8,
+       "archivo": "audio/ep-2026-09-12-medianoche-5-herramientas-escribir.daniela.mp3"
       },
       {
-       "t": 393.8,
-       "titulo": "modelos: quién piensa y quién ejecuta",
-       "duracion": 108.3,
-       "archivo": "audio/ep-2026-09-12-server-6-modelos-quien-piensa-y.daniela.mp3"
+       "t": 398.4,
+       "titulo": "el podcast, arreglado para caminar",
+       "duracion": 70.7,
+       "archivo": "audio/ep-2026-09-12-medianoche-6-el-podcast-arreglado.daniela.mp3"
       },
       {
-       "t": 502.1,
-       "titulo": "flujo de trabajo",
-       "duracion": 82.3,
-       "archivo": "audio/ep-2026-09-12-server-7-flujo-de-trabajo.daniela.mp3"
+       "t": 469.1,
+       "titulo": "cómo agregarlo a inicio",
+       "duracion": 63.2,
+       "archivo": "audio/ep-2026-09-12-medianoche-7-como-agregarlo-a-inicio.daniela.mp3"
       },
       {
-       "t": 584.4,
-       "titulo": "mejoras que puedo hacer ya, sin que decidas nada",
-       "duracion": 83.8,
-       "archivo": "audio/ep-2026-09-12-server-8-mejoras-que-puedo-hacer.daniela.mp3"
-      },
-      {
-       "t": 668.2,
-       "titulo": "optimizaciones y propuestas, a b c",
-       "duracion": 118.2,
-       "archivo": "audio/ep-2026-09-12-server-9-optimizaciones-y.daniela.mp3"
+       "t": 532.3,
+       "titulo": "lo que queda esperándote",
+       "duracion": 56.7,
+       "archivo": "audio/ep-2026-09-12-medianoche-8-lo-que-queda-esperandote.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 786.4,
-   "ts": "2026-09-12T12:29:10-03:00"
+   "duracion": 589.1,
+   "ts": "2026-09-12T23:47:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-13-manana-10m",
+   "fecha": "2026-09-13",
+   "titulo": "mañana · lo del sáb 12/9",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "general",
+    "juegos",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 2098,
+   "guion": "episodio-2026-09-13-manana-10m.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-manana-10m-daniela.mp3",
+     "duracion": 639.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 37.0,
+       "archivo": "audio/ep-2026-09-13-manana-10m-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 37.0,
+       "titulo": "la madrugada: tokens, guards y el board",
+       "duracion": 92.1,
+       "archivo": "audio/ep-2026-09-13-manana-10m-2-la-madrugada-tokens.daniela.mp3"
+      },
+      {
+       "t": 129.1,
+       "titulo": "el server empezó a trabajar solo",
+       "duracion": 93.0,
+       "archivo": "audio/ep-2026-09-13-manana-10m-3-el-server-empezo-a.daniela.mp3"
+      },
+      {
+       "t": 222.1,
+       "titulo": "la banda se despertó a la tarde",
+       "duracion": 103.3,
+       "archivo": "audio/ep-2026-09-13-manana-10m-4-la-banda-se-desperto-a.daniela.mp3"
+      },
+      {
+       "t": 325.4,
+       "titulo": "el podcast, que es el que más se rompió",
+       "duracion": 81.7,
+       "archivo": "audio/ep-2026-09-13-manana-10m-5-el-podcast-que-es-el.daniela.mp3"
+      },
+      {
+       "t": 407.1,
+       "titulo": "awtomic, juegos y lo doméstico",
+       "duracion": 129.6,
+       "archivo": "audio/ep-2026-09-13-manana-10m-6-awtomic-juegos-y-lo.daniela.mp3"
+      },
+      {
+       "t": 536.7,
+       "titulo": "lo que te espera",
+       "duracion": 102.7,
+       "archivo": "audio/ep-2026-09-13-manana-10m-7-lo-que-te-espera.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-13-manana",
+   "version": "10m",
+   "emision": "manana",
+   "duracion": 639.4,
+   "ts": "2026-09-13T08:00:00-03:00"
   }
  ],
- "actualizado": "2026-09-12 23:56"
+ "actualizado": "2026-09-13 08:06"
 }
