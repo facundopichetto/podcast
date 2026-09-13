@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.7">
+<meta name="podcast-version" content="1.8">
 <meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
@@ -83,6 +83,20 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 #chatform { position: sticky; bottom: 0; background: var(--bg); padding: 10px 0 6px; display:grid; grid-template-columns: 1fr auto; gap:8px; }
 #chatform select { grid-column: 1 / -1; }
 #chattxt { font: inherit; font-size: 16px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius: 12px; padding: 10px; min-height: 46px; resize: vertical; }
+/* podcast automatico (2026-09-13): versiones de una emision, manitos y la regla del 50% */
+#ajustes { display:flex; align-items:center; justify-content:space-between; gap:10px; color:var(--dim); font-size:13px; margin: -4px 0 14px; }
+#ajustes button, .ver, #pvers button { font: inherit; font-size: 13px; background:#161616; color:var(--dim); border:1px solid var(--line); border-radius:999px; padding:4px 11px; cursor:pointer; }
+#ajustes button.on, .ver.on, #pvers button.on { color: var(--acc); border-color: var(--acc); }
+.ver.visto { opacity: .5; }
+.vers { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin: -4px 0 14px 4px; }
+#pextra { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin: -4px 0 14px; }
+#pvers { display:flex; gap:6px; }
+.votos { display:flex; gap:8px; margin-left:auto; }
+.voto { background:#161616; border:1px solid var(--line); border-radius:999px; padding:6px 12px; color:var(--dim); cursor:pointer; line-height:0; }
+.voto svg { width:18px; height:18px; fill: currentColor; }
+.voto.abajo svg { transform: rotate(180deg); }
+.voto.arriba.on { color: var(--acc); border-color: var(--acc); }
+.voto.abajo.on { color: var(--acc2); border-color: var(--acc2); }
 </style>
 </head>
 <body>
@@ -96,6 +110,7 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
   <div id="ph"></div>
   <div id="pt"></div>
   <div id="pfila"><span id="pf"></span><button id="marcar">marcar escuchado</button></div>
+  <div id="pextra"><div id="pvers"></div><div id="pvotos"></div></div>
   <div id="baja"><span id="bajatxt"></span><span><button id="bajar">bajar</button> <button id="autobajar">auto con wifi</button></span></div>
   <audio id="audio" preload="auto" playsinline></audio>
   <input id="barra" type="range" min="0" max="100" step="0.1" value="0">
@@ -140,11 +155,122 @@ const ANTES_DEL_FIN = 0.35;
 // terminar, y a mano con el boton de cada fila o el del player. la reproduccion continua salta lo escuchado
 const HECHO = 0.9;
 const visto = e => !!e && localStorage['visto:' + e.id] === '1';
-function marcarVisto(e, si) {
-  if (!e || visto(e) === si) return;
+// `aMano`: lo toco facundo. desmarcar a mano deja `desmarcado:<id>` y la regla del 50% ya no lo vuelve a marcar
+function marcarVisto(e, si, aMano) {
+  if (!e) return;
+  if (aMano) { if (si) localStorage.removeItem('desmarcado:' + e.id); else localStorage['desmarcado:' + e.id] = '1'; }
+  if (visto(e) === si) return;
   if (si) localStorage['visto:' + e.id] = '1'; else localStorage.removeItem('visto:' + e.id);
   if (datos && !$('#lista').classList.contains('hidden')) pintarLista();
-  if (ep) { pintarMarca(); pintarCaps(); }
+  if (ep) { pintarMarca(); pintarCaps(); pintarExtra(); }
+}
+
+// ---------- podcast automatico (facundo, 2026-09-13) ----------
+// cada emision (`grupo` en episodios.json) sale en tres versiones: una sola fila con selector 10 min / 30 min / 1.5 h
+const VERSIONES = ['10m', '30m', '90m'], ETQ = { '10m': '10 min', '30m': '30 min', '90m': '1.5 h' };
+let refrescado = null;
+// las unidades en el orden del json: una por emision automatica, una por episodio suelto
+function unidades() {
+  const us = [], por = {};
+  ((datos || {}).episodios || []).forEach(e => {
+    if (!e.grupo) { us.push({ clave: e.id, eps: [e] }); return; }
+    if (!por[e.grupo]) { por[e.grupo] = { clave: e.grupo, grupo: e.grupo, eps: [] }; us.push(por[e.grupo]); }
+    por[e.grupo].eps.push(e);
+  });
+  us.forEach(u => u.eps.sort((a, b) => VERSIONES.indexOf(a.version) - VERSIONES.indexOf(b.version)));
+  return us;
+}
+const unidadDe = e => unidades().find(u => u.eps.some(x => x.id === e.id));
+// la version que se muestra de una emision: la elegida para esa emision, si no la que venia sonando, si no la ultima elegida
+function elegido(u, prefer) {
+  if (u.eps.length === 1) return u.eps[0];
+  for (const v of [localStorage['version:' + u.grupo], prefer, localStorage.version_pref, '10m']) {
+    const e = v && u.eps.find(x => x.version === v);
+    if (e) return e;
+  }
+  return u.eps[0];
+}
+function elegirVersion(u, v) { localStorage['version:' + u.grupo] = v; localStorage.version_pref = v; }
+
+// manito arriba / abajo: `voto:<id>` en localStorage y un comentario `podcast-voto <id> arriba|abajo|nada` en el
+// issue 3 de agente-buzon (no el 1: el daemon no lo lee como chat). sin token o sin red queda en `votos_pend`
+const ISSUE_VOTOS = 3;
+const voto = e => localStorage['voto:' + e.id] || '';
+const MANO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21h4V9H2v12zm20-11c0-1.1-.9-2-2-2h-6.3l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 2 6.59 8.59C6.22 8.95 6 9.45 6 10v9c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>';
+function botonesVoto(e) {
+  const d = document.createElement('span'); d.className = 'votos';
+  ['arriba', 'abajo'].forEach(v => {
+    const b = document.createElement('button'); b.className = 'voto ' + v + (voto(e) === v ? ' on' : '');
+    b.innerHTML = MANO; b.title = v === 'arriba' ? 'me gusta' : 'no me gusta'; b.setAttribute('aria-label', b.title);
+    b.onclick = ev => { ev.stopPropagation(); votar(e, v); };
+    d.appendChild(b);
+  });
+  return d;
+}
+const votosPend = () => { try { return JSON.parse(localStorage.votos_pend || '{}'); } catch (_) { return {}; } };
+function votar(e, v) {
+  const nuevo = voto(e) === v ? 'nada' : v;
+  if (nuevo === 'nada') localStorage.removeItem('voto:' + e.id); else localStorage['voto:' + e.id] = nuevo;
+  const p = votosPend(); p[e.id] = nuevo; localStorage.votos_pend = JSON.stringify(p);
+  if (datos && !$('#lista').classList.contains('hidden')) pintarLista();
+  if (ep) pintarExtra();
+  return enviarVotos();
+}
+let votando = false;
+async function enviarVotos() {
+  if (votando || !localStorage.agente_token) return;
+  votando = true;
+  let fallo = false;
+  try {
+    for (const [id, v] of Object.entries(votosPend())) {
+      await gh('POST', `/issues/${ISSUE_VOTOS}/comments`, { body: `podcast-voto ${id} ${v}\n${marcaDesde()}` });
+      const p = votosPend(); if (p[id] === v) { delete p[id]; localStorage.votos_pend = JSON.stringify(p); }
+    }
+  } catch (_) { fallo = true; } finally { votando = false; }
+  // un voto tocado mientras salian los otros sale en la vuelta siguiente
+  if (!fallo && Object.keys(votosPend()).length) return enviarVotos();
+}
+
+// pasado el 50% de un episodio y con uno mas nuevo publicado, el viejo queda escuchado. se apaga desde la lista
+// (`auto50=no`) y nunca pisa un desmarcar a mano ni el que esta sonando
+const MITAD = 0.5;
+const regla50 = () => localStorage.auto50 !== 'no';
+function aplicarRegla50() {
+  if (!regla50() || !datos) return 0;
+  const eps = datos.episodios || [];
+  const ultimo = eps.reduce((m, e) => ((e.ts || '') > m ? e.ts : m), '');
+  let n = 0;
+  eps.forEach(e => {
+    if (visto(e) || localStorage['desmarcado:' + e.id] === '1' || !e.duracion) return;
+    if (ep && ep.id === e.id && !audio.paused) return;
+    if ((+localStorage['pos:' + e.id] || 0) >= e.duracion * MITAD && (e.ts || '') < ultimo) { localStorage['visto:' + e.id] = '1'; n++; }
+  });
+  return n;
+}
+
+// el reproductor: selector de version de la emision y manitos (en el player se ven siempre)
+function pintarExtra() {
+  if (!ep) return;
+  const u = unidadDe(ep), pv = $('#pvers');
+  pv.innerHTML = '';
+  if (u && u.eps.length > 1) u.eps.forEach(x => {
+    const b = document.createElement('button'); b.textContent = ETQ[x.version] || x.version; b.className = x.id === ep.id ? 'on' : '';
+    b.onclick = () => { elegirVersion(u, x.version); if (x.id !== ep.id) abrir(x); else pintarExtra(); };
+    pv.appendChild(b);
+  });
+  $('#pvotos').replaceChildren(botonesVoto(ep));
+}
+
+// episodios.json de nuevo, sin tocar lo que suena: asi el siguiente ya esta cuando termina el actual
+async function refrescarDatos() {
+  try {
+    const r = await fetch('episodios.json?t=' + Date.now(), { cache: 'no-store' });
+    const n = await r.json();
+    if (!n || !n.episodios) return;
+    datos = n; aplicarRegla50();
+    if (!$('#lista').classList.contains('hidden')) pintarLista();
+    if (ep) { pintarCaps(); pintarExtra(); }
+  } catch (_) {}
 }
 function pintarMarca() {
   if (!ep) return;
@@ -169,10 +295,10 @@ function cuando(e) {
 function cabecera(e) {
   $('#ph').textContent = cuando(e);
   $('#pt').textContent = e.titulo;
-  $('#pf').textContent = `${min(e.duracion)} · ${e.palabras || '?'} palabras`;
+  $('#pf').textContent = `${e.version ? (ETQ[e.version] || e.version) + ' · ' : ''}${min(e.duracion)} · ${e.palabras || '?'} palabras`;
   document.title = `${e.titulo} · ${cuando(e)}`;
   $('#guion').innerHTML = e.guion ? `guión: <a href="guiones/${e.guion}">${e.guion}</a>` : '';
-  pintarBaja(); pintarMarca();
+  pintarBaja(); pintarMarca(); pintarExtra();
 }
 
 async function cargar() {
@@ -180,8 +306,9 @@ async function cargar() {
   datos = await r.json();
   const eps = datos.episodios || [];
   revisarBajados(eps);
-  $('#ver').textContent = eps.length === 1 ? cuando(eps[0]) : eps.length + ' episodios';
+  aplicarRegla50();
   const unico = eps.length === 1;
+  $('#ver').textContent = unico ? cuando(eps[0]) : eps.length + ' episodios';
   $('#volver').classList.toggle('hidden', unico);
   if (!eps.length) { $('#lista').textContent = 'todavia no hay episodio'; return; }
   if (unico) { abrir(eps[0]); return; }
@@ -195,9 +322,14 @@ async function cargar() {
 // ni reproduce nada
 function pintarLista() {
   const l = $('#lista'); l.innerHTML = '';
-  [...datos.episodios].reverse().forEach(e => {
-    const v = visto(e);
-    const f = document.createElement('div'); f.className = 'fila';
+  const aj = document.createElement('div'); aj.id = 'ajustes';
+  aj.innerHTML = '<span>pasado el 50% y con uno nuevo, queda escuchado</span>';
+  const t50 = document.createElement('button'); t50.id = 'auto50'; t50.className = regla50() ? 'on' : ''; t50.textContent = regla50() ? 'sí' : 'no';
+  t50.onclick = () => { localStorage.auto50 = regla50() ? 'no' : 'si'; aplicarRegla50(); pintarLista(); };
+  aj.appendChild(t50); l.appendChild(aj);
+  unidades().reverse().forEach(u => {
+    const e = elegido(u), v = visto(e), grupo = u.eps.length > 1;
+    const f = document.createElement('div'); f.className = 'fila' + (grupo ? ' grupo' : '');
     const b = document.createElement('button'); b.className = 'ep' + (v ? ' visto' : '');
     const pos = +localStorage['pos:' + e.id] || 0;
     b.innerHTML = `<div class="fecha">${cuando(e)}</div><div class="titulo">${e.titulo}</div>
@@ -206,8 +338,20 @@ function pintarLista() {
     b.onclick = () => abrir(e);
     const m = document.createElement('button'); m.className = 'marca' + (v ? ' on' : '');
     m.textContent = v ? 'desmarcar' : 'marcar escuchado';
-    m.onclick = ev => { ev.stopPropagation(); marcarVisto(e, !visto(e)); };
+    m.onclick = ev => { ev.stopPropagation(); marcarVisto(e, !visto(e), true); };
     f.append(b, m);
+    // selector de version y, sobre todo en la larga, las manitos
+    if (grupo || e.version === '90m' || voto(e)) {
+      const vs = document.createElement('div'); vs.className = 'vers';
+      if (grupo) u.eps.forEach(x => {
+        const c = document.createElement('button'); c.className = 'ver' + (x.id === e.id ? ' on' : '') + (visto(x) ? ' visto' : '');
+        c.textContent = ETQ[x.version] || x.version; c.dataset.id = x.id;
+        c.onclick = () => { elegirVersion(u, x.version); pintarLista(); };
+        vs.appendChild(c);
+      });
+      if (e.version === '90m' || voto(e)) vs.appendChild(botonesVoto(e));
+      f.appendChild(vs);
+    }
     l.appendChild(f);
   });
 }
@@ -260,11 +404,15 @@ function poner(t, play) {
   capMeta = null; metadata(); pintarCaps(); estado();
 }
 
-// el episodio siguiente de la lista que no este escuchado (el json va de mas viejo a mas nuevo)
+// el episodio siguiente que no este escuchado (el json va de mas viejo a mas nuevo). una emision cuenta una vez:
+// si alguna de sus versiones esta escuchada se salta entera, y si no, suena la version elegida o la del largo
+// que venia sonando
 function siguienteEp() {
-  const eps = (datos || {}).episodios || [];
-  const i = eps.findIndex(e => e.id === (ep || {}).id);
-  return i >= 0 ? eps.slice(i + 1).find(e => !visto(e)) || null : null;
+  const us = unidades();
+  const i = us.findIndex(u => u.eps.some(e => e.id === (ep || {}).id));
+  if (i < 0) return null;
+  const u = us.slice(i + 1).find(x => !x.eps.some(visto));
+  return u ? elegido(u, ep.version) : null;
 }
 
 // pasa al episodio siguiente en el MISMO elemento: cambia el src y da play sin soltar la sesion
@@ -374,7 +522,7 @@ function estado() {
 }
 
 $('#volver').onclick = () => { audio.pause(); location.hash = ''; $('#player').classList.add('hidden'); $('#lista').classList.remove('hidden'); cargar(); };
-$('#marcar').onclick = () => marcarVisto(ep, !visto(ep));
+$('#marcar').onclick = () => marcarVisto(ep, !visto(ep), true);
 $('#seguir').onclick =() => { seguir = !seguir; localStorage.seguir = seguir ? 'si' : 'no'; pintarCaps(); };
 $('#play').onclick = () => { audio.paused ? reanudar() : audio.pause(); };
 $('#atras').onclick = () => saltar(-10);
@@ -396,6 +544,8 @@ audio.ontimeupdate = () => {
   if (Math.abs(t - ult) > 2) { ult = t; if (ep) localStorage['pos:' + ep.id] = t; pintarCaps(); estado(); }
   metadata();
   if (ep && d && isFinite(d) && t >= d * HECHO) marcarVisto(ep, true);
+  // al minuto y medio del final se relee episodios.json: si salio una emision nueva, engancha con ella
+  if (ep && d && isFinite(d) && d - t < 90 && refrescado !== ep.id) { refrescado = ep.id; refrescarDatos(); }
   // engancha el siguiente mientras todavia suena: el elemento nunca llega a `ended` ni se para
   if (seguir && !audio.paused && d && isFinite(d) && d - t < ANTES_DEL_FIN) pasarASiguiente();
 };
@@ -406,7 +556,7 @@ audio.onended = () => {
 };
 audio.ondurationchange = () => { $('#t1').textContent = '-' + fmt(audio.duration); estado(); };
 // volver a la app (o que safari la descongele) re-registra la sesion por si ios la solto
-document.addEventListener('visibilitychange', () => { if (!document.hidden) { acciones(); capMeta = null; metadata(); estado(); } });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { acciones(); capMeta = null; metadata(); estado(); if (datos) { refrescarDatos(); enviarVotos(); } } });
 addEventListener('pageshow', () => { acciones(); capMeta = null; metadata(); estado(); });
 $('#vel').textContent = (+localStorage.vel || 1) + 'x';
 let ult = 0, arrastrando = false;
@@ -668,6 +818,7 @@ if (new URLSearchParams(location.search).get('v') === 'chat') vista('chat');
 
 acciones();
 cargar().catch(e => { $('#lista').textContent = 'no se pudo cargar episodios.json: ' + e; });
+enviarVotos();
 </script>
 </body>
 </html>
