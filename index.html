@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.10">
+<meta name="podcast-version" content="1.11">
 <meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
@@ -75,6 +75,8 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 #baja { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; color:var(--dim); font-size:14px; margin: 0 0 14px; }
 #baja b { color: var(--acc2); font-weight: 500; }
 .ep .bajado { color: var(--acc); }
+.ep.sinaudio { opacity: .42; }
+.ep .borrado { color: var(--dim, #888); }
 #chatinfo, #tokbox { color: var(--dim); font-size: 13px; margin: 6px 0; }
 #tokbox input { width:100%; font: inherit; font-size:16px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:10px; padding:8px; margin: 6px 0; }
 .cm { padding: 8px 0; border-bottom:1px solid var(--line); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; }
@@ -353,14 +355,14 @@ function pintarLista() {
   t50.onclick = () => { localStorage.auto50 = regla50() ? 'no' : 'si'; aplicarRegla50(); pintarLista(); };
   aj.appendChild(t50); l.appendChild(aj);
   unidades().reverse().forEach(u => {
-    const e = elegido(u), v = visto(e), grupo = u.eps.length > 1;
+    const e = elegido(u), v = visto(e), grupo = u.eps.length > 1, con = hayAudio(e);
     const f = document.createElement('div'); f.className = 'fila' + (grupo ? ' grupo' : '');
-    const b = document.createElement('button'); b.className = 'ep' + (v ? ' visto' : '');
+    const b = document.createElement('button'); b.className = 'ep' + (v ? ' visto' : '') + (con ? '' : ' sinaudio');
     const pos = +localStorage['pos:' + e.id] || 0;
     b.innerHTML = `<div class="fecha">${cuando(e)}</div><div class="titulo">${e.titulo}</div>
-      <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${v ? ' · <span class="escuchado">escuchado</span>' : pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}${bajados[archivo(e)] ? ' · <span class="bajado">bajado</span>' : ''}</div>
+      <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${v ? ' · <span class="escuchado">escuchado</span>' : pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}${bajados[archivo(e)] ? ' · <span class="bajado">bajado</span>' : ''}${con ? '' : ' · <span class="borrado">audio borrado, queda el guion</span>'}</div>
       <div class="temas">${(e.temas || []).map(t => `<span class="tema">${t}</span>`).join('')}</div>`;
-    b.onclick = () => abrir(e);
+    b.onclick = () => { if (con) abrir(e); };
     const m = document.createElement('button'); m.className = 'marca' + (v ? ' on' : '');
     m.textContent = v ? 'desmarcar' : 'marcar escuchado';
     m.onclick = ev => { ev.stopPropagation(); marcarVisto(e, !visto(e), true); };
@@ -381,6 +383,11 @@ function pintarLista() {
   });
 }
 
+// retencion (facundo, 2026-09-13): el server borra el mp3 de los episodios de mas de 7 dias que no
+// tienen manito arriba, y deja la metadata. el episodio sigue en la lista pero no se puede reproducir,
+// salvo que este bajado en este celu (esa copia vive en el cache, no en el server)
+function hayAudio(e) { return !e.audio_borrado || !!bajados[archivo(e)]; }
+
 // lo que suena: la copia bajada (`offline/...`, la atiende sw.js) si existe y el sw ya controla la pagina
 function fuente(e) {
   const a = archivo(e);
@@ -397,6 +404,8 @@ function archivo(e) {
 }
 
 function abrir(e, play) {
+  // sin audio (borrado por retencion y no bajado aca) no hay player: queda en la lista con su guion
+  if (!hayAudio(e)) { location.hash = ''; $('#player').classList.add('hidden'); $('#lista').classList.remove('hidden'); return; }
   // abrir el que ya esta sonando no lo corta ni lo rebobina
   const sonando = audio.getAttribute('src');
   if (ep && ep.id === e.id && (sonando === archivo(e) || sonando === OFF + archivo(e))) { mostrar(e); return; }
@@ -436,8 +445,14 @@ function siguienteEp() {
   const us = unidades();
   const i = us.findIndex(u => u.eps.some(e => e.id === (ep || {}).id));
   if (i < 0) return null;
-  const u = us.slice(i + 1).find(x => !x.eps.some(visto));
-  return u ? elegido(u, ep.version) : null;
+  for (const x of us.slice(i + 1)) {
+    if (x.eps.some(visto)) continue;
+    const s = elegido(x, ep.version);
+    if (hayAudio(s)) return s;                       // sin audio (borrado por retencion) no se enhebra
+    const otro = x.eps.find(hayAudio);
+    if (otro) return otro;
+  }
+  return null;
 }
 
 // pasa al episodio siguiente en el MISMO elemento: cambia el src y da play sin soltar la sesion
@@ -682,7 +697,7 @@ async function revisarBajados(eps) {
 
 function autoBajar(eps) {
   if (localStorage.autobajar !== 'si' || !wifiSeguro()) return;
-  (eps || (datos || {}).episodios || []).forEach(e => { const a = archivo(e); if (a && !bajados[a]) bajar(e); });
+  (eps || (datos || {}).episodios || []).forEach(e => { const a = archivo(e); if (a && !bajados[a] && !e.audio_borrado) bajar(e); });
 }
 
 function pintarBaja() {
