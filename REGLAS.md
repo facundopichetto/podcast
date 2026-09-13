@@ -185,3 +185,66 @@ al final de `nuevo`). detalle y lo que falta probar en el celu, en `README.md`.
 el de los episodios viejos con la hora de su mp3 entero. la web (`podcast-version 1.4`) lo muestra
 corto, `sáb 12/9 21:35`, en la fila de la lista, arriba del titulo del reproductor (`#ph`), en el
 titulo de la pestaña y en el lock screen. lo chequea `python3 -m recetas.prueba_podcast_web [--vivo]`.
+
+## el podcast automatico: 3 emisiones por dia, tres versiones cada una (facundo, 2026-09-13)
+
+"podcast automatico. 3 por dia. a las 8am resumen del dia anterior. cada episodio del dia tiene version
+10m, version 30m, version 1.5h". convive con los pedidos sueltos ("dame un podcast express"), que siguen
+por `podcast_proximo emitir` / `podcast nuevo` como siempre.
+
+| emision | hora (default) | cubre |
+|---|---|---|
+| `manana` | 08:00 | el dia anterior entero |
+| `mediodia` | 13:30 | lo que va del dia, desde las 00:00 |
+| `noche` | 21:30 | desde el mediodia |
+
+- **las horas se cambian en `daemon.json` -> `podcast_auto.emisiones`** (tambien `activo`, `versiones`,
+  `modelo`, `externas`, `larga_respeta_presupuesto`). la primera del orden siempre es la del dia anterior.
+- **versiones**: `10m` (~1800 palabras), `30m` (~5400) y `90m`, la de 1.5 h (~16000). daniela lee ~185
+  palabras por minuto. **las de 10 y 30 min hablan SOLO de lo que hicimos**: charla de cada pestaña
+  (`logs/chat-<tema>.jsonl`), ordenes cerradas en la franja, `log.md` sin ruido, y el estado de cada tema,
+  la cola y los avisos del guion vivo `PROXIMO.md`. **la de 1.5 h suma lo de afuera** despues de lo hecho:
+  hoy noticias; para sumar una fuente, una funcion en `FUENTES_EXTERNAS` de `recetas/podcast_auto.py` y su
+  nombre en `podcast_auto.externas`.
+- **modelo solo en la redaccion**: un pase por version (opus); la de 1.5 h en partes de ~3200 palabras
+  (la primera presenta, la ultima cierra). el material se junta sin modelo:
+  `python3 -m recetas.podcast_auto material manana --version 10m` / `prompt ...` (cero tokens).
+- **ids y web**: `ep-2026-09-13-manana-10m`, `-30m`, `-90m`, con `grupo` (`2026-09-13-manana`), `version`
+  y `emision` en `episodios.json`, `ts` = hora de la emision. siempre `--conservar`: nunca pisan nada.
+  la web muestra **una fila por emision** con selector `10 min / 30 min / 1.5 h` (se recuerda por emision y
+  como preferida); el player tambien tiene el selector.
+- **quien lo corre**: el script `podcast_auto` de `SCRIPTS` (cada 10 min, cero tokens) ve que franja esta
+  abierta y lanza `python3 -m recetas.podcast_auto correr <emision>` en **su propia unidad de `systemd-run
+  --user`** (no muere si el daemon se reinicia; salida en `logs/podcast-auto.log`). estado por version en
+  `~/.claudio/podcast/auto.json`. si el server estuvo apagado toda la franja, esa emision no se recupera.
+- **guard**: bloqueante hasta verse en github pages (`nuevo` sale 1 si no). el guion redactado queda en
+  `guiones/` y un reintento lo reusa sin gastar modelo. render o push que fallan: se limpian los mp3
+  parciales y se reintenta una vez en el momento; si vuelve a fallar, **un aviso al celu** y la version
+  queda `fallo` (el tick la reintenta una vez mas a los 30 min, despues no). nada queda a medias en la web.
+- **presupuesto**: la de 1.5 h es pesada y espera mientras `presupuesto.pesadas` del daemon sea false (se
+  reintenta sola dentro de su franja). las cortas salen igual.
+- **aviso al celu solo con la primera emision automatica** (y con las fallas).
+
+### manitos (votos)
+
+- manito arriba / abajo por episodio: en la lista se ven en la version de 1.5 h (o si ya votaste), en el
+  player siempre. tocar la misma de nuevo saca el voto. se guarda en `voto:<id>` (localStorage).
+- sale como comentario `podcast-voto <id> arriba|abajo|nada` al **issue 3 de `agente-buzon`** ("podcast
+  votos"), con el mismo token del chat low data. **no va al issue 1**: el daemon lee ese como chat y lo
+  contestaria. sin token o sin red queda en `votos_pend` y sale al volver a la app.
+- el script `podcast_votos` (cada 10 min, etag: un 304 no gasta) lo baja a `~/.claudio/podcast/votos.json`,
+  y el pase de redaccion recibe el resumen ("le gustaron / no le gustaron").
+
+### escuchado encadenado
+
+- el siguiente episodio sale en la **misma version** que venia sonando (salvo que hayas elegido otra para
+  esa emision), y **una emision con cualquier version escuchada se salta entera**.
+- a 90 s del final se relee `episodios.json`: si salio una emision nueva mientras escuchabas, engancha con ella.
+- **regla del 50%**: si pasaste la mitad de un episodio y hay uno publicado despues, el viejo queda
+  escuchado solo. no toca el que esta sonando, **no pisa un desmarcar a mano** (`desmarcado:<id>`, que se
+  borra al marcar a mano) y se apaga con el boton de arriba de la lista (`auto50=no`).
+
+probar: `python3 -m recetas.prueba_podcast_proximo` (franjas, material, pases, guard, tick, votos, cero
+tokens) y `python3 -m recetas.prueba_podcast_web [--vivo]` (`automatico`: emisiones de mentira inyectadas).
+
+pendiente, no implementado: **el semanal**.
