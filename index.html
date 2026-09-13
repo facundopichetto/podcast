@@ -8,11 +8,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.5">
+<meta name="podcast-version" content="1.6">
+<meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
 <style>
 :root { color-scheme: dark; --bg:#000; --fg:#e8e8e8; --dim:#8a8a8a; --acc:#39ff88; --acc2:#ff5fd2; --line:#222; --card:#0d0d0d; }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -56,10 +58,27 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 #modo button { font: inherit; font-size: 14px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor:pointer; }
 #modo button.on { border-color: var(--acc); color: var(--acc); }
 #guion { color: var(--dim); font-size: 13px; margin-top: 20px; }
+/* pwa: vistas, descargas y chat low data (texto pelado, sin imagenes) */
+#nav { display:flex; gap:8px; margin: -6px 0 16px; }
+#nav button, #baja button, #chat button { font: inherit; font-size: 14px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:999px; padding:6px 14px; cursor:pointer; }
+#nav button { color: var(--dim); }
+#nav button.on, #baja button.on { color:var(--acc); border-color:var(--acc); }
+#baja { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; color:var(--dim); font-size:14px; margin: 0 0 14px; }
+#baja b { color: var(--acc2); font-weight: 500; }
+.ep .bajado { color: var(--acc); }
+#chatinfo, #tokbox { color: var(--dim); font-size: 13px; margin: 6px 0; }
+#tokbox input { width:100%; font: inherit; font-size:16px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:10px; padding:8px; margin: 6px 0; }
+.cm { padding: 8px 0; border-bottom:1px solid var(--line); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; }
+.cm .q { color: var(--dim); font-size: 12px; }
+.cm.yo { color: var(--acc2); }
+#chatform { position: sticky; bottom: 0; background: var(--bg); padding: 10px 0 6px; display:grid; grid-template-columns: 1fr auto; gap:8px; }
+#chatform select { grid-column: 1 / -1; }
+#chattxt { font: inherit; font-size: 16px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius: 12px; padding: 10px; min-height: 46px; resize: vertical; }
 </style>
 </head>
 <body>
 <h1 id="cab">podcast <small id="ver"></small></h1>
+<nav id="nav"><button id="irpod" class="on">podcast</button><button id="irchat">chat</button></nav>
 
 <section id="lista"></section>
 
@@ -68,6 +87,7 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
   <div id="ph"></div>
   <div id="pt"></div>
   <div id="pf"></div>
+  <div id="baja"><span id="bajatxt"></span><span><button id="bajar">bajar</button> <button id="autobajar">auto con wifi</button></span></div>
   <audio id="audio" preload="auto" playsinline></audio>
   <input id="barra" type="range" min="0" max="100" step="0.1" value="0">
   <div id="tiempos"><span id="t0">0:00</span><button id="vel">1x</button><span id="t1">0:00</span></div>
@@ -80,6 +100,17 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
   <div id="modo"><span id="modotxt">episodio entero</span><button id="seguir" class="on">al terminar, sigue</button></div>
   <div id="caps"></div>
   <div id="guion"></div>
+</section>
+
+<section id="chat" class="hidden">
+  <div id="tokbox" class="hidden">
+    <div id="tokmsg">el chat usa el mismo token que claudio board: si ya lo pusiste ahí entra solo. si no, pegalo:</div>
+    <input id="tok" type="password" autocomplete="off" placeholder="token de github">
+    <button id="tokok">guardar</button>
+  </div>
+  <div id="chatinfo"></div>
+  <div id="chatmsgs"></div>
+  <form id="chatform"><select id="chattema"></select><textarea id="chattxt" rows="2" placeholder="escribí"></textarea><button id="chatmandar" type="submit">mandar</button></form>
 </section>
 
 <script>
@@ -116,12 +147,14 @@ function cabecera(e) {
   $('#pf').textContent = `${min(e.duracion)} · ${e.palabras || '?'} palabras`;
   document.title = `${e.titulo} · ${cuando(e)}`;
   $('#guion').innerHTML = e.guion ? `guión: <a href="guiones/${e.guion}">${e.guion}</a>` : '';
+  pintarBaja();
 }
 
 async function cargar() {
   const r = await fetch('episodios.json?t=' + Date.now(), { cache: 'no-store' });
   datos = await r.json();
   const eps = datos.episodios || [];
+  revisarBajados(eps);
   $('#ver').textContent = eps.length === 1 ? cuando(eps[0]) : eps.length + ' episodios';
   const unico = eps.length === 1;
   $('#volver').classList.toggle('hidden', unico);
@@ -132,7 +165,7 @@ async function cargar() {
     const b = document.createElement('button'); b.className = 'ep';
     const pos = +localStorage['pos:' + e.id] || 0;
     b.innerHTML = `<div class="fecha">${cuando(e)}</div><div class="titulo">${e.titulo}</div>
-      <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}</div>
+      <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}${bajados[archivo(e)] ? ' · <span class="bajado">bajado</span>' : ''}</div>
       <div class="temas">${(e.temas || []).map(t => `<span class="tema">${t}</span>`).join('')}</div>`;
     b.onclick = () => abrir(e);
     l.appendChild(b);
@@ -142,8 +175,14 @@ async function cargar() {
   if (e) abrir(e);
 }
 
-// el mp3 del episodio entero (los capitulos son marcas de tiempo, no archivos aparte)
+// lo que suena: la copia bajada (`offline/...`, la atiende sw.js) si existe y el sw ya controla la pagina
 function fuente(e) {
+  const a = archivo(e);
+  return a && bajados[a] && swActivo() ? OFF + a : a;
+}
+
+// el mp3 del episodio entero (los capitulos son marcas de tiempo, no archivos aparte)
+function archivo(e) {
   const d = e.voces[VOZ] || e.voces[Object.keys(e.voces)[0]];
   if (d.archivo) return d.archivo;
   // no deberia pasar: `recetas.podcast enteros` lo genera concatenando los bloques
@@ -153,7 +192,8 @@ function fuente(e) {
 
 function abrir(e, play) {
   // abrir el que ya esta sonando no lo corta ni lo rebobina
-  if (ep && ep.id === e.id && audio.getAttribute('src') === fuente(e)) { mostrar(e); return; }
+  const sonando = audio.getAttribute('src');
+  if (ep && ep.id === e.id && (sonando === archivo(e) || sonando === OFF + archivo(e))) { mostrar(e); return; }
   ep = e;
   mostrar(e);
   poner(+localStorage['pos:' + e.id] || 0, !!play);
@@ -161,6 +201,7 @@ function abrir(e, play) {
 }
 
 function mostrar(e) {
+  if (vistaAct === 'chat') { volverA = 'player'; $('#lista').classList.add('hidden'); cabecera(e); return; }
   location.hash = e.id;
   $('#lista').classList.add('hidden'); $('#player').classList.remove('hidden');
   cabecera(e);
@@ -330,7 +371,260 @@ $('#vel').textContent = (+localStorage.vel || 1) + 'x';
 let ult = 0, arrastrando = false;
 $('#barra').oninput = () => { arrastrando = true; $('#t0').textContent = fmt($('#barra').value / 100 * (audio.duration || 0)); };
 $('#barra').onchange = () => { audio.currentTime = $('#barra').value / 100 * (audio.duration || 0); arrastrando = false; estado(); metadata(); };
-document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') $('#atras').click(); if (e.key === 'ArrowRight') $('#adelante').click(); if (e.key === ' ') { e.preventDefault(); $('#play').click(); } });
+document.addEventListener('keydown', e => { if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return; if (e.key === 'ArrowLeft') $('#atras').click(); if (e.key === 'ArrowRight') $('#adelante').click(); if (e.key === ' ') { e.preventDefault(); $('#play').click(); } });
+// ---------- pwa (facundo, 2026-09-12): service worker y descargas para escuchar sin datos ----------
+// bajar = el mp3 entero al cache `podcast-audio` bajo `offline/<archivo>`; `bajados` (localStorage) dice
+// que hay y cuanto pesa, y se cruza con el cache al cargar porque ios lo puede desalojar.
+const OFF = 'offline/', CACHE_AUDIO = 'podcast-audio';
+const bajados = (() => { try { return JSON.parse(localStorage.bajados || '{}'); } catch (_) { return {}; } })();
+const bajando = {};   // archivo -> porcentaje
+const guardarBajados = () => { localStorage.bajados = JSON.stringify(bajados); };
+const swActivo = () => !!(navigator.serviceWorker && navigator.serviceWorker.controller);
+const mb = b => (b / 1048576).toFixed(1).replace('.', ',') + ' MB';
+const urlOff = a => new URL(OFF + a, location.href).href;
+const conexion = () => navigator.connection || null;
+// solo baja solo si el navegador dice que NO es celular (ios no lo dice: ahi nunca baja solo)
+const wifiSeguro = () => { const c = conexion(); return !!(c && c.type && c.type !== 'cellular' && !c.saveData); };
+
+async function tamano(a) {
+  if (+localStorage['tam:' + a]) return +localStorage['tam:' + a];
+  try {
+    const r = await fetch(a, { method: 'HEAD', cache: 'no-store' });
+    const n = +r.headers.get('content-length') || 0;
+    if (n) localStorage['tam:' + a] = n;
+    return n;
+  } catch (_) { return 0; }
+}
+
+async function bajar(e) {
+  const a = archivo(e);
+  if (!a || bajados[a] || a in bajando) return;
+  if (!('caches' in window)) { $('#bajatxt').textContent = 'este navegador no deja guardar audio'; return; }
+  bajando[a] = 0; pintarBaja();
+  try {
+    const r = await fetch(a, { cache: 'no-store' });
+    if (!r.ok) throw new Error('http ' + r.status);
+    const total = +r.headers.get('content-length') || 0, partes = [];
+    if (r.body && r.body.getReader) {
+      const lector = r.body.getReader();
+      let n = 0;
+      for (;;) {
+        const { done, value } = await lector.read();
+        if (done) break;
+        partes.push(value); n += value.length;
+        const p = total ? Math.floor(n / total * 100) : 0;
+        if (p !== bajando[a]) { bajando[a] = p; pintarBaja(); }
+      }
+    } else partes.push(new Uint8Array(await r.arrayBuffer()));
+    const blob = new Blob(partes, { type: 'audio/mpeg' });
+    const c = await caches.open(CACHE_AUDIO);
+    await c.put(urlOff(a), new Response(blob, { headers: { 'content-type': 'audio/mpeg', 'content-length': String(blob.size) } }));
+    bajados[a] = blob.size; guardarBajados();
+    localStorage['tam:' + a] = blob.size;
+    // que el navegador no lo borre solo cuando le falta lugar
+    if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  } catch (err) {
+    delete bajando[a]; pintarBaja();
+    $('#bajatxt').textContent = 'no se pudo bajar: ' + err.message;
+    return;
+  }
+  delete bajando[a]; pintarBaja();
+}
+
+async function borrarBajada(a) {
+  try { const c = await caches.open(CACHE_AUDIO); await c.delete(urlOff(a)); } catch (_) {}
+  delete bajados[a]; guardarBajados();
+  // si sonaba la copia local, sigue desde la red en el mismo punto
+  if (ep && audio.getAttribute('src') === OFF + a) poner(audio.currentTime, !audio.paused);
+  pintarBaja();
+}
+
+// al cargar: fuera lo que ya no esta en episodios.json (episodio unico = el viejo se borra), fuera lo
+// que ios desalojo, fuera copias huerfanas del cache. despues, la descarga automatica si toca
+async function revisarBajados(eps) {
+  const vivos = new Set(eps.map(archivo));
+  let c = null;
+  try { c = await caches.open(CACHE_AUDIO); } catch (_) {}
+  for (const a of Object.keys(bajados)) {
+    if (!vivos.has(a)) await borrarBajada(a);
+    else if (c && !(await c.match(urlOff(a)))) { delete bajados[a]; guardarBajados(); }
+  }
+  if (c) for (const req of await c.keys()) {
+    const a = decodeURIComponent(req.url.split('/' + OFF)[1] || '');
+    if (a && !bajados[a] && !(a in bajando)) await c.delete(req);
+  }
+  pintarBaja();
+  autoBajar(eps);
+}
+
+function autoBajar(eps) {
+  if (localStorage.autobajar !== 'si' || !wifiSeguro()) return;
+  (eps || (datos || {}).episodios || []).forEach(e => { const a = archivo(e); if (a && !bajados[a]) bajar(e); });
+}
+
+function pintarBaja() {
+  if (!ep) return;
+  const a = archivo(ep), b = $('#bajar'), t = $('#bajatxt');
+  if (a in bajando) { t.innerHTML = `bajando <b>${bajando[a]}%</b>`; b.textContent = 'bajando'; b.disabled = true; }
+  else if (bajados[a]) { t.innerHTML = `<b>bajado</b> · ${mb(bajados[a])} · suena sin datos`; b.textContent = 'borrar descarga'; b.disabled = false; }
+  else {
+    b.textContent = 'bajar'; b.disabled = false;
+    const n = +localStorage['tam:' + a];
+    t.textContent = 'sin bajar' + (n ? ' · ' + mb(n) : '');
+    if (!n) tamano(a).then(x => { if (x && ep && archivo(ep) === a && !bajados[a] && !(a in bajando)) t.textContent = 'sin bajar · ' + mb(x); });
+  }
+  const on = localStorage.autobajar === 'si', au = $('#autobajar');
+  au.className = on ? 'on' : '';
+  au.textContent = !on ? 'auto con wifi: no' : conexion() ? 'auto con wifi: sí' : 'auto: sí (este navegador no dice si hay wifi)';
+}
+
+$('#bajar').onclick = () => { const a = archivo(ep); bajados[a] ? borrarBajada(a) : bajar(ep); };
+$('#autobajar').onclick = () => { localStorage.autobajar = localStorage.autobajar === 'si' ? 'no' : 'si'; pintarBaja(); autoBajar(); };
+if (conexion() && conexion().addEventListener) conexion().addEventListener('change', () => autoBajar());
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(err => console.warn('sw no registro: ' + err));
+  navigator.serviceWorker.addEventListener('controllerchange', () => pintarBaja());
+}
+
+// ---------- vistas: podcast | chat ----------
+let vistaAct = 'pod', volverA = 'lista';
+function vista(v) {
+  if (v === vistaAct) return;
+  if (v === 'chat') volverA = $('#player').classList.contains('hidden') ? 'lista' : 'player';
+  vistaAct = v;
+  $('#irpod').classList.toggle('on', v === 'pod'); $('#irchat').classList.toggle('on', v === 'chat');
+  $('#chat').classList.toggle('hidden', v !== 'chat');
+  if (v === 'chat') { $('#lista').classList.add('hidden'); $('#player').classList.add('hidden'); chatAbrir(); }
+  else { chatCerrar(); $(volverA === 'player' && ep ? '#player' : '#lista').classList.remove('hidden'); }
+  window.scrollTo(0, v === 'chat' ? document.body.scrollHeight : 0);
+}
+$('#irpod').onclick = () => vista('pod');
+$('#irchat').onclick = () => vista('chat');
+
+// ---------- chat low data (facundo, 2026-09-12) ----------
+// texto pelado contra el mismo buzon que claudio board (issue 1 de `agente-buzon`): mismo origen, asi que
+// usa el mismo token (`localStorage.agente_token`). sin widgets, sin imagenes (`![..](..)` queda como
+// texto), polls con etag (un 304 no gasta) y solo mientras la vista esta abierta y la app a la vista.
+const BUZON = 'https://api.github.com/repos/facundopichetto/agente-buzon', MARCA = '<!--agente-->';
+const TEMAS_CHAT = ['', 'podcast', 'tools', 'server', 'awtomic', 'fuzzer', 'juegos', 'plata', 'personal', 'flabs'];
+let chatIso = null, chatEtag = null, chatTimer = null, chatRapidoHasta = 0, chatEnVuelo = false, chatMandando = false;
+const chatVistos = new Set();
+const hora = iso => { const d = iso ? new Date(iso) : new Date(); return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); };
+
+function marcaDesde() {
+  let d = localStorage.agente_dispositivo;
+  if (!d) { d = Math.random().toString(36).slice(2, 8); localStorage.agente_dispositivo = d; }
+  return `[desde: ${/iphone|ipad|android|mobile/i.test(navigator.userAgent) ? 'celu' : 'compu'} ${d} podcast]`;
+}
+
+async function gh(metodo, ruta, cuerpo, etag) {
+  const tok = localStorage.agente_token;
+  if (!tok) throw new Error('sin token');
+  const h = { authorization: 'Bearer ' + tok, accept: 'application/vnd.github+json' };
+  if (cuerpo) h['content-type'] = 'application/json';
+  if (etag) h['if-none-match'] = etag;
+  const r = await fetch(BUZON + ruta, { method: metodo, headers: h, body: cuerpo ? JSON.stringify(cuerpo) : undefined, cache: 'no-store' });
+  if (r.status === 304) return { status: 304 };
+  if (!r.ok) throw new Error(String(r.status));
+  return { status: r.status, etag: r.headers.get('etag'), json: await r.json() };
+}
+
+function pedirToken(msg) {
+  $('#tokbox').classList.remove('hidden');
+  if (msg) $('#tokmsg').textContent = msg;
+}
+
+function pintarChat(c) {
+  let b = String(c.body || ''), yo = true, tag = '', m;
+  if (b.startsWith(MARCA)) {
+    yo = false; b = b.slice(MARCA.length).replace(/^\n/, '');
+    if ((m = /^\[([\w\/-]+)\]\s*/.exec(b))) { tag = m[1]; b = b.slice(m[0].length); }
+  } else {
+    b = b.replace(/\s*\[desde:[^\]]*\]\s*$/i, '');
+    if ((m = /^\s*tema\s+([\w\/-]+)\s*:\s*/i.exec(b))) { tag = m[1]; b = b.slice(m[0].length); }
+  }
+  b = b.replace(/!\[([^\]]*)\]\([^)]*\)/g, (_, alt) => `[imagen${alt ? ' ' + alt : ''}]`);
+  const d = document.createElement('div'); d.className = 'cm' + (yo ? ' yo' : '');
+  const q = document.createElement('div'); q.className = 'q';
+  q.textContent = (yo ? 'vos' : 'claudio') + ' · ' + hora(c.created_at) + (tag ? ' · ' + tag : '');
+  const t = document.createElement('div'); t.textContent = b;
+  d.append(q, t);
+  const l = $('#chatmsgs'); l.appendChild(d);
+  while (l.children.length > 60) l.firstChild.remove();
+}
+
+async function chatPoll() {
+  if (chatEnVuelo || vistaAct !== 'chat' || document.hidden) return;
+  if (!localStorage.agente_token) { pedirToken(); $('#chatinfo').textContent = ''; return; }
+  chatEnVuelo = true;
+  try {
+    // la primera vez, los ultimos 20 de las ultimas 12 h; despues, solo lo nuevo
+    const ruta = chatIso
+      ? '/issues/comments?sort=created&direction=asc&per_page=30&since=' + chatIso
+      : '/issues/comments?sort=created&direction=desc&per_page=20&since=' + new Date(Date.now() - 12 * 3600e3).toISOString();
+    const r = await gh('GET', ruta, null, chatIso ? chatEtag : null);
+    if (r.status !== 304) {
+      chatEtag = r.etag;
+      const cs = (r.json || []).filter(c => /\/issues\/1$/.test(c.issue_url || '')).sort((a, b) => a.id - b.id);
+      let nuevos = 0;
+      cs.forEach(c => {
+        if (!chatIso || c.created_at > chatIso) chatIso = c.created_at;
+        if (chatVistos.has(c.id)) return;
+        chatVistos.add(c.id); pintarChat(c); nuevos++;
+      });
+      if (!chatIso) chatIso = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+      if (nuevos) { chatEtag = null; window.scrollTo(0, document.body.scrollHeight); }
+    }
+    $('#tokbox').classList.add('hidden');
+    $('#chatinfo').textContent = 'al día · ' + hora();
+  } catch (err) {
+    if (err.message === '401') pedirToken('github rechazó el token (401). pegá uno nuevo:');
+    else $('#chatinfo').textContent = 'sin conexión con el buzón (' + err.message + ') · ' + hora();
+  } finally { chatEnVuelo = false; }
+}
+
+function reprogramarChat() {
+  clearTimeout(chatTimer);
+  if (vistaAct !== 'chat') return;
+  // 5 s durante 3 min despues de mandar (la respuesta llega), si no 30 s
+  chatTimer = setTimeout(() => chatPoll().finally(reprogramarChat), Date.now() < chatRapidoHasta ? 5000 : 30000);
+}
+function chatAbrir() { chatPoll().finally(reprogramarChat); }
+function chatCerrar() { clearTimeout(chatTimer); }
+document.addEventListener('visibilitychange', () => { if (!document.hidden && vistaAct === 'chat') chatAbrir(); });
+
+async function chatMandar() {
+  const texto = $('#chattxt').value.trim();
+  if (!texto || chatMandando) return;
+  if (!localStorage.agente_token) { pedirToken(); return; }
+  const tema = $('#chattema').value;
+  localStorage.chattema = tema;
+  // general = sin prefijo (clasifica el daemon; ahi andan los comandos crudos como `status`)
+  const cuerpo = (tema && !/^\s*tema\s+[\w\/-]+\s*:/i.test(texto) ? 'tema ' + tema + ': ' : '') + texto + '\n' + marcaDesde();
+  chatMandando = true; $('#chatmandar').disabled = true; $('#chattxt').value = '';
+  try {
+    const r = await gh('POST', '/issues/1/comments', { body: cuerpo });
+    if (r.json && !chatVistos.has(r.json.id)) { chatVistos.add(r.json.id); pintarChat(r.json); }
+    window.scrollTo(0, document.body.scrollHeight);
+    chatRapidoHasta = Date.now() + 180e3; reprogramarChat();
+  } catch (err) {
+    $('#chattxt').value = texto;
+    if (err.message === '401') pedirToken('github rechazó el token (401). pegá uno nuevo:');
+    else $('#chatinfo').textContent = 'no salió (' + err.message + '), quedó en la caja';
+  } finally { chatMandando = false; $('#chatmandar').disabled = false; }
+}
+
+TEMAS_CHAT.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t ? 'tema ' + t : 'general (decide claudio)'; $('#chattema').appendChild(o); });
+$('#chattema').value = TEMAS_CHAT.includes(localStorage.chattema) ? localStorage.chattema : '';
+$('#chatform').onsubmit = ev => { ev.preventDefault(); chatMandar(); };
+$('#chattxt').onkeydown = ev => { if (ev.key === 'Enter' && (ev.metaKey || ev.ctrlKey)) { ev.preventDefault(); chatMandar(); } };
+$('#tokok').onclick = () => {
+  const t = $('#tok').value.trim(); if (!t) return;
+  localStorage.agente_token = t; $('#tok').value = '';
+  $('#tokbox').classList.add('hidden'); chatIso = null; chatAbrir();
+};
+if (new URLSearchParams(location.search).get('v') === 'chat') vista('chat');
+
 acciones();
 cargar().catch(e => { $('#lista').textContent = 'no se pudo cargar episodios.json: ' + e; });
 </script>
