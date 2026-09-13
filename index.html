@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.8">
+<meta name="podcast-version" content="1.9">
 <meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
@@ -161,6 +161,7 @@ function marcarVisto(e, si, aMano) {
   if (aMano) { if (si) localStorage.removeItem('desmarcado:' + e.id); else localStorage['desmarcado:' + e.id] = '1'; }
   if (visto(e) === si) return;
   if (si) localStorage['visto:' + e.id] = '1'; else localStorage.removeItem('visto:' + e.id);
+  encolarEscuchado(e, si); enviarVotos();
   if (datos && !$('#lista').classList.contains('hidden')) pintarLista();
   if (ep) { pintarMarca(); pintarCaps(); pintarExtra(); }
 }
@@ -216,6 +217,19 @@ function votar(e, v) {
   if (ep) pintarExtra();
   return enviarVotos();
 }
+// capitulos vivos (facundo, 2026-09-13): el server necesita saber que escuchaste para arrancar el borrador del
+// siguiente y congelar este. `podcast-escuchado <id> si|no` al mismo issue que los votos, solo de las emisiones
+// automaticas. `esc_env:<id>` recuerda lo ya mandado, asi lo marcado antes de esta version sale una vez sola
+const escPend = () => { try { return JSON.parse(localStorage.esc_pend || '{}'); } catch (_) { return {}; } };
+function encolarEscuchado(e, si) {
+  if (!e || !e.grupo) return;
+  const v = si ? 'si' : 'no';
+  if ((localStorage['esc_env:' + e.id] || 'no') === v && !(e.id in escPend())) return;
+  const p = escPend(); p[e.id] = v; localStorage.esc_pend = JSON.stringify(p);
+}
+function sincronizarEscuchados() {
+  ((datos || {}).episodios || []).forEach(e => { if (e.grupo && visto(e) && localStorage['esc_env:' + e.id] !== 'si') encolarEscuchado(e, true); });
+}
 let votando = false;
 async function enviarVotos() {
   if (votando || !localStorage.agente_token) return;
@@ -226,9 +240,14 @@ async function enviarVotos() {
       await gh('POST', `/issues/${ISSUE_VOTOS}/comments`, { body: `podcast-voto ${id} ${v}\n${marcaDesde()}` });
       const p = votosPend(); if (p[id] === v) { delete p[id]; localStorage.votos_pend = JSON.stringify(p); }
     }
+    for (const [id, v] of Object.entries(escPend())) {
+      await gh('POST', `/issues/${ISSUE_VOTOS}/comments`, { body: `podcast-escuchado ${id} ${v}\n${marcaDesde()}` });
+      localStorage['esc_env:' + id] = v;
+      const p = escPend(); if (p[id] === v) { delete p[id]; localStorage.esc_pend = JSON.stringify(p); }
+    }
   } catch (_) { fallo = true; } finally { votando = false; }
-  // un voto tocado mientras salian los otros sale en la vuelta siguiente
-  if (!fallo && Object.keys(votosPend()).length) return enviarVotos();
+  // un voto o escuchado tocado mientras salian los otros sale en la vuelta siguiente
+  if (!fallo && Object.keys(votosPend()).length + Object.keys(escPend()).length) return enviarVotos();
 }
 
 // pasado el 50% de un episodio y con uno mas nuevo publicado, el viejo queda escuchado. se apaga desde la lista
@@ -243,8 +262,9 @@ function aplicarRegla50() {
   eps.forEach(e => {
     if (visto(e) || localStorage['desmarcado:' + e.id] === '1' || !e.duracion) return;
     if (ep && ep.id === e.id && !audio.paused) return;
-    if ((+localStorage['pos:' + e.id] || 0) >= e.duracion * MITAD && (e.ts || '') < ultimo) { localStorage['visto:' + e.id] = '1'; n++; }
+    if ((+localStorage['pos:' + e.id] || 0) >= e.duracion * MITAD && (e.ts || '') < ultimo) { localStorage['visto:' + e.id] = '1'; encolarEscuchado(e, true); n++; }
   });
+  if (n) enviarVotos();
   return n;
 }
 
@@ -307,6 +327,7 @@ async function cargar() {
   const eps = datos.episodios || [];
   revisarBajados(eps);
   aplicarRegla50();
+  sincronizarEscuchados(); enviarVotos();
   const unico = eps.length === 1;
   $('#ver').textContent = unico ? cuando(eps[0]) : eps.length + ' episodios';
   $('#volver').classList.toggle('hidden', unico);

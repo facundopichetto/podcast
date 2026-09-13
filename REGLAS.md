@@ -59,6 +59,24 @@ titulos de bloque **no** se fonetizan, porque se ven en la web.
   cambio nada. hoy da **52 de 52 ok**. `python3 -m recetas.podcast fonetizar <guion>` muestra el
   guion ya reescrito, para leerlo antes de gastar el render.
 
+### siglas en castellano rioplatense (facundo, 2026-09-13)
+
+**nunca "u" ni "doble u" para v y w**: `VNC` es "ve ene ce", `PWA` "pe doble ve a", `SSH` "ese ese hache",
+`API` "a pe i", `CDP` "ce de pe", `TTS` "te te ese". lo que se dice como palabra (`wifi`, `web`, `jira`,
+`shopify`, `awtomic`, `fuzzer`) no se deletrea.
+
+- **por que sonaba mal**: el diccionario tenia `vnc -> uve ene ce` (y `avr`, `nvme` igual), y espeak lee
+  `uve` como `ˈuβe`, o sea "u be". corregido a `ve` (`bˈe`).
+- `fonetizar()` aplica primero `pronunciacion.json` y despues **`deletrear_siglas()`**: una sigla en
+  mayusculas (2 a 5 letras) que no esta en el diccionario y no tiene vocal o tiene v/w se deletrea sola
+  con `LETRAS` de `recetas/podcast.py` (`MVP` -> "eme ve pe"). las que se dicen como palabra (`ONU`) quedan.
+- `python3 -m recetas.podcast pronunciacion` marca cualquier respelling con `uve` o `doble u`.
+- prueba: **`python3 -m recetas.prueba_podcast --pronunciacion`** (cero tokens).
+- **escuchado con whisper** (`faster-whisper small`, 2026-09-13): con `uve` se oia "WNC"; con `ve` y la
+  frase "entro por ve ene ce, pruebo la pe doble ve a, abro ese ese hache y reviso el te te ese" se oye
+  "VNC, PWBA, SSH, TTS". **con espacios, no con comas**: con comas piper corta las letras y se oye peor.
+  una sigla sola en un clip corto pierde la primera letra: no probar siglas aisladas, siempre en frase.
+
 ### hasta donde llega esta aproximacion
 
 **lo que esta verificado es la cadena de fonemas, no como suena.** una tarea del agente no puede
@@ -248,3 +266,29 @@ probar: `python3 -m recetas.prueba_podcast_proximo` (franjas, material, pases, g
 tokens) y `python3 -m recetas.prueba_podcast_web [--vivo]` (`automatico`: emisiones de mentira inyectadas).
 
 pendiente, no implementado: **el semanal**.
+
+## capitulos vivos (facundo, 2026-09-13)
+
+"los capitulos empiezan a escribirse cuando escucho el anterior, pero se van actualizando cada tanto hasta que
+escucho ese". va encima de las 3 emisiones por dia, sin duplicar nada: **el borrador vivo es el guion de la
+proxima emision escrito de antemano**.
+
+- **arranca** cuando facundo marco escuchada alguna version de la emision anterior (o si la anterior no se
+  publico). sin escuchar la anterior no se gasta nada: a la hora sale como siempre, redactada en el momento.
+- **se re-redacta** (script `podcast_auto` del daemon, tick cada 10 min, cero tokens el tick) cuando cambio lo
+  hecho en su ventana (huella de charlas por pestaña + ordenes cerradas; el log y el estado no cuentan) y
+  pasaron `vivo.refresco_min` (180) desde el ultimo, hasta `vivo.max_redacciones` (3). solo `vivo.versiones`
+  (`10m` y `30m`: la de 1.5 h se redacta a la hora, es cara), solo si el presupuesto deja pesadas, y nunca a
+  menos de 20 min de la hora. todo en `daemon.json -> podcast_auto.vivo`.
+- **vive** en `~/.claudio/podcast/borradores/<id>.txt` (+ `.material`, `.json` con huella y redacciones): no se
+  publica ni aparece en la web.
+- **al publicar** el render va sobre el ultimo borrador. si lo hecho cambio y el borrador tiene mas de 30 min,
+  un ultimo pase lo pone al dia; en un reintento se usa tal cual. publicado, el borrador se borra.
+- **se congela** cuando facundo lo escucho: `auto.json -> congelados`, ni `correr --forzar` lo re-renderiza.
+- **como sabe el server que escuchaste**: la web manda `podcast-escuchado <id> si|no` al issue 3 de
+  `agente-buzon` (el de los votos) al marcar, desmarcar, al 90%, al terminar y por la regla del 50%; lo marcado
+  antes de la 1.9 sale una vez al abrir. `recetas.podcast_votos` lo baja a `votos.json -> escuchados`. solo las
+  emisiones automaticas. **sin el token del chat en la app no viaja**, y entonces no hay borradores (degrada a
+  lo de antes, no rompe).
+- ver: `python3 -m recetas.podcast_auto vivo` (que toca y por que), `borrador <emision> [--versiones]` a mano.
+  prueba: `python3 -m recetas.prueba_podcast_proximo` (seccion capitulos vivos) y `prueba_podcast_web`.

@@ -88,7 +88,7 @@
   "lean": "lin",
   "jira": "yíra",
   "ssh": "ese ese hache",
-  "vnc": "uve ene ce",
+  "vnc": "ve ene ce",
   "luks": "laks",
   "tpm": "te pe eme",
   "bios": "báios",
@@ -107,7 +107,7 @@
   "logins": "lóguins",
   "frigate": "frígueit",
   "docker": "dóquer",
-  "avr": "a uve erre",
+  "avr": "a ve erre",
   "router": "rúter",
   "guards": "gards",
   "guard": "gard",
@@ -134,7 +134,7 @@
   "stack": "esták",
   "source": "sors",
   "mcp": "eme ce pe",
-  "nvme": "ene uve eme e",
+  "nvme": "ene ve eme e",
   "acl": "a ce ele",
   "oauth": "o óz",
   "loss": "los",
@@ -157,6 +157,9 @@
   "backend": "báquend",
   "headless": "jédles",
   "previews": "prívyus",
-  "ftpm": "efe te pe eme"
- }
+  "ftpm": "efe te pe eme",
+  "pwa": "pe doble ve a",
+  "tts": "te te ese"
+ },
+ "_siglas": "siglas en castellano rioplatense (facundo, 2026-09-13): v es 've' y w es 'doble ve', nunca 'uve' ni 'doble u' (espeak lee 'uve' como 'u be'). una sigla en mayusculas que no esta en 'palabras' y no tiene vocal o tiene v/w se deletrea sola con LETRAS de recetas/podcast.py. lo que se dice como palabra (wifi, web, jira, shopify, awtomic, fuzzer) no se deletrea."
 }
