@@ -546,7 +546,477 @@
    "emision": "manana",
    "duracion": 2202.0,
    "ts": "2026-09-13T08:00:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-13-manana-90m",
+   "fecha": "2026-09-13",
+   "titulo": "mañana · lo del sáb 12/9",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "general",
+    "juegos",
+    "noticias",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 18620,
+   "guion": "episodio-2026-09-13-manana-90m.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-manana-90m-daniela.mp3",
+     "duracion": 5550.3,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 113.6,
+       "archivo": "audio/ep-2026-09-13-manana-90m-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 113.6,
+       "titulo": "el dia empezo con podcast, a medianoche",
+       "duracion": 62.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-2-el-dia-empezo-con.daniela.mp3"
+      },
+      {
+       "t": 176.4,
+       "titulo": "claudio sigue aunque claude no tenga tokens",
+       "duracion": 150.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-3-claudio-sigue-aunque.daniela.mp3"
+      },
+      {
+       "t": 326.5,
+       "titulo": "el header de los widgets",
+       "duracion": 34.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-4-el-header-de-los-widgets.daniela.mp3"
+      },
+      {
+       "t": 361.3,
+       "titulo": "se fue el drag and drop de las pestañas",
+       "duracion": 46.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-5-se-fue-el-drag-and-drop.daniela.mp3"
+      },
+      {
+       "t": 407.5,
+       "titulo": "el reparto de cuentas, primera version",
+       "duracion": 32.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-6-el-reparto-de-cuentas.daniela.mp3"
+      },
+      {
+       "t": 439.5,
+       "titulo": "el chat no tenia jira y no lo decia",
+       "duracion": 57.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-7-el-chat-no-tenia-jira-y.daniela.mp3"
+      },
+      {
+       "t": 496.5,
+       "titulo": "dos ordenes sueltas del mediodia",
+       "duracion": 16.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-8-dos-ordenes-sueltas-del.daniela.mp3"
+      },
+      {
+       "t": 512.6,
+       "titulo": "el widget de uso mentia: una sola cuenta disfrazada de dos",
+       "duracion": 72.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-9-el-widget-de-uso-mentia.daniela.mp3"
+      },
+      {
+       "t": 584.7,
+       "titulo": "fuera el modo eco automatico, de raiz",
+       "duracion": 68.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-10-fuera-el-modo-eco.daniela.mp3"
+      },
+      {
+       "t": 652.9,
+       "titulo": "las dos cuentas con login propio en el server",
+       "duracion": 61.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-11-las-dos-cuentas-con.daniela.mp3"
+      },
+      {
+       "t": 714.6,
+       "titulo": "de donde se mando cada mensaje",
+       "duracion": 25.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-12-de-donde-se-mando-cada.daniela.mp3"
+      },
+      {
+       "t": 739.9,
+       "titulo": "el enter del chat en pantallas angostas",
+       "duracion": 28.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-13-el-enter-del-chat-en.daniela.mp3"
+      },
+      {
+       "t": 768.4,
+       "titulo": "una orden marcada como duplicada",
+       "duracion": 15.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-14-una-orden-marcada-como.daniela.mp3"
+      },
+      {
+       "t": 784.2,
+       "titulo": "la url de oauth cortada",
+       "duracion": 27.9,
+       "archivo": "audio/ep-2026-09-13-manana-90m-15-la-url-de-oauth-cortada.daniela.mp3"
+      },
+      {
+       "t": 812.1,
+       "titulo": "el prefijo de tema se comia los comandos",
+       "duracion": 45.9,
+       "archivo": "audio/ep-2026-09-13-manana-90m-16-el-prefijo-de-tema-se.daniela.mp3"
+      },
+      {
+       "t": 858.0,
+       "titulo": "los colores del widget de uso, dos pasadas",
+       "duracion": 56.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-17-los-colores-del-widget.daniela.mp3"
+      },
+      {
+       "t": 914.2,
+       "titulo": "la marca de la barra y los botones",
+       "duracion": 29.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-18-la-marca-de-la-barra-y.daniela.mp3"
+      },
+      {
+       "t": 943.5,
+       "titulo": "el podcast siempre preparado",
+       "duracion": 53.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-19-el-podcast-siempre.daniela.mp3"
+      },
+      {
+       "t": 996.9,
+       "titulo": "el podcast en el celu con la pantalla bloqueada",
+       "duracion": 26.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-20-el-podcast-en-el-celu.daniela.mp3"
+      },
+      {
+       "t": 1023.1,
+       "titulo": "a las dos y cuarto: el titulo de las pestañas de iterm",
+       "duracion": 29.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-21-a-las-dos-y-cuarto-el.daniela.mp3"
+      },
+      {
+       "t": 1052.5,
+       "titulo": "cerrar lo que quedo abierto",
+       "duracion": 50.5,
+       "archivo": "audio/ep-2026-09-13-manana-90m-22-cerrar-lo-que-quedo.daniela.mp3"
+      },
+      {
+       "t": 1103.0,
+       "titulo": "la boveda de claves",
+       "duracion": 114.9,
+       "archivo": "audio/ep-2026-09-13-manana-90m-23-la-boveda-de-claves.daniela.mp3"
+      },
+      {
+       "t": 1217.9,
+       "titulo": "github nos freno",
+       "duracion": 41.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-24-github-nos-freno.daniela.mp3"
+      },
+      {
+       "t": 1258.9,
+       "titulo": "el capitulo del corte",
+       "duracion": 26.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-25-el-capitulo-del-corte.daniela.mp3"
+      },
+      {
+       "t": 1285.6,
+       "titulo": "el tema podcast, terminado",
+       "duracion": 49.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-26-el-tema-podcast.daniela.mp3"
+      },
+      {
+       "t": 1335.3,
+       "titulo": "el cambio de politica del reparto: gana la que resetea antes",
+       "duracion": 82.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-27-el-cambio-de-politica.daniela.mp3"
+      },
+      {
+       "t": 1417.7,
+       "titulo": "los chips pegados al input",
+       "duracion": 17.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-28-los-chips-pegados-al.daniela.mp3"
+      },
+      {
+       "t": 1435.0,
+       "titulo": "el hueco negro arriba del teclado",
+       "duracion": 36.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-29-el-hueco-negro-arriba.daniela.mp3"
+      },
+      {
+       "t": 1471.4,
+       "titulo": "el selector de nodos",
+       "duracion": 88.9,
+       "archivo": "audio/ep-2026-09-13-manana-90m-30-el-selector-de-nodos.daniela.mp3"
+      },
+      {
+       "t": 1560.3,
+       "titulo": "ahora, server: la sesion de mercadolibre",
+       "duracion": 55.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-31-ahora-server-la-sesion.daniela.mp3"
+      },
+      {
+       "t": 1615.4,
+       "titulo": "la lista de compras",
+       "duracion": 19.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-32-la-lista-de-compras.daniela.mp3"
+      },
+      {
+       "t": 1634.8,
+       "titulo": "sudo para expulsar discos",
+       "duracion": 32.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-33-sudo-para-expulsar.daniela.mp3"
+      },
+      {
+       "t": 1667.1,
+       "titulo": "los discos que faltaban",
+       "duracion": 40.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-34-los-discos-que-faltaban.daniela.mp3"
+      },
+      {
+       "t": 1707.1,
+       "titulo": "el chrome cien por ciento en el server",
+       "duracion": 44.9,
+       "archivo": "audio/ep-2026-09-13-manana-90m-35-el-chrome-cien-por.daniela.mp3"
+      },
+      {
+       "t": 1752.0,
+       "titulo": "el video de fireship",
+       "duracion": 30.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-36-el-video-de-fireship.daniela.mp3"
+      },
+      {
+       "t": 1782.1,
+       "titulo": "el podcast express del mediodia",
+       "duracion": 40.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-37-el-podcast-express-del.daniela.mp3"
+      },
+      {
+       "t": 1822.2,
+       "titulo": "shopify por vnc",
+       "duracion": 43.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-38-shopify-por-vnc.daniela.mp3"
+      },
+      {
+       "t": 1865.4,
+       "titulo": "frigate, primera pasada",
+       "duracion": 19.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-39-frigate-primera-pasada.daniela.mp3"
+      },
+      {
+       "t": 1885.2,
+       "titulo": "la camara que dejo al server sin internet",
+       "duracion": 58.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-40-la-camara-que-dejo-al.daniela.mp3"
+      },
+      {
+       "t": 1943.4,
+       "titulo": "el guard de red, al frente de la fila",
+       "duracion": 26.6,
+       "archivo": "audio/ep-2026-09-13-manana-90m-41-el-guard-de-red-al.daniela.mp3"
+      },
+      {
+       "t": 1970.1,
+       "titulo": "el server nunca se queda solo",
+       "duracion": 74.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-42-el-server-nunca-se.daniela.mp3"
+      },
+      {
+       "t": 2044.9,
+       "titulo": "el postmortem",
+       "duracion": 33.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-43-el-postmortem.daniela.mp3"
+      },
+      {
+       "t": 2078.5,
+       "titulo": "el ruido del chequeo de seguridad",
+       "duracion": 28.3,
+       "archivo": "audio/ep-2026-09-13-manana-90m-44-el-ruido-del-chequeo-de.daniela.mp3"
+      },
+      {
+       "t": 2106.9,
+       "titulo": "la limpieza del estado del server",
+       "duracion": 26.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-45-la-limpieza-del-estado.daniela.mp3"
+      },
+      {
+       "t": 2132.9,
+       "titulo": "totp propio",
+       "duracion": 27.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-46-totp-propio.daniela.mp3"
+      },
+      {
+       "t": 2160.6,
+       "titulo": "shopify con dos factores propios",
+       "duracion": 49.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-47-shopify-con-dos.daniela.mp3"
+      },
+      {
+       "t": 2210.3,
+       "titulo": "fuzzer: el mail de la banda pasa a ser un canal de verdad",
+       "duracion": 78.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-48-fuzzer-el-mail-de-la.daniela.mp3"
+      },
+      {
+       "t": 2288.5,
+       "titulo": "la regla nueva: santi y leo pueden pedir, con límites",
+       "duracion": 83.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-49-la-regla-nueva-santi-y.daniela.mp3"
+      },
+      {
+       "t": 2371.5,
+       "titulo": "el script del mail: de un label a todo el inbox",
+       "duracion": 118.5,
+       "archivo": "audio/ep-2026-09-13-manana-90m-50-el-script-del-mail-de.daniela.mp3"
+      },
+      {
+       "t": 2490.0,
+       "titulo": "cada cuánto se mira el mail: dos minutos cuando hay charla, quince cuando no",
+       "duracion": 90.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-51-cada-cuanto-se-mira-el.daniela.mp3"
+      },
+      {
+       "t": 2580.0,
+       "titulo": "lo colgamos a santi: dos mails sin contestar",
+       "duracion": 81.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-52-lo-colgamos-a-santi-dos.daniela.mp3"
+      },
+      {
+       "t": 2661.2,
+       "titulo": "el motor de dj y el orden que no es aleatorio",
+       "duracion": 24.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-53-el-motor-de-dj-y-el.daniela.mp3"
+      },
+      {
+       "t": 2686.0,
+       "titulo": "el disco que no había nada que expulsar",
+       "duracion": 55.6,
+       "archivo": "audio/ep-2026-09-13-manana-90m-54-el-disco-que-no-habia.daniela.mp3"
+      },
+      {
+       "t": 2741.6,
+       "titulo": "awtomic: los tickets de cx del sábado",
+       "duracion": 189.5,
+       "archivo": "audio/ep-2026-09-13-manana-90m-55-awtomic-los-tickets-de.daniela.mp3"
+      },
+      {
+       "t": 2931.1,
+       "titulo": "awtomic: turley y el mínimo de tres botellas",
+       "duracion": 102.4,
+       "archivo": "audio/ep-2026-09-13-manana-90m-56-awtomic-turley-y-el.daniela.mp3"
+      },
+      {
+       "t": 3033.5,
+       "titulo": "awtomic: la bronca con jira y la mudanza al server",
+       "duracion": 95.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-57-awtomic-la-bronca-con.daniela.mp3"
+      },
+      {
+       "t": 3128.7,
+       "titulo": "awtomic: preparar el server para laburar de verdad",
+       "duracion": 173.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-58-awtomic-preparar-el.daniela.mp3"
+      },
+      {
+       "t": 3301.6,
+       "titulo": "podcast: el player del celu y la pwa",
+       "duracion": 193.9,
+       "archivo": "audio/ep-2026-09-13-manana-90m-59-podcast-el-player-del.daniela.mp3"
+      },
+      {
+       "t": 3495.5,
+       "titulo": "podcast: el episodio fantasma de las nueve y media",
+       "duracion": 143.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-60-podcast-el-episodio.daniela.mp3"
+      },
+      {
+       "t": 3638.6,
+       "titulo": "lo que se hizo en personal",
+       "duracion": 232.6,
+       "archivo": "audio/ep-2026-09-13-manana-90m-61-lo-que-se-hizo-en.daniela.mp3"
+      },
+      {
+       "t": 3871.2,
+       "titulo": "lo que se hizo en juegos",
+       "duracion": 217.5,
+       "archivo": "audio/ep-2026-09-13-manana-90m-62-lo-que-se-hizo-en-juegos.daniela.mp3"
+      },
+      {
+       "t": 4088.7,
+       "titulo": "lo que se hizo en general",
+       "duracion": 78.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-63-lo-que-se-hizo-en.daniela.mp3"
+      },
+      {
+       "t": 4166.9,
+       "titulo": "el estado del server",
+       "duracion": 154.6,
+       "archivo": "audio/ep-2026-09-13-manana-90m-64-el-estado-del-server.daniela.mp3"
+      },
+      {
+       "t": 4321.6,
+       "titulo": "el estado de tools",
+       "duracion": 148.5,
+       "archivo": "audio/ep-2026-09-13-manana-90m-65-el-estado-de-tools.daniela.mp3"
+      },
+      {
+       "t": 4470.1,
+       "titulo": "fuzzer, el mail que todavía no se autoriza solo",
+       "duracion": 149.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-66-fuzzer-el-mail-que.daniela.mp3"
+      },
+      {
+       "t": 4619.0,
+       "titulo": "fuzzer, la tipografía del post de croto",
+       "duracion": 63.7,
+       "archivo": "audio/ep-2026-09-13-manana-90m-67-fuzzer-la-tipografia.daniela.mp3"
+      },
+      {
+       "t": 4682.7,
+       "titulo": "juegos, los cuatro volúmenes y el backup que sí quedó",
+       "duracion": 206.8,
+       "archivo": "audio/ep-2026-09-13-manana-90m-68-juegos-los-cuatro.daniela.mp3"
+      },
+      {
+       "t": 4889.5,
+       "titulo": "plata, gastos, amplis y el número que faltaba",
+       "duracion": 182.1,
+       "archivo": "audio/ep-2026-09-13-manana-90m-69-plata-gastos-amplis-y.daniela.mp3"
+      },
+      {
+       "t": 5071.6,
+       "titulo": "personal, eva, el paquete y la deuda que crece sola",
+       "duracion": 174.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-70-personal-eva-el-paquete.daniela.mp3"
+      },
+      {
+       "t": 5245.6,
+       "titulo": "la cola y cómo está el agente ahora mismo",
+       "duracion": 90.5,
+       "archivo": "audio/ep-2026-09-13-manana-90m-71-la-cola-y-como-esta-el.daniela.mp3"
+      },
+      {
+       "t": 5336.1,
+       "titulo": "noticias del día",
+       "duracion": 126.2,
+       "archivo": "audio/ep-2026-09-13-manana-90m-72-noticias-del-dia.daniela.mp3"
+      },
+      {
+       "t": 5462.3,
+       "titulo": "lo que te espera",
+       "duracion": 88.0,
+       "archivo": "audio/ep-2026-09-13-manana-90m-73-lo-que-te-espera.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-13-manana",
+   "version": "90m",
+   "emision": "manana",
+   "duracion": 5550.3,
+   "ts": "2026-09-13T08:00:00-03:00"
   }
  ],
- "actualizado": "2026-09-13 08:21"
+ "actualizado": "2026-09-13 12:14"
 }
