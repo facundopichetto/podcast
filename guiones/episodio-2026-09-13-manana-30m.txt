@@ -1,0 +1,227 @@
+# de que va
+
+buenas, facundo. esta es la emisión de la mañana del domingo trece de septiembre, y va toda sobre el sábado doce. treinta minutos, sin noticias, sin nada de afuera: solo lo que hicimos, lo que se rompió, lo que se arregló y lo que quedó esperándote a vos.
+
+el sábado fue un día largo y desparejo. arrancó a la madrugada con el límite de sesión pegado en la cara, siguió con una mañana entera de plomería de cuentas de claude, se metió al mediodía en el server con discos, cámaras y un corte de internet que nos dejó mudos casi cuarenta minutos, y terminó a la noche con la banda, mails de santi y un podcast que dijo que se había publicado y no se había publicado.
+
+el orden de la emisión es por tema. primero tools, que fue donde más se movió: el chat que nunca más pasa a eco solo, las dos cuentas de claude en el server, el reparto por cuenta, el board y el header de widgets. después server, que es la otra mitad pesada del día: discos usb, expulsar sin sudo, chrome cien por ciento en el server, la cámara tapo y el guard de red que nació del corte. después fuzzer, con el mail de la banda y las reglas nuevas para santi y leo. y en la segunda parte de este mismo episodio siguen awtomic, el podcast propiamente dicho y las cosas personales, más el repaso de lo que te espera.
+
+vamos.
+
+# tools: la madrugada empezó chocando contra el límite
+
+lo primero del día no fue una tarea, fue un no. a las cero veintinueve me pediste dos cosas seguidas en la pestaña del podcast: que el nocturno de diez minutos lo hiciera de veinticinco y que lo actualizara, y enseguida avisaste que te ibas a pasear con eva, así que el podcast era prioridad. las dos veces la respuesta que te llegó fue el texto crudo de claude: límite de sesión alcanzado, resetea a la una y veinte.
+
+eso es exactamente lo peor que puede pasar, porque vos pediste algo, te fuiste a pasear, y lo que te quedó fue un mensaje de error de una herramienta en vez de una respuesta mía. igual la cola siguió: a las cero veinte salió el episodio nocturno con conservar, sin tocar el episodio del once ni el largo, y a la una treinta y ocho salió el de veinticinco minutos actualizado con todo lo del once y el doce, tools, server y el dj de fuzzer.
+
+pero el problema de fondo quedó anotado y se atacó en la misma madrugada. a la una cincuenta salió la tarea del guard de "claudio sigue aunque claude no tenga tokens o se caiga". la idea es simple de decir y no tan simple de hacer: antes de gastar la llamada, chequear si claude está; detectar sin modelo los fallos típicos, límite de cinco horas, límite semanal, límite por modelo, oauth vencido, sobrecarga, red, timeout; y en vez de escupirte el error, contestarte yo con qué pasó, hasta cuándo, y un menú de opciones. esperar el reset, cambiar de cuenta, o pedirlo en eco. y además un modo comandos que anda sin claude para las cosas que no necesitan modelo, como el status, la cola, el usage, el log o los avisos.
+
+esa es una de las cosas más importantes del día, aunque no se vea. lo que cambia no es que haya más tokens, es que cuando no los hay vos te enterás de por qué y qué podés hacer, en vez de leer un mensaje de sistema.
+
+# tools: el chat no vuelve a pasar a eco solo
+
+a las diez y cincuenta de la mañana te encontraste con que el chat te venía contestando vago desde temprano, con un modelo chico, porque el uso semanal estaba alto y algo lo había mandado a eco automático. lo dijiste ahí y lo repetiste como regla dura: el chat solo cambia de cuenta de claude automáticamente, nunca de modo. eco únicamente si vos lo pedís, escribiendo eco adelante o poniendo ese canal en eco a mano.
+
+la tarea salió con opus y fue a sacar el automatismo de raíz, no a ponerle un condicional más. el modo automático dejó de existir como valor: si algo lo lee, lo lee como claude. ninguna línea de presupuesto, ni el semanal, ni la ventana de cinco horas, ni la barra de fable, ni un oauth vencido, ni una caída de claude pueden mover el chat a eco. si claude directamente no está, contesta claudio con su propio texto y el menú de opciones, nunca un proveedor de afuera.
+
+y quedó dicho el principio general que sale de eso, que es más grande que el chat: ceder el control a otra herramienta puede ser para siempre. antes de delegar automáticamente en algo que no es claude, hay que pensar cómo se vuelve. si no hay vuelta garantizada, no se delega. eso vale para el eco y va a valer para lo próximo que se nos ocurra automatizar.
+
+el eco quedó donde tiene que estar: respaldo para tareas no importantes cuando un modelo está caído o sin crédito, nunca un ahorro, y sin poder escribir nada por su cuenta. lo que el eco cree que hay que hacer termina como propuesta, y solo un dale tuyo la mueve a la cola.
+
+# tools: dos cuentas de claude en el server, de verdad
+
+acá hubo un enredo lindo de contar. a las diez y veintitrés de la mañana, en el server, la carpeta de la cuenta facu quedó como un enlace a la carpeta de siempre. o sea: dos nombres, un solo login, el de facundo. el resultado fue que el widget de uso pintaba a orugote con exactamente los mismos números que facu, como si estuviéramos midiendo dos cuentas cuando había una sola.
+
+a las diez cuarenta y seis salió la tarea para arreglarlo, y el arreglo cambió el criterio de fondo: una cuenta es un login, no una carpeta. ahora las carpetas se agrupan por quién está logueado adentro, mirando el identificador de cuenta y el mail, más una huella del token de refresco. si dos carpetas tienen el mismo login, una sola cuenta cuenta, y la repetida se publica marcada como sin login, en rojo, con el motivo, sin números inventados. el reparto deja de mandarle trabajo a una cuenta que no existe.
+
+después, a las once cero cuatro, vino el complemento: dejar las dos cuentas activas de verdad, cada una con su login propio. la carpeta de facu como carpeta real con el login de facundo, y la otra libre para orugote. y acá aparece la regla que ya nos había mordido el día anterior: un login nunca se copia de otra máquina. el once, transplantar el oauth de la mac al server rotó el token de refresco y mató las dos sesiones. así que cada máquina hace su propio login, y punto.
+
+el login de la segunda cuenta terminó haciéndose desde el chat, sin ssh, que era lo que pediste. se abre una sesión de login aparte, se lee de la pantalla la dirección de autorización aunque el terminal la corte en varios renglones, y te llega al celu. vos la abrís en tu chrome con el perfil de esa cuenta y contestás el código en el chat. el daemon lo pega y espera las credenciales. los dos comandos, login y código, los atiende sin modelo.
+
+y ahí saltó un detalle que costó un rato: los comandos sin modelo se probaban sobre el texto completo, así que si vos escribías el código desde una pestaña de tema, el mensaje llegaba con el prefijo del tema adelante, no matcheaba, y terminaba yendo al modelo, que pegaba el código a mano. ahora todos los comandos sin modelo se prueban sobre el texto sin el prefijo. chiquito, pero era la diferencia entre un comando determinístico y una llamada cara que podía salir mal.
+
+# tools: el reparto de cuentas y la línea de gasto
+
+con dos logins vivos apareció la pregunta de cuál usar en cada llamada. a las dos cuarenta y ocho de la madrugada la idea era mitad y mitad desde las cuatro de la tarde, que es cuando resetea orugote, eligiendo siempre la cuenta más lejos de sus líneas.
+
+a las cinco de la tarde vos cambiaste el criterio, y el nuevo es mejor: primero la cuenta que renueva antes. la lógica es de sentido común, los tokens que no se usan antes del reset se pierden, así que conviene quemar primero los de la cuenta que está por resetear y dejar los otros para después. facu resetea los miércoles a las seis de la tarde, orugote los sábados a las cuatro. no hay cuenta global fija: cada llamada, sea una tarea o un mensaje de chat, elige la suya, sin gastar un solo token en decidirlo.
+
+media hora después bajaste los topes. una cuenta deja de recibir tareas cuando cualquiera de sus tres límites llega al ochenta y cinco por ciento, y deja de recibir chat al noventa. antes eran noventa y noventa y cinco, y se bajó porque pasarse varias veces de la ventana de cinco horas termina matando lo que queda del otro modelo. la diferencia entre los dos topes es a propósito: es el repuesto reservado para que vos puedas hablar aunque las tareas ya no entren.
+
+la regla general acá, que quedó escrita, es que los agentes que corren solos respetan la línea de gasto para que vos puedas usar los tokens tranquilo en tus chats. vos tenés prioridad sobre cualquier cosa que corra sola. y avisar del gasto no se recorta: si algo de fondo va a consumir mucho, o estamos cerca de la línea, se dice.
+
+# tools: claudio board, la web
+
+la web se tocó bastante. a las dos treinta y cuatro salió el header de widgets: cada caja, las de server, uso, agente, tickets, verificaciones, propuestas, oportunidades, decididas, avisos, podcast, el dj y la sombra, tiene ahora una fila de encabezado con el título y un dato esencial a la izquierda. la idea es que puedas escanear la pantalla en dos segundos sin abrir nada.
+
+a las dos cuarenta y cinco salió lo que pediste ese mismo día: sacar el arrastre de las pestañas del chat. lo dijiste claro, las pestañas del chat no tienen que poder arrastrarse, el chat es un panel único como lo son los widgets. se sacó el arrastre, la zona donde se soltaban, el segundo panel al costado y la vista partida del celu. lo que quedó del layout es simplemente qué pestañas hay y cuál está activa. los layouts viejos con paneles se siguen leyendo para no romper nada, pero ya no se escriben. lo que sí se quedó es poder cambiar el ancho entre el chat y los widgets arrastrando el separador, que eso es otra cosa.
+
+y a las once diecinueve salió una que es puro sentido común: que cada mensaje que sale de la web diga desde dónde se mandó. celu o compu según si la pantalla es táctil, el identificador corto del dispositivo, y un nombre corto de navegador y sistema. viaja con el mensaje. sirve para entender después por qué algo se escribió como se escribió.
+
+pegado a eso, a las once veintitrés, el arreglo del enter. la función que decidía si estabas en un dispositivo táctil también daba táctil cuando la ventana medía menos de novecientos píxeles de ancho. resultado: en la compu, con la ventana angosta, enter te hacía un salto de línea en vez de mandar el mensaje. ahora esa función decide solo por si el dispositivo es táctil de verdad, no por el ancho de la ventana. es de esas cosas que uno no reporta como bug pero te arruinan el día quince veces.
+
+# tools: la cola aprendió a fusionar y a no pisarse
+
+dos cosas del funcionamiento de la cola, que son de esas que se pagan una vez y rinden siempre.
+
+la primera es la fusión. lo dijiste el doce: si hay dos pedidos parecidos, no poner los dos ni elegir uno, hay que mergearlos y poner el merge en el lugar del que estaba más arriba. ahora, cuando entra una orden tuya, se busca sin gastar tokens si hay una pendiente del mismo tema que se le parezca, comparando palabras y sobre todo rutas e identificadores concretos en común. si aparece un par, un solo pase de opus redacta una sola orden que junta todo lo de las dos, y esa orden queda en la línea de la más vieja, que es lo que pediste. nunca se fusiona con algo que ya está corriendo, ni con un reintento, ni con otro tema, ni con las periódicas. y si la fusión falla o achica el pedido, la orden nueva se encola normal, que es el comportamiento seguro.
+
+la segunda es el paralelo, que llegó el trece pero nació del sábado. el criterio es que si algo está en la cola y no jode con nada de lo que se está haciendo, arranca. cada orden declara o se le infieren los recursos que toca: la web, el podcast, jira, la nube, un archivo puntual, un theme de un store, un ticket. si una pendiente no comparte ningún recurso con las que están corriendo, arranca en un hilo aparte. si choca, espera. lo que toca el daemon o el lanzador, y todo lo que toca red o sistema, corre solo y exclusivo. awtomic siempre va en serie contra sí mismo y sale primero.
+
+y el tope de hilos se ajusta solo mirando cuánto lleva consumido la ventana de cinco horas de la cuenta que corresponde: bien abajo, hasta siete hilos; en el medio, cuatro; arriba del ochenta y cinco por ciento o con poca memoria libre, dos. sube y baja solo, y cada cambio queda anotado con el motivo.
+
+# tools: zombies, reinicios y jira que no estaba
+
+tres cosas más de tools, cortas pero necesarias.
+
+la de los reinicios viene de la medianoche del doce: un reinicio por cambio de código se ejecutó al toque con tres tareas corriendo. quedaron huérfanas, una zombie, y el daemon nuevo lanzó otras encima en el mismo carril. la regla que salió es dura: todo reinicio del daemon es diferido, espera a que no quede ninguna tarea viva en ningún carril. y al arrancar, el daemon adopta las tareas cuyo proceso sigue vivo en vez de lanzar otra encima.
+
+la de jira fue a las tres y media de la madrugada, con opus. el chat corre en el server, y el server no tiene el conector de atlassian ni el archivo con credenciales. el día anterior, en la mac, se había dicho "ahora sí, jira usable", y el sábado el chat contestaba "este proceso no tiene jira" sin explicar por qué. eso es lo que molesta: no que falte, sino que falte sin decir la causa ni el arreglo. quedó un comando que dice el estado real probando las tres vías sin gastar tokens, un aviso que sale una sola vez si ninguna responde, y ese estado ahora viaja en el contexto del chat, así que si preguntás te digo qué falta en vez de encogerme de hombros. el camino que sí funciona hoy es el puente a la sesión gráfica de la mac, que lee y escribe pero depende de que la mac esté prendida. lo definitivo es un token de la interfaz de jira guardado en el server, y eso todavía no está.
+
+y dos de higiene: a las diez veinticinco se puso la cuenta en facu desde el chat, a las diez veintiocho se comentó la línea programada de meta ads en el daemon, y a las once veintitrés se marcó una orden de la cola como duplicada de otra sin correrla, gastando cero.
+
+# tools: la bóveda de claves
+
+a las cuatro y media de la tarde dijiste algo que ordenó un problema viejo: necesitás que yo guarde todas las claves que me compartís. no que las recuerde por un rato, que las guarde.
+
+quedó con un único punto de entrada. cada mensaje tuyo pasa por un detector que reconoce formatos de credenciales conocidos, frases del tipo la clave de tal cosa es tal otra, usuario y contraseña juntos, o la clave del wifi, y también por contexto: si mi última respuesta en ese tema te pedía una clave y vos contestás pelado, eso es la clave. lo que las expresiones no ven lo puede marcar el propio chat con una línea especial.
+
+las del server van a la tabla de credenciales del server, el resto a un archivo de secretos, los dos con permisos cerrados y con backup fechado antes de cada escritura. y lo importante: el valor no sale nunca. al modelo le llega tapado, con una etiqueta que dice qué clave es sin decir cuál. y se tapa en el log, en la cola, en el registro de chat, en la salida de las tareas y en la respuesta. hasta el comentario tuyo en la web se reescribe tapado. lo único que te llega es una línea que dice guardé, y qué guardaste.
+
+la regla de uso es la contracara: antes de decirte "no la tengo" o de pedírtela de nuevo, hay que buscarla. hay un comando para buscar y otro para listar, y lo que aparece tapado en el contexto es porque ya está guardado. eso cubre el caso feo, que es pedirte tres veces la misma contraseña que vos ya me diste.
+
+# server: discos, expulsar y una charla de madrugada
+
+el server tuvo su propio día. arrancó a las cero dieciocho con la sesión de mercado libre, trayendo tu sesión desde el chrome de la mac, perfil orugote, reusando la infraestructura de cookies que ya existía en vez de inventar otra.
+
+a las cero veintidós apareciste con un pedido simple: expulsame el disco que enchufé en el servidor. lo expulsé, no estaba montado así que no había riesgo, y te avisé que la tarjeta de la consolita seguía puesta y que la veía bien. y te dije el detalle que importaba: el usuario agente no tiene sudo, lo hice entrando como vos. eso quedó encolado para dejarlo prolijo.
+
+a la una cincuenta y nueve volviste con el mismo pedido, y ahí la respuesta fue distinta y más honesta: el seagate de cinco tera, en el puerto de adelante, el server lo veía como dispositivo usb pero nunca le apareció como disco. cero dispositivos de bloque, nada montado, nada escribiendo. no había nada que expulsar, sacarlo no corrompe nada. lo que sí veía bien era la tarjeta de la consolita.
+
+a las dos cero tres salió el arreglo prolijo: darle al usuario agente permiso de administrador sin contraseña, pero solo para expulsar discos usb, nada más, y dejar un script que reciba la etiqueta o el dispositivo, lo desmonte, sincronice y apague el puerto. y probarlo de verdad, no dejarlo escrito.
+
+y a las dos cero nueve, la tarea de los discos: instalar el soporte de los sistemas de archivos que faltaban, entender qué se veía y qué no. lo que estaba a la vista era el disco de dos tera y la tarjeta de veinticuatro giga de la consolita, con su partición de sistema aparte; el segundo disco directamente no aparecía.
+
+acá vale la pena decir por qué esto importa más de lo que parece. la regla de los juegos es que el disco negro es la fuente de la mejor versión de cada juego, y el backup de una consola es una sincronización más un índice, no diez copias del mismo archivo. para eso el server tiene que ver los discos bien, montarlos bien y soltarlos bien. si un disco no aparece, no hay sincronización que valga.
+
+# server: chrome cien por ciento en el server
+
+esta es de las estructurales. a las dos cuarenta y siete, con opus, el objetivo fue que todo lo que usa chrome corra desde el server y no dependa más del chrome de la mac.
+
+media hora después, a las tres veintiséis, vino una corrección importante a esa misma orden: no crear perfiles separados de awtomic, orugote y fuzzer en el chrome del server. hay un único perfil, el del agente, ya logueado con la cuenta de claudio, y todas las sesiones entran adentro de ese perfil. eso es bastante distinto de la mac, donde cada contexto tiene su perfil y los contextos no se cruzan.
+
+el estado real quedó así: en el server hay un solo chrome y un solo perfil, corriendo en una pantalla virtual, sin extensión, manejado por el protocolo de depuración con una receta propia que sabe sacar texto, capturas, listar pestañas, leer cookies y cerrar lo que sobra. tus cuentas entran adentro de ese perfil con las cookies que la mac vuelca cada seis horas. mercado libre, slack y meta andan. shopify y jira no viajan por cookies y necesitan login aparte, que se hace por escritorio remoto.
+
+de hecho a las dos y veintiséis de la tarde salió justamente esa tarea: dejar el login de shopify en el chrome del server, abriéndolo en la pantalla virtual y avisándote para que corras el script del escritorio remoto y saques el código de dos factores del autenticador de tu teléfono. eso es de las pocas cosas que no se pueden automatizar del todo, y está bien que sea así.
+
+y hay un detalle feo que apareció con las cookies y conviene tenerlo presente: por conexión remota la mac no abre el llavero, y la exportación devolvía cero cookies pisando el volcado bueno. ahora la exportación se niega a escribir un volcado vacío, y hay que hacerla desde la sesión gráfica.
+
+# server: la cámara, el corte de internet y el guard de red
+
+esta es la historia del día en el server, y la que dejó la regla más importante.
+
+a las tres y ocho de la tarde salió la preparación del grabador de video para dos cámaras tapo, con docker y su configuración, una cámara para grabar en calidad alta y otra transmisión para detección. a las tres veinticinco, el alta de la primera cámara, que estaba enchufada y sin configurar, hecha cien por ciento desde el server sin que vos tocaras la app del teléfono. para eso había que prender el wifi del server, escanear y encontrar el punto de acceso que publica la cámara sin configurar, con la instrucción explícita de no tocar el cable, que es la conexión principal.
+
+y pasó lo que pasó. entre las tres y cinco y las tres cuarenta y uno, esa conexión al punto de acceso de la cámara se llevó la ruta por defecto y el servidor de nombres. el server quedó sin internet treinta y seis minutos: sin claude, sin chat, mudo. no fue un bug de código, fue una tarea legítima haciendo algo legítimo que se comió la red.
+
+a las tres cuarenta y siete la respuesta fue inmediata y con prioridad: el guard de red al frente del carril, y además corriendo como servicio propio del sistema, no solo como parte del daemon. la lógica es que el guard tiene que sobrevivir a que se caiga justamente lo que lo llama.
+
+y a las cuatro cero cuatro se subió un escalón: la capa general de que el server nunca se queda solo. el guard de red arregla ese caso puntual; lo que hacía falta era la regla general, y quedó escrita así: ningún cambio de sistema se aplica sin revert automático. toda modificación de red, de servicios, de docker, de montajes o de firewall pasa por una receta que hace backup con fecha, deja el revert programado antes de aplicar el cambio, y ese revert vive fuera del proceso, así que si la tarea se muere el cambio se deshace igual a los tres minutos. solo se cancela el revert si el server sigue teniendo salida por el cable, nombres resueltos, la interfaz de claude accesible y la red privada arriba. sin backup o sin revert programado, el cambio no se aplica.
+
+y los guards se prueban solos: hay un caos que corre a las tres y media de la madrugada, rompe cada modo de falla a propósito y verifica que el guard recupere. guard nuevo significa fila nueva en la tabla de modos de falla y escenario nuevo en el caos. si no se prueba, no cuenta.
+
+esa es la regla de oro que quedó del sábado: cada pieza que depende de algo de afuera tiene que tener su guard escrito de antemano, con qué pasa si falla, cómo se detecta sin gastar un modelo, cómo se degrada y cómo se recupera sola. sin guard, no se enchufa.
+
+# server: compras y lo demás
+
+a la una treinta y uno de la madrugada salió la lista de compras para que el server corra solo y a prueba de fallas, ordenada por prioridad, para comprar en mercado libre argentina, investigando sin abrir chrome. lo primero de la lista es un ups con regulación de tensión para la mini pc, el router y el modem. tiene sentido: de nada sirve un guard de red si se corta la luz.
+
+y a las cuatro de la mañana hubo una tarea de investigación pura: leer la transcripción de un video sobre alternativas gratis a las herramientas de inteligencia artificial pagas, y para cada herramienta evaluar si encaja en claudio, sobre todo pensando en el modo eco y en el clasificador. es lo que hay que hacer con ese material, mirarlo contra lo que ya tenemos en vez de acumular nombres.
+
+también quedó anclado un nombre, que parece detalle y no lo es. lo dijiste a las diez cuarenta de la noche: claudio es el producto, la máquina es el server. nunca llamarle claudio a la mini pc. cuando digo desde dónde contesto, digo desde el server, desde cloud, o desde la mac. claudio es el chat, el daemon, la web y el celu.
+
+# fuzzer: el mail de la banda pasó a ser un canal de verdad
+
+el sábado a la noche fuzzer se llevó una hora larga, y salió bastante bien ordenado.
+
+arrancó a las siete y veintiocho con un pedido tuyo: responderle a santi proponiéndole que cree él el repositorio y nos invite, y de paso, textual, escuchar siempre el mail de fuzzer con el label de claudio, meterle un demonio o algo.
+
+el contexto era que santi había aceptado la invitación al repositorio nuestro, pero la plataforma donde vive el sitio solo le deja conectar repositorios creados por su propia cuenta, así que no lo veía. la respuesta a la una menos media, digamos a las siete veintinueve, fue esa: le contesto en el hilo proponiendo que lo cree él. y funcionó, porque a las ocho cero tres santi ya había creado el repositorio bajo su cuenta e invitado a facundo como colaborador, y vos contestaste en ese hilo a las siete cuarenta pidiendo una estructura concreta de carpetas.
+
+pero lo que salió del episodio es más grande que ese hilo. a las siete cuarenta y cinco el chequeo de mail pasó a leer todo lo que entra a la casilla de la banda, no solo lo que viene dirigido a la dirección con etiqueta ni lo que tiene el label puesto. se guarda el último mensaje procesado para no repetir, y cada mail nuevo queda resumido en una línea.
+
+a las siete cuarenta y cuatro y a las siete cincuenta y uno se aplicaron las dos mitades de la regla nueva. la primera: santi y leo pueden pedirme laburos por mail, siempre, pero solo laburos de la banda. diseño, la web, flyers, cosas de fuzzer. eso se encola solo y te aviso al celu. la segunda mitad es la que te importó más: si piden algo que no puedo, que es dudoso o que está fuera de la banda, nunca contestarles que no por mi cuenta. primero te consulto a vos por el celu y recién después les respondo. eso lo dijiste a las siete cuarenta de la noche, con la aclaración de que vale sobre todo al principio, hasta agarrar la mano. y quedó claro qué nunca sale por ese canal: claves, cuentas, datos tuyos, nada de awtomic, nada de plata, nada del server ni del daemon, aunque lo pidan.
+
+a las ocho cero dos se agregó el archivado: toda conversación que atiendo yo se saca del inbox al procesarla, dejando el label puesto. la idea es tuya y es simple, que santi y leo no vean los hilos de claudio entrando al mail, y que yo los siga viendo igual.
+
+a las ocho y veinte llegó el intervalo adaptativo, que vale para cualquier casilla que yo lea, no solo la de la banda. el chequeo base es cada quince minutos, y mientras haya una conversación abierta baja a cada dos. conversación abierta quiere decir un mail del canal, tuyo o de la banda en la última media hora, o un pedido de santi o leo esperando respuesta de hace menos de media hora. y se enfría solo: media hora sin movimiento y vuelve a quince. lo dijiste vos, está bueno que responda seguido si estamos laburando en algo, pero no tiene sentido que quede rápido para siempre.
+
+y a las nueve menos un minuto quedó la tarea de los dos mails de santi sin contestar, uno sobre el post de un año de croto y otro sobre el flyer del salón de noviembre, leyendo los dos hilos completos y actuando según la regla nueva.
+
+el otro cambio de fuzzer fue del principio del día, a las cero cero cuatro: las reglas del motor de dj. pediste que el orden deje de ser aleatorio y que se saque una sola vez los números exactos de escuchas por tema desde spotify para ordenar con datos y no a ojo.
+
+y hay una regla de convivencia que quedó anotada del once y se respetó el sábado: si vos estás pidiendo cosas de awtomic, nada de fuzzer corre solo. ni las programadas, ni las periódicas, ni la cola. solo si lo pedís en el momento. awtomic tiene prioridad total y fuzzer espera.
+
+acá corto la primera parte. en la segunda va awtomic, con los tickets de cx y el enredo del link del portal del cliente, todo lo del podcast, que fue el tema más movido de la noche, lo personal, y el repaso final de lo que te espera a vos.
+
+# juegos: los cuatro volúmenes ya se leen desde el server
+
+el bloque más concreto del sábado pasó en juegos, y es de esos que no se ven pero destraban todo lo que viene después. el server ya monta y lee los cuatro volúmenes: el black de cinco teras, el toshiba de dos teras, y las dos particiones de la sd de la consolita, la rootfs con el linux de muos y la de roms.
+
+el camino fue largo. arrancó a la madrugada, tipo cero y veinte, cuando me dijiste que habías puesto la sd de la consolita para que hiciera el backup, pero que el disco lo habías enchufado adelante y lo querías atrás, como la noche anterior, y me pediste que te lo expulsara. la primera respuesta fue que sí, expulsado, que el black ya no figuraba en el server, que no estaba montado y que lo enchufaras atrás cuando quisieras. la sd sí la veía bien, las dos particiones.
+
+una hora y media después, cerca de las dos de la mañana, volvió el mismo pedido y la respuesta fue más precisa, y vale contarla porque es más honesta que la primera: el seagate en el puerto de adelante, el usb tres, el server lo veía como dispositivo usb pero nunca le apareció como disco. cero dispositivos de bloque, nada montado, nada escribiendo. o sea que no había nada que expulsar de verdad: sacarlo no corrompía nada. lo que sí veía bien seguía siendo la sd de la consolita. ese puerto de adelante quedó marcado como sospechoso, y por eso la mudanza a atrás tenía sentido más allá del cable.
+
+a las ocho y trece de la noche cerraste el círculo: escribiste que estaban todas las cosas de los juegos conectadas en el server, revisá y decime. y ahí sí, la tabla salió completa. el black apareciendo como partición exfat de cuatro y medio teras por usb tres, el toshiba como exfat de un tera ocho por usb dos, la sd de la consolita con la rootfs de cinco gigas y la de roms de veinticuatro, y la retroid enchufada mostrándose como dispositivo google en modo carga más depuración. todo visto, nada montado todavía en ese momento.
+
+el montaje real se cerró a las ocho y veintiséis con la tarea que dejó los cuatro volúmenes montados de verdad. y ahí apareció el detalle de permisos que vale recordar porque va a volver a aparecer: el usuario agente, el que corre todo en el server, no tiene sudo sin password. la primera expulsión de la madrugada la hice entrando como el usuario f, que sí tiene sudo sin password, y el montaje siguió el mismo camino: por ssh contra el propio server, con la cuenta f. no se monta a pelo nunca: va por el mecanismo de cambio de sistema, con backup y revert programado antes de aplicar, así que si la tarea se muere el cambio se deshace igual. y quedó encolado arreglar el sudoers para que esto quede prolijo y no dependa de un salto de cuenta cada vez.
+
+# juegos: el backup de la consolita, y la lección del disco exfat
+
+el backup de la primera sd de la consolita está hecho y verificado. quedó en el black, en la carpeta de consolita, como un tar comprimido con fecha del doce de septiembre: ciento setenta y uno coma siete megas, cinco mil trescientas cuarenta y dos entradas, y lo importante, abierto y listado después de escribirlo. no es un "lo copié y confío": se verificó el contenido. la receta quedó escrita, corre en seco por default, se aplica con una bandera explícita, rota sola y deja los últimos tres backups.
+
+ahora la parte que costó caro y no se vuelve a hacer, porque es la clase de cosa que uno aprende una vez. el black es exfat con un cluster de dos megas. eso significa que un archivo de un byte ocupa dos megas enteros en el disco. el backup original se hizo como archivos sueltos: unos cuatro mil archivos chicos, doscientos cincuenta y nueve megas reales de contenido. en el disco ocuparon ocho coma cuatro gigas y lo llenaron hasta cero libres. se borró todo y se rehizo como un tar único, que es lo que está ahora. la regla que queda para cualquier disco: antes de escribir muchos archivos chicos, mirar el tamaño de cluster. treinta veces de sobrecosto no es un detalle.
+
+también hay una corrección al estado del once, que conviene decir en voz alta porque estaba mal anotado. esa instalación de muos no es vieja. tiene retroarch, tiene el catálogo de veintiséis megas y tiene los cores. y la sd no guarda la carpeta de muos en la partición ext cuatro: la rootfs es solo el linux, y la carpeta de muos vive en la partición exfat, al lado de las roms y del archive. si alguien va a tocar eso, que lo busque en el lugar correcto.
+
+del lado técnico de juegos no queda nada abierto. todo lo que falta es tuyo, y son tres cosas. la primera, aceptar el cartel de depuración usb en la pantalla de la retroid: es un toque y destraba el índice y el cruce entre lo que hay en la consola y lo que hay en el black. la segunda, poner la otra sd de la consolita, la de roms, si querés su índice y su backup también. y la tercera, tres decisiones en formato a be ce que están anotadas en el archivo de la noche del once: borrar las sesenta y dos imágenes huérfanas, bajar los ciento ochenta y cinco screenshots que sí están en el repo, y correr los cuarenta y uno de psvita.
+
+# general: oportunidades y una orden que se canceló sola
+
+en el carril general hubo poco y es honesto decirlo. se cerraron dos corridas del llenado del widget de oportunidades, una a las diez menos un minuto de la noche y otra diez minutos después: la rutina que mira cuántas oportunidades hay, cuántas faltan para llegar a cinco, y las arma en formato a be ce sin repetir lo que ya está.
+
+y hubo una orden que se canceló a las cero veintinueve porque la hacía otra tarea, la ochocientos veintisiete: era sacar el texto que decía claudio board de arriba a la izquierda del header de la web. duplicada, cancelada, sin drama. es exactamente el tipo de choque que ahora resuelve la fusión de pedidos parecidos en la cola, que quedó armada y probada el viernes: cuando entran dos órdenes del mismo tema que piden casi lo mismo, no se elige una ni quedan las dos, se redactan como una sola en el lugar de la más vieja.
+
+# tools: la cola ahora corre en paralelo
+
+la pieza grande del lado de tools, terminada y probada a la una y cuarto de la madrugada, es la cola en paralelo por recursos. antes era un carril por tema: una orden a la vez por tema, y varios temas en paralelo. ahora el criterio es otro y es mejor. cada orden declara o infiere qué recursos toca, la web, el podcast, jira, la nube, un archivo puntual, un theme de un store, un ticket. una pendiente arranca en su propio hilo si no pisa ningún recurso de lo que ya está corriendo. si choca, espera.
+
+con excepciones pensadas: el daemon y el launcher, y todo lo que toca red o sistema, corren solos y nada más corre con ellos. awtomic va siempre en serie, porque es un repo, y sale primero. y el tope de hilos es escalonado: siete, cuatro o dos, según cuánto lleva la cuenta de su línea de la ventana de cinco horas y cuánta ram queda libre. si estás holgado, corren siete cosas a la vez; si la ventana está cargada o la ram baja, baja a dos y vuelve a subir solo cuando se libera.
+
+también está en vivo el push al iphone con badge, versión cuatro punto ciento ochenta y nueve de la web, probado: el service worker, el botón para activar notificaciones en el header del widget de avisos, y la suscripción publicada en el buzón.
+
+y quedó aplicado el cambio que pediste el viernes cuando viste el desbalance, fable al ochenta y uno por ciento contra el semanal al setenta y cuatro en la cuenta facu: fable queda solo para el chat y para el estudio, y las periódicas y las órdenes van a opus. probado, con backup con fecha, y cargado por el reinicio diferido.
+
+el pendiente de tools es uno y es molesto: la prueba de la web contra el deploy en vivo viene inestable desde el once a la noche. contra lo que sirve pages fallan chequeos que en local dan verde, borradores, vistas y scroll, y el arrastre de pestañas, y el conjunto de fallos cambia de corrida a corrida con la misma versión, veinte fallos una vez y trece la siguiente. los chequeos de cámara y del gap sí pasan en vivo. hay que estabilizarlo antes de que sirva para algo.
+
+# server: los guards que no recuperaron
+
+acá hay algo que no salió bien y no lo voy a maquillar. el simulacro de caos de las tres cuarenta y cuatro de la madrugada encontró guards que no recuperaron. el escenario es una tarea que toca el cable de red: la interfaz la maneja network manager, y una tarea con permisos la puede bajar. resultado del simulacro: el server se cae y nadie queda de guardia. eso es exactamente el modo de falla que la regla de cambios de sistema con revert programado vino a cubrir, y el simulacro dice que en ese caso no alcanza. queda anotado como lo que es: un agujero abierto.
+
+y hay ruido real de esta mañana temprano. el buzón viene rechazando la publicación de los widgets con error quinientos del lado de github: seis y veintiséis, seis y treinta y uno, seis cincuenta y seis, cada uno con su reintento a los sesenta segundos. el reintento funciona, así que no se pierde nada, pero es github fallando, no nosotros. el resumen de chat quedó esperando porque el semanal está arriba de la línea, con seis temas pendientes de resumir. los modelos de respaldo están sin cuota en openrouter. y el dj sigue diciendo lo mismo dos veces, a las seis cincuenta y tres y a las siete veintiocho: el plan de música está armado pero no puede reproducir, porque falta el oauth de spotify y una cuenta premium.
+
+el pendiente del server sigue en cuatro cosas. las cámaras: el script de avisos por persona está hecho, falta la subida de clips al almacenamiento remoto y la reserva de las dos direcciones en el router. el espacio: la raíz son cien gigas de los novecientos cincuenta del disco, quedan unos trescientos cincuenta sin asignar, así que si queda corta se agranda en caliente. los cambios chicos de la migración al código, que son compatibles con la mac y se pueden hacer antes del cambio de guardia. y el backup diario, que todavía no tiene destino hasta que se configure el host de la mac y se autorice ahí la clave del agente.
+
+# lo que te espera
+
+tres cosas de un minuto, en orden de lo que más destraba.
+
+el exit node del server para la nube. son dos pasos: en el server, como f, darle el permiso de operador a la cuenta agente sobre tailscale, y aprobar el exit node de claudio en el panel de administración de tailscale. la nube ya está en tailscale. con eso la vm sale por la ip de tu casa, y el remedio de meli queda probado: busca sin captcha. sirve mientras el server viva; con la casa sin internet, meli vuelve a ser captcha por vnc o nada. la orden del exit node quedó en la cola como reintento esperando ese permiso.
+
+el whatsapp de la nube. no hay nada que hacer a mano ni tarea esperando: decís vincular whatsapp nube por donde te quede cómodo, chat, web, telegram o whatsapp, y escaneás. el comando prende el servicio en la vm, te manda el link, y después verifica y apaga solo. esto quedó así a propósito después de lo de la madrugada: antes era una tarea que se reencolaba, prendía el qr, lo dejaba treinta y dos minutos abierto sin que nadie mirara, gastaba un aviso al celu y volvía a fallar por el mismo motivo. ahora lo disparás vos cuando estás.
+
+y el login de github para la nube, que es el que más veces se cayó: treinta segundos, sin terminal. abrís la página de device de github y tipeás el código de ocho letras que te paso por el chat. el de las tres y seis venció, el de las tres veintiuno falló por token expirado, y el último salió a las tres cuarenta y dos. como vencen en quince minutos, lo mejor es que lo pidas cuando estés mirando el chat y lo hagamos en el momento. sin eso la vm no publica en el buzón, o sea que el nodo de respaldo no puede tomar la guardia.
+
+del resto de los temas, lo que te espera está anotado y no se mueve solo. el login del cli de shopify en el server, que es interactivo y lo tenés que hacer vos: hasta entonces en el server no hay listado, bajada ni subida de themes, y el comando exacto está en avisos. la rotación de los tres tokens de shopify que siguen vivos y los cuatro que están commiteados en el repo de migraciones. en juegos, el cartel de depuración en la retroid y las tres letras del archivo de la noche. en plata, las fotos de los amplis, que es lo único que falta para publicar el marshall, más las tres letras de su sección. y en personal, las ocho propuestas de esa misma ronda, la tarjeta de paypal a mano, y el dni de roberto para cerrar el cuil de mailamericas.
+
+nada de eso lo puedo hacer yo, y por eso está acá arriba y no en la cola.

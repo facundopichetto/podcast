@@ -395,7 +395,158 @@
    "emision": "manana",
    "duracion": 639.4,
    "ts": "2026-09-13T08:00:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-13-manana-30m",
+   "fecha": "2026-09-13",
+   "titulo": "mañana · lo del sáb 12/9",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "general",
+    "juegos",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 7465,
+   "guion": "episodio-2026-09-13-manana-30m.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-manana-30m-daniela.mp3",
+     "duracion": 2202.0,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 73.5,
+       "archivo": "audio/ep-2026-09-13-manana-30m-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 73.5,
+       "titulo": "tools: la madrugada empezó chocando contra el límite",
+       "duracion": 100.7,
+       "archivo": "audio/ep-2026-09-13-manana-30m-2-tools-la-madrugada.daniela.mp3"
+      },
+      {
+       "t": 174.2,
+       "titulo": "tools: el chat no vuelve a pasar a eco solo",
+       "duracion": 86.6,
+       "archivo": "audio/ep-2026-09-13-manana-30m-3-tools-el-chat-no-vuelve.daniela.mp3"
+      },
+      {
+       "t": 260.8,
+       "titulo": "tools: dos cuentas de claude en el server, de verdad",
+       "duracion": 129.9,
+       "archivo": "audio/ep-2026-09-13-manana-30m-4-tools-dos-cuentas-de.daniela.mp3"
+      },
+      {
+       "t": 390.7,
+       "titulo": "tools: el reparto de cuentas y la línea de gasto",
+       "duracion": 87.3,
+       "archivo": "audio/ep-2026-09-13-manana-30m-5-tools-el-reparto-de.daniela.mp3"
+      },
+      {
+       "t": 478.0,
+       "titulo": "tools: claudio board, la web",
+       "duracion": 107.5,
+       "archivo": "audio/ep-2026-09-13-manana-30m-6-tools-claudio-board-la.daniela.mp3"
+      },
+      {
+       "t": 585.5,
+       "titulo": "tools: la cola aprendió a fusionar y a no pisarse",
+       "duracion": 100.6,
+       "archivo": "audio/ep-2026-09-13-manana-30m-7-tools-la-cola-aprendio.daniela.mp3"
+      },
+      {
+       "t": 686.1,
+       "titulo": "tools: zombies, reinicios y jira que no estaba",
+       "duracion": 92.9,
+       "archivo": "audio/ep-2026-09-13-manana-30m-8-tools-zombies-reinicios.daniela.mp3"
+      },
+      {
+       "t": 779.0,
+       "titulo": "tools: la bóveda de claves",
+       "duracion": 83.7,
+       "archivo": "audio/ep-2026-09-13-manana-30m-9-tools-la-boveda-de.daniela.mp3"
+      },
+      {
+       "t": 862.7,
+       "titulo": "server: discos, expulsar y una charla de madrugada",
+       "duracion": 117.2,
+       "archivo": "audio/ep-2026-09-13-manana-30m-10-server-discos-expulsar.daniela.mp3"
+      },
+      {
+       "t": 979.9,
+       "titulo": "server: chrome cien por ciento en el server",
+       "duracion": 98.2,
+       "archivo": "audio/ep-2026-09-13-manana-30m-11-server-chrome-cien-por.daniela.mp3"
+      },
+      {
+       "t": 1078.1,
+       "titulo": "server: la cámara, el corte de internet y el guard de red",
+       "duracion": 147.0,
+       "archivo": "audio/ep-2026-09-13-manana-30m-12-server-la-camara-el.daniela.mp3"
+      },
+      {
+       "t": 1225.1,
+       "titulo": "server: compras y lo demás",
+       "duracion": 62.8,
+       "archivo": "audio/ep-2026-09-13-manana-30m-13-server-compras-y-lo.daniela.mp3"
+      },
+      {
+       "t": 1287.9,
+       "titulo": "fuzzer: el mail de la banda pasó a ser un canal de verdad",
+       "duracion": 217.5,
+       "archivo": "audio/ep-2026-09-13-manana-30m-14-fuzzer-el-mail-de-la.daniela.mp3"
+      },
+      {
+       "t": 1505.5,
+       "titulo": "juegos: los cuatro volúmenes ya se leen desde el server",
+       "duracion": 152.2,
+       "archivo": "audio/ep-2026-09-13-manana-30m-15-juegos-los-cuatro.daniela.mp3"
+      },
+      {
+       "t": 1657.6,
+       "titulo": "juegos: el backup de la consolita, y la lección del disco exfat",
+       "duracion": 130.4,
+       "archivo": "audio/ep-2026-09-13-manana-30m-16-juegos-el-backup-de-la.daniela.mp3"
+      },
+      {
+       "t": 1788.0,
+       "titulo": "general: oportunidades y una orden que se canceló sola",
+       "duracion": 46.6,
+       "archivo": "audio/ep-2026-09-13-manana-30m-17-general-oportunidades-y.daniela.mp3"
+      },
+      {
+       "t": 1834.7,
+       "titulo": "tools: la cola ahora corre en paralelo",
+       "duracion": 115.9,
+       "archivo": "audio/ep-2026-09-13-manana-30m-18-tools-la-cola-ahora.daniela.mp3"
+      },
+      {
+       "t": 1950.5,
+       "titulo": "server: los guards que no recuperaron",
+       "duracion": 108.7,
+       "archivo": "audio/ep-2026-09-13-manana-30m-19-server-los-guards-que.daniela.mp3"
+      },
+      {
+       "t": 2059.3,
+       "titulo": "lo que te espera",
+       "duracion": 142.7,
+       "archivo": "audio/ep-2026-09-13-manana-30m-20-lo-que-te-espera.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-13-manana",
+   "version": "30m",
+   "emision": "manana",
+   "duracion": 2202.0,
+   "ts": "2026-09-13T08:00:00-03:00"
   }
  ],
- "actualizado": "2026-09-13 08:06"
+ "actualizado": "2026-09-13 08:21"
 }
