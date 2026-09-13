@@ -196,6 +196,17 @@ suelta en pausa, asi el play de los airpods reanuda (`reanudar()` repone el arch
 episodio tiene que tener su entero: `python3 -m recetas.podcast enteros` lo arma si falta (corre solo
 al final de `nuevo`). detalle y lo que falta probar en el celu, en `README.md`.
 
+## velocidad y airpods (facundo, 2026-09-13, `podcast-version 1.10`)
+
+- boton `#vel` al lado del tiempo: rota **`1x` / `1.25x` / `1.5x`**, se guarda en `localStorage.vel` y se
+  repone al cargar cada mp3 (safari vuelve a 1x con un src nuevo). un valor que no esta en `VELS` vuelve a 1x.
+- **doble toque en los airpods = capitulo siguiente** (`nexttrack`), triple = anterior (`previoustrack`: con
+  mas de 3 s del capitulo sonando vuelve a su inicio, si no al de antes). despues del ultimo capitulo pasa al
+  episodio siguiente.
+- **`seekforward` / `seekbackward` van en `null` a proposito**: en ios le ganan a `nexttrack`, el doble toque
+  adelantaba 30 s y el lock screen mostraba +30/-10. los saltos de 10 y 30 s quedan en los botones de la app.
+- lo chequea `prueba_podcast_web [--vivo]` (funcion `velocidad`, va ultima porque recarga la pagina).
+
 ## cada episodio dice cuando salio (facundo, 2026-09-12)
 
 **`ts` en `episodios.json`**: fecha y hora de emision, iso con offset de buenos aires
