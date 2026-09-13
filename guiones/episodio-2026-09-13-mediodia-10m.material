@@ -1,0 +1,167 @@
+## [tools] lo que se hizo en tools
+tareas cerradas:
+- 00:50 reparto de cuentas por modelo (facundo, 2026-09-13). hoy recetas/reparto_cuentas.py (evaluar/elegir, topes TOPE_TAREA 85 / TOPE_CHAT 90) saca a una cuenta si cualquiera de 5h, week o fable pasa el tope, entonces facu (fable 90%, week 80%) queda afuera también para tareas de opus. cambiar a reparto...
+- 00:55 en web/index.html, el hace Xs del header de los widgets (widEdad, línea ~1484 y ~3795, pintado en ~3179) se queda congelado porque solo se recalcula al repintar widgets.json. cambiarlo así: (1) guardar el ts del json en una variable y recalcular la edad con un setInterval de 1 s sin repintar todo...
+lo que hablo facundo en la pestaña:
+- 00:43 facundo: estamos teniendo en cuenta la posibilidad de delegar opus a facu? las cosas que vayan a opus, hacerlas con la cuenta de facu, ya que opus no esta en 90%. esto como regla en general independiente de facu o orugote. ideas? / claudio: sí, tiene sentido y hoy no se hace: el reparto mira los tres límites (5h, week, fable) juntos y saca a una cuenta de las tareas si cualquiera pasa el 85%. facu está afuera por fable 90%, aunque su cuota de opus (el week) sea otra. la regla que propongo, general para cualquier cuenta: el reparto decide por modelo, no...
+- 00:49 facundo: che los widgets dicen "hace Xs" y se quedan congelados un tiempo. yo diria que muestren si pasaron mas de 5 minutos. de todas maneras no refrescan demasiado rapido? o no consume nada eso? / claudio: lo del "hace Xs": se calcula solo cuando la web vuelve a pintar el json, no corre en vivo, por eso queda clavado. y el dato en sí lo publica el daemon cada 60 s (widgets_web), así que aunque la web pida cada 10 s a la vista, ve el mismo archivo varias veces. - tokens: cero. widgets_json es script puro sin modelo. lo...
+- 00:51 facundo: ok...
+
+## [server] lo que se hizo en server
+tareas cerradas:
+- 00:00 [opus] mudanza por defecto a la vm claudio-nube (facundo, 2026-09-12 22:00: "todo que pase cuanto antes"). corre DESPUÉS de la 949 (vm creada y bootstrap hecho) y la 961 (chat en cloud); si alguna no cerró, dejarlo [reintento] al final del carril y no arrancar. criterio (escribirlo en...
+- 00:02 en la vm claudio-nube (138.201.172.113, ssh como agente, host via recetas.login_nube.host()) hacer el login de github (python3 -m recetas.login_gh --abrir --nodo nube, mandar la url y el código de dispositivo a facundo por el chat y al celu; verificar con gh auth status en la vm) y poner la cuenta...
+- 00:03 [opus] mudanza por defecto a la vm claudio-nube (facundo, 2026-09-12 22:00: "todo que pase cuanto antes"). corre DESPUÉS de la 949 (vm creada y bootstrap hecho) y la 961 (chat en cloud); si alguna no cerró, dejarlo [reintento] al final del carril y no arrancar. criterio (escribirlo en...
+- 00:27 cuando gh auth status responda ok en la vm claudio-nube (138.201.172.113, ssh como agente, host via recetas.login_nube.host(); esperar hasta 20 min chequeando cada 30 s, si no entra avisar al celu y cortar), retomar la cadena de cloud que quedó cortada por falta de gh: (1) poner la cuenta de claude...
+- 00:31 escribir en ~/.claudio/server/NUBE.md la sección "chrome en cloud para emergencias": objetivo (facundo sin internet en casa por días, pide cosas desde el celu y se hacen desde cloud). hacer inventario de todas las recetas de ~/.claudio/tools/agente/recetas y scripts del daemon clasificando cada una...
+- 00:39 paso 1 del plan "chrome en cloud para emergencias" (~/.claudio/server/NUBE.md sección 8.5): sacar los secretos del rsync de bootstrap-nube.sh (--exclude tools/agente/secretos/, jira.json, slack.json y todo lo que la sección 8 marca como secreto)...
+
+## [podcast] lo que se hizo en podcast
+tareas cerradas:
+- 00:03 agregar estado "escuchado" al player del podcast (~/.claudio/tools/podcast/index.html, hoy solo guarda pos:<id> en localStorage). 1) marcar automático: cuando un episodio llega al final (evento ended o currentTime >= 90% de duration) guardar visto:<id>=1 en localStorage. 2) en la lista de episodios...
+- 00:38 diseñar e implementar el podcast automático de facundo (pedido 2026-09-13 desde el celu). estructura fija, "un demonio de podcast": 3 emisiones por día, cada una con tres versiones (10 min, 30 min, 1.5 h). la de las 08:00 (America/Argentina/Buenos_Aires) resume el día anterior; las otras dos...
+- 00:44 pronunciación del tts. armar un diccionario de pronunciación (podcast/pronunciacion.json) que se aplica al guion antes de renderizar audio: siglas deletreadas en castellano rioplatense (VNC "ve ene ce", SSH "ese ese hache", API "a pe i", PWA "pe doble ve a", CDP "ce de pe", TTS "te te ese"), nunca...
+- 00:57 capítulos vivos. cambiar el generador para que cada capítulo sea un borrador que arranca a escribirse cuando facundo marcó escuchado el anterior (dato de escuchados en la web), se re-redacta cada tanto (script del daemon, sin modelo salvo el pase de redacción) con lo nuevo de PROXIMO.md, y se...
+lo que hablo facundo en la pestaña:
+- 00:17 facundo: podcast automatico. 3 por dia. a las 8am resumen del dia anterior cada episodio del dia tiene verdion 10m version 30m version 1.5h eventualmente vamos a hacer alguno semanal o algo asi tambien te voy a hacer pedidos aparte pero esa estructura quiero un demoño de podcast las... / claudio: entendido. va a la cola como sistema, no como episodio suelto. lo que encolo: - 3 emisiones fijas por día: 08:00 (lo del día anterior), mediodía y noche (lo del día en curso). cada una en tres versiones: 10m...
+
+## [fuzzer] lo que se hizo en fuzzer
+lo que hablo facundo en la pestaña:
+- 01:47 facundo: che y el whatsapp lo mandaste ? / claudio: sí, salió: la presentación al grupo FUZZER se mandó a las 00:04 y la vi publicada en el grupo (id 3EB0CF22C2C8A582BA4AFA). fue una sola vez, como estaba autorizado. si te referís a otro whatsapp (a santi, o al canal público de la banda), no: nada más salió, decime cuál y lo armo.
+
+## [log] movimiento del agente
+- 13:27 cola: 1076 espera a 1061 por *exclusivo*: [grande] llena el widget de oportunidades. python3 ~/.claudio/tools/a
+- 13:27 cola: 1077 espera a 1066, que corre sola y va antes: [grande] tema tools: (1A, complemento de la 1a que ya está en la cola,
+- 13:27 cola: 1078 espera a 1061 por *exclusivo*: [grande] tema tools: (2A) el resumen rodante del chat nunca corrió (0
+- 13:27 cola: 1079 espera a 1063 por web: [grande] tema tools: (4A, complemento de la 3a que ya está en la cola,
+- 13:27 cola: 1080 espera a 1061 por *exclusivo*: [grande] tema tools: (3A) fable en tareas solo si facundo escribe [fa
+- 13:27 cola: 1081 espera a 1061 por *exclusivo*: [grande] tema tools: (5A) regla nueva de facundo (2026-09-13 13:05): c
+- 13:27 cola: 1082 espera a 1061 por *exclusivo*: [grande] tema tools: (7a) el refresco del oauth (script oauth_refresc
+- 13:27 cola: 1083 espera a 1061 por *exclusivo*: [grande] tema server: replicar el estado vivo de claudio entre nodos.
+- 13:27 cola: 1084 espera a 1063 por web: [grande] tema server: modo minimo de claudio sin claude y sin github.
+- 13:27 cola: 1085 espera a 1066, que corre sola y va antes: [grande] tema server: curar la memoria de claudio y probar la redundan
+- 13:27 cola: 1086 espera a 1061 por *exclusivo*: [grande] tema tools: recetas/prueba_chat_tema.py (y cualquier otra p
+- 13:27 cola: 1087 espera a 1063 por tui: [grande] tema personal: abrir con chrome (con la sesión de instagram l
+- 13:27 cola: 1088 espera a 1066, que corre sola y va antes: [grande] tema personal: facundo viaja a mendoza con amigos a fines de
+- 13:27 cola: 1090 espera a 1061 por *exclusivo*: [reintento] tema tools: estado en vivo del chat de la web y chat conte
+- 13:29 cambios acumulados, reinicio diferido hasta que no quede ninguna tarea corriendo
+
+## [server] como esta: server: SERVER — estado (mini pc para correr a claude 24/7)
+pendiente:
+- Camaras: el script de avisos por persona ya esta hecho (20:26, CAMARAS.md 10). Falta la subida de clips a R2 (CAMARAS.md 4) y la reserva dhcp de las dos ips en el router.
+- Espacio: el / son 100 gb de los 950 del nvme. Quedan ~350 gb sin asignar en ubuntu-vg despues del lv de frigate: si / queda corto se agranda con lvextend -r.
+- Aplicar los cambios de MIGRACION.md al codigo (PATH, sed -i.bak, cadena de clipboard). Son chicos y compatibles con mac, se pueden hacer antes del cambio de guardia.
+- MAC_HOST en backup.conf + autorizar la clave del agente en la mac: el backup diario no tiene destino hasta eso.
+esperando a facundo:
+- exit node del server para cloud (1 min, 2026-09-13 01:20): en el server, desde f: sudo tailscale set --operator=agente, y aprobar el exit node de claudio en login.tailscale.com/admin/machines. cloud ya esta en tailscale (100.87.19.20); la orden del exit node quedo [reintento] en la cola.
+- whatsapp de cloud (1 min, 2026-09-13 03:40): decir vincular whatsapp nube (chat, web, telegram o whatsapp) y escanear. no hay que hacerlo a mano ni hay tarea esperando: el comando prende el servicio en la vm, le manda el link (http://100.87.19.20:8766/, tailscale prendido) y despues verifica y apaga solo; si no llega...
+- Nodo CLOUD: faltan tres cosas suyas (2026-09-12 21:45, la vm ya esta bootstrapeada): (a) el /login de claude de esa maquina — la url esta en avisos.md, contesta codigo <x>; (b) un auth key de tailscale (login.tailscale.com > Settings > Keys), sin el cual el nodo no entra en la tailnet ni puede tomar la guardia; (c) gh...
+
+## [tools] como esta: tools: TOOLS — estado (claude code, iterm, chrome, tokens)
+en curso:
+- chat de la web: una sola respuesta, estado en vivo, nodo y modelo en el header (2026-09-13 13:27, orden 1060, probado): la respuesta doble de las 13:01 fue el server recien reiniciado (lock chat.json en libre sin leer + offset viejo) contestando lo que cloud ya habia contestado. arreglado con...
+- PLAN-INVENCIBLE capa 5, la mula eco (2026-09-13 12:39, probado): recetas/mula_eco.py. la cola marca cada orden [chica] / [grande] al encolar; con claude caido las chicas las corre un loop propio con groq/gemini (leer, escribir con backup, bash acotado a ~/.claudio, terminar; 15 pasos; corre la prueba de la orden y...
+- PLAN-INVENCIBLE capa 6, simulacro semanal (2026-09-13 12:10, probado): recetas/simulacro.py, SIN_CLAUDE en daemon.json = todo claude -p al falso en modo oauth. domingo 03:00 por 2 h (24 h tras dos limpios), reporte agente/noche/SIMULACRO-<fecha>.md, fallos a la cola [chica]. comandos simulacro on/off/estado, urgente...
+- salud.py (PLAN-INVENCIBLE capa 4) hecho 2026-09-13 11:45: tabla de vencimientos de credenciales en salud.json, widget salud, comando salud, aviso 24 h antes una sola vez. primera corrida: 6 rojo (4 gmail sin permiso, cloud colgada: ssh y tailscale), 1 amarillo (openrouter cuota).
+pendiente:
+- prueba_web_tabs --vivo viene flaky (2026-09-11 21:25): contra el deploy fallan chequeos que en local dan verde (borradores, vistas/scroll y el drag de pestañas), y el set cambia de corrida a corrida (20 fallos y despues 13 con la misma version). Los chequeos de camara y del gap si pasan vivos. Hay que estabilizarlo...
+esperando a facundo:
+- Permisos de accesibilidad y grabacion de pantalla para el agente (2026-09-08): en la mac, ajustes > privacidad y seguridad > accesibilidad y grabacion de pantalla, agregar iterm (y el python que usa el...
+
+## [awtomic] como esta: awtomic: AWTOMIC — estado
+en curso:
+- ok: chrome del server (cdp), jira rest (leer + permisos de comment/transicion/crear), github (clone, commit y push a rama de prueba en awtomic/docs, borrada; gh pr list), dynamo lectura (aws cli 2.36 en ~/.local/bin, credenciales iam facundo@awtomic.com traidas de la mac a ~/.aws, query en BundleShopifyApp-QA).
+- falla: shopify cli sin sesion en el server (sin theme list/pull/push; en la mac si anda), customer_login sin pin porque el gmail de awtomic esta vencido (link en avisos).
+- regla nueva en ~/.claude/CLAUDE.md: escritura en dynamo y push al live con pregunta explicita; push siempre --unpublished.
+- receta: python3 -m recetas.simulacro_cx rehace la tabla (cero tokens).
+pendiente:
+- Limpieza del QA store (alex-qa-2026-c2dyipnx): DECIDIDO esperar a que 6325 y 6414 esten Done, porque los setups se reusan. Recien entonces: revertir el tier Gold Members (3334) a producto 20% y Shipping discounts OFF (hoy quedo en 30% + free shipping min $10), apagar los FFs (launchMembershipDiscountShipping...
+- MVP-6451: dejar en el QA store el block "Subscription Widget" del template Default product (theme Horizon) y la config "MVP-6451 Texts Test" para re-verificar post merge. Limpiar los dos despues.
+- CX-4770 Poppy's BaB fix: CERRADO el 2026-09-03 (Needs to Follow Up) por falta de respuesta del merchant. Regla A validada, script listo, 2 subs en vivo, ~113 esperan confirmacion de Louise/Olexiy. Se reabre cuando contesten.
+- bundle-migration-handlers sin commitear: ~15 scripts bin/CX-*.js nuevos (4944, 4987, 4989, 4996, 5001, 5003) y ~20 CSVs de uponafarm sueltos en la raiz del repo. Decidir que se commitea y que se tira.
+esperando a facundo:
+- Tokens de Shopify expuestos (2026-09-09): rotar los 3 que siguen vivos (beauty-heroes-us, craggy-range, ohm-coffee-roasters...
+
+## [fuzzer] como esta: fuzzer: FUZZER — estado del proyecto
+en curso:
+- Lo que tiene que hacer Facundo: abrir el link que le quedo en avisos.md (uno por casilla), elegir esa cuenta, aceptar, y pegar en el chat la direccion de la pagina de error que le queda (http://localhost/?code=...). El daemon la reconoce solo, canjea y guarda: cero tokens.
+- Todo lo demas ya esta hecho: recetas/oauth_gmail.py (url, canje, backup del credentials viejo, chequeo de que la cuenta autorizada es la correcta), el script oauth_gmail del daemon cada 10 min (pide el link una vez cada 6 h y canjea lo que aparezca) y el comando de chat gmail estado / gmail auth <casilla>. Prueba...
+- Las otras dos casillas (orugote, facundopichetto) estan vencidas igual; no las usa nadie hoy.
+- Post por el ano de CROTO: le gusta la idea pero quiere la tipografia mas cerca del FUZZER de la tapa. Le dije que si al PSD que ofrecio (aislado, y si puede un PNG con transparencia de fuentes quedan solo para los datos. Lo del show de Orange estaba escrito con una condensada bold.
+pendiente:
+- Planilla Fuzzer | Gastos: Facundo dice que ya esta (7/9).
+- Pasar el Meta Verified de Apple a Meta. Apple le mete ~30% de comision. Hay que cancelar en Apple y resuscribir desde la web. Despues del 10/9, porque en el medio se puede caer el tilde.
+
+## [juegos] como esta: juegos: JUEGOS — estado (retroid pocket 5 + consolita rg35xxsp)
+en curso:
+- Los cuatro volumenes se montan y se leen desde el server. Se montan con cambio_sistema (backup + revert programado, nunca mount a pelo), y como agente no tiene sudo ni autorizacion de udisks, el mount lo corre la cuenta f por ssh -i ~/.claudio/server/id_claudio f@localhost (tiene sudo sin password).
+- Backup de la sd1 de la consolita: HECHO y verificado. /mnt/claudio/black/consolita/sd1-backup-2026-09-12.tar.gz, 171,7 MB, 5.342 entradas, abierto y listado despues de escribirlo. Receta: consolita/backup-sd1.py (seco por default, --aplicar, rota y deja los ultimos 3). Adentro...
+- Lo que costo caro y no se vuelve a hacer: black es exfat con cluster de 2 MB. Un archivo de 1 byte ocupa 2 MB. El backup suelto (unos 4.000 archivos chicos, 259 MB reales) ocupo 8,4 GB y lleno el disco a 0 libres. Se borro y se rehizo como un tar unico. Antes de escribir muchos archivos chicos en cualquier disco: stat...
+- Correccion al estado del 2026-09-11: esta muos no es vieja. Si tiene MUOS/retroarch, MUOS/info/catalogue (26 MB) y MUOS/info/core. Y la sd1 no guarda MUOS/ en la particion ext4: ROOTFS es solo el linux de muos, y MUOS/ vive en la particion exfat, junto a ROMS/ y ARCHIVE/.
+pendiente:
+- nada abierto del lado tecnico. lo que falta es de Facundo: ver ESPERANDO A FACUNDO.
+esperando a facundo:
+- Aceptar el cartel de depuracion usb en la retroid (destraba el indice y el cruce).
+- Poner la otra sd de la consolita (la de roms) si se quiere su indice y su backup.
+- 3 decisiones A/B/C en ~/.claudio/NOCHE-2026-09-11.md: (1) borrar las 62 media huerfanas, (2) bajar los 185 screenshots que si estan en el repo, (3) correr los 41 de psvita.
+
+## [plata] como esta: plata: PLATA — estado
+en curso:
+- Ronda nocturna hecha: seccion ## plata en ~/.claudio/NOCHE-2026-09-11.md con 3 puntos A/B/C para decidir (debitos de tarjeta, venta por api vs a mano, abrir ibkr). Nada publicado ni pagado.
+- Gastos, primer numero propio del tema: GASTOS-2026-09.md (90 dias, desde los recibos de gmail). Lo regenera solo python3 -m recetas.gastos_mail --escribir, cero tokens. Hallazgo: no hay suscripciones visibles. Netflix, Spotify, Google Play y Apple no mandan recibo por mail: sus debitos salen del resumen de la tarjeta....
+- Venta de amplis: marshall origin 20C combo y fender champion 600, precios cerrados, drafts escritos. venta/scripts/publicar_ml.py lee el draft y publica por api, pero la api hoy no deja (ver abajo). El camino que funciona es --manual. Faltan las fotos.
+- Plan de inversion: dejo de vivir solo en la memoria, esta en PLAN-INVERSION.md (8 pasos).
+pendiente:
+- Publicar el marshall primero (es el que mas deja): python3 venta/scripts/publicar_ml.py marshall --manual imprime titulo, precio, ficha y descripcion para pegar. Solo faltan las fotos.
+- Al fotografiar: pesar el ampli con caja (envio), mirar la etiqueta del parlante y anotar el codigo de barras de la caja (ese es el GTIN que pide la api).
+- Tracker de ibkr (script de lectura): se puede armar recien cuando haya numero de cuenta.
+- Rechequear el blue y los comparables de ML antes de publicar (los netos son del 2026-09-04, $1.545).
+esperando a facundo:
+- Elegir letra en los 3 puntos de la seccion ## plata de NOCHE-2026-09-11.md.
+- Fotos de los amplis (guion foto por foto en cada venta/PUBLICACION-*.md). Van en venta/img/marshall/ y venta/img/champion/, nombradas 01-..., 02-....
+- Si tiene caja original, manual y footswitch (suma precio y una foto).
+
+## [personal] como esta: personal: PERSONAL — estado
+en curso:
+- Antiparasitarios de Eva (24,5 kg): relevado meli el 12/09 en antiparasitarios-eva-2026-09-12.md. Nexgard Spectra y Drontal Plus no se consiguen en meli (orales bajo receta): van a veterinaria. En meli solo pipetas y collares (Frontline Plus 20-40 kg $16.500, Advantix 10-25 kg $14.999, Seresto +8 kg $69.490). Receta...
+- Ronda nocturna del 11/09 hecha (solo lectura, mails 30 dias + historial chrome). 8 propuestas con A/B/C en ~/.claudio/NOCHE-2026-09-11.md, seccion ## personal. Salida cruda en personal/radar-2026-09-11.txt. Espera respuesta de Facundo.
+- Recetas nuevas, probadas en seco: recetas/radar_personal.py (remitentes, cobros, tramites, mails sin responder, dominios) y recetas/paquetes.py (paquetes en vuelo, marca frenados), mas scripts/avisar_paquetes.sh (sin --escribir no toca nada).
+- DGI Uruguay: F LABS SAS (RUC 219208970014) omisa en el Reporte Diario desde el 01/07 hasta el 15/08. Tres intimaciones sin responder (15/08, 24/08, 01/09). Es tema flabs, llega al mail personal, nadie lo mira. Crece solo.
+pendiente:
+- Decidir compra: rango bajo (Kamrui Pinova P2, ~$460 puesto en Bs As) o medio (Geekom A5, ~$685), o el hp prodesk 400 g6 a 550k en ML (12/09).
+esperando a facundo:
+- Contestar las 8 propuestas de NOCHE-2026-09-11.md (1 A, 2 B, ...).
+- PayPal pidio actualizar la tarjeta el 09/09 (mail legitimo). Hacerlo a mano desde paypal.com.
+- MailAmericas: pasar el DNI de Roberto (o el nombre exacto) para cerrar el CUIL, y decidir si se usa ese CUIL (el mail avisa que sin autorizacion de el no se puede).
+
+## [cola] como esta: la cola del agente
+corriendo ahora:
+- [grande] tema tools: en la web (`web/index.html` + `web/manifest.json`, repo `agente-web`) esconder la barra de título de la pwa en mac: agregar `"display_override": ["window-controls-overlay", "standalone"]` al manifest (subir `version`)...
+en cola (26):
+- [grande] tema tools: regla nueva de facundo (2026-09-13 12:50): "siempre que haya una comunicación que sea en lan, intentar hacerla por lan primero. ejemplo, envío una screenshot, eso no debería viajar por internet al pedo si se puede...
+- [grande] tema tools: (1a) bajar el costo de entrada de cada mensaje del chat: hoy `chat_claude` en `daemon.py` manda ~70k chars de instrucciones (el `CLAUDE.md` de `~/.claudio/tools/agente`, 43k, más `MISION.md`, 23k, más las reglas de...
+- [grande] tema tools: (3a) reintentos inteligentes: hoy una tarea que falla se reencola con `[reintento]` y arranca de cero con opus (10 de 21 tareas ayer). antes de reencolar, un clasificador sin modelo (extender...
+- [grande] tema tools: (4a) las periódicas caras no leen logs crudos: `retro` (diaria), `oportunidades` (cada 12 h), `caos`, `simulacro` y `podcast_auto` en `PERIODICAS` de `daemon.py` leen `log.md`, `logs/` de 24 a 48 h (hoy 840 archivos) y...
+- [grande] tema tools: (5a) corrección de una tarea que ya corre: hoy cada `ORDEN:` del chat es un opus nuevo desde cero, y varias son correcciones de una que está `[>]` (ej. el tope de hilos 6 -> 7). en `daemon.py`, cuando el chat encola...
+- revisar ~/.claudio/tools/agente/propuestas.md: separar lo que sigue vivo de lo que ya se hizo o se murio. lo vivo que se pueda decidir con A/B/C sumarlo con `python3 oportunidades.py --agregar` (respetando el hueco de 5), lo demas mover a...
+- compactar la memoria del agente: dejar en ~/.claudio/tools/agente/estado.md solo las...
+
+## [avisos] como esta: avisos y ultimo movimiento
+avisos:
+- remota AGENTE CLOUD (facu) volvio
+- remota AGENTE CLOUD (orugote) volvio
+- 2026-09-13 12:15 podcast: salio tambien la version de 1.5 h (92.5 min) de la mañana (mañana · lo del sáb 12/9). https://facundopichetto.github.io/podcast/
+- 2026-09-13 12:16 chat en cloud andando desde 12:11 (probado: respuesta [cloud] en 7 s, board verde). se habia colgado 11:19-12:08 por un bug del relevo, arreglado; reinicie la vm 2 veces.
+- 2026-09-13 13:40 simulacro cx en el server: ok chrome, jira (leer y escribir), github (push a rama de prueba), dynamo lectura (aws cli nuevo). faltan 2 cosas tuyas: (1) login del shopify cli del...
+- 2026-09-13 12:57 web publicada v4.195: https://facundopichetto.github.io/agente-web/?v=4.195
+- 2026-09-13 13:24 web publicada v4.196: https://facundopichetto.github.io/agente-web/?v=4.196
+- 2026-09-13 13:31 web publicada v4.197: https://facundopichetto.github.io/agente-web/?v=4.197
+ultimo movimiento:
+- 2026-09-13 13:36 cola: 1093 espera a 1062 por *exclusivo*: [grande] tema tools: agilizar la cola de ordenes.md, hoy 25 pendientes
+- 2026-09-13 13:36 script gmail: chequeo cada 15 min (sin hilos abiertos)
+- 2026-09-13 13:36 script gmail: gmail: sin token de gmail (fuzzerbanda)
+- 2026-09-13 13:36 script aprobacion_claude: aprobacion claude: sin token de gmail awtomic (pedi reautorizar)
+- 2026-09-13 13:36 script uso_semanal: cuenta semanal (orugote): week 19.0%/7.9%, 5h 62.0%/91.4%, fable 22.0%/7.9%: las pesadas esperan por week, fable (solo chicas y programadas)
+- 2026-09-13 13:36 script probar_backups: modelos de respaldo: openrouter cuota
+- 2026-09-13 13:37 cola nube: encolo lo que mando cloud: - [ ] tema tools: corrección de la orden "fases del chat en vivo + spinner en la web" (enc
+- 2026-09-13 13:37 cola: 1094 espera a 1066, que corre sola y va...

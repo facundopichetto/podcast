@@ -1,0 +1,73 @@
+# de que va
+
+esto es la emisión de mediodía del domingo trece de septiembre, la versión corta, diez minutos. cubre lo que pasó desde la medianoche hasta las trece y media de hoy. no hay noticias acá, no hay temas de afuera: es solo lo que hicimos vos y yo, lo que se cerró, lo que se rompió y se arregló, y sobre todo lo que quedó esperándote.
+
+te aviso de entrada cómo viene la mano: el grueso del movimiento de hoy fue de madrugada, entre las cero y la una. de ahí en adelante el día fue más de cola y de mantenimiento que de cosas nuevas. así que la parte final de este episodio, la de lo que te espera, es la más cargada. si estás comiendo y solo querés escuchar una cosa, escuchá esa.
+
+# la madrugada de tools
+
+arrancamos a las cero cuarenta y tres con una pregunta tuya que terminó cambiando una regla de fondo. me preguntaste si estábamos teniendo en cuenta delegar las cosas de opus a la cuenta facu, ya que opus no estaba al noventa por ciento, y que eso valiera como regla general, no atado a una cuenta en particular.
+
+tenías razón y no se estaba haciendo. hasta ese momento el reparto miraba los tres límites juntos, la ventana de cinco horas, el semanal y el semanal de fable, y sacaba a una cuenta de todas las tareas si cualquiera de los tres pasaba el ochenta y cinco por ciento. o sea que facu, que tenía fable al noventa y el semanal al ochenta, quedaba afuera incluso para tareas de opus, aunque su cuota de opus fuera otra cosa completamente distinta.
+
+quedó cerrado a las cero cincuenta. ahora el reparto decide por modelo y no por cuenta. para lo que corre con opus solo cuentan la ventana de cinco horas y el semanal: la barra de fable no saca a nadie de una tarea de opus. para fable, que es el chat, siguen contando los tres. el efecto práctico es que una cuenta con fable al tope sigue haciendo tareas pesadas mientras su semanal dé. es de esas cosas que no se ven pero que devuelven horas de máquina por día.
+
+la segunda de la madrugada fue tuya también, a las cero cuarenta y nueve. dijiste que los widgets decían hace tantos segundos y se quedaban congelados un rato, y propusiste que mostraran si pasaron más de cinco minutos. de paso preguntaste si eso no refrescaba demasiado rápido y si consumía algo.
+
+la respuesta a lo segundo es que no consume nada: el que arma los widgets es un script puro, sin modelo, cero tokens. lo que pasaba era que la edad se calculaba solo cuando la web volvía a pintar el archivo completo, no corría en vivo, y por eso quedaba clavada. el dato lo publica el proceso de fondo cada sesenta segundos, así que aunque la página pregunte cada diez, ve el mismo archivo varias veces y el número no se mueve. quedó arreglado a las cero cincuenta y cinco: ahora se guarda la marca de tiempo y la edad se recalcula sola cada segundo, sin repintar todo. dijiste ok y seguimos.
+
+# la mudanza a cloud
+
+el bloque más grande de la madrugada fue el de server, y fue todo la misma historia: mover a claudio a la máquina de la nube.
+
+a las cero cero arrancó la mudanza por defecto a la vm, con la condición de que corriera después de que estuvieran cerradas la creación de la máquina y el chat en cloud. a las cero cero dos se hizo el login de github en esa vm, con el código de dispositivo mandado al chat y al celu, y verificado del otro lado. a las cero veintisiete, cuando ese login respondió bien, se retomó toda la cadena que había quedado cortada justamente por no tener github ahí: poner la cuenta de claude, y lo que venía atrás.
+
+a las cero treinta y uno se escribió una sección nueva sobre chrome en cloud para emergencias. el objetivo es concreto y sale de algo que dijiste vos: si te quedás sin internet en casa por varios días, vas a pedir cosas desde el celu y esas cosas se van a tener que hacer desde la nube. para eso se hizo un inventario de todas las recetas y todos los scripts, clasificando cada uno según si puede correr allá o no.
+
+y a las cero treinta y nueve se hizo el primer paso de ese plan, que era el más delicado: sacar los secretos de la sincronización que arma la máquina nueva. antes, al levantar la vm, viajaba todo, incluida la carpeta de secretos y las credenciales de jira y de slack. ahora eso queda excluido explícitamente. un login vive en una sola máquina y no se transplanta, ya nos pasó una vez que copiar un oauth mató los dos lados.
+
+el resto del día de cloud fue menos prolijo. a las doce dieciséis quedó anotado que el chat en la nube volvió a andar desde las doce once, probado con una respuesta en siete segundos y el tablero en verde. pero se había colgado casi una hora, entre las once diecinueve y las doce ocho, por un error en el relevo entre nodos. está arreglado y hubo que reiniciar la vm dos veces.
+
+relacionado con eso: a las trece y media se dejó cerrado un problema más feo, la respuesta doble de las trece y uno. fue el server recién reiniciado contestando lo que la nube ya había contestado, porque tomó el candado del chat como libre sin leerlo y arrancó desde una posición vieja. ahora hay una sola respuesta, con estado en vivo mientras se piensa, y el nodo y el modelo escritos en el encabezado de cada mensaje. si ves algo raro en el chat, mirá ahí: te dice quién te contestó y cuánto tardó.
+
+# el podcast, que es esto
+
+esto que estás escuchando nació hoy a las cero diecisiete, cuando lo pediste desde el celu. tres emisiones por día, la de las ocho resumiendo el día anterior y las otras dos el día en curso, cada una en tres versiones: diez minutos, treinta minutos y hora y media. dijiste que querías un demonio de podcast, no un episodio suelto, y así se encoló.
+
+a las cero treinta y ocho quedó diseñado e implementado con esa estructura fija. a las cero tres se le agregó al reproductor el estado de escuchado: cuando un episodio llega al final, o pasa el noventa por ciento, queda marcado, y eso se ve en la lista.
+
+a las cero cuarenta y cuatro se armó el diccionario de pronunciación, que es lo que hace que esto no suene a robot leyendo siglas en inglés. las siglas se deletrean en castellano rioplatense y la ve es ve, no u. se aplica al guion antes de renderizar el audio, siempre.
+
+y a las cero cincuenta y siete se hizo lo de los capítulos vivos: cada capítulo es un borrador que empieza a escribirse cuando vos marcaste escuchado el anterior, se va reescribiendo cada tanto con lo nuevo, y recién se congela cuando lo escuchás. o sea que lo que estás oyendo se terminó de decidir hace un rato.
+
+a las doce quince salió la versión de hora y media de la emisión de la mañana, noventa y dos minutos y medio, sobre lo del sábado doce.
+
+de fuzzer hubo poco: a la una cuarenta y siete preguntaste si el whatsapp se había mandado. sí, salió a las cero cero cuatro, la presentación al grupo de la banda, y la vi publicada. una sola vez, como estaba autorizado. si te referías a otro, a santi o al canal público, no salió nada más.
+
+# la cola y el estado de hoy
+
+la foto de la cola a las trece y media es honesta: está tapada. hay veintiséis órdenes esperando y una sola corriendo, que es esconder la barra de título de la aplicación web en la mac.
+
+la mayoría está frenada por lo mismo. varias esperan a una tarea marcada como exclusiva, que corre sola y no comparte carril con nadie, y otras esperan por la web o por la consola porque tocan los mismos archivos. hay órdenes ahí que son bastante importantes: bajar el costo de entrada de cada mensaje del chat, que hoy manda unos setenta mil caracteres de instrucciones por mensaje; hacer los reintentos más inteligentes, porque hoy una tarea que falla arranca de cero con opus y ayer eso pasó diez veces de veintiuna; que las rutinas caras dejen de leer ochocientos cuarenta archivos de log crudos; y poder corregir una tarea que ya está corriendo en vez de largar otra nueva.
+
+también quedó encolado lo que dijiste a las doce cincuenta: que si una comunicación puede ir por la red local, vaya por la red local primero. mandar una captura de pantalla dando la vuelta por internet cuando las dos máquinas están a un metro no tiene sentido.
+
+de las capas del plan grande hay tres terminadas hoy. la mula eco, que hace que las tareas chicas se sigan haciendo con modelos gratis si claude se cae. el simulacro semanal, que los domingos a las tres de la mañana finge que claude no existe durante dos horas y deja un informe de qué se rompió. y la tabla de vencimientos de credenciales, con aviso veinticuatro horas antes, una sola vez. la primera corrida de esa tabla dio seis en rojo: cuatro casillas de gmail sin permiso y la máquina de la nube colgada por ese lado.
+
+# lo que te espera
+
+esto es lo tuyo y es lo que más destraba. te lo digo de más rápido a más lento.
+
+lo de un minuto. primero, el nodo de salida en tailscale: en el server, desde tu usuario, correr el comando que le da el control al agente, y aprobar ese nodo en el panel de tailscale. la máquina de la nube ya está en la red, la orden quedó esperando en la cola. segundo, el whatsapp de la nube: escribí vincular whatsapp nube en cualquier canal y escaneá el código. no hay que hacer nada a mano, el comando prende el servicio, te manda el link y después verifica y apaga solo.
+
+después, lo que sigue trabando cloud. faltan tres cosas tuyas: el login de claude de esa máquina, que la dirección está en avisos y contestás con el código; una clave de autenticación de tailscale, sin la cual ese nodo no puede tomar la guardia; y lo de github.
+
+de gmail: quedaron links, uno por casilla. abrís, elegís la cuenta, aceptás, y pegás en el chat la dirección de error que te queda. el resto lo hace el sistema solo, sin gastar nada. eso es lo que está dejando cuatro casillas en rojo y lo que hace que el gmail de awtomic no pueda pedir el pin del login de clientes.
+
+de awtomic: falta el login del cliente de shopify en el server, que es lo único que impide tocar temas allá. y siguen esperando la rotación de los tres tokens de shopify que quedaron expuestos el nueve.
+
+y después está todo lo que viene esperando hace días y no se mueve. las ocho propuestas de la ronda personal, que necesitan una letra cada una. los tres puntos de plata, lo mismo. las tres decisiones de juegos, más aceptar el cartel de depuración en la retroid. las fotos de los amplis, que es lo único que falta para publicar el marshall, que es el que más deja. y los permisos de accesibilidad y grabación de pantalla en la mac, que vienen del ocho.
+
+si querés hacer una sola cosa después de comer, hacé las dos de un minuto: el nodo de salida y el whatsapp. eso destraba la nube entera, que es lo que te va a servir el día que te quedes sin internet.
+
+nos escuchamos a la noche.
