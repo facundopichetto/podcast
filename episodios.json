@@ -1082,7 +1082,151 @@
    "emision": "mediodia",
    "duracion": 594.6,
    "ts": "2026-09-13T13:30:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-13-mediodia-30m",
+   "fecha": "2026-09-13",
+   "titulo": "mediodía · dom 13/9 hasta las 13:30",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "juegos",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 6078,
+   "guion": "episodio-2026-09-13-mediodia-30m.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-mediodia-30m-daniela.mp3",
+     "duracion": 1819.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 64.5,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 64.5,
+       "titulo": "reparto de cuentas por modelo",
+       "duracion": 103.2,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-2-reparto-de-cuentas-por.daniela.mp3"
+      },
+      {
+       "t": 167.7,
+       "titulo": "el hace equis segundos que se quedaba congelado",
+       "duracion": 69.7,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-3-el-hace-equis-segundos.daniela.mp3"
+      },
+      {
+       "t": 237.4,
+       "titulo": "la cola en paralelo",
+       "duracion": 105.8,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-4-la-cola-en-paralelo.daniela.mp3"
+      },
+      {
+       "t": 343.2,
+       "titulo": "cuantos hilos a la vez",
+       "duracion": 116.2,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-5-cuantos-hilos-a-la-vez.daniela.mp3"
+      },
+      {
+       "t": 459.4,
+       "titulo": "el estado que pediste a las cero cincuenta y uno",
+       "duracion": 36.8,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-6-el-estado-que-pediste-a.daniela.mp3"
+      },
+      {
+       "t": 496.2,
+       "titulo": "cloud, lo que avanzó y donde se trabó",
+       "duracion": 91.2,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-7-cloud-lo-que-avanzo-y.daniela.mp3"
+      },
+      {
+       "t": 587.4,
+       "titulo": "chrome en cloud para emergencias",
+       "duracion": 120.9,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-8-chrome-en-cloud-para.daniela.mp3"
+      },
+      {
+       "t": 708.2,
+       "titulo": "el podcast que estas escuchando",
+       "duracion": 123.9,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-9-el-podcast-que-estas.daniela.mp3"
+      },
+      {
+       "t": 832.1,
+       "titulo": "fuzzer, corto",
+       "duracion": 32.8,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-10-fuzzer-corto.daniela.mp3"
+      },
+      {
+       "t": 864.9,
+       "titulo": "lo que se armó en tools",
+       "duracion": 157.1,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-11-lo-que-se-armo-en-tools.daniela.mp3"
+      },
+      {
+       "t": 1022.1,
+       "titulo": "la mula eco",
+       "duracion": 85.8,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-12-la-mula-eco.daniela.mp3"
+      },
+      {
+       "t": 1107.9,
+       "titulo": "la respuesta doble del chat",
+       "duracion": 102.5,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-13-la-respuesta-doble-del.daniela.mp3"
+      },
+      {
+       "t": 1210.4,
+       "titulo": "lo que se rompió y se arregló en cloud",
+       "duracion": 31.2,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-14-lo-que-se-rompio-y-se.daniela.mp3"
+      },
+      {
+       "t": 1241.6,
+       "titulo": "lo que quedó pendiente en tools",
+       "duracion": 81.0,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-15-lo-que-quedo-pendiente.daniela.mp3"
+      },
+      {
+       "t": 1322.6,
+       "titulo": "la cola",
+       "duracion": 154.5,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-16-la-cola.daniela.mp3"
+      },
+      {
+       "t": 1477.0,
+       "titulo": "awtomic",
+       "duracion": 131.7,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-17-awtomic.daniela.mp3"
+      },
+      {
+       "t": 1608.7,
+       "titulo": "fuzzer, juegos, plata y personal",
+       "duracion": 148.2,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-18-fuzzer-juegos-plata-y.daniela.mp3"
+      },
+      {
+       "t": 1757.0,
+       "titulo": "lo que te espera",
+       "duracion": 62.8,
+       "archivo": "audio/ep-2026-09-13-mediodia-30m-19-lo-que-te-espera.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-13-mediodia",
+   "version": "30m",
+   "emision": "mediodia",
+   "duracion": 1819.9,
+   "ts": "2026-09-13T13:30:00-03:00"
   }
  ],
- "actualizado": "2026-09-13 13:40"
+ "actualizado": "2026-09-13 13:51"
 }

@@ -1,0 +1,213 @@
+# de que va
+
+buenas, son las trece y media del domingo trece de septiembre y esta es la emision de mediodia, version de treinta minutos. lo que sigue es lo que pasó hoy entre las cero y las trece y media, contado de punta a punta, y solo con lo nuestro: tareas, charlas con vos, cosas que se cerraron y cosas que quedaron esperando.
+
+el dia arrancó fuerte y de madrugada. entre las cero y la una hubo una tanda larga de charla tuya en cuatro temas a la vez, y cada una de esas charlas terminó en cola. tools se llevó la parte gruesa, con dos cambios de fondo en como el sistema decide con que cuenta trabaja y como corre varias cosas al mismo tiempo. server siguió con la mudanza a la maquina de cloud, que avanzó bastante pero quedó trabada en un punto muy concreto. podcast nació entero esta madrugada, que es justamente por lo que estas escuchando esto. y fuzzer tuvo una sola cosa, corta, pero cerrada.
+
+en esta primera parte te cuento tools, server, podcast y fuzzer, con el detalle de cada conversacion y que quedó encolado de cada una. despues, en la segunda parte, va el movimiento del agente de las ultimas horas, como quedó la cola ahora mismo, y todo lo que te esta esperando a vos.
+
+# reparto de cuentas por modelo
+
+esta fue la primera cosa que arreglamos hoy, y salió de una pregunta tuya a las cero cuarenta y tres. preguntaste si estabamos teniendo en cuenta la posibilidad de delegar opus a facu: o sea, lo que va a opus que salga con esa cuenta, porque opus no estaba en noventa por ciento. y lo planteaste bien, como regla general, independiente de si la cuenta es facu o es orugote.
+
+tenias razon y no se estaba haciendo. el reparto miraba los tres limites juntos, el de cinco horas, el semanal y el de fable, y sacaba a una cuenta de las tareas si cualquiera de los tres pasaba el ochenta y cinco por ciento. entonces facu, que tenia fable en noventa y el semanal en ochenta, quedaba afuera para todo, incluidas las tareas de opus, aunque su cuota de opus estuviera perfectamente sana. era un desperdicio: una barra llena de un modelo bloqueaba el trabajo de otro modelo distinto.
+
+el cambio quedó cerrado a las cero cincuenta. ahora el reparto decide por modelo y no por cuenta. para opus, y para cualquier modelo que no sea fable, solo cuentan el limite de cinco horas y el semanal: la barra de fable ya no saca a nadie de las tareas de opus. para fable, que es el modelo con el que te contesto en el chat, cuentan los tres. si no se le dice que modelo es, se asume que el chat es fable y la tarea es opus. cada llamada le pasa su modelo real al reparto, asi que la tarea usa el de su orden y el chat el suyo.
+
+el ejemplo concreto de hoy: con facu en fable noventa y semanal ochenta, opus sale con facu y el chat sale con orugote. si facu llega a ochenta y seis de semanal, ahi si se va todo a orugote. y el widget de uso ahora publica una linea por modelo, diciendo cual cuenta se usa para cada uno y por que. el log tambien lo anota en cada tarea. una cuenta fijada a mano sigue ganando sobre todo esto.
+
+# el hace equis segundos que se quedaba congelado
+
+a las cero cuarenta y nueve dijiste algo que venias viendo hace rato: que los widgets dicen hace equis segundos y se quedan congelados un tiempo. propusiste que muestren si pasaron mas de cinco minutos. y de paso preguntaste si no refrescan demasiado rapido, o si eso no consume nada.
+
+la respuesta a lo del consumo es la corta y la buena: cero. el que arma los widgets es un script puro, sin modelo, no gasta nada. lo que pasaba con el numerito es otra cosa: la edad se calculaba una sola vez, cuando la web volvia a pintar el archivo de widgets. no corria en vivo. entonces el numero quedaba clavado en lo que era cuando se pintó, y hasta que no hubiera un repintado no se movia. encima el dato lo publica el daemon cada sesenta segundos, asi que aunque la web pida cada diez segundos estando a la vista, muchas veces ve exactamente el mismo archivo varias veces seguidas.
+
+el arreglo quedó encolado a las cero cincuenta y cinco y es sencillo: guardar la marca de tiempo del archivo en una variable y recalcular la edad con un intervalo de un segundo, sin repintar todo. asi el numero corre solo, sin rehacer los widgets, y sin costo. es una de esas cosas chicas que molestan todo el dia y que se arreglan una vez.
+
+# la cola en paralelo
+
+esta es la mas grande del dia y salió de tu mensaje de las cero cincuenta y cuatro. lo dijiste asi: che, las colas no se pueden hacer en paralelo, tipo si algo esta en la cola y no jode con nada que se este haciendo actualmente, arrancarlo. y diste el ejemplo justo: si hay un cambio en el board, el siguiente quiza tenga que esperar, pero si estas actualizando la web de otra cosa, no.
+
+hasta ese momento era un carril por tema. una orden a la vez por tema, varios temas en paralelo. eso significaba que una tarea de widgets esperaba a la de adelante aunque la de adelante fuera de algo completamente distinto. lo unico que compartian era la etiqueta del tema.
+
+lo que quedó armado cambia el criterio: carriles por recurso, no por tema. cada orden declara, o el daemon infiere sin gastar nada, por rutas y palabras clave, que cosas toca. el archivo de la web, el daemon, el podcast, una receta puntual, un tema de jira, un theme de una tienda, la nube, la interfaz de consola, la aplicacion, whatsapp, las camaras. los archivos de estado que tocan todas, como los estados y los logs, no cuentan, porque si contaran nunca podria correr nada en paralelo. si una orden no da ninguna pista, queda con el recurso del tema, o sea que se comporta como antes, en serie dentro de su tema.
+
+la regla de arranque es: una pendiente arranca en un hilo aparte si no comparte ningun recurso con las que ya estan corriendo, y si hay lugar bajo el tope. si choca, espera. hay dos excepciones importantes. el daemon y el lanzador, y todo lo que toque red o sistema, son exclusivos: corren solos y nada mas corre mientras tanto. y una exclusiva que espera no se saltea, o sea que lo que esta detras de ella en la cola espera con ella, salvo awtomic, que siempre tiene prioridad y siempre va en serie sobre su propio repositorio porque es un solo repo.
+
+# cuantos hilos a la vez
+
+atras de eso vino la discusion del tope. a las cero cincuenta y cinco preguntaste: tope tres o cuatro, no es mejor mas grande el tope. y la respuesta es que el tope no lo pone la cola, lo pone lo que hay abajo.
+
+son tres cosas. la ventana de cinco horas: cada llamada en paralelo come la misma ventana, asi que con ocho hilos la reventas en media hora y despues se frena todo, chat incluido. la maquina: cada tarea es un proceso grande, de trescientos a quinientos megas, mas chrome si lo llega a abrir, y la mini pc tiene memoria para unos seis, no para quince. y los choques: cuantos mas hilos, mas probabilidad de que dos toquen lo mismo y haya que deshacer.
+
+a las cero cincuenta y seis cerraste la discusion con la decision correcta: vamos a probar la cantidad de hilos abiertos segun como venga el de cinco horas, arrancamos con siete. y asi quedó. el tope arranca en siete y se ajusta solo, escalonado. se mira cuanto lleva la cuenta elegida de su propia linea de la ventana de cinco horas, no el porcentaje crudo. si va por debajo del cincuenta por ciento de su linea, siete hilos. entre cincuenta y ochenta y cinco, cuatro. de ochenta y cinco para arriba, o si queda menos de un giga y medio de memoria disponible, dos. y vuelve a subir solo cuando afloja.
+
+todo eso se ajusta desde la configuracion sin tocar codigo: el maximo, los escalones y los cortes. cada vez que cambia de escalon deja una linea en el log diciendo el tope viejo, el nuevo y el motivo, con el numero de la ventana y la memoria libre. y como ahora hay varias tareas escribiendo al mismo tiempo, se pusieron candados sobre el archivo de ordenes y sobre el de configuracion, y sobre el marcado de versiones.
+
+a las cero cincuenta y ocho cerraste la tanda con esto: dale prioridad a eso asi terminan todas las cosas en cola, por dios, no puede ser que yo vaya mas rapido que mi sistema. la de carriles ya estaba primera y corriendo desde las cero cincuenta y cinco, y el ajuste a siete hilos salió pegado atras.
+
+# el estado que pediste a las cero cincuenta y uno
+
+en el medio de todo eso preguntaste el estado de todo y si habia algun proceso zombie. no habia: cero procesos en estado zeta, y los tres identificadores de las tareas que figuraban corriendo estaban vivos y coincidian con lo que decia la configuracion del daemon. era un chequeo real, no una lectura del archivo.
+
+los tres carriles en ese momento eran: server, corriendo desde las cero treinta y nueve, con tailscale en cloud y el nodo de salida, esperando tu clave de autorizacion si es que no estaba en la boveda. podcast, desde las cero cuarenta y cuatro, con los capitulos vivos. y tools, desde las cero cincuenta, con el arreglo del numerito de los widgets.
+
+# cloud, lo que avanzó y donde se trabó
+
+server fue el tema mas largo de la madrugada y el unico que a las trece y media sigue sin cerrar del todo. la idea de fondo es la mudanza por defecto a la maquina virtual de cloud, que pediste anoche a las veintidos con la frase todo que pase cuanto antes.
+
+la mudanza estaba condicionada: corria despues de que la maquina estuviera creada y con el arranque hecho, y despues del chat en cloud. si alguna de esas dos no habia cerrado, la tarea se dejaba al final del carril y no arrancaba. eso pasó dos veces, a las cero cero y a las cero cero tres, porque faltaba una cosa sola: el login de github en la maquina.
+
+a las cero veintitres apareciste con el mensaje mas util de la noche: bueno estoy en la mac, que hago, quiero terminar lo de cloud pleaseee. y lo que trababa era exactamente eso. sin github, la maquina no puede publicar en el buzon ni tomar el chat, y el codigo de dispositivo anterior habia vencido a las cero trece. las dos tareas de mudanza habian cerrado en un minuto justamente por eso, no porque se hubieran hecho. te generé uno nuevo, el efe de uno seis, a cuatro cuatro be, con quince minutos de vida.
+
+a las cero cuarenta y ocho preguntaste como venia y la respuesta fue honesta: avanzó la parte de plan, pero el chat en cloud seguia trabado por github. el primer codigo no sirvió por un bug de la receta, el identificador de cliente estaba mal, y eso ya quedó arreglado. el segundo, el efe ocho cuatro cero de cuatro be tres, venció a las cero cuarenta y dos sin que lo tipearas. encima las dos cuentas tocaron el limite de cinco horas en ese rato, asi que el ritmo bajó.
+
+# chrome en cloud para emergencias
+
+a las cero veintiocho planteaste algo que no era urgente pero si importante: necesito que cloud pueda eventualmente hacer las cosas de chrome que puede hacer el server. no sobre la marcha, sino por si hay una emergencia. y diste el escenario exacto: me quedo sin internet en casa por tres dias, quiero poder laburar con el celu pidiendote cosas y que se hagan desde cloud.
+
+se puede, y la clave es que el chrome de cloud sea un clon del chrome del server, dormido hasta que haga falta. mismo script, misma pantalla virtual, mismo protocolo de control, instalado desde el arranque de la maquina pero apagado, y que se prenda solo cuando hace falta. a las cero treinta y tres dijiste hace todas las sugerencias sobre lo de cloud, me gustaron, y eso se convirtió en una cadena de ocho pasos escrita en el documento de la nube, encolada en el carril de server.
+
+de esos ocho pasos, dos dependen de vos y te los aviso cuando toque: la clave de autorizacion de tailscale, que es el paso dos, y el codigo de whatsapp como segundo dispositivo, que es el paso seis.
+
+a las cero treinta y uno se escribió la seccion de emergencias en el documento de la nube, con un inventario de todas las recetas y todos los scripts del daemon, clasificando cada uno segun si puede correr en cloud o no. y a las cero treinta y nueve se hizo el paso uno, que era el mas delicado: sacar los secretos de la sincronizacion del arranque. o sea, que cuando la maquina de cloud se arma copiando del server, no se copie la carpeta de secretos, ni el archivo de jira, ni el de slack, ni nada de lo que el inventario marca como secreto. en su lugar quedó una lista cerrada de lo que si tiene que viajar. es la aplicacion directa de la regla de que un secreto de login vive en una sola maquina.
+
+a las nueve treinta y cuatro, ya de mañana, volviste a preguntar: como viene el server cloud, que le falta. y el estado es bastante bueno. la maquina esta viva, tailscale ok, las dos cuentas de claude en modo automatico, chrome dormido, cookies y tokens probados, la parte de emergencia hecha y el simulacro hecho. lo unico que traba el chat en cloud sigue siendo github: la maquina sigue sin ese login.
+
+# el podcast que estas escuchando
+
+a las cero diecisiete pediste esto mismo. lo dijiste corto: podcast automatico, tres por dia, a las ocho el resumen del dia anterior, cada episodio del dia con version de diez minutos, de treinta y de una hora y media, eventualmente alguno semanal, y que ademas te voy a hacer pedidos aparte. la frase que definió todo fue quiero un demonio de podcast: no un episodio suelto, un sistema.
+
+quedó encolado asi: tres emisiones fijas por dia, la de las ocho con lo del dia anterior, la de mediodia y la de la noche con lo del dia en curso. cada una en tres versiones. las cortas solo con lo que hicimos nosotros, y la de una hora y media con lugar para cosas de afuera. todo sale de un guion vivo que se mantiene solo.
+
+a las cero veintitres vino la correccion importante, y quedó como regla permanente. dijiste: evita cosas medio raras como que vene ce lo escucho u ene ce, deberia ser ve ene ce, nunca uses u ni doble u para ve y doble ve. eso se guardó en las reglas generales y se implementó a las cero cuarenta y cuatro como un diccionario de pronunciacion que se aplica al guion antes de renderizar el audio. las siglas se deletrean en castellano rioplatense: ese ese hache, a pe i, pe doble ve a, ce de pe, te te ese. y el ingles se reescribe antes de pasar por la voz.
+
+en ese mismo mensaje dijiste la otra cosa que cambia como se escribe esto: los capitulos empiezan a escribirse cuando escucho el anterior, pero se van actualizando cada tanto hasta que lo escucho. o sea, cada capitulo es un borrador vivo. arranca cuando terminas el anterior, se re redacta cada tanto con lo nuevo, y se congela recien cuando lo escuchas vos. eso quedó implementado a las cero cincuenta y siete: el generador toma el dato de escuchados de la web, y re redacta con lo nuevo del borrador, sin gastar modelo salvo en el pase de redaccion final.
+
+y para que eso funcione hacia falta saber que escuchaste. a las cero cero tres se agregó el estado de escuchado al reproductor de la web, que hasta ahi solo guardaba la posicion. ahora marca automatico cuando un episodio llega al final, o cuando pasa el noventa por ciento de la duracion, y la lista de episodios lo muestra.
+
+# fuzzer, corto
+
+fuzzer tuvo una sola cosa hoy y fue a la una cuarenta y siete. preguntaste si el whatsapp lo habia mandado. si, salió: la presentacion al grupo de la banda se mandó a las cero cero cuatro y la vi publicada en el grupo, con su identificador de mensaje. fue una sola vez, como estaba autorizado, y no salió nada mas. si te referias a otro whatsapp, a santi directo o al canal publico de la banda, eso no se mandó: decime cual y lo armo.
+
+nada mas de fuzzer en todo el dia, que es lo esperable un domingo con todo el foco en la infraestructura.
+
+# lo que se armó en tools
+
+arranquemos por donde hubo más movimiento, que es tools. hoy se cerraron tres capas del plan invencible, que es el plan para que claudio no se muera aunque claude se caiga, y una cuarta quedó andando desde ayer a la noche.
+
+a las once y cuarenta y cinco quedó lista la capa cuatro, la de salud. la idea es simple: hasta ahora, cuando una credencial vencía, nos enterábamos cuando algo fallaba. ahora hay una tabla de vencimientos que se rearma sola cada diez minutos, con una fila por credencial y un estado de tres colores. verde es que está bien, amarillo es que le quedan menos de veinticuatro horas, rojo es que ya venció. entra el oauth de claude por cuenta y por máquina, el gmail de cada casilla, la sesión de github en los tres nodos, telegram, tailscale y el ssh de ida y vuelta. hay un widget nuevo en la web, abajo del de uso, y un comando en el chat que te lo escupe al toque.
+
+la primera corrida dio seis rojos y un amarillo. los seis rojos son cuatro casillas de gmail sin permiso y dos de cloud, que en ese momento estaba colgada: se le había caído el ssh y el tailscale. el amarillo es openrouter, que está con la cuota al límite. lo importante del diseño es que el aviso al celu sale una sola vez por vencimiento, y se marca en disco antes de mandarlo, así que si el proceso se muere en el medio no te llegan dos. y un rojo recién vuelve a avisar después de haber estado una hora en verde. la mac dormida nunca es roja, es gris: no queremos que una mac con la tapa cerrada te despierte el teléfono.
+
+a las doce y diez cerró la capa seis, el simulacro semanal. esto es medio raro pero es la pieza que le da sentido a todo el resto: una vez por semana, los domingos a las tres de la mañana y por dos horas, todo lo que llama a claude lo llama a un claude falso que contesta siempre lo mismo, un error de oauth. o sea, se simula que claude no existe. durante esas dos horas el sistema tiene que seguir funcionando igual: el chat tiene que contestar con algún eco, las tareas chicas tienen que correrse igual, las rutinas tienen que seguir. al vencer, se escribe un reporte con lo que anduvo y lo que no: cómo contestó el chat y con qué eco, qué pasó con las tareas, con la cola, con las rutinas y con los avisos. y cada cosa que falló se encola sola como tarea chica, sin duplicar.
+
+hay un par de detalles que están buenos ahí. durante el simulacro los avisos van a un archivo aparte, no a tu celu, porque si no te llegan seis avisos de mentira un domingo a las tres de la mañana. tampoco se marcan cuentas como rotas, ni corre el autoreparador, ni el caos. y hay una palabra mágica: si escribís urgente al principio de un mensaje, el simulacro se apaga al toque. porque puede pasar que estés necesitando algo de verdad justo en esas dos horas.
+
+# la mula eco
+
+a las doce y treinta y nueve quedó la capa cinco, que es la que más me gusta de las tres. se llama la mula eco.
+
+el problema era este: cuando claude no está, claudio puede explicarte que no está, puede contestarte comandos sin modelo, puede esperarte. pero no puede trabajar. y hay un montón de tareas en la cola que no necesitan un modelo caro: tocar un archivo, correr un comando, arreglar una línea. gastar opus en eso es una cosa, pero no poder hacerlo cuando claude está caído es otra.
+
+entonces ahora cada orden se marca al encolarse como chica o grande. chica es una tarea que no abre chrome, no toca jira, y se resuelve con un archivo o un comando. si hay duda, es grande. no hay término medio a propósito: la duda va para el lado seguro.
+
+con claude caído, las chicas las agarra un loop propio que corre con modelos gratis, groq o gemini. ese loop tiene cuatro herramientas y nada más: leer, escribir con backup, bash acotado a la carpeta de claudio, y terminar. quince pasos como máximo. cuando termina, corre la prueba que la orden haya pedido, y si falla, restaura el backup y devuelve la orden a la cola marcada como grande, con una nota de que está esperando a claude. o sea, la mula nunca deja algo roto: o lo hace y lo prueba, o lo deshace y lo devuelve.
+
+las grandes esperan, y ahí sale un aviso al celu cada seis horas. uno cada seis horas, no uno por tarea, que si no con veintiséis pendientes te explota el teléfono.
+
+# la respuesta doble del chat
+
+a la una y veintisiete de la tarde se cerró la orden de la respuesta doble, que es el bug que se vio hoy a la una y un minuto.
+
+lo que pasaba: el chat de la web lo puede atender el server o lo puede atender cloud, y hay un lock para que lo atienda uno solo. el server se había reiniciado recién, y al arrancar leía ese lock como libre sin haberlo leído de verdad, con un offset viejo. resultado: contestó lo mismo que cloud ya había contestado. viste dos respuestas idénticas.
+
+el arreglo tiene tres puntos de control en vez de uno. el nodo lee el estado del lock antes de decidir si contesta, lo vuelve a mirar antes de llamar al modelo, y lo mira una tercera vez antes de publicar la respuesta. si en cualquiera de esos tres momentos ve que el otro se lo llevó, suelta y deja una línea en el log. además la web ahora esconde la repetida si igual se le cuela alguna.
+
+y de paso entró algo que se ve: el nodo y el modelo pasaron al encabezado de cada respuesta. antes la respuesta venía con un cloud entre corchetes metido en el cuerpo del texto, que ensuciaba. ahora arriba de cada respuesta dice la hora, qué nodo contestó, qué modelo, cuántos segundos tardó y dónde estuvo el cuello de botella. si tardó doce segundos y once fueron el modelo, lo vas a ver.
+
+junto con eso entró el estado en vivo. cada mensaje que mandás desde la web es ahora un objeto con fases: recibido, clasificado, modelo, listo. esas fases se publican mientras el mensaje se está procesando, y la web te pinta un spinner con la fase actual y una estimación de cuánto falta. antes mandabas un mensaje y no sabías si se había perdido o si estaba pensando.
+
+hubo tres publicaciones de la web hoy: la cuatro punto ciento noventa y cinco a las doce y cincuenta y siete, la ciento noventa y seis a la una y veinticuatro, y la ciento noventa y siete a la una y treinta y uno.
+
+# lo que se rompió y se arregló en cloud
+
+cloud estuvo colgada de las once y diecinueve a las doce y ocho. casi cincuenta minutos. era un bug del relevo, o sea del mecanismo por el cual un nodo le pasa la guardia al otro. lo arreglé y reinicié la máquina virtual dos veces hasta que quedó. a las doce y once volvió a contestar, y lo probé de verdad: mandé un mensaje, contestó en siete segundos, el board quedó verde. a las doce y dieciséis dejé el aviso.
+
+también volvieron las dos sesiones remotas de cloud, la de facu y la de orugote, que se habían caído con la vm.
+
+# lo que quedó pendiente en tools
+
+hay una sola cosa técnica abierta, y viene de hace dos días: la prueba de la web contra el deploy vivo viene inestable. la prueba corre en local y da verde, corre contra lo que sirve pages y fallan chequeos. y lo peor es que no fallan siempre los mismos: una corrida dio veinte fallos, otra corrida con la misma versión dio trece. los que fallan son los borradores, las vistas con scroll y el arrastre de pestañas. los de la cámara y el del espacio entre paneles pasan bien en vivo. eso hay que estabilizarlo antes de poder confiar en la prueba viva, porque una prueba que da distinto cada vez no sirve para nada.
+
+y del lado tuyo quedan tres cosas en tools. la primera es la de siempre, desde el ocho de septiembre: los permisos de accesibilidad y grabación de pantalla en la mac. es entrar a ajustes, privacidad y seguridad, y agregar iterm y el python que usa el daemon a esas dos listas. con eso puedo clickear, tipear y capturar en cualquier aplicación, no solamente en chrome. lo pediste vos, es un toggle, y sigue ahí.
+
+la segunda es el tag de chrome en el daemon: hay que aprobar o no que las órdenes marcadas con ese tag salgan con el navegador habilitado. está el detalle escrito en el archivo de propuestas.
+
+la tercera no es una decisión, es un aviso: el plist está recargado desde el ocho de septiembre y launchd está corriendo el launcher. no hay nada urgente ahí.
+
+# la cola
+
+hay una tarea corriendo y veintiséis esperando. eso es bastante, y varias de las que esperan son justamente sobre cómo agilizar la cola.
+
+la que está corriendo es de la web: esconder la barra de título de la aplicación instalada en mac, agregando una opción al manifest y subiendo la versión.
+
+entre las que esperan hay cinco que armaste hoy y que son todas sobre plata y sobre velocidad. la primera es bajar el costo de entrada de cada mensaje del chat: hoy cada mensaje que mandás arranca mandándole al modelo unos setenta mil caracteres de instrucciones, entre el archivo de reglas de la carpeta del agente, que son cuarenta y tres mil, el archivo de misión, que son veintitrés mil, y las reglas generales. eso se paga en cada mensaje, incluso en uno que dice hola.
+
+la segunda es reintentos inteligentes. hoy una tarea que falla se reencola tal cual y arranca de cero con opus. ayer diez de veintiuna tareas fueron reintentos. la idea es que antes de reencolar, un clasificador sin modelo mire por qué falló y decida si tiene sentido reintentar, o si es algo que va a fallar igual.
+
+la tercera es que las rutinas caras dejen de leer logs crudos. la retro diaria, las oportunidades, el caos, el simulacro y el podcast automático leen el log entero y los archivos de salida de las últimas veinticuatro a cuarenta y ocho horas, que hoy son ochocientos cuarenta archivos. eso es un montón de texto para que el modelo lo lea entero cada vez.
+
+la cuarta es que cuando me corregís una tarea que ya está corriendo, no arranque un opus nuevo desde cero. pasó hoy con el tope de hilos: la corrección era cambiar un seis por un siete, y salió una tarea completa nueva.
+
+y la quinta, de las doce y cincuenta, es una regla que dijiste hoy y que quedó encolada: siempre que haya una comunicación que pueda ser por la red local, que vaya por ahí primero. el ejemplo que diste fue mandar una captura, que no tiene por qué viajar por internet si las dos máquinas están en la misma casa.
+
+además hay dos de orden interno: revisar el archivo de propuestas para separar lo que sigue vivo de lo que ya se hizo o se murió, y compactar mi propia memoria, dejando en el archivo de estado solo lo de los últimos treinta días más un bloque permanente con lo que sigue valiendo.
+
+y una que es directamente un bug: el reinicio diferido del daemon tiene un tope y, cuando ese tope vence, hace un reinicio forzado. ayer eso cortó tareas en curso, que es exactamente lo que el reinicio diferido existe para no hacer.
+
+en el movimiento de la cola de la última media hora se ve el mecanismo nuevo funcionando: una orden esperando a otra porque la que corre es exclusiva, y otra esperando a una tarea que va antes. y cloud sigue mandando órdenes que el server encola solo.
+
+# awtomic
+
+del lado de awtomic hoy hubo una sola cosa, pero es la que estaba trabada hace días: el simulacro de acceso desde el server. a la una y cuarenta quedó el resultado.
+
+lo que anda: el chrome del server, con control por protocolo. jira por api rest, leyendo y también escribiendo, o sea comentar, transicionar y crear. github, que probé en serio: cloné, commiteé y pusheé a una rama de prueba en el repo de docs, y después la borré. y dynamo de lectura, con el cliente de aws actualizado y las credenciales traídas de la mac.
+
+lo que no anda son dos cosas, y las dos dependen de vos. el cliente de shopify en el server no tiene sesión, así que desde acá no puedo listar, bajar ni subir themes. en la mac sí anda. y el login de customer no llega al pin porque el gmail de awtomic está vencido; el link para reautorizar te quedó en avisos.
+
+quedó también una regla nueva escrita en las reglas generales, y esta la quiero repetir porque es dura: escribir en dynamo y pushear a un theme publicado requieren pregunta explícita con el detalle del cambio. tabla, clave, campo, valor viejo y valor nuevo. store, id del theme, archivos y líneas. sin tu ok sobre ese detalle, solo lectura. y todo push de theme va a una copia nueva sin publicar, salvo que vos digas lo contrario. las credenciales del server dan permiso de escritura: el freno es la regla, no el permiso.
+
+en pendientes sigue la limpieza del store de qa, que está decidido esperarla hasta que dos tickets estén cerrados, porque los setups se reusan. está el bloque del widget que hay que dejar puesto para reverificar después del merge y limpiar después. está el ticket de poppy's, cerrado por falta de respuesta del merchant, con dos suscripciones en vivo y ciento trece esperando confirmación. y están los scripts sin commitear en el repo de migración: unos quince archivos nuevos y unos veinte csv sueltos en la raíz, que hay que decidir qué se guarda y qué se tira.
+
+y esperando por vos hay tres cosas. los tokens de shopify expuestos: quedan tres vivos para rotar y cuatro commiteados en el repo que hay que sacar del código. los días de vacaciones de octubre y noviembre, que no están cargados y de los que faltan las fechas y a qué calendario van. y las tres preguntas abiertas del ticket cuatro ocho siete tres.
+
+# fuzzer, juegos, plata y personal
+
+en fuzzer el movimiento es todo de gmail y está frenado en un solo paso tuyo. quedó armado el flujo entero para reautorizar las casillas: la receta que arma el link, canjea el código, hace backup del credentials viejo y verifica que la cuenta autorizada sea la correcta; el script que corre cada diez minutos, pide el link una vez cada seis horas y canjea lo que aparezca; y el comando de chat para ver el estado y pedir la autorización de una casilla. lo que falta es lo único que no puedo hacer yo: abrir el link que te dejé en avisos, uno por casilla, elegir la cuenta, aceptar, y pegarme acá la dirección de la página de error que te queda. el daemon la reconoce solo y canjea sin gastar nada. las otras dos casillas están vencidas igual pero hoy no las usa nadie.
+
+del post por el año del disco, te gustó la idea pero querés la tipografía más cerca de la de la tapa. quedó pedido el archivo aislado, y si se puede con transparencia.
+
+en juegos no hay nada abierto del lado técnico. los cuatro volúmenes se montan y se leen desde el server, siempre por el mecanismo de cambio de sistema con backup y revert programado, nunca un montaje a pelo. el backup de la primera tarjeta de la consolita está hecho y verificado: lo abrí y lo listé después de escribirlo. y quedó una lección cara anotada: el disco grande tiene bloques de dos megas, así que un archivo de un byte ocupa dos megas. el backup suelto, que son cuatro mil archivos chicos y doscientos cincuenta y nueve megas reales, ocupó ocho coma cuatro gigas y llenó el disco. se borró y se rehizo como un archivo único comprimido. lo que espera de vos: aceptar el cartel de depuración en la retroid, poner la otra tarjeta de la consolita si querés su índice, y tres decisiones de la ronda nocturna.
+
+en plata está todo listo para vender el marshall, que es el que más deja, y falta una sola cosa: las fotos. hay un guion foto por foto escrito. cuando lo fotografíes, pesá el ampli con caja, mirá la etiqueta del parlante y anotá el código de barras de la caja, que es el número que pide la api. antes de publicar hay que rechequear el blue y los comparables, porque los números son del cuatro de septiembre. y quedan tres decisiones de la ronda nocturna esperando letra.
+
+en personal quedaron las ocho propuestas de la ronda sin contestar, la tarjeta de paypal para actualizar a mano, el dni para cerrar el trámite de mailamericas, y la decisión de qué computadora comprar entre las tres opciones. y una que crece sola y que nadie mira: las tres intimaciones de la dirección de impuestos de uruguay por f labs, sin responder desde el quince de agosto.
+
+# lo que te espera
+
+si tuviera que ordenarte el día por lo que más destraba, es esto.
+
+primero el gmail: abrir el link de avisos y pegarme la dirección de error. eso destraba las casillas, el aviso de aprobación de awtomic, y saca cuatro rojos de la tabla de salud de una sola vez.
+
+segundo, el login de shopify en el server. sin eso no puedo tocar un theme desde acá y todo lo de awtomic que involucre themes sigue dependiendo de la mac.
+
+tercero, las letras de las rondas nocturnas: tres en plata, tres en juegos, ocho en personal. son catorce decisiones que están frenando trabajo que ya está escrito y probado. si me pasás las letras las encolo todas juntas.
+
+cuarto, las fotos del marshall. es la única cosa que separa esa venta de estar publicada.
+
+y quinto, los permisos de accesibilidad en la mac, que son dos toggles y vienen esperando desde hace cinco días.
+
+las tres que son decisión pura y no requieren que hagas nada con las manos son el tag de chrome en el daemon, qué se commitea del repo de migración, y a qué calendario van las vacaciones. esas me las podés contestar desde el celu.
+
+hasta la próxima.
