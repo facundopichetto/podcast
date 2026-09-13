@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.3">
+<meta name="podcast-version" content="1.5">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -33,6 +33,7 @@ a { color: var(--acc); text-decoration: none; }
 .tema { font-size: 12px; color: var(--fg); background:#161616; border-radius: 999px; padding: 2px 9px; }
 /* player */
 #volver { background:none; border:none; color:var(--dim); font: inherit; font-size: 15px; padding: 0; margin-bottom: 10px; cursor:pointer; }
+#ph { color: var(--acc2); font-size: 14px; font-variant-numeric: tabular-nums; margin: 0; }
 #pt { font-size: 21px; font-weight: 600; margin: 0 0 2px; }
 #pf { color: var(--dim); font-size: 13px; margin-bottom: 14px; }
 select { flex:1; font: inherit; font-size: 15px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
@@ -64,10 +65,10 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 
 <section id="player" class="hidden">
   <button id="volver">‹ episodios</button>
+  <div id="ph"></div>
   <div id="pt"></div>
   <div id="pf"></div>
-  <audio id="audio" preload="metadata" playsinline></audio>
-  <audio id="audio2" preload="none" playsinline></audio>
+  <audio id="audio" preload="auto" playsinline></audio>
   <input id="barra" type="range" min="0" max="100" step="0.1" value="0">
   <div id="tiempos"><span id="t0">0:00</span><button id="vel">1x</button><span id="t1">0:00</span></div>
   <div id="botones">
@@ -83,29 +84,45 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
 
 <script>
 const $ = s => document.querySelector(s);
-// dos elementos: el activo siempre tiene id="audio", el de precarga id="audio2".
-// ios solo deja arrancar audio con pantalla bloqueada en un elemento ya "desbloqueado" por un
-// gesto, por eso el episodio siguiente se precarga en el otro y se lo despierta con el primer play.
-let audio = $('#audio'), otro = $('#audio2');
+// un solo <audio> para todo (facundo, 2026-09-12): suena el mp3 ENTERO del episodio (los capitulos
+// son marcas de tiempo) y al pasar al episodio siguiente se cambia el src del MISMO elemento, sin
+// dejarlo parar. ios con la pantalla bloqueada no arranca un archivo nuevo en otro elemento ni despues
+// de un `ended`: eso cortaba la escucha y hacia sacar el celu.
+const audio = $('#audio');
 // voz fija daniela: la web ya no tiene selector (facundo, 2026-09-11)
 const VOZ = 'daniela';
-let datos = null, ep = null, voz = VOZ, caps = [];
-let seguir = localStorage.seguir !== 'no', desbloqueado = false;
+let datos = null, ep = null, voz = VOZ, caps = [], capMeta = null, pasando = false;
+let seguir = localStorage.seguir !== 'no';
 const VELS = [1, 1.15, 1.3];
-// 0,2 s de silencio: sirve para despertar el segundo elemento dentro del gesto del play
-const SILENCIO = 'data:audio/mpeg;base64,SUQzBAAAAAAAIlRTU0UAAAAOAAADTGF2ZjYxLjEuMTAwAAAAAAAAAAAAAAD/4zjAAAAAAAAAAAAASW5mbwAAAA8AAAAFAAACQACAgICAgICAgICAgICAgICAgICAoKCgoKCgoKCgoKCgoKCgoKCgoKDAwMDAwMDAwMDAwMDAwMDAwMDAwODg4ODg4ODg4ODg4ODg4ODg4ODg//////////////////////////8AAAAATGF2YzYxLjMuAAAAAAAAAAAAAAAAJALAAAAAAAAAAkC996QDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/4xjEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVX/4xjEOwAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/4xjEdgAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/4xjEsQAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/4xjExAAAA0gAAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=';
+// cuanto antes del final se engancha el siguiente: el src cambia mientras todavia suena
+const ANTES_DEL_FIN = 0.35;
 
 // play() devuelve una promesa que se rechaza si algo pausa en el medio (AbortError): se come aca
-function tocar(el) { const p = (el || audio).play(); if (p && p.catch) p.catch(() => {}); return p; }
+function tocar() { const p = audio.play(); if (p && p.catch) p.catch(() => {}); return p; }
 
 const fmt = s => { s = Math.max(0, Math.floor(s || 0)); const m = Math.floor(s / 60), r = s % 60; const h = Math.floor(m / 60); return (h ? h + ':' + String(m % 60).padStart(2, '0') : m) + ':' + String(r).padStart(2, '0'); };
 const min = s => Math.round((s || 0) / 60) + ' min';
+// fecha y hora de emision (`ts` iso con offset de buenos aires): `sáb 12/9 21:35`. sin ts, la fecha
+const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+function cuando(e) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(e.ts || e.fecha || '');
+  if (!m) return e.fecha || '';
+  const dia = DIAS[new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])).getUTCDay()];
+  return `${dia} ${+m[3]}/${+m[2]}` + (e.ts && m[4] ? ` ${m[4]}:${m[5]}` : '');
+}
+function cabecera(e) {
+  $('#ph').textContent = cuando(e);
+  $('#pt').textContent = e.titulo;
+  $('#pf').textContent = `${min(e.duracion)} · ${e.palabras || '?'} palabras`;
+  document.title = `${e.titulo} · ${cuando(e)}`;
+  $('#guion').innerHTML = e.guion ? `guión: <a href="guiones/${e.guion}">${e.guion}</a>` : '';
+}
 
 async function cargar() {
   const r = await fetch('episodios.json?t=' + Date.now(), { cache: 'no-store' });
   datos = await r.json();
   const eps = datos.episodios || [];
-  $('#ver').textContent = eps.length === 1 ? eps[0].fecha : eps.length + ' episodios';
+  $('#ver').textContent = eps.length === 1 ? cuando(eps[0]) : eps.length + ' episodios';
   const unico = eps.length === 1;
   $('#volver').classList.toggle('hidden', unico);
   if (!eps.length) { $('#lista').textContent = 'todavia no hay episodio'; return; }
@@ -114,7 +131,7 @@ async function cargar() {
   [...datos.episodios].reverse().forEach(e => {
     const b = document.createElement('button'); b.className = 'ep';
     const pos = +localStorage['pos:' + e.id] || 0;
-    b.innerHTML = `<div class="fecha">${e.fecha}</div><div class="titulo">${e.titulo}</div>
+    b.innerHTML = `<div class="fecha">${cuando(e)}</div><div class="titulo">${e.titulo}</div>
       <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}</div>
       <div class="temas">${(e.temas || []).map(t => `<span class="tema">${t}</span>`).join('')}</div>`;
     b.onclick = () => abrir(e);
@@ -135,27 +152,33 @@ function fuente(e) {
 }
 
 function abrir(e, play) {
+  // abrir el que ya esta sonando no lo corta ni lo rebobina
+  if (ep && ep.id === e.id && audio.getAttribute('src') === fuente(e)) { mostrar(e); return; }
   ep = e;
-  location.hash = e.id;
-  $('#lista').classList.add('hidden'); $('#player').classList.remove('hidden');
-  $('#pt').textContent = e.titulo;
-  $('#pf').textContent = `${e.fecha} · ${min(e.duracion)} · ${e.palabras || '?'} palabras`;
-  voz = e.voces[VOZ] ? VOZ : Object.keys(e.voces)[0];
+  mostrar(e);
   poner(+localStorage['pos:' + e.id] || 0, !!play);
-  $('#guion').innerHTML = e.guion ? `guión: <a href="guiones/${e.guion}">${e.guion}</a>` : '';
   if (!play) window.scrollTo(0, 0);
 }
 
+function mostrar(e) {
+  location.hash = e.id;
+  $('#lista').classList.add('hidden'); $('#player').classList.remove('hidden');
+  cabecera(e);
+}
+
 function poner(t, play) {
-  const d = ep.voces[voz];
-  caps = d.capitulos || [];
+  voz = ep.voces[VOZ] ? VOZ : Object.keys(ep.voces)[0];
+  caps = ep.voces[voz].capitulos || [];
   const src = fuente(ep);
-  if (audio.getAttribute('src') !== src) { audio.src = src; audio.load(); }
-  const ir = () => { try { audio.currentTime = t; } catch (_) {} if (play) tocar(audio); pintarCaps(); };
+  if (audio.getAttribute('src') !== src) {
+    audio.src = src;
+    audio.playbackRate = audio.defaultPlaybackRate = +localStorage.vel || 1;
+  }
+  const ir = () => { if (t) { try { audio.currentTime = t; } catch (_) {} } estado(); pintarCaps(); };
   if (audio.readyState >= 1) ir(); else audio.addEventListener('loadedmetadata', ir, { once: true });
-  pintarCaps();
-  sesion();
-  precargar();
+  // el play va en el mismo tick (gesto, handler de media session o timeupdate): ios no deja diferirlo
+  if (play) tocar();
+  capMeta = null; metadata(); pintarCaps(); estado();
 }
 
 // el episodio siguiente de la lista (el json va de mas viejo a mas nuevo)
@@ -165,46 +188,32 @@ function siguienteEp() {
   return i >= 0 ? eps[i + 1] : null;
 }
 
-function precargar() {
-  const s = siguienteEp();
-  if (!s) return;
-  const src = fuente(s);
-  if (src && otro.getAttribute('src') !== src && desbloqueado) { otro.src = src; otro.load(); }
-}
-
-// despierta el elemento de precarga dentro del gesto del usuario: sin esto ios no lo deja
-// arrancar solo cuando termina el episodio con la pantalla bloqueada
-function desbloquear() {
-  if (desbloqueado) return;
-  desbloqueado = true;
-  const s = siguienteEp();
-  otro.src = s ? fuente(s) : SILENCIO;
-  const p = tocar(otro);
-  if (p && p.then) p.then(() => { otro.pause(); try { otro.currentTime = 0; } catch (_) {} }, () => {});
-}
-
-// al terminar un episodio arranca el siguiente en el OTRO elemento (ya desbloqueado) y los cambia
+// pasa al episodio siguiente en el MISMO elemento: cambia el src y da play sin soltar la sesion
 function pasarASiguiente() {
   const s = siguienteEp();
-  if (!s) return false;
-  const src = fuente(s);
-  if (!src) return false;
-  if (otro.getAttribute('src') !== src) { otro.src = src; otro.load(); }
-  try { otro.currentTime = 0; } catch (_) {}
-  tocar(otro);
-  // el activo pasa a ser el otro: el id `audio` viaja con el que suena
-  audio.removeAttribute('id'); otro.id = 'audio'; audio.id = 'audio2';
-  const viejo = audio; audio = otro; otro = viejo;
-  otro.pause(); otro.removeAttribute('src'); otro.load();
+  if (!s || !fuente(s) || pasando) return false;
+  pasando = true;
+  setTimeout(() => { pasando = false; }, 1500);
   localStorage['pos:' + ep.id] = 0;
-  ep = s; location.hash = s.id;
-  $('#pt').textContent = s.titulo;
-  $('#pf').textContent = `${s.fecha} · ${min(s.duracion)} · ${s.palabras || '?'} palabras`;
-  voz = s.voces[VOZ] ? VOZ : Object.keys(s.voces)[0];
-  caps = (s.voces[voz] || {}).capitulos || [];
-  $('#guion').innerHTML = s.guion ? `guión: <a href="guiones/${s.guion}">${s.guion}</a>` : '';
-  pintarCaps(); sesion(); precargar();
+  localStorage['pos:' + s.id] = 0;
+  ep = s;
+  history.replaceState(null, '', '#' + s.id);
+  cabecera(s);
+  poner(0, true);
   return true;
+}
+
+// play desde airpods, lock screen o boton. si safari solto el archivo (pausa larga, pagina congelada,
+// error de red) lo vuelve a poner en la posicion guardada en vez de quedar mudo
+function reanudar() {
+  if (!ep) return;
+  if (audio.error || !audio.getAttribute('src')) {
+    const t = audio.currentTime || +localStorage['pos:' + ep.id] || 0;
+    audio.removeAttribute('src');
+    poner(t, true);
+    return;
+  }
+  tocar();
 }
 
 function capActual() {
@@ -214,12 +223,19 @@ function capActual() {
   return i;
 }
 
+function saltar(seg) {
+  audio.currentTime = Math.max(0, Math.min(audio.duration || 1e9, (audio.currentTime || 0) + seg));
+  estado(); metadata();
+}
+
 function saltarCap(paso) {
-  if (!caps.length) return;
+  if (!caps.length) { saltar(paso * 30); return; }
   let i = 0;
   caps.forEach((k, j) => { if (audio.currentTime >= k.t + (paso < 0 ? 3 : 0)) i = j; });
+  // despues del ultimo capitulo, el "siguiente" de los airpods es el episodio que sigue
+  if (paso > 0 && i + paso >= caps.length && pasarASiguiente()) return;
   const k = caps[Math.max(0, Math.min(caps.length - 1, i + paso))];
-  if (k) { audio.currentTime = k.t; estado(); }
+  if (k) { audio.currentTime = k.t; estado(); metadata(); }
 }
 
 function pintarCaps() {
@@ -228,7 +244,7 @@ function pintarCaps() {
   caps.forEach((k, i) => {
     const b = document.createElement('button'); b.className = 'cap' + (i === actual ? ' actual' : '');
     b.innerHTML = `<span class="t">${fmt(k.t)}</span><span>${k.titulo}</span><span class="d">${min(k.duracion)}</span>`;
-    b.onclick = () => { desbloquear(); audio.currentTime = k.t; tocar(audio); };
+    b.onclick = () => { audio.currentTime = k.t; tocar(); metadata(); };
     c.appendChild(b);
   });
   const s = siguienteEp();
@@ -238,75 +254,84 @@ function pintarCaps() {
   $('#seguir').classList.toggle('hidden', !s);
 }
 
-function sesion() {
+// lock screen: titulo = capitulo que suena, artista = episodio. se rehace solo si cambia el capitulo
+function metadata() {
+  if (!('mediaSession' in navigator) || !ep) return;
+  const i = capActual(), clave = ep.id + ':' + i;
+  if (clave === capMeta) return;
+  capMeta = clave;
+  const k = caps[i];
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: k ? k.titulo : ep.titulo,
+    artist: k ? ep.titulo : 'podcast de claudio',
+    album: 'podcast · ' + cuando(ep),
+    artwork: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
+              { src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] });
+}
+
+// los handlers se registran una vez y siempre actuan sobre el mismo elemento: nada que soltar al
+// pausar, asi el play de los airpods reanuda aunque haya pasado un rato
+function acciones() {
   if (!('mediaSession' in navigator)) return;
-  const ms = navigator.mediaSession;
-  ms.metadata = new MediaMetadata({
-    title: ep.titulo, artist: 'podcast del agente', album: ep.fecha,
-    artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] });
-  ms.setActionHandler('play', () => { tocar(audio); });
-  ms.setActionHandler('pause', () => { audio.pause(); });
-  ms.setActionHandler('stop', () => { audio.pause(); });
-  ms.setActionHandler('seekbackward', d => { audio.currentTime = Math.max(0, audio.currentTime - ((d || {}).seekOffset || 10)); estado(); });
-  ms.setActionHandler('seekforward', d => { audio.currentTime = Math.min(audio.duration || 1e9, audio.currentTime + ((d || {}).seekOffset || 30)); estado(); });
-  try { ms.setActionHandler('seekto', d => { if (d.seekTime != null) { audio.currentTime = d.seekTime; estado(); } }); } catch (_) {}
-  try {
-    ms.setActionHandler('previoustrack', caps.length > 1 ? () => saltarCap(-1) : null);
-    ms.setActionHandler('nexttrack', caps.length > 1 ? () => saltarCap(1) : null);
-  } catch (_) {}
-  estado();
+  const h = (n, f) => { try { navigator.mediaSession.setActionHandler(n, f); } catch (_) {} };
+  h('play', () => reanudar());
+  h('pause', () => audio.pause());
+  h('stop', () => audio.pause());
+  h('seekbackward', d => saltar(-((d || {}).seekOffset || 10)));
+  h('seekforward', d => saltar((d || {}).seekOffset || 30));
+  h('seekto', d => { if (d && d.seekTime != null) { audio.currentTime = d.seekTime; estado(); metadata(); } });
+  h('previoustrack', () => saltarCap(-1));
+  h('nexttrack', () => saltarCap(1));
 }
 
 function estado() {
-  if ('mediaSession' in navigator && audio.duration) {
-    try { navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate, position: Math.min(audio.currentTime, audio.duration) }); } catch (_) {}
+  if (!('mediaSession' in navigator)) return;
+  const ms = navigator.mediaSession;
+  if (ep) ms.playbackState = audio.paused ? 'paused' : 'playing';
+  if (audio.duration && isFinite(audio.duration)) {
+    try { ms.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate || 1, position: Math.min(audio.currentTime, audio.duration) }); } catch (_) {}
   }
 }
 
 $('#volver').onclick = () => { audio.pause(); location.hash = ''; $('#player').classList.add('hidden'); $('#lista').classList.remove('hidden'); cargar(); };
-$('#seguir').onclick = () => { seguir = !seguir; localStorage.seguir = seguir ? 'si' : 'no'; if (seguir) desbloquear(); pintarCaps(); };
-$('#play').onclick = () => { desbloquear(); audio.paused ? tocar(audio) : audio.pause(); };
-$('#atras').onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); estado(); };
-$('#adelante').onclick = () => { audio.currentTime = Math.min(audio.duration || 1e9, audio.currentTime + 30); estado(); };
-$('#vel').onclick = () => { const i = (VELS.indexOf(audio.playbackRate) + 1) % VELS.length; audio.playbackRate = VELS[i]; otro.playbackRate = VELS[i]; localStorage.vel = VELS[i]; $('#vel').textContent = VELS[i] + 'x'; };
+$('#seguir').onclick = () => { seguir = !seguir; localStorage.seguir = seguir ? 'si' : 'no'; pintarCaps(); };
+$('#play').onclick = () => { audio.paused ? reanudar() : audio.pause(); };
+$('#atras').onclick = () => saltar(-10);
+$('#adelante').onclick = () => saltar(30);
+$('#vel').onclick = () => { const i = (VELS.indexOf(audio.playbackRate) + 1) % VELS.length; audio.playbackRate = audio.defaultPlaybackRate = VELS[i]; localStorage.vel = VELS[i]; $('#vel').textContent = VELS[i] + 'x'; estado(); };
 
-// los dos elementos llevan los mismos handlers; solo actua el que esta activo
-[$('#audio'), $('#audio2')].forEach(el => {
-  el.playbackRate = +localStorage.vel || 1;
-  el.onplay = function () {
-    if (this !== audio) return;
-    $('#play').textContent = 'pausa';
-    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
-    desbloquear(); pintarCaps(); estado();
-  };
-  el.onpause = function () {
-    if (this !== audio) return;
-    $('#play').textContent = 'play';
-    // la sesion del lock screen se queda viva: no se suelta el src y se reporta la posicion,
-    // asi el play de los airpods reanuda este mismo elemento
-    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
-    pintarCaps(); estado();
-  };
-  el.ontimeupdate = function () {
-    if (this !== audio) return;
-    const t = audio.currentTime, d = audio.duration || 0;
-    $('#t0').textContent = fmt(t); $('#t1').textContent = '-' + fmt(d - t);
-    if (!arrastrando) $('#barra').value = d ? (t / d * 100) : 0;
-    if (Math.abs(t - ult) > 2) { ult = t; localStorage['pos:' + ep.id] = t; pintarCaps(); estado(); }
-  };
-  el.onended = function () {
-    if (this !== audio) return;
-    localStorage['pos:' + ep.id] = 0;
-    if (seguir && pasarASiguiente()) return;
-    pintarCaps();
-  };
-  el.ondurationchange = function () { if (this === audio) $('#t1').textContent = '-' + fmt(audio.duration); };
-});
+audio.playbackRate = audio.defaultPlaybackRate = +localStorage.vel || 1;
+audio.onplay = () => { $('#play').textContent = 'pausa'; metadata(); pintarCaps(); estado(); };
+audio.onpause = () => {
+  $('#play').textContent = 'play';
+  // no se suelta el src ni la metadata: queda la posicion guardada y el lock screen en pausa
+  if (ep && audio.currentTime) localStorage['pos:' + ep.id] = audio.currentTime;
+  pintarCaps(); estado();
+};
+audio.ontimeupdate = () => {
+  const t = audio.currentTime, d = audio.duration || 0;
+  $('#t0').textContent = fmt(t); $('#t1').textContent = '-' + fmt(d - t);
+  if (!arrastrando) $('#barra').value = d ? (t / d * 100) : 0;
+  if (Math.abs(t - ult) > 2) { ult = t; if (ep) localStorage['pos:' + ep.id] = t; pintarCaps(); estado(); }
+  metadata();
+  // engancha el siguiente mientras todavia suena: el elemento nunca llega a `ended` ni se para
+  if (seguir && !audio.paused && d && isFinite(d) && d - t < ANTES_DEL_FIN) pasarASiguiente();
+};
+audio.onended = () => {
+  if (ep) localStorage['pos:' + ep.id] = 0;
+  if (seguir && pasarASiguiente()) return;
+  pintarCaps(); estado();
+};
+audio.ondurationchange = () => { $('#t1').textContent = '-' + fmt(audio.duration); estado(); };
+// volver a la app (o que safari la descongele) re-registra la sesion por si ios la solto
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { acciones(); capMeta = null; metadata(); estado(); } });
+addEventListener('pageshow', () => { acciones(); capMeta = null; metadata(); estado(); });
 $('#vel').textContent = (+localStorage.vel || 1) + 'x';
 let ult = 0, arrastrando = false;
 $('#barra').oninput = () => { arrastrando = true; $('#t0').textContent = fmt($('#barra').value / 100 * (audio.duration || 0)); };
-$('#barra').onchange = () => { audio.currentTime = $('#barra').value / 100 * (audio.duration || 0); arrastrando = false; estado(); };
+$('#barra').onchange = () => { audio.currentTime = $('#barra').value / 100 * (audio.duration || 0); arrastrando = false; estado(); metadata(); };
 document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') $('#atras').click(); if (e.key === 'ArrowRight') $('#adelante').click(); if (e.key === ' ') { e.preventDefault(); $('#play').click(); } });
+acciones();
 cargar().catch(e => { $('#lista').textContent = 'no se pudo cargar episodios.json: ' + e; });
 </script>
 </body>

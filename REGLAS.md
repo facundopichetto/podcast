@@ -167,6 +167,16 @@ probar sin gastar nada: **`python3 -m recetas.prueba_podcast_proximo`**.
 
 en el celu se cortaba al terminar cada capitulo. desde `podcast-version 1.3` el reproductor suena
 siempre `voces.daniela.archivo` (el mp3 entero) y los capitulos son marcas de tiempo; al terminar, si
-`seguir` esta prendido, engancha el episodio siguiente en un segundo `<audio>` ya desbloqueado. todo
+`seguir` esta prendido, engancha el episodio siguiente **en el mismo `<audio>`** (desde la 1.5 hay uno
+solo: el src cambia 0,35 s antes del final, sin que el elemento se pare) y la media session no se
+suelta en pausa, asi el play de los airpods reanuda (`reanudar()` repone el archivo si safari lo solto). todo
 episodio tiene que tener su entero: `python3 -m recetas.podcast enteros` lo arma si falta (corre solo
 al final de `nuevo`). detalle y lo que falta probar en el celu, en `README.md`.
+
+## cada episodio dice cuando salio (facundo, 2026-09-12)
+
+**`ts` en `episodios.json`**: fecha y hora de emision, iso con offset de buenos aires
+(`2026-09-12T21:35:00-03:00`). lo pone `recetas.podcast nuevo` al publicar; `guardar_json` rellena
+el de los episodios viejos con la hora de su mp3 entero. la web (`podcast-version 1.4`) lo muestra
+corto, `sáb 12/9 21:35`, en la fila de la lista, arriba del titulo del reproductor (`#ph`), en el
+titulo de la pestaña y en el lock screen. lo chequea `python3 -m recetas.prueba_podcast_web [--vivo]`.

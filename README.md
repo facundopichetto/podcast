@@ -38,19 +38,26 @@ qué hace ahora `index.html`:
 
 - **siempre suena el mp3 entero**; tocar un capítulo hace seek, no cambia de archivo. se fue el modo
   "bloque" (el botón ▶ de cada fila), que era lo que cortaba la escucha cada 1 o 2 minutos.
-- **al terminar un episodio arranca el siguiente solo** (con `seguir`, que viene prendido). el
-  siguiente se precarga en un **segundo `<audio>`** que se "despierta" con el primer play del usuario:
-  ios no deja arrancar audio con la pantalla bloqueada en un elemento que nunca tocó un gesto. el que
-  suena siempre tiene `id="audio"` (los ids se intercambian al pasar).
-- **al pausar no se suelta nada**: sigue el `src`, la metadata y el `setPositionState`, así el play de
-  los airpods reanuda ese mismo elemento en vez de perder el player del lock screen.
+- **al terminar un episodio arranca el siguiente solo** (con `seguir`, que viene prendido), en el
+  **mismo `<audio>`** (`podcast-version 1.5`, hay uno solo): a 0,35 s del final, mientras todavía
+  suena, se cambia el `src` y se da play en el mismo tick, así el elemento nunca llega a `ended` ni se
+  para (con la pantalla bloqueada ios no arranca audio nuevo después de que se paró). si igual llega a
+  `ended`, engancha ahí. se sacó el segundo `<audio>` con el mp3 de silencio de la 1.3: al tocar y
+  pausar ese otro elemento, ios podía asociarle el lock screen y perder el player.
+- **al pausar no se suelta nada**: sigue el `src`, la metadata y el `setPositionState`. los handlers de
+  la media session se registran una sola vez sobre el mismo elemento (y de nuevo al volver a la app).
+  el `play` de airpods o lock screen va por `reanudar()`: si safari soltó el archivo o dio error, lo
+  vuelve a poner en la posición guardada.
+- **lock screen**: título = capítulo que suena, artista = episodio. `nexttrack` salta de capítulo y
+  después del último pasa al episodio siguiente.
 
 qué se probó **de verdad**: `python3 -m recetas.prueba_podcast_seguido` (chrome headless, dos
-episodios de mentira): entero, seek por capítulo, pausa sin soltar la sesión, precarga del siguiente y
-pase automático al terminar.
+episodios de mentira): entero, seek por capítulo, un solo `<audio>`, pausa sin soltar la sesión,
+metadata por capítulo, `reanudar()` con el archivo soltado, pase automático al terminar y antes del
+final en el mismo elemento, y que con `al terminar, para` no pase.
 
 qué **no** se pudo probar: la reproducción real. el chrome del server no tiene pipeline de audio (ni
 pide el mp3, `readyState` queda en 0), así que el fin del episodio se simula despachando `ended`. y
-**si ios deja arrancar el segundo elemento con la pantalla bloqueada solo se sabe en el celu**: hay
-que escuchar un episodio hasta el final con el teléfono bloqueado y ver si engancha el siguiente. si
-no engancha, el plan B es un solo archivo con todos los episodios pegados.
+**si ios engancha el siguiente con la pantalla bloqueada solo se sabe en el celu**: hay que escuchar
+un episodio hasta el final con el teléfono bloqueado y ver si sigue. si no sigue, el plan B es un solo
+archivo con todos los episodios pegados.
