@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.15">
+<meta name="podcast-version" content="1.16">
 <meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
@@ -252,6 +252,15 @@ function sincronizarEscuchados() {
   ((datos || {}).episodios || []).forEach(e => { if (e.grupo && visto(e) && localStorage['esc_env:' + e.id] !== 'si') encolarEscuchado(e, true); });
 }
 let votando = false;
+// empezado (correccion de facundo 2026-09-13 22:45): pasados 20 s de un episodio automatico sale una sola vez
+// `podcast-empezado <id>`. el server deja de mergear actualizaciones en ese y arma el siguiente
+const EMPEZADO_S = 20;
+const empPend = () => { try { return JSON.parse(localStorage.emp_pend || '{}'); } catch (_) { return {}; } };
+function encolarEmpezado(e) {
+  if (!e || !e.grupo || localStorage['emp_env:' + e.id] || e.id in empPend()) return false;
+  const p = empPend(); p[e.id] = 1; localStorage.emp_pend = JSON.stringify(p);
+  return true;
+}
 async function enviarVotos() {
   if (votando || !localStorage.agente_token) return;
   votando = true;
@@ -266,9 +275,14 @@ async function enviarVotos() {
       localStorage['esc_env:' + id] = v;
       const p = escPend(); if (p[id] === v) { delete p[id]; localStorage.esc_pend = JSON.stringify(p); }
     }
+    for (const id of Object.keys(empPend())) {
+      await gh('POST', `/issues/${ISSUE_VOTOS}/comments`, { body: `podcast-empezado ${id}\n${marcaDesde()}` });
+      localStorage['emp_env:' + id] = '1';
+      const p = empPend(); delete p[id]; localStorage.emp_pend = JSON.stringify(p);
+    }
   } catch (_) { fallo = true; } finally { votando = false; }
   // un voto o escuchado tocado mientras salian los otros sale en la vuelta siguiente
-  if (!fallo && Object.keys(votosPend()).length + Object.keys(escPend()).length) return enviarVotos();
+  if (!fallo && Object.keys(votosPend()).length + Object.keys(escPend()).length + Object.keys(empPend()).length) return enviarVotos();
 }
 
 // pasado el 50% de un episodio y con uno mas nuevo publicado, el viejo queda escuchado. se apaga desde la lista
@@ -610,6 +624,7 @@ audio.ontimeupdate = () => {
   if (Math.abs(t - ult) > 2) { ult = t; if (ep) localStorage['pos:' + ep.id] = t; pintarCaps(); estado(); }
   metadata();
   if (ep && d && isFinite(d) && t >= d * HECHO) marcarVisto(ep, true);
+  if (ep && !audio.paused && t > EMPEZADO_S && encolarEmpezado(ep)) enviarVotos();
   // al minuto y medio del final se relee episodios.json: si salio una emision nueva, engancha con ella
   if (ep && d && isFinite(d) && d - t < 90 && refrescado !== ep.id) { refrescado = ep.id; refrescarDatos(); }
   // engancha el siguiente mientras todavia suena: el elemento nunca llega a `ended` ni se para

@@ -1,6 +1,9 @@
 {
  "voces": {
-  "daniela": "daniela, argentina"
+  "daniela": "daniela, argentina",
+  "claude": "claude, mexico",
+  "davefx": "davefx, españa",
+  "sharvard": "sharvard, españa"
  },
  "episodios": [
   {
@@ -1864,8 +1867,359 @@
     "intro": {
      "daniela": 3.16
     }
-   }
+   },
+   "oculto": true
+  },
+  {
+   "id": "ep-2026-09-13-vivo-2253",
+   "fecha": "2026-09-13",
+   "titulo": "vivo · dom 13/9 desde 13:30 · actualizado 22:53",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "juegos",
+    "noticias",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 18442,
+   "guion": "episodio-2026-09-13-vivo-2253.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-vivo-2253-daniela.mp3",
+     "duracion": 5547.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "actualizado hoy a las 22:53",
+       "duracion": 3.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-1-actualizado-hoy-a-las.daniela.mp3"
+      },
+      {
+       "t": 3.9,
+       "titulo": "de que va",
+       "duracion": 50.8,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-2-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 54.6,
+       "titulo": "awtomic: penfolds y el widget doble",
+       "duracion": 183.3,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-3-awtomic-penfolds-y-el.daniela.mp3"
+      },
+      {
+       "t": 238.0,
+       "titulo": "tools: el board",
+       "duracion": 201.6,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-4-tools-el-board.daniela.mp3"
+      },
+      {
+       "t": 439.5,
+       "titulo": "personal: la rutina",
+       "duracion": 78.8,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-5-personal-la-rutina.daniela.mp3"
+      },
+      {
+       "t": 518.4,
+       "titulo": "el podcast de acá en adelante",
+       "duracion": 85.0,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-6-el-podcast-de-aca-en.daniela.mp3"
+      },
+      {
+       "t": 603.4,
+       "titulo": "lo raro de la noche",
+       "duracion": 47.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-7-lo-raro-de-la-noche.daniela.mp3"
+      },
+      {
+       "t": 651.3,
+       "titulo": "lo que decidiste en esta hora",
+       "duracion": 57.8,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-8-lo-que-decidiste-en.daniela.mp3"
+      },
+      {
+       "t": 709.1,
+       "titulo": "lo que queda esperándote",
+       "duracion": 19.7,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-9-lo-que-queda-esperandote.daniela.mp3"
+      },
+      {
+       "t": 728.8,
+       "titulo": "el reparto de cuentas ahora decide por modelo",
+       "duracion": 141.4,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-10-el-reparto-de-cuentas.daniela.mp3"
+      },
+      {
+       "t": 870.2,
+       "titulo": "el \"hace tantos segundos\" de los widgets estaba clavado",
+       "duracion": 91.7,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-11-el-hace-tantos-segundos.daniela.mp3"
+      },
+      {
+       "t": 961.9,
+       "titulo": "estado y zombies a la una menos diez",
+       "duracion": 71.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-12-estado-y-zombies-a-la.daniela.mp3"
+      },
+      {
+       "t": 1033.8,
+       "titulo": "la cola en paralelo, por recurso y no por tema",
+       "duracion": 146.5,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-13-la-cola-en-paralelo-por.daniela.mp3"
+      },
+      {
+       "t": 1180.3,
+       "titulo": "cuántos hilos, y por qué no infinitos",
+       "duracion": 148.8,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-14-cuantos-hilos-y-por-que.daniela.mp3"
+      },
+      {
+       "t": 1329.1,
+       "titulo": "la orden de las doce y cincuenta y seis, y la fusión",
+       "duracion": 55.3,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-15-la-orden-de-las-doce-y.daniela.mp3"
+      },
+      {
+       "t": 1384.3,
+       "titulo": "la prioridad, y el reclamo de las doce y cincuenta y ocho",
+       "duracion": 61.0,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-16-la-prioridad-y-el.daniela.mp3"
+      },
+      {
+       "t": 1445.3,
+       "titulo": "la clave de tailscale y cloud entrando a la red",
+       "duracion": 76.2,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-17-la-clave-de-tailscale-y.daniela.mp3"
+      },
+      {
+       "t": 1521.5,
+       "titulo": "el nodo de salida, y las dos cosas que pedían tu permiso",
+       "duracion": 106.1,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-18-el-nodo-de-salida-y-las.daniela.mp3"
+      },
+      {
+       "t": 1627.6,
+       "titulo": "la mudanza a cloud, de madrugada",
+       "duracion": 111.1,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-19-la-mudanza-a-cloud-de.daniela.mp3"
+      },
+      {
+       "t": 1738.7,
+       "titulo": "la charla de las 00:23 y el código que venció",
+       "duracion": 94.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-20-la-charla-de-las-00-23.daniela.mp3"
+      },
+      {
+       "t": 1833.6,
+       "titulo": "chrome en cloud para emergencias",
+       "duracion": 160.5,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-21-chrome-en-cloud-para.daniela.mp3"
+      },
+      {
+       "t": 1994.1,
+       "titulo": "la mañana: la misma pregunta otra vez",
+       "duracion": 98.2,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-22-la-manana-la-misma.daniela.mp3"
+      },
+      {
+       "t": 2092.2,
+       "titulo": "los mensajes sin modelo que confundieron todo",
+       "duracion": 103.6,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-23-los-mensajes-sin-modelo.daniela.mp3"
+      },
+      {
+       "t": 2195.8,
+       "titulo": "el token que entró y no sirvió",
+       "duracion": 60.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-24-el-token-que-entro-y-no.daniela.mp3"
+      },
+      {
+       "t": 2256.8,
+       "titulo": "la regla que salió de las 11:00",
+       "duracion": 123.6,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-25-la-regla-que-salio-de.daniela.mp3"
+      },
+      {
+       "t": 2380.3,
+       "titulo": "el podcast, que nació hoy a la madrugada",
+       "duracion": 175.5,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-26-el-podcast-que-nacio.daniela.mp3"
+      },
+      {
+       "t": 2555.8,
+       "titulo": "el balance del día hasta acá",
+       "duracion": 57.2,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-27-el-balance-del-dia.daniela.mp3"
+      },
+      {
+       "t": 2613.0,
+       "titulo": "el whatsapp del grupo, la única charla de fuzzer",
+       "duracion": 127.3,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-28-el-whatsapp-del-grupo.daniela.mp3"
+      },
+      {
+       "t": 2740.2,
+       "titulo": "el reinicio de las trece veintiséis y la tarea que se cayó",
+       "duracion": 141.1,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-29-el-reinicio-de-las.daniela.mp3"
+      },
+      {
+       "t": 2881.4,
+       "titulo": "la tarea de veinticuatro minutos que arregló el chat de la web",
+       "duracion": 151.1,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-30-la-tarea-de.daniela.mp3"
+      },
+      {
+       "t": 3032.5,
+       "titulo": "lo que dijo el daemon al arrancar",
+       "duracion": 88.4,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-31-lo-que-dijo-el-daemon.daniela.mp3"
+      },
+      {
+       "t": 3120.9,
+       "titulo": "la cola: veinticinco órdenes esperando y quién espera a quién",
+       "duracion": 257.3,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-32-la-cola-veinticinco.daniela.mp3"
+      },
+      {
+       "t": 3378.2,
+       "titulo": "el server: cámaras, disco y backup sin destino",
+       "duracion": 95.2,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-33-el-server-camaras-disco.daniela.mp3"
+      },
+      {
+       "t": 3473.4,
+       "titulo": "lo que el server espera de vos",
+       "duracion": 109.0,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-34-lo-que-el-server-espera.daniela.mp3"
+      },
+      {
+       "t": 3582.4,
+       "titulo": "tools: las cuatro capas que quedaron hechas hoy",
+       "duracion": 148.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-35-tools-las-cuatro-capas.daniela.mp3"
+      },
+      {
+       "t": 3731.3,
+       "titulo": "lo que tools espera de vos",
+       "duracion": 56.2,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-36-lo-que-tools-espera-de.daniela.mp3"
+      },
+      {
+       "t": 3787.6,
+       "titulo": "awtomic, donde quedó parado el tema",
+       "duracion": 139.4,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-37-awtomic-donde-quedo.daniela.mp3"
+      },
+      {
+       "t": 3926.9,
+       "titulo": "awtomic, lo que está pendiente",
+       "duracion": 121.7,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-38-awtomic-lo-que-esta.daniela.mp3"
+      },
+      {
+       "t": 4048.6,
+       "titulo": "awtomic, lo que te espera a vos",
+       "duracion": 77.0,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-39-awtomic-lo-que-te.daniela.mp3"
+      },
+      {
+       "t": 4125.6,
+       "titulo": "fuzzer, el gmail y el post de croto",
+       "duracion": 144.6,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-40-fuzzer-el-gmail-y-el.daniela.mp3"
+      },
+      {
+       "t": 4270.2,
+       "titulo": "juegos, los discos y el backup de la consolita",
+       "duracion": 145.4,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-41-juegos-los-discos-y-el.daniela.mp3"
+      },
+      {
+       "t": 4415.6,
+       "titulo": "juegos, lo que te espera a vos",
+       "duracion": 52.0,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-42-juegos-lo-que-te-espera.daniela.mp3"
+      },
+      {
+       "t": 4467.6,
+       "titulo": "plata, gastos, ventas y el plan",
+       "duracion": 92.7,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-43-plata-gastos-ventas-y.daniela.mp3"
+      },
+      {
+       "t": 4560.3,
+       "titulo": "plata, lo que está pendiente y lo que te espera",
+       "duracion": 83.0,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-44-plata-lo-que-esta.daniela.mp3"
+      },
+      {
+       "t": 4643.2,
+       "titulo": "personal, el tema que nadie mira",
+       "duracion": 144.1,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-45-personal-el-tema-que.daniela.mp3"
+      },
+      {
+       "t": 4787.3,
+       "titulo": "la dgi de uruguay, que crece sola",
+       "duracion": 72.9,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-46-la-dgi-de-uruguay-que.daniela.mp3"
+      },
+      {
+       "t": 4860.2,
+       "titulo": "la compra de la máquina",
+       "duracion": 42.4,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-47-la-compra-de-la-maquina.daniela.mp3"
+      },
+      {
+       "t": 4902.6,
+       "titulo": "lo que te espera en trámites",
+       "duracion": 37.6,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-48-lo-que-te-espera-en.daniela.mp3"
+      },
+      {
+       "t": 4940.2,
+       "titulo": "la cola del agente, veintiséis pendientes",
+       "duracion": 203.5,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-49-la-cola-del-agente.daniela.mp3"
+      },
+      {
+       "t": 5143.7,
+       "titulo": "el agente, en vivo",
+       "duracion": 144.8,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-50-el-agente-en-vivo.daniela.mp3"
+      },
+      {
+       "t": 5288.5,
+       "titulo": "afuera: el dólar al mediodía",
+       "duracion": 63.1,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-51-afuera-el-dolar-al.daniela.mp3"
+      },
+      {
+       "t": 5351.6,
+       "titulo": "afuera: economía argentina",
+       "duracion": 82.4,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-52-afuera-economia.daniela.mp3"
+      },
+      {
+       "t": 5434.1,
+       "titulo": "lo que te espera",
+       "duracion": 113.3,
+       "archivo": "audio/ep-2026-09-13-vivo-2253-53-lo-que-te-espera.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-13-vivo-2253",
+   "version": "vivo",
+   "emision": "vivo",
+   "actualizado": "2026-09-13T22:53-03:00",
+   "duracion": 5547.4,
+   "ts": "2026-09-13T22:53:00-03:00"
   }
  ],
- "actualizado": "2026-09-13 22:44"
+ "actualizado": "2026-09-13 23:14"
 }

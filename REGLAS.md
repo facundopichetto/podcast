@@ -395,3 +395,26 @@ python3 -m recetas.podcast_auto estado               # incluye plan_vivo y auto.
 ```
 
 prueba: `python3 -m recetas.prueba_podcast_proximo` (seccion "podcast vivo continuo", cero tokens).
+
+### merge en el episodio que no empezaste (facundo, 2026-09-13 22:45, pisa lo de "se pega al final")
+
+- **la actualizacion de media hora NUNCA crea un episodio nuevo si hay uno que facundo todavia no empezo**: se
+  mergea adentro de ese. el modelo marca cada capitulo nuevo `# [importante] ...` o `# [menor] ...`;
+  `mergear()` pone los importantes **al principio** (despues de `# de que va`), los menores **al medio**, y
+  `# lo que decidiste hoy` siempre al final. las marcas no quedan en el guion.
+- el episodio toma la **hora del merge**: `# actualizado hoy a las HH:MM` al arrancar (dicha), `actualizado` en
+  `episodios.json`, el titulo (`vivo · dom 13/9 desde HH:MM · actualizado HH:MM`), la lista de la web y el widget
+  del board.
+- **episodio nuevo solo cuando lo marcaste escuchado o lo empezaste**. la web (**1.16**) manda
+  `podcast-empezado <id>` una sola vez, pasados 20 s sonando; `podcast_votos` lo guarda en
+  `votos.json -> empezados`. un vivo empezado se congela en el tick siguiente y el nuevo arranca en el momento,
+  desde la ultima actualizacion publicada antes de que lo empezaras.
+- sin tope de palabras por default (`continuo.max_palabras_episodio: 0`): mientras no lo empieces, todo va ahi.
+- **unificar** episodios ya publicados en uno solo (receta, cero tokens salvo el render):
+  `python3 -m recetas.podcast_auto unificar <id base> <id mas nuevo>... --hasta "YYYY-MM-DD HH:MM"`. la base
+  queda al medio, lo mas nuevo entra como importante al principio (sin su intro), los de origen quedan `oculto`
+  en el mismo commit, el vivo sigue mergeando ahi desde `--hasta` y sale **un** aviso al celu con link y duracion.
+  si no publica, los de origen vuelven a verse y no queda guion a medias.
+- `podcast.publicar`: si github rechaza el push (server y cloud publican a la vez) trae lo de afuera con
+  `pull --rebase`; si choca solo `episodios.json`, une los episodios por id (gana el recien renderizado, se respeta
+  el `oculto` del otro nodo). tambien sube commits que quedaron sin pushear.
