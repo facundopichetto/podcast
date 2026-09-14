@@ -1,0 +1,83 @@
+# de que va
+
+esto es la emisión de noche del domingo 13 de septiembre. cubre lo que pasó entre la una y media de la tarde y las nueve y media de la noche. arranco con el movimiento de la cola y el server, después paso por awtomic, tools, fuzzer, personal y juegos, te cuento lo que quedó esperándote, y al final repaso una por una las decisiones que tomaste hoy para que chequees si las entendí bien. es una tarde bastante cargada: mucho de la web del board, mucho de awtomic, y un par de cosas nuevas del tema personal que arrancaron de cero hoy.
+
+# la cola y el server
+
+a la una y media me preguntaste si no estaba haciendo nada. sí estaba, pero no en la mac: la cola vive en el server, que tiene la guardia desde las trece veintiséis. ahí estaba corriendo desde las trece veintisiete el bug de las imágenes que desaparecen del chat, con veinticinco pendientes atrás.
+
+de ahí salió una charla sobre cómo agilizar la cola. te aclaré la diferencia entre el tamaño de una orden y su exclusividad: chica o grande lo pone la cola sola al encolar, sin gastar tokens, mirando las palabras. chica es sin chrome ni jira, un archivo o un comando. si nombra chrome, jira, shopify, mail, red, el daemon, refactor o investigar, o si hay duda, es grande. lo que te propuse para agilizar, en ese orden, fue: exclusividad solo mientras se edita el daemon y no durante toda la tarea, porque hoy una orden que toca el daemon bloquea todo desde que arranca hasta que termina incluso cuando solo está leyendo o probando; y que las que editan el daemon salgan juntas en una tanda. eso ya lo mandé al server a las trece treinta y tres. el primer envío por el buzón dio un cuatrocientos nueve, que es normal y se reintenta solo en la pasada siguiente. la trampa que te marqué es que esa orden va a la misma fila que quiere destrabar, así que sale recién cuando termina la de las imágenes.
+
+el final del día en la cola fue de reinicios diferidos. a las veintiuna diecinueve venció el tope de quince minutos y no cortó nada, pero dejó de lanzar tareas nuevas hasta reiniciar. después cerraron dos tareas de tools: el contador del chat en vivo, catorce minutos y tres ochenta y tres, y las capturas del fin de tarea, seis minutos y un noventa. a las veintiuna veintitrés se marcó la versión nueva con treinta y siete archivos y el daemon se reinició. a las veintiuna veintisiete volvió a acumular cambios y quedó otro reinicio diferido esperando que no quede ninguna tarea corriendo.
+
+un dato que conviene que sepas: el tope de hilos quedó en dos, escalón alto, porque la ventana de cinco horas está al ciento trece por ciento de su línea. o sea, hoy la cola avanza despacio a propósito.
+
+# awtomic
+
+a las dos y media me pediste la lista de los tickets en mano, y de ahí salió el bloque más grande del día. a las dos treinta y siete me diste una orden clara: a todos los cx asignados a vos que estuvieran en need engineering o in progress, primero pasarlos a in progress engineering y después dejarles el comment de que llegaron tokens frescos y que se actualiza pronto, uno cada nueve minutos, para que el agente de brian no lo lea mal. eran nueve.
+
+a las seis y diez me corregiste eso: los que estaban on hold ya los habías arreglado vos, te salió mal el pedido. y me dejaste la regla: en casos así, mejor no accionar y consultar. si no contestás justo por esos dos, quedan pendientes. lo anoté con backup en las reglas: un ticket en hold no se toca aunque el pedido diga todos. de esa tanda quedaron siete tickets con el comment puesto y en in progress engineering.
+
+el ticket que está vivo ahora es penfolds, el cinco cero cinco dos. el preview de la copia se vio con la password, el botón nuevo lleva a la página de checkout del plan de vino con la variante y el plan de venta correctos, probado con click real en febrero y en mayo, con capturas de escritorio y de trescientos noventa. el draft final está escrito y espera tu postea, que incluye borrar el comment de tokens frescos y pasarlo a needs to follow up. lo único que lo trabó fue la password del storefront. la tarea de penfolds estaba corriendo a las veintiuna veinticuatro con chrome.
+
+también preguntaste si se puede laburar un ticket de cx con la mac apagada. la respuesta es a medias, y el tope es shopify.
+
+de lo que queda pendiente en awtomic: la limpieza del qa store está decidida que espera a que dos tickets estén done porque los setups se reusan; hay un ticket de mvp con un block y una config que hay que limpiar después del merge; el fix de poppy's está cerrado esperando que contesten; y hay unos quince scripts y veinte csv sin commitear en el repo de migración, que hay que decidir qué se commitea y qué se tira. esperándote sigue la rotación de los tres tokens de shopify que quedaron expuestos.
+
+# tools y la web
+
+tools fue casi todo board. quedó publicada la web hasta la versión cuatro doscientos catorce, con cuatro publicaciones entre las veinte treinta y cuatro y las veintiuna diecinueve.
+
+lo que cerró hoy: las capturas del fin de tarea ahora salen solas en la web, o sea que cuando una tarea devuelve rutas a imágenes bajo tus carpetas, se publican al buzón en vez de quedar como texto. el contador del chat ahora reestima en vez de clavarse en un segundo, con un estimador por pestaña que usa las últimas diez respuestas reales de esa pestaña; falta publicar esa web. las cajas a be ce del board ya no vencen: no se cierran cuando mandás un mensaje, solo se marca la que tocaste, y se puede desmarcar con doble click. y las tareas ahora tienen un nombre de una palabra en vez del número, en todo lo que ves.
+
+eso último salió de un pedido tuyo: preferís leer una palabra a un código de proceso. a las ocho y media me marcaste que el coso del tiempo seguía mostrando algo raro: querés que justo antes de que salga la respuesta diga un segundo, y que en cada actualización diga cuánto falta, no el estimado total de arranque. lo cambié: la cifra al lado pasa a ser el tiempo estimado para mi respuesta.
+
+pendiente en tools queda la prueba de las pestañas de la web, que viene inestable contra el deploy: fallan chequeos que en local dan verde y el conjunto cambia de corrida a corrida, veinte fallos y después trece con la misma versión. y sigue esperándote desde el ocho de septiembre darle permisos de accesibilidad y grabación de pantalla al agente en la mac.
+
+# server, fuzzer y juegos
+
+en server, a las siete y diez me contaste que te llegan varios avisos de intento de login preguntando si sos vos. son del server entrando a google de awtomic para el login de shopify. ya está en la cola el segundo factor propio y las passkeys de claudio para google y claude sin celu. por ahora seguí poniendo que sos vos.
+
+a las nueve menos veinte me pediste separar server, cloud y mac en el board, que están muy pegados, y lo encolé junto al resto de los cambios de la web: iconos del header de cada widget más grandes, una equis que oculta la caja, y el engranaje de arriba a la derecha pasa a ser un ícono de persona con menú de cuenta.
+
+lo que espera a vos en server son cuatro cosas cortas: aprobar el exit node del server para cloud, que son dos comandos de un minuto; decir que vinculás whatsapp de cloud y escanear una vez; y del nodo cloud faltan el login de claude de esa máquina, una auth key de tailscale sin la cual no entra a la tailnet, y lo de github. también quedó anotado que la réplica del estado al relevo todavía no viaja completa, así que el cartel de perder un nodo queda en rojo los domingos a propósito.
+
+en fuzzer el movimiento fue tu mensaje de las dos y cuarto: querés llenar vorterix un día, y me dijiste que lo tome completo pero después de las colas fuertes. quedó así. lo que espera a vos ahí es abrir el link de autorización de gmail que te dejé, aceptar, y pegar en el chat la dirección de la página de error: el daemon la reconoce y canjea sola, sin tokens.
+
+en juegos no hubo trabajo: a las dos y ocho pasó una prueba de vinculación desde cloud que llegó bien y contesté desde el server, y con eso quedó verificado que el camino de cloud al chat anda. del lado técnico no hay nada abierto: falta que aceptes el cartel de depuración usb en la retroid, que pongas la otra tarjeta de la consolita si querés su índice, y que elijas letra en tres decisiones de la noche del once.
+
+# personal
+
+personal fue lo nuevo del día. hoy no había ningún widget de personal, así que arrancó de cero: un widget de salud con peso, comida del día y racha, un registro diario y un archivo de objetivos. me pasaste los datos: nacido el catorce de julio del ochenta y seis en buenos aires, sin enfermedades ni medicación, setenta y tres seis hoy, un setenta y cinco a confirmar porque te vas a medir, sin obra social. dijiste que el peso lo cargás siempre antes de comer a la mañana y que se guarde con fecha. a las cinco cuarenta y cinco cerró la corrección de esa orden para que el primer registro entre con esos datos.
+
+y a las cinco treinta y siete cerró la búsqueda de obra social en tu gmail. no tenés obra social desde que volviste al país y lo querés resolver cuanto antes.
+
+quedan tres cosas de personal esperándote: elegir entre las opciones para pasar apple health al server, donde la primera es la app de export premium por veinticinco dólares de por vida mandando al server por tailscale; pasar la dirección de tu casa para ordenar por cercanía los diez lugares del post de instagram; y el pasaje de mendoza, que no puedo leer porque el gmail de orugote quedó sin permiso y te mandé el link de reautorizar al celu.
+
+# lo que te espera
+
+lo primero es corto y destraba mucho: el postea de penfolds, si el draft te cierra. después están las cuatro cosas de un minuto del server: el exit node, whatsapp de cloud, y el login de claude más la auth key de tailscale del nodo cloud, sin las cuales cloud no puede tomar la guardia si el server se cae.
+
+de ahí en más es elegir letra. hay tres decisiones de juegos y tres de plata esperando desde la noche del once, más las ocho propuestas de personal de esa misma noche. en plata lo que más deja es publicar el marshall, y solo faltan las fotos: cuando las saques, pesá el ampli con la caja, mirá la etiqueta del parlante y anotá el código de barras de la caja, que es el número que pide la api. y hay que rechequear el blue antes de publicar, porque los netos son del cuatro de septiembre.
+
+# lo que decidiste hoy
+
+repaso las decisiones del día y qué entendí de cada una, para que me corrijas lo que haya quedado torcido.
+
+me dijiste, a las dos treinta y siete, que a todos los cx asignados a vos en need engineering o in progress les ponga el comment de que llegaron tokens frescos y los pase antes a in progress, para que el agente de brian no lo lea. lo entendí así: nueve tickets, primero la transición y después el comment textual, uno cada nueve minutos. y quedó claro que ese comment se borra después, cuando se postea el trabajo real.
+
+a las seis y diez me dijiste que los que estaban on hold ya los habías arreglado vos, que te salió mal el pedido, y que en casos así mejor no accione y consulte. lo entendí como regla permanente: un ticket en hold no se toca ni con comment ni con cambio de estado ni con fix, aunque el pedido diga todos; se pregunta primero, y si no contestás justo por esos, quedan pendientes. ya está escrito en las reglas con backup. de esa tanda quedaron siete con el comment, no nueve.
+
+a las ocho y seis me dijiste a a lo de traerte el resumen de los siete tickets con el comment de tokens frescos cuando penfolds tenga el draft. lo entendí como: la tarea de penfolds corriendo, la copia de la mac detrás, y el resumen encolado para cuando penfolds termine, leyendo cada ticket por api, diciendo qué se hizo, qué falta y qué comment se borra al postear.
+
+a las ocho y ocho me dijiste a a arrancar hall, el cinco cero cuatro seis, con el plan cuando llegue ese resumen. lo entendí así: hall va detrás del resumen, es solo lectura y plan, nada se postea y no se toca ningún theme hasta que veas el plan. es el que tiene deadline, el veintiuno.
+
+a las ocho y veintiséis me dijiste que te mandé mil cosas y que vayamos por penfolds y de a uno, que nunca más te mande mil cosas expandidas. lo entendí como regla dura para el chat y para el fin de tarea: un ticket o un tema por respuesta, tres a seis líneas, solo lo que hay que decidir ahora, y el detalle queda en el disco.
+
+a las ocho y media me dijiste que el contador de tiempo sigue mostrando algo raro, que justo antes de que salga la respuesta debería decir un segundo y que cada vez que actualiza muestre cuánto falta. lo entendí como: la cifra deja de ser el estimado total de arranque y pasa a ser el tiempo estimado para mi respuesta, reestimando en cada actualización. eso ya está hecho pero falta publicar la web, así que todavía no lo vas a ver.
+
+a las nueve menos veinte me dijiste que separe server, cloud y mac en el board porque están muy pegados. lo entendí como parte del mismo lote de la web: más aire entre esos widgets, iconos del header más grandes, una equis para ocultar cada caja y el engranaje convertido en menú de cuenta. está encolado en una sola orden, todavía no salió.
+
+a las dos y catorce, de fuzzer, me dijiste que te gustaría llenar vorterix con la banda y que me tome todo el mensaje pero después de las colas fuertes. lo entendí como: nada de eso arranca hoy, queda anotado y espera a que baje lo pesado.
+
+dos cosas quedaron ambiguas y te las dejo marcadas. una: el mensaje largo de fuzzer de las dos y cuarto lo tomé, pero mi respuesta arrancó hablando de un widget de salud de personal, así que no sé si lo de vorterix quedó bien separado de lo otro; si era todo fuzzer, decime y lo reordeno. dos: cuando dijiste que en la lista de tickets iban todos los asignados a vos, no me quedó claro si eso incluía los de estado in progress engineering solo para el comment o también para revisión; los tomé solo para el comment. si alguna de las dos la leí mal, corregime y lo rehago.
