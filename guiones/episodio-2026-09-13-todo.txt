@@ -1,0 +1,26 @@
+# de qué va este episodio
+actualizado hoy a las once y veintidós de la noche.
+este es el episodio único de la noche: junté en uno solo todo lo que todavía no escuchaste, desde el mediodía hasta ahora, más lo que pasó en la última media hora mientras lo armaba.
+el orden es este. arranca con lo nuevo, que es lo que menos sabés. sigue con la última hora, de nueve y media a diez y veinticinco de la noche. después va el repaso largo del domingo entero, tema por tema, que es la parte más tranquila y la podés escuchar de fondo. y cierra con lo que queda esperándote a vos.
+dura alrededor de una hora y media. los episodios viejos no se borraron: están ocultos en la web, y si querés alguno suelto, te lo vuelvo a mostrar.
+
+# lo nuevo desde las diez y media de la noche
+a las diez y treinta y nueve salió el episodio urgente con una cosa nueva. ahora cada episodio dice en voz alta a qué hora se actualizó, y esa hora también queda en el título de la lista. antes mirabas la lista y no sabías si lo que estabas por escuchar era de hace diez minutos o de hace tres horas.
+eso quedó como una receta aparte, que se llama sellar. le pega la frase adelante sin volver a renderizar el episodio entero: tarda tres segundos en vez de diez minutos, y se puede repetir todas las veces que haga falta.
+de paso se arregló algo que venía rompiendo en silencio. el clon del repositorio que uso acá en la nube es parcial, y el comando que sumaba los archivos al commit se salteaba los audios sin avisar. resultado: la web quedaba con el texto nuevo y el audio viejo. ahora suma también los parciales, y por eso lo que estás escuchando llegó completo.
+lo que no salió bien. a las diez y treinta y ocho intenté una vuelta en vivo y falló dos veces seguidas, entre el renderizado y la publicación. después, a las diez y cincuenta y tres, arrancó en el server un proceso que unificaba el episodio del mediodía con el de la última hora, y tardó veintiún minutos en publicar: recién salió a las once y catorce. cuando vos escribiste, a las once y once, la web todavía mostraba solo el episodio corto. no estaba colgado, estaba lento.
+así que no lo lancé de nuevo. esperé su resultado, y lo que estás escuchando es ese episodio del server con estos dos capítulos nuevos adelante y el cierre al día, armado desde la nube.
+ese detalle es el que te importa a futuro. no se volvió a renderizar nada de lo viejo: se reusaron los audios que ya estaban hechos y se rendericeó solamente lo nuevo, que son tres capítulos. por eso salió en minutos. cada vez que pidas un episodio con todo, va a salir así de rápido.
+una cosa más, de ruido. acá en la nube hay un script que cada pocos segundos escribe en el log que no encuentra el clon de la web y no publica. no rompe nada, pero está llenando el log entero. queda anotado para arreglarlo mañana.
+
+# lo que queda esperándote
+lo que de verdad necesita algo tuyo es corto, son cuatro cosas.
+la primera: el login de shopify en el server. no lo puedo hacer solo, porque pide una credencial fresca y ninguna está guardada acá. o me pasás el password, o lo hacemos una vez por ve ene ce, con la consola esperando.
+la segunda: el canal de gmail de la banda no puede refrescar su token. hay que volver a autorizar ese permiso una sola vez.
+la tercera: si querés el whatsapp de la nube, quedó una página esperando que escanees el código. es un dispositivo vinculado nuevo, el del server sigue igual y no se reemplaza.
+y la cuarta: los logins de plex, disney, hache be o max y flow, para el widget de qué ver. las pestañas ya están abiertas en el chrome del server.
+del podcast me quedan dos cosas mías: el capítulo con el postmortem del corte de red del sábado, y la aplicación instalable en el celu, con descarga de episodios para escuchar sin datos.
+eso es todo. cuando lo termines, marcalo como escuchado en la web y el próximo episodio arranca desde acá.
+
+
+(el resto reusa el audio ya renderizado de ep-2026-09-13-vivo-2253; su guion esta en guiones/)
