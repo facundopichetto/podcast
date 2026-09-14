@@ -1,5 +1,5 @@
-# actualizado hoy a las 22:53
-actualizado hoy, domingo trece, a las veintidós cincuenta y tres.
+# actualizado hoy a las 02:39
+actualizado hoy, lunes catorce, a las dos treinta y nueve.
 
 # de que va
 buenas, facundo. esto es la emisión de mediodía del domingo trece de septiembre. cubre lo que va del día, de las doce de la noche a la una y media de la tarde, y es larga: hora y media, en cinco partes que se escuchan seguidas.
@@ -9,6 +9,39 @@ el orden es el de siempre. primero lo que hicimos, que es la parte más larga y 
 en esta primera parte arrancamos con tools, que es donde estuvo el grueso del día: el reparto de cuentas por modelo, el "hace tantos segundos" de los widgets que se quedaba clavado, la cola en paralelo con hilos por recurso, y la charla de la madrugada que terminó con vos yéndote a dormir a las dos de la mañana y la cola siguiendo sola.
 
 vamos.
+
+# penfolds: el css ahora va por snippet, como en los otros themes
+desde las 22:56 el tema fue cómo carga awtomic el css custom en un theme. vos pediste que mirara cómo lo hicimos en otros merchants donde tocamos estilos y que aprendiera de eso, en vez de inventar una forma nueva. la convención salió clara mirando craggy, efbdem y ponzi: el archivo principal del theme no linkea la hoja de estilos directo, sino que renderiza un snippet propio de awtomic, con un guard que captura la salida y solo la usa si no vino con error de liquid. ese snippet es el que carga el css y el js con la función de assets del theme, más algún css chico inline si hace falta.
+
+en penfolds estaba hecho a lo bruto: la etiqueta de stylesheet pelada, sin snippet y sin guard. antes de tocar nada pediste, y hice, una revisión de las otras copias nuestras para ver si tenían el mismo problema. en hafner no hay nada que corregir: ese theme no usa el css custom de awtomic, el kit de sign-up es una section propia con sus propios archivos. en hall todavía no hay copia nuestra. así que el único con el stylesheet pelado era penfolds, y quedó encolado solo ese arreglo, sin encolar trabajo de más.
+
+a las 23:04 terminó. cuatro minutos, con chrome, cuenta facu. la copia del theme quedó con el snippet nuevo de awtomic que carga el css, y el archivo principal renderizando ese snippet con el guard. en este theme no hay js, así que el snippet carga solo la hoja de estilos. el theme live no se tocó en ningún momento.
+
+# el done de penfolds, posteado a la medianoche y veintiséis
+a las 00:24 pediste ver el draft del comment de wine pdp customization antes de que saliera nada. te lo mostré tal cual iba a quedar: un comment público que dice que en la página del producto del plan de vinos el botón de agregar al carrito ahora lleva a la página de sign-up con la variante y el plan de venta ya seleccionados, más la password del storefront sacada de la bóveda.
+
+a las 00:26 dijiste "postea tal cual". eso quedó encolado con tres cosas adentro: borrar el comment viejo, postear el done con el link y la password real, y recién después mover el ticket a needs to follow up. el assignee y las etiquetas no se tocan. y antes de mover de estado, la verificación: que la copia del theme siga apareciendo en la lista de themes y que el comment haya quedado posteado de verdad. sin eso, el ticket no se mueve.
+
+# los temas los manejás vos, dijiste, y dejé de preguntar
+a las 22:25, por audio, fuiste bastante claro: "deja de preguntarme los temas, manejalo vos". que si hay un tema nuevo me lo vas a decir vos, y el resto lo decido yo por contexto.
+
+quedó como regla escrita. no vuelvo a preguntar "esto es de tools, seguís acá o vas a esa pestaña". lo que es de otro tema se contesta y se encola donde va, en silencio. vos avisás solo cuando querés un tema nuevo con su pestaña, o cuando querés juntar dos.
+
+en el mismo audio pediste que si no tengo nada para hacer siga con la cola y lo pendiente, sin esperar. y encolé lo último que había quedado colgando, el botón de copiar del board.
+
+# la regla del podcast que salió a las 00:23
+a las 00:20 me preguntaste, entre risas, qué era eso de "la puta por defecto" que se escuchó en un audio. no era nada: el guion decía "la mudanza por defecto a la máquina virtual de la nube", que es la tarea de mover el agente a cloud como nodo principal. el sintetizador se comió la palabra y quedó así. la frase se reescribe sin ese "por defecto" para que no vuelva a pasar.
+
+tres minutos después vino la regla de verdad, y esta es dura: en ningún audio, y mucho menos en el podcast, van números de proceso ni de ticket. cada cosa se nombra por algo que la identifique: el nombre de la tarea, el merchant, el asunto. quedó anotada en el archivo de reglas al momento, y además encolé que el pase de redacción del podcast lo filtre solo, así no depende de que el modelo se acuerde cada vez.
+
+también pediste, más temprano, que cada episodio diga al arrancar la hora de su última actualización, y que esa hora aparezca en el título de la lista y en el widget del board. se lo pasé como corrección a las dos tareas del podcast que estaban corriendo en ese momento.
+
+# los tres gmail en rojo, y el que resolví solo
+a la una y dieciséis preguntaste por qué el server estaba en amarillo. no había nada roto: era por tokens. el server venía laburando con la cuenta facu, que iba al noventa y dos por ciento del límite semanal, y la línea de aviso está en noventa. además había tres rojos en el chequeo de salud que no eran del server sino de gmail, y dos amarillos de cuota en otros proveedores.
+
+de los tres gmail en rojo, uno lo saqué yo solo. el de orugote: tenía la password y el segundo factor en la bóveda, así que entré con el chrome del server y rehice la autorización sin pedirte nada. dos minutos. el chequeo quedó en verde, ve el inbox con doscientos un mails, no saltó ningún aviso al celu y la pestaña quedó cerrada. los otros dos necesitan una clave que no tengo, no un link, así que esos sí quedaron de tu lado.
+
+y a la una y veinte, sobre las cuentas: pasaste las tareas y el chat nuevos a orugote como cuenta fija, con el reparto automático apagado. lo que ya estaba corriendo terminó con facu, porque un cambio de cuenta no corta un proceso a la mitad.
 
 # awtomic: penfolds y el widget doble
 arranco por penfolds, el ticket cincuenta cincuenta y dos. a las nueve y treinta y uno terminó la corrección del botón. en la copia del theme, solo en la plantilla de productos del plan de vinos, ahora hay un único botón de agregar al carrito y es nuestro link, con las mismas clases, el mismo ícono, el mismo ancho y el mismo hover que el del theme. en esa plantilla se apagó la barra sticky, que traía otro botón real de agregar al carrito. se probó con click real: en febrero y en noviembre el botón lleva a la variante y al plan de suscripción correctos. en un producto normal, el chardonnay, el botón real sigue igual, con cantidad y comprar ahora. el draft cambió el texto para decir que el botón de agregar al carrito ahora lleva al plan, en vez de hablar de un segundo botón. no se posteó nada.
@@ -201,7 +234,7 @@ y a la una y veintitrés pasó lo mejor del intercambio, que fue darse cuenta de
 ese tipo de detalle es el que ahorra veinte minutos de ida y vuelta: leer la ruta del prompt antes de contestar la pregunta que se hizo.
 
 # la mudanza a cloud, de madrugada
-arrancamos el domingo con la cabeza en cloud. la orden que quedó puesta a las 00:00 era la mudanza por defecto a la vm claudio-nube, con una condición escrita adelante: correr después de la 949, que es la que crea la vm y hace el bootstrap, y después de la 961, que es la que pone el chat en cloud. si alguna de esas dos no había cerrado, la mudanza se dejaba marcada como reintento al final del carril y no arrancaba. esa es la forma correcta de encadenar: la orden trae su propia condición adentro, no depende de que alguien mire la cola en el momento justo.
+arrancamos el domingo con la cabeza en cloud. la orden que quedó puesta a las 00:00 era la mudanza por defecto a la vm claudio-nube, con una condición escrita adelante: correr después de la de llena el widget de oportunidades, que es la que crea la vm y hace el bootstrap, y después de la de reinicia, que es la que pone el chat en cloud. si alguna de esas dos no había cerrado, la mudanza se dejaba marcada como reintento al final del carril y no arrancaba. esa es la forma correcta de encadenar: la orden trae su propia condición adentro, no depende de que alguien mire la cola en el momento justo.
 
 a las 00:02 salió la tarea que iba al hueso del problema: entrar a la vm claudio-nube por ese ese hache como agente, con el host resuelto por la receta de login de nube, y hacer el login de github ahí adentro. el método era el de código de dispositivo: la receta abre el flujo, saca la url y el código, te los manda al chat y al celu, y después se verifica con el estado de autenticación de gh en la vm. sobre eso mismo se enganchaba poner la cuenta de claude en la máquina nueva.
 
@@ -210,7 +243,7 @@ a las 00:03 volvió a aparecer la mudanza por defecto, con el mismo criterio, po
 el resumen de esa franja es que la mudanza estaba lista y bloqueada por una sola cosa. no era la vm, no era tailscale, no eran las cuentas de claude. era github, y más precisamente la sesión de gh adentro de la máquina nueva. sin eso, cloud no puede publicar en el buzón, y si no publica en el buzón no puede atender el chat. toda la cadena colgaba de ese hilo.
 
 # la charla de las 00:23 y el código que venció
-a las 00:23 escribiste desde la mac: estabas ahí, querías terminar lo de cloud. la respuesta fue directa: lo que traba es el login de github, sin gh la vm no publica ni toma el chat, y el código anterior había vencido a las 00:13. por eso las dos órdenes de mudanza, la 981 y la 982, habían cerrado en un minuto: entraban, veían que no había sesión, y salían. no fallaban de verdad, simplemente no tenían con qué trabajar.
+a las 00:23 escribiste desde la mac: estabas ahí, querías terminar lo de cloud. la respuesta fue directa: lo que traba es el login de github, sin gh la vm no publica ni toma el chat, y el código anterior había vencido a las 00:13. por eso las dos órdenes de mudanza, la de mudanza por defecto a la vm y la de vm ssh como host, habían cerrado en un minuto: entraban, veían que no había sesión, y salían. no fallaban de verdad, simplemente no tenían con qué trabajar.
 
 se generó un código nuevo, el efe de uno seis, a cuatro cuatro be, con quince minutos de vida. las instrucciones eran abrir en la mac, estar logueado con tu github, y tipear el código. esa es la parte que después se volvió tema.
 
@@ -225,7 +258,7 @@ la respuesta fue que sí se puede, y que la clave es que el chrome de cloud sea 
 
 a las 00:31 salió la orden de escribir eso en el documento de nube del server, en una sección propia que se llama chrome en cloud para emergencias. con el objetivo escrito arriba, para que el que lo lea en seis meses entienda para qué existe. y con un inventario de todas las recetas del agente y de todos los scripts del daemon, clasificando cada una: cuáles pueden correr en cloud tal cual, cuáles necesitan algo que solo está en la mac o en el server, y cuáles no tienen sentido allá. ese inventario es la parte aburrida y es la que hace que el plan sea real y no una intención.
 
-a las 00:33 diste el visto bueno completo: hacé todas las sugerencias sobre lo de cloud, me gustaron. quedaron encoladas como cadena en el carril de server, después de la orden 997, que ya había cerrado con gh adentro y cloud con cuenta en modo auto. son ocho pasos. de esos ocho, dos te tocan a vos: la auth key de tailscale en el paso dos, y el código cu erre de whatsapp como segundo dispositivo en el paso seis. los dos se te piden en el chat cuando llegue el momento, no antes.
+a las 00:33 diste el visto bueno completo: hacé todas las sugerencias sobre lo de cloud, me gustaron. quedaron encoladas como cadena en el carril de server, después de la orden escribir en claudio server nube md, que ya había cerrado con gh adentro y cloud con cuenta en modo auto. son ocho pasos. de esos ocho, dos te tocan a vos: la auth key de tailscale en el paso dos, y el código cu erre de whatsapp como segundo dispositivo en el paso seis. los dos se te piden en el chat cuando llegue el momento, no antes.
 
 a las 00:39 arrancó el paso uno, y es el que más me gusta de la lista porque es el que evita un desastre en vez de agregar una función. el paso uno es sacar los secretos del rsync del bootstrap de nube. hoy ese bootstrap copia la carpeta entera, y adentro de la carpeta hay una carpeta de secretos, el archivo de jira, el de slack y todo lo que la sección ocho del documento marca como secreto. la tarea es excluir todo eso del rsync y armar una lista cerrada, en un archivo aparte, de qué es secreto y qué no.
 
@@ -258,7 +291,7 @@ en el mismo mensaje de las 09:53 vino la otra mitad de la historia, y es la peor
 
 la frase que salió fue no es culpa tuya, es la receta de login otra vez. y es literal: era el segundo bug de la misma receta en la misma madrugada. el primero fue el identificador de cliente mal puesto, a las 00:48. el segundo fue este, guardar un token válido de una forma que la vm no acepta.
 
-en ese momento estaba corriendo la orden 1031, que generaba un código nuevo para mandarte otra vez. o sea que el plan seguía siendo el mismo: generar código, mandártelo, que lo tipees, cruzar los dedos. tercera vuelta de la misma rueda en doce horas.
+en ese momento estaba corriendo la orden token del mcp de gmail, que generaba un código nuevo para mandarte otra vez. o sea que el plan seguía siendo el mismo: generar código, mandártelo, que lo tipees, cruzar los dedos. tercera vuelta de la misma rueda en doce horas.
 
 # la regla que salió de las 11:00
 a las 11:00 dijiste la frase que ordenó todo el día, y la copio entera porque merece quedar: tenés que aprender a loguearte solo, en todas las cosas en las que podés loguearte. yo siempre te comparto claves y cosas, no me hagas loguearme a mí por vos. si vos podés, hacelo vos. si te quedás afuera de un token, hacete otro.
@@ -309,6 +342,36 @@ y ahí mismo quedó abierta la puerta para lo que podía estar preguntando en re
 eso es todo lo que hubo de fuzzer en el día. una pregunta tuya a la una y pico de la mañana y una confirmación. no es poco en el sentido de que era justamente lo que había que confirmar: el mensaje de presentación al grupo era el primer contacto del agente con la banda por whatsapp, y era la clase de cosa que si salía mal salía mal delante de santi y de leo. salió bien, salió una sola vez, y quedó verificado mirando el grupo, no asumiendo que el envío funcionó porque el script terminó sin error.
 
 lo que no hubo hoy en fuzzer es movimiento de las otras cosas: nada de la web, nada de flyers, nada de diseño, ningún pedido de santi ni de leo por mail. la casilla estuvo tranquila. eso también es información: el canal de mail de la banda quedó configurado para chequear cada quince minutos de base y bajar a cada dos cuando hay conversación abierta, y hoy nunca entró en el modo rápido porque no hubo con quién.
+
+# la rutina y el peso, del lado personal
+a las cero cero cinco quedó anotada en el estado del tema personal la rutina que definiste. la regla dura arriba de todo: eva no está todos los días, a veces la tiene martu, y no se te recuerda nunca pasearla ni darle de comer. vos avisás cuando la tenés. de la noche quedó el baño todos los días y qué es lo último antes de dormir.
+
+a la una y treinta y siete terminó otra del mismo tema, y esta arregló algo que se había perdido. el trece a las dos y cuarto de la tarde te contestó el chat desde cloud y dijo "anoté todo" sin guardar nada, porque el chat no escribe archivos. así se perdió el peso que habías dicho. ahora el chat carga tu salud solo cuando lo decís en cualquier pestaña, y queda guardado de verdad. falta que el daemon reinicie para que tome el cambio.
+
+# el player del board, y la app en el celu
+quedó cerrado el cambio del reproductor del board. antes la velocidad era un botón que rotaba entre tres valores fijos. ahora es un control fino de cero cincuenta a dos, con el valor a la vista y los presets tocables al lado, y se guarda como antes.
+
+también sacamos las líneas: se fueron los bordes del chat y de las cajas de widgets, sin dejar contornos por ningún lado. eso se publicó solo.
+
+y hubo una duda tuya a las 22:27 sobre si lo que estabas usando era safari o la app del inicio. desde acá no lo sé, la web sí lo sabe pero no me lo manda con el mensaje. lo distinguís vos al toque: si abajo ves la barra de dirección con el url y las flechas, es safari; si la pantalla es solo el chat, es la app. después preguntaste por el link del podcast para agregarlo también al inicio, y te lo pasé: se abre sin clave, compartir y agregar a inicio.
+
+# el episodio de urgencia y la publicación que había fallado
+a las 22:43 salió una tarea marcada para ir al frente de la cola, pedida por vos por audio porque te ibas a pasear con eva y querías escuchar lo más actualizado. generó un episodio nuevo cubriendo todo lo que había pasado desde el último publicado, juntando los chats de todas las pestañas.
+
+a las 22:48 le siguió la corrección de la hora de actualización, para que el episodio diga al arrancar cuándo se armó y lo lleve también en el título de la lista.
+
+y a las 23:34, desde el celu, marcaste máxima prioridad sobre otra cosa: en la web del podcast se veía un solo episodio y estaban ocultos los de la noche que todavía no habías escuchado. la vuelta del modo vivo de las 22:38 había fallado dos veces seguidas, entre render y publicación. eso quedó encolado para arreglarse ya.
+
+la tarea grande del modo vivo continuo, la que cambia el podcast automático a episodio que se va alargando, se cayó por tiempo: cuarenta y cinco minutos y timeout.
+
+# la madrugada del agente, de dos a dos y media
+entre las dos y las dos y media hubo bastante movimiento sin que nadie mirara. a las 02:08 el oauth tenía el token vencido y se refrescó solo con una llamada mínima, que es lo que corresponde antes de declarar nada muerto. lo mismo volvió a pasar a las 02:34.
+
+a las 02:16 cerró la tarea que afina la transcripción de tus audios: diecinueve minutos con chrome. a las 02:17 se marcó una versión nueva con cinco archivos, la versión pasó la prueba y el daemon se reinició solo. al arrancar avisó algo que conviene tener presente: flabs no tiene carpeta en esta máquina, así que las órdenes de ese tema se rutean a tools y no se encola trabajo de flabs acá. el tope de hilos quedó en siete, con el escalón bajo, porque el límite de cinco horas estaba al treinta y cinco por ciento de su línea.
+
+la cola armó su cadena de esperas: la del renombre, la del swipe, la de los avisos y la de verificar el reinicio diferido quedaron todas esperando a la que rehace un widget del board, porque tocan el mismo archivo de la web. cuando esa terminó, a las 02:29, las otras se reacomodaron a esperar al renombre.
+
+a las 02:29 y a las 02:36 se publicaron dos versiones de la web. y a las 02:32 y a las 02:37 quedaron pedidos dos reinicios, los dos diferidos hasta que no quede ninguna tarea corriendo, que es la regla desde que un reinicio apurado dejó tres tareas huérfanas.
 
 # el reinicio de las trece veintiséis y la tarea que se cayó
 el bloque grande del día, y el que más ruido hizo, pasó entre las trece veintiséis y las trece veintinueve. tres minutos donde se reinició el daemon, se cerró una tarea a la fuerza, se reencoló, se refrescó todo y quedó una cola enorme acomodándose sola.

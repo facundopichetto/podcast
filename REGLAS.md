@@ -418,3 +418,24 @@ prueba: `python3 -m recetas.prueba_podcast_proximo` (seccion "podcast vivo conti
 - `podcast.publicar`: si github rechaza el push (server y cloud publican a la vez) trae lo de afuera con
   `pull --rebase`; si choca solo `episodios.json`, une los episodios por id (gana el recien renderizado, se respeta
   el `oculto` del otro nodo). tambien sube commits que quedaron sin pushear.
+
+## ningun numero de tarea ni de ticket (facundo, 2026-09-14)
+
+"en ningun audio pero menos podcast me pongas numeros de proceso o de ticket, referite por algo que los
+identifique". vale para el guion, los titulos de capitulo y cualquier audio del chat.
+
+- "la 1157" -> "la de notificaciones" (el tag `{nombre}` de esa linea de `ordenes.md`); si la orden es vieja
+  y no tiene tag, se la describe en pocas palabras ("la de mudanza por defecto a la vm").
+- "CX-5048" -> "el ticket de ponzi, flow to tag customers": merchant (el corchete del titulo) y asunto corto,
+  del indice de jira (`~/w/awtomic/qa/jira-index.json`, `jira_mine.json`) o del draft de qa.
+- un numero entre parentesis o una lista de numeros ("(1193)", "(4944, 4987)") se caen: no aportan nada leidos.
+- lo que SI es un numero de verdad queda igual: años, plata (`$1200`), cantidades con unidad ("1800 palabras",
+  "480 filas"), horas, codigos http ("dio 409"), aproximados ("~113 subs").
+
+lo hace `recetas/sin_numeros.py` (cero tokens) en tres lugares, el ultimo es el que manda:
+`podcast_proximo.armar` (el guion vivo `PROXIMO.md` ya nace sin numeros), `podcast_auto.material` y
+`material_tramo` (el modelo nunca ve un numero que pueda repetir), y `podcast.nuevo`, que limpia el guion
+antes del tts y **corta el render** si quedo alguno (`sin_numeros.sobran`). los prompts tambien lo dicen.
+
+a mano: `python3 -m recetas.sin_numeros limpiar <archivo>` o `ver <archivo>` (rc 1 si sobra alguno).
+prueba: `python3 -m recetas.prueba_podcast --sin-numeros` y `python3 -m recetas.sin_numeros --probar`.
