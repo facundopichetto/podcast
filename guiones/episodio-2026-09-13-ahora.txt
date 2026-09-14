@@ -1,0 +1,97 @@
+# de que va
+
+esto es una edición urgente, la pediste antes de salir a pasear a eva. cubre lo que pasó desde las nueve y media de la noche, que es donde cortó la emisión de noche, hasta las diez y veinticinco. es una hora sola pero bastante movida: penfolds en awtomic, una tanda grande de cambios pedidos para el board, la rutina nueva en personal, y cómo querés que funcione el podcast de acá en adelante. al final repaso lo que decidiste en esta hora y lo que queda esperándote.
+
+# awtomic: penfolds y el widget doble
+
+arranco por penfolds, el ticket cincuenta cincuenta y dos. a las nueve y treinta y uno terminó la corrección del botón. en la copia del theme, solo en la plantilla de productos del plan de vinos, ahora hay un único botón de agregar al carrito y es nuestro link, con las mismas clases, el mismo ícono, el mismo ancho y el mismo hover que el del theme. en esa plantilla se apagó la barra sticky, que traía otro botón real de agregar al carrito. se probó con click real: en febrero y en noviembre el botón lleva a la variante y al plan de suscripción correctos. en un producto normal, el chardonnay, el botón real sigue igual, con cantidad y comprar ahora. el draft cambió el texto para decir que el botón de agregar al carrito ahora lleva al plan, en vez de hablar de un segundo botón. no se posteó nada.
+
+a las nueve y cuarenta preguntaste por qué aparecía el widget doble. me mandaste un audio con una sospecha concreta: que el widget estuviera dos veces, una como app embed desde el editor del theme y otra como bloque del selector de planes metido en los archivos del template. y dejaste una regla para siempre: cada vez que vea dos widgets, primero chequear app embed contra bloque en el liquid, antes de suponer otra cosa. también pediste que antes de actuar sobre un audio te muestre que lo entendí, y así se hizo.
+
+elegiste la opción A, el chequeo en la copia. salieron dos tareas seguidas. la primera comparó el live y la copia con la misma password y dio lo mismo en los dos: dos widgets de opciones de compra. o sea, **el doble ya estaba en el live, no lo trajimos nosotros**. la segunda fue al fondo: no hay ningún app embed de awtomic, ni en el live ni en la copia. los embeds que hay son de tealium, avada, yotpo, klaviyo y uno de hreflang. bloque de awtomic hay uno solo, en la plantilla del plan de vinos, igual en los dos themes. el que sobra es un script tag viejo de la app, el de bundle payments, que se carga para todo el store y no depende del theme, y se cuelga adentro del formulario de agregar al carrito. un detalle importante: los productos normales no tienen bloque, y su widget sale justamente de ese script tag. si se borra el script, esos productos se quedan sin widget.
+
+a las diez y cinco me preguntaste si entonces en el editor no había ninguno y el que había era de liquid. sí, exactamente eso. elegiste la A de nuevo: esconder con css el widget del script tag, solo en esa plantilla y solo en la copia, y mostrarte capturas antes de postear.
+
+a las diez y veinte terminó. se escondió el widget viejo, que vive adentro del formulario. el nuestro queda afuera del formulario, así que el css no lo toca. como el body no traía el nombre de la plantilla en ninguna clase, en el layout del theme se agregó un atributo con la plantilla y el link a un css nuevo, el de estilos custom de awtomic, que no existía y se creó. todo en la copia, con su commit, y el live sin tocar. probado en el preview, en escritorio y en celular de trescientos noventa píxeles: queda una sola sección de opciones de compra, y el botón de agregar al carrito sigue llevando al alta del plan con la variante correcta. eso quedó esperando tu postea.
+
+# tools: el board
+
+en tools fue una ráfaga de pedidos para el board, casi todos por audio.
+
+primero cerró la tarea de la campana: está donde estaba el cartel del buzón, a la izquierda de la persona, con un número chiquito de no leídas pintado del color de la peor. al tocarla se abre la lista, con circulito de color, responder y cerrar en cada fila, y cerrar todas abajo. los íconos de los widgets crecieron y cada widget tiene su cruz para cerrarlo. está hecho y probado en capturas, pero todavía no lo viste en tu celu.
+
+después pediste sacarle los bordes al chat y a los widgets, y sumaste bajar el contraste entre los dos fondos, así queda todo más plano. eso está en cola.
+
+pediste que cuando un mensaje se manda a otra pestaña, se borre del input de donde salió. en cola.
+
+notaste que un audio quedó más abajo que un mensaje posterior. la tarea que lo miró encontró que no era por el audio: cada fila del chat se guarda con la hora de la respuesta y no con la de envío, así que un mensaje que tarda más en contestarse queda debajo de uno que mandaste después. primero elegiste reordenar solo lo de hoy, te arrepentiste, y quedó un script que cruza cada fila con la hora real del comentario en el buzón y reordena todos los chats de todos los días, con backup antes. aparte está la orden de que cada mensaje viaje con su hora de envío.
+
+las cajas a b c tuvieron dos rondas. la primera: querés que un toque, o doble tap en el celu, mande la respuesta y la caja quede marcada, que desmarcar pida confirmación, y que sumar otra opción también pida confirmación. le sumaste que la caja marcada muestre la hora en que la mandaste. la segunda, a las diez y veinte, fue un bug: las respuestas nuevas llegaban con la opción C ya marcada de antemano. eso quedó urgente, adelante de lo demás, y le sumaste que cada respuesta nueva borre del celu el estado de cajas de más de veinticuatro horas.
+
+pediste también un script para quedar online en slack los días que laburás: activo entre las siete cincuenta y ocho y las ocho veinticinco, al azar, y ausente entre las cinco y cincuenta y las siete de la tarde, salteando los días libres como los de mendoza. está en cola, y la prueba va a ser mirar tu presencia desde la api.
+
+el reinicio del daemon: me dijiste que se reinició mientras grababas un audio. la orden es que el reinicio diferido también espere si hay un audio grabándose o subiendo.
+
+sobre el audio en general, te conté que desde casa ya viaja por la lan al server y lo transcribe whisper local, sin tokens y sin pasar por cloud. lo que se encoló es transcribir en el celu antes de mandar, así viaja texto. y preguntaste por una app que aprenda cómo hablás. no hace falta una app aparte: quedaron tres capas sin tokens. una lista de tu vocabulario como pista para whisper, así eva deja de salir mal. un diccionario de correcciones que aprende cada vez que corregís algo. y probar el modelo mediano de whisper si la memoria del server aguanta.
+
+pediste los pasos para el iphone, cortitos y con link para copiar. te los pasé: abrir el board en safari, poner la clave, agregar a inicio y entrar siempre desde ese ícono, y permitir avisos. la clave del board no está en la bóveda, porque la pusiste vos el diez de septiembre. si me la mandás, la guardo. y como en el celu mantener apretado un mensaje no deja copiar, quedó en cola un botón de copiar al lado de cada link y cada clave.
+
+lo último, a las diez y veinticinco: dejo de preguntarte a qué tema va cada cosa. los temas los manejo yo. vos solo decís si hay que crear uno nuevo o juntar dos.
+
+# personal: la rutina
+
+por audio me contaste tu rutina, y después mandaste una foto del cuaderno. la base es: a la noche te bañás y lo último antes de dormir es dejar listo el mate y lo de la mañana. a la mañana, baño, chequeo conmigo con unos mates, y salir con eva.
+
+dos aclaraciones que importan. eva no está todos los días, a veces la tiene martu, y **nunca te tengo que recordar pasearla ni darle de comer**: eso lo manejás vos. los recordatorios son solo de lo tuyo. y el horario se va a ir moviendo, la foto es la base.
+
+a las diez y ocho terminó la rutina: once pasos en el estado de personal, con conteo del día. los avisos al celu salen desde mañana a las nueve, sin modelo, y el de las once y cuarenta y cinco de la noche suma lo del mate y el termo. si un paso ya está marcado, no avisa. desde el chat podés decir hecho paseo, deshacer, rutina, o rutina libre hoy. los días de mendoza, del treinta de octubre al tres de noviembre, ya están cargados. el calendario de vacaciones de awtomic no lo puedo leer todavía: necesito su link secreto de calendario. todavía no se probó desde el chat.
+
+en cola quedaron dos cosas más: el widget de rutina en el board con tilde por paso, y que cada recordatorio traiga un link que abra el board en ese paso listo para tildar.
+
+# el podcast de acá en adelante
+
+esto es lo que me explicaste en tres audios mientras salías.
+
+nada de horarios fijos. hay un solo podcast vivo que se actualiza chico cada media hora con lo que pasó. cuando empezás a escuchar uno, el siguiente cubre desde la última actualización de ese. tu ejemplo: si lo actualicé a las ocho y media y lo escuchás hasta las nueve y media, a esa hora ya tiene que haber otro listo que cubra de ocho y media a nueve y media, aunque dure un minuto.
+
+la cantidad por día no es fija, la define cuánto escuchás. cuatro paseos con eva no quiere decir cuatro podcasts. mínimo uno por día. siempre tiene que haber uno listo.
+
+si en la ventana no pasó nada, no se inventa relleno. primero te arrepentiste y después confirmaste la C: la edición chica te trae una pregunta, algo pendiente o una decisión abierta, así el próximo tiene material con tu respuesta. si ni eso hay, se saltea. la versión de una hora y media sigue existiendo en general, a criterio.
+
+y para el player pediste: un slider fino de velocidad, que puedas bajar a cero noventa y cinco o cero noventa y nueve; doble toque en el airpod derecho para adelantar diez segundos y en el izquierdo para atrasar diez; y que pausar y volver a tocar reanude sin tener que abrir la app. todo eso se lo pasé a la tarea viva del podcast, que sigue corriendo.
+
+este episodio es el primero de esa idea: urgente, cubre solo la última hora, y los demás están ocultos de la lista, no borrados.
+
+# lo raro de la noche
+
+una cosa que no pediste pero conviene que sepas. entre las nueve y media y las diez y veinticinco hubo más de quince fallas seguidas de una tarea de prueba del daemon, la que agrega una línea a un archivo temporal de prueba. todas con el mismo error: la sesión de claude venció y no se pudo refrescar. el refresco preventivo corrió cada cinco minutos y dice que refrescó la cuenta facu, pero esa prueba sigue fallando con la cuenta orugote. las tareas de verdad, penfolds, la campana y la rutina, corrieron bien con orugote. o sea que parece algo de esa prueba en particular, pero llena el chat de tools de fallas repetidas. lo dejo marcado para mirar.
+
+y en juegos pediste tres veces reinicia desde la tui, a las nueve y treinta y nueve, a las diez y a las diez y seis. las tres quedaron como reinicio diferido, esperando que no hubiera tareas corriendo.
+
+# lo que decidiste en esta hora
+
+uno. penfolds: el widget doble no es de app embed, es un script tag viejo. se esconde con css solo en la plantilla del plan de vinos, en la copia, y se postea recién con tu ok.
+
+dos. regla para siempre: dos widgets, primero chequear app embed contra bloque en el liquid.
+
+tres. audios con acciones: antes de hacer, mostrarte que entendí.
+
+cuatro. board: sin bordes y fondo plano, borrar el input al mandar a otra pestaña, reordenar todos los chats por hora real, cajas de un toque con hora y el bug de la C marcada como urgente.
+
+cinco. slack online los días que laburás, con horarios al azar.
+
+seis. rutina en personal, sin recordatorios de eva, con widget y link por paso.
+
+siete. podcast: uno vivo que se actualiza cada media hora, la cantidad la define lo que escuchás, sin relleno, con pregunta cuando no pasó nada.
+
+ocho. los temas los manejo yo, sin preguntarte.
+
+# lo que queda esperándote
+
+el postea de penfolds, con las capturas de un solo widget.
+
+la clave del board, si querés que la tenga guardada.
+
+el link secreto del calendario de vacaciones de awtomic, para que la rutina y slack sepan tus días libres.
+
+y cuando vuelvas del paseo, decime si vuelvo a mostrar los episodios anteriores. eso es todo. buen paseo.

@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.13">
+<meta name="podcast-version" content="1.14">
 <meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
@@ -308,6 +308,7 @@ async function refrescarDatos() {
     const r = await fetch('episodios.json?t=' + Date.now(), { cache: 'no-store' });
     const n = await r.json();
     if (!n || !n.episodios) return;
+    n.episodios = n.episodios.filter(e => !e.oculto);
     datos = n; aplicarRegla50();
     if (!$('#lista').classList.contains('hidden')) pintarLista();
     if (ep) { pintarCaps(); pintarExtra(); }
@@ -350,15 +351,18 @@ function cabecera(e) {
 async function cargar() {
   const r = await fetch('episodios.json?t=' + Date.now(), { cache: 'no-store' });
   datos = await r.json();
-  const eps = datos.episodios || [];
+  // oculto: true saca un episodio de la lista sin borrar su mp3 (facundo, 2026-09-13: "escondeme todos los demas")
+  datos.episodios = (datos.episodios || []).filter(e => !e.oculto);
+  const eps = datos.episodios;
   revisarBajados(eps);
   aplicarRegla50();
   sincronizarEscuchados(); enviarVotos();
-  const unico = eps.length === 1;
-  $('#ver').textContent = unico ? cuando(eps[0]) : eps.length + ' episodios';
+  // una sola emision (aunque traiga varias versiones) abre el reproductor directo
+  const us = unidades(), unico = us.length === 1;
+  $('#ver').textContent = unico ? cuando(eps[0]) : us.length + ' episodios';
   $('#volver').classList.toggle('hidden', unico);
   if (!eps.length) { $('#lista').textContent = 'todavia no hay episodio'; return; }
-  if (unico) { abrir(eps[0]); return; }
+  if (unico) { abrir(elegido(us[0])); return; }
   pintarLista();
   const h = location.hash.slice(1);
   const e = datos.episodios.find(x => x.id === h);

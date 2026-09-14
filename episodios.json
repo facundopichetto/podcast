@@ -79,7 +79,8 @@
     }
    },
    "duracion": 786.4,
-   "ts": "2026-09-12T12:29:10-03:00"
+   "ts": "2026-09-12T12:29:10-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-12-corte",
@@ -142,7 +143,8 @@
     }
    },
    "duracion": 440.7,
-   "ts": "2026-09-12T16:40:15-03:00"
+   "ts": "2026-09-12T16:40:15-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-12-noche",
@@ -251,7 +253,8 @@
     }
    },
    "duracion": 918.6,
-   "ts": "2026-09-12T21:31:00-03:00"
+   "ts": "2026-09-12T21:31:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-12-medianoche",
@@ -321,7 +324,8 @@
     }
    },
    "duracion": 589.1,
-   "ts": "2026-09-12T23:47:00-03:00"
+   "ts": "2026-09-12T23:47:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-manana-10m",
@@ -394,7 +398,8 @@
    "version": "10m",
    "emision": "manana",
    "duracion": 639.4,
-   "ts": "2026-09-13T08:00:00-03:00"
+   "ts": "2026-09-13T08:00:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-manana-30m",
@@ -545,7 +550,8 @@
    "version": "30m",
    "emision": "manana",
    "duracion": 2202.0,
-   "ts": "2026-09-13T08:00:00-03:00"
+   "ts": "2026-09-13T08:00:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-manana-90m",
@@ -1015,7 +1021,8 @@
    "version": "90m",
    "emision": "manana",
    "duracion": 5550.3,
-   "ts": "2026-09-13T08:00:00-03:00"
+   "ts": "2026-09-13T08:00:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-mediodia-10m",
@@ -1081,7 +1088,8 @@
    "version": "10m",
    "emision": "mediodia",
    "duracion": 594.6,
-   "ts": "2026-09-13T13:30:00-03:00"
+   "ts": "2026-09-13T13:30:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-mediodia-30m",
@@ -1225,7 +1233,8 @@
    "version": "30m",
    "emision": "mediodia",
    "duracion": 1819.9,
-   "ts": "2026-09-13T13:30:00-03:00"
+   "ts": "2026-09-13T13:30:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-mediodia-90m",
@@ -1526,7 +1535,8 @@
    "version": "90m",
    "emision": "mediodia",
    "duracion": 4859.6,
-   "ts": "2026-09-13T13:30:00-03:00"
+   "ts": "2026-09-13T13:30:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-noche-10m",
@@ -1603,7 +1613,8 @@
    "version": "10m",
    "emision": "noche",
    "duracion": 768.4,
-   "ts": "2026-09-13T21:30:00-03:00"
+   "ts": "2026-09-13T21:30:00-03:00",
+   "oculto": true
   },
   {
    "id": "ep-2026-09-13-noche-30m",
@@ -1770,7 +1781,86 @@
    "version": "30m",
    "emision": "noche",
    "duracion": 2028.5,
-   "ts": "2026-09-13T21:30:00-03:00"
+   "ts": "2026-09-13T21:30:00-03:00",
+   "oculto": true
+  },
+  {
+   "id": "ep-2026-09-13-ahora",
+   "fecha": "2026-09-13",
+   "titulo": "ahora · dom 13/9 de 21:30 a 22:25",
+   "temas": [
+    "awtomic",
+    "tools",
+    "personal",
+    "podcast"
+   ],
+   "palabras": 2275,
+   "guion": "episodio-2026-09-13-ahora.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-ahora-daniela.mp3",
+     "duracion": 702.2,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 25.4,
+       "archivo": "audio/ep-2026-09-13-ahora-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 25.4,
+       "titulo": "awtomic: penfolds y el widget doble",
+       "duracion": 184.5,
+       "archivo": "audio/ep-2026-09-13-ahora-2-awtomic-penfolds-y-el.daniela.mp3"
+      },
+      {
+       "t": 209.8,
+       "titulo": "tools: el board",
+       "duracion": 202.2,
+       "archivo": "audio/ep-2026-09-13-ahora-3-tools-el-board.daniela.mp3"
+      },
+      {
+       "t": 412.1,
+       "titulo": "personal: la rutina",
+       "duracion": 79.2,
+       "archivo": "audio/ep-2026-09-13-ahora-4-personal-la-rutina.daniela.mp3"
+      },
+      {
+       "t": 491.3,
+       "titulo": "el podcast de acá en adelante",
+       "duracion": 85.3,
+       "archivo": "audio/ep-2026-09-13-ahora-5-el-podcast-de-aca-en.daniela.mp3"
+      },
+      {
+       "t": 576.6,
+       "titulo": "lo raro de la noche",
+       "duracion": 48.2,
+       "archivo": "audio/ep-2026-09-13-ahora-6-lo-raro-de-la-noche.daniela.mp3"
+      },
+      {
+       "t": 624.8,
+       "titulo": "lo que decidiste en esta hora",
+       "duracion": 57.8,
+       "archivo": "audio/ep-2026-09-13-ahora-7-lo-que-decidiste-en.daniela.mp3"
+      },
+      {
+       "t": 682.5,
+       "titulo": "lo que queda esperándote",
+       "duracion": 19.6,
+       "archivo": "audio/ep-2026-09-13-ahora-8-lo-que-queda-esperandote.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "tts": {
+    "tts_ritmo": 1.2,
+    "tts_pausa": 0.45,
+    "tts_expresion": 0.67,
+    "tts_silabas": 0.8,
+    "tts_volumen": 1.0
+   },
+   "duracion": 702.2,
+   "ts": "2026-09-13T22:39:04-03:00"
   }
  ],
  "actualizado": "2026-09-13 21:52"
