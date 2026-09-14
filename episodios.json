@@ -1604,7 +1604,174 @@
    "emision": "noche",
    "duracion": 768.4,
    "ts": "2026-09-13T21:30:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-13-noche-30m",
+   "fecha": "2026-09-13",
+   "titulo": "noche · dom 13/9 hasta las 21:30",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "juegos",
+    "personal",
+    "plata",
+    "server",
+    "tools"
+   ],
+   "palabras": 6873,
+   "guion": "episodio-2026-09-13-noche-30m.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-13-noche-30m-daniela.mp3",
+     "duracion": 2028.5,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 49.2,
+       "archivo": "audio/ep-2026-09-13-noche-30m-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 49.2,
+       "titulo": "lo primero que preguntaste",
+       "duracion": 67.9,
+       "archivo": "audio/ep-2026-09-13-noche-30m-2-lo-primero-que.daniela.mp3"
+      },
+      {
+       "t": 117.1,
+       "titulo": "la charla sobre agilizar la cola",
+       "duracion": 94.2,
+       "archivo": "audio/ep-2026-09-13-noche-30m-3-la-charla-sobre.daniela.mp3"
+      },
+      {
+       "t": 211.3,
+       "titulo": "el contador del chat",
+       "duracion": 108.9,
+       "archivo": "audio/ep-2026-09-13-noche-30m-4-el-contador-del-chat.daniela.mp3"
+      },
+      {
+       "t": 320.3,
+       "titulo": "el input y los tres iconos",
+       "duracion": 39.1,
+       "archivo": "audio/ep-2026-09-13-noche-30m-5-el-input-y-los-tres.daniela.mp3"
+      },
+      {
+       "t": 359.3,
+       "titulo": "las cajas a be ce",
+       "duracion": 71.9,
+       "archivo": "audio/ep-2026-09-13-noche-30m-6-las-cajas-a-be-ce.daniela.mp3"
+      },
+      {
+       "t": 431.2,
+       "titulo": "el turno de noche",
+       "duracion": 109.3,
+       "archivo": "audio/ep-2026-09-13-noche-30m-7-el-turno-de-noche.daniela.mp3"
+      },
+      {
+       "t": 540.5,
+       "titulo": "awtomic, los tickets in progress",
+       "duracion": 38.7,
+       "archivo": "audio/ep-2026-09-13-noche-30m-8-awtomic-los-tickets-in.daniela.mp3"
+      },
+      {
+       "t": 579.2,
+       "titulo": "el comment de los nueve tickets",
+       "duracion": 67.5,
+       "archivo": "audio/ep-2026-09-13-noche-30m-9-el-comment-de-los-nueve.daniela.mp3"
+      },
+      {
+       "t": 646.7,
+       "titulo": "la corrección de las seis y cuarto",
+       "duracion": 67.5,
+       "archivo": "audio/ep-2026-09-13-noche-30m-10-la-correccion-de-las.daniela.mp3"
+      },
+      {
+       "t": 714.2,
+       "titulo": "la mac apagada y el login de shopify",
+       "duracion": 63.4,
+       "archivo": "audio/ep-2026-09-13-noche-30m-11-la-mac-apagada-y-el.daniela.mp3"
+      },
+      {
+       "t": 777.6,
+       "titulo": "la password, y dónde quedó guardada",
+       "duracion": 101.1,
+       "archivo": "audio/ep-2026-09-13-noche-30m-12-la-password-y-donde.daniela.mp3"
+      },
+      {
+       "t": 878.7,
+       "titulo": "el segundo factor propio",
+       "duracion": 57.3,
+       "archivo": "audio/ep-2026-09-13-noche-30m-13-el-segundo-factor-propio.daniela.mp3"
+      },
+      {
+       "t": 936.0,
+       "titulo": "awtomic a la noche",
+       "duracion": 76.5,
+       "archivo": "audio/ep-2026-09-13-noche-30m-14-awtomic-a-la-noche.daniela.mp3"
+      },
+      {
+       "t": 1012.5,
+       "titulo": "awtomic, penfolds y el resto de los tickets",
+       "duracion": 115.3,
+       "archivo": "audio/ep-2026-09-13-noche-30m-15-awtomic-penfolds-y-el.daniela.mp3"
+      },
+      {
+       "t": 1127.8,
+       "titulo": "lo que quedó abierto en awtomic",
+       "duracion": 107.6,
+       "archivo": "audio/ep-2026-09-13-noche-30m-16-lo-que-quedo-abierto-en.daniela.mp3"
+      },
+      {
+       "t": 1235.3,
+       "titulo": "fuzzer, gmail y la tipografía",
+       "duracion": 110.9,
+       "archivo": "audio/ep-2026-09-13-noche-30m-17-fuzzer-gmail-y-la.daniela.mp3"
+      },
+      {
+       "t": 1346.3,
+       "titulo": "juegos, el disco que se llenó y lo que aprendimos",
+       "duracion": 109.5,
+       "archivo": "audio/ep-2026-09-13-noche-30m-18-juegos-el-disco-que-se.daniela.mp3"
+      },
+      {
+       "t": 1455.8,
+       "titulo": "plata, los amplis y el hallazgo de los gastos",
+       "duracion": 107.2,
+       "archivo": "audio/ep-2026-09-13-noche-30m-19-plata-los-amplis-y-el.daniela.mp3"
+      },
+      {
+       "t": 1563.0,
+       "titulo": "lo personal",
+       "duracion": 96.3,
+       "archivo": "audio/ep-2026-09-13-noche-30m-20-lo-personal.daniela.mp3"
+      },
+      {
+       "t": 1659.3,
+       "titulo": "la cola y los reinicios que no cortaron nada",
+       "duracion": 71.1,
+       "archivo": "audio/ep-2026-09-13-noche-30m-21-la-cola-y-los-reinicios.daniela.mp3"
+      },
+      {
+       "t": 1730.4,
+       "titulo": "lo que te espera",
+       "duracion": 75.3,
+       "archivo": "audio/ep-2026-09-13-noche-30m-22-lo-que-te-espera.daniela.mp3"
+      },
+      {
+       "t": 1805.7,
+       "titulo": "lo que decidiste hoy",
+       "duracion": 222.8,
+       "archivo": "audio/ep-2026-09-13-noche-30m-23-lo-que-decidiste-hoy.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-13-noche",
+   "version": "30m",
+   "emision": "noche",
+   "duracion": 2028.5,
+   "ts": "2026-09-13T21:30:00-03:00"
   }
  ],
- "actualizado": "2026-09-13 21:39"
+ "actualizado": "2026-09-13 21:52"
 }
