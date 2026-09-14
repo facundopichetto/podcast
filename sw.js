@@ -3,7 +3,7 @@
 // - el audio de la red NO pasa por aca: el player lo pide directo, igual que antes del sw.
 // - lo bajado vive en el cache `podcast-audio` bajo la ruta virtual `offline/<archivo>`, y eso lo atiende
 //   este sw con respuestas 206: safari pide el mp3 por rangos y sin 206 no reproduce ni deja adelantar.
-const VERSION = '1.11';
+const VERSION = '1.12';
 const APP = 'podcast-app-' + VERSION, AUDIO = 'podcast-audio';
 const SCOPE = self.registration.scope;
 const BASE = new URL(SCOPE).pathname;
