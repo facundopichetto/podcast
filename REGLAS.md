@@ -346,3 +346,52 @@ arriba".
   `python3 -m recetas.podcast_retencion ver` (que se borraria) y `limpiar [--dias N] [--seco]`.
 - **ojo**: esto libera el checkout, no el historial de git (`.git` del repo del podcast se queda con
   los mp3 viejos igual). achicar eso es un rewrite aparte.
+
+## podcast vivo continuo (facundo, 2026-09-13 22:15): reemplaza a las 3 emisiones por dia
+
+"un solo podcast vivo que se actualiza cada 30 min; cuando lo marco escuchado, el siguiente se genera ya, desde
+la ultima actualizacion que escuche, aunque dure un minuto". **cuantos episodios salen por dia no es fijo: lo
+define cuanto escucha facundo** (correccion 22:14). siempre hay uno listo para cuando termina el actual.
+
+- **modo**: `daemon.json -> podcast_auto.modo` = `"vivo"` (default) o `"emisiones"` (las 3 por dia de antes, que
+  siguen documentadas arriba). config del vivo en `podcast_auto.continuo`, la larga en `podcast_auto.larga`.
+- **el vivo**: un episodio `ep-<fecha>-vivo-<hhmm>` (grupo propio, version `vivo`, `ts` = cuando arranco). cada
+  `continuo.refresco_min` (**30**) el tick del daemon lanza una vuelta en su unidad de systemd: junta lo que paso
+  **desde la ultima actualizacion** (charlas por pestaña, ordenes cerradas, log sin las lineas del propio podcast),
+  **un pase de opus** escribe solo los capitulos nuevos, se pegan al final del guion, se re-renderiza y se
+  republica **con el mismo id**. la hora de cada actualizacion queda en `~/.claudio/podcast/auto.json ->
+  continuo.actual.actualizaciones` (`hasta`, `publicado_ts`, tipo y palabras).
+- **media hora sin movimiento** (ni chats, ni ordenes cerradas, ni log relevante): no se saltea ni se rellena. el
+  tramo es un **analisis breve** del estado (pendientes, lo que espera a facundo, la cola, del guion vivo
+  `PROXIMO.md`) y **cierra con UNA pregunta concreta** en un capitulo `# una pregunta para vos` (correccion 22:16).
+  el modelo la repite en una linea `PREGUNTA: ...` que no se lee: el script la saca del guion y la guarda en
+  `tools/podcast/PROXIMO.md`, capitulo `[preguntas]`, como `- pregunta: ...` (quedan las ultimas 5;
+  `podcast_proximo actualizar` la conserva). asi la respuesta de facundo por chat entra como material del proximo.
+  **solo si no hay nada que analizar ni que preguntar** el modelo contesta `SALTEAR` y esa vuelta no publica
+  (excepcion, no regla). si el estado es el mismo que ya se analizo, la vuelta no vuelve a pagar un pase.
+- **escuchado** (`podcast-escuchado` -> `votos.json -> escuchados`, con la hora del comentario): el vivo se
+  **congela** (`auto.json -> congelados`) y en el mismo tick se lanza el siguiente, que cubre **desde la ultima
+  actualizacion publicada antes de que lo marcaras** hasta ahora. lo que se publico despues de marcarlo se
+  vuelve a contar en el nuevo. no espera la media hora.
+- **presupuesto**: si `presupuesto.pesadas` es false, las actualizaciones de 30 min **se saltean** y lo que paso se
+  acumula para la vuelta siguiente (la ventana siempre arranca en la ultima actualizacion publicada). el nuevo tras
+  escuchar no espera (es el que estas esperando), salvo `continuo.nuevo_respeta_presupuesto: true`.
+- **la larga**: la de 1.5 h con noticias sale **una vez por dia**, `larga.hora` (08:00), con lo del dia anterior.
+  se apaga con `larga.activo: false`.
+- **cierre del dia**: la primera actualizacion desde `continuo.cierre` (**23:30**) suma `# lo que decidiste hoy`
+  (mismo capitulo de arriba, del dia entero) aunque no haya pasado la media hora; no se puede saltear. una vez por dia.
+- **tope**: un vivo que pasa `continuo.max_palabras_episodio` (6000, ~32 min) sigue en uno nuevo; el anterior queda
+  en la web sin escuchar y la reproduccion continua engancha.
+- **guard**: publicar que falla se reintenta una vez en el momento; si vuelve a fallar, el guion y el audio vuelven
+  a lo ultimo publicado (`git checkout` del mp3 y `episodios.json`), la actualizacion no cuenta y lo que no salio
+  entra en la vuelta siguiente. dos vueltas seguidas fallando: **un** aviso al celu.
+- **ojo**: cada actualizacion commitea el mp3 entero de nuevo, asi que `.git` del repo del podcast crece rapido
+  (ver el pendiente de achicar el historial).
+
+```
+python3 -m recetas.podcast_auto continuo --seco      # que toca en el vivo y por que (cero tokens)
+python3 -m recetas.podcast_auto continuo [--forzar] [--sin-push]
+python3 -m recetas.podcast_auto estado               # incluye plan_vivo y auto.json -> continuo
+```
+
+prueba: `python3 -m recetas.prueba_podcast_proximo` (seccion "podcast vivo continuo", cero tokens).

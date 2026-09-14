@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="podcast">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="podcast-version" content="1.12">
+<meta name="podcast-version" content="1.13">
 <meta name="description" content="el podcast de claudio">
 <title>podcast</title>
 <link rel="manifest" href="manifest.json">
@@ -333,8 +333,13 @@ function cuando(e) {
   const dia = DIAS[new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])).getUTCDay()];
   return `${dia} ${+m[3]}/${+m[2]}` + (e.ts && m[4] ? ` ${m[4]}:${m[5]}` : '');
 }
+// hora de la ultima actualizacion (`actualizado`, facundo 2026-09-13 22:27): el podcast vivo se republica con el mismo id
+function actualizado(e) {
+  const m = /T(\d{2}):(\d{2})/.exec(e.actualizado || '');
+  return m ? ` · actualizado ${m[1]}:${m[2]}` : '';
+}
 function cabecera(e) {
-  $('#ph').textContent = cuando(e);
+  $('#ph').textContent = cuando(e) + actualizado(e);
   $('#pt').textContent = e.titulo;
   $('#pf').textContent = `${e.version ? (ETQ[e.version] || e.version) + ' · ' : ''}${min(e.duracion)} · ${e.palabras || '?'} palabras`;
   document.title = `${e.titulo} · ${cuando(e)}`;
@@ -374,7 +379,7 @@ function pintarLista() {
     const f = document.createElement('div'); f.className = 'fila' + (grupo ? ' grupo' : '');
     const b = document.createElement('button'); b.className = 'ep' + (v ? ' visto' : '') + (con ? '' : ' sinaudio');
     const pos = +localStorage['pos:' + e.id] || 0;
-    b.innerHTML = `<div class="fecha">${cuando(e)}</div><div class="titulo">${e.titulo}</div>
+    b.innerHTML = `<div class="fecha">${cuando(e)}${actualizado(e)}</div><div class="titulo">${e.titulo}</div>
       <div class="meta"><b>${min(e.duracion)}</b> · ${(e.voces[Object.keys(e.voces)[0]].capitulos || []).length} capítulos${v ? ' · <span class="escuchado">escuchado</span>' : pos > 30 ? ' · <b>seguís en ' + fmt(pos) + '</b>' : ''}${bajados[archivo(e)] ? ' · <span class="bajado">bajado</span>' : ''}${con ? '' : ' · <span class="borrado">audio borrado, queda el guion</span>'}</div>
       <div class="temas">${(e.temas || []).map(t => `<span class="tema">${t}</span>`).join('')}</div>`;
     b.onclick = () => { if (con) abrir(e); };
