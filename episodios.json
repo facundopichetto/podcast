@@ -2638,7 +2638,108 @@
      ]
     }
    }
+  },
+  {
+   "id": "ep-2026-09-14-resumen",
+   "fecha": "2026-09-14",
+   "titulo": "resumen del lunes 14",
+   "temas": [
+    "awtomic",
+    "flaudio",
+    "server",
+    "podcast"
+   ],
+   "palabras": 5773,
+   "guion": "episodio-2026-09-14-resumen.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-14-resumen-daniela.mp3",
+     "duracion": 1783.3,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 77.6,
+       "archivo": "audio/ep-2026-09-14-resumen-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 77.6,
+       "titulo": "awtomic de madrugada: penfolds y turley",
+       "duracion": 147.0,
+       "archivo": "audio/ep-2026-09-14-resumen-2-awtomic-de-madrugada.daniela.mp3"
+      },
+      {
+       "t": 224.6,
+       "titulo": "awtomic: hall y el customer portal",
+       "duracion": 198.8,
+       "archivo": "audio/ep-2026-09-14-resumen-3-awtomic-hall-y-el.daniela.mp3"
+      },
+      {
+       "t": 423.4,
+       "titulo": "awtomic: ponzi y la acción de flow",
+       "duracion": 155.7,
+       "archivo": "audio/ep-2026-09-14-resumen-4-awtomic-ponzi-y-la.daniela.mp3"
+      },
+      {
+       "t": 579.1,
+       "titulo": "awtomic: beauty heroes, la subscription prepaga",
+       "duracion": 168.2,
+       "archivo": "audio/ep-2026-09-14-resumen-5-awtomic-beauty-heroes.daniela.mp3"
+      },
+      {
+       "t": 747.4,
+       "titulo": "awtomic: standup, ronda y lo que espera",
+       "duracion": 96.7,
+       "archivo": "audio/ep-2026-09-14-resumen-6-awtomic-standup-ronda-y.daniela.mp3"
+      },
+      {
+       "t": 844.1,
+       "titulo": "flaudio: el board y el chat",
+       "duracion": 132.8,
+       "archivo": "audio/ep-2026-09-14-resumen-7-flaudio-el-board-y-el.daniela.mp3"
+      },
+      {
+       "t": 976.8,
+       "titulo": "flaudio: tokens, cuentas y la dieta",
+       "duracion": 178.1,
+       "archivo": "audio/ep-2026-09-14-resumen-8-flaudio-tokens-cuentas.daniela.mp3"
+      },
+      {
+       "t": 1155.0,
+       "titulo": "flaudio: el nombre, el producto y el soporte remoto",
+       "duracion": 200.3,
+       "archivo": "audio/ep-2026-09-14-resumen-9-flaudio-el-nombre-el.daniela.mp3"
+      },
+      {
+       "t": 1355.3,
+       "titulo": "personal, juegos, server y plata",
+       "duracion": 178.7,
+       "archivo": "audio/ep-2026-09-14-resumen-10-personal-juegos-server.daniela.mp3"
+      },
+      {
+       "t": 1533.9,
+       "titulo": "el podcast",
+       "duracion": 40.7,
+       "archivo": "audio/ep-2026-09-14-resumen-11-el-podcast.daniela.mp3"
+      },
+      {
+       "t": 1574.6,
+       "titulo": "lo que decidiste hoy",
+       "duracion": 103.8,
+       "archivo": "audio/ep-2026-09-14-resumen-12-lo-que-decidiste-hoy.daniela.mp3"
+      },
+      {
+       "t": 1678.4,
+       "titulo": "lo que quedó esperando",
+       "duracion": 104.8,
+       "archivo": "audio/ep-2026-09-14-resumen-13-lo-que-quedo-esperando.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1783.3,
+   "ts": "2026-09-14T20:17:27-03:00"
   }
  ],
- "actualizado": "2026-09-13 23:22"
+ "actualizado": "2026-09-14 20:17"
 }

@@ -1,0 +1,209 @@
+# de que va
+
+esto es el resumen del lunes catorce de septiembre, pedido desde el celu y armado aparte, porque el podcast automático sigue pausado por presupuesto y así se queda. dura una media hora y cubre todo el día, desde la medianoche hasta más o menos las siete y media de la tarde.
+
+el día tuvo tres partes bastante marcadas. una madrugada larga, hasta las dos, donde se cerró lo de turley y se pulieron un montón de reglas de cómo te hablo. una mañana y un mediodía de awtomic a fondo, con hall, ponzi y beauty heroes, mezclados con arreglos del board. y una tarde donde se terminó beauty heroes, se probó de verdad lo de hall en el customer portal, y del lado de flaudio aparecieron el kit de soporte remoto, el widget de modelos de respaldo y la charla sobre tokens y presupuesto.
+
+en números gruesos: en las últimas veinticuatro horas corrieron más de cien tareas, ninguna falló, y todas salieron con opus. eso último no es casualidad, lo pediste vos a las dos y media de la tarde, y lo vamos a ver en el capítulo de tokens.
+
+el orden es este: primero awtomic, en cuatro capítulos, porque es donde estuvo el grueso. después flaudio y las herramientas, en tres. después lo personal, juegos, server y plata juntos. un capítulo corto del podcast. y al final dos capítulos para quedarte con lo importante: lo que decidiste hoy, y lo que quedó esperando.
+
+# awtomic de madrugada: penfolds y turley
+
+arrancó pasada la medianoche con penfolds. me pediste ver el draft del done, lo leíste y dijiste postealo tal cual. salió el comment público diciendo que en la página del plan de vinos el botón de agregar al carrito ahora lleva a la página de alta con la variante y el plan elegidos, con la password del storefront sacada de la bóveda, y el ticket pasó a needs to follow up.
+
+enseguida trajiste un mensaje de emily: un recordatorio para el lunes de que el mínimo de tres botellas de turley siguiera funcionando, porque sospechaba que con los últimos cambios se había pisado. la respuesta honesta fue que lo habíamos analizado el sábado pero que después no se hizo nada: ni ticket, ni fix, ni mensaje a emily.
+
+emily tenía razón a medias. el código del mínimo seguía entero en el theme, pero había un camino que se lo salteaba: el botón continue, el que ven los clientes que no tienen tarjeta guardada. el fix era chico, dos líneas en el javascript custom, para que la validación agarre tanto confirm como continue. se probó primero en una copia del live, con un fixture que queda guardado para reusar, y recién con tu ok explícito se pusheó al live.
+
+en el medio se creó el ticket de turley en jira, porque no existía ninguno del mínimo. quedó con vos de reporter y assignee, en in progress eng, que es lo más parecido a in progress que tiene el board de cx. y ahí hubo un ida y vuelta que vale la pena recordar: en un momento dijiste que emily fuera la reporter, y un minuto después "no cambies el reporter, no dije nada". la orden se canceló antes de tocar nada.
+
+después vino la parte de cómo contestarle a emily, y ahí te enojaste con razón. yo te estaba describiendo lo que le iba a decir en vez de mostrártelo, y cuando te lo mostré era un texto larguísimo. lo que dijiste fue clarito: eso con suerte es un comment de jira, en slack va el link al comment y algo tipo done on live theme, nunca tan largo. y como te habías colgado con la respuesta, quedó un this is done btw con el link.
+
+así que el cierre de turley fue: comment público en el ticket diciendo que en el live el mínimo de tres botellas ahora también frena el botón continue, ticket a needs to follow up, y slack a emily en el hilo con una línea y el link. todo verificado.
+
+cerraste la madrugada con mari. le habías mandado un mensaje en castellano por un ticket de josh pickles, y me pediste editarlo, no mandar uno nuevo, y dejarlo en inglés con un sorry al final. de ahí salió la regla: mari, adrian, emily y brian van siempre en inglés, y si no, se mira el idioma del hilo antes de redactar. para esto nació una receta nueva que edita un mensaje de slack en vez de mandar otro.
+
+# awtomic: hall y el customer portal
+
+hall fue el hilo más largo del día y todavía no terminó. arrancó a las nueve menos cuarto, cuando brian te escribió por slack y me pediste agarrar ese ticket y decirte qué había que hacer.
+
+el ticket es de ajustes en la interfaz del build a box que se abre desde el customer portal de hall. el agente de brian había hecho una primera pasada en julio contra otro modal, así que había que pedirle que rehiciera los primeros ítems contra la interfaz correcta. lo de las estrellas de yotpo va por ce ese ese, y la idea es hacer todo y al final preguntarle a adrian si hace falta un ticket aparte.
+
+en el armado del comment al agente dejaste varias correcciones que ya son reglas. se dice build a box ui, nunca wizard. no se dice step dos si el cambio también aplica al paso de los add ons. en hall se labura primero en el theme awtomic integrations, que está sin publicar, y recién cuando está bien se pasa al live. y la más importante: cuando tu último pedido es ajustar un draft, mi respuesta tiene que traer el draft entero, no preguntarte si lo aceptás. eso quedó guardado como regla de fuego.
+
+también me pediste tomarme el tiempo y mirar el código del widget en el repo de awtomic. de ahí salió un documento nuevo en la arquitectura del repo que describe cada vista del widget: la lista y el detalle del customer portal, la interfaz del build a box abierta desde el portal, el customize, la versión del storefront y el portal de allocations, con la ruta, el componente raíz y los selectores confirmados en código. un detalle que salió de ahí: la interfaz del build a box del portal no tiene ruta, es un modal a pantalla completa.
+
+a las nueve y veinte posteaste. comment restringido al grupo del agente, el comment viejo del token borrado, el ticket a need eng work con el label para que el agente lo tome.
+
+a las dos de la tarde el agente entregó la revisión tres. la verifiqué en un harness local, sin tocar el store: el primer ítem fallaba por diez píxeles, y la culpa no era del agente sino de una regla de hall que le pone margen de veinte píxeles a los títulos de las cards y le gana al estilo del widget. los add ons y el tercer ítem pasaban. el ítem del celu no se podía verificar sin un portal real.
+
+con eso aprobaste el draft A, salió el comment para la revisión cuatro, y el agente la hizo pero no pudo pushear: dejó el diff adjunto en el ticket. a las seis y cuarto lo bajé, lo apliqué limpio sobre el theme de preview, pusheé solo el ce ese ese y confirmé que el preview lo servía.
+
+y acá está lo interesante. me dijiste que el customer portal lo puedo ver yo: admin de shopify, la subscription, el link del portal. así que lo probé en un portal real de hall, con una sub de wild test, sin cambiar nada en la sub. y la revisión cuatro falló en los dos ítems que faltaban. en el celu, a cuatrocientos píxeles, el modal no scrolleaba y solo se veía la primera fila de add ons. en desktop, con la vista plana, había dos contenedores scrolleando a la vez.
+
+armé un patch chico, lo inyecté solo en mi navegador, y pasó en los dos. me preguntaste si no podía hacer yo los updates, probarlos, y después mostrarle al agente lo que hice. eso se hizo a las siete y media: el patch dos quedó pusheado al preview, once líneas dentro del bloque de este ticket, con backup antes, y medido en el portal real sin inyectar nada y scrolleando con la rueda. pasa en el celu y en desktop. la sub quedó idéntica y el live de hall no se tocó.
+
+queda armado, sin postear, el comment al agente con los números reales y el patch.
+
+# awtomic: ponzi y la acción de flow
+
+ponzi empezó a media mañana. me pediste de los tickets in progress asignados a vos, con el comment del token todavía activo, el más fácil. hubo que insistir: te traje de nuevo tickets que ya habíamos limpiado y uno de un template que ya habías arreglado vos. eso quedó como lección, mirar lo ya resuelto antes de recomendar.
+
+el elegido fue el de ponzi, ayudame a arreglar este flow de envío. el merchant quería que cuando se detecta cierto caso, la subscription quede con el método de envío fex. yo al principio iba a pedirle un screenshot a emily, y me frenaste: estás segurísimo de que no se puede, entendamos qué pide antes de preguntar. abrí el workflow de flow en modo lectura, y el pedido era justamente ese: si detectamos el trigger, ponerle fex como método de envío.
+
+el límite es real. flow hoy no puede renombrar el método de envío de una subscription. nuestra propia acción de flow, la de actualizar la tarifa de envío, solo cambia el precio. me preguntaste si seguro no teníamos una acción nuestra, y si había otros tickets parecidos resueltos de forma creativa. había dos del mismo límite, y ninguno con un camino armado.
+
+así que el plan fue: pedirle al agente de brian que cree un ticket de producto explicando exactamente qué hay que hacer, con el formato de otros tickets de producto, que es sumarle a nuestra acción de flow un campo para el título o código del método de envío. el agente lo creó, y ahí se posteó tu comment en el ticket de ponzi: done reviewing this one, en párrafos cortos, con la explicación, el siguiente paso, y un tldr aparte para emily con mención. el ticket quedó en in progress eng y bloqueado por el ticket de producto.
+
+dos cosas de ese comment. partiste vos a mano el texto en cuatro párrafos, y de ahí salió la regla: comments y slack en párrafos de una o dos oraciones, una idea por párrafo, el tldr aparte. y los links entre los dos tickets quedaron mal al principio, había tres links y uno al revés. se limpiaron y quedó uno solo, el ticket de producto bloquea al de cx. salió una receta para que eso no se equivoque de nuevo.
+
+el tercer paso fue compartirlo en el canal de product and design. me pediste ver cómo comparten tickets los demás en ese canal, y el formato es una o dos líneas con contexto y el link. el primer draft no explicaba qué hacía el cambio, después sacaste la mención a ponzi, después el not urgent, y al final corregiste la i mayúscula de i'll give it a go when cx is lighter. se mandó a las tres menos cinco, verificado.
+
+ponzi quedó así: del lado nuestro cerrado, esperando que el ticket de producto avance. cuando esté, vos creás o actualizás el flow, y se revisan los existentes fuera del test de emily.
+
+# awtomic: beauty heroes, la subscription prepaga
+
+beauty heroes fue la parte de aprender. a las once menos cuarto dijiste que me querías enseñar a hacer ese trabajo, porque es repetitivo y en el futuro lo hago yo.
+
+el caso: una clienta del merchant necesita una subscription prepaga de tres cajas creada a partir de una orden que ya pagó. vos lo hacés normalmente por insomnia: crear un draft, agregar el producto, el customer, el plan, hacer commit, y después una partecita en dynamo.
+
+me pediste revisar insomnia en tu mac. ahí estaba la lista gigante de merchants con sus tokens. ciento ochenta tokens de shopify pasaron a la bóveda, uno por store, se armó un índice de la colección con los requests tapados, y una receta que importa desde insomnia sin dejar nada crudo en disco. y quedó una receta de la api de awtomic que por defecto corre en seco.
+
+en el armado apareció una duda de fondo, la fecha del próximo cobro. me dijiste que tendría que ser la fecha de origen más la frecuencia, y preguntaste si un campo que yo había propuesto existía o lo había inventado. la decisión fue preguntarle a adrian en el ticket, con tag: usamos fecha de la orden más frecuencia, o la fecha de lote del merchant. y ahí dos reglas: no nombrar a la clienta, porque son clientes del merchant y los merchants son nuestros clientes, y el slack a adrian es solo el link al comment con preview. "got fresh tokens so i'm updating this soon", que había quedado de antes, lo borraste vos a mano.
+
+adrian contestó que la fecha va el veintiséis o veintisiete, no en octubre. también se te ocurrió crear la sub pausada para que no le llegue nada a la clienta, y después activarla. así se hizo a las cinco y cuarto: sub creada en pausa, sin mail de notificación. después, con tu ok explícito sobre el detalle, un write condicional en dynamo con el id de la orden original como cobro exitoso, con backup y relectura.
+
+vos revisaste y la activaste. y acá hubo un hallazgo: buscando en los logs de cloudwatch se vio que la activación la hizo la acción de flow de actualizar la fecha del próximo cobro, disparada por un flow del propio merchant. o sea que el chequeo del cobro del veintisiete no hacía falta, y lo sacaste de la receta.
+
+la receta de prepaga desde una orden quedó reescrita: plan en seco, un checklist automático, y escribir solo con la bandera. a las seis menos diez posteaste el done: sub verificada activa, comment público con el link, ticket a needs to follow up. la automatización cambió el assignee a adrian, y eso no se tocó.
+
+de ese comment salió otro arreglo. la url del done quedó como texto plano en jira, y la linkeaste vos a mano. la causa: el camino por la mac mandaba markdown en vez del formato de jira. se arregló el conversor para que toda url salga como link real, también en negrita, en código y en listas, con doce pruebas en verde. lo único sin verificar es un post real por ese camino: el primero que salga hay que releerlo.
+
+# awtomic: standup, ronda y lo que espera
+
+al mediodía pediste el resumen para la standup: entre ayer y ahora, qué pasó a follow up y en qué avanzamos, por merchant, bien cortito, en inglés, sin la primera línea. te gustó, y quedó como formato fijo: cada día laboral hay standup, y cuando la pedís va lo hecho desde la última, en un bloque, agrupado por estado y por merchant, una línea por ticket.
+
+a la tarde corrió la ronda de jira. el camino de siempre falló porque la sesión del conector de atlassian en el server no estaba, y se corrió por el conector de la nube. hay que arreglar eso para que no dependa de esa sesión.
+
+tickets nuevos: uno de ponzi con el descuento de miembros, intermitente en el punto de venta, donde el agente pide reproducir dos carritos, miembro primero o vino primero. uno de lafayette ciento cuarenta y ocho, un plan gratis para una demo, listo pero con un script que escribe en dynamo de producción y que tiene que correr un humano. voonwines ya estaba done. y el de turley, que es nuestro.
+
+movimiento en los tuyos. hafner: emily pide que la preferencia de vino mixta cambie con el rosé y que se mergee al live. el agente preparó la revisión nueve pero no puede pushear, te espera. gatlinburg: el agente necesita info, cuáles dos vinos, y si es por shop, además de one page o wizard y el diseño. el de josh pickles sigue en verify del lado de producto.
+
+y siete tickets en verify a tu nombre sin movimiento desde principios de mes, más tres asignados colgados desde abril, mayo y la semana pasada.
+
+de fondo quedan la limpieza del store de qa, que espera a que cierren dos tickets que reusan esos setups, y los tokens de shopify expuestos, tres por rotar y cuatro commiteados en el repo de migraciones.
+
+# flaudio: el board y el chat
+
+del lado de las herramientas el día fue un goteo de arreglos al board, casi todos pedidos por vos mientras laburabas.
+
+de madrugada: las cajas a b c se marcaban solas, arreglado. los avisos aparecían en el chat como si los hubieras dicho vos, y ahora van solo a notificaciones. un botón de copiar de un toque en links, claves y bloques de código. y cada mensaje tuyo lleva un campo con el modo, app o navegador.
+
+a la una y veinte salió el dictado del celu: mientras grabás un audio, el teléfono lo transcribe en paralelo, y el texto llega pegado al audio. si eso funciona, whisper en el server ni corre. si falla, va el archivo y transcribe whisper como siempre. los audios viajan solo por lan, nunca al buzón, y se comprimen más: de veinticuatro a dieciséis kilobits pesan un treinta por ciento menos y se entienden igual. y la transcripción pasó a whisper medium con vocabulario propio y un archivo de correcciones que aprende cuando decís "quise decir tal cosa".
+
+a las ocho y media escribiste que después de mandar algo quedaba "flaudio enviado" con la ruedita girando para siempre. se arregló en diez minutos. y a las dos de la tarde pediste ver qué hace el modelo mientras contesta, tipo opus pensando. el chat pasó a leer el modelo evento por evento, y la cabecera va a mostrar el modelo y la acción, o pensando si en tres segundos no llega nada. carga con el reinicio del daemon.
+
+a las once y diez: las notificaciones iguales se juntan en una sola con rango horario, porque cinco iguales te hacían perder contexto. y el doble click en una opción, que parecía cuatro clicks y dejaba el revertir sí o no, arreglado.
+
+a las dos y media te enojaste con dos cosas. el selector de temas al mandar andaba muy mal, y en la pestaña de tools apareció una respuesta de awtomic. el selector se sacó entero: lo que escribís en una pestaña va a esa pestaña, sin preguntar.
+
+a la tarde: el cerrar todas de la campanita ahora cierra el desplegable. y a las siete, acordate de que no siempre me tenés que proponer a b c. la regla se cambió en los cuatro lugares donde vivía: el menú va solo cuando hay algo real para decidir, un aviso o un terminó cierran sin opciones, y mejor una o dos que tres forzadas. está escrito, pero el daemon que corre sigue con la regla vieja hasta que reinicie.
+
+# flaudio: tokens, cuentas y la dieta
+
+esto fue lo que más te preocupó a la mañana y a la tarde.
+
+a las nueve menos cuarto dijiste que facu no debería usar más fable porque llegó al noventa y nueve, y que nada tiene que llegarle a facu con fable. quedó excluida. a las once y cuarenta y cuatro, la barra de ritmo del widget de uso estaba mal: no puede estar nunca al cien, cien significa que te terminaste las dos cuentas. se rehízo, y al mediodía la corregiste otra vez: tiene que medir tres ritmos, el de cinco horas, el semanal y el de fable. quedaron tres barras, cero es las dos cuentas en cero, y cien en rojo solo si se terminaron las dos en ese rango.
+
+a la una menos cuarto, dos cosas importantes. una: usar un poco más opus, con el ideal de que cada cuenta renueve con noventa y nueve y noventa y nueve en semanal y fable, parejas. dos: qué podemos hacer rápido para dejar de gastar. salió la dieta. el reparto de cuentas manda fable a la de menor brecha entre fable y semanal y opus a la de mayor brecha, así llegan parejas al reset. las reglas pasaron a formato núcleo, una línea por regla con el detalle aparte, para que cada proceso lea menos. y las pruebas largas vuelcan la salida a un archivo y se lee solo el final.
+
+la retrospectiva de la madrugada dejó un número que explica por qué insisto con esto. en qa, lo que cuesta un ticket bajó de seis dólares sesenta a un dólar setenta y ocho, un setenta y tres por ciento menos. un ticket que se resuelve leyendo por api cuesta uno o dos dólares, y uno que necesita abrir chrome cuesta entre diez y trece. por eso la regla quedó escrita así: preparar por script, leer por api, y chrome lo último. y lo más caro del día anterior fueron las órdenes de la web, que leían archivos enteros enormes, cuando alcanza con leer el tramo que se toca.
+
+de ahí salió la cola de sueltos: cosas que pedís para cuando estemos cómodos de tokens se anotan, y te aviso cuando hay margen. y si hacerlo ya gasta lo mismo que encolarlo, se hace ya, como pasó con quitar el borde a los botones de chat y widgets.
+
+a las dos y treinta y siete: todo corre con opus hasta que digas otra cosa. el chat de todas las pestañas, awtomic incluido, la cola y las periódicas. preguntaste si íbamos a perder calidad en awtomic, y la respuesta fue poca, concentrada en entender pedidos largos.
+
+y pediste que facu vuelva con opus cuando su semanal toque la línea. quedó el modo seguir la línea: facu vuelve sola para opus cuando su barra baja a la línea, la sigue sin pasarla, y debería terminar cerca de noventa y nueve en el reset. fable sigue afuera. según la simulación vuelve el miércoles a eso de las siete de la mañana.
+
+a la noche, la charla sobre presupuesto. preguntaste si lo que nos limita son los tokens y no el procesador. sí: una tarea de claude pasa casi todo el tiempo esperando la api, y los scripts pueden tener la cpu al máximo sin gastar un token. pero justo a esa hora el server también estaba al tope de carga y con dos gigas libres de once, por la máquina virtual de windows emulada y el modelo local. para máquinas virtuales y modelos locales, el cuello es la ram.
+
+# flaudio: el nombre, el producto y el soporte remoto
+
+a las dos y media de la madrugada salió la primera etapa del renombre, de claudio a flaudio, en lo visible: el board, las notificaciones, whatsapp, el mail y los prompts, aceptando claudio como alias. a las diez y media me pediste avisarles a los de fuzzer por whatsapp que ahora me llamo flaudio. me corregiste dos veces: el mensaje arranca con la etiqueta flaudio entre corchetes, nunca "pibes", y arranca pidiendo perdón porque ya los había retado. salió al grupo tal cual. de ahí la regla de que a terceros la etiqueta va al principio.
+
+a las ocho y media de la mañana hubo otro pedido de texto, pero para afuera. me pediste resumir en un párrafo todo nuestro sistema, sin nada personal, para mandárselo a brian, y la idea era hacerte el capo y que piense. lo fuiste recortando: primero la mitad, después dos o tres párrafos, sin la referencia a "since you asked", que era para mí y no para él.
+
+después le agregaste contenido. un poco del setup: un server dedicado y una copia en la nube. que los tokens son para claude, pero que hay modelos de respaldo y opciones locales armadas para que el sistema siga si te quedás sin tokens. y me frenaste con una palabra: no digas programmed myself, poné algo estilo set up, no mientas. se sacó el net effect. y quedó la explicación de por qué seguiste laburando el finde: querías aprovechar los tickets para avanzar y que el sistema aprenda, y no querías que el lunes pareciera que no había pasado nada en tickets que ya habías empezado a revisar.
+
+a las tres y media, este tema tiene que llamarse flaudio. la carpeta del tema raíz pasó a flaudio con un enlace desde el nombre viejo, el chat de la pestaña se fusionó, y claudio sigue funcionando como alias en todos lados.
+
+y la idea de producto. me pediste leer la charla con leo de la última semana. tiene clientes a los que les vende repuestos y otros a los que les hace reparaciones, y quiere que un agente les mande la lista de precios a unos y les pregunte a los otros si hay mercadería para retirar. de ahí preguntaste si podemos hacer un flaudio que atienda cuentas de mail y whatsapp sin un server en la casa del cliente, y cuánto cobrar. y marcaste algo fuerte: no querés que use claude, querés un sistema nuestro que priorice scripts, después un modelo que vayamos actualizando, quizás local, y no conectar a nadie directo con claude nunca, ni siquiera a vos. quedó planteado en capas: scripts y reglas primero, el modelo solo para lo que el script no resuelve.
+
+a las seis y media, el kit de soporte remoto: pasás un archivo, la persona lo ejecuta, y sigo yo. hay un instalador para windows y otro para linux, porque una de las compus que regalaste tiene manjaro. el acceso queda permanente, no se desinstala nada. la regla del tailnet se aplicó con revert programado: esas máquinas solo aceptan ese ese hache desde el server. para probar se levantó una ve eme de windows server emulada, y la continuación sigue corriendo porque la primera tarea cerró con dos ve emes vivas.
+
+y el widget de modelos de respaldo se rehízo. ahora tiene columnas para opus, fable, gemini, groq, openrouter, mistral y local. el juez puntúa cada respuesta contra el pedido y el mejor de cada categoría es cien. se probaron modelos locales más grandes: llama tres punto dos de tres mil millones de parámetros sacó cuarenta y siete en veinticinco segundos, qwen de cuatro mil millones sacó diecisiete y se borró, y el de ocho no se bajó por falta de ram. openrouter tiene la cuota gratis del día agotada.
+
+# personal, juegos, server y plata
+
+personal. a la una y media de la madrugada te enojaste porque el widget de salud decía sin peso, y ya me lo habías dicho. la causa: el chat del domingo corrió en cloud, contestó anoté todo y no escribió nada. ahora cuando decís tu peso o lo que comiste en cualquier pestaña, se carga solo, y el peso pelado se contesta sin modelo. esa noche anotaste seiscientos cincuenta gramos de ojo de bife y seis huevos, en crudo, y unas almendras. y a las diez menos cuarto te pesaste: setenta y tres coma uno, medio kilo menos que el domingo.
+
+a la mañana me pediste mirar en whatsapp lo que había que hacerle a eva en saavet. la llevaste con santi al estudio de las cinco, y marcaste algo para acordarme: el estudio no cambia de hora, lo de salir antes es por los tiempos de santi, que siempre llega tarde. a la tarde se reautorizó el gmail de facundo punto pichetto, y pude leer el informe. las noticias fueron buenas: la ecografía de abdomen y la placa de tórax dieron sin signos de metástasis, todo normal, y lo único que apareció es espondilosis. me pediste armarle un whatsapp a santi, lo viste, y te arrepentiste: no salió nada.
+
+también quedó redefinida la rutina por audio: nada de recordatorios de eva, porque no está todos los días. a la noche baño y dejar el mate y el termo listos, y a la mañana despertar, baño y el chequeo conmigo tomando mates.
+
+juegos. a las siete preguntaste si tengo acceso a todo, y te dije mal que la orden de montar discos e instalar adb seguía en la cola, cuando ya había corrido el sábado. te pedí perdón. está todo: adb instalado, el backup de la tarjeta de la consolita en black, el índice de black hecho, y los discos se montan cuando hacen falta. lo único que falta es tuyo: aceptar en la pantalla de la retroid el cartel de permitir depuración usb.
+
+server. a la una de la madrugada preguntaste por qué el server estaba amarillo. nada roto, era por tokens, facu venía muy arriba en el semanal. del turno nocturno quedaron dos cosas: gemini y openrouter se habían quedado sin cuota diaria, y ahora eso, con algún respaldo andando, es solo un aviso. y el reinicio del daemon ahora espera si estás grabando un audio en la web.
+
+plata. a la noche pediste pagos únicos o suscripciones que nos sirvan para ahorrar tokens, tipo algo barato que decodifique imágenes o audio. lo que compraría: ram del server a treinta y dos gigas, de sesenta a cien dólares una vez. transcripción de audio por api, groq o deepgram, menos de cinco dólares por mes, que libera al server de whisper. y descripción de imágenes con gemini flash, que cuesta centavos. no se decidió nada todavía.
+
+y la mac: meeting bar se te cerraba sola. el sistema la mató al quedar tres gigas libres de novecientos veintiséis. lo grande: el backup del iphone, trescientos veinte gigas, temporales de chrome, ciento cincuenta y cuatro gigas que se pueden borrar seguro, fotos, ciento cuarenta y seis, e insomnia, treinta y nueve. no se borró nada.
+
+# el podcast
+
+corto, porque es este mismo episodio.
+
+anoche salió el filtro para que ningún audio diga números de tarea ni de ticket. a la mañana preguntaste por qué no había podcast. el presupuesto lo había frenado: las cuentas venían muy arriba de su línea, y desde la madrugada el vivo no se actualizaba. dijiste que si estamos muy jugados lo pausemos un toque, y a las doce menos cuarto quedó pausado. no sale ni el vivo ni la larga de las ocho, y el guion vivo sigue engordando sin tokens.
+
+a las siete y veinte pediste este resumen como algo aparte, y el automático sigue apagado. cuando lo escuches, decime si media hora fue mucho o poco, y si preferís este formato de resumen del día por tema.
+
+# lo que decidiste hoy
+
+las decisiones del día, en orden.
+
+uno. todo corre con opus hasta que digas otra cosa, incluido el chat de awtomic. facu no usa fable, y vuelve sola para opus siguiendo la línea del semanal.
+
+dos. el objetivo con las cuentas es renovar cada una cerca del noventa y nueve en semanal y en fable, parejas. y lo que no apura va a la cola de sueltos.
+
+tres. el podcast automático queda pausado por presupuesto hasta que digas seguí podcast.
+
+cuatro. formas de hablar y de escribir: el menú a b c solo cuando hay una decisión real. si hay algo para postear o mandar, el draft exacto va arriba. ajustar un draft devuelve el draft entero. comments y slack en párrafos de una o dos oraciones con el tldr aparte. slack a emily es link al comment más una línea. urls de jira siempre linkeadas. mari, adrian, emily y brian en inglés, y sin nombres de clientes de los merchants.
+
+cinco. awtomic: build a box ui, nunca wizard. en hall primero el theme awtomic integrations y después el live. el customer portal lo miro yo desde el admin. standup diaria con formato fijo desde la última. y la subscription prepaga desde una orden la aprendí, con la receta nueva.
+
+seis. a terceros por whatsapp la etiqueta va primero y nunca pibes. las pruebas de la mula solo en downtime, nunca mientras laburás con awtomic.
+
+siete. el tema raíz se llama flaudio. y la idea de producto: un flaudio que atiende mail y whatsapp con un motor propio, scripts primero, sin conectar a nadie directo con claude.
+
+ocho. turley al live con el fix del continue. ponzi derivado a un ticket de producto. beauty heroes activada y cerrada. y no le mandaste a santi el análisis del estudio de eva.
+
+# lo que quedó esperando
+
+para cerrar, lo que queda abierto, empezando por lo que depende de vos.
+
+hall: el patch dos está en el preview y pasa en el portal real. falta que elijas si se postea el comment al agente con el patch y los números, y después, recién con otra prueba, el paso al live.
+
+hafner: la revisión nueve del agente espera que la pushees o me lo pidas, con la preferencia de vino mixta y el merge al live que pidió emily.
+
+de la ronda: el plan gratis de lafayette ciento cuarenta y ocho necesita que un humano corra el script, porque escribe en dynamo de producción. el de descuento de miembros de ponzi está sin asignar. y los siete en verify a tu nombre siguen quietos.
+
+pendientes de awtomic de fondo: rotar tres tokens de shopify expuestos y sacar cuatro del repo de migraciones, la limpieza del store de qa, y los scripts y planillas sin commitear del repo de migraciones.
+
+del lado de flaudio: hay un reinicio del daemon pendiente que carga varias cosas de hoy, el estado en vivo del chat, seguir la línea, menos a b c y el widget nuevo. espera a que no quede ninguna tarea corriendo. después hay que confirmar que cada una anda contra el daemon nuevo. también hay que llevar las reglas nuevas a la mac, porque el script que pasa secretos pisa las reglas globales. y el kit de soporte remoto sigue con su continuación.
+
+para vos: aceptar la depuración usb en la retroid. el exit node del server en tailscale y vincular el whatsapp de cloud, que son un minuto cada uno. la decisión de apple health con el receptor en el server. las fotos de los amplis para publicar el marshall. la decisión de las compras para ahorrar tokens, con la ram del server primero. y limpiar la mac, que está en tres gigas libres.
+
+y del podcast: cuando lo escuches, si media hora estuvo bien.
+
+eso fue el lunes. hasta el próximo.
