@@ -1,9 +1,6 @@
 {
  "voces": {
-  "daniela": "daniela, argentina",
-  "claude": "claude, mexico",
-  "davefx": "davefx, españa",
-  "sharvard": "sharvard, españa"
+  "daniela": "daniela, argentina"
  },
  "episodios": [
   {
@@ -1787,7 +1784,7 @@
   {
    "id": "ep-2026-09-13-ahora",
    "fecha": "2026-09-13",
-   "titulo": "ahora · dom 13/9 de 21:30 a 22:25",
+   "titulo": "ahora · dom 13/9 de 21:30 a 22:25 · actualizado 22:39",
    "temas": [
     "awtomic",
     "tools",
@@ -1799,54 +1796,54 @@
    "voces": {
     "daniela": {
      "archivo": "audio/ep-2026-09-13-ahora-daniela.mp3",
-     "duracion": 702.2,
+     "duracion": 705.8,
      "capitulos": [
       {
        "t": 0.0,
        "titulo": "de que va",
-       "duracion": 25.4,
+       "duracion": 28.6,
        "archivo": "audio/ep-2026-09-13-ahora-1-de-que-va.daniela.mp3"
       },
       {
-       "t": 25.4,
+       "t": 28.6,
        "titulo": "awtomic: penfolds y el widget doble",
-       "duracion": 184.5,
+       "duracion": 184.6,
        "archivo": "audio/ep-2026-09-13-ahora-2-awtomic-penfolds-y-el.daniela.mp3"
       },
       {
-       "t": 209.8,
+       "t": 213.2,
        "titulo": "tools: el board",
-       "duracion": 202.2,
+       "duracion": 202.3,
        "archivo": "audio/ep-2026-09-13-ahora-3-tools-el-board.daniela.mp3"
       },
       {
-       "t": 412.1,
+       "t": 415.5,
        "titulo": "personal: la rutina",
-       "duracion": 79.2,
+       "duracion": 79.3,
        "archivo": "audio/ep-2026-09-13-ahora-4-personal-la-rutina.daniela.mp3"
       },
       {
-       "t": 491.3,
+       "t": 494.8,
        "titulo": "el podcast de acá en adelante",
        "duracion": 85.3,
        "archivo": "audio/ep-2026-09-13-ahora-5-el-podcast-de-aca-en.daniela.mp3"
       },
       {
-       "t": 576.6,
+       "t": 580.1,
        "titulo": "lo raro de la noche",
        "duracion": 48.2,
        "archivo": "audio/ep-2026-09-13-ahora-6-lo-raro-de-la-noche.daniela.mp3"
       },
       {
-       "t": 624.8,
+       "t": 628.3,
        "titulo": "lo que decidiste en esta hora",
        "duracion": 57.8,
        "archivo": "audio/ep-2026-09-13-ahora-7-lo-que-decidiste-en.daniela.mp3"
       },
       {
-       "t": 682.5,
+       "t": 686.1,
        "titulo": "lo que queda esperándote",
-       "duracion": 19.6,
+       "duracion": 19.7,
        "archivo": "audio/ep-2026-09-13-ahora-8-lo-que-queda-esperandote.daniela.mp3"
       }
      ]
@@ -1859,9 +1856,16 @@
     "tts_silabas": 0.8,
     "tts_volumen": 1.0
    },
-   "duracion": 702.2,
-   "ts": "2026-09-13T22:39:04-03:00"
+   "duracion": 705.8,
+   "ts": "2026-09-13T22:39:04-03:00",
+   "sello": {
+    "hora": "22:39",
+    "texto": "actualizado hoy a las diez y treinta y nueve de la noche.",
+    "intro": {
+     "daniela": 3.16
+    }
+   }
   }
  ],
- "actualizado": "2026-09-13 21:52"
+ "actualizado": "2026-09-13 22:44"
 }
