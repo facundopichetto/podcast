@@ -2847,7 +2847,69 @@
    },
    "duracion": 1788.7,
    "ts": "2026-09-14T22:04:13-03:00"
+  },
+  {
+   "id": "ep-2026-09-15-concretar",
+   "fecha": "2026-09-15",
+   "titulo": "concretar: especial de levante",
+   "temas": [
+    "personal"
+   ],
+   "palabras": 1757,
+   "guion": "episodio-2026-09-15-concretar.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-15-concretar-daniela.mp3",
+     "duracion": 545.5,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "concretar: de qué va este especial",
+       "duracion": 54.1,
+       "archivo": "audio/ep-2026-09-15-concretar-1-concretar-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 54.1,
+       "titulo": "qué es concretar, en serio",
+       "duracion": 75.4,
+       "archivo": "audio/ep-2026-09-15-concretar-2-que-es-concretar-en.daniela.mp3"
+      },
+      {
+       "t": 129.5,
+       "titulo": "por qué cuesta, aunque tengas confianza",
+       "duracion": 105.0,
+       "archivo": "audio/ep-2026-09-15-concretar-3-por-que-cuesta-aunque.daniela.mp3"
+      },
+      {
+       "t": 234.5,
+       "titulo": "las señales que importan",
+       "duracion": 80.4,
+       "archivo": "audio/ep-2026-09-15-concretar-4-las-senales-que-importan.daniela.mp3"
+      },
+      {
+       "t": 314.9,
+       "titulo": "el arte de proponer",
+       "duracion": 93.1,
+       "archivo": "audio/ep-2026-09-15-concretar-5-el-arte-de-proponer.daniela.mp3"
+      },
+      {
+       "t": 408.0,
+       "titulo": "lo que se juega en persona",
+       "duracion": 56.4,
+       "archivo": "audio/ep-2026-09-15-concretar-6-lo-que-se-juega-en.daniela.mp3"
+      },
+      {
+       "t": 464.5,
+       "titulo": "cómo vamos a mirar tus charlas",
+       "duracion": 81.0,
+       "archivo": "audio/ep-2026-09-15-concretar-7-como-vamos-a-mirar-tus.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 545.5,
+   "ts": "2026-09-15T01:10:16-03:00"
   }
  ],
- "actualizado": "2026-09-14 22:04"
+ "actualizado": "2026-09-15 01:10"
 }
