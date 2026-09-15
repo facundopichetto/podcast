@@ -2855,12 +2855,12 @@
    "temas": [
     "personal"
    ],
-   "palabras": 1757,
+   "palabras": 4907,
    "guion": "episodio-2026-09-15-concretar.txt",
    "voces": {
     "daniela": {
      "archivo": "audio/ep-2026-09-15-concretar-daniela.mp3",
-     "duracion": 545.5,
+     "duracion": 1532.7,
      "capitulos": [
       {
        "t": 0.0,
@@ -2903,11 +2903,83 @@
        "titulo": "cómo vamos a mirar tus charlas",
        "duracion": 81.0,
        "archivo": "audio/ep-2026-09-15-concretar-7-como-vamos-a-mirar-tus.daniela.mp3"
+      },
+      {
+       "t": 545.4,
+       "titulo": "segunda parte: tus charlas, una por una",
+       "duracion": 40.7,
+       "archivo": "audio/ep-2026-09-15-concretar-8-segunda-parte-tus.daniela.mp3"
+      },
+      {
+       "t": 586.1,
+       "titulo": "bele: de la noche de audios al chat de la ropa",
+       "duracion": 150.4,
+       "archivo": "audio/ep-2026-09-15-concretar-9-bele-de-la-noche-de.daniela.mp3"
+      },
+      {
+       "t": 736.6,
+       "titulo": "luciana: la que te invita desde lejos",
+       "duracion": 102.0,
+       "archivo": "audio/ep-2026-09-15-concretar-10-luciana-la-que-te.daniela.mp3"
+      },
+      {
+       "t": 838.5,
+       "titulo": "geraldine: mucha charla, ningún encuentro",
+       "duracion": 103.3,
+       "archivo": "audio/ep-2026-09-15-concretar-11-geraldine-mucha-charla.daniela.mp3"
+      },
+      {
+       "t": 941.9,
+       "titulo": "vicky: la que te quería ir a ver",
+       "duracion": 94.6,
+       "archivo": "audio/ep-2026-09-15-concretar-12-vicky-la-que-te-queria.daniela.mp3"
+      },
+      {
+       "t": 1036.4,
+       "titulo": "rebe: la puerta que se abrió el fin de semana",
+       "duracion": 41.6,
+       "archivo": "audio/ep-2026-09-15-concretar-13-rebe-la-puerta-que-se.daniela.mp3"
+      },
+      {
+       "t": 1078.0,
+       "titulo": "mariana y mica: la chispa está, el plan no",
+       "duracion": 82.2,
+       "archivo": "audio/ep-2026-09-15-concretar-14-mariana-y-mica-la.daniela.mp3"
+      },
+      {
+       "t": 1160.2,
+       "titulo": "las que están en pausa: mei, micaela, cami, cande y sol",
+       "duracion": 93.2,
+       "archivo": "audio/ep-2026-09-15-concretar-15-las-que-estan-en-pausa.daniela.mp3"
+      },
+      {
+       "t": 1253.4,
+       "titulo": "tercera parte: lo que se repite",
+       "duracion": 121.1,
+       "archivo": "audio/ep-2026-09-15-concretar-16-tercera-parte-lo-que-se.daniela.mp3"
+      },
+      {
+       "t": 1374.5,
+       "titulo": "lo que te sale bien, y cómo usarlo más",
+       "duracion": 57.5,
+       "archivo": "audio/ep-2026-09-15-concretar-17-lo-que-te-sale-bien-y.daniela.mp3"
+      },
+      {
+       "t": 1432.0,
+       "titulo": "movimientos para esta semana",
+       "duracion": 66.7,
+       "archivo": "audio/ep-2026-09-15-concretar-18-movimientos-para-esta.daniela.mp3"
+      },
+      {
+       "t": 1498.7,
+       "titulo": "cierre",
+       "duracion": 33.9,
+       "archivo": "audio/ep-2026-09-15-concretar-19-cierre.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 545.5,
+   "duracion": 1532.7,
    "ts": "2026-09-15T01:10:16-03:00"
   },
   {
@@ -2986,5 +3058,5 @@
    "ts": "2026-09-15T05:46:00-03:00"
   }
  ],
- "actualizado": "2026-09-15 05:48"
+ "actualizado": "2026-09-15 08:58"
 }
