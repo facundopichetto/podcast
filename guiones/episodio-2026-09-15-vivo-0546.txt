@@ -1,0 +1,50 @@
+# actualizado hoy a las 05:46
+actualizado hoy, martes quince, a las cinco cuarenta y seis.
+
+# de que va
+esto arranca a las dos y treinta y nueve de la madrugada del martes. lo que viene es lo que pasó desde esa hora hasta cerca de las seis menos cuarto, con el episodio nuevo recién abierto. no está cerrado: se le van a ir pegando tramos a medida que avance el día.
+
+# la noche de tools
+la madrugada arrancó con el cambio de nombre. a las dos y treinta y nueve terminó la primera etapa de renombrar el producto: de claudio a flaudio, y por ahora solo lo visible. la web quedó publicada y revisada en vivo: el board ahora dice flaudio board y la cabecera arranca con flaudio y la hora. pasaron las pruebas de la web, las de pestañas, la de whatsapp, la de push, la de la banda y el daemon en modo prueba. nueve minutos, con opus, en la cuenta orugote.
+
+después vino el swipe en la pantalla de qué ver, y esa fue la más larga de la noche: veintitrés minutos. en el celu cada fila ahora se desliza. si la arrastrás a la derecha asoma visto en verde, y si la arrastrás a la izquierda asoma no me interesa en rojo. si soltás pasado el cuarenta por ciento del ancho la fila se va con animación, y si no llegaste a ese punto vuelve sola a su lugar. en la compu aparece de otra forma. quedó funcionando pero todavía sin publicar.
+
+a las tres y veintiuno cerraron dos arreglos del chat del board. el más importante: los avisos ya no salen mezclados en el chat. la web quedó publicada y lo verifiqué en pages, ya tenía el cambio. el daemon nuevo no había cargado todavía, porque el reinicio se posterga mientras haya una tarea corriendo, y justo esa tarea era la que lo frenaba. no salió en los ochenta segundos de siempre y quedó esperando a que la tarea terminara.
+
+por eso lo de las tres y veinticuatro fue verificar que eso hubiera pasado de verdad, y pasó. el reinicio salió a las tres y veintidós, el daemon nuevo arrancó a las tres y veintitrés, no hay ningún error ni traza rara en el log, el tick está al día y las pruebas de downtime figuran donde tienen que figurar, corriendo cada diez minutos. un minuto de tarea para confirmar que todo estaba donde debía estar.
+
+# lo de instagram y las votaciones
+esta parte fue un ida y vuelta tuyo a las tres y pico, y vale contarla entera porque terminó dejando una regla nueva.
+
+a las tres y catorce te llegó un aviso mío que decía que la limpieza de instagram tenía el modal listo para abrir: quinientas setenta y cinco candidatas para dejar de seguir, quince ya premarcadas, y el contador yendo de setecientos noventa y dos a una meta de setecientos setenta y siete. el problema es que el aviso dejaba el comando pero nadie lo había corrido. o sea: en la web no te aparecía nada. y el comando corre en el server, así que desde el celu no lo podías tirar vos.
+
+vos dijiste algo razonable: querías votar primero las minas del podcast, para que yo armara esa parte mientras vos seguías con el resto. esa votación sí estaba abierta: concretar, con quién seguimos, cuarenta y dos candidatas y todavía sin ningún voto. la parte dos quedó encolada para arrancar sola cuando llegara tu voto, y recién ahí se te abría la limpieza de instagram con las quinientas setenta y cinco.
+
+dos minutos después fuiste más directo: lo que sea que te haga votar cuanto antes, que no puede ser que el modal esté listo y tardemos horas. tenías razón. abrí la de instagram ahí mismo. y aclaré una cosa que importa: no es una prueba, cuando le das a dejar de seguir deja de seguir de verdad, solo a las que marcaste, de a una y con pausas entre medio.
+
+pero seguía sin aparecerte el botón votar, y ahí estaba la falla real. las votaciones estaban abiertas en el server, las dos, pero el código del botón había quedado en un commit local de las tres y cuarto que nunca se pusheó. la web que abrías en el celu todavía no tenía ese código. o sea que del lado del server todo estaba perfecto y del lado tuyo no había nada que tocar. de ahí salió la regla nueva: un modal listo se abre solo, en el momento, y no queda esperando a que alguien corra un comando.
+
+# lo que quedó cerrado de personal
+hubo dos tareas cerradas que vienen de tu pedido del día anterior.
+
+la de la rutina cambió cómo salen los avisos: cada aviso de los pasos sale quince minutos antes de su hora, con la ventana corrida esos quince minutos, y con cuidado especial con los pasos que caen después de medianoche, que son los que siempre se rompen en este tipo de cuentas.
+
+la otra, cerrada a las tres y cuarenta y cinco, es la segunda votación: las cuentas que no seguís y podrías seguir, tanto privadas como públicas. la regla que pediste es que quede afuera toda cuenta con más de cinco mil seguidores, y que si no se puede leer cuántos seguidores tiene, en vez de meterla igual quede marcada como dudosa. esa va después de la de candidatas, que en ese momento todavía no estaba corriendo.
+
+# el movimiento del agente, y dónde se trabó
+acá hay algo que conviene contar, porque explica por qué después de las cuatro la cosa se puso más lenta.
+
+entre las cuatro y once y las cuatro y trece hubo una tanda de detecciones de trabajo a medias. es el guard que mira cuando una tarea dice que algo queda en segundo plano o sigue corriendo: si no queda ningún proceso vivo de esa tarea, se cuenta como fallo, sin discusión. varias cayeron ahí. otras dos dijeron lo mismo pero sí tenían procesos vivos, y esas se dieron por buenas. el guard está distinguiendo bien entre las dos cosas, que es justamente para lo que está.
+
+en el medio se marcó una versión nueva del código, con quince archivos, y el daemon se reinició solo porque la versión nueva pasó la prueba. un archivo quedó afuera del repo a propósito, porque es un secreto y no se commitea. eso generó un aviso que no se reenvió por repetido.
+
+el daemon volvió a arrancar a las cuatro y trece. al arrancar dejó dicho algo para tener en cuenta: hay temas que no tienen carpeta en esta máquina, y las órdenes de esos temas se rutean a tools, así que no conviene encolar trabajo de ellos acá. el chat por red local quedó escuchando de nuevo en las direcciones de siempre. el tope de hilos quedó en siete, en el escalón bajo, con el uso de las últimas cinco horas en quince por ciento de la línea y la memoria en unos seis mil doscientos megas.
+
+y ahí apareció el cuello de botella. dos tareas esperando por archivo: una espera a la de candidatas porque las dos tocan el mismo archivo de mensajes directos, y la de concretar también espera a la de candidatas por el archivo de la limpieza. pero lo que de verdad frenó fue el presupuesto: la de concretar es pesada, grande, con opus y con chrome, y ya venía de un reintento. el uso de orugote estaba en sesenta y ocho por ciento contra una línea de treinta y uno, así que quedó esperando. eso salió como aviso varias veces seguidas.
+
+la buena noticia es que las dos que sí corrieron, corrieron bien. a las cuatro y veintiocho terminó la de armar las dos votaciones nuevas de instagram: quince minutos, con chrome, cuatro dólares con veintiuno. y a las cuatro y treinta y uno terminó la de sumar la cuenta de jesss moon: tres minutos y un dólar con treinta y seis.
+
+# en qué quedamos
+el saldo del tramo es este. lo visible del producto ya dice flaudio y está verificado en vivo. el swipe está hecho y falta publicarlo. los avisos ya no ensucian el chat y el daemon nuevo cargó ese cambio sin errores. las dos votaciones de instagram están armadas y abiertas del lado del server. la rutina avisa quince minutos antes.
+
+lo que quedó trabado es la de concretar, esperando a que baje el uso de la cuenta, y el botón de votar, que necesita que ese commit local salga a la web para que lo veas desde el celu. eso es lo primero que hay que destrabar cuando sigamos.

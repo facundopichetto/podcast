@@ -2909,7 +2909,82 @@
    },
    "duracion": 545.5,
    "ts": "2026-09-15T01:10:16-03:00"
+  },
+  {
+   "id": "ep-2026-09-15-vivo-0546",
+   "fecha": "2026-09-15",
+   "titulo": "vivo · lun 14/9 desde 02:39 · actualizado 05:46",
+   "temas": [
+    "auto",
+    "awtomic",
+    "flaudio",
+    "fuzzer",
+    "juegos",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 1457,
+   "guion": "episodio-2026-09-15-vivo-0546.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-15-vivo-0546-daniela.mp3",
+     "duracion": 426.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "actualizado hoy a las 05:46",
+       "duracion": 3.7,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-1-actualizado-hoy-a-las.daniela.mp3"
+      },
+      {
+       "t": 3.7,
+       "titulo": "de que va",
+       "duracion": 14.6,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-2-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 18.2,
+       "titulo": "la noche de tools",
+       "duracion": 101.9,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-3-la-noche-de-tools.daniela.mp3"
+      },
+      {
+       "t": 120.1,
+       "titulo": "lo de instagram y las votaciones",
+       "duracion": 108.1,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-4-lo-de-instagram-y-las.daniela.mp3"
+      },
+      {
+       "t": 228.2,
+       "titulo": "lo que quedó cerrado de personal",
+       "duracion": 40.9,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-5-lo-que-quedo-cerrado-de.daniela.mp3"
+      },
+      {
+       "t": 269.2,
+       "titulo": "el movimiento del agente, y dónde se trabó",
+       "duracion": 124.5,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-6-el-movimiento-del.daniela.mp3"
+      },
+      {
+       "t": 393.7,
+       "titulo": "en qué quedamos",
+       "duracion": 33.2,
+       "archivo": "audio/ep-2026-09-15-vivo-0546-7-en-que-quedamos.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-15-vivo-0546",
+   "version": "vivo",
+   "emision": "vivo",
+   "actualizado": "2026-09-15T05:46-03:00",
+   "duracion": 426.9,
+   "ts": "2026-09-15T05:46:00-03:00"
   }
  ],
- "actualizado": "2026-09-15 01:10"
+ "actualizado": "2026-09-15 05:48"
 }
