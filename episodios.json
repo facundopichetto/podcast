@@ -3056,7 +3056,82 @@
    "actualizado": "2026-09-15T05:46-03:00",
    "duracion": 426.9,
    "ts": "2026-09-15T05:46:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-15-vivo-1447",
+   "fecha": "2026-09-15",
+   "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 14:47",
+   "temas": [
+    "awtomic",
+    "fuzzer",
+    "personal",
+    "tools"
+   ],
+   "palabras": 1774,
+   "guion": "episodio-2026-09-15-vivo-1447.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-15-vivo-1447-daniela.mp3",
+     "duracion": 525.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "actualizado hoy a las 14:47",
+       "duracion": 3.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-1-actualizado-hoy-a-las.daniela.mp3"
+      },
+      {
+       "t": 3.7,
+       "titulo": "de que va",
+       "duracion": 23.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-2-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 27.6,
+       "titulo": "la limpieza de instagram, lo que salió mal y lo que salió bien",
+       "duracion": 162.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-3-la-limpieza-de.daniela.mp3"
+      },
+      {
+       "t": 189.8,
+       "titulo": "la cola de instagram y las candidatas",
+       "duracion": 78.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-4-la-cola-de-instagram-y.daniela.mp3"
+      },
+      {
+       "t": 268.1,
+       "titulo": "lafayette, retool y dynamo",
+       "duracion": 100.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-5-lafayette-retool-y.daniela.mp3"
+      },
+      {
+       "t": 368.2,
+       "titulo": "slack y las votaciones de animaciones",
+       "duracion": 74.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-6-slack-y-las-votaciones.daniela.mp3"
+      },
+      {
+       "t": 442.4,
+       "titulo": "salud y el widget",
+       "duracion": 27.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-7-salud-y-el-widget.daniela.mp3"
+      },
+      {
+       "t": 469.9,
+       "titulo": "lo que se movió en el agente",
+       "duracion": 55.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-8-lo-que-se-movio-en-el.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "grupo": "2026-09-15-vivo-1447",
+   "version": "vivo",
+   "emision": "vivo",
+   "actualizado": "2026-09-15T14:47-03:00",
+   "duracion": 525.9,
+   "ts": "2026-09-15T14:47:00-03:00"
   }
  ],
- "actualizado": "2026-09-15 08:58"
+ "actualizado": "2026-09-15 14:50"
 }

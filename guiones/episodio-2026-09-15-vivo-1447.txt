@@ -1,0 +1,49 @@
+# actualizado hoy a las 14:47
+actualizado hoy, martes quince, a las catorce cuarenta y siete.
+
+# de que va
+esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# la limpieza de instagram, lo que salió mal y lo que salió bien
+arranco por lo que te molestó a las ocho menos cinco, porque es lo más importante del rato. me preguntaste qué pasó que no había dejado de seguir a los que habíamos acordado. la respuesta era fea: cero de veinticinco. cuando entraron tus votos, la sesión de instagram del server estaba vencida. el script pedía la lista y en vez de datos volvía una página web, así que no se hizo ningún dejar de seguir y quedó todo frenado ahí. eso te lo tendría que haber avisado como bloqueado en el momento, no metido al final de un informe. queda anotado así.
+
+después arrancó de verdad. a las quince dejadas de seguir, en unos nueve minutos con pausas de veinte a cuarenta y cinco segundos, instagram volvió a contestar con una página web en lugar del dato corto que espera el script. o sea, cortó por sesión, con diez pendientes guardadas. te lo expliqué en el chat de fuzzer: el script le pide a instagram "dejá de seguir a este" como si fuera la web, desde el chrome del server con tu sesión, y cuando todo va bien instagram responde algo cortito que dice que salió bien.
+
+y ahí vino tu idea, que fue la que destrabó: reintentar las diez pendientes pero poniendo una pausa al azar de entre diez y treinta minutos entre una y otra, para que las próximas diez tarden entre una hora y pico y tres o cuatro. tu razonamiento era claro: si aun yendo así de lento se frena, entonces ya sabemos que el problema no es la velocidad de los unfollows. me dijiste que si falla frene y ahí vemos, y así quedó: una por una, y si instagram vuelve a cortar no reintenta sola y te llega un aviso de bloqueado con cuántas salieron.
+
+a las ocho y dieciocho te diste cuenta solo, mirando la app: ya seguías a setecientos setenta y siete. funcionó. esa es justo la meta del contador, la que veníamos buscando. te avisé igual de una cosa: había una orden repetida en la cola que iba a hacer lo mismo otra vez, y te ofrecí frenar todo o dejar corriendo las diez y bajar solo la repetida. elegiste dejar corriendo y bajar la repetida, después te arrepentiste y volviste a lo mismo, y quedó así: la repetida cerrada, sin correr nunca, y el reintento de las diez siguiendo su curso lento.
+
+a las ocho y trece se cerró la tarea de dejar de seguir con el informe completo: quince de veinticinco, verificadas una por una en instagram, setecientos setenta y siete seguidos, y ninguna otra cuenta tocada. dieciséis minutos de trabajo. lo que había fallado a las cuatro y seis no era la sesión, que andaba bien: instagram cambió la dirección que usaba la receta.
+
+nueve minutos después, el reintento ya estaba andando y una cuenta había salido, confirmada en instagram. antes de arrancar, una lectura de la sesión devolvió datos limpios con los setecientos setenta y siete seguidos, o sea que la sesión estaba sana. quedaban nueve, con las pausas al azar que pediste.
+
+# la cola de instagram y las candidatas
+a las ocho y veintiocho pediste que el instagram tuyo entre en la cola de una forma nueva, y eso salió a medias. la cola quedó armada, pero la bajada de candidatas volvió a frenar: instagram devolvió un error de demasiados pedidos en la tercera lectura, a las ocho y treinta y dos, igual que había pasado a las cuatro y cuarto. sin esos datos no puedo armar la parte de reacciones ni la de privadas, y esa no la reintento sola.
+
+a las diez y media preguntaste cómo venía la cola de lo personal. en ese momento quedaba una sola esperando: la de armar el historial de cada cuenta de instagram, cuándo la seguiste y cuándo la dejaste de seguir, para sumarlo como nota de cada candidata en los modales. había vuelto de cloud porque necesita chrome, y todavía no había arrancado.
+
+y a las once menos cinco preguntaste qué era eso de candidatas y cuándo estaba listo. candidatas es la bajada, el paso de juntar la información antes de poder mostrarte nada. es la pieza que se viene trabando con los errores de instagram, y es la que manda: sin candidatas no hay modales para votar. hacia el mediodía quedó en la cola el arranque del flujo de candidatas, en paralelo con una tarea de seguridad y sin choque entre las dos, y colgadas de esa varias más: el orden que definiste, el flujo de candidatas de a una que queda abierto, y una aclaración encima de eso. todas esperan a que la bajada arranque.
+
+# lafayette, retool y dynamo
+en awtomic la que avanzó fue lafayette. a las ocho y media pediste la lista de los que están en necesita trabajo de ingeniería, a tu nombre, sin los que están en hold y sin los que tienen algo de arreglo de producto en el título, ordenados por qué tan fácil es tu próxima interacción. salieron siete, y arriba quedó el plan gratis de lafayette: el agente lo había dejado listo, faltaba buscar el store en retool y crear el plan que ya estaba armado. como es una escritura, te avisé que te muestro el detalle antes.
+
+preguntaste si tengo acceso a retool. sí: la sesión quedó guardada anoche a las diez menos cinco y dura una semana, así que entro sin pasar por google ni pedirte el código del celu. eso fue el desbloqueo para que la tarea pudiera correr sola.
+
+después me mandaste un ejemplo rápido de cómo tenían que quedar los parámetros, y lo que faltaba eran los números reales y poner algo que se entienda que es gratis en lugar del texto de porcentaje por transacción. lo que pide el ticket es simple: mensualidad y transacción gratis para siempre, tarjeta guardada gratis y acceso al nivel profesional. lo dejé escrito en el orden de tu captura, con el nombre del plan gratis de lafayette y la línea de cero por mes y cero por ciento por transacción, y el número grande que sale del ejemplo lo dejé igual.
+
+a las nueve menos diez vino el ok y algo más: crear el plan con esos datos y después ir a dynamo a mirar cómo quedó. ahí anticipaste el problema que siempre aparece, que algunos campos que son números se guardan como texto. así que la tarea crea el plan, verifica que quedó, y después entra a dynamo solo a leer: te trae el item tal cual está, campo por campo con su tipo, y marca los que tienen el tipo equivocado. nada de escribir en dynamo sin pasarte el detalle antes.
+
+# slack y las votaciones de animaciones
+a las ocho y doce preguntaste si ya estabas en slack y desde cuándo. sí, online desde las ocho y cuatro, hora de buenos aires, sostenido por el script de presencia. el horario sorteado para hoy llega hasta las seis y veintitrés de la tarde, y el último chequeo había dado bien un minuto antes de que preguntes.
+
+lo de las animaciones del spinner se cerró en este rato. a las ocho menos ocho entraron tus votos de las de tres caracteres: diecinueve marcadas, guardadas, votación cerrada, y la de cuatro ya se estaba armando. tres minutos después entraron los de cuatro: dieciséis marcadas, guardadas, cerrada, y se empezó a armar la de cinco. y ahí cortaste: no más votos, cuatro caracteres como máximo por ahora. la tarea de poner el tope terminó en tres minutos: la de cinco, que ya estaba en camino, se canceló, el tope quedó en cuatro y no se arma ninguna votación nueva de animaciones hasta que vos lo digas.
+
+también me preguntaste por el especial: veías el vivo de depósitos y nada del análisis. de ese especial solo está publicada la parte uno, la intro. la tarea estaba esperando tus votos y se cortó por tiempo a las cuatro y cuatro; tus votos llegaron dos minutos después, así que las partes dos y tres nunca se escribieron. volvió a la cola.
+
+# salud y el widget
+a las nueve menos seis me contaste lo de anoche: doscientos cincuenta gramos de ojo de bife y tres huevos, al final de las almendras. quedó anotado en el día catorce, después de las almendras. el peso de hoy lo cargás cuando te peses, todavía no te habías pesado. y me pediste arreglar el widget, más tarde, cuando no quede nada corriendo, porque desde el widget no podés contarme estas cosas y no se entiende por qué. lo dejé encolado para un momento con la cola libre, con la idea de que quede intuitivo.
+
+# lo que se movió en el agente
+cerca de las tres menos veinte hubo un reinicio por cambio de código. se marcó una versión nueva con treinta y cinco archivos, la versión pasó la prueba y el agente se reinició solo. un archivo de soporte del server quedó afuera del repo por ser secreto, y el aviso de eso no se reenvió porque ya había salido uno igual hace poco.
+
+en el mismo rato se estuvo probando el detector de trabajo a medias, el que mira si una tarea dice "queda en segundo plano" y decide si eso es cierto o es un fallo. funcionó en los dos sentidos: cuando dice que sigue corriendo y hay un proceso vivo, se da por buena; cuando dice lo mismo y no queda nada vivo, cuenta como fallo. después de reiniciar, el agente volvió a escuchar en la red de casa, con el tope de hilos en siete, y dejó anotado que flabs no tiene carpeta en esta máquina, así que sus órdenes se rutean a herramientas y no hay que encolar trabajo de ese tema acá. también quedó esperando el sacar el freno de horario laboral y una corrección amplia de la orden de destrabar la cola.
