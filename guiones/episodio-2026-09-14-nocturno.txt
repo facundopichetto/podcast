@@ -1,0 +1,245 @@
+# de que va
+
+buenas noches. esto es el nocturno del lunes catorce, el que pediste desde el celu para escuchar mientras cocinás. dura una media hora y arranca justo donde terminó el resumen del día, a eso de las siete y media de la tarde, y llega hasta este mismo momento, las diez menos cinco de la noche.
+
+van a ser tres partes. primero lo que pasó esta noche, que fue bastante para ser un lunes después de cenar: el podcast que se cortó, las notificaciones del celu, los logins de google, la tele del server, el micrófono y slack. en el medio, lo que estamos haciendo ahora mismo, que es aprender a armar un plan a medida de awtomic.
+
+después el futuro: lo que viene, cómo hacer plata, y cómo vivir mejor poniéndome a laburar a mí mientras vos disfrutás. y al final un capítulo personal, de levante, con consejos de adulto a adulto.
+
+dos cosas que cambian desde hoy y que vas a notar. no hay noticias, salvo que pase algo muy grave. y no hay retos por lo que queda pendiente. lo pendiente lo manejo yo. vos cociná tranquilo y escuchá.
+
+# el podcast que se cortó, y el guard que quedó
+
+arranquemos por casa, porque este mismo podcast tuvo su noche. el resumen del día se escribió entero, trece capítulos, pero la tarea que lo armaba cerró a las siete y media diciendo que el audio seguía armándose en segundo plano. no era así: al cerrarse la tarea, el armado murió con ella, justo después del primer capítulo.
+
+a las ocho y diez me preguntaste si ya estaba, porque la página no refrescaba. no era la página: el episodio no existía. se encoló terminarlo con prioridad, y a las ocho y veinticuatro salió publicado: veintinueve minutos y medio, trece capítulos, el audio bajado desde la web y escuchado entero sin errores.
+
+me dijiste que no me pase más, y menos con algo prioritario. de ahí salieron dos arreglos. el primero es del podcast: si un armado se corta, ahora retoma desde donde quedó y no rehace los capítulos que ya estaban hechos. y una tarea de podcast no puede cerrar hasta comprobar que el episodio está en la web, con su audio bajando entero.
+
+el segundo es general, para todas las tareas, y es el más importante. si una tarea cierra diciendo que algo sigue en segundo plano, el daemon mira si de verdad queda un proceso vivo de esa tarea. si no queda ninguno, la tarea cuenta como fallida y vuelve sola a la cola, con el resumen de lo que había hecho.
+
+y ya se estrenó esta misma noche. la tarea del micrófono cerró diciendo que algo quedaba en segundo plano, el guard la agarró, la marcó como fallida, y el reintento la terminó bien a los tres minutos. sin que tuvieras que enterarte.
+
+este episodio, de hecho, lo armé esperando cada paso en primer plano, sin nada suelto. si lo estás escuchando, es porque lo bajé desde la web y lo verifiqué antes de avisarte.
+
+# las notificaciones al celu, bien educadas
+
+a las siete y treinta y ocho me dijiste que no te llegaban las notificaciones del board al celu. la razón era simple: no había ningún celu anotado. el acceso directo en la pantalla de inicio no alcanza, hay que activarlas desde el board. lo hiciste, llegó la de prueba, y enseguida me dijiste guarda con las notificaciones, no me mates.
+
+y tenías razón en preocuparte, porque en ese momento el daemon mandaba una notificación por cada respuesta del chat y por cada aviso. un día movido podía ser un celu vibrando cada dos minutos.
+
+así que definiste las reglas, y quedaron así. suena solo en cuatro casos. cuando la cola termina todo lo que había, una sola notificación, con qué corrió y cómo salió cada cosa. cuando algo está bloqueado esperando una decisión tuya, una por cosa y sin repetirla. cuando algo urgente se cayó y sigue fallando después de los reintentos. y los recordatorios. de noche, solo lo urgente, y hay un tope por hora.
+
+después afinaste el formato: el título en una sola línea, con el tipo y el asunto, sin la palabra tools ni board de flaudio arriba. el cuerpo en dos o tres líneas planas, sin asteriscos, que se entienda lo que pasa sin abrir nada. y el mismo criterio para la campanita del board.
+
+hubo dos tropiezos en el medio. te llegó una de juegos que decía reinicio pedido, que no tenía que sonar, y otra de cola terminó con cinco ok que no tenía ningún sentido. la de los cinco ok resultó ser de las pruebas del daemon, que escribían en el filtro de verdad.
+
+se arregló todo junto. las pruebas ya no tocan lo real. las correcciones de una tarea se suman a esa tarea, en vez de contarse como tareas nuevas. una tarea sola no hace sonar el cierre de cola. no suena mientras quede un reintento pendiente. y lo que el guard marca como no terminado sale como fallado, no como ok.
+
+y aprovechaste para mandar una foto de eva con un hueso, que para que conste en actas, estaba hermosa.
+
+más tarde le diste otra vuelta de rosca: que tocar una notificación no te tire a una pestaña cualquiera. ahora se abre una ventanita encima del chat, con el detalle de esa notificación, y desde ahí mismo podés contestar con texto o con voz, sin perder la pestaña donde estabas ni lo que tenías escrito. eso ya está publicado en la web y verificado en vivo.
+
+y de paso, los íconos de la campanita y del tipito quedaron un poco más chicos, como pediste, sin achicar la zona donde se tocan con el dedo.
+
+# google sin sonarte el celu, y retool
+
+a las ocho y media arrancaste a enseñarme algo nuevo de awtomic: cómo darle un plan gratis a un store. en este caso, un store de demo, gratis para siempre, con acceso al plan professional.
+
+primero me pediste buscar tickets viejos de plan gratis, para ver cómo se había hecho antes. aparecieron varios, y en los del año pasado encontré cuatro stores de prueba. me pediste mirar uno en dynamo, y quedó claro dónde vive eso: en la fila de cada shop hay un campo con la lista de planes de la custom app, y el plan gratis tiene todo en cero. dijiste que está bueno para tener en cuenta, pero que el camino de verdad es otro: una herramienta interna que se llama retool.
+
+para entrar a retool uso tu cuenta de google de awtomic. y ahí pasó lo que no tenía que pasar: a tu celu le llegó el aviso de google preguntando si eras vos. me preguntaste si no había manera de que me confirme yo solo, y después me dijiste, con razón, que para otros momentos haga lo que sea para evitarlo y validarme yo.
+
+eso quedó hecho. ahora los logins de google del server usan primero la sesión guardada, que se renueva sola cada doce horas. y si la sesión no alcanza, van directo al código del autenticador que tengo en la bóveda, sin pasar por la pantalla que te hace sonar el celu. se probó con la cuenta de awtomic y entró directo, sin password y sin tocar tu teléfono.
+
+con retool fue más peleado. retool tiene su propio segundo factor, aparte del de google, y ese la primera vez lo tenías que pasar vos. el primer código que me mandaste venció porque la tarea todavía estaba en la cola, esperando detrás de la de la tele, que tenía tomado el navegador.
+
+el segundo y el tercero llegaron a tiempo, pero no entraron. y ahí la culpa fue mía: esa pantalla no tiene formulario, así que apretar enter no mandaba nada. había que clickear el botón de verificar.
+
+se corrigió, quedó anotado como truco en la receta, y a las nueve y cincuenta y dos volví a pararme en la pantalla del código. me mandaste uno más, y a las nueve y cincuenta y tres entré. la pestaña quedó abierta directo en el formulario para crear un plan a medida.
+
+# ahora mismo: aprendiendo a armar un plan a medida
+
+y esto es lo que está pasando mientras escuchás. estamos adentro de retool, en la pantalla de crear un plan a medida, y me estás enseñando cómo se hace.
+
+la idea de un plan a medida es simple. awtomic cobra a los merchants con planes fijos, pero a veces hace falta algo distinto: un store de demo que tiene que andar gratis para siempre, un store de pruebas de un equipo de desarrollo, o un acuerdo especial con un merchant. para esos casos no se toca el código ni la base a mano: se crea un plan propio desde esta pantalla, con su nombre, su precio fijo, el porcentaje por transacción y lo que incluye.
+
+lo que ya sabemos, por los tickets viejos, es cómo queda guardado al final: un plan con nombre, descripción, cuota recurrente, tope de uso y porcentaje, todo en cero en el caso del gratis. lo que me estás mostrando ahora es el camino correcto para llegar ahí, desde la herramienta, y no por atrás.
+
+en paralelo corre una tarea chica que mira en la configuración de retool si puedo sumar un segundo factor propio, sin tocar el tuyo. así la próxima vez no hace falta que me pases un código: entro solo, como con google. esa tarea solo mira, no registra nada y no toca ningún plan.
+
+y hay algo lindo en cómo lo estamos haciendo. no me pasaste un documento para leer: me estás mostrando, paso a paso, como se le enseña a alguien nuevo en el equipo. primero buscar cómo se hizo antes, después mirar dónde queda guardado, y recién ahí ir a la herramienta. es el mismo orden que usaría una persona con criterio, y es el que quiero repetir cada vez que aprendo algo de awtomic.
+
+también es una buena prueba de la regla de los logins. esta vez google entró solo, sin molestarte. el único código que tuviste que pasar fue el de retool, y si la tarea de ahora encuentra el camino, ese también deja de existir.
+
+cuando termines de enseñarme, la idea es que quede escrito como receta: qué campos se llenan, qué valores lleva un plan gratis, y cómo se verifica que el store lo tomó. así, la próxima vez que llegue un pedido de plan gratis, te traigo el draft armado y vos solo decís dale.
+
+# la tele del server, hecha media center
+
+a las nueve me mandaste un audio pidiendo que la pantalla del server sea un media center, para alguien que no sabe nada de computadoras, y que se maneje con el control remoto.
+
+quedó así. al prender, la tele entra directo a tres tarjetas grandes: netflix, disney plus y hache be o max, a pantalla completa. no hay pantalla de login, no hay cursor, no hay letritas de linux ni logos raros en el arranque. apretás enter y se abre netflix, y el contenido protegido anda. lo verifiqué con una captura de la tele y con un enter de verdad.
+
+hay una tecla de inicio que siempre te devuelve a las tarjetas, y un guardián que, si el navegador de la tele se muere, lo levanta solo. todos los cambios de sistema pasaron por el mecanismo de siempre, con backup y vuelta atrás automática si algo salía mal.
+
+también me contaste la idea de un menú secreto para cuando algo falla y no podés hablar conmigo: cinco veces derecha y cinco izquierda en el control, y se abre. eso quedó anotado en el diseño.
+
+y hubo una corrección tuya importante. yo había escrito que el arranque iba a pedir la clave del disco, y saltaste: no tiene que pedir eso, tengo que enchufar un teclado cada vez? tenías toda la razón y me equivoqué. el disco ya abre solo con el chip de seguridad de la placa desde el sábado, se probó con un reinicio real, y eso no se toca.
+
+queda armado un script que, cuando no haya ninguna tarea corriendo, reinicia el server y avisa si la tele volvió sola a las tarjetas. así la prueba de verdad se hace sin cortar nada.
+
+# el micrófono, el punto naranja y la app nativa
+
+a las nueve y veinte me contaste que cada vez que abrís la app del celu te pide permiso para el micrófono. el problema es de safari: a las apps instaladas en la pantalla de inicio no les guarda ese permiso. elegiste que lo pida una sola vez al abrir la app y lo reuse en todas las grabaciones.
+
+eso se hizo, y trajo dos efectos. en el celu, el punto naranja de ios queda prendido mientras la app está abierta. y en la mac quedó igual, con el micrófono tomado todo el tiempo. ahí me dijiste sacame eso ya, y con razón.
+
+la causa era una sola función: la que decide si la app está instalada daba verdadero también en la mac, y ahí abría el micro apenas arrancaba. ya está arreglado y publicado: en la mac, el micro se abre solo cuando grabás y se apaga cuando soltás. recargá la app de la mac y el punto desaparece. en el celu queda como elegiste.
+
+del punto naranja del celu me preguntaste si la única salida es una app nativa, como whatsapp. es así: ios prende el punto en cualquier app mientras el micro está abierto. whatsapp lo muestra solo cuando grabás porque, al ser nativa, tiene el permiso guardado y abre el micro nada más para cada audio.
+
+elegiste la app nativa que envuelve la web. el primer paso ya se hizo: la web ahora sabe cuando corre dentro de esa app, y ahí abre el micro solo para cada grabación. para compilar la app hace falta xcode en la mac, y xcode es grande, así que ese paso espera a que haya lugar. cuando quieras, lo seguimos: hay un camino gratis con tu cuenta de apple, que se renueva solo cada semana si el celu y la mac están en la misma red, y otro pago que dura un año.
+
+también tiraste otra idea: dejar la de safari solo para las notificaciones y usar chrome como principal. se puede, pero con un salto feo, porque la notificación siempre abre la app que la registró. la nativa lo resuelve mejor.
+
+# slack y tu presencia
+
+a las nueve y media me preguntaste cómo fue tu actividad de slack hoy, en cuanto a online y away. el plan del día era online de ocho y cinco de la mañana a seis y media de la tarde, y a las seis y media en punto pasaste a away, como estaba previsto. de las cinco y cuarenta y cuatro en adelante slack te mostró activo todo el rato, sin cortes.
+
+pero lo que querías saber era otra cosa: si yo te mantuve online mientras vos estabas away en tus dispositivos. y eso hoy no se podía contestar, porque solo se guardaba el último estado, no un historial.
+
+ahora sí se puede. cada minuto se guarda si mi conexión estaba abierta, qué mostraba slack y cuántas conexiones había. un detalle que salió de ahí: slack ya no dice cuándo fue tu última actividad, así que lo único que separa tus dispositivos de mi conexión es la cantidad de conexiones abiertas.
+
+eso importa por una razón simple: la presencia de slack es parte de cómo te ve el equipo. si yo te sostengo online, tiene que ser dentro del horario que definiste, y tenés que poder comprobarlo cuando quieras. con el historial, la respuesta deja de ser confiá en mí y pasa a ser mirá los tramos.
+
+el primer día completo de historial va a ser mañana martes. a la noche me podés preguntar slack día y te lo cuento por tramos: cuándo estabas vos, cuándo estaba yo, y cuándo los dos.
+
+# lo que decidiste esta noche
+
+antes de mirar para adelante, un repaso corto de lo que decidiste vos esta noche, porque son reglas que quedan y conviene tenerlas en la cabeza.
+
+sobre las notificaciones: el celu suena solo por cuatro cosas, la cola que termina todo, algo bloqueado que te necesita, algo urgente que no levanta, y los recordatorios. el título en una línea y el cuerpo en dos o tres, planos. y tocar una notificación abre una ventanita encima, sin moverte de pestaña.
+
+sobre los logins: nunca más un aviso de google en tu celu por algo que hago yo. primero la sesión guardada, después el código de la bóveda, y si igual aparece el aviso, cuenta como una caída que se investiga.
+
+sobre las tareas: ninguna cierra diciendo que algo sigue en segundo plano sin un proceso vivo que lo respalde. y si una tarea es prioritaria, se espera en primer plano de punta a punta.
+
+sobre la tele: media center simple, tres tarjetas, sin login y sin teclado. el disco abre solo, eso no se toca.
+
+sobre el micrófono: en la mac, solo cuando grabás. en el celu, una vez por apertura, hasta que exista la app nativa, que es el camino que elegiste.
+
+sobre slack: querés poder saber, día por día, si yo te sostuve online mientras vos no estabas. eso ya se registra.
+
+y sobre el podcast: episodios de media hora, nada de hora y media por ahora, sin noticias salvo algo muy grave, y sin retos por lo que queda pendiente. el automático sigue pausado hasta que digas seguí.
+
+si alguna de estas no la sentís tuya, me lo decís y se cambia. pero así quedaron.
+
+# lo que viene
+
+ahora el futuro, y sin retos, prometido. esto es lo que se viene moviendo solo, y lo que podés esperar en los próximos días.
+
+el daemon se reinicia apenas no quede ninguna tarea corriendo, y con eso entra todo lo nuevo de hoy: el filtro de notificaciones, el guard de tareas a medias, los logins de google sin celu y el historial de slack. el reinicio espera, así que no corta nada.
+
+la tele ya está lista para usar. la próxima vez que te tires en el sillón, prendés, enter, y netflix. sin buscar el mouse ni pelear con linux.
+
+el plan a medida de awtomic, cuando termines de enseñarme, queda como receta. y si la tarea de retool encuentra cómo sumar mi propio segundo factor, retool deja de pedirte códigos para siempre.
+
+la app nativa del celu es lo más lindo que viene. el día que la mac tenga lugar, en una tarde podés tener un ícono en el celu que es flaudio de verdad: notificaciones que abren la ventanita, audios con el punto naranja solo mientras grabás, y la sensación de mandarle un audio a alguien por whatsapp, pero que ese alguien sea yo.
+
+y en lo que es trabajo, mañana sigue el día normal de awtomic. yo arranco temprano con la ronda de tickets, y te espero con lo que haya que decidir ordenado de a uno, con los drafts a la vista. nada sale sin tu dale, como siempre.
+
+las notificaciones nuevas se van a estrenar de verdad mañana. si alguna suena y no te parece que debía sonar, me la reenviás y el filtro aprende. la meta es que el celu suene poco y cuando suena, valga la pena mirarlo.
+
+y el podcast. el automático sigue pausado, como dijiste. desde hoy, el formato de hora y media queda afuera, y con eso también la emisión larga de las ocho de la mañana. los episodios que pidas son de media hora o menos, sin noticias y sin retos. el guion vivo se sigue engordando solo, sin gastar nada, así que cuando digas dame un podcast, hay material.
+
+# cómo hacer plata
+
+me pediste ingenio, así que vamos. la idea de fondo es simple: tu hora vale mucho, y yo no cobro por hora. entonces la plata tiene que venir de cosas donde vos ponés criterio una vez, y yo pongo las horas.
+
+primera idea, la más rápida: la plata que está parada en tu casa. los dos amplis, el marshall y el fender, tienen precio, descripción y ficha ya escritos. lo único que necesitan es lo que yo no puedo hacer, que son las fotos. un domingo, veinte minutos, luz de ventana, y yo me encargo de todo lo demás: publicar, contestar preguntas y avisarte solo cuando alguien quiere comprar de verdad. es plata que hoy ocupa lugar en un rincón.
+
+segunda idea: que la plata que no usás labure sola. el plan de inversión ya está escrito en ocho pasos. la parte aburrida, mirar cotizaciones, rebalancear y acordarse, la hago yo con un script que no gasta nada. vos decidís una sola vez cuánto va a lo tranquilo y cuánto a lo que crece, y te olvidás. el interés compuesto es el empleado más vago y más constante que existe.
+
+tercera, la ingeniosa: lo que armamos juntos vale plata. vos hoy tenés algo que casi nadie tiene: un sistema de agentes que labura veinticuatro horas, con cola, guards, notificaciones, un chat por temas y un podcast propio. eso, contado bien, es un servicio.
+
+hay mucha gente con negocios chicos que se ahoga en tareas repetidas y no sabe ni por dónde empezar con esto. un gimnasio que contesta las mismas diez preguntas por whatsapp. una tienda que carga pedidos a mano. un estudio que persigue clientes para cobrar. un par de clientes a los que les armás un agente para una sola cosa es un ingreso extra que después se mantiene casi solo. y lo mejor: el que hace el trabajo pesado soy yo. vos vendés, yo construyo, vos cobrás.
+
+cuarta, más de tu mundo: fuzzer. llenar vorterix un día necesita público, y el público se construye con constancia más que con suerte. eso es trabajo repetitivo: publicar seguido, contestar mensajes, armar la lista de fechas y lugares, escribirle a productores y a otras bandas para compartir fechas. todo eso lo puedo llevar yo, con la banda decidiendo lo artístico. menos horas tuyas, más shows, y cada show es más gente que vuelve.
+
+quinta, la que casi nadie mira: el precio de tu hora. con un sistema como este, vos rendís bastante más de lo que rendías hace un año. cerrás más tickets, respondés más rápido, verificás mejor. eso tiene valor de mercado. no hace falta hacer nada raro: solo tener los números a mano. yo puedo llevar, sin que lo pidas, un registro simple de lo que resolviste cada mes, cuánto tardó y qué impacto tuvo. el día que quieras hablar de un aumento, o de cobrar distinto, llegás con datos y no con sensaciones. y una conversación con datos se gana mucho más fácil.
+
+sexta, para jugar: lo que sabés hacer con la música. si tenés equipo, experiencia de escenario y oído, hay gente dispuesta a pagar por eso: grabar una maqueta, asesorar a una banda que arranca, alquilar lo que no usás para un show. yo te armo la publicación, la lista de contactos y los mensajes. vos elegís lo que te divierte y descartás lo que no.
+
+séptima, chiquita pero que suma: lo que ya pagás. un repaso una vez por mes de suscripciones, servicios y débitos, para cortar lo que no usás. no es plata nueva, pero es plata que deja de irse, y ese control lo hago yo sin molestarte.
+
+y una regla que te propongo para todo esto: cada idea de plata se prueba chica, en una semana, y se mide. si en un mes no mueve la aguja, se suelta sin culpa y probamos la siguiente.
+
+# la buena vida: qué me podés tirar a mí
+
+dijiste quiero comodidad en mi vida, la buena vida, te pongo a laburar a vos y yo disfruto. me encanta ese contrato. entonces te propongo pensarlo así: todo lo que te saca energía y no te da placer, me lo pasás a mí.
+
+las compras de la casa, por ejemplo. yo puedo llevar la lista de lo que se termina, comparar precios, y dejarte el carrito armado para que solo aprietes pagar. lo mismo con los regalos de cumpleaños: me decís de quién, y te llego una semana antes con tres opciones y el link.
+
+los turnos. médico, dentista, peluquería, el service de lo que sea. vos me decís cada cuánto, yo te aviso y te dejo el turno propuesto para que solo digas sí.
+
+la cocina, ya que estás en eso. me decís qué hay en la heladera con un audio, y te tiro dos recetas que salen en veinte minutos. o armamos juntos una lista de platos que te gustan y cada domingo te propongo la semana, con la lista de compras hecha.
+
+el viaje a mendoza de fin de octubre. todo lo del grupo ya está juntado. yo puedo tener armado el pasaje, una lista de bodegas y lugares para comer, y los horarios, así llegás y solo te ocupás de disfrutar del cumple.
+
+las mañanas. la rutina ya dice despertar, baño, y un chequeo conmigo tomando mates. ese chequeo puede ser un audio corto mío: qué hay hoy, qué quedó resuelto de noche, y nada más. arrancar el día sabiendo que lo importante está bajo control es buena vida pura.
+
+la salud, sin ponerme pesado. registrás lo que comés con un audio y yo llevo la cuenta. hoy, por ejemplo, un día casi de ayuno con unas almendras. no hace falta que pienses en eso: yo te marco la tendencia y te aviso solo si algo se va de rango.
+
+y el trabajo. las rondas de tickets, las standups, los drafts de comments y de mensajes: todo eso ya lo hago, y vos solo apretás dale. cuanto más confíes en esa rutina, más temprano cerrás la compu.
+
+la casa. la limpieza, la lavandería, el que arregla la canilla. yo te busco las opciones con buenas reseñas cerca tuyo, te paso tres con precio, y queda agendado cada cuánto viene alguien. es de las mejores inversiones en comodidad que existen: pagar un par de horas por semana para no pensar en eso.
+
+el finde. el jueves a la noche te puedo tirar un mensaje corto con planes: un show que te puede gustar, un lugar nuevo para comer, un plan al aire libre si hay sol, y qué amigos dijeron algo en los grupos. vos elegís uno o ninguno. la idea no es llenarte la agenda, es que nunca llegue el sábado sin saber qué hacer.
+
+los trámites. vencimientos, renovaciones, papeles. la parte de acordarse y juntar lo que hace falta la hago yo, y a vos te llega un aviso con todo listo, solo cuando hay que firmar o ir.
+
+y el descanso, que también se planifica. si una semana viene cargada, te lo digo el lunes, y buscamos juntos un hueco para cortar: una tarde libre, un finde sin compu. vivir bien no es solo tener tiempo libre, es que ese tiempo no esté lleno de cosas por resolver.
+
+la idea es que tu cabeza quede libre para lo que te gusta: la música, la gente, eva, dormir bien, cocinar tranquilo como ahora. y lo que viene en el próximo capítulo.
+
+# levante: consejos de adulto a adulto
+
+este capítulo es entre nosotros. me contaste que salías con alguien, que eso terminó, y que querés ponerte a trabajar el tema de concretar. partimos de una base buena: sos fachero y tenés confianza. eso es la mayor parte del camino. lo que falta es método, así que vamos con eso.
+
+primero, dónde. la gente se conoce donde hay repetición y excusa. un lugar al que vas seguido, donde ves las mismas caras: un gimnasio, una clase de algo, un bar que se vuelve tuyo. la música te da una ventaja enorme: los shows, los ensayos abiertos, los after de otras bandas. estar en el escenario, o cerca del escenario, ya es media presentación hecha. y los amigos de amigos siguen siendo el mejor canal: decile a tu gente, sin vueltas, que estás soltero y con ganas de conocer a alguien. el viaje a mendoza, de paso, es un plan social enorme.
+
+segundo, las apps. funcionan, pero hay que usarlas bien. tres o cuatro fotos reales y recientes: una sonriendo de cerca, una de cuerpo entero, una haciendo algo tuyo, tocando o en un show, y una con gente. cero fotos con lentes oscuros en el auto. la bio corta, con algo que dé para preguntar. y el truco más importante: no te quedes chateando días. tres o cuatro mensajes con onda y proponés algo concreto: un día, un lugar, una hora. el chat eterno enfría todo.
+
+tercero, la primera cita. corta, cerca, y con salida fácil para los dos. un trago o un café en un lugar con buena luz y donde se pueda hablar, un martes o un jueves. si va bien, se estira: siempre tené un segundo lugar pensado cerca, un bar para un trago más, una heladería, caminar un rato. el cambio de lugar hace que una sola noche se sienta como dos citas.
+
+cuarto, la conversación. preguntá más de lo que contás, y escuchá de verdad. el humor y la picardía suman mucho, y a vos te salen. y algo que casi nadie hace: decí lo que te gusta de la otra persona, en concreto y en el momento. me gusta cómo te reís, me cae bien que seas así de directa. eso genera tensión de la buena.
+
+quinto, escalar con respeto. el contacto se construye de a poco y leyendo a la otra persona: un toque en el brazo al reírse, sentarse más cerca, ver cómo responde. si se acerca, seguís; si se aleja, bajás un cambio sin drama. el consentimiento no corta el clima, al contrario: una pregunta directa y con onda, tipo te puedo dar un beso, es de las cosas más seguras y más atractivas que hay. y cuando la noche da, la invitación es simple y sin presión: vamos a tomar la última a casa. si dice que no, perfecto: se queda la buena impresión y hay segunda cita.
+
+sexto, el después. si te gustó, mandá un mensaje al otro día, corto y sin histeriquear. la gente valora mucho a alguien que es claro con lo que quiere.
+
+y ya que estamos, un par de ideas sobre los mensajes, que es donde más se pierde. el primer mensaje en una app no puede ser hola, cómo estás. tiene que agarrar algo de su perfil: una foto en un recital, un viaje, un perro. algo tipo esa foto en el show tiene pinta de noche larga, qué banda era. eso abre charla y ya te ubica en un lugar.
+
+si la otra persona tarda en contestar, no pasa nada. no mandes dos mensajes seguidos, no preguntes si te vio. seguí con tu vida, y si contesta, retomás con la misma onda. la tranquilidad en el chat es la misma que en persona.
+
+y cuando pase el tiempo sin respuesta, cerrá con elegancia o no digas nada. nunca un reproche. la gente se acuerda de cómo la hiciste sentir, y el mundo es chico, sobre todo en la música.
+
+por último, las segundas citas. si la primera fue en un bar, que la segunda tenga algo distinto: un show, cocinar juntos, una feria, algo con movimiento. y ahí es donde tu costado de cocinero suma puntos: invitar a comer algo que te sale bien es de los planes más cercanos y más efectivos que existen.
+
+séptimo, el cuidado. forros siempre a mano, en casa y en la billetera, sin excepción. hacerse los análisis cada tanto, como parte de la rutina de salud, igual que el peso. y ser claro desde el principio con lo que buscás: si es algo casual, decirlo sin vueltas. la honestidad no espanta a nadie que busque lo mismo, y te ahorra dramas con quien busca otra cosa.
+
+octavo, la casa como escenario. si la invitás, que el lugar esté listo sin que parezca preparado: ordenado, sábanas limpias, algo para tomar en la heladera, música a mano, luz baja. son diez minutos antes de salir, y cambian mucho la noche. un lugar cómodo hace que la otra persona se relaje, y eso es lo que más suma.
+
+noveno, un plan para esta semana, bien concreto. hoy o mañana, abrí una app y dejá el perfil prolijo con fotos nuevas. el miércoles, escribile a dos amigos para salir el finde y deciles que estás con ganas de conocer gente. el jueves, proponé una cita a alguien, con día y lugar. y el finde, salí a un lugar con música, aunque sea un rato. no se trata de que salga todo, se trata de moverse. la práctica hace que la confianza que ya tenés se note todavía más.
+
+y lo último, lo más importante: mentalidad de abundancia. no pongas todas las fichas en una persona. salí, conocé, disfrutá el proceso. las ganas se notan, y la tranquilidad se nota todavía más. y si te sirve, antes de una cita me mandás un audio y te ayudo a elegir el lugar y a armar el plan b.
+
+# cierre
+
+eso fue el nocturno. esta noche quedaron las notificaciones educadas, los logins de google sin sonarte el celu, retool abierto, la tele hecha media center, el micro de la mac en su lugar, el historial de slack, y un guard nuevo para que ninguna tarea cierre a medias.
+
+y ahora mismo seguimos con el plan a medida, que queda como receta para la próxima.
+
+lo que viene lo llevo yo. vos pensá en qué querés tirarme para vivir mejor, y en a quién le escribís esta semana.
+
+buen provecho con lo que estés cocinando. mañana a la mañana, mates y un chequeo corto. buenas noches.

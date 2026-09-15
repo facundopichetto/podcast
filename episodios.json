@@ -2739,7 +2739,115 @@
    },
    "duracion": 1783.3,
    "ts": "2026-09-14T20:17:27-03:00"
+  },
+  {
+   "id": "ep-2026-09-14-nocturno",
+   "fecha": "2026-09-14",
+   "titulo": "nocturno del lunes 14",
+   "temas": [
+    "awtomic",
+    "flaudio",
+    "server",
+    "plata",
+    "personal"
+   ],
+   "palabras": 5663,
+   "guion": "episodio-2026-09-14-nocturno.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-14-nocturno-daniela.mp3",
+     "duracion": 1788.7,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de que va",
+       "duracion": 60.5,
+       "archivo": "audio/ep-2026-09-14-nocturno-1-de-que-va.daniela.mp3"
+      },
+      {
+       "t": 60.5,
+       "titulo": "el podcast que se cortó, y el guard que quedó",
+       "duracion": 100.0,
+       "archivo": "audio/ep-2026-09-14-nocturno-2-el-podcast-que-se-corto.daniela.mp3"
+      },
+      {
+       "t": 160.5,
+       "titulo": "las notificaciones al celu, bien educadas",
+       "duracion": 141.3,
+       "archivo": "audio/ep-2026-09-14-nocturno-3-las-notificaciones-al.daniela.mp3"
+      },
+      {
+       "t": 301.8,
+       "titulo": "google sin sonarte el celu, y retool",
+       "duracion": 120.8,
+       "archivo": "audio/ep-2026-09-14-nocturno-4-google-sin-sonarte-el.daniela.mp3"
+      },
+      {
+       "t": 422.6,
+       "titulo": "ahora mismo: aprendiendo a armar un plan a medida",
+       "duracion": 121.1,
+       "archivo": "audio/ep-2026-09-14-nocturno-5-ahora-mismo-aprendiendo.daniela.mp3"
+      },
+      {
+       "t": 543.7,
+       "titulo": "la tele del server, hecha media center",
+       "duracion": 88.0,
+       "archivo": "audio/ep-2026-09-14-nocturno-6-la-tele-del-server.daniela.mp3"
+      },
+      {
+       "t": 631.7,
+       "titulo": "el micrófono, el punto naranja y la app nativa",
+       "duracion": 108.7,
+       "archivo": "audio/ep-2026-09-14-nocturno-7-el-microfono-el-punto.daniela.mp3"
+      },
+      {
+       "t": 740.4,
+       "titulo": "slack y tu presencia",
+       "duracion": 77.1,
+       "archivo": "audio/ep-2026-09-14-nocturno-8-slack-y-tu-presencia.daniela.mp3"
+      },
+      {
+       "t": 817.5,
+       "titulo": "lo que decidiste esta noche",
+       "duracion": 92.8,
+       "archivo": "audio/ep-2026-09-14-nocturno-9-lo-que-decidiste-esta.daniela.mp3"
+      },
+      {
+       "t": 910.3,
+       "titulo": "lo que viene",
+       "duracion": 108.7,
+       "archivo": "audio/ep-2026-09-14-nocturno-10-lo-que-viene.daniela.mp3"
+      },
+      {
+       "t": 1019.0,
+       "titulo": "cómo hacer plata",
+       "duracion": 219.1,
+       "archivo": "audio/ep-2026-09-14-nocturno-11-como-hacer-plata.daniela.mp3"
+      },
+      {
+       "t": 1238.1,
+       "titulo": "la buena vida: qué me podés tirar a mí",
+       "duracion": 188.5,
+       "archivo": "audio/ep-2026-09-14-nocturno-12-la-buena-vida-que-me.daniela.mp3"
+      },
+      {
+       "t": 1426.6,
+       "titulo": "levante: consejos de adulto a adulto",
+       "duracion": 329.1,
+       "archivo": "audio/ep-2026-09-14-nocturno-13-levante-consejos-de.daniela.mp3"
+      },
+      {
+       "t": 1755.7,
+       "titulo": "cierre",
+       "duracion": 32.9,
+       "archivo": "audio/ep-2026-09-14-nocturno-14-cierre.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1788.7,
+   "ts": "2026-09-14T22:04:13-03:00"
   }
  ],
- "actualizado": "2026-09-14 20:17"
+ "actualizado": "2026-09-14 22:04"
 }
