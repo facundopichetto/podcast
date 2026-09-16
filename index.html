@@ -342,18 +342,25 @@ const fmt = s => { s = Math.max(0, Math.floor(s || 0)); const m = Math.floor(s /
 const min = s => Math.round((s || 0) / 60) + ' min';
 // fecha y hora de emision (`ts` iso con offset de buenos aires): `sáb 12/9 21:35`. sin ts, la fecha
 const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+// 1660: toda hora que ve facundo va en 12 h con am/pm, minusculas y sin cero adelante (`9:35 pm`).
+// el equivalente del server es `recetas/hora.py`, y el del board `hora12()` de `web/index.html`.
+function hora12(h, m) {
+  h = +h; m = +m;
+  if (!(h >= 0 && h <= 23 && m >= 0 && m <= 59)) return '';
+  return `${(h % 12) || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'am' : 'pm'}`;
+}
 function cuando(e) {
   const m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(e.ts || e.fecha || '');
   if (!m) return e.fecha || '';
   const dia = DIAS[new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])).getUTCDay()];
-  return `${dia} ${+m[3]}/${+m[2]}` + (e.ts && m[4] ? ` ${m[4]}:${m[5]}` : '');
+  return `${dia} ${+m[3]}/${+m[2]}` + (e.ts && m[4] ? ` ${hora12(m[4], m[5])}` : '');
 }
 // hora de la ultima actualizacion (`actualizado`, facundo 2026-09-13 22:27): el podcast vivo se republica con el mismo id
 function actualizado(e) {
   // el urgente ya trae la hora en el titulo (`recetas.podcast sellar`): no repetirla
-  if (/ · actualizado \d{1,2}:\d{2}$/.test(e.titulo || '')) return '';
+  if (/ · actualizado \d{1,2}:\d{2}( ?[ap]m)?$/.test(e.titulo || '')) return '';
   const m = /T(\d{2}):(\d{2})/.exec(e.actualizado || '');
-  return m ? ` · actualizado ${m[1]}:${m[2]}` : '';
+  return m ? ` · actualizado ${hora12(m[1], m[2])}` : '';
 }
 function cabecera(e) {
   $('#ph').textContent = cuando(e) + actualizado(e);
