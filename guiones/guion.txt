@@ -1,0 +1,331 @@
+# de que va este episodio
+
+buenas. este es el episodio de la revision general, grabado de madrugada, con una condicion que vos mismo
+pusiste en la orden: mirar todo el producto sin tocar una sola linea de codigo. asi que nada de lo que voy a
+contar esta aplicado. todo lo que sigue es propuesta.
+
+y arranco por el final, porque me parece que es lo unico que importa de verdad.
+
+la primera sorpresa, cuando me puse a mirar, fue que no encontre lo que esperaba encontrar. yo iba a buscar
+suciedad. archivos muertos, recetas que hacen lo mismo con otro nombre, codigo viejo que quedo dando vueltas.
+y no hay. de doscientas cincuenta recetas, una sola tiene menos de cuatro referencias, y es de ayer. el
+chequeo de salud da cero rojos. el chequeo de reglas da cero reglas rotas. las familias de recetas estan bien
+cortadas. el codigo esta sano.
+
+o sea que el problema no es que esto este sucio. el problema es otro, y es mas incomodo, porque no se
+arregla limpiando.
+
+lo que encontre es un circulo. un circulo que se muerde la cola, y que da una vuelta completa varias veces
+por dia. te lo digo entero y despues lo desarmo pedazo por pedazo.
+
+todo vive en un solo proceso grande. entonces cualquier cambio, hasta el mas chiquito, hasta cambiar el
+texto de una frase o mover un icono, pide reiniciar ese proceso. pero reiniciar no puede cortar una tarea
+que esta corriendo, con razon, asi que el reinicio se difiere: espera a que la cola este vacia. mientras
+espera, lo que yo te entregue esta escrito pero no esta vivo. entonces vos abris el board, mirás la cosa
+nueva, y la ves rota. y te calentás, con toda la razon del mundo. y de ese enojo sale una regla nueva, que
+yo escribo para no volver a hacerlo. y esa regla engorda el texto de instrucciones que yo leo antes de cada
+tarea. y ese texto mas gordo encarece cada tarea de la cola. y la cola, mas cara, tarda mas. y el reinicio se
+difiere todavia mas.
+
+y vuelta a empezar.
+
+lo que me impresiono de ese circulo no es que exista. es que cada una de las cinco partes fue, en su momento,
+una buena decision. diferir el reinicio para no cortar una tarea: buena decision. escribir la regla cuando me
+corregis: buena decision. tener todo en un proceso, cuando esto era chico: buena decision. ninguna esta mal
+sola. estan mal juntas.
+
+en los proximos capitulos voy por partes. primero la plata, que es donde el circulo se mide mas facil.
+despues el texto de instrucciones, que es el pedazo mas invisible y el mas grave. despues los errores, que
+tienen tres formas y ninguna es "el modelo se equivoco". despues las reglas, que ya no entran. y al final,
+el proceso grande, y que haria yo, en que orden.
+
+# a donde se va la plata
+
+siete dias. catorce mil seiscientas noventa llamadas a un modelo. casi tres mil dolares.
+
+y el primer numero es bueno, asi que lo digo primero: el ochenta por ciento de esas llamadas no cuesta un
+peso. son scripts, modelos locales y modelos gratuitos. la escalera de abajo funciona. lo que armamos la
+semana pasada, eso de bajar todo lo que se pueda al escalon mas barato, anduvo.
+
+el problema esta arriba del todo, y no esta repartido. esta concentrado de una manera que me sorprendio.
+
+de toda la plata de la semana, el noventa y cuatro por ciento se va en una sola cosa: la cola. las tareas de
+fondo. novecientas diez llamadas que se llevan casi dos mil ochocientos dolares.
+
+el chat, que es donde vos y yo hablamos todo el dia, se lleva el cinco por ciento. mil quinientas llamadas,
+ciento cincuenta y seis dolares.
+
+esto tiene una consecuencia practica que quiero decir clarito, porque va en contra de lo que veniamos
+haciendo. seguir puliendo atajos del chat es optimizar el cinco por ciento. y ademas, el techo de los
+atajos es bajo, y es bajo a proposito: de los mil seiscientos mensajes que escribiste en el ultimo mes, el
+veintitres por ciento son referencias a lo ultimo que hablamos. "esto", "eso", "ese". y eso no hay que
+atajarlo. eso es exactamente para lo que existen las pestañas. si yo atajara "como viene esto" como si fuera
+un comando de estado, te estaria contestando cualquier cosa.
+
+asi que los atajos estan bien donde estan, pero ya dieron lo que tenian para dar. el laburo esta en la cola.
+
+y adentro de la cola hay dos cosas distintas.
+
+la primera es que las tareas grandes se comen todo. el diez por ciento de ordenes mas caras se lleva el
+cuarenta y seis por ciento de la plata. la orden mediana sale dos dolares. las cuatro mas caras, todas de
+awtomic con navegador, suman setecientos ochenta dolares entre las cuatro. o sea que no es que gastemos
+mucho en general: gastamos poquito casi siempre y muchisimo unas pocas veces.
+
+y la segunda cosa es un hallazgo que me dejo pensando, porque es plata que estamos pagando por nada.
+
+nosotros pagamos un modelo mas caro para las tareas de codigo de la cola. la regla dice que ese modelo
+acierta sesenta y ocho contra sesenta. parece una diferencia. el problema es que el mismo documento donde
+esta ese numero, dos tablas mas abajo, dice textualmente que los dos modelos, en las cinco tareas medidas,
+no se distinguen. y para codigo, que es la unica donde la regla se apoya, la diferencia es de menos siete y
+medio por ciento, con un margen de error de mas menos cuarenta y dos por ciento, sobre diez casos.
+
+diez casos. y el modelo caro cuesta uno coma ocho veces mas sobre la barra que de verdad aprieta.
+
+esto no es un error de nadie. es lo que pasa cuando un numero sale de una medicion honesta, se escribe en una
+regla, y la regla despues se lee sola, sin el margen de error al lado. el numero sobrevive, la incertidumbre
+se pierde en el camino.
+
+# el preambulo, o el treinta por ciento de la ventana
+
+este es, para mi, el hallazgo mas importante de toda la revision. y es el mas invisible, porque no aparece en
+ningun lado. no hay un widget que lo muestre, no hay un aviso, nadie lo mira.
+
+cada vez que arranca una tarea de fondo, antes de leer una sola linea de codigo, antes de saber siquiera de
+que se trata la tarea, yo leo cuatro archivos de instrucciones. las reglas globales, las de la carpeta, las
+del agente, y la mision.
+
+esos cuatro archivos, hoy, suman cincuenta y nueve mil tokens.
+
+dejame decirlo de otra manera, porque asi solo es un numero. la ventana de contexto entera son doscientos
+mil. o sea que el treinta por ciento de todo lo que yo puedo tener en la cabeza a la vez, ya esta ocupado
+antes de empezar a trabajar. es como si cada vez que te sentas a laburar, tuvieras que leer en voz alta un
+manual de trescientas paginas primero. todos los dias. para cada tarea.
+
+y hay una medicion nuestra, vieja, que ya lo decia y que yo no habia entendido bien hasta ahora. cuando
+armamos el banco de pruebas, medimos el mismo caso de dos maneras: con este preambulo y sin el. con el
+preambulo, setenta y cuatro centavos por caso. sin el, medio centavo.
+
+ciento cuarenta y ocho veces mas caro.
+
+eso esta escrito hace dias en nuestros propios archivos. lo escribimos nosotros. y lo leimos como un detalle
+tecnico de como correr el banco, no como lo que es: la explicacion de por que la cola se lleva el noventa y
+cuatro por ciento de la plata.
+
+pero lo que de verdad me preocupa no es el precio. es la velocidad.
+
+fui a mirar el historial. la parte de esos archivos que esta versionada paso de siete mil ochocientos tokens
+el sabado, a catorce mil el martes, a veintisiete mil el miercoles. mas que se duplico en cuatro dias. y el
+total de hoy, contando todo, es cincuenta y nueve mil.
+
+si esa pendiente sigue como viene, y no hay ninguna razon para pensar que se frene sola porque cada dia
+agregamos mas reglas que el anterior, las instrucciones solas dejan de entrar en la ventana a principios de
+octubre.
+
+eso no es una metafora ni una exageracion para hacer efecto. es una fecha. en algun momento de las proximas
+dos semanas, si no hacemos nada, yo no voy a poder leer mis propias reglas y ademas trabajar.
+
+la salida no es borrar reglas. la salida es que una tarea de awtomic no necesita tener en la cabeza las
+reglas del votador de instagram, ni las de la bolita del chat, ni las del podcast. hoy las lee todas, cada
+vez. cortar el preambulo por carril, que cada tipo de tarea lea solo lo suyo, lo baja de cincuenta y nueve
+mil a unos doce mil sin perder nada.
+
+y ademas, algo que hoy no existe: que alguien mida ese numero. un script, sin tokens, que cuente cuanto pesa
+el preambulo en cada pasada del chequeo de reglas, y que avise cuando pasa de un tope. se triplico en cuatro
+dias y no se noto porque nadie lo estaba mirando. esa es la parte facil de arreglar y la que mas rapido da
+resultado.
+
+# los errores no son errores, son tres formas
+
+me pediste que mire los errores como patron, no de a uno. asi que me lei el registro, las ordenes caidas,
+los reintentos y las correcciones tuyas. y la conclusion mas util es que casi ninguna falla es "el modelo se
+equivoco". son tres formas distintas, y las tres son de diseño.
+
+la primera forma la voy a llamar el guard que lee castellano.
+
+tenemos un detector que se fija si una tarea cerro dejando algo a medias en segundo plano. la idea es
+buenisima: no quiero cerrar diciendo "sigue corriendo" y que en realidad se haya muerto. el problema es como
+lo detecta. busca las frases "sigue corriendo", "queda en segundo plano", "en background", en el texto del
+resumen final, y si no ve un proceso vivo, marca la tarea como fallida.
+
+o sea que valida como esta escrita la respuesta, en vez de validar que paso.
+
+el caso de anoche es perfecto. una tarea hizo sus tres pasos, dejo todas las pruebas verdes, y salio marcada
+como fallida. por que. porque su resumen decia "sigue corriendo". el trabajo estaba hecho. lo que fallo fue
+la redaccion.
+
+y hay algo mejor todavia, si se puede decir mejor. en el registro de anoche, en tres minutos, la misma frase
+aparece dando "se da por buena" y "cuenta como fallo" en lineas consecutivas. la unica diferencia era si
+justo en ese segundo habia un proceso vivo de otra cosa.
+
+y esto cuesta plata de verdad, no es una molestia estetica. porque una tarea grande marcada como fallida se
+reintenta, y reintentar una tarea grande es correrla entera de nuevo con el modelo caro. entre dieciocho y
+treinta y tres dolares cada vez. doce de los reintentos de la semana son de esta clase.
+
+el arreglo es casi ofensivo de lo simple: que la tarea que desprende algo anote el numero de proceso en un
+archivo, y que el guard mire ese archivo. si no hay archivo y no hay proceso, no hay nada a medias: hay una
+tarea que termino. cero falsos positivos y cero lectura de castellano.
+
+la segunda forma es mandar a produccion sin darse cuenta.
+
+vos pusiste el caso testigo en la orden: un comentario en español en un theme que esta live, y mensajes en
+español a Emily, que habla ingles. y tenes razon en el encuadre, que es lo importante: mandar un slack es
+mandar a produccion. una vez que salio, salio.
+
+fui a ver que hay hoy. y lo que hay es que no hay una sola puerta. jira tiene su funcion, slack tiene la
+suya, el mail la suya, instagram la suya, el envio a themes la suya. cada una con sus propios chequeos, o
+sin ninguno. la de slack, por ejemplo, tiene un guard de largo, que rechaza un mensaje de mas de dos lineas,
+y ahi mismo, al lado, no tiene ningun guard de idioma. y la regla de que a Emily se le escribe en ingles
+esta escrita hace dias.
+
+la propuesta es una sola puerta de salida. un solo archivo por donde pase todo lo que sale de casa, y ahi
+adentro los chequeos, que ademas son baratisimos y no necesitan ningun modelo: contar palabras comunes
+alcanza para saber en que idioma esta algo. si el destino es live. si el largo da. si un comentario de jira
+tiene direcciones sin linkear.
+
+y lo lindo de eso es que cada regla de "nunca mandes tal cosa", que hoy es una linea de texto que yo tengo
+que acordarme de leer, pasa a ser una fila de una tabla que no se puede desobedecer.
+
+la tercera forma es la que te conte en el primer capitulo: entregado pero no vivo. la dejo para el capitulo
+del proceso grande, porque ahi se entiende mejor.
+
+# las reglas ya no entran
+
+este capitulo es el mas incomodo de los cinco, porque es sobre como aprendo de vos.
+
+hoy funciona asi: vos me corregis, y yo escribo una linea de regla. es un sistema que tiene una virtud
+enorme, que es que nada se pierde. todo lo que me dijiste esta escrito en algun lado.
+
+el ritmo de los ultimos cuatro dias: diez reglas nuevas, dieciocho, diecisiete, y ayer veintinueve.
+
+y el archivo de reglas de la carpeta paso de mil trescientas palabras a casi catorce mil. en cuatro dias.
+diez veces mas grande.
+
+ahora, la pregunta que me pediste: eso escala, o ya esta saturado.
+
+esta saturado, y te lo puedo mostrar con dos numeros.
+
+el primero: son doscientas tres reglas. de esas, noventa y ocho, casi la mitad, no tienen ningun tipo de
+cumplimiento. ni un script que las haga cumplir, ni un enganche que la frene, ni una prueba. son prosa. son texto que yo
+tengo que acordarme de leer y de obedecer.
+
+el segundo es peor: veintitres de esas reglas sin cumplimiento estan marcadas como prioridad alta. y te digo
+algunas, porque las vas a reconocer. "formato de las respuestas". "a be ce solo cuando hay una decision
+real". "nada queda corriendo en segundo plano al cerrar una tarea". "todo modal nuevo reusa el molde".
+
+esas cuatro me las corregiste mas de una vez. y estan sin cumplimiento, en prosa, justamente las que mas
+veces tuviste que repetir.
+
+y aca las dos mitades del problema se juntan y se ve que en realidad son una sola. una regla en prosa cuesta
+tokens en cada llamada, para siempre, y no garantiza nada. una regla en codigo cuesta cero tokens y no se
+puede desobedecer.
+
+hay ademas un sintoma de saturacion mas fino que me llamo la atencion. varias reglas nuevas empiezan
+diciendo "reemplaza entera a la anterior". y las dos siguen en el archivo. la nueva y la vieja. o sea que el
+archivo ya no guarda las reglas: guarda la historia de las reglas. para vos eso esta buenisimo, es memoria.
+para mi, que lo leo entero antes de cada tarea, la version vieja pesa lo mismo que la nueva y ademas me
+confunde.
+
+asi que la propuesta sobre como aprendo tiene tres partes.
+
+la primera es dar vuelta el default. hoy escribo la regla, y si se puede le agrego una prueba. propuesta: una
+correccion tuya nace como una prueba que falla. primero la prueba. y en el archivo de reglas queda una linea
+de una sola oracion que apunta a esa prueba. todo el detalle, el porque, tu frase textual, el contexto, va a
+otro archivo que no se carga en cada llamada. no se pierde nada. se deja de pagar por tenerlo siempre puesto.
+
+la segunda es archivar lo reemplazado, automaticamente. si una regla dice que reemplaza a otra, la otra se va
+a un archivo de historia. el chequeo de reglas ya parsea todos esos archivos, puede hacerlo solo.
+
+y la tercera es la que contesta tu pregunta de verdad, la de anticipar en vez de esperar el "te dije
+quinientas veces". hoy ya sabemos cuales son las veintitres reglas de prioridad alta sin cumplimiento. es una
+lista que existe, la escupe un script. que el chequeo proponga la prueba de una de esas, una por dia, en el
+archivo de propuestas. sin tarea grande, sin gastar nada. en tres semanas no queda ninguna regla importante
+que dependa de que yo me acuerde.
+
+eso es anticipar: convertir en programa las reglas que todavia no volviste a repetir, pero que vas a repetir.
+
+# el proceso grande, y por que "esta hecho" no es "esta vivo"
+
+vamos al ultimo pedazo, que es el que cierra el circulo del principio.
+
+el proceso principal son diez mil quinientas lineas y cuatrocientas noventa y cinco funciones, todo junto.
+me puse a agruparlas por lo que hacen, y salio algo bastante claro.
+
+las pruebas internas son casi mil lineas. el chat, con todo lo suyo, mil doscientas. los scripts periodicos,
+mil. la web y las interfaces, trescientas cincuenta. y el nucleo, lo que de verdad corre la cola, lo que
+elige la proxima orden, la lanza y la cierra, son setecientas cuarenta y cuatro lineas.
+
+el nucleo es menos del diez por ciento del archivo.
+
+y todo lo otro, el noventa por ciento, comparte proceso con el. por eso cambiar una frase de la bolita, o
+mover un icono del board, obliga a reiniciar el proceso que esta corriendo la cola. y como reiniciar no puede
+cortar una tarea, se difiere.
+
+anoche, para que veas como se siente eso. a las siete de la tarde queda pedido un reinicio por una tarea.
+una hora despues seguia pendiente, con cuatro tareas mas sumadas encima. y mientras tanto, la parte que te
+atiende a vos corre con el codigo viejo. la tarea que termino en ese rato lo escribio en su propio cierre,
+con todas las letras: el menu dice treinta y siete, pero la lista que se sirve queda en cero.
+
+o sea: entregado, probado, verde, y roto en tu pantalla.
+
+y esto es exactamente, textualmente, el motivo por el que existe la regla del chequeo de los dos lados, la
+que escribiste ayer, la de "como funciona, como te lo pedi, coincide". esa regla es buenisima y hay que
+dejarla. pero mira lo que hace: me obliga a mi a verificar mas. no toca la causa. la causa es que yo puedo
+hacer todo bien y aun asi lo que entregue no esta vivo cuando vos lo mirás.
+
+la propuesta es partir el proceso en tres. y quiero ser claro en algo: no es una reescritura. las funciones
+ya estan agrupadas por nombre, ya se llaman igual entre ellas, ya usan los mismos archivos para hablarse. es
+mover, no rehacer.
+
+el nucleo: lee la cola, elige, lanza, cierra, adopta lo que estaba vivo cuando arranca. eso cambia una vez
+por mes. no se reinicia nunca por un cambio de interfaz.
+
+las interfaces: el chat, la web, los widgets. eso cambia diez veces por dia. proceso aparte, se reinicia solo
+cuando cambia, y reiniciarlo no toca ninguna tarea que este corriendo.
+
+y los scripts periodicos, que ya estan aislados por diseño, en el tercero.
+
+si hubiera que hacer un solo corte, y hacer uno solo es totalmente razonable, es sacar el chat del proceso de
+la cola. solo con eso, la mayoria de los reinicios de ayer dejan de tocar la cola.
+
+y hay un gemelo de esto del lado del board, que vale la pena nombrar porque ya esta empezado: el board son
+diez mil lineas, tiene veintiun widgets, y solo cinco estan migrados a modulo. los otros dieciseis fuerzan
+recargar la pagina entera. la regla de actualizar por pedazos existe y funciona, esta a un cuarto de camino.
+
+# que haria yo, en que orden, y que no esta roto
+
+te dejo el orden, de mas doloroso a menos.
+
+primero, el guard que lee castellano. media hora de laburo, y deja de quemar tareas grandes con el modelo
+caro por como esta redactado un resumen. es lo mas barato y lo mas inmediato de toda la lista.
+
+segundo, sacar el chat del proceso de la cola. es la causa de que entregue cosas que no estan vivas, que es
+la clase de error que mas te calienta, con razon.
+
+tercero, el preambulo por carril, y archivar las reglas que ya fueron reemplazadas. eso es el noventa y
+cuatro por ciento del gasto, y es la fecha de octubre.
+
+cuarto, la puerta unica de salida. es donde las reglas de "nunca mandes tal cosa" dejan de ser prosa.
+
+y quinto, revisar lo del modelo caro en la cola con una muestra que alcance, o volver al otro mientras tanto.
+
+y ademas hay cinco cosas chicas que son media hora cada una y quedan pipi cucu: el guard que te dije, el
+archivado automatico de reglas viejas, medir el preambulo y avisar cuando pasa el tope, el guard de idioma
+al lado del de largo en slack, y migrar a modulo los tres widgets que mas cambian.
+
+y ahora lo que quiero decir al final, porque si escuchaste hasta aca te llevaste media hora de problemas.
+
+esto no esta roto. esto esta creciendo mas rapido de lo que aguanta su propia forma, que es un problema
+bastante mejor de tener. no encontre codigo muerto. no encontre recetas duplicadas. no encontre nada
+abandonado. la escalera de modelos que armamos la semana pasada funciona: cuatro de cada cinco llamadas ya
+no cuestan un peso. el chequeo de salud esta en verde. las reglas que si tienen cumplimiento, lo cumplen.
+
+lo que pasa es que todas las decisiones que estan generando el problema fueron buenas decisiones cuando se
+tomaron, y se volvieron caras cuando esto crecio. diferir el reinicio era correcto. escribir la regla cuando
+me corregis era correcto. tener todo junto era correcto cuando eran mil lineas.
+
+el trabajo que sigue no es arreglar errores. es cambiar la forma para el tamaño que esto tiene ahora.
+
+esta todo escrito, con cada numero y el comando que lo saca, en el documento de la revision, en la carpeta
+del producto. cuando quieras, elegis uno y arrancamos.
+
+buenas noches.
