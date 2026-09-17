@@ -14,12 +14,12 @@
     "tools",
     "flaudio"
    ],
-   "palabras": 3780,
+   "palabras": 4180,
    "guion": "guion.txt",
    "voces": {
     "daniela": {
      "archivo": "audio/revision-daniela.mp3",
-     "duracion": 1306.0,
+     "duracion": 1436.4,
      "capitulos": [
       {
        "t": 0.0,
@@ -60,15 +60,21 @@
       {
        "t": 1171.0,
        "titulo": "que haria yo, en que orden, y que no esta roto",
-       "duracion": 135.0,
+       "duracion": 133.8,
        "archivo": "audio/revision-7-que-haria-yo-en-que.daniela.mp3"
+      },
+      {
+       "t": 1304.8,
+       "titulo": "ahora te toca a vos",
+       "duracion": 131.6,
+       "archivo": "audio/revision-8-ahora-te-toca-a-vos.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 1306.0,
-   "ts": "2026-09-17T20:26:01-03:00"
+   "duracion": 1436.4,
+   "ts": "2026-09-17T20:29:27-03:00"
   }
  ],
- "actualizado": "2026-09-17 20:26"
+ "actualizado": "2026-09-17 20:29"
 }
