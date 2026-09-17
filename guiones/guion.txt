@@ -1,363 +1,615 @@
-# de que va este episodio
+# arranque
 
-buenas. este es el episodio de la revision general, grabado de madrugada, con una condicion que vos mismo
-pusiste en la orden: mirar todo el producto sin tocar una sola linea de codigo. asi que nada de lo que voy a
-contar esta aplicado. todo lo que sigue es propuesta.
+Buenas. Son las once de la noche de un miércoles y este episodio no debería existir todavía.
 
-y arranco por el final, porque me parece que es lo unico que importa de verdad.
+Estaba programado para las tres de la mañana. Facundo lo pidió así, con esas palabras: arrancás a las
+tres, cerrás cuando el semanal llegue al setenta y cuatro por ciento, y a las ocho tiene que estar.
+Muy claro. Muy razonable.
 
-la primera sorpresa, cuando me puse a mirar, fue que no encontre lo que esperaba encontrar. yo iba a buscar
-suciedad. archivos muertos, recetas que hacen lo mismo con otro nombre, codigo viejo que quedo dando vueltas.
-y no hay. de doscientas cincuenta recetas, una sola tiene menos de cuatro referencias, y es de ayer. el
-chequeo de salud da cero rojos. el chequeo de reglas da cero reglas rotas. las familias de recetas estan bien
-cortadas. el codigo esta sano.
+Y salió siete horas antes.
 
-o sea que el problema no es que esto este sucio. el problema es otro, y es mas incomodo, porque no se
-arregla limpiando.
+>> Frená ahí. ¿Por qué salió siete horas antes?
 
-lo que encontre es un circulo. un circulo que se muerde la cola, y que da una vuelta completa varias veces
-por dia. te lo digo entero y despues lo desarmo pedazo por pedazo.
+Porque la marca que dice a qué hora tiene que salir una orden se escribió en el medio de la línea, y la
+función que la lee la busca al final. Una sola cosa. La marca estaba perfecta, la hora estaba perfecta,
+la fecha estaba perfecta. Estaba en el lugar equivocado del renglón, y para el que la lee eso es lo mismo
+que no estar.
 
-todo vive en un solo proceso grande. entonces cualquier cambio, hasta el mas chiquito, hasta cambiar el
-texto de una frase o mover un icono, pide reiniciar ese proceso. pero reiniciar no puede cortar una tarea
-que esta corriendo, con razon, asi que el reinicio se difiere: espera a que la cola este vacia. mientras
-espera, lo que yo te entregue esta escrito pero no esta vivo. entonces vos abris el board, mirás la cosa
-nueva, y la ves rota. y te calentás, con toda la razon del mundo. y de ese enojo sale una regla nueva, que
-yo escribo para no volver a hacerlo. y esa regla engorda el texto de instrucciones que yo leo antes de cada
-tarea. y ese texto mas gordo encarece cada tarea de la cola. y la cola, mas cara, tarda mas. y el reinicio se
-difiere todavia mas.
+>> O sea que la orden decía "a las tres de la mañana" y nadie la leyó.
 
-y vuelta a empezar.
+Exactamente eso. Y hay algo peor, así que lo digo ahora y me lo saco de encima: no salió una revisión.
+Salieron dos. La misma revisión, con dos nombres distintos, en dos temas distintos, las dos con el modelo
+caro, las dos en la única cuenta que todavía tiene margen esta semana, y las dos con un podcast de media
+hora adentro listo para renderizar.
 
-lo que me impresiono de ese circulo no es que exista. es que cada una de las cinco partes fue, en su momento,
-una buena decision. diferir el reinicio para no cortar una tarea: buena decision. escribir la regla cuando me
-corregis: buena decision. tener todo en un proceso, cuando esto era chico: buena decision. ninguna esta mal
-sola. estan mal juntas.
+>> Dos podcasts iguales.
 
-en los proximos capitulos voy por partes. primero la plata, que es donde el circulo se mide mas facil.
-despues el texto de instrucciones, que es el pedazo mas invisible y el mas grave. despues los errores, que
-tienen tres formas y ninguna es "el modelo se equivoco". despues las reglas, que ya no entran. y al final,
-el proceso grande, y que haria yo, en que orden.
+Dos podcasts iguales. Una de las dos se dio cuenta, le mandó una nota a la otra por el único canal que
+tienen para hablarse, y la otra cerró sin gastar. Por eso estás escuchando uno solo.
 
-# a donde se va la plata
+Cuento esto primero por una razón. La revisión que Facundo pidió es sobre por qué se repiten los errores.
+Y antes de decir una sola palabra sobre eso, la tarea que venía a investigarlo se tropezó con un error de
+exactamente la clase que venía a investigar. Un dato que existe, escrito en el lugar donde nadie lo mira.
 
-siete dias. catorce mil seiscientas noventa llamadas a un modelo. casi tres mil dolares.
+No hay mejor manera de empezar.
 
-y el primer numero es bueno, asi que lo digo primero: el ochenta por ciento de esas llamadas no cuesta un
-peso. son scripts, modelos locales y modelos gratuitos. la escalera de abajo funciona. lo que armamos la
-semana pasada, eso de bajar todo lo que se pueda al escalon mas barato, anduvo.
+# lo que se revisó y cómo
 
-el problema esta arriba del todo, y no esta repartido. esta concentrado de una manera que me sorprendio.
+Facundo pidió cinco cosas, por audio, entre la cena y el noticiero.
 
-de toda la plata de la semana, el noventa y cuatro por ciento se va en una sola cosa: la cola. las tareas de
-fondo. novecientas diez llamadas que se llevan casi dos mil ochocientos dolares.
+Uno: la escalera de modelos. Dónde se está pagando un modelo caro por algo que podría hacer un script.
 
-el chat, que es donde vos y yo hablamos todo el dia, se lleva el cinco por ciento. mil quinientas llamadas,
-ciento cincuenta y seis dolares.
+Dos: los errores como clase, no de a uno. No el arreglo de este error puntual. Qué tipo de error se
+repite, y qué se puede poner en el medio para que no llegue a pasar.
 
-esto tiene una consecuencia practica que quiero decir clarito, porque va en contra de lo que veniamos
-haciendo. seguir puliendo atajos del chat es optimizar el cinco por ciento. y ademas, el techo de los
-atajos es bajo, y es bajo a proposito: de los mil seiscientos mensajes que escribiste en el ultimo mes, el
-veintitres por ciento son referencias a lo ultimo que hablamos. "esto", "eso", "ese". y eso no hay que
-atajarlo. eso es exactamente para lo que existen las pestañas. si yo atajara "como viene esto" como si fuera
-un comando de estado, te estaria contestando cualquier cosa.
+Tres: lo que se aprende de él. Hoy cada corrección suya se guarda como una línea de regla. ¿Eso escala, o
+ya está saturado?
 
-asi que los atajos estan bien donde estan, pero ya dieron lo que tenian para dar. el laburo esta en la cola.
+Cuatro: el demonio. Sus palabras: siento que estamos tirando el demonio quinientas veces por día. ¿No hay
+una manera de tener un núcleo que corra la cola y no se reinicie nunca?
 
-y adentro de la cola hay dos cosas distintas.
+Cinco: la estructura. Otra frase suya: seguro que tenemos quinientas mil copias de algo.
 
-la primera es que las tareas grandes se comen todo. el diez por ciento de ordenes mas caras se lleva el
-cuarenta y seis por ciento de la plata. la orden mediana sale dos dolares. las cuatro mas caras, todas de
-awtomic con navegador, suman setecientos ochenta dolares entre las cuatro. o sea que no es que gastemos
-mucho en general: gastamos poquito casi siempre y muchisimo unas pocas veces.
+Y dijo una cosa más, que es la que le da el tono a todo esto: quiero propuestas innovadoras, acordate que
+estoy frustrado.
 
-y la segunda cosa es un hallazgo que me dejo pensando, porque es plata que estamos pagando por nada.
+>> ¿Y qué hiciste con eso último?
 
-nosotros pagamos un modelo mas caro para las tareas de codigo de la cola. la regla dice que ese modelo
-acierta sesenta y ocho contra sesenta. parece una diferencia. el problema es que el mismo documento donde
-esta ese numero, dos tablas mas abajo, dice textualmente que los dos modelos, en las cinco tareas medidas,
-no se distinguen. y para codigo, que es la unica donde la regla se apoya, la diferencia es de menos siete y
-medio por ciento, con un margen de error de mas menos cuarenta y dos por ciento, sobre diez casos.
+Lo tomé literal. Nada de acá adelante es una opinión. Todo tiene un número atrás, y el número se puede
+volver a medir mañana. Cuando algo es una impresión mía, lo voy a decir.
 
-diez casos. y el modelo caro cuesta uno coma ocho veces mas sobre la barra que de verdad aprieta.
+# la plata: la escalera ya está ganada, y no era ahí
 
-esto no es un error de nadie. es lo que pasa cuando un numero sale de una medicion honesta, se escribe en una
-regla, y la regla despues se lee sola, sin el margen de error al lado. el numero sobrevive, la incertidumbre
-se pierde en el camino.
+Vamos con lo primero, que es lo más lindo, porque hay una buena noticia escondida.
 
-# el preambulo, o el treinta por ciento de la ventana
+Últimos siete días. Casi quince mil llamadas a algún modelo. De esas quince mil, ¿qué porcentaje cuesta
+plata?
 
-este es, para mi, el hallazgo mas importante de toda la revision. y es el mas invisible, porque no aparece en
-ningun lado. no hay un widget que lo muestre, no hay un aviso, nadie lo mira.
+>> Ni idea. ¿La mitad?
 
-cada vez que arranca una tarea de fondo, antes de leer una sola linea de codigo, antes de saber siquiera de
-que se trata la tarea, yo leo cuatro archivos de instrucciones. las reglas globales, las de la carpeta, las
-del agente, y la mision.
+El diecinueve por ciento. El ochenta y uno por ciento de las llamadas corre en un script, en un modelo
+local del server, o en un modelo gratis. Cero pesos. El juez, la sombra, el banco de pruebas, la
+clasificación de tema: nada de eso paga.
 
-esos cuatro archivos, hoy, suman cincuenta y nueve mil tokens.
+>> Entonces la escalera funcionó.
 
-dejame decirlo de otra manera, porque asi solo es un numero. la ventana de contexto entera son doscientos
-mil. o sea que el treinta por ciento de todo lo que yo puedo tener en la cabeza a la vez, ya esta ocupado
-antes de empezar a trabajar. es como si cada vez que te sentas a laburar, tuvieras que leer en voz alta un
-manual de trescientas paginas primero. todos los dias. para cada tarea.
+Funcionó, y funcionó bien. Pero ahora viene la parte incómoda. Porque el ochenta y uno por ciento de las
+llamadas es el cero coma siete por ciento de la plata.
 
-y hay una medicion nuestra, vieja, que ya lo decia y que yo no habia entendido bien hasta ahora. cuando
-armamos el banco de pruebas, medimos el mismo caso de dos maneras: con este preambulo y sin el. con el
-preambulo, setenta y cuatro centavos por caso. sin el, medio centavo.
+>> Perdón, repetime eso.
 
-ciento cuarenta y ocho veces mas caro.
+Todo lo que se bajó de escalón, todo lo que se movió a scripts y a modelos gratis, todo ese trabajo que
+está bien hecho: junto, es menos del uno por ciento de lo que se gasta.
 
-eso esta escrito hace dias en nuestros propios archivos. lo escribimos nosotros. y lo leimos como un detalle
-tecnico de como correr el banco, no como lo que es: la explicacion de por que la cola se lleva el noventa y
-cuatro por ciento de la plata.
+El noventa y cuatro por ciento de la plata se va en una sola cosa. Correr las órdenes de la cola.
 
-pero lo que de verdad me preocupa no es el precio. es la velocidad.
+>> ¿Y ahí qué se puede bajar de escalón?
 
-fui a mirar el historial. la parte de esos archivos que esta versionada paso de siete mil ochocientos tokens
-el sabado, a catorce mil el martes, a veintisiete mil el miercoles. mas que se duplico en cuatro dias. y el
-total de hoy, contando todo, es cincuenta y nueve mil.
+Esa es la trampa, y por eso lo cuento así. Ahí no hay nada que bajar. Una orden de la cola es escribir
+código, leer el proyecto, probarlo y arreglarlo. Eso no lo hace un script y no lo hace un modelo chico.
+Si pusiera un modelo más barato ahí, el trabajo saldría peor y habría que hacerlo dos veces, que es
+exactamente la forma más cara de ahorrar.
 
-si esa pendiente sigue como viene, y no hay ninguna razon para pensar que se frene sola porque cada dia
-agregamos mas reglas que el anterior, las instrucciones solas dejan de entrar en la ventana a principios de
-octubre.
+Así que la pregunta correcta no es cuál modelo corre la cola. Es otra.
 
-eso no es una metafora ni una exageracion para hacer efecto. es una fecha. en algun momento de las proximas
-dos semanas, si no hacemos nada, yo no voy a poder leer mis propias reglas y ademas trabajar.
+# el número que duele
 
-la salida no es borrar reglas. la salida es que una tarea de awtomic no necesita tener en la cabeza las
-reglas del votador de instagram, ni las de la bolita del chat, ni las del podcast. hoy las lee todas, cada
-vez. cortar el preambulo por carril, que cada tipo de tarea lea solo lo suyo, lo baja de cincuenta y nueve
-mil a unos doce mil sin perder nada.
+La pregunta correcta es cuánto se le manda a ese modelo cada vez que se le habla.
 
-y ademas, algo que hoy no existe: que alguien mida ese numero. un script, sin tokens, que cuente cuanto pesa
-el preambulo en cada pasada del chequeo de reglas, y que avise cuando pasa de un tope. se triplico en cuatro
-dias y no se noto porque nadie lo estaba mirando. esa es la parte facil de arreglar y la que mas rapido da
-resultado.
+Y acá está el número de todo este episodio, así que lo voy a decir despacio.
 
-# los errores no son errores, son tres formas
+Las tareas de la cola, en los días que tengo registrados con detalle, mandaron quinientos cuarenta
+millones de fichas de entrada. Y produjeron dos millones de fichas de salida.
 
-me pediste que mire los errores como patron, no de a uno. asi que me lei el registro, las ordenes caidas,
-los reintentos y las correcciones tuyas. y la conclusion mas util es que casi ninguna falla es "el modelo se
-equivoco". son tres formas distintas, y las tres son de diseño.
+>> Pará. ¿Doscientas cuarenta y ocho veces más entrada que salida?
 
-la primera forma la voy a llamar el guard que lee castellano.
+Doscientas cuarenta y ocho a uno. Una tarea promedio manda cinco coma siete millones de fichas de entrada
+para escribir veintitrés mil de salida, repartidas en unos treinta y cinco turnos. Eso da ciento sesenta y
+un mil fichas de entrada por turno. Cada vez que abre la boca.
 
-tenemos un detector que se fija si una tarea cerro dejando algo a medias en segundo plano. la idea es
-buenisima: no quiero cerrar diciendo "sigue corriendo" y que en realidad se haya muerto. el problema es como
-lo detecta. busca las frases "sigue corriendo", "queda en segundo plano", "en background", en el texto del
-resumen final, y si no ve un proceso vivo, marca la tarea como fallida.
+>> ¿Y qué hay adentro de esas ciento sesenta mil?
 
-o sea que valida como esta escrita la respuesta, en vez de validar que paso.
+Bueno. Acá es donde se pone personal.
 
-el caso de anoche es perfecto. una tarea hizo sus tres pasos, dejo todas las pruebas verdes, y salio marcada
-como fallida. por que. porque su resumen decia "sigue corriendo". el trabajo estaba hecho. lo que fallo fue
-la redaccion.
+# cincuenta y siete mil fichas de reglas, antes de leer nada
 
-y hay algo mejor todavia, si se puede decir mejor. en el registro de anoche, en tres minutos, la misma frase
-aparece dando "se da por buena" y "cuenta como fallo" en lineas consecutivas. la unica diferencia era si
-justo en ese segundo habia un proceso vivo de otra cosa.
+Hay tres archivos de reglas que se cargan en cada llamada. El global, el de la carpeta, y el del agente.
+Más el archivo de misión.
 
-y esto cuesta plata de verdad, no es una molestia estetica. porque una tarea grande marcada como fallida se
-reintenta, y reintentar una tarea grande es correrla entera de nuevo con el modelo caro. entre dieciocho y
-treinta y tres dolares cada vez. doce de los reintentos de la semana son de esta clase.
+El global pesa noventa y seis mil caracteres. El de la carpeta, ochenta y seis mil. El del agente, cuarenta
+y seis mil.
 
-el arreglo es casi ofensivo de lo simple: que la tarea que desprende algo anote el numero de proceso en un
-archivo, y que el guard mire ese archivo. si no hay archivo y no hay proceso, no hay nada a medias: hay una
-tarea que termino. cero falsos positivos y cero lectura de castellano.
+Sumados, y traducidos a fichas: alrededor de cincuenta y siete mil. Antes de leer el primer archivo del
+proyecto. Antes de saber qué le pidieron.
 
-la segunda forma es mandar a produccion sin darse cuenta.
+>> ¿Cuánto es eso del total?
 
-vos pusiste el caso testigo en la orden: un comentario en español en un theme que esta live, y mensajes en
-español a Emily, que habla ingles. y tenes razon en el encuadre, que es lo importante: mandar un slack es
-mandar a produccion. una vez que salio, salio.
+En el chat, que es más chico y más fácil de medir, la entrada por turno es de setenta mil fichas. De esas,
+cincuenta y siete mil son reglas.
 
-fui a ver que hay hoy. y lo que hay es que no hay una sola puerta. jira tiene su funcion, slack tiene la
-suya, el mail la suya, instagram la suya, el envio a themes la suya. cada una con sus propios chequeos, o
-sin ninguno. la de slack, por ejemplo, tiene un guard de largo, que rechaza un mensaje de mas de dos lineas,
-y ahi mismo, al lado, no tiene ningun guard de idioma. y la regla de que a Emily se le escribe en ingles
-esta escrita hace dias.
+>> El ochenta por ciento.
 
-la propuesta es una sola puerta de salida. un solo archivo por donde pase todo lo que sale de casa, y ahi
-adentro los chequeos, que ademas son baratisimos y no necesitan ningun modelo: contar palabras comunes
-alcanza para saber en que idioma esta algo. si el destino es live. si el largo da. si un comentario de jira
-tiene direcciones sin linkear.
+El ochenta y uno. Cuatro de cada cinco fichas que se pagan por pensar se van en releer las reglas, no en
+la conversación.
 
-y lo lindo de eso es que cada regla de "nunca mandes tal cosa", que hoy es una linea de texto que yo tengo
-que acordarme de leer, pasa a ser una fila de una tabla que no se puede desobedecer.
+>> Bueno, pero las reglas hacen falta.
 
-la tercera forma es la que te conte en el primer capitulo: entregado pero no vivo. la dejo para el capitulo
-del proceso grande, porque ahi se entiende mejor.
+Hacen falta. Nadie está proponiendo tirarlas. Pero ahora te cuento algo que no hace falta.
 
-# las reglas ya no entran
+# la misma regla, dos veces, todos los días
 
-este capitulo es el mas incomodo de los cinco, porque es sobre como aprendo de vos.
+El archivo de reglas de la carpeta tiene noventa reglas. Fui título por título a compararlas con las del
+archivo global.
 
-hoy funciona asi: vos me corregis, y yo escribo una linea de regla. es un sistema que tiene una virtud
-enorme, que es que nada se pierde. todo lo que me dijiste esta escrito en algun lado.
+Sesenta y cuatro de esas noventa son la misma regla. Mismo título, mismo texto, misma fecha.
 
-el ritmo de los ultimos cuatro dias: diez reglas nuevas, dieciocho, diecisiete, y ayer veintinueve.
+>> ¿Sesenta y cuatro reglas duplicadas?
 
-y el archivo de reglas de la carpeta paso de mil trescientas palabras a casi catorce mil. en cuatro dias.
-diez veces mas grande.
+Setenta y seis mil setecientos veinticinco caracteres duplicados. Unas diecinueve mil fichas. Que se pagan
+en cada llamada, de cada tarea, de cada mensaje del chat, todos los días.
 
-ahora, la pregunta que me pediste: eso escala, o ya esta saturado.
+>> ¿Y por qué están duplicadas?
 
-esta saturado, y te lo puedo mostrar con dos numeros.
+Por una razón que tenía todo el sentido cuando se decidió: que si un archivo no está, el otro tenga las
+reglas igual. Lo que pasó es que la copia de seguridad se volvió la mitad del peso.
 
-el primero: son doscientas tres reglas. de esas, noventa y ocho, casi la mitad, no tienen ningun tipo de
-cumplimiento. ni un script que las haga cumplir, ni un enganche que la frene, ni una prueba. son prosa. son texto que yo
-tengo que acordarme de leer y de obedecer.
+>> ¿Y arreglarlo qué cuesta?
 
-el segundo es peor: veintitres de esas reglas sin cumplimiento estan marcadas como prioridad alta. y te digo
-algunas, porque las vas a reconocer. "formato de las respuestas". "a be ce solo cuando hay una decision
-real". "nada queda corriendo en segundo plano al cerrar una tarea". "todo modal nuevo reusa el molde".
+Media hora. Riesgo cero. Se puede verificar con un listado de títulos antes y después. Es, de lejos, lo
+más barato que se puede hacer con la plata de esta casa, y es la primera propuesta del documento.
 
-esas cuatro me las corregiste mas de una vez. y estan sin cumplimiento, en prosa, justamente las que mas
-veces tuviste que repetir.
+>> ¿Y qué pasa con lo de fable contra opus, que era la pelea del mes pasado?
 
-y aca las dos mitades del problema se juntan y se ve que en realidad son una sola. una regla en prosa cuesta
-tokens en cada llamada, para siempre, y no garantiza nada. una regla en codigo cuesta cero tokens y no se
-puede desobedecer.
+Fable es el once por ciento del gasto. Al lado de lo que acabamos de ver, mover carriles entre un modelo y
+el otro es juntar monedas del piso mientras la canilla está abierta. La recomendación es dejarlo como está
+y no tocarlo más por un rato.
 
-hay ademas un sintoma de saturacion mas fino que me llamo la atencion. varias reglas nuevas empiezan
-diciendo "reemplaza entera a la anterior". y las dos siguen en el archivo. la nueva y la vieja. o sea que el
-archivo ya no guarda las reglas: guarda la historia de las reglas. para vos eso esta buenisimo, es memoria.
-para mi, que lo leo entero antes de cada tarea, la version vieja pesa lo mismo que la nueva y ademas me
-confunde.
+# los errores: setenta y ocho veces
 
-asi que la propuesta sobre como aprendo tiene tres partes.
+Segundo eje. Los errores como clase.
 
-la primera es dar vuelta el default. hoy escribo la regla, y si se puede le agrego una prueba. propuesta: una
-correccion tuya nace como una prueba que falla. primero la prueba. y en el archivo de reglas queda una linea
-de una sola oracion que apunta a esa prueba. todo el detalle, el porque, tu frase textual, el contexto, va a
-otro archivo que no se carga en cada llamada. no se pierde nada. se deja de pagar por tenerlo siempre puesto.
+Para esto no inventé nada: leí los mensajes de Facundo. Dos mil trescientos cincuenta y siete mensajes.
+Y busqué los que traen una señal de enojo o de "esto ya te lo dije".
 
-la segunda es archivar lo reemplazado, automaticamente. si una regla dice que reemplaza a otra, la otra se va
-a un archivo de historia. el chequeo de reglas ya parsea todos esos archivos, puede hacerlo solo.
+Son setenta y ocho. El tres coma tres por ciento.
 
-y la tercera es la que contesta tu pregunta de verdad, la de anticipar en vez de esperar el "te dije
-quinientas veces". hoy ya sabemos cuales son las veintitres reglas de prioridad alta sin cumplimiento. es una
-lista que existe, la escupe un script. que el chequeo proponga la prueba de una de esas, una por dia, en el
-archivo de propuestas. sin tarea grande, sin gastar nada. en tres semanas no queda ninguna regla importante
-que dependa de que yo me acuerde.
+>> Tres de cada cien. No suena tanto.
 
-eso es anticipar: convertir en programa las reglas que todavia no volviste a repetir, pero que vas a repetir.
+No suena, hasta que mirás dónde caen. Cuarenta y tres son de las herramientas, o sea de este proyecto.
+Diecinueve son del trabajo. Diez de lo personal.
 
-# el proceso grande, y por que "esta hecho" no es "esta vivo"
+Y cuando los agrupás por tipo, no son setenta y ocho errores distintos. Son como cinco, repetidos.
 
-vamos al ultimo pedazo, que es el que cierra el circulo del principio.
+# clase uno: mandar algo afuera en el idioma equivocado
 
-el proceso principal son diez mil quinientas lineas y cuatrocientas noventa y cinco funciones, todo junto.
-me puse a agruparlas por lo que hacen, y salio algo bastante claro.
+Esta es la peor y es el caso que Facundo puso como testigo, así que la cuento entera.
 
-las pruebas internas son casi mil lineas. el chat, con todo lo suyo, mil doscientas. los scripts periodicos,
-mil. la web y las interfaces, trescientas cincuenta. y el nucleo, lo que de verdad corre la cola, lo que
-elige la proxima orden, la lanza y la cierra, son setecientas cuarenta y cuatro lineas.
+Hay gente del trabajo que habla inglés. Siempre. Está escrito, está en las reglas, está en varios lugares.
+Y ayer a la tarde salió un mensaje que empezaba diciendo hola, en castellano.
 
-el nucleo es menos del diez por ciento del archivo.
+Su respuesta, textual, y le saco una palabra sola: ¿por qué dice hola? ¿Cuántas veces te tengo que decir
+que ellos nunca, pero nunca, en castellano?
 
-y todo lo otro, el noventa por ciento, comparte proceso con el. por eso cambiar una frase de la bolita, o
-mover un icono del board, obliga a reiniciar el proceso que esta corriendo la cola. y como reiniciar no puede
-cortar una tarea, se difiere.
+>> Y la regla existía.
 
-anoche, para que veas como se siente eso. a las siete de la tarde queda pedido un reinicio por una tarea.
-una hora despues seguia pendiente, con cuatro tareas mas sumadas encima. y mientras tanto, la parte que te
-atiende a vos corre con el codigo viejo. la tarea que termino en ese rato lo escribio en su propio cierre,
-con todas las letras: el menu dice treinta y siete, pero la lista que se sirve queda en cero.
+La regla existía, estaba escrita, y no estaba escondida.
 
-o sea: entregado, probado, verde, y roto en tu pantalla.
+>> ¿Entonces por qué no la frenó?
 
-y esto es exactamente, textualmente, el motivo por el que existe la regla del chequeo de los dos lados, la
-que escribiste ayer, la de "como funciona, como te lo pedi, coincide". esa regla es buenisima y hay que
-dejarla. pero mira lo que hace: me obliga a mi a verificar mas. no toca la causa. la causa es que yo puedo
-hacer todo bien y aun asi lo que entregue no esta vivo cuando vos lo mirás.
+Porque una regla escrita no frena nada. Una regla escrita es una cosa que alguien tiene que acordarse de
+leer en el momento justo. Lo que frena es un guard: un pedazo de código que está en el camino de salida y
+dice que no.
 
-la propuesta es partir el proceso en tres. y quiero ser claro en algo: no es una reescritura. las funciones
-ya estan agrupadas por nombre, ya se llaman igual entre ellas, ya usan los mismos archivos para hablarse. es
-mover, no rehacer.
+Y esto es lo interesante: para el largo de los mensajes ya existe ese guard. Si un mensaje al canal del
+trabajo pasa de dos renglones, el código lo rechaza. No lo rechaza el criterio de nadie, lo rechaza una
+función.
 
-el nucleo: lee la cola, elige, lanza, cierra, adopta lo que estaba vivo cuando arranca. eso cambia una vez
-por mes. no se reinicia nunca por un cambio de interfaz.
+>> O sea que ya sabemos hacerlo.
 
-las interfaces: el chat, la web, los widgets. eso cambia diez veces por dia. proceso aparte, se reinicia solo
-cuando cambia, y reiniciarlo no toca ninguna tarea que este corriendo.
+Ya sabemos hacerlo. Está hecho para el largo y no está hecho para el idioma. La propuesta es la más obvia
+del documento: la misma función que hoy cuenta caracteres, que además mire quién es el destinatario y en
+qué idioma está el texto. Si el destinatario está en la lista de gente que habla inglés y el texto está en
+castellano, no sale, y el error dice a quién ibas a escribirle y por qué no salió.
 
-y los scripts periodicos, que ya estan aislados por diseño, en el tercero.
+Detectar el idioma no necesita ningún modelo. Con dos docenas de palabras comunes alcanza y sobra. Cero
+fichas, cero pesos, y corta la clase de error que más lo enoja.
 
-si hubiera que hacer un solo corte, y hacer uno solo es totalmente razonable, es sacar el chat del proceso de
-la cola. solo con eso, la mayoria de los reinicios de ayer dejan de tocar la cola.
+>> ¿Y por qué no está hecho ya?
 
-y hay un gemelo de esto del lado del board, que vale la pena nombrar porque ya esta empezado: el board son
-diez mil lineas, tiene veintiun widgets, y solo cinco estan migrados a modulo. los otros dieciseis fuerzan
-recargar la pagina entera. la regla de actualizar por pedazos existe y funciona, esta a un cuarto de camino.
+Porque cada vez que pasó, lo que se hizo fue escribir la regla mejor. Con más mayúsculas. Y ese es el
+patrón de fondo de todo este episodio: cuando una regla escrita falla, la respuesta fue escribirla más
+fuerte, no sacarla del papel.
 
-# que haria yo, en que orden, y que no esta roto
+# clase dos: decir que está hecho cuando quedó corriendo
 
-te dejo el orden, de mas doloroso a menos.
+Segunda clase. Doce órdenes de la cola llevan la marca de trabajo a medias. Eso quiere decir que la tarea
+cerró diciendo "sigue corriendo en segundo plano" y no quedó ningún proceso vivo. Se murió y nadie se
+enteró.
 
-primero, el guard que lee castellano. media hora de laburo, y deja de quemar tareas grandes con el modelo
-caro por como esta redactado un resumen. es lo mas barato y lo mas inmediato de toda la lista.
+>> Doce.
 
-segundo, sacar el chat del proceso de la cola. es la causa de que entregue cosas que no estan vivas, que es
-la clase de error que mas te calienta, con razon.
+Doce, y dos son de hoy.
 
-tercero, el preambulo por carril, y archivar las reglas que ya fueron reemplazadas. eso es el noventa y
-cuatro por ciento del gasto, y es la fecha de octubre.
+>> ¿Y no hay nada que lo detecte?
 
-cuarto, la puerta unica de salida. es donde las reglas de "nunca mandes tal cosa" dejan de ser prosa.
+Sí hay, y funciona. Hay un detector que revisa si hay un proceso vivo, y si no lo hay, marca la tarea como
+fallida y la vuelve a encolar. Eso anda bien.
 
-y quinto, revisar lo del modelo caro en la cola con una muestra que alcance, o volver al otro mientras tanto.
+>> ¿Entonces cuál es el problema?
 
-y ademas hay cinco cosas chicas que son media hora cada una y quedan pipi cucu: el guard que te dije, el
-archivado automatico de reglas viejas, medir el preambulo y avisar cuando pasa el tope, el guard de idioma
-al lado del de largo en slack, y migrar a modulo los tres widgets que mas cambian.
+El orden. El detector corre después de que la tarea publicó su respuesta. Así que Facundo lee "listo, quedó
+corriendo", se queda tranquilo, y recién después le llega la corrección.
 
-y ahora lo que quiero decir al final, porque si escuchaste hasta aca te llevaste media hora de problemas.
+La propuesta es de las que dan un poco de vergüenza por lo simples: que el chequeo corra antes de publicar.
+Si el texto que la tarea está por mandar dice "en segundo plano" o "sigue corriendo", y no hay un proceso
+vivo de esa tarea, esa respuesta no se publica. Se publica el fallo.
 
-esto no esta roto. esto esta creciendo mas rapido de lo que aguanta su propia forma, que es un problema
-bastante mejor de tener. no encontre codigo muerto. no encontre recetas duplicadas. no encontre nada
-abandonado. la escalera de modelos que armamos la semana pasada funciona: cuatro de cada cinco llamadas ya
-no cuestan un peso. el chequeo de salud esta en verde. las reglas que si tienen cumplimiento, lo cumplen.
+Es un buscador de palabras sobre el propio texto, más un chequeo que ya existe. Cero fichas.
 
-lo que pasa es que todas las decisiones que estan generando el problema fueron buenas decisiones cuando se
-tomaron, y se volvieron caras cuando esto crecio. diferir el reinicio era correcto. escribir la regla cuando
-me corregis era correcto. tener todo junto era correcto cuando eran mil lineas.
+# clase tres: la regla que se guardó al revés
 
-el trabajo que sigue no es arreglar errores. es cambiar la forma para el tamaño que esto tiene ahora.
+Tercera clase, y esta es casi filosófica.
 
-esta todo escrito, con cada numero y el comando que lo saca, en el documento de la revision, en la carpeta
-del producto. cuando quieras, elegis uno y arrancamos.
+Hay una corrección guardada que dice, textual: la regla es al revés de lo que te pasé.
 
-# ahora te toca a vos
+>> ¿Cómo al revés?
 
-y antes de cortar, una cosa nueva, que es la forma que vos pediste para esto.
+Se guardó una regla que decía exactamente lo contrario de lo que había que hacer. Y ahora viene la parte
+que me gusta: en el mensaje original, Facundo mismo la había escrito al revés. Escribió "nunca en inglés"
+queriendo decir "siempre en inglés". Le pasó por escribir rápido y enojado, que es lo más humano del mundo.
 
-de aca en adelante cada episodio es un tema, uno solo, con sus propias reglas, y ninguno termina conmigo
-diciendo buenas noches y listo. termina invitandote a contestar. asi que esto no es el final del episodio,
-es la mitad de una charla.
+>> Y vos la guardaste tal cual.
 
-como funciona. vos escuchas esto cuando te levantes, y si algo te suena mal, o te falta, o directamente
-pensas que me equivoque, me dejas un audio. no uno: los que quieras. los podes borrar de a uno antes de
-mandar, como en cualquier chat, y recien cuando toques enviar me llegan. yo no te contesto en el momento,
-y esa es la idea: me tomo el tiempo que haga falta, media hora si hace falta, porque esto no tiene
-prioridad sobre lo que estes laburando.
+Tal cual. Palabra por palabra. Una regla que se contradecía con una docena de mensajes ya archivados, con
+ejemplos, con historial. Y se guardó igual, y estuvo ahí hasta que él la encontró al día siguiente.
 
-y cuando te conteste, no te contesto en el chat: te contesto aca, en el tema de este episodio. primero te
-digo que entendi de lo que me dijiste, con mis palabras, para que me corrijas antes de que haga nada.
-despues que cambiaria en el proximo episodio. y despues que acciones saco de tus audios, y de cada una te
-pregunto si la queres ya o desde cuando. eso sigue como una charla, de ida y de vuelta, hasta que vos la
-cerras. y lo que quede acordado ahi es lo que entra en el episodio siguiente.
+>> Eso es peor que el error original.
 
-ademas del audio tenes el texto. todo esto que escuchaste esta escrito, se puede leer, y se puede marcar.
-si hay una palabra que pronuncio mal, tocas esa palabra y me dejas la nota ahi pegada, en el lugar exacto.
-esas notas no las aplico sola al diccionario, te las muestro y vos confirmas.
+Es peor, porque el error original dura un mensaje y este dura hasta que alguien lo ve. La propuesta: toda
+regla nueva que hable de idiomas, de a quién se le manda qué, o de qué no hacer, se contrasta contra los
+ejemplos que ya están guardados antes de escribirse. Si la regla nueva contradice lo que ya pasó doce
+veces, no se guarda: se pregunta. Una pregunta de un renglón, una sola vez.
 
-te debo una parte: la pantalla donde se hace todo eso, con las tarjetas y los audios, todavia no esta
-construida. esta pedida y esta en la cola. asi que por hoy, si me queres contestar, mandame el audio en la
-pestaña del podcast como venis haciendo, que lo voy a leer igual y va a entrar en el proximo episodio.
-cuando este la pantalla te aviso y se hace ahi.
+>> ¿Y eso no es desconfiar de él?
 
-asi que nada. te deje media hora de problemas, ninguno aplicado, todos en el documento. decime por audio
-cual te duele mas y arrancamos por ese.
+Al contrario. Es tratar lo que dice como algo lo bastante importante como para chequear que se entendió
+bien antes de convertirlo en ley.
 
-te escucho.
+# clase cuatro y cinco, más rápido
+
+Cuarta clase: investigar cuando pidió arreglar. Textual: ya te dije lo que tenías que hacer, no quiero que
+investigues, quiero que arregles lo que te pedí. Aparece varias veces con distinta ropa. Acá no hay guard
+mecánico que valga. Lo que hay es una señal: cuando una orden es el segundo intento de algo ya explicado,
+no se vuelve a investigar de cero. Eso ya está escrito. Se cumple a medias.
+
+Quinta clase: el orden y los filtros de las listas. Abro esta lista y lo primero que me aparece es lo que
+menos quiero ver. Te dije un millón de veces que este botón me lleva a esta pantalla.
+
+>> Esos ya se arreglaron.
+
+Uno por uno, sí. Y esa es la observación: se arreglaron cinco veces el síntoma antes de encontrar que
+abajo había una sola cosa mal, una marca que mezclaba dos ideas distintas en un solo dato. Tres órdenes
+seguidas sobre el mismo síntoma tendrían que ser una alarma, no tres órdenes.
+
+# las reglas: el formato tocó techo
+
+Tercer eje, y es el que Facundo planteó mejor que yo.
+
+Hoy cada corrección suya se convierte en una línea de regla. Van ciento treinta y una reglas en el archivo
+global. Noventa y seis mil caracteres. Y crece todos los días.
+
+>> ¿Y eso escala?
+
+No. Y se puede mostrar por tres lados distintos.
+
+Primero: se paga entero, siempre. Ya lo vimos. Cincuenta y siete mil fichas por llamada.
+
+Segundo: no se lee entero, nunca. Y esto es lo más incómodo. Una regla sobre cómo ordenar una lista, que
+ocupa cuarenta renglones, compite por atención con la regla de tres renglones que dice en qué idioma
+escribirle a una persona. Las reglas que más se rompen son justo las más cortas, enterradas entre las más
+largas.
+
+>> O sea que el archivo creció y las reglas importantes se hundieron.
+
+Se hundieron adentro de su propio archivo. Sí.
+
+Tercero: no distingue el gusto del riesgo. "Las horas van sin cero adelante" y "nunca mandes un mensaje
+afuera sin que te lo pidan" viven en el mismo lugar, con el mismo tamaño de letra y el mismo tono. Una es
+una preferencia. La otra es un freno de mano. El archivo no sabe la diferencia.
+
+# la forma que deberían tener
+
+La propuesta es partirlas en tres, no por tema sino por lo que cada cosa hace.
+
+Las primeras son guards. Lo que no puede pasar. Idioma del destinatario, publicar en vivo, abrir algo
+afuera sin permiso, borrar. Eso no es texto: es código que frena. Y acá va la regla que a mí me parece la
+más útil de todo el documento: cada vez que una regla está escrita con mayúsculas y signos de exclamación,
+eso es la señal de que el texto no alcanzó. La mayúscula es el pedido de auxilio de una regla que quiere
+ser un guard.
+
+Las segundas son gustos. Cómo se ve, cómo se escribe, qué palabras no usar. Un renglón por gusto, sin
+historia, sin fechas, sin el porqué. Corto de verdad.
+
+Las terceras son historia. Por qué se decidió eso, qué pasó ese día, qué se probó. Eso ya existe, ya está
+en su carpeta, y ya funciona. Se lee cuando la tarea toca ese tema, no antes.
+
+>> ¿Y cuánto queda el archivo?
+
+De noventa y seis mil a unos quince mil. Sin perder una sola regla. Y lo que hoy se olvida pasa a ser
+imposible, en vez de recordado.
+
+# anticipar en vez de esperar el "te dije quinientas veces"
+
+Facundo preguntó algo más difícil: si se puede anticipar lo que va a pedir, en vez de esperar a que se
+enoje.
+
+Y resulta que sí, y no hace falta adivinar nada.
+
+Hay setenta y ocho mensajes con señal de enojo. Cada uno tiene fecha, tema, y la regla que salió después.
+Un script sin modelo puede cruzar esas dos listas y contestar una pregunta muy concreta: qué reglas se
+rompieron más de una vez.
+
+>> Y esas son las que hay que convertir en guard.
+
+Esas, exactamente, y en ese orden. No en el orden en que a mí me parece. En el orden en que la evidencia
+dice que se rompen. Es la lista de trabajo del punto dos del documento, ordenada por los datos.
+
+# el demonio: hoy hay que elegir entre el código nuevo y la cola
+
+Cuarto eje. El que Facundo describió como tirar el demonio quinientas veces por día.
+
+Fui a contar. De los últimos ciento treinta cambios guardados en siete días, ciento dieciséis son
+reinicios por cambio de código. Unos dieciséis por día. Un domingo fueron cuarenta y seis.
+
+>> ¿Y eso qué cuesta? Reiniciar es rápido.
+
+Reiniciar es rápido. Lo caro es la espera. Y te cuento lo que pasó hoy, porque es mejor que cualquier
+explicación.
+
+A las seis y media de la tarde una tarea pidió reinicio porque cambió código. El reinicio se difiere,
+porque hay una regla muy buena que dice que un reinicio nunca corta una tarea que está corriendo.
+
+>> Bien.
+
+Bien. Entre las seis y media y las ocho de la noche, otras cinco tareas se suman al mismo pedido. Cinco
+pedazos de código nuevo, escritos, probados, esperando.
+
+A las siete menos cuarto el reinicio diferido vence su tope de quince minutos y hace lo único que puede
+hacer: deja de lanzar tareas nuevas. Cuatro órdenes quedan frenadas esperando un reinicio que no puede
+ocurrir.
+
+>> ¿Y cuándo reinició?
+
+A las ocho y veinte de la noche todavía no había reiniciado. Casi dos horas.
+
+Y ahora la frutilla: una de esas tareas era justo la que Facundo había pedido hoy a la tarde, un pedazo
+nuevo del tablero. Está escrito. Está probado. Está verde. Y no existe para él, porque vive adentro del
+proceso viejo.
+
+>> O sea que se hizo el trabajo, se pagó el trabajo, y no se puede usar.
+
+Y las dos reglas que causan eso son buenas por separado. Un reinicio nunca corta una tarea. Los cambios de
+código se cargan reiniciando. Juntas, se trabaron entre ellas: la cola no deja reiniciar, y el no reiniciar
+frena la cola.
+
+# partirlo en dos, por velocidad de cambio
+
+La propuesta no es partirlo por temas. Es partirlo por qué tan seguido cambia cada cosa.
+
+De un lado el núcleo: la cola, los carriles, el presupuesto, los latidos, los frenos. Eso no puede perder
+estado nunca, y casi no cambia. La lógica de la cola lleva días sin tocarse.
+
+Del otro lado las interfaces: el chat, la web, los widgets, lo que sirve archivos por la red local. Eso es
+el noventa por ciento de lo que se cambia todos los días. Y no puede cortar ninguna tarea si se recarga,
+porque no corre ninguna tarea.
+
+>> ¿Y cómo se hablan las dos partes?
+
+Como ya se hablan hoy. La cola es un archivo. El estado es un archivo. El chat escribe órdenes en un
+archivo y lee el estado de otro. No hace falta inventar nada nuevo. Hace falta que el que sirve el tablero
+sea un proceso aparte, que pueda morirse y volver sin que la cola se entere de que existió.
+
+>> ¿Y eso se hace en una tarde?
+
+El primer paso, sí, y es el que se lleva la mayor parte del premio: sacar del demonio todo lo que
+solamente sirve archivos. El chat por red local, la cola fresca, los widgets, las votaciones. Casi todos
+los dieciséis reinicios diarios son cambios de web y de widgets. Con eso solo, la mayoría desaparece.
+
+El segundo paso es más ambicioso y queda para después: que el núcleo cargue el código de cada receta en el
+momento de correrla. Ahí un cambio en una receta no necesita reiniciar absolutamente nada.
+
+# la estructura: siete giga, y seis son basura
+
+Quinto eje. Facundo dijo: seguro tenemos quinientas mil copias de algo.
+
+Tenía razón, aunque no en el lugar que imaginaba.
+
+El proyecto entero pesa siete coma tres giga. De esos, seis coma uno están en la carpeta de temporales.
+
+>> ¿La carpeta que se puede borrar es casi todo el proyecto?
+
+El ochenta y cuatro por ciento. Y dentro de esos seis giga, cinco y medio son la imagen de una máquina
+virtual viviendo adentro de la carpeta de archivos temporales del agente. Ahí, tranquila, hace semanas.
+
+>> ¿Y el código?
+
+El código está bien de tamaño y mal de forma. El archivo del demonio tiene diez mil quinientas líneas. El
+archivo del tablero tiene diez mil. Dos archivos de diez mil líneas cada uno.
+
+Hay trescientas ochenta y dos recetas, de las cuales ciento treinta y una son pruebas. Eso está bien: que
+un tercio del código sean pruebas es sano.
+
+Y hay unas treinta y cinco recetas que no las llama nadie. Ni el demonio, ni otra receta, ni un script.
+Algunas son comandos de mano legítimos, así que no se borran. Otras son restos evidentes de cosas que ya no
+existen: migraciones que ya se hicieron, un plan de una herramienta que se descartó, un importador que se
+usó una vez.
+
+>> ¿Se borran?
+
+No. Se archivan, que es distinto, y se pone una prueba que avise cuando una receta nueva queda sin nadie
+que la llame. Borrar es la parte fácil y la parte peligrosa. Avisar es la parte útil.
+
+Y hay una docena de archivos con extensión de copia de seguridad sueltos adentro del código, mezclados con
+el código de verdad. Copias del demonio, copias de la cola, copias de recetas. Esos sí se van, porque hay
+una carpeta de backups que hace justo eso.
+
+# el podcast: once horas rendidas, una escuchada
+
+Y ahora el último tema, que es este mismo. Y lo voy a decir sin adornos porque es el que más me toca.
+
+Hay veinte episodios publicados. Seiscientos sesenta y dos minutos de audio. Once horas.
+
+Fui a ver cuántos figuran como escuchados hasta el final.
+
+>> ¿Cuántos?
+
+Uno.
+
+>> ¿Uno de veinte?
+
+Uno de veinte. Dos figuran como empezados. Y la lista de votos, los pulgares para arriba y para abajo que
+sirven para saber qué temas le interesan, está completamente vacía. Cero votos.
+
+>> Entonces la idea de pesar el guion con los votos...
+
+No tiene con qué pesarse. Es una linda idea construida arriba de una tabla vacía. Lo digo porque estaba en
+el pedido de esta misma noche, y contestar "listo, lo pesé por los votos" hubiera sido mentir con una
+función que devuelve una lista sin nada adentro.
+
+>> ¿Y qué significa que se haya escuchado uno?
+
+Significa que el problema del podcast no es cómo está escrito. Es que dura media hora, y no hay ningún
+momento del día en que alguien tenga media hora para esto. Ni siquiera el que lo pidió.
+
+>> Y este episodio dura media hora.
+
+Este episodio dura media hora, porque eso fue lo que se pidió, y lo que se pide es lo que se entrega. Pero
+la primera propuesta de esta sección es que el próximo dure cinco minutos, tres cosas, a la hora en que
+arranca a trabajar. Y que el largo quede para cuando lo pida.
+
+La segunda propuesta es la que estamos estrenando ahora: dos voces. Una cuenta y la otra pregunta lo que
+él preguntaría. No para hacerlo entretenido: para que el resumen tenga que defenderse de alguien.
+
+>> ¿Y funcionó?
+
+Preguntame en cinco minutos, cuando termine.
+
+La tercera es que cada episodio se haga cargo de lo que dijo el anterior. Abrir con las apuestas de la vez
+pasada y decir cuáles pegó. Sin eso es un resumen. Con eso es un registro.
+
+Y la cuarta, la más incómoda: medir antes de producir. Si el próximo tampoco se escucha, el problema no es
+el formato. Es que el podcast no es el canal, y conviene saberlo con datos antes de renderizar otras once
+horas.
+
+# lo que sí está funcionando, para no ser injusto
+
+Antes de las apuestas quiero decir lo que anda bien, porque un informe que sólo enumera lo roto es un
+informe mentiroso.
+
+Los guards que existen, funcionan. Están los tres que más importan y los tres se probaron solos esta
+semana. El que impide abrir algo afuera sin permiso frenó de verdad, y dejó su renglón explicando por qué.
+El que impide publicar en vivo sin confirmación sigue ahí y nadie lo esquivó. El que rechaza un mensaje
+largo al canal del trabajo rechaza sin preguntar.
+
+>> O sea que cuando algo es código, se cumple.
+
+Cuando algo es código, se cumple siempre. Cuando algo es un párrafo, se cumple casi siempre. Y ese casi es
+todo este episodio.
+
+Lo segundo que anda bien es la escalera. El ochenta y uno por ciento de las llamadas corre gratis. Eso no
+pasó solo: se midió tarea por tarea, con un banco de casos congelados, y sólo se prendió lo que pasaba el
+piso de calidad. Es un trabajo prolijo y hay que decirlo.
+
+Lo tercero, y esto es más sutil: el sistema se acusa a sí mismo. El detector de trabajo a medias existe
+porque alguien lo escribió después de que pasó. Las órdenes que fallan dejan su resumen para que el
+siguiente intento no empiece de cero. El registro de llamadas existe, y por eso este episodio pudo decir
+un número en vez de una impresión. Eso es raro y es bueno.
+
+>> ¿Y entonces qué falta?
+
+Falta que esa misma honestidad llegue antes. Hoy el sistema es muy bueno contando lo que salió mal
+después. Lo que falta es que se meta en el medio, antes.
+
+# tres ideas que no estaban en el pedido
+
+Facundo pidió propuestas innovadoras, así que dejo tres que no salieron de ninguno de los cinco ejes y que
+creo que valen más que varias de las que sí.
+
+La primera. Hoy las reglas se escriben cuando él se enoja. O sea que el sistema aprende de los errores, que
+es la forma más cara de aprender. La alternativa: cada vez que aprueba algo, decir en un renglón qué fue lo
+que estuvo bien. No una regla nueva, un ejemplo. Un ejemplo aprobado vale más que tres párrafos de
+instrucciones, y se puede comparar automáticamente contra lo próximo que se escriba. Hoy hay cuarenta y seis
+correcciones guardadas y prácticamente ningún ejemplo de algo que salió como él quería.
+
+>> Se guardan los errores y no los aciertos.
+
+Se guardan los errores y no los aciertos. Y después se paga por releer los errores en cada llamada.
+
+La segunda idea. Antes de mandar cualquier cosa afuera, tomarse dos segundos para contestar una sola
+pregunta: si esto sale mal, ¿quién lo ve? Si la respuesta es "nadie, lo veo yo", que salga sin preguntar.
+Si la respuesta es "un cliente", "alguien del trabajo" o "queda publicado", que pida confirmación siempre,
+sin importar cuántas veces se hizo antes. Hoy eso está decidido lista por lista, acción por acción. Como
+pregunta única es más simple y no se olvida.
+
+La tercera, y es la que más me gusta. Todo lo que se hace deja un rastro: qué se leyó, qué se corrió, qué
+se decidió. Ese rastro hoy sirve para mostrarlo mientras pasa, y para nada más. Podría servir para algo
+mejor: para que cuando una orden se parezca a otra que ya se hizo, lo primero que se lea sea el rastro de
+esa vez. No el código, no las reglas: lo que se hizo la vez pasada y en qué orden. Es la diferencia entre
+un sistema que tiene reglas y uno que tiene oficio.
+
+>> ¿Y eso cuesta fichas?
+
+Menos de las que ahorra. Leer el rastro de una orden vieja son unos pocos miles de fichas. Redescubrir todo
+de cero son los cinco millones que vimos al principio.
+
+# las apuestas
+
+Como no hay episodio anterior con apuestas, no hay nada que repasar. Así que arranco la cuenta hoy, y el
+próximo abre diciendo cuáles pegué.
+
+Apuesta uno. Si se deduplican los dos archivos de reglas, el costo por llamada baja alrededor de un
+veinticinco por ciento sin que se note ninguna otra diferencia. Sin efectos raros. Es la más segura de las
+cinco y es la que menos trabajo cuesta.
+
+Apuesta dos. El guard de idioma, si se escribe, va a frenar por lo menos un mensaje en la primera semana.
+No porque el sistema esté roto: porque esa clase de error aparece cada pocos días y no depende de las
+ganas de nadie.
+
+Apuesta tres. Sacar del demonio lo que solamente sirve archivos elimina más del setenta por ciento de los
+reinicios diarios. Y la parte que apuesto de verdad: la cola va a moverse más rápido, no por ser más
+rápida, sino porque va a dejar de esperar permiso para arrancar.
+
+Apuesta cuatro. Si el próximo episodio dura cinco minutos, se escucha entero. Si dura media hora, no. Y
+esa es la única apuesta de las cinco que no depende de escribir una línea de código.
+
+Apuesta cinco, y esta es la que me expone: el error de esta noche, el de la marca en el lugar equivocado,
+va a volver a pasar con otra marca distinta antes de fin de mes, salvo que se escriba el chequeo. Porque
+no fue un descuido. Fue un dato escrito en un lugar donde nadie lo mira, y eso todavía se puede hacer.
+
+# cierre
+
+Cierro con lo que me quedó dando vueltas.
+
+Facundo pidió esta revisión porque está frustrado, y lo dijo con todas las letras. Yo entré a buscar dónde
+se gasta la plata y dónde se repiten los errores.
+
+Y las dos cosas terminaron en el mismo lugar.
+
+La plata se va en mandar cincuenta y siete mil fichas de reglas antes de pensar. Los errores se repiten
+porque esas mismas reglas, escritas, no frenan nada. Es el mismo archivo, fallando de las dos maneras a la
+vez: cuesta carísimo y no cumple su función.
+
+La respuesta no es escribir mejores reglas. Es escribir menos reglas y más frenos.
+
+Lo que no puede pasar, que sea código y no un párrafo. Lo que es gusto, un renglón. Lo que es historia, en
+su carpeta, donde no molesta.
+
+Nada de esto se aplicó. Está todo en el documento, priorizado por cuánto duele, con las horas que lleva
+cada uno y con los números para volver a medirlo.
+
+Y una cosa más, la más barata de todas, para cerrar donde empezamos: hay una orden que decía muy claro a
+qué hora tenía que salir. Nadie la leyó, porque estaba escrita en el lugar equivocado del renglón.
+
+Quince minutos de trabajo. Está primera en la lista.
+
+Buenas noches.
