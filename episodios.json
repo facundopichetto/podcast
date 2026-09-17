@@ -3146,12 +3146,12 @@
     "tools",
     "flaudio"
    ],
-   "palabras": 4180,
-   "guion": "guion.txt",
+   "palabras": 5245,
+   "guion": "guion2.txt",
    "voces": {
     "daniela": {
      "archivo": "audio/revision-daniela.mp3",
-     "duracion": 1436.4,
+     "duracion": 1792.5,
      "capitulos": [
       {
        "t": 0.0,
@@ -3162,51 +3162,63 @@
       {
        "t": 176.3,
        "titulo": "a donde se va la plata",
-       "duracion": 186.5,
+       "duracion": 187.1,
        "archivo": "audio/revision-2-a-donde-se-va-la-plata.daniela.mp3"
       },
       {
-       "t": 362.8,
+       "t": 363.4,
        "titulo": "el preambulo, o el treinta por ciento de la ventana",
-       "duracion": 186.4,
+       "duracion": 186.1,
        "archivo": "audio/revision-3-el-preambulo-o-el.daniela.mp3"
       },
       {
-       "t": 549.2,
+       "t": 549.4,
        "titulo": "los errores no son errores, son tres formas",
-       "duracion": 218.6,
+       "duracion": 217.8,
        "archivo": "audio/revision-4-los-errores-no-son.daniela.mp3"
       },
       {
-       "t": 767.9,
+       "t": 767.2,
        "titulo": "las reglas ya no entran",
-       "duracion": 215.2,
+       "duracion": 215.3,
        "archivo": "audio/revision-5-las-reglas-ya-no-entran.daniela.mp3"
       },
       {
-       "t": 983.1,
+       "t": 982.5,
        "titulo": "el proceso grande, y por que \"esta hecho\" no es \"esta vivo\"",
-       "duracion": 187.9,
+       "duracion": 188.4,
        "archivo": "audio/revision-6-el-proceso-grande-y-por.daniela.mp3"
       },
       {
-       "t": 1171.0,
-       "titulo": "que haria yo, en que orden, y que no esta roto",
-       "duracion": 133.8,
-       "archivo": "audio/revision-7-que-haria-yo-en-que.daniela.mp3"
+       "t": 1170.9,
+       "titulo": "una semana en la vida de la cola",
+       "duracion": 160.2,
+       "archivo": "audio/revision-7-una-semana-en-la-vida.daniela.mp3"
       },
       {
-       "t": 1304.8,
+       "t": 1331.1,
+       "titulo": "lo que estos numeros no dicen",
+       "duracion": 195.7,
+       "archivo": "audio/revision-8-lo-que-estos-numeros-no.daniela.mp3"
+      },
+      {
+       "t": 1526.8,
+       "titulo": "que haria yo, en que orden, y que no esta roto",
+       "duracion": 134.2,
+       "archivo": "audio/revision-9-que-haria-yo-en-que.daniela.mp3"
+      },
+      {
+       "t": 1661.0,
        "titulo": "ahora te toca a vos",
-       "duracion": 131.6,
-       "archivo": "audio/revision-8-ahora-te-toca-a-vos.daniela.mp3"
+       "duracion": 131.5,
+       "archivo": "audio/revision-10-ahora-te-toca-a-vos.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 1436.4,
-   "ts": "2026-09-17T20:29:27-03:00"
+   "duracion": 1792.5,
+   "ts": "2026-09-17T20:46:10-03:00"
   }
  ],
- "actualizado": "2026-09-17 20:29"
+ "actualizado": "2026-09-17 20:46"
 }
