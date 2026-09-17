@@ -2,16 +2,25 @@
 
 salieron de facundo el 2026-09-11. si cambia algo, se edita aca y se ajusta `recetas/podcast.py`.
 
-## un solo episodio, salvo que facundo pida otro
+## los episodios anteriores quedan a la vista (facundo, 2026-09-17: cambio el default)
 
-**el default es un episodio visible a la vez: el nuevo reemplaza al anterior.** `recetas.podcast
-nuevo` borra los mp3 del anterior y lo saca de `episodios.json`. el respaldo de lo borrado es
-`backup-<fecha>/`, que git ignora y no se publica.
+**un render nunca esconde ni borra lo anterior por default.** `recetas.podcast nuevo` suma el
+episodio nuevo y deja los que ya estaban, visibles y con su mp3. `--conservar` sigue aceptada y hoy
+**no hace nada**: es lo que pasa siempre.
 
-**la excepcion es `--conservar`** (facundo, 2026-09-11 19:50: "haceme otro episodio que no reemplace
-este, mientras escucho el que hay"): deja el anterior con su mp3 intacto y suma el nuevo. se usa
-**solo cuando facundo pide otro que no reemplace**; si no lo pide, va el default. `--conservar` no
-toca ni el audio ni la entrada del episodio viejo.
+**esconder es explicito, y ni asi se borra audio**:
+- `recetas.podcast nuevo --reemplazar` marca `oculto: true` en los anteriores (mp3 y guion quedan).
+- `recetas.podcast ocultar <id>...` / `mostrar [<id>...|--todos]` mueven la visibilidad despues, sin
+  re-render; con `--publicar` ademas commitean y pushean.
+
+**el guard**: `guardar_json` compara contra el `episodios.json` en disco y **corta antes de escribir**
+si un episodio que hoy se ve desaparece o queda `oculto` sin permiso explicito. prueba:
+`python3 -m recetas.prueba_podcast_ocultos` (cero tokens, cero audio).
+
+**por que cambio** (2026-09-17): el render de `revision general de flaudio` corrio sin `--conservar`
+con el default viejo y se llevo **20 episodios y 444 mp3** del repo; la web quedo mostrando uno solo.
+se restauraron desde git (commit `5e2aeed`) con `oculto: false`. el default viejo era "un episodio
+visible a la vez, `--conservar` para no reemplazar" (facundo, 2026-09-11 19:50).
 
 la web: con un solo episodio no muestra lista, abre el reproductor directo y esconde el boton
 `‹ episodios`. **con mas de uno la lista vuelve sola** y aparece el boton (verificado con
@@ -166,8 +175,8 @@ gasta modelo es **un solo pase** para redactar el guion final sobre ese borrador
   `juegos`, `plata`, `personal`, `cola`, `avisos`.
 - **el flujo de "dame un podcast"**: `python3 -m recetas.podcast_proximo emitir [--temas server,tools]`.
   filtra el borrador (si no se pide nada, entra todo), arma el prompt con estas reglas y el material,
-  **un pase de modelo** y despues `recetas.podcast nuevo` **sin `--conservar`** (episodio unico, como
-  siempre: `--conservar` solo si facundo pide otro que no reemplace).
+  **un pase de modelo** y despues `recetas.podcast nuevo`, que desde el 2026-09-17 **suma** el episodio
+  sin esconder los anteriores (para esconderlos hay que pedir `--reemplazar`).
   `--auto` hace el pase de modelo el script mismo (`claude -p`, cuenta por `reparto_cuentas`); sin
   `--auto` no gasta nada, deja el prompt en `tmp/` para que lo redacte el modelo que ya esta corriendo.
 - **nunca en segundo plano, nunca "ok" sin la web** (2026-09-12: los episodios de las 21:31 y 23:47
