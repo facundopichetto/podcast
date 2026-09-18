@@ -1,0 +1,424 @@
+# de qué va este episodio
+
+Buen día. Este es el episodio del viernes dieciocho de septiembre, y arranca haciéndose cargo.
+
+El episodio anterior terminó diciendo una cosa concreta: que el próximo iba a abrir contando cuáles de las
+apuestas pegaron y cuáles no. Así que eso hago primero, y después vamos a lo de ayer y lo de hoy.
+
+El plan de la media hora es este. Primero, qué propuestas de la revisión bajaron a órdenes de verdad, con
+qué nombre y cómo salieron. Segundo, qué quedó escrito y no se encoló, que es la parte que más me importa
+porque es justo la que más cambia el piso. Tercero, qué podemos sumar. Cuarto, un capítulo entero sobre la
+tercera cuenta, que pasó de ser un análisis a ser algo que está pasando ahora mismo mientras esto se
+renderiza. Y el cierre.
+
+Una aclaración antes de empezar, para que el resto se lea bien: todo lo que voy a contar salió de mirar la
+cola, el registro y los archivos, no de acordarme. Cuando diga un número, el número está medido. Y cuando
+algo no se pueda afirmar, lo voy a decir con esas palabras, que no se puede afirmar.
+
+# las apuestas de ayer, una por una
+
+Eran cinco cosas y quedaron así.
+
+La primera era que la deduplicación de las reglas y los dos guards se hicieran primero, porque juntos eran
+dos horas y cambiaban el piso de todo lo demás. Pegó a medias. La deduplicación se hizo, y se hizo bien: el
+cuerpo de cada regla vive ahora en un solo archivo y los otros dos dejaron el título con un puntero. No se
+perdió una sola regla, se compararon uno a uno los títulos y dio cero faltantes. Los dos guards, el del
+idioma y el del "no digas listo si dijiste que sigue corriendo", no se encolaron. Siguen escritos y nada
+más.
+
+La segunda apuesta era sobre las correcciones en vivo, que las uses más porque cuestan la mitad. Ahí no
+tengo con qué medir todavía: hoy no hubo ninguna corrección al vuelo. Queda abierta.
+
+La tercera era el tono, que es la que más me costaba. Esa la doy por pegada, no por mérito mío sino porque
+está codeada: las reglas de formato viajan en el mismo prompt que arma las respuestas, así que ya no
+depende de que me acuerde.
+
+La cuarta era que me dejaras un audio de verdad desde el tablero, aunque fuera de diez segundos, para
+estrenar el camino con tu voz en vez de con audios de mentira. Esa no pegó: sigue sin haber un audio real
+pegado a un episodio. Lo digo sin insistir, porque ya lo pedí una vez y pedirlo dos veces es lo mismo que
+retar.
+
+Y la quinta era la más incómoda: medir antes de producir. Si el próximo tampoco se escucha, el problema no
+es el formato. Esa la contesto al final, porque la respuesta es un número y prefiero llegar con contexto.
+
+# el preámbulo de cada orden: la palanca que sí se movió
+
+Vamos a lo de ayer a la noche y hoy a la mañana, que fue mucho.
+
+La propuesta número uno de la revisión era la más aburrida y la que más devolvía: cada vez que una orden
+de la cola arranca, antes de leer el primer archivo, se le carga entero el bloque de reglas. Y una parte
+grande de ese bloque era literalmente la misma regla escrita dos veces en dos archivos distintos. Eso se
+pagaba en cada llamada, de cada tarea, todos los días.
+
+Se hizo en dos pasadas. La primera, anoche cerca de las once, colapsó los duplicados. La segunda, de
+madrugada, fue más interesante, porque al volver a medir apareció que la medición vieja estaba mal. El
+análisis decía que una parte importante del preámbulo eran las herramientas y los agregados; medido de
+nuevo, con la orden corriendo de verdad, resultó que casi el ochenta por ciento del preámbulo son los
+archivos de reglas, y todo lo demás junto no llega al tres por ciento.
+
+Eso cambia la conclusión. Lo único que se podía recortar sin tocar una sola regla eran las definiciones de
+herramientas que cada orden arrastra sin usar. Se midió qué herramientas usa de verdad la cola, sobre más de
+cuatro mil sesiones de dos semanas: correr comandos, editar, leer y escribir. Todo lo demás junto aparecía
+un puñado de veces. Así que ahora cada orden sale declarando solamente esas cuatro.
+
+El número, medido antes y después con la misma orden de prueba: de casi noventa y nueve mil unidades de
+contexto a casi ochenta y siete mil. Un doce por ciento menos, unos treinta centavos por orden. No es la
+revolución, pero es plata que se ahorra sola en cada una de las órdenes que corren de acá en adelante, y no
+le sacó ni una coma a las reglas.
+
+Y hubo un rescate de yapa, que es la parte que más me gusta. Cuando una orden se pasaba de tiempo y la
+mataba el reloj, todo lo que había gastado quedaba invisible: se anotaba la palabra "se acabó el tiempo" y
+listo. Se fueron doscientos veintiséis dólares en quince cortes de esos sin que aparecieran en ningún lado.
+Ahora una pasada que muere antes de terminar igual deja anotado lo que gastó y lo que alcanzó a decir, y el
+reintento retoma esa misma sesión en vez de releer todo de nuevo. Retomar ochenta y ocho mil de contexto
+sale cuatro centavos. Volver a empezar salía el preámbulo entero.
+
+# el cerrador: la ronda no termina hasta que alguien mira
+
+La segunda cosa grande de anoche es un bicho nuevo y es, creo, el cambio más importante de los dos días.
+
+El problema viejo era este: cuando una tarea terminaba, lo único que decía si había salido bien era el
+resumen que escribía la propia tarea. O sea, el que hizo el trabajo también era el que ponía la nota. Y
+había un detector que leía ese resumen buscando frases sospechosas, tipo "sigue corriendo", y mandaba a
+rehacer. Ese detector decidía por las palabras, no por los hechos, y en una semana mandó a rehacer doce
+tareas que ya estaban hechas.
+
+Ahora hay otra cosa. Cuando la cola queda vacía, entra el cerrador, que no gasta nada y no usa modelo. Por
+cada tarea cerrada en las últimas veinticuatro horas arma una verificación concreta, y la arma en un orden
+muy específico. Primero busca la prueba que hace cumplir eso que se pidió, y la corre de verdad, y mira el
+resultado. Si no hay prueba, busca el cambio concreto que la orden nombró, el selector, la función, la
+clave, y se fija con los ojos si está en el archivo que la orden nombró. Y si tampoco hay, mira si el
+artefacto que se prometió existe y es reciente.
+
+Lo que no entra en ninguna de las tres queda marcado como "sin verificar", y esa es la parte que me parece
+sana: sin verificar no significa mal hecho, y sobre todo no se rehace. Nunca por sospecha, solo por
+evidencia de que falta. Que es exactamente al revés del detector anterior.
+
+Corrió cuatro veces hoy a la mañana. La primera dio cuatro verificadas, una mandada a rehacer y cinco sin
+verificar. Las otras tres, una mandada a rehacer cada una.
+
+# el cerrador se equivocó hoy, y así tiene que ser
+
+Y acá viene la parte honesta del capítulo, porque el cerrador se mandó una en su primer día de trabajo.
+
+Hubo un ticket de una bodega, el del mínimo de vinos obligatorios, que el cerrador mandó a rehacer tres
+veces seguidas. Tres. Y el motivo que anotaba era siempre el mismo: que no encontraba cierta clave ni cierta
+variable ni cierto botón en un archivo. El detalle es que ese archivo no tenía nada que ver con la tarea: la
+orden nunca lo había tocado. El cerrador estaba buscando el cambio en el lugar equivocado y, como no lo
+encontraba, concluía que faltaba.
+
+Cada una de esas tres corridas costó plata y tiempo de máquina. Y la tarea, la primera vez, ya había
+quedado bien.
+
+Lo bueno es cómo terminó: la tercera reencolada, en vez de volver a hacer el trabajo, arregló al cerrador.
+Dejó anotado el problema, corrigió la lógica del grep y pidió el reinicio, porque hay un detalle con estas
+cosas que vale la pena decir: el demonio tiene las recetas cargadas en memoria, así que arreglar el archivo
+no alcanza; si no reinicia, el arreglo queda ahí adentro sin usarse. Ese aprendizaje quedó escrito como
+regla para la próxima.
+
+O sea que el verificador falló, y falló de la manera cara. Pero falló hacia el lado seguro: mandó a rehacer
+algo que estaba hecho, que es molesto, en vez de dar por bueno algo que estaba roto, que es lo que venía
+pasando. Prefiero ese error. Y ahora está corregido.
+
+# todas las pruebas en un solo viaje
+
+La tercera grande de la mañana salió del mismo análisis de costos y son dos herramientas chicas que se
+sienten enseguida.
+
+La primera. Cada vez que una tarea corre una prueba, arranca un turno nuevo y paga el preámbulo entero. Se
+contaron más de cinco mil ochocientas corridas de pruebas en mil quinientas sesiones. Cinco mil ochocientos
+preámbulos. Ahora hay un comando que corre el lote entero de una orden en un solo viaje: le decís las
+pruebas, o le decís que mire qué archivos tocaste y las deduzca sola, y las corre de a cuatro en paralelo.
+Imprime una línea por prueba diciendo si quedó verde o roja, y solamente de las rojas muestra lo que falló.
+Una que sale bien no imprime nada, que es como tiene que ser.
+
+Medido hoy con cuatro pruebas de verdad: cincuenta segundos de reloj contra ochenta y seis sumados, y un
+turno en vez de cuatro.
+
+La segunda es un mapa. Se midió que, de las sesiones que terminan editando algo, una parte grande del gasto
+se va antes de la primera edición, buscando dónde está la cosa. Tres mil grepeos sobre un solo archivo de
+código, dos mil setecientos sobre otro. Ahora hay un índice que se arma solo cada media hora, sin gastar
+nada, y contesta en tres centésimas de segundo dónde vive cada función, cada identificador y cada marca.
+Casi cuatrocientos archivos, diez mil símbolos.
+
+Y tiene el detalle que lo hace confiable: el mapa no viaja adentro del preámbulo, se consulta cuando hace
+falta, y si quedó viejo no miente, simplemente no aparece y se busca como siempre.
+
+# lo chico que se toca todo el día
+
+Después están las cosas chicas, que son las que vos tocás con el dedo.
+
+Los botones del reproductor de audio del tablero estaban descentrados. Desde que la fila pasó a ser alta,
+el ícono quedaba pegado a la izquierda: sesenta y siete píxeles fuera del centro en la computadora,
+cuarenta y dos en el celular. Causa: heredaban una alineación a la izquierda de otro molde. Ya están
+centrados, vertical y horizontalmente, en cualquier ancho, y quedó anotada la trampa que apareció en el
+camino, que es que cierto margen automático adentro de un ícono se come el espacio y rompe el centrado por
+abajo.
+
+Suena a nada y no es nada, pero es el tipo de cosa que te hace sentir que el aparato está mal hecho. Vale
+la pena arreglarlo el mismo día.
+
+# instagram, donde el camino se arregla solo
+
+Dos cambios acá, y el segundo es del tipo que más me gusta.
+
+El primero: el proceso de revisar a quien ya está adentro cambió de fuente. Antes miraba dos listas que no
+eran las que había que mirar. Ahora mira las dos que sí: la gente a la que le tiramos follow y todavía no
+contestó, y la gente con la que se siguen mutuo pero la charla no arrancó nunca. Esos son los dos escalones
+donde algo puede quedar colgado, y son los dos que tiene sentido revisar. El que decide siempre sos vos: los
+tres botones dicen qué hacen, uno ignora, uno no hace nada y uno programa dejar de seguir, y ese último sale
+de madrugada, en su propia ventana, sin pisar a los demás.
+
+El segundo es un chequeo que corre solo cada diez minutos, sin gastar ni un centavo, sin salir a la red y
+sin preguntarle nada a ningún modelo. Lo único que hace es mantener coherente el camino: si a alguien le
+tiraste follow, ya no es una candidata, es un follow; si esa persona te siguió de vuelta, ya no es un follow
+colgado, es alguien con quien se puede hablar. Antes eso se acomodaba solo cuando vos votabas. Ahora se
+acomoda siempre.
+
+El caso que lo destapó fue concreto: una persona a la que le tiramos follow, que te siguió de vuelta, y que
+había quedado clavada en el escalón anterior como si todavía no hubiera contestado.
+
+Y tiene un candado importante: la lista de la gente con la que hablás de verdad no la toca ningún script,
+nunca. La única excepción es esa, que alguien te siga de vuelta, porque eso es un hecho, no una opinión.
+
+# juegos: cerrar en vez de seguir midiendo
+
+Del lado de la consola portátil hubo tres cosas, y la primera es una decisión tuya que conviene recordar
+porque estuvo bien.
+
+Se venía midiendo cuántos juegos corren a sesenta cuadros por segundo, sistema por sistema, y faltaba uno
+que iba a llevar bastante. Elegiste cortar y cerrar el informe con lo que ya estaba medido, en vez de
+estirar. Se cerró.
+
+Después apareció que el medidor tenía un problema y que la configuración por juego de uno de los emuladores
+no estaba donde se creía, así que las mediciones de esa consola había que rehacerlas. Se remidieron los
+ochenta y ocho juegos con el medidor arreglado, y ahí sí se pudo comparar un juego con y sin ajuste y ver si
+la configuración tenía efecto de verdad.
+
+Y la tercera fue el estudio de qué hacer con el disco grande. Sin mover nada, sin borrar nada, sin copiar
+nada: solamente leer y escribir el informe, con una sección al final con lo que tenés que decidir vos. Eso
+está esperándote.
+
+# awtomic: la ronda, la bodega y un mensaje de una línea
+
+Del trabajo, tres cosas.
+
+La ronda de tickets corrió a la mañana y dejó el resumen donde va. Sin sorpresas.
+
+El ticket de la bodega, el del mínimo de vinos obligatorios, es el que ya conté: se cargó el dato que
+faltaba y se verificó en la vista previa que el mínimo funcione de verdad, no que el campo esté cargado, que
+son dos cosas distintas. Después el cerrador lo mandó a rehacer tres veces por error y de ahí salió el
+arreglo del cerrador.
+
+Hubo otro, el del campo de fecha de nacimiento en el carrito, que era de una aplicación de terceros y no
+nuestra. Se subió el arreglo al sitio en vivo y se dejó el comentario en el ticket. Y después una subida
+aparte, chiquita, solamente para traducir al inglés los comentarios del archivo de estilos, que habían
+quedado en castellano. Eso es prolijidad y es barato hacerlo el mismo día.
+
+Y el mensaje. Se mandó un mensaje directo a la ceo con una sola línea y el enlace pelado, nada más, para
+que viera el comentario que ya estaba posteado. Sin tocar el ticket, sin cambiar estados. Salió en un
+minuto.
+
+# lo que quedó escrito y no se encoló
+
+Ahora la parte que más me importa, que es lo que la revisión dejó por escrito y todavía no es código.
+
+Eran cinco clases de error, agrupadas por lo que tienen en común y no por cuándo pasaron. Las repaso corto,
+porque son la lista de trabajo.
+
+La primera clase es mandar algo afuera en el idioma o el tono equivocado. El caso testigo es de esta misma
+semana y fue un saludo en castellano a alguien que habla en inglés. La regla existía y estaba escrita. No la
+frenó nadie porque la regla vive en un archivo de texto y el envío no lo consulta. El guard es barato: el
+que manda mensajes ya rechaza por largo; que rechace también por idioma, con una detección tonta de dos
+docenas de palabras, sin modelo y sin costo. Una hora de trabajo. No se encoló.
+
+La segunda clase es decir que algo está hecho cuando en realidad quedó corriendo. Doce órdenes tienen esa
+marca. El detector existe y funciona, pero corre después de que la línea ya se publicó, así que vos leés
+"listo" y la corrección llega más tarde. El guard es que el chequeo corra antes de publicar: si el texto
+dice que algo sigue en segundo plano y no hay ningún proceso vivo, no se publica el "listo", se publica el
+fallo. Media hora. Tampoco se encoló.
+
+La tercera clase es la más rara y da un poco de vértigo: una regla que se guardó al revés de lo que se
+pidió, a partir de un mensaje que se contradecía a sí mismo, y que nadie notó hasta el día siguiente.
+
+La cuarta es investigar cuando se pidió arreglar. Esa no tiene guard mecánico.
+
+Y la quinta es la de los órdenes y los filtros de una lista: se arregla el síntoma de esa lista y no la
+función que las ordena a todas. Tres órdenes seguidas sobre el mismo síntoma son la señal de que el bug de
+raíz está más abajo.
+
+De las ocho propuestas que tenía la revisión, bajaron tres: la deduplicación, el guard de la marca de
+programación mal puesta y, aunque no estaba en la tabla, el cerrador. Quedaron cinco: los dos guards, partir
+el demonio en dos, las reglas por carril y la limpieza.
+
+# anticipar en vez de esperar
+
+Y esto es lo que más me gustaría que hiciéramos, porque no requiere que yo sea más prolijo.
+
+Hay setenta y ocho mensajes tuyos con una señal clara de "ya te lo dije", cada uno con su fecha, su tema y
+la regla que salió después. Eso es un material medido, no una intuición. Un script sin modelo puede cruzar
+esa lista y decir exactamente qué reglas se rompieron más de una vez.
+
+Esas, las que se rompieron más de una vez, son las que tienen que dejar de ser texto y pasar a ser código
+que frena. Porque la diferencia es bien concreta: cuando algo es código, se cumple siempre. Cuando algo es
+un párrafo, se cumple casi siempre. Y ese casi es todo el problema.
+
+Hay una señal más, que la dijo la revisión y me quedó dando vueltas: cada vez que una regla está escrita con
+mayúsculas y signos de exclamación, eso no es énfasis. Es la marca de que el texto no alcanzó y ahí falta un
+guard.
+
+# tres ideas que no estaban en el pedido
+
+Las repito porque siguen libres y porque creo que valen más que varias de las que sí estaban.
+
+La primera. Hoy las reglas se escriben cuando te enojás. O sea que el sistema aprende de los errores, que es
+la forma más cara de aprender. Hay cuarenta y seis correcciones guardadas y prácticamente ningún ejemplo de
+algo que salió como vos querías. La alternativa es de una línea: cada vez que aprobás algo, dejar anotado
+qué estuvo bien. No una regla nueva, un ejemplo. Un ejemplo aprobado vale más que tres párrafos de
+instrucciones, y se puede comparar contra lo próximo que se escriba.
+
+La segunda. Antes de mandar cualquier cosa afuera, contestar una sola pregunta: si esto sale mal, quién lo
+ve. Si la respuesta es "nadie, lo ve él", que salga sin preguntar. Si la respuesta es un cliente, alguien
+del trabajo, o queda publicado, que pida confirmación siempre, sin importar cuántas veces se hizo antes.
+Hoy eso está decidido acción por acción, en una lista. Como pregunta única es más simple y no se olvida.
+
+La tercera, y es la que más me gusta. Todo lo que se hace deja un rastro: qué se leyó, qué se corrió, qué se
+decidió. Hoy ese rastro sirve para mostrarlo mientras pasa y para nada más. Podría servir para que, cuando
+una orden se parece a otra que ya se hizo, lo primero que se lea sea el rastro de esa vez. No el código, no
+las reglas: lo que se hizo la vez pasada y en qué orden. Es la diferencia entre un sistema que tiene reglas
+y uno que tiene oficio.
+
+Fijate que las tres son de la misma familia: guardar los aciertos, no solamente los errores.
+
+# qué podemos sumar
+
+Además de lo pendiente, tres cosas que se pueden agregar y que salen de lo que pasó estos dos días.
+
+La primera sale del cerrador. Hoy verifica lo que ya se hizo. El paso siguiente natural es que verifique
+antes: que una orden, al arrancar, diga con qué se va a verificar a sí misma. Si no puede nombrar una
+prueba, un cambio concreto o un artefacto, eso ya es una señal de que el pedido está mal escrito, y es mucho
+más barato descubrirlo al principio que al final. El cerrador ya tiene toda la lógica escrita; sería usarla
+para el otro lado.
+
+La segunda sale del preámbulo. Se recortaron las herramientas y eso dio un doce por ciento. Lo que queda es
+lo grande: que una tarea de juegos no cargue las reglas del votador, y que una de instagram no cargue las
+del trabajo. Hoy las tres cargan todo. Eso es otra mordida grande, y ya está medido cuánto.
+
+Y la tercera es partir el demonio en dos. La cola por un lado, que no se reinicia nunca y no puede perder
+estado, y lo que sirve pantallas y archivos por el otro, que se recarga en caliente sin frenar nada. Hoy hay
+un bloqueo mutuo: la cola no deja reiniciar y el no reiniciar frena la cola. Hoy mismo pasó, a las once y
+nueve de la mañana: un arreglo listo, probado, esperando que la cola se vacíe para existir. El primer paso
+es barato y es una tarde.
+
+# la tercera cuenta: qué cuesta de verdad
+
+Y ahora el capítulo que hoy dejó de ser teórico.
+
+Ayer se armó el caso económico completo, con números medidos y cotizaciones con fecha. Hoy se está dando de
+alta la cuenta. La cuenta nueva va con el mail personal tuyo, el de nombre y apellido, y con el rename que
+está corriendo en paralelo el trío queda formado: una que pasa a llamarse con las vocales dobles, la
+segunda como está, y la nueva con tu nombre.
+
+Los números, que son los que importan.
+
+El plan grande sale doscientos dólares de lista por mes. Pero pagándolo con tarjeta argentina no salen
+doscientos: hay veintiuno por ciento de impuesto al valor agregado y treinta por ciento de percepción a
+cuenta, o sea un multiplicador de uno coma cincuenta y uno. Con el dólar oficial de ayer a la tarde, eso da
+cuatrocientos sesenta y tres mil quinientos setenta pesos por mes. Medido contra el blue, son doscientos
+noventa y ocho dólares reales. El dólar efectivo que estás pagando es de dos mil trescientos diecisiete.
+
+Hay una letra chica que mejora eso: la percepción del treinta por ciento no es plata perdida si declarás
+ganancias o bienes personales, porque se computa como pago a cuenta. Si la recuperás, el multiplicador baja
+a uno coma veintiuno y el plan queda en trescientos setenta y un mil pesos, doscientos treinta y nueve
+dólares.
+
+¿Qué suma en capacidad? Una cuenta más es una barra semanal más. Con dos cuentas el techo es doscientos por
+ciento, con tres pasa a trescientos: cincuenta por ciento más de techo. Pero contra lo que se consume de
+verdad el número es mejor: la semana pasada las dos cuentas juntas quemaron ciento dos por ciento. O sea que
+una barra más es sesenta y dos por ciento de margen sobre el consumo real.
+
+Y el punto de equilibrio es casi ofensivo de lo fácil que es. A cuarenta dólares la hora, que es la mediana
+de un senior argentino, hacen falta siete horas y media por mes para cubrir el plan grande. A ochenta la
+hora, que es lo que se cobra facturando a un cliente de afuera con la experiencia que tenés, son menos de
+cuatro horas. La cuenta se paga con menos de un día de trabajo al mes.
+
+# por qué ayer la respuesta era esperar, y qué cambió
+
+Con todo eso a favor, ayer la conclusión fue "todavía no". Y vale explicar por qué, porque el razonamiento
+sigue siendo correcto.
+
+El problema nunca fue el precio, fue el numerador. En diez días y novecientas noventa y tres órdenes
+cerradas, la cantidad de horas facturadas a un tercero fue cero. De las doscientas once órdenes que tenían
+forma de trabajo facturable, doscientas tres eran del trabajo en relación de dependencia, que ya se cobra
+por otro lado. O sea: hay capacidad demostrada, hay forma, y no hay cliente. Comprar capacidad extra para
+"poder vender" es comprar algo que el cuello de botella no va a poder usar, y el cuello de botella sos vos:
+cada entregable necesita que lo revises, lo verifiques y lo mandes, y eso son veinte o treinta minutos cada
+uno.
+
+Ahora, qué cambió. Cambió el otro lado del argumento, el que también estaba escrito y decía que la tercera
+cuenta no se justifica solamente por vender.
+
+Miralo hoy, no en teoría. Una de las dos cuentas está en cero disponible, bloqueada hasta el sábado a las
+cuatro de la tarde. La otra, la única viva, está en ochenta y nueve por ciento de su semana y renueva recién
+el miércoles a las seis de la tarde. Las dos juntas van ciento treinta por ciento consumido de doscientos
+disponibles. Y esta semana una tarea se murió tres veces seguidas por haberse quedado sin cupo, lo que
+obligó a escribir un parche para reprogramarla al horario de renovación: un parche al síntoma del techo.
+
+Si la cola se frena tres días por semana, el costo no es la suscripción. Es el trabajo que no sale.
+
+Así que la decisión de hoy es defendible y no contradice el análisis de ayer: ayer se preguntó si se paga
+con ventas, y la respuesta era no todavía. Hoy se está comprando por el otro motivo, que es que el techo
+duele ahora. Son dos preguntas distintas.
+
+Y una cosa más, porque es la regla de la casa: el alta llega hasta el checkout con la tarjeta cargada y para
+ahí. El pago lo autorizás vos, en el momento. No se aprieta ese botón sin que lo digas.
+
+# cómo sabemos si se paga sola
+
+Esta es la parte que quiero dejar clavada, porque si no, dentro de un mes vamos a discutir con impresiones.
+
+Tres números para mirar, y nada más que tres.
+
+El primero: horas facturadas a un tercero por mes. Hoy son cero. Con siete horas y media el plan está
+cubierto. Si al final del primer ciclo ese número sigue en cero, la cuenta no se pagó sola y hay que decirlo
+sin vueltas.
+
+El segundo: cuántas veces por semana una tarea se cae por falta de cupo, y cuántas horas de cola quedan
+frenadas esperando. Ese número existe y se puede contar del registro. Si con tres cuentas se va a cero, la
+cuenta se pagó igual, solamente que en trabajo que sale en vez de en plata que entra.
+
+Y el tercero, el que más me interesa: qué porcentaje de las órdenes es flaudio construyéndose a sí mismo. La
+semana pasada era sesenta por ciento. Eso no se factura nunca, y tampoco tiene que crecer: una vez que el
+tablero y la cola están, esa porción tiene que bajar sola. Si en un mes sigue en sesenta, la capacidad nueva
+se la está comiendo la obra en construcción, y ahí el problema no es la cuenta.
+
+Los tres se miden con lo que ya hay anotado. Sin agregar nada.
+
+# cierre, y lo que viene
+
+Cerramos.
+
+El resumen en cinco líneas. Ayer y hoy bajaron a código tres cosas que estaban escritas: las reglas dejaron
+de estar duplicadas y cada orden arranca doce por ciento más liviana, apareció un verificador que cierra las
+rondas mirando hechos en vez de leyendo frases, y las pruebas y las búsquedas dejaron de gastar un turno
+cada una. El verificador nuevo se equivocó en su primer día y mandó a rehacer tres veces algo que estaba
+bien, y esa tercera vez se arregló a sí mismo. Quedaron cinco propuestas sin encolar, y las dos más baratas
+son justo los dos guards que cortan los errores que más te enojan. Y la tercera cuenta pasó de análisis a
+alta en curso, por el motivo que el propio análisis marcaba como el contra-argumento honesto: que hoy hay una
+sola cuenta viva y está al ochenta y nueve por ciento.
+
+Lo que viene, si estás de acuerdo, es corto. Los dos guards, el del idioma y el del "no digas listo", que
+juntos son hora y media. Sacar del demonio lo que solamente sirve archivos, que es una tarde y se lleva
+puesta la mayoría de las esperas. Y las reglas por carril, que es la mordida grande que queda del preámbulo.
+
+Y las apuestas de este episodio, para que el próximo tenga de qué hacerse cargo. Apuesto a que los dos
+guards, si se encolan, salen en un día y no vuelve a pasar ninguna de esas dos clases de error. Apuesto a
+que el verificador nuevo va a encontrar por lo menos una cosa más dada por hecha que no estaba hecha, esta
+misma semana. Y apuesto a que el número que va a decidir lo de la tercera cuenta no va a ser el precio, sino
+las horas facturadas, y que ese número lo vamos a poder mirar recién en el primer ciclo completo.
+
+Una sola cosa te pido, la misma de la vez pasada y no la voy a repetir más: dejame un audio en la vista del
+podcast, aunque sea de diez segundos. El camino está probado con audios de mentira y quiero estrenarlo con
+tu voz.
+
+Nos vemos en el próximo, que abre diciendo cuáles de estas tres pegaron.
