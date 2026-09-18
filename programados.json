@@ -1,0 +1,4 @@
+{
+ "_nota": "1939 {vistapodcast}: los episodios que todavia no salieron. la vista `podcast` del board los pinta como una tarjeta mas, sin audio, con la hora a la que salen (`podcast.programados()` -> `widgets_json.w_podcast`). un tema por episodio. `cuando` en iso con offset de buenos aires.",
+ "programados": []
+}

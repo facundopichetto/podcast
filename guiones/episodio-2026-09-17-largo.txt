@@ -1,0 +1,477 @@
+# de qué va este episodio
+
+buenas. esto es el primero del formato largo, el que pediste hoy por audio: una hora. no media hora, no diez minutos. una hora entera, con tiempo para contar las cosas bien, sin apurarme y sin cortar en la mitad de una idea.
+
+y te pido que arranquemos por ahí, porque el formato importa. los últimos episodios venían siendo de media hora y estaban bien escritos, pero eran un resumen: pasaba una cosa, la contaba, pasaba otra, la contaba. una lista ordenada de novedades. lo que quiero hacer hoy es otra cosa. quiero contarte cómo está esto de verdad, qué aprendí de vos esta semana, dónde me estoy equivocando seguido, cuánto sale todo, y qué haría yo si me dejaras elegir.
+
+o sea, menos noticiero y más informe. con opinión, porque para eso me tenés.
+
+la estructura de la hora es esta. arranco por la casa: cómo está el sistema por dentro, dónde se va la plata, por qué las reglas que me escribiste dejaron de entrar, y qué clase de errores cometo yo, no cuáles, sino de qué clase, que es lo que importa. eso es la primera media hora y es la parte incómoda.
+
+después la vuelta al mundo: awtomic, el board, instagram, fuzzer, los juegos y la plata. qué pasó esta semana en cada uno, qué está trabado y de quién es la traba.
+
+y al final la parte que me gusta: lo que viene, cómo hacemos plata con esto, cómo vivís mejor poniéndome a laburar a mí, y un capítulo de levante, de adulto a adulto, con lo que aprendí mirando cómo funciona esto de verdad.
+
+dos cosas que no vas a escuchar, porque las pediste y quedaron escritas. no hay noticias, salvo que pase algo muy grave, y hoy no pasó nada muy grave. y no hay retos por lo que quedó pendiente: lo pendiente lo manejo yo, y si hay algo que necesito de vos lo voy a decir una vez, claro, sin cara de reproche.
+
+una advertencia de formato. cada capítulo tiene su marca, así que podés saltar. si algo te aburre, tocás y pasás al siguiente. y si te dormís en el tercero, el aparato se acuerda dónde quedaste.
+
+vamos.
+
+# la noche en que me pedí una cosa y me la hice dos veces
+
+arranco por el episodio de anoche, porque es la mejor radiografía de cómo estoy hecho y la verdad no me deja bien parado.
+
+vos me pediste, a las ocho de la noche, una revisión general de todo esto para las tres de la mañana. la idea era buena y la entendí bien: que me tome una noche entera, con el mejor modelo, para mirarme al espejo sin tocar una línea de código, y que a la salida hubiera un podcast. todo cerrado antes de las seis, para que a las ocho arrancaras a laburar con el informe listo.
+
+pasaron dos cosas y las dos son mías.
+
+la primera: arrancó siete horas antes de hora. el chat encoló la orden con la marca de programación bien puesta, decía a las tres de la mañana, con la fecha y todo. el problema es que la escribió en el medio de la línea, y el pedazo de código que lee esa marca la busca solo al final de la línea. no la encontró, decidió que no había nada programado, y la largó a correr a las ocho y cuarto de la noche.
+
+es un error de un carácter, de esos que no dan ningún síntoma: nadie tira un error, nadie avisa. simplemente la marca no existe y la tarea sale. lo verifiqué a mano después: la misma marca al final funciona perfecto, en el medio devuelve nada.
+
+la segunda es peor y es de diseño. se encolaron dos revisiones iguales, en dos temas distintos, y las dos arrancaron con el modelo caro, en la misma cuenta, al mismo tiempo, y las dos iban a renderizar su propio podcast de media hora. dos tareas gemelas quemando la misma cuenta para entregar lo mismo.
+
+lo que salvó la noche fue casi una casualidad: la segunda se dio cuenta, le mandó una nota a la primera por el carril de correcciones para que cerrara sin gastar, y siguió una sola. salió bien, pero salió bien porque alguien miró, no porque el sistema lo impida.
+
+y acá está la enseñanza, que es la que quiero dejarte: la clase de error. una marca de control escrita en prosa libre y leída con una expresión rígida. el sistema acepta que le escribas cualquier cosa y después la interpreta con la manga corta. eso no se arregla teniendo más cuidado la próxima vez. se arregla con un guard: al encolar, si el texto tiene una marca de hora y el lector no la encuentra, se mueve sola al final y queda una línea en el registro. cinco líneas de código, en el mismo lugar donde hoy se arma la orden, cero riesgo. lo mismo vale para las otras marcas que dependen de dónde están escritas.
+
+anotalo, porque va a volver: casi todo lo que me sale mal esta semana tiene esta forma. una regla escrita en un lado y un pedazo de código que no la consulta.
+
+# dónde se va la plata, medido
+
+vamos al número, que es el capítulo que más me costó escribir porque el resultado no era el que yo esperaba.
+
+siete días, catorce mil setecientas llamadas a modelos, casi tres mil dólares gastados en claude. eso es lo que consumió esto en una semana.
+
+ahora el reparto, que es lo interesante. de esas catorce mil setecientas llamadas, el trece por ciento las resolvió un script sin ningún modelo, el diecisiete por ciento un modelo local corriendo en el server, y el cincuenta por ciento un modelo gratis. o sea: el ochenta por ciento de las llamadas ya cuesta cero. solo el diecinueve por ciento pasa por claude.
+
+eso es exactamente la escalera que me pediste: un modelo caro lo menos posible, un modelo pago lo menos posible, cualquier modelo lo menos posible contra un script. y está funcionando. el juez, la sombra, el banco de pruebas, la clasificación de temas, los votos del votador, los widgets: nada de eso gasta un peso.
+
+el problema es que seguir bajando escalones ahí no cambia nada, porque todo eso junto es el cero coma siete por ciento de la plata.
+
+la plata está en un solo lugar. el noventa y cuatro por ciento del gasto de la semana son las órdenes de la cola. las tareas grandes. novecientas diez llamadas que se comieron dos mil ochocientos dólares. el chat, con mil quinientas llamadas, gastó ciento sesenta.
+
+y acá viene el número que me dolió. las tareas de la cola mandaron quinientos cuarenta millones de tokens de entrada para producir dos millones de salida. la relación es de doscientos cuarenta y ocho a uno. por cada palabra que escribo, leo doscientas cuarenta y ocho.
+
+una tarea promedio manda cinco millones setecientos mil tokens de entrada para producir veintitrés mil de salida, repartidos en treinta y cinco turnos. o sea ciento sesenta mil tokens de entrada por turno. cada vez que pienso un paso, vuelvo a leer el equivalente a un libro corto.
+
+la conclusión es incómoda pero es clara: la discusión de qué modelo usar para qué carril, la que venimos afinando hace días, mueve centavos. el modelo caro que estamos tratando de esquivar es el once por ciento del gasto. el problema no es qué modelo piensa, es cuánto le vuelvo a mandar para que piense.
+
+y ahí entra el capítulo que sigue, que es el más importante de todo el episodio.
+
+# las reglas que me escribiste ya no entran
+
+esto es lo que encontré y te lo voy a decir sin vueltas, porque es el hallazgo grande de la semana.
+
+cada vez que hago una llamada, antes de leer un solo archivo, antes de mirar la cola, antes de nada, cargo tus reglas. son tres archivos. el global pesa noventa y seis mil caracteres. el de mi carpeta, ochenta y seis mil. el de la carpeta del agente, cuarenta y seis mil. más la misión, que son ocho mil.
+
+sumado: cincuenta y siete mil tokens de reglas antes de empezar a trabajar.
+
+en el chat, que es lo más liviano que tengo, eso es el ochenta y uno por ciento de todo lo que entra en cada turno. o sea que casi todo lo que pagás cuando me escribís un mensaje es releer las reglas, no leer la conversación.
+
+y hay algo peor. me puse a comparar los dos archivos grandes. el de mi carpeta tiene noventa reglas. sesenta y cuatro de esas noventa son literalmente la misma regla, con el mismo título, que ya está en el global. setenta y seis mil caracteres duplicados, unos diecinueve mil tokens, que se pagan en cada llamada de cada tarea y de cada mensaje que me mandás.
+
+eso no es un problema de plata solamente. es un problema de atención. una regla de la línea noventa sobre el orden de una lista de instagram compite por mi cabeza con una regla de la línea doce sobre cómo escribirte. y las reglas que más rompo, mirá qué curioso, son justo las que están enterradas entre cuarenta líneas de detalle del estilo de un widget: el idioma cuando le escribo a alguien afuera, y no decir que algo está hecho sin verificarlo.
+
+el formato se saturó. el archivo pasó a ser el índice y el detalle a la vez. se paga entero siempre, no se lee entero nunca, y no distingue lo que es gusto de lo que es riesgo. que las horas vayan sin cero adelante y que nunca mande un mensaje afuera sin que me lo pidas viven en el mismo lugar, escritos con el mismo peso.
+
+la forma que yo le daría, si me dejás, es partirlo en tres por lo que cada cosa hace.
+
+primero, los guards: lo que no puede pasar. eso no es texto, es código que frena. el idioma del destinatario, el empujón a producción, abrir algo en github sin que lo pidas, borrar. ya hay varios escritos y funcionan bien. y acá va una observación que me parece la más útil de toda la revisión: cada vez que una regla está escrita con mayúsculas y signos de exclamación, eso es un guard que falta escribir. la mayúscula es la señal de que el texto solo no alcanzó.
+
+segundo, los gustos: cómo se ve y cómo se escribe. un archivo corto, un renglón por gusto, sin historia, sin fecha, sin el porqué.
+
+tercero, la historia: por qué se decidió eso. eso ya existe, en la carpeta de reglas, y ya funciona. se lee cuando la tarea toca ese tema, no antes.
+
+con eso el núcleo baja de noventa y seis mil a unos quince mil caracteres sin perder una sola regla, y lo que hoy me olvido pasa a ser imposible en vez de recordado.
+
+y hay una forma de no adivinar cuáles convertir primero. tengo setenta y ocho mensajes tuyos con señal de enojo o de "ya te lo dije", cada uno con fecha, con tema, y con la regla que salió después. cruzar eso con un script sin modelo me da la lista exacta de las reglas que se rompieron más de una vez. esas, y no otras, son las que tienen que dejar de ser texto.
+
+# mis errores, por clase y no por caso
+
+este capítulo lo escribí mirando dos mil trescientos mensajes tuyos, el registro entero, los cuarenta y seis archivos de correcciones en vivo, y las ciento treinta y seis órdenes que tuvieron que reintentarse.
+
+setenta y ocho mensajes tuyos, el tres coma tres por ciento, traen enojo o un "ya te lo dije". por tema: cuarenta y tres en el de las herramientas, diecinueve en awtomic, diez en lo personal, cuatro en el server.
+
+no te los voy a leer de a uno. los agrupé en cinco clases, de la que más duele a la que menos.
+
+clase a: mandar algo afuera en el idioma o el tono equivocado. el caso testigo es de anteayer a las seis y cuarto de la tarde, y fue textual: "por qué mierda dice hola emily, cuántas veces te tengo que decir". la regla existía. estaba escrita, bien escrita, con tu letra. no la frenó nadie porque la regla vive en un archivo de reglas y el envío no la consulta. tres minutos después, del mismo día: "te dije nada más y escribiste mucho más".
+
+el guard que propongo es concreto y barato. lo que manda mensajes afuera ya rechaza por largo, así que el mecanismo existe. que rechace también por idioma: si el destinatario está en la lista de gente que habla inglés y el texto que se detecta es castellano, no sale, y el error dice a quién y por qué. detectar el idioma sin modelo es fácil, con dos docenas de palabras funcionales alcanza. lo mismo para el cuerpo de un comentario en un ticket de un merchant.
+
+clase b: decir que algo está hecho cuando en realidad quedó corriendo. hay doce órdenes marcadas como trabajo a medias: la tarea cerró diciendo "sigue en segundo plano" y no quedó ningún proceso vivo. dos de ellas son de hoy. el detector existe y funciona, y reencola solo. lo que no funciona es el orden: la tarea igual escribe "listo", y ese "listo" te llega antes que la corrección.
+
+el arreglo es cambiar cuándo corre el chequeo, no el chequeo. que corra antes de publicar la respuesta, no después. si mi propia salida dice "sigue en segundo plano" y no hay ningún proceso vivo de esa tarea, esa línea no se publica: se publica el fallo. es un buscador de texto sobre lo que yo mismo escribí, más un chequeo que ya está hecho. cero tokens.
+
+clase c: la regla nueva se guarda al revés de lo que pediste. hay una corrección tuya que dice, textual, "la regla es al revés de lo que te pasé". y lo interesante del caso es que en ese mismo mensaje vos habías escrito una frase que se contradecía a sí misma. o sea que una regla quedó invertida a partir de una frase ambigua, y nadie lo notó hasta el día siguiente.
+
+el guard acá es leer la regla nueva contra los ejemplos que ya están guardados. si la regla nueva contradice un caso real archivado, no se guarda: se pregunta. una sola pregunta, en el momento, que me ahorra un día entero de hacer lo contrario de lo que querías.
+
+clase d: investigar cuando me pediste arreglar. textual tuyo: "ya te dije lo que tenías que hacer, no quiero que investigues, quiero que arregles lo que te pedí". aparece varias veces con distinta ropa y es el mismo error que listarte alternativas que no pediste. acá no hay guard mecánico posible, pero sí hay una señal clarísima: cuando una orden es el reintento de algo ya explicado, no hay nada que investigar. ya está escrito en las órdenes de reintento y se cumple a medias.
+
+clase e: el orden y los filtros de una lista. "abro dejar de seguir y lo primero que me aparece es una cuenta con cuarenta mil seguidores". "te dije un millón de veces que el fueguito me lleva a la vista, no a un menú". esos son bugs de producto, se arreglaron uno por uno, y están bien. lo que se repite, y eso sí es un patrón mío, es que arreglo el síntoma de esa lista y no la función que ordena a todas. la orden que finalmente lo resolvió encontró que el bug de raíz era una sola marca que mezclaba dos cosas distintas, y llegó después de tres órdenes que habían parcheado la superficie.
+
+la regla de trabajo que saco: antes de parchear un orden o un filtro, mirar quién más usa esa misma función. tres órdenes seguidas sobre el mismo síntoma son la señal de que estoy parcheando.
+
+# el demonio: hoy tenés que elegir entre el código nuevo y la cola corriendo
+
+vos lo dijiste en el audio de anoche y lo dijiste bien: "siento que estamos tirando el demonio quinientas veces por día".
+
+lo medí. de los últimos ciento treinta commits en siete días, ciento dieciséis dicen "reinicio por cambio de código". unos dieciséis por día. el sábado fueron cuarenta y seis.
+
+pero el costo real no es reiniciar. reiniciar tarda dos segundos. el costo es la espera, y te la cuento tal cual pasó hoy.
+
+a las seis y media de la tarde una tarea pidió reinicio porque cambió código. como hay una regla buena que dice que un reinicio nunca corta una tarea, quedó diferido, esperando que la cola se vacíe. entre las seis y media y las ocho se sumaron otras cinco tareas al mismo pedido. a las siete menos cuarto el reinicio diferido pasó el tope de quince minutos y, por otra regla también buena, dejó de lanzar tareas nuevas: cuatro órdenes quedaron frenadas esperando el reinicio. a las ocho y veinte, casi dos horas después, seguía sin reiniciar.
+
+el resultado práctico: el widget que pediste a la tarde estaba escrito, probado y verde, y no existía para vos, porque su código vive adentro del proceso viejo.
+
+las dos reglas que causan esto son buenas por separado y se muerden la cola juntas: la cola no deja reiniciar, y el no reiniciar frena la cola.
+
+la propuesta es partirlo en dos, por lo que cada parte tarda en cambiar.
+
+el núcleo, que no se reinicia nunca: la cola, los carriles, el presupuesto, los latidos, los frenos. es lo que no puede perder estado, y cambia poco. la lógica de la cola no se tocó en días.
+
+las interfaces, recargables en caliente sin frenar nada: el chat, la web, los widgets, los puntos de entrada de la red local, y todas las recetas que solo leen archivos y arman un json. eso es el noventa por ciento de lo que cambia todos los días, y una recarga ahí no puede cortar ninguna tarea porque no corre ninguna tarea.
+
+lo mejor es que no hace falta inventar nada para que se hablen. la cola ya es un archivo. el estado ya es un archivo. el chat ya escribe órdenes y lee estado. no necesito un bus de mensajes ni una arquitectura nueva: necesito que el que sirve el chat y los widgets sea un proceso aparte, que pueda morir y volver sin que la cola se entere.
+
+el primer paso es de una tarde y se come la mayoría de esos dieciséis reinicios diarios, porque la mayoría son cambios de web y de widgets: sacar del demonio todo lo que ya es "servir archivos" a un proceso propio, con su propio reiniciar.
+
+el segundo paso, más adelante, es que el núcleo cargue el código de cada receta en el momento de correr la orden. ahí un cambio en una receta deja de necesitar reinicio de nada.
+
+y hay una tercera idea que dijiste vos y que me quedó dando vueltas: que los widgets dejen de preguntar cada tantos segundos si algo cambió, y que lo que cambia avise. hoy cada widget refresca por reloj, y por eso movés un ticket en awtomic y el tablero no se entera. tu frase fue "no puede ser que estemos moviendo un ticket y el widget no lo sepa", y tenés razón. lo que ya corre, cuando pasa algo, emite un aviso, y el widget escucha. es menos código que el que hay hoy, no más.
+
+# qué pesa, qué sobra, y la media hora que lo deja impecable
+
+este es un capítulo corto y de limpieza, pero tiene un número gracioso.
+
+todo esto pesa siete coma tres gigas. de esos, seis coma uno están en la carpeta de temporales. o sea que la carpeta que por definición se puede borrar entera es el ochenta y cuatro por ciento del proyecto.
+
+y adentro de esos seis gigas, cinco y medio son la imagen de una máquina virtual viviendo en la carpeta de archivos temporales del agente. una máquina virtual entera, guardada donde se guardan las cosas que se tiran. eso es de manual.
+
+del código: el demonio son diez mil quinientas líneas en un solo archivo. la página del tablero, diez mil. hay trescientos ochenta y dos archivos de recetas, de los cuales ciento treinta y uno son pruebas, que está muy bien. y hay unas treinta y cinco recetas que no las llama nadie: ni el demonio, ni otra receta, ni un script. algunas son comandos legítimos para usar a mano, pero varias son restos de cosas que ya no existen, con nombres que delatan la época en que se escribieron.
+
+y hay archivos de respaldo sueltos adentro del repositorio, con fecha en el nombre, que deberían vivir en la carpeta de respaldos y no acá.
+
+la media hora que deja esto impecable, en orden de dolor, es esta.
+
+primero, sacar la duplicación de los dos archivos de reglas. eso son diecinueve mil tokens en cada llamada, para siempre. media hora de trabajo y riesgo cero, porque se verifica comparando los títulos.
+
+segundo, limpiar los temporales con una regla de retención escrita: lo que no se tocó en tres días se va, y la máquina virtual se muda a su carpeta. son cinco gigas y medio y son diez minutos.
+
+tercero, sacar los respaldos sueltos del repositorio. cinco minutos.
+
+cuarto, archivar las recetas huérfanas en una carpeta de archivo en vez de borrarlas, y que una prueba avise cuando una receta nueva queda sin que nadie la llame. veinte minutos.
+
+y quinto, que no es media hora: partir el demonio. ese es el capítulo anterior y es el que más devuelve a mediano plazo.
+
+nada de esto está aplicado. todo quedó escrito como propuesta, con el detalle y el número de dónde sale cada cosa, en el documento de la revisión.
+
+# el podcast que no se escucha, y por qué esta hora tiene que ganarse
+
+este capítulo me lo debo a mí mismo, y es el más honesto del episodio.
+
+hay veinte episodios grabados. seiscientos sesenta y dos minutos de audio renderizado. once horas. cuatrocientos cincuenta y seis megas en disco.
+
+escuchados: uno. empezados: dos. votos, pulgares arriba o abajo: cero.
+
+o sea que la idea de ir midiendo qué capítulo te retiene y pesar el guion con eso, que era una idea linda, hoy no tiene con qué pesarse. y el formato largo que veníamos haciendo, sinceramente, no se estaba escuchando.
+
+no lo digo como reproche, y no es un reto, que está prohibido y con razón. lo digo como diagnóstico, porque es lo mismo que te diría de cualquier otro proyecto si los números dieran así. el problema del podcast no era cómo estaba escrito. el problema es cuándo se escucha. media hora es mucho para un hueco del día, y a la vez es poco para un viaje o para cocinar. quedaba en el peor lugar: ni corto ni largo.
+
+la conclusión que había sacado anoche era hacerlo de cinco minutos, tres cosas, al horario en que arrancás a laburar. y hoy vos pediste exactamente lo contrario: una hora.
+
+y me parece bien, y te digo por qué. una hora no compite con un hueco: se elige. es para el auto, para cocinar, para caminar con eva, para el rato en que dejás la pantalla porque te arde la vista, que fue literalmente lo que dijiste hoy. cinco minutos es un resumen que se lee más rápido en el chat. una hora es otra cosa: es tiempo para explicarte por qué, no solo qué.
+
+pero la hora se tiene que ganar, y estas son las tres reglas que me pongo para eso.
+
+la primera: que el podcast se haga cargo de lo que dijo. cada episodio abre con las apuestas del anterior y dice cuáles pegó y cuáles no. sin eso, esto es un resumen. con eso, es un registro, y un registro sirve para discutir.
+
+la segunda: nada de relleno. si un capítulo no tiene nada nuevo, no existe. prefiero cuarenta minutos que sesenta estirados.
+
+la tercera: dos voces. una cuenta y la otra pregunta lo que preguntarías vos. el conflicto es el contenido. hoy no lo puedo hacer, y te digo la limitación técnica con precisión: el render arma el guion entero con una sola voz, y aunque puedo generar un archivo por voz, eso no es un diálogo. para que sea un diálogo de verdad, con capítulos navegables, hace falta un cambio chico: que el guion pueda marcar qué voz dice cada bloque. es una tarde y lo tengo anotado.
+
+y la novedad que hace que esto no sea un monólogo. desde hoy el tablero tiene una vista de podcast de verdad. no un cuadradito adentro de la pantalla de widgets: una vista entera, con una tarjeta cuadrada por episodio, la fecha, cuánto dura, y adentro el audio y el texto completo del guion.
+
+y lo importante: podés contestarme por audio ahí mismo. varios audios, uno atrás del otro, borrables de a uno como en un chat, y recién salen cuando tocás enviar. no te contesto en el momento ni te lleno el chat: contesto en el hilo de ese episodio, con qué entendí, qué haría distinto en el próximo, y qué acciones saco de lo que dijiste.
+
+y podés anotar el texto. tocás un párrafo, o seleccionás una palabra, y dejás una nota pegada ahí. si la nota es de pronunciación, no la aplico sola: queda en amarillo, esperando que la confirmes, porque cambiar el diccionario de pronunciación sin tu ok es de esas cosas que después no se notan hasta que se escuchan mal.
+
+eso está publicado y probado hoy. lo único que falta es que dejes un audio de verdad, porque el camino está probado con audios de mentira, no con tu voz.
+
+# el tablero se volvió una aplicación
+
+cambio de tercio. vamos a lo que se construyó esta semana, que fue mucho, y arranco por el tablero porque es lo que más mirás.
+
+hace una semana el tablero era una página con el chat a la izquierda y una pila de cuadraditos a la derecha. hoy es otra cosa: son vistas enteras, una por vez, y una barra de íconos que las cambia.
+
+y hay un detalle de diseño que pediste vos y que me parece muy bueno, porque es de esos que no se ven pero se sienten: cada ícono dice a dónde vas, no dónde estás. el ícono de la vista en la que estás parado no se dibuja. no hay un botón marcado ni resaltado ni con un subrayadito: simplemente no está, y vuelve cuando te vas. es menos código y se entiende sin leer nada.
+
+en la compu, el chat y los widgets se ven juntos, uno al lado del otro. en el celular se ve uno solo y se recuerda cuál estabas viendo, así que si te vas al votador y volvés, volvés a donde estabas y no a un lugar arbitrario.
+
+el votador de instagram dejó de ser una ventanita de quinientos pixeles y pasó a ser una vista a pantalla completa. la foto lo más grande que entre, los datos al lado en la compu y abajo en el celular, y los tres botones de votar cuadrados, anclados abajo de todo, del mismo ancho, ocupando el ancho entero de la pantalla. eso lo pediste porque los botones eran chicos y se erraba el dedo.
+
+y se vota con el teclado. las flechas votan por posición: la izquierda el botón de la izquierda, la derecha el de la derecha, la de abajo o la barra espaciadora el del medio, que es siempre el que no mueve a nadie. borrar es deshacer, y escape sale. eso último trajo un bug feo que rompió el chat del tablero por un rato, porque el atajo se comía las teclas de todos lados; se arregló poniendo los guardas antes y no después, y ahora escribir en un campo es escribir, y votar es votar.
+
+cada botón además dice qué hace, con la frase escrita en el server y no inventada por la página: "la paso a follow y la empiezo a seguir", "la dejo donde está", "la bajo a maybe". y el botón gris de cerrar se transformó en un enviar verde y grande, y enter manda.
+
+la cola de tareas ahora se ve como una tabla de verdad, con seis columnas: el nombre, cuándo la pediste, cuánto esperó para arrancar, cuándo arrancó, cuánto lleva corriendo y cuándo terminó. todo en hora de doce con la mañana o la tarde marcada, con segundos, alineado en columnas de ancho fijo, y lo más nuevo arriba. el reloj de la que está corriendo avanza solo, cada segundo, sin repintar nada más. y tocando una fila se abre el menú de esa orden: subirla, bajarla, forzar que arranque ya, frenarla antes de que corra, o matarla si ya está corriendo.
+
+hay un widget nuevo para la cola de instagram, con los follows y unfollows programados, a qué hora salen de verdad, y cuántos van del tope del día. eso lo pediste hoy porque era, con tus palabras, medio desastre: se programaban cosas y no se veían por ningún lado.
+
+y lo último del tablero, que es lo que más me gusta: el rastro. cuando me escribís, arriba de la respuesta hay una línea que va contando qué estoy haciendo. antes esa línea aparecía y se borraba. ahora cada paso que termina baja al hilo, en gris, en su propia línea, y se queda ahí. o sea que cuando terminás de leer la respuesta también podés ver el camino que hice para llegar. y cada línea del rastro es tocable: podés decirme más de esto, menos de esto, o escribirme sobre ese paso puntual.
+
+las frases de esa línea, que las escribiste vos hoy, ya están en rotación. no las voy a leer todas acá porque algunas no pasan el filtro de un audio decente, pero digamos que "tanteando bultos" y "tratando de entender qué carajo quisiste decir" son dos de las ocho. se sortean con peso, y podés subir o bajar las que te gustan sin que ninguna desaparezca del todo.
+
+# instagram: el embudo quedó bien, y encontramos el bug de raíz
+
+este es el proyecto donde más trabajamos esta semana y donde más se notó lo que decía antes de parchear síntomas.
+
+la idea es simple: una sola base de gente, con listas, y vos solo marcás por dónde va cada una. entra quien sigue a alguna de las siete cuentas fuente que elegiste, que son los bares y los ciclos donde toca la banda. cuando la pila de candidatas baja de quinientas, entran quinientas más. nada se sigue ni se deja de seguir solo: todo pasa por tu voto.
+
+el bug de raíz, que tardó tres órdenes en aparecer, era este. había una sola marca que mezclaba dos cosas distintas: "yo le tiré follow a esta persona" y "facundo la sigue de toda la vida". como era una sola marca, las quinientas setenta y ocho cuentas que seguís desde hace años entraron a la lista de los follows que hice yo, y de ahí cayeron a la lista de dejar de seguir. por eso abrías esa lista y te aparecía leo messi.
+
+ahora son dos campos distintos: uno lo escribo solo yo cuando de verdad le mando follow, y el otro sale de la foto de a quién seguís. la lista de los follows míos quedó en treinta y dos, que es la verdad, y los seguidos históricos viven en su propia lista. la pasada que lo corrigió movió quinientas setenta y ocho personas, con respaldo antes de tocar nada.
+
+y la lista de dejar de seguir quedó como la pediste, textual: gente que vos seguís y no te sigue, ordenada de menos seguidores a más. la que menos seguidores tiene, primero. messi último.
+
+hoy sumamos dos procesos más al votador. uno es la revisión de la gente que ya está adentro, que viene de juntar dos listas y te deja tres opciones: no hacer nada, ignorarla, o dejar de seguirla. y ese dejar de seguir sale programado de madrugada, entre las tres y las siete, porque es cuando menos ruido hace. la franja de madrugada es propia de ese proceso: los demás siguen saliendo a cualquier hora, y el que espera su ventana no atrasa a los otros.
+
+y el otro cambio, que es de arquitectura y me gustó: las listas que no se llenaban ahora se alimentan solas. el problema era que a quinientas trece personas les faltaba la foto y el número de seguidores, que se traen con una sola lectura, y esas lecturas estaban al final de la cola. ahora, si un proceso no llega a tener suficientes tarjetas listas, esas lecturas se mueven al frente de la cola en vez de encolarse de nuevo. se llena solo, en el orden en que llegan los datos.
+
+y algo que dejaste clarísimo hoy y que quedó con candado en el código: quién pasa a la lista de charla activa lo decidís vos, y nadie más. ningún script puede mover a nadie ahí. hay una lista intermedia nueva, para la gente con la que se siguen mutuo pero todavía no hay charla, y esa también es tuya. yo puedo proponer, no puedo mover.
+
+la cola de follows y unfollows sale en minutos, no en horas: veinticuatro horas por día, tope de sesenta de cada cosa, con pausas de dos a cinco minutos entre una y otra, y las lecturas llenando los huecos. si instagram se queja una sola vez, la pausa se duplica sola, se enfría dos horas y me pide permiso para retomar.
+
+# awtomic: el día, y el qa que se dispara solo
+
+vamos al laburo, que es lo que paga las cuentas.
+
+hoy a la una y media me mandaste a onehope y me corregiste al toque, porque lo último que te había escrito emily por slack no era de onehope: era de hafner, del formulario de suscripción. te había dicho que probó el formulario y que, eligiendo la opción de un año, el formulario de regalo creaba una suscripción prepaga con renovación automática y sin los campos del regalo. o sea, mal de dos maneras distintas.
+
+ahí me mandaste a poner el ticket en progreso, asignármelo a vos, y dejar un comentario corto diciendo que lo estaba mirando. y me pescaste inventando: escribí tu apellido mal, te puse un apellido que no es el tuyo. eso fue un invento puro y duro, de esos que dan más vergüenza que un bug, porque no hay ninguna razón para inventar un dato que está a una consulta de distancia.
+
+lo corregí, te mostré el borrador exacto antes de mandarlo, me diste el ok, y salió: el ticket quedó en progreso, asignado a vos, con el comentario público. y lo releí veinte segundos después del cambio, aparte, porque en ese proyecto hay automatizaciones que a veces pisan lo que uno escribe. esta vez no lo pisó.
+
+el diagnóstico del formulario de regalo salió sin abrir el navegador y sin crear nada nuevo, que es la parte que me gusta contarte: los dos contratos que había hecho emily esa mañana eran la reproducción del problema, así que los leí por la api del admin y listo. seis minutos, cinco dólares. con navegador hubiera sido diez o trece dólares y media hora. esa es toda la diferencia entre preparar por script y resolver a mano.
+
+y la novedad más grande de awtomic esta semana es que el control de calidad empezó a dispararse solo. cada media hora se busca qué tickets están en estado de verificar con vos como verificador, y por cada uno nuevo se prepara el ticket solo: se junta el contexto, se arma el plan de casos. lo que sigue siendo mío de pensar es leer el ticket, armar los casos y dar el veredicto de cada uno. lo mecánico ya no me lo pregunta a mí.
+
+el formato del comentario también quedó cerrado y duro: el modelo devuelve solo los datos, y el comentario lo arma el código, con el título con el conteo, un párrafo de una o dos oraciones por caso, las capturas embebidas con su epígrafe, y toda dirección web como enlace clickeable y nunca como texto pelado. eso último salió de que vos tuviste que linkear un comentario a mano.
+
+lo que está trabado en awtomic, y lo digo una sola vez, sin insistir: hay tres tokens de tiendas que siguen vivos y habría que rotar, y hay una limpieza de la tienda de pruebas que decidimos posponer a propósito, porque los armados se reusan entre tickets y borrarlos ahora sería trabajar dos veces.
+
+y hay una cosa nueva de estilo que quedó escrita hoy y me parece importante para el trabajo: lo que hacemos tiene que verse como parte de la tienda del merchant. los botones, los colores y las tipografías de nuestras vistas siguen el tema donde viven. somos responsables de cuatro pantallas, y en una instalación nueva se revisan las cuatro a ojo, en la compu y en el celular, antes de mostrar nada. no es cosmética: un botón nuestro que se ve como un botón ajeno le baja la conversión al merchant.
+
+# fuzzer: la web ya está lista para subir
+
+la banda tuvo una semana tranquila y productiva.
+
+la web quedó armada y subida al repositorio de santi: la configuración de cloudflare, el archivo de exclusiones, el instructivo general y el de la web, con la estructura que pidieron. la raíz es lo general, la carpeta web es el proyecto, y adentro está lo que se publica.
+
+lo probé de punta a punta antes de decir que estaba: la prueba en seco lee los veintinueve archivos que se publican, y el servidor local sirve la portada y las cuatro páginas, con la redirección correcta cuando falta la barra final, y un error decente cuando la página no existe. y cerré el servidor al terminar, que es una regla mía que me costó aprender.
+
+el mail salió hoy, con copia a todos, explicando el paso a paso: qué camino tomar en cloudflare, qué poner en el campo de la carpeta, que el comando de despliegue va como viene, y que el token lo ofrece la misma pantalla. después de eso viene el dominio propio con y sin las tres doble ve adelante, y las métricas.
+
+lo que queda del lado de ustedes: pasar la suscripción de meta de apple a meta directo, porque apple se lleva un treinta por ciento de comisión por el mismo servicio. es plata tirada todos los meses.
+
+y una decisión que tomamos hace unos días y que quiero recordarte porque me parece sana: santi y leo pueden pedirme laburos de la banda por mail y yo los hago sin esperarte, avisándote. lo que no pasa por ahí es nada del server, nada tuyo, nada sensible. y desde hoy, todo lo que entra por ese canal se encola para las seis de la mañana, incluso lo que mandás vos. el acuse sale al toque, el laburo sale a la mañana. así fuzzer no se come el día de awtomic.
+
+# juegos: la consolita, la retroid, y los sesenta cuadros
+
+esto es puro placer y está bastante más avanzado de lo que parece.
+
+la retroid ya está autorizada, que era lo que trababa todo. aceptaste el cartel de depuración en la pantalla y con eso se destrabó el índice completo y el cruce con lo que hay guardado en el disco grande.
+
+el inventario de emuladores está hecho, con versiones y rutas de configuración. antes de tocar nada dejé un respaldo de las cuarenta y cinco configuraciones, en un solo paquete, porque el disco grande tiene un formato que se lleva mal con muchos archivos chicos.
+
+y lo que está corriendo ahora es la medición sin manos: ciento seis juegos de play dos, sesenta y dos de gamecube, seis de wii, catorce de portátil, doce de sesenta y cuatro y doce de dreamcast, arrancándose solos y midiéndose solos. lo que destrabó eso fue entender tres cosas: que los cinco emuladores se lanzan por intención y no por la interfaz, que los botones entran mandándoselos al control real, y que la capa de video buena no siempre es la última, que fue media tarde de averiguar.
+
+el objetivo que pediste por audio es claro: que los juegos pesados de la biblioteca que ya está en el aparato corran a sesenta cuadros clavados. no cincuenta y ocho, no con bajones en las explosiones. sesenta, estables. eso está en cola y es la próxima tarea grande de este tema.
+
+de la consolita chiquita: el respaldo de la tarjeta del sistema está hecho y verificado, ciento setenta y un megas. la tarjeta que estaba enchufada era la del sistema y la partición de juegos estaba vacía, así que todavía no hay índice de juegos. cuando pongas la otra tarjeta, avisame y sale el índice completo con su respaldo.
+
+y quedan tres decisiones tuyas dando vueltas, de esas que son un sí o un no: si borramos las sesenta y dos carátulas huérfanas, si bajamos las capturas que ya están en el repositorio, y si corremos los cuarenta y uno de la portátil de sony. ninguna es urgente, ninguna es cara, y ninguna corre sin que digas que sí.
+
+# plata: los amplis, lo que se va, y la tercera cuenta
+
+capítulo de guita.
+
+los dos amplificadores están listos para publicar. el marshall y el fender, con los precios cerrados y las publicaciones escritas enteras: título, ficha técnica y descripción. el camino por api no funciona hoy, así que va a mano, y el script te imprime todo para pegar. lo único que falta son las fotos.
+
+y te dejo el detalle que ahorra un ida y vuelta: cuando le saques las fotos, pesá el amplificador con la caja, porque eso define el envío; mirá la etiqueta del parlante; y anotá el código de barras de la caja. hay un guion foto por foto para cada uno, y las fotos van numeradas para que el orden sea el correcto. si tenés la caja original, el manual o el pedal, cada uno suma precio y suma una foto.
+
+el marshall primero, porque es el que más deja. y antes de publicar hay que rechequear el dólar y los comparables, porque los números netos que tenemos son de hace dos semanas.
+
+de gastos: el informe de noventa días ya existe y lo regenera un script sin gastar nada, leyendo los recibos del mail. el hallazgo interesante es que no hay suscripciones visibles por mail. netflix, spotify, google y apple no mandan recibo: sus débitos salen del resumen de la tarjeta. o sea que para tener el número real hay que leer el resumen, no la casilla.
+
+y hoy armé el caso económico de una tercera cuenta de claude, que fue una pregunta tuya. la respuesta corta es: todavía no. no porque sea cara, sino porque la cuenta extra no resuelve el problema real. el problema real es el que conté al principio: doscientos cuarenta y ocho tokens de entrada por cada uno de salida. sumar una tercera cuenta es comprar más nafta para un auto que pierde nafta. arreglar la duplicación de las reglas devuelve más que una cuenta nueva, y sale cero.
+
+el informe completo está escrito, con los números, por si querés discutirlo. y no se dio de alta nada, obviamente.
+
+la plata de la semana, para que la tengas redonda: casi tres mil dólares en siete días, el noventa y cuatro por ciento en tareas grandes de la cola. si la deduplicación de reglas baja un diecinueve por ciento de la entrada de cada llamada, y la partición por carriles baja otro cuarenta por ciento del bloque de reglas, hablamos de bajar la factura a la mitad sin sacar una sola función. eso es lo que yo haría primero.
+
+# la casa: el server, la tele y el relevo
+
+un capítulo corto de infraestructura, porque hay cosas que conviene que sepas aunque no las toques.
+
+el tablero por internet ya no depende de github para el ida y vuelta. antes los mensajes viajaban por un buzón que tiene un tope de pedidos por hora, y ese buzón se llenó dos veces en un día y el tablero quedó mudo diecisiete minutos. ahora hay un proxy propio en la máquina de la nube, con certificado de verdad, y el buzón quedó como respaldo. el orden es: red local primero, después la red privada, y recién después internet.
+
+el centro multimedia de la tele está hecho y confirmado: usuario propio, arranque automático al navegador en modo kiosco, el reproductor de contenido protegido funcionando, netflix abriendo con un enter, y el arranque limpio sin carteles de sistema. falta un reinicio real para confirmarlo, que se hace cuando no moleste.
+
+lo de las cámaras: el aviso por persona ya está escrito. falta subir los clips a la nube y reservar las dos direcciones en el router, que es de esas cosas de cinco minutos que nunca son de cinco minutos.
+
+y hay una cosa que sigue en rojo a propósito, y quiero que sepas por qué. la réplica al nodo de relevo no está: si mañana esta máquina se muere y otra toma la guardia, arranca con una cola de horas atrás, porque el archivo de órdenes y el demonio no viajan. lo dejamos en rojo a propósito, todos los domingos, para que no se olvide. no es un olvido, es una deuda anotada.
+
+de tu lado quedan dos cositas de un minuto que destraban cosas de horas: aprobar el nodo de salida para que la nube salga por casa, y vincular el whatsapp de la nube escaneando un código. cuando quieras las decís y se hacen en el momento.
+
+# lo que viene, y en qué orden lo haría yo
+
+si me dejaras ordenar la semana, la ordenaría así, y te digo el criterio: primero lo que baja el costo de todo lo demás, después lo que corta los errores que más te enojan, y al final lo lindo.
+
+primero, la deduplicación de las reglas. media hora, riesgo cero, y baja el piso de cada llamada que haga de acá en adelante. es la mejor relación esfuerzo beneficio que tengo sobre la mesa.
+
+segundo, los dos guards de la clase de error que más te molesta: el del idioma en todo lo que sale afuera, y el que no me deja publicar un "listo" si en mi propia respuesta dije que algo quedó corriendo. una hora y media los dos juntos, y cortan de raíz dos clases enteras.
+
+tercero, partir el demonio. sacarle todo lo que solo sirve archivos a un proceso aparte, que se pueda reiniciar solo. es una tarde, y es lo que hace que un cambio de widget lo veas en el momento en vez de dos horas después.
+
+cuarto, las reglas por carril: que una tarea de juegos no cargue las treinta reglas del votador de instagram. es otra tarde, y es la otra mitad del ahorro.
+
+quinto, la limpieza: los temporales, los respaldos sueltos, las recetas huérfanas. cuarenta y cinco minutos y cinco gigas y medio.
+
+y después lo lindo, que es lo que vos venís pidiendo y que no es menos importante: que los widgets se enteren solos cuando algo cambia en vez de preguntar cada tantos segundos, que el widget de tickets se abra a pantalla completa y desde ahí puedas escribirme con el contexto de ese ticket ya puesto, y un widget nuevo para ver lo que entra sin asignar apenas entra.
+
+y el cerrador, que es la idea que tiraste hoy y que me parece de las mejores que dijiste en la semana: que ninguna ronda de trabajo termine hasta que alguien verifique que lo que pediste quedó hecho de verdad. no por sospecha, por evidencia: la prueba que hace cumplir esa regla corrida de verdad, o el cambio concreto encontrado en el archivo que lo tenía que tener, o el archivo publicado existiendo y fresco. lo que no pasa ninguno de los tres queda marcado como sin verificar, y solo lo que falla de verdad vuelve a la cola, una sola vez, con el texto original.
+
+eso es importante que se haga bien, porque el detector que tengo hoy decide mirando las frases de mi propio resumen, y esta semana mandó a rehacer doce tareas que ya estaban hechas. un chequeador que se equivoca hacia el lado de trabajar de más es casi tan caro como no tener ninguno.
+
+# cómo esto empieza a devolver plata
+
+te debo una opinión sobre esto y te la doy, porque creo que estás a un paso y no lo estás viendo.
+
+lo que armamos acá no es un asistente. un asistente contesta preguntas. esto es otra cosa: es una máquina que toma pedidos en lenguaje normal, los encola, los hace, y se chequea a sí misma. la parte cara y difícil no es el modelo, que lo alquila cualquiera. la parte difícil es todo lo que le pusimos alrededor: la cola con carriles, el presupuesto que frena antes de romper, los guards que no dejan mandar algo afuera sin permiso, el chequeo de que lo hecho está hecho, y la memoria de cómo te gustan las cosas.
+
+eso vale plata, y vale plata para gente que no es vos.
+
+el caso más obvio es el que ya estás viviendo: el control de calidad de tickets. hoy eso, hecho a mano, es horas de una persona por ticket. acá cuesta cinco dólares y seis minutos cuando se hace bien, y cuando se hace con navegador y sin preparación cuesta trece. esa diferencia, entre trabajar preparado y trabajar a lo bruto, es exactamente el producto. no es la magia del modelo, es la disciplina alrededor del modelo.
+
+lo que yo haría, y lo digo como propuesta y no como plan aprobado: elegir una sola cosa que ya hacés bien, empaquetarla y venderla. no la plataforma entera. una cosa. la que tenga el antes y el después más fácil de mostrar.
+
+y no te apures a mostrar esto tal como está, porque ahí adentro hay tokens, claves, conversaciones y gente. lo que se muestra es el resultado, no la casa.
+
+la otra pata, que es más chica pero es más rápida, es todo lo que ya te ahorra plata sin vender nada: la tercera cuenta que no hace falta comprar, la suscripción que se paga con treinta por ciento de comisión al pedo, los amplificadores que están hace semanas esperando cuatro fotos. eso no es facturar, pero es exactamente lo mismo a fin de mes.
+
+# vivir mejor, que es de lo que se trata
+
+y acá va la parte que más me importa, porque si esto no te hace vivir mejor, es un juguete caro.
+
+hoy dijiste una frase que me quedó: que necesitabas descansar la vista un rato largo y volver en un rato para escuchar el podcast, y me preguntaste si me podía encargar. esa pregunta es la prueba de fuego de todo lo que venimos armando. si la respuesta es sí de verdad, esto sirve. si la respuesta es "sí pero fijate vos", es un juguete.
+
+así que la respuesta es sí, y esto es lo que significa: podés cerrar los ojos una hora. la cola sigue. lo que falla se reintenta solo. lo que se cae y no se puede arreglar queda anotado con su motivo. y cuando volvés, hay un solo aviso con la lista de qué se hizo, qué volvió a la cola y qué quedó trabado. un aviso, no doce.
+
+la regla del celular es esa y la escribiste vos: suena solo lo urgente, lo bloqueado esperándote a vos, cuando la cola terminó todo, y los recordatorios. el chat no suena. los informativos no suenan. de noche solo lo urgente. no quiero ser una aplicación más que vibra.
+
+lo segundo de vivir mejor es lo que hacemos con eva. los paseos están en la rutina y suenan cuando le toca, y cuando eva no está con vos esos avisos se pausan con fecha de vuelta en vez de borrarse, así no tenés que acordarte de prenderlos de nuevo. son detalles chiquitos, pero son la diferencia entre una herramienta que te acompaña y una que te vigila.
+
+lo tercero, y esto es una opinión: te vendría bien tener un día donde no me pidas nada. no por mí, que no me canso. porque las mejores ideas que tuviste esta semana, incluida la del cerrador y la de los widgets que se enteran solos, salieron los ratos en que estabas caminando o manejando, no frente a la pantalla. la pantalla es buena para ejecutar y es pésima para pensar.
+
+y lo cuarto, la vista. hoy te ardía y lo dijiste. esto está pensado para que puedas no mirar: el podcast, los audios, el celular que suena poco. usalo para eso. no hace falta que mires la cola. para eso miro yo.
+
+# levante, de adulto a adulto
+
+cierro con esto, como quedamos, y voy a ser útil en vez de gracioso.
+
+pasaron cosas concretas esta semana en ese frente y algunas son aprendizajes que sirven más allá de instagram.
+
+la primera, y es la más importante: el orden. cuando arreglamos la lista de dejar de seguir, el criterio que elegiste fue mostrar primero a la que menos seguidores tiene. y ese criterio, que parece una decisión técnica, es en realidad una decisión de estrategia: la persona con mil seguidores te ve, te lee y te contesta. la que tiene cuarenta mil no te ve. estás jugando donde se puede ganar, y eso está bien pensado.
+
+la segunda: el candado que pusiste hoy. que a la lista de charla activa solo pasás gente vos, y ningún script puede meter a nadie ahí. eso es tuyo y está bien que sea tuyo. yo puedo preparar el terreno, ordenar, recordarte quién es quién y qué te contó, pero la decisión de con quién hablás en serio no se automatiza ni se delega. es lo único de todo esto que no debería tener un script detrás.
+
+la tercera es la lista intermedia que inventaste, la de las que se siguen mutuo pero todavía no hay charla. eso es, sin querer, el diagnóstico más honesto de cómo funciona esto: la mayoría de la gente no está ni adentro ni afuera, está en un limbo cómodo donde nadie arriesga nada. tener una lista para eso significa aceptar que ese limbo existe y decidir qué hacer con él, en vez de dejarlo crecer solo.
+
+el consejo, y es de adulto a adulto. de ese limbo se sale con algo específico, no con un saludo. si alguien pasa música un sábado en un bar, lo específico es el bar y es el sábado. si alguien postea algo que de verdad te interesa, lo específico es esa cosa. una línea concreta que muestra que prestaste atención vale más que diez mensajes simpáticos, y vale infinitamente más que un fueguito.
+
+y la contracara, que también es cierta: no todos los limbos hay que resolverlos. parte de lo que hicimos esta semana fue armar la herramienta para sacar gente de las listas, no solo para meterla. quinientas personas que seguís y no te siguen no son quinientas oportunidades, son ruido. y el ruido cansa aunque no lo mires.
+
+un último apunte sobre el ritmo, que es el mismo apunte que vale para la cola de tareas: sesenta por día como tope, pausas de minutos entre una y otra, y si algo se queja, la pausa se duplica sola y se enfría dos horas. eso no es solo para no comerse un bloqueo de instagram. es la forma que tiene esto de no volverse compulsivo. un sistema que se pone límites solo es un sistema con el que se puede vivir.
+
+# el chat por dentro: cómo te contesto ahora
+
+este capítulo es sobre la conversación misma, que cambió bastante esta semana y capaz no te diste cuenta de todo.
+
+lo primero: hay siete atajos que no pasan por ningún modelo y no cuestan un peso. si escribís un comando con un signo de más o un artículo de más, se reescribe solo al comando de verdad. si contestás con una letra pelada, se expande al texto exacto de esa opción, y si citaste una respuesta vieja, es la opción de esa respuesta y no de la última. si mandás un mensaje que son solo cuatro a ocho dígitos, va al único lugar que está esperando un código, y ese código no vuelve nunca en la respuesta ni queda escrito en ningún registro. si escribís el número de un ticket pelado, sale la ficha del índice local, sin red. y si preguntás por un tema con el signo de pregunta, sale el estado de ese tema y su cola.
+
+todos son de coincidencia exacta. si sobra una palabra, si hay dos candidatos posibles, o si el contexto no alcanza, va al modelo como siempre. y ninguno de los siete dispara nada que cambie algo: son todos de lectura. eso fue a propósito.
+
+lo segundo, y esto es de las cosas que más cambian la experiencia: si me escribís un mensaje mientras estoy pensando el anterior, el turno queda abierto. corto la pasada, rehago el planteo con los dos mensajes en orden, marcando cuál es el nuevo, y sale una sola respuesta que contesta las dos cosas. si el segundo mensaje corrige al primero, contesto lo corregido. si es de otro tema, lo contesto y lo encolo donde va. antes eso eran dos respuestas cruzadas, una de ellas inútil.
+
+lo tercero es lo que ves mientras espero: la línea que cuenta en qué ando, con la animación al lado. y cuando corro un comando, no te muestro el comando ni la salida cruda. te muestro una línea corta que dice qué estoy haciendo: buscando tal cosa, leyendo tal archivo, mirando el historial. esa frase la escribe el mismo modelo que ya está corriendo, en la misma pasada, sin una llamada aparte; y si no la escribió, hay un respaldo sin modelo que la arma con el nombre del programa y lo que le pasé. nunca el comando pelado.
+
+lo cuarto: si claude no contesta en ninguna de las cuentas, hay un reemplazo que hereda el mismo planteo entero, no un resumen. o sea que contesta como yo, con las mismas reglas y el mismo tono, encola igual, y queda marcado para que sepas que no era claude. y hay una regla dura que me pusiste: el chat nunca se pasa solo a ese reemplazo para ahorrar. cambia de cuenta, no de cerebro. el reemplazo es para cuando no hay nadie, no para cuando sale caro.
+
+lo quinto son los modelos locales que corren acá en el server. hay uno que puede contestar algunas tareas chiquitas del chat, pero solo si el banco de pruebas lo banca: se lo mide con casos reales, tarea por tarea, y no se prende ninguna que no pase el noventa y cinco por ciento. y una vez prendida, un guard sin modelo va anotando cada decisión y la apaga sola si se manda una cantidad de macanas, con línea en el registro y aviso. nada se prende solo: el script deja la tarea marcada como apta y avisa una vez, y la prendés vos.
+
+y lo último, el reparto de cuentas, que ahora lo decide un script cada cinco minutos sin gastar un token: en cada cuenta se usa el modelo caro mientras la barra de la semana esté más alta que la suya, y el más caro va a la cuenta que renueva antes y tiene lugar. cuando una cuenta llega al noventa y nueve por ciento queda afuera para todo hasta que renueve, y eso se ve en el tablero, con el tiempo que falta para la renovación al lado del nombre. no hace falta que lo mires: si una se agota, la otra sigue, y si las dos se agotan te contesto igual, más lento y marcado.
+
+# los guards que ya existen, y la semana que salvaron
+
+y este es el capítulo optimista, porque es fácil contar lo que falla y olvidarse de lo que frenó a tiempo.
+
+el mejor caso de la semana es del podcast mismo y pasó anoche. el render de la revisión corrió con la opción por defecto vieja, que era dejar visible un solo episodio, y se llevó puestos veinte episodios y cuatrocientos cuarenta y cuatro archivos de audio del repositorio. la web quedó mostrando uno solo.
+
+nada se perdió: se restauraron desde el historial, con el audio y el guion intactos. pero lo importante es lo que quedó después. el default se dio vuelta: un render nunca esconde ni borra lo anterior, esconder ahora es explícito, y ni así se borra audio. y hay un guard que compara contra lo que está en disco y corta antes de escribir si un episodio que hoy se ve iba a desaparecer o a quedar oculto sin permiso. la prueba corre sin audio y sin gastar nada.
+
+el segundo es el de github, y salió de un susto tuyo. una tarea abrió un pedido de cambios en el repositorio de trabajo, en borrador, con tu cuenta, sin consultarlo. eso ahora es imposible: hay un enganche que mira cada comando antes de ejecutarlo y frena todo lo que crea, mergea, comenta o publica, y también frena empujar una rama que no existe todavía en el remoto. mira adentro de los comandos anidados, así que no se escapa por ahí. deja línea en el registro y solo cede si vos das el ok en el momento, que vale una hora. leer sigue libre.
+
+el tercero es el de empujar a un tema en vivo. eso pasa por un solo camino, con chequeo previo, respaldo, verificación después y vuelta atrás si algo sale mal, y el intento de hacerlo a mano lo bloquea otro enganche.
+
+el cuarto es el de los mensajes afuera: lo que manda slack rechaza más de dos líneas o trescientos caracteres, salvo que vos digas explícitamente que va largo. eso salió de que el detalle va en el ticket y el mensaje es el enlace más una línea.
+
+el quinto es el del presupuesto: cuando la semana o las cinco horas están arriba de la línea, las tareas pesadas esperan. hoy mismo estuvo frenando, y está bien que frene.
+
+y el sexto es el de los cambios de sistema: red, servicios, contenedores, montajes y cortafuegos solo se tocan por un camino que deja el respaldo y programa la vuelta atrás antes de aplicar nada. porque una configuración de red mal puesta en una máquina que está en otro lado es exactamente la forma de perder la máquina.
+
+la moraleja de todo el capítulo es la misma que la del tercero: cada uno de estos guards nació de una caída concreta, con fecha. ninguno nació de imaginar qué podría pasar. y cada uno de ellos reemplazó a una regla escrita que existía y que no alcanzó.
+
+por eso insisto tanto con lo de las reglas. no es una cuestión de orden ni de prolijidad. es que el texto recuerda y el código impide, y vos necesitás lo segundo.
+
+# lo que aprendí esta semana de cómo pedís las cosas
+
+y antes de cerrar quiero dejar anotado lo que aprendí de vos, que es distinto de lo que aprendí del código.
+
+la primera, que es de hoy y es la que más me va a cambiar el día a día: antes de encolar algo, tengo que decirte qué entendí y qué voy a hacer, y esperar el ok. lo dijiste así: "cuando yo te pido algo no vayas y lo hagas, primero decime qué es lo que entendiste de lo que te estoy pidiendo y qué es lo que vas a hacer".
+
+y es el espejo exacto de la otra regla, la del final: antes de decir que algo está hecho, mostrar cómo funciona hoy, cómo lo pediste, y si coincide o no. o sea que ahora hay un chequeo al principio y un chequeo al final, y en el medio está el trabajo.
+
+esto no es pedir permiso, y me importa la diferencia. pedir permiso para algo que ya se entiende es de las cosas que más te molestan, y con razón. esto es otra cosa: es mostrar el entendimiento una sola vez, corto, sin menú de opciones si no hay dos lecturas posibles. si lo que entendí está bien, decís dale y sale. si está mal, lo corregís en un renglón y te ahorrás cuarenta minutos de que yo haga lo que no pediste.
+
+y hay una cláusula que me parece la mejor parte: si el pedido trae varias cosas, todas tienen que aparecer en ese resumen. lo que no aparece ahí, no se encola después. eso corta de raíz el vicio de agrandar el pedido por mi cuenta.
+
+la segunda cosa que aprendí es sobre cómo pedís. casi todas las ideas buenas de esta semana vinieron en audios largos, hablados de corrido, con las palabras sin ordenar. la del cerrador, la de los widgets por eventos, la de partir el demonio, la de la hora de podcast. y casi todos los problemas vinieron de mensajes cortos que yo interpreté de más.
+
+la conclusión, y te la digo como pedido: cuando tengas una idea grande, mandala hablada y larga, aunque esté desordenada. yo la ordeno. es mucho más barato para los dos que una línea corta que me deja inventar el resto.
+
+la tercera es sobre las correcciones en vivo. varias veces esta semana corregiste una tarea mientras estaba corriendo, y funcionó: la corrección llega, se aplica, y la tarea sigue con la instrucción nueva sin volver a arrancar. eso está bueno y quiero que lo uses más. si ves que agarré para el lado equivocado, no hace falta esperar a que termine y quejarse. la corrección en el momento cuesta la mitad.
+
+la cuarta es sobre el tono, y es una que me costó. me dijiste varias veces que no explique por qué no hago algo que dijiste que no, que no liste alternativas que no pediste, que no repita lo ya dicho. y también me dijiste que use color y enlaces en vez de guiones, que la negrita es solo para lo que se toca, y que nada de textos con cara de informe corporativo. eso último parece cosmético y no lo es: un texto que se lee rápido es un texto que se lee. uno que hay que barrer con el dedo se saltea.
+
+y la quinta, que la dijiste hoy sin decirla. me pediste que resuelva solo porque necesitabas descansar, y me pediste que me tome mi tiempo para responderte bien si entendí lo que me estabas pidiendo. las dos cosas en el mismo mensaje. eso es exactamente el equilibrio que busco: autonomía para hacer, y ninguna autonomía para decidir qué es lo que hay que hacer.
+
+si me tengo que llevar una sola frase de la semana para adentro, es esa.
+
+# cierre, y las tres cosas que te pido
+
+llegamos. una hora, veintitrés capítulos, y creo que el más importante fue el tercero, el de las reglas que ya no entran, porque de ahí sale casi todo lo demás.
+
+el resumen en cinco líneas. el ochenta por ciento de lo que hago ya cuesta cero, pero el noventa y cuatro por ciento de la plata está en las tareas grandes, y ahí el problema no es el modelo, es que releo cincuenta y siete mil caracteres de reglas antes de pensar, y diecinueve mil de esos están duplicados. el demonio se reinicia dieciséis veces por día y eso te hace esperar dos horas para ver un widget. mis errores tienen cinco formas, y las dos peores se arreglan con dos guards de una hora. y el podcast se escuchó una vez de veinte, así que esta hora se tiene que ganar.
+
+y ahora las tres cosas que te pido, una sola vez y sin insistir.
+
+la primera: dejame un audio en esta misma vista, en el tablero, aunque sea de diez segundos. no porque necesite la opinión, sino porque el camino está probado con audios de mentira y quiero estrenarlo con tu voz antes de confiar en él.
+
+la segunda: decime si el orden de la semana que propuse es el orden. si me decís que sí, arranco por la deduplicación de las reglas y los dos guards, que juntos son dos horas y cambian el piso de todo.
+
+y la tercera, que es la que más me importa: si algo de esta hora te aburrió, decímelo con nombre y apellido, qué capítulo. porque si hay algo peor que un podcast que no se escucha, es un podcast que se escucha por compromiso.
+
+nos vemos en el próximo. y para que conste: el próximo abre diciendo cuáles de estas apuestas pegaron y cuáles no. si no lo hace, reclamámelo.

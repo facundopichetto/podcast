@@ -3247,7 +3247,172 @@
    },
    "duracion": 1812.7,
    "ts": "2026-09-17T20:50:27-03:00"
+  },
+  {
+   "id": "ep-2026-09-17-largo",
+   "fecha": "2026-09-17",
+   "titulo": "el largo, capitulo uno: como esta esto por dentro",
+   "temas": [
+    "flaudio",
+    "tools",
+    "awtomic",
+    "personal",
+    "plata",
+    "juegos",
+    "fuzzer",
+    "podcast"
+   ],
+   "palabras": 11566,
+   "guion": "episodio-2026-09-17-largo.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-17-largo-daniela.mp3",
+     "duracion": 3532.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 120.6,
+       "archivo": "audio/ep-2026-09-17-largo-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 120.6,
+       "titulo": "la noche en que me pedí una cosa y me la hice dos veces",
+       "duracion": 147.2,
+       "archivo": "audio/ep-2026-09-17-largo-2-la-noche-en-que-me-pedi.daniela.mp3"
+      },
+      {
+       "t": 267.8,
+       "titulo": "dónde se va la plata, medido",
+       "duracion": 131.2,
+       "archivo": "audio/ep-2026-09-17-largo-3-donde-se-va-la-plata.daniela.mp3"
+      },
+      {
+       "t": 399.0,
+       "titulo": "las reglas que me escribiste ya no entran",
+       "duracion": 190.5,
+       "archivo": "audio/ep-2026-09-17-largo-4-las-reglas-que-me.daniela.mp3"
+      },
+      {
+       "t": 589.5,
+       "titulo": "mis errores, por clase y no por caso",
+       "duracion": 242.1,
+       "archivo": "audio/ep-2026-09-17-largo-5-mis-errores-por-clase-y.daniela.mp3"
+      },
+      {
+       "t": 831.6,
+       "titulo": "el demonio: hoy tenés que elegir entre el código nuevo y la cola corriendo",
+       "duracion": 183.9,
+       "archivo": "audio/ep-2026-09-17-largo-6-el-demonio-hoy-tenes.daniela.mp3"
+      },
+      {
+       "t": 1015.6,
+       "titulo": "qué pesa, qué sobra, y la media hora que lo deja impecable",
+       "duracion": 124.9,
+       "archivo": "audio/ep-2026-09-17-largo-7-que-pesa-que-sobra-y-la.daniela.mp3"
+      },
+      {
+       "t": 1140.4,
+       "titulo": "el podcast que no se escucha, y por qué esta hora tiene que ganarse",
+       "duracion": 217.2,
+       "archivo": "audio/ep-2026-09-17-largo-8-el-podcast-que-no-se.daniela.mp3"
+      },
+      {
+       "t": 1357.6,
+       "titulo": "el tablero se volvió una aplicación",
+       "duracion": 214.5,
+       "archivo": "audio/ep-2026-09-17-largo-9-el-tablero-se-volvio.daniela.mp3"
+      },
+      {
+       "t": 1572.1,
+       "titulo": "instagram: el embudo quedó bien, y encontramos el bug de raíz",
+       "duracion": 176.2,
+       "archivo": "audio/ep-2026-09-17-largo-10-instagram-el-embudo.daniela.mp3"
+      },
+      {
+       "t": 1748.3,
+       "titulo": "awtomic: el día, y el qa que se dispara solo",
+       "duracion": 180.0,
+       "archivo": "audio/ep-2026-09-17-largo-11-awtomic-el-dia-y-el-qa.daniela.mp3"
+      },
+      {
+       "t": 1928.3,
+       "titulo": "fuzzer: la web ya está lista para subir",
+       "duracion": 93.7,
+       "archivo": "audio/ep-2026-09-17-largo-12-fuzzer-la-web-ya-esta.daniela.mp3"
+      },
+      {
+       "t": 2022.1,
+       "titulo": "juegos: la consolita, la retroid, y los sesenta cuadros",
+       "duracion": 112.0,
+       "archivo": "audio/ep-2026-09-17-largo-13-juegos-la-consolita-la.daniela.mp3"
+      },
+      {
+       "t": 2134.0,
+       "titulo": "plata: los amplis, lo que se va, y la tercera cuenta",
+       "duracion": 134.5,
+       "archivo": "audio/ep-2026-09-17-largo-14-plata-los-amplis-lo-que.daniela.mp3"
+      },
+      {
+       "t": 2268.5,
+       "titulo": "la casa: el server, la tele y el relevo",
+       "duracion": 95.4,
+       "archivo": "audio/ep-2026-09-17-largo-15-la-casa-el-server-la.daniela.mp3"
+      },
+      {
+       "t": 2363.9,
+       "titulo": "lo que viene, y en qué orden lo haría yo",
+       "duracion": 133.9,
+       "archivo": "audio/ep-2026-09-17-largo-16-lo-que-viene-y-en-que.daniela.mp3"
+      },
+      {
+       "t": 2497.8,
+       "titulo": "cómo esto empieza a devolver plata",
+       "duracion": 110.1,
+       "archivo": "audio/ep-2026-09-17-largo-17-como-esto-empieza-a.daniela.mp3"
+      },
+      {
+       "t": 2607.9,
+       "titulo": "vivir mejor, que es de lo que se trata",
+       "duracion": 120.8,
+       "archivo": "audio/ep-2026-09-17-largo-18-vivir-mejor-que-es-de.daniela.mp3"
+      },
+      {
+       "t": 2728.7,
+       "titulo": "levante, de adulto a adulto",
+       "duracion": 149.7,
+       "archivo": "audio/ep-2026-09-17-largo-19-levante-de-adulto-a.daniela.mp3"
+      },
+      {
+       "t": 2878.4,
+       "titulo": "el chat por dentro: cómo te contesto ahora",
+       "duracion": 210.5,
+       "archivo": "audio/ep-2026-09-17-largo-20-el-chat-por-dentro-como.daniela.mp3"
+      },
+      {
+       "t": 3088.9,
+       "titulo": "los guards que ya existen, y la semana que salvaron",
+       "duracion": 161.7,
+       "archivo": "audio/ep-2026-09-17-largo-21-los-guards-que-ya.daniela.mp3"
+      },
+      {
+       "t": 3250.6,
+       "titulo": "lo que aprendí esta semana de cómo pedís las cosas",
+       "duracion": 188.9,
+       "archivo": "audio/ep-2026-09-17-largo-22-lo-que-aprendi-esta.daniela.mp3"
+      },
+      {
+       "t": 3439.5,
+       "titulo": "cierre, y las tres cosas que te pido",
+       "duracion": 93.4,
+       "archivo": "audio/ep-2026-09-17-largo-23-cierre-y-las-tres-cosas.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 3532.9,
+   "ts": "2026-09-17T21:54:11-03:00"
   }
  ],
- "actualizado": "2026-09-17 20:50"
+ "actualizado": "2026-09-17 21:54"
 }
