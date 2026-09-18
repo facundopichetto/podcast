@@ -56,11 +56,6 @@ select { flex:1; font: inherit; font-size: 15px; background:var(--card); color:v
 #botones button small { display:block; font-weight: 400; font-size: 12px; color: var(--dim); margin-top: 2px; }
 #play { background: var(--acc); color: #000; border-color: var(--acc); font-size: 20px; }
 #vel { background:none; border:1px solid var(--line); color:var(--acc); border-radius:999px; font: inherit; font-size:13px; padding: 4px 12px; cursor:pointer; font-variant-numeric: tabular-nums; }
-#velfila { display:flex; align-items:center; gap:10px; margin: -4px 0 14px; }
-#velrango { flex:1; accent-color: var(--acc2); height: 28px; }
-#velpre { display:flex; gap:6px; }
-#velpre button { font: inherit; font-size:13px; background:var(--card); color:var(--dim); border:1px solid var(--line); border-radius:999px; padding: 6px 10px; cursor:pointer; }
-#velpre button.on { color: var(--acc); border-color: var(--acc); }
 h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spacing: .08em; margin: 18px 0 8px; font-weight: 500; }
 .cap { display:flex; gap: 12px; width:100%; text-align:left; background:none; border:none; border-bottom:1px solid var(--line); color:var(--fg); font: inherit; font-size: 16px; padding: 12px 4px; cursor:pointer; }
 .cap .t { color: var(--acc2); font-variant-numeric: tabular-nums; min-width: 52px; }
@@ -121,9 +116,7 @@ h2 { font-size: 13px; color: var(--dim); text-transform: uppercase; letter-spaci
   <div id="baja"><span id="bajatxt"></span><span><button id="bajar">bajar</button> <button id="autobajar">auto con wifi</button></span></div>
   <audio id="audio" preload="auto" playsinline></audio>
   <input id="barra" type="range" min="0" max="100" step="0.1" value="0">
-  <div id="tiempos"><span id="t0">0:00</span><button id="vel" title="volver a 1x">1.00x</button><span id="t1">0:00</span></div>
-  <div id="velfila"><input id="velrango" type="range" min="0.5" max="2" step="0.01" value="1" aria-label="velocidad">
-    <span id="velpre"><button data-v="1">1x</button><button data-v="1.25">1.25x</button><button data-v="1.5">1.5x</button></span></div>
+  <div id="tiempos"><span id="t0">0:00</span><button id="vel" title="velocidad">1x</button><span id="t1">0:00</span></div>
   <div id="botones">
     <button id="atras">‹ 10<small>segundos</small></button>
     <button id="play">play</button>
@@ -157,19 +150,18 @@ const audio = $('#audio');
 const VOZ = 'daniela';
 let datos = null, ep = null, voz = VOZ, caps = [], capMeta = null, pasando = false;
 let seguir = localStorage.seguir !== 'no';
-// velocidad (facundo, 2026-09-13): slider fino de 0.50x a 2.00x de a 0.01, con presets 1x / 1.25x / 1.5x,
-// recordada en `localStorage.vel`. un valor fuera de rango o roto vuelve a 1x. tocar el valor vuelve a 1x
-const VEL_MIN = 0.5, VEL_MAX = 2, VELS = [1, 1.25, 1.5];
-const velGuardada = () => { const v = Math.round(+localStorage.vel * 100) / 100; return v >= VEL_MIN && v <= VEL_MAX ? v : 1; };
+// velocidad (facundo, 2026-09-14): un solo boton que rota 1x -> 1.25x -> 1.5x -> 1x, recordado en
+// `localStorage.vel`. cualquier otro valor guardado (el slider fino de antes, o algo roto) vuelve a 1x
+const VELS = [1, 1.25, 1.5];
+const velGuardada = () => { const v = Math.round(+localStorage.vel * 100) / 100; return VELS.includes(v) ? v : 1; };
 const aplicarVel = () => {
   const v = velGuardada();
   if (audio.playbackRate !== v) audio.playbackRate = v;
   audio.defaultPlaybackRate = v;
-  $('#vel').textContent = v.toFixed(2) + 'x';
-  if (document.activeElement !== $('#velrango')) $('#velrango').value = v;
-  document.querySelectorAll('#velpre button').forEach(b => b.classList.toggle('on', +b.dataset.v === v));
+  $('#vel').textContent = v + 'x';
 };
-const fijarVel = v => { localStorage.vel = Math.min(VEL_MAX, Math.max(VEL_MIN, Math.round(v * 100) / 100)); aplicarVel(); estado(); };
+const fijarVel = v => { localStorage.vel = v; aplicarVel(); estado(); };
+const rotarVel = () => fijarVel(VELS[(VELS.indexOf(velGuardada()) + 1) % VELS.length]);
 // cuanto antes del final se engancha el siguiente: el src cambia mientras todavia suena
 const ANTES_DEL_FIN = 0.35;
 // escuchado (facundo, 2026-09-12): `visto:<id>=1` en localStorage. se marca solo al pasar el 90% o al
@@ -576,21 +568,38 @@ function metadata() {
 
 // los handlers se registran una vez y siempre actuan sobre el mismo elemento: nada que soltar al
 // pausar, asi el play de los airpods reanuda aunque haya pasado un rato.
-// airpods y lock screen (facundo, 2026-09-13, segunda vuelta): todo salto de afuera es de 10 s. doble toque
-// = `nexttrack` o `seekforward` segun lo que mande ios, los dos adelantan 10 s; triple = atrasa 10 s. los
-// capitulos quedan en la lista de la app. play/pause reanudan el MISMO elemento con la posicion al dia
+// airpods y lock screen (facundo, 2026-09-14): el doble toque salta al capitulo SIGUIENTE y el triple al
+// anterior, asi que van por `nexttrack` / `previoustrack` y `seekforward` / `seekbackward` quedan sin
+// handler: en ios le ganan al doble toque y lo dejaban en un salto de 10 s.
+// play/pause reanudan el MISMO elemento con la posicion al dia
 const SALTO_AFUERA = 10;
+// pasados estos segundos del arranque del capitulo, el triple toque vuelve al inicio de ESTE capitulo;
+// antes de eso salta al anterior (como en cualquier reproductor de musica)
+const VOLVER_AL_INICIO = 3;
+
+function irACap(i) {
+  if (!caps.length) return;
+  audio.currentTime = caps[Math.max(0, Math.min(caps.length - 1, i))].t;
+  estado(); metadata(); pintarCaps();
+}
+// sin capitulos (un episodio viejo) el salto de afuera sigue siendo de 10 s
+function capSiguiente() { caps.length ? irACap(capActual() + 1) : saltar(SALTO_AFUERA); }
+function capAnterior() {
+  if (!caps.length) return saltar(-SALTO_AFUERA);
+  const i = Math.max(0, capActual());
+  irACap((audio.currentTime || 0) - caps[i].t > VOLVER_AL_INICIO ? i : i - 1);
+}
 function acciones() {
   if (!('mediaSession' in navigator)) return;
   const h = (n, f) => { try { navigator.mediaSession.setActionHandler(n, f); } catch (_) {} };
   h('play', () => { capMeta = null; metadata(); reanudar(); estado(); });
   h('pause', () => { audio.pause(); estado(); });
   h('stop', () => { audio.pause(); estado(); });
-  h('seekbackward', () => saltar(-SALTO_AFUERA));
-  h('seekforward', () => saltar(SALTO_AFUERA));
+  h('seekbackward', null);
+  h('seekforward', null);
   h('seekto', d => { if (d && d.seekTime != null) { audio.currentTime = d.seekTime; estado(); metadata(); } });
-  h('previoustrack', () => saltar(-SALTO_AFUERA));
-  h('nexttrack', () => saltar(SALTO_AFUERA));
+  h('previoustrack', capAnterior);
+  h('nexttrack', capSiguiente);
 }
 
 function estado() {
@@ -608,10 +617,7 @@ $('#seguir').onclick =() => { seguir = !seguir; localStorage.seguir = seguir ? '
 $('#play').onclick = () => { audio.paused ? reanudar() : audio.pause(); };
 $('#atras').onclick = () => saltar(-10);
 $('#adelante').onclick = () => saltar(30);
-$('#vel').onclick = () => fijarVel(1);
-$('#velrango').oninput = () => fijarVel(+$('#velrango').value);
-$('#velrango').onchange = () => { $('#velrango').blur(); aplicarVel(); };
-document.querySelectorAll('#velpre button').forEach(b => { b.onclick = () => fijarVel(+b.dataset.v); });
+$('#vel').onclick = rotarVel;
 
 aplicarVel();
 audio.addEventListener('ratechange', estado);
