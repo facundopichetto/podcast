@@ -3220,35 +3220,6 @@
    "ts": "2026-09-17T20:46:10-03:00"
   },
   {
-   "id": "ep-2026-09-17-revision",
-   "fecha": "2026-09-17",
-   "titulo": "revisión general · a dos voces",
-   "temas": [
-    "flaudio",
-    "revisión",
-    "plata",
-    "errores",
-    "daemon"
-   ],
-   "palabras": 5425,
-   "guion": "guion.txt",
-   "voces": {
-    "daniela": {
-     "archivo": "audio/ep-2026-09-17-revision-daniela.mp3",
-     "duracion": 1812.7,
-     "capitulos": [
-      {
-       "t": 0,
-       "titulo": "revisión general · a dos voces",
-       "duracion": 1812.7
-      }
-     ]
-    }
-   },
-   "duracion": 1812.7,
-   "ts": "2026-09-17T20:50:27-03:00"
-  },
-  {
    "id": "ep-2026-09-17-largo",
    "fecha": "2026-09-17",
    "titulo": "el largo, capitulo uno: como esta esto por dentro",
@@ -3412,7 +3383,162 @@
    },
    "duracion": 3532.9,
    "ts": "2026-09-17T21:54:11-03:00"
+  },
+  {
+   "id": "ep-2026-09-17-revision",
+   "fecha": "2026-09-17",
+   "titulo": "revisión general · a dos voces",
+   "temas": [
+    "revision",
+    "costos",
+    "errores",
+    "daemon"
+   ],
+   "palabras": 5425,
+   "guion": "guion.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-17-revision-daniela.mp3",
+     "duracion": 1796.5,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "arranque",
+       "duracion": 107.7,
+       "archivo": "audio/ep-2026-09-17-revision-1-arranque.daniela.mp3"
+      },
+      {
+       "t": 107.7,
+       "titulo": "lo que se revisó y cómo",
+       "duracion": 73.2,
+       "archivo": "audio/ep-2026-09-17-revision-2-lo-que-se-reviso-y-como.daniela.mp3"
+      },
+      {
+       "t": 181.0,
+       "titulo": "la plata: la escalera ya está ganada, y no era ahí",
+       "duracion": 88.8,
+       "archivo": "audio/ep-2026-09-17-revision-3-la-plata-la-escalera-ya.daniela.mp3"
+      },
+      {
+       "t": 269.7,
+       "titulo": "el número que duele",
+       "duracion": 45.8,
+       "archivo": "audio/ep-2026-09-17-revision-4-el-numero-que-duele.daniela.mp3"
+      },
+      {
+       "t": 315.5,
+       "titulo": "cincuenta y siete mil fichas de reglas, antes de leer nada",
+       "duracion": 55.3,
+       "archivo": "audio/ep-2026-09-17-revision-5-cincuenta-y-siete-mil.daniela.mp3"
+      },
+      {
+       "t": 370.8,
+       "titulo": "la misma regla, dos veces, todos los días",
+       "duracion": 74.2,
+       "archivo": "audio/ep-2026-09-17-revision-6-la-misma-regla-dos.daniela.mp3"
+      },
+      {
+       "t": 445.0,
+       "titulo": "los errores: setenta y ocho veces",
+       "duracion": 36.5,
+       "archivo": "audio/ep-2026-09-17-revision-7-los-errores-setenta-y.daniela.mp3"
+      },
+      {
+       "t": 481.6,
+       "titulo": "clase uno: mandar algo afuera en el idioma equivocado",
+       "duracion": 117.3,
+       "archivo": "audio/ep-2026-09-17-revision-8-clase-uno-mandar-algo.daniela.mp3"
+      },
+      {
+       "t": 598.9,
+       "titulo": "clase dos: decir que está hecho cuando quedó corriendo",
+       "duracion": 64.1,
+       "archivo": "audio/ep-2026-09-17-revision-9-clase-dos-decir-que.daniela.mp3"
+      },
+      {
+       "t": 663.0,
+       "titulo": "clase tres: la regla que se guardó al revés",
+       "duracion": 80.6,
+       "archivo": "audio/ep-2026-09-17-revision-10-clase-tres-la-regla-que.daniela.mp3"
+      },
+      {
+       "t": 743.5,
+       "titulo": "clase cuatro y cinco, más rápido",
+       "duracion": 59.7,
+       "archivo": "audio/ep-2026-09-17-revision-11-clase-cuatro-y-cinco.daniela.mp3"
+      },
+      {
+       "t": 803.3,
+       "titulo": "las reglas: el formato tocó techo",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-09-17-revision-12-las-reglas-el-formato.daniela.mp3"
+      },
+      {
+       "t": 877.9,
+       "titulo": "la forma que deberían tener",
+       "duracion": 68.8,
+       "archivo": "audio/ep-2026-09-17-revision-13-la-forma-que-deberian.daniela.mp3"
+      },
+      {
+       "t": 946.7,
+       "titulo": "anticipar en vez de esperar el \"te dije quinientas veces\"",
+       "duracion": 40.7,
+       "archivo": "audio/ep-2026-09-17-revision-14-anticipar-en-vez-de.daniela.mp3"
+      },
+      {
+       "t": 987.4,
+       "titulo": "el demonio: hoy hay que elegir entre el código nuevo y la cola",
+       "duracion": 107.9,
+       "archivo": "audio/ep-2026-09-17-revision-15-el-demonio-hoy-hay-que.daniela.mp3"
+      },
+      {
+       "t": 1095.3,
+       "titulo": "partirlo en dos, por velocidad de cambio",
+       "duracion": 91.7,
+       "archivo": "audio/ep-2026-09-17-revision-16-partirlo-en-dos-por.daniela.mp3"
+      },
+      {
+       "t": 1187.0,
+       "titulo": "la estructura: siete giga, y seis son basura",
+       "duracion": 103.1,
+       "archivo": "audio/ep-2026-09-17-revision-17-la-estructura-siete.daniela.mp3"
+      },
+      {
+       "t": 1290.1,
+       "titulo": "el podcast: once horas rendidas, una escuchada",
+       "duracion": 126.5,
+       "archivo": "audio/ep-2026-09-17-revision-18-el-podcast-once-horas.daniela.mp3"
+      },
+      {
+       "t": 1416.7,
+       "titulo": "lo que sí está funcionando, para no ser injusto",
+       "duracion": 94.4,
+       "archivo": "audio/ep-2026-09-17-revision-19-lo-que-si-esta.daniela.mp3"
+      },
+      {
+       "t": 1511.1,
+       "titulo": "tres ideas que no estaban en el pedido",
+       "duracion": 121.9,
+       "archivo": "audio/ep-2026-09-17-revision-20-tres-ideas-que-no.daniela.mp3"
+      },
+      {
+       "t": 1633.0,
+       "titulo": "las apuestas",
+       "duracion": 88.9,
+       "archivo": "audio/ep-2026-09-17-revision-21-las-apuestas.daniela.mp3"
+      },
+      {
+       "t": 1721.8,
+       "titulo": "cierre",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-09-17-revision-22-cierre.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1796.5,
+   "ts": "2026-09-17T22:16:44-03:00"
   }
  ],
- "actualizado": "2026-09-17 21:54"
+ "actualizado": "2026-09-17 22:16"
 }
