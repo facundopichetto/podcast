@@ -582,8 +582,14 @@ function irACap(i) {
   audio.currentTime = caps[Math.max(0, Math.min(caps.length - 1, i))].t;
   estado(); metadata(); pintarCaps();
 }
-// sin capitulos (un episodio viejo) el salto de afuera sigue siendo de 10 s
-function capSiguiente() { caps.length ? irACap(capActual() + 1) : saltar(SALTO_AFUERA); }
+// sin capitulos (un episodio viejo) el salto de afuera sigue siendo de 10 s; despues del ultimo capitulo
+// el doble toque pasa al episodio siguiente
+function capSiguiente() {
+  if (!caps.length) return saltar(SALTO_AFUERA);
+  const i = capActual();
+  if (i >= caps.length - 1 && pasarASiguiente()) return;
+  irACap(i + 1);
+}
 function capAnterior() {
   if (!caps.length) return saltar(-SALTO_AFUERA);
   const i = Math.max(0, capActual());
