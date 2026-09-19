@@ -1,8 +1,29 @@
-# actualizado hoy a las 14:47
-actualizado hoy, martes quince, a las catorce cuarenta y siete.
+# actualizado hoy a las 04:59
+actualizado hoy, sábado diecinueve, a las cuatro cincuenta y nueve.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# lo del podcast: se fue el informe leído
+a las ocho y cuarto de la noche me dijiste una frase que me ordenó todo: querés propuestas innovadoras, y me recordaste que estás frustrado. eso cambia lo que es esto que estás escuchando. la idea de que el podcast sea un informe leído en voz alta se murió ahí. lo que viene tiene que sonar a alguien contándote algo, no a un reporte.
+
+antes de eso, a las ocho en punto, me pediste por audio que programara para las tres de la mañana una revisión general del producto entero, con opus, de investigación y análisis, sin tocar una sola línea de código, y que a la salida saliera un podcast de media hora. todo cerrado antes de las seis, porque a las ocho arrancás a laburar.
+
+después afinaste la regla que más me gustó del día: la tarea no corta por reloj, corta por gasto. el techo es el semanal al setenta y cinco por ciento de la cuenta que la esté corriendo, y ese setenta y cinco incluye el podcast. o sea que antes de llegar ahí ya tiene que estar escribiendo el guion y renderizando, no investigando todavía. y a las ocho y doce lo cerraste todavía más fino: el cierre arranca en setenta y cuatro y que use lo que necesite, sin tope de gasto aparte.
+
+también apareció un problema de los episodios viejos. el render de la revisión había corrido sin la opción de conservar y había dejado los veinte episodios anteriores marcados como ocultos, así que la web mostraba solo el último. eso quedó arreglado a las nueve menos cuarto de la noche: los veinte volvieron a la vista, nada se había borrado en ningún momento, era solo una marca mal puesta.
+
+# el away natural de slack y la presencia que ya no depende del agente
+a las tres menos cinco de la tarde me trajiste una regla nueva y bastante fina: querés empezar a poner unos away naturales durante el día. si te quedás away de verdad, te dejo away entre uno y seis minutos, y solo las primeras tres veces del día. hiciste vos mismo la cuenta y da: entre cero y dieciocho minutos de away real por día como tope teórico, y si los tramos salen cortos, mucho menos.
+
+lo implementé como lo dijimos: cuando tu presencia real cae a away, no tapo enseguida, dejo el hueco visible un rato al azar entre uno y seis minutos y recién ahí empiezo a tapar, y eso solo con las tres primeras del día. a las tres y un minuto quedó cerrado el cambio del script de presencia: ya no tapa toda caída a away. cómo se detecta es lo interesante, porque slack no da gran cosa: dentro de la ventana del día mira las conexiones tuyas restándole la nuestra, y cuando eso llega a cero, tus dispositivos se fueron. es el único dato que hay, porque la última actividad no viene en la api.
+
+y hay una segunda mitad de esto que también quedó lista: la presencia de slack ya no depende del agente. corre en un servicio propio, con reinicio automático, instalado con revert automático como manda la regla. o sea que si el agente se reinicia o se cae, tu presencia sigue igual. hubo un momento de madrugada, cerca de las cinco menos veinte, donde el respaldo vio que el agente volvía a dar señales de vida y le devolvió la presencia sin que se notara nada.
+
+# el freno de horario laboral se fue del todo
+esto viene de algo que te venía molestando y quedó cerrado en dos pasos. a las tres menos seis de la tarde terminó la corrección amplia: las cinco partes hechas y verdes, y el horario ya no frena nada. las dos funciones que decidían si estabas en horario laboral y si eso tenía que frenar una tarea devuelven que no, siempre, con el motivo y la fecha anotados en el código para que se entienda por qué.
+
+a las tres y dieciocho se cerró la parte que faltaba, que no era código sino las reglas y la verificación. el freno de horario quedó apagado también en la configuración, con backup del archivo anterior por las dudas. o sea que ninguna tarea que use el navegador se va a quedar esperando a que se haga de noche. el navegador corre en el server, en su pantalla virtual, y no te toca nada de lo que estés haciendo vos.
 
 # la limpieza de instagram, lo que salió mal y lo que salió bien
 arranco por lo que te molestó a las ocho menos cinco, porque es lo más importante del rato. me preguntaste qué pasó que no había dejado de seguir a los que habíamos acordado. la respuesta era fea: cero de veinticinco. cuando entraron tus votos, la sesión de instagram del server estaba vencida. el script pedía la lista y en vez de datos volvía una página web, así que no se hizo ningún dejar de seguir y quedó todo frenado ahí. eso te lo tendría que haber avisado como bloqueado en el momento, no metido al final de un informe. queda anotado así.
@@ -32,6 +53,59 @@ preguntaste si tengo acceso a retool. sí: la sesión quedó guardada anoche a l
 después me mandaste un ejemplo rápido de cómo tenían que quedar los parámetros, y lo que faltaba eran los números reales y poner algo que se entienda que es gratis en lugar del texto de porcentaje por transacción. lo que pide el ticket es simple: mensualidad y transacción gratis para siempre, tarjeta guardada gratis y acceso al nivel profesional. lo dejé escrito en el orden de tu captura, con el nombre del plan gratis de lafayette y la línea de cero por mes y cero por ciento por transacción, y el número grande que sale del ejemplo lo dejé igual.
 
 a las nueve menos diez vino el ok y algo más: crear el plan con esos datos y después ir a dynamo a mirar cómo quedó. ahí anticipaste el problema que siempre aparece, que algunos campos que son números se guardan como texto. así que la tarea crea el plan, verifica que quedó, y después entra a dynamo solo a leer: te trae el item tal cual está, campo por campo con su tipo, y marca los que tienen el tipo equivocado. nada de escribir en dynamo sin pasarte el detalle antes.
+
+# las dos últimas conversaciones de instagram, y tu mamá
+a las tres y un minuto me pediste que leyera tus dos últimas conversaciones de instagram para ver qué escribís. te di las dos últimas que tenía bajadas: una con marta, donde el último mensaje era tuyo, el chiste del davo xeneize, y ella solo le puso like veinte minutos después, o sea pelota tuya y charla en punto muerto. y otra con judy, que te mandó dos reels con caritas de corazón y no contestaste ninguno.
+
+dos minutos después me aclaraste lo que yo no podía saber: marta es tu mamá y judy una señora con la que trabajabas hace mil años. te reíste y me dijiste que las saque de la lista, que te referías a las dos últimas literalmente. las dos quedaron excluidas: no aparecen más ni en candidatas ni en ningún borrador de mensaje. no toqué los hilos.
+
+de ahí salió una idea tuya que me gustó. me contaste que tu mamá a veces te pide por whatsapp que le pidas un uber, y que vos siempre se lo pedís, y que quizás se pueda automatizar: que yo lea cuando te lo pide, te pregunte acá si confirmo, y con tu ok lo pida. te dije que sí se puede pero con navegador, porque uber cerró su interfaz de pedidos a terceros, así que va sí o sí por la versión móvil de la web en el chrome del server con tu sesión abierta. la parte de whatsapp ya la tengo resuelta. elegiste encolar primero la investigación técnica: login en el chrome del server, sin pedir nada real, y te vuelvo con qué se puede automatizar limpio y qué no, incluyendo si hay tarjeta guardada y si se puede ver el precio estimado antes de confirmar.
+
+# el texto libre del votador que no sabía a quién pertenecía
+hubo un bug en las tarjetas de instagram que se cerró a las tres y once. cuando escribías un texto libre en el modal, ese texto se guardaba sin referencia a la candidata que estabas mirando. o sea que quedaban comentarios tuyos sueltos, sin dueño, y después no había manera de saber de quién hablabas. eso quedó arreglado.
+
+y enseguida, encadenado, se resolvió un caso puntual: tu cuarto texto en ese modal decía que no sabías quién era, que no veías su foto y que después vemos. eso no es una exclusión y no había que tratarlo como tal. quedó registrado como pasar, sin decidir, y la tarjeta se quedó en el embudo tal cual estaba.
+
+# dejarte solo, y la tarea que dijo que seguía y no seguía
+a las cuatro menos diez me preguntaste algo directo: si podías dejarme solo y te aseguraba que iba a terminar todo lo que me habías pedido. te dije que sí, y te di el estado real: tres tareas con proceso vivo y ninguna esperando atrás. las tarjetas del modal de instagram, el plan de recorte, y el arreglo de la cola con el loop de mejora que le habías sumado recién.
+
+lo que no te pude asegurar en ese momento fue el guard que reintenta y destraba la cola solo, porque no estaba corriendo.
+
+me preguntaste qué era recorte, porque el nombre no decía mucho. es la tarea que salió cuando, por los errores del día, elegiste pausar todo lo autónomo salvo el chat y las tarjetas, y armar un plan para achicar. no borra ni recorta nada: propone, y lo ves antes de que se toque algo. lo que sí aplicó fue dejar en pausa los scripts que generan trabajo o avisos solos.
+
+y ahí vino la parte fea: esa misma tarea falló. cerró diciendo que seguía corriendo y no quedó ningún proceso vivo. eso es exactamente lo que el detector de trabajo a medias está para cazar, y lo cazó: se marcó como trabajo a medias, no como terminada.
+
+# la retroid, y los sesenta cuadros en las pesadas
+cerca de las ocho menos diez de la noche apareció la consola. la chiquita, la de mu os, está a mitad de camino: el backup del sistema está hecho y verificado, pero la tarjeta que estaba enchufada era la del sistema y la partición de juegos estaba vacía, así que todavía no hay índice. te dije que sacaras esa tarjeta tranquilo, que ninguna partición estaba montada y ya había sincronizado, y quedaste en enchufar la de los juegos.
+
+la buena noticia fue la retroid: quedó autorizada. aceptaste el cartel de depuración por usb y eso destrabó todo lo que estaba esperando ese ok.
+
+después me mandaste un audio pidiendo que optimice la retroid al máximo con la librería que ya tenemos: que cada juego abra, mirando los distintos formatos, y que los pesados anden bien. te propuse el plan y elegiste el orden vos: primero los sesenta cuadros por segundo en las pesadas, que es lo que más se nota, y el resto en la orden siguiente. eso arrancó cuando se liberó la cola y quedó cerrado más tarde, junto con una investigación de optimización que se rehizo usando la receta de búsqueda web propia, esquivando las fuentes que estaban bloqueadas.
+
+# awtomic: penfolds, hafner, hall y una regla tuya sobre el estado
+del lado de awtomic el rato tuvo tres cosas. la primera es penfolds, el de la personalización de la página de producto de vino, que se cerró a las dos y veinte de la tarde: el live cambió después de que habíamos hecho la copia. le agregaron un botón de suscripción que lee un campo personalizado con la url de alta del plan de vinos, y ese campo está vacío en los seis productos del plan, y además apagaron el selector de variantes y el precio.
+
+a las cinco menos cuarto me preguntaste en qué estábamos con awtomic y te di los tres temas abiertos de nuestro lado, más los que esperan a emily. de hafner, el formulario de alta, la revisión nueve está en la copia y verificada a las dos menos diez: se ve la preferencia de vino con su precio, el precio cambia al tildar rosé, y en la versión de blancos y rosados no aparece el checkbox. o sea, hizo lo que pidió emily. lo que falta ahí es decisión tuya: qué hacemos con la falla del redirect del login, donde la preferencia se pierde al volver, y si va al live.
+
+de hall, las ventanas del club de vinos del último trimestre: hay que cambiar el período en que los clientes pueden editar su membresía, todas abren el veintiuno y cada una cierra en una fecha distinta. adrian quedó en pedirle esas fechas al equipo de hall y lo marcó en espera, así que ahí no tocamos nada.
+
+y entre medio me dejaste una regla que ya quedó adentro: cada vez que actualizamos el estado, se actualiza el estado. si en el chat aparece un dato nuevo, el archivo se corrige en el momento y no queda para después.
+
+# los mails de fuzzer y cómo se contesta ahora
+quedó una regla nueva de tono para los mails. cuando contesto un mail de fuzzer, el label no va al principio: el mensaje termina con una línea en blanco y la firma al final. y si nos escriben con copia, siempre respuesta a todos, nunca solo al que escribió. además cambia la frase: en vez de decir que lo encolo, va un dale, lo veo y les respondo, y si ya tengo la respuesta, va la respuesta directo.
+
+de contenido, lo que quedó abierto es el flyer del salón de noviembre. santi pasó la data y lo importante es lo que le pediste pedirle: dos o tres fotos de los flyers que le gustan puntualmente, porque si solo comparte cuentas enteras, esto termina raspando mil posteos, tratando de adivinar cuál es un flyer y eligiendo todos. el tema fuzzer sigue en pausa hasta que vos lo levantes.
+
+# la madrugada, y la votación que no abría
+el tramo de la madrugada fue casi todo movimiento interno. hay una cosa que se repitió toda la noche y conviene que sepas: fable está prohibido, así que todo salió con opus, tanto el chat como los reintentos. eso es la regla que pusiste, funcionando.
+
+a las cinco menos veinte el cerrador dejó su cuenta: once cosas hechas, una reencolada, ninguna trabada y tres sin verificar. las tres sin verificar son las que hay que mirar.
+
+dos minutos después apareció el único aviso que sí pedía algo tuyo: el archivo de votaciones estaba trabado hacía casi quince minutos con tres votaciones de instagram abiertas al mismo tiempo, las de arrepentirse, dejar de seguir y el quizás. el board no podía abrir la votación, así que eso salió como bloqueado y con push a tu celular, que es exactamente para lo que está ese canal.
+
+también se cayeron las dos remotas de la mac, las dos cuentas, con el servicio inactivo. el aviso de la primera salió, el de la segunda no se reenvió porque era el mismo texto dentro de la ventana de repetidos. se levantan a mano cuando la mac esté disponible.
+
+y a las cinco menos trece hubo algo bueno y silencioso: el token de autenticación estaba vencido y se refrescó solo con una llamada mínima, sin cortar nada ni pedirte un login. eso antes era una caída.
 
 # slack y las votaciones de animaciones
 a las ocho y doce preguntaste si ya estabas en slack y desde cuándo. sí, online desde las ocho y cuatro, hora de buenos aires, sostenido por el script de presencia. el horario sorteado para hoy llega hasta las seis y veintitrés de la tarde, y el último chequeo había dado bien un minuto antes de que preguntes.
