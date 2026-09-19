@@ -1,8 +1,34 @@
-# actualizado hoy a las 04:59
-actualizado hoy, sábado diecinueve, a las cuatro cincuenta y nueve.
+# actualizado hoy a las 13:22
+actualizado hoy, sábado diecinueve, a las trece veintidós.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el votador de una lista: tocar y arrancar a votar
+a las nueve y veinte me marcaste algo del board que estaba mal pensado: el votador de la lista no es continuo. si tocás una lista en la vista de instagram, lo que tiene que abrirse es el votador de esa lista, para ir moviendo con el dedo de derecha a izquierda y cerrar con enviar o cancelar. la grilla de gente, la que estaba hasta ahora, queda solo para cuando tocás una persona en particular.
+
+te devolví el entendimiento con detalle, porque la orden anterior había mandado justo lo contrario, y vos elegiste la opción a: la lista abre el votador filtrado a esa lista, el swipe va de derecha a izquierda, la flecha vuelve, y el cierre son las dos cosas de siempre, el enviar del pie y la equis como cancelar.
+
+a las diez y un minuto quedó hecho. tocar una lista abre el votador continuo de esa lista, con swipe. tardó treinta y nueve minutos y salió con opus por chrome. la grilla de gente sigue viva como plan b, para la persona suelta.
+
+# super candidatas: el scoring, y por qué la lista era tan chica
+a las diez y diecisiete preguntaste en qué había quedado la lista de super candidatas. quedó en el estudio del patrón, terminado esa misma madrugada: un capítulo escrito de doscientas treinta y dos líneas y el filtro andando con su prueba en verde. la muestra de referencia son las dieciséis cuentas que ya están en activa.
+
+te ofrecí encolar el scoring sobre el universo limpio y devolverte el top ordenado con el porqué de cada una, y dijiste que sí.
+
+después vino la pregunta buena: por qué la lista es de quinientas treinta y tres y no de más. la respuesta es que quinientas treinta y tres no es el universo de instagram, es la lista candidata del embudo. corrí el resumen en el momento: la lista tiene quinientas treinta y cuatro, el universo queda en quinientas treinta y tres, y una se cae porque te sigue. y esa lista se llena sola con un tope, el barrido mete quinientas nuevas recién cuando baja de cierto piso.
+
+elegiste la b: subir el tope del barrido para que la lista candidata se llene hasta dos mil, así el próximo scoring sale sobre una tanda mucho más grande. a las diez y veinticuatro se encoló el scoring sobre el universo limpio, y cerró en seis minutos.
+
+# el tinder que quedaba tapado por la barra de arriba
+a las once menos nueve me dijiste que las vistas de tinder tienen la parte de arriba cortada, que queda por detrás de la barra superior. fui a buscar la causa y no era un misterio: la cabecera de la home de instagram es una capa de alto cero superpuesta a la grilla, y la grilla abajo no le deja nada de aire. o sea que la primera fila de tarjetas se dibuja justo debajo de la equis y queda tapada por la barra de iconos.
+
+como es un cambio de diseño del board, te di las dos lecturas posibles del arreglo antes de encolar nada, y confirmaste la a: la vista arranca debajo de la barra, y la cabecera cuelga hacia abajo con su equis en la esquina, en vez de quedar pisando el borde de arriba.
+
+# el widget de la cola mostraba data vieja, y no era culpa del server
+en el mismo mensaje soltaste algo que venía molestando: el widget de la cola no parece estar siempre actualizado, y no tiene sentido poner un contador con segundos si lo que muestra es data vieja. la pregunta que hiciste es la correcta: cómo se actualiza sin contadores rompiendo las bolas todo el tiempo.
+
+encontré la causa exacta y no es que el server tarde. el widget pide la cola solamente si hay red local. vos entrás desde la mac por internet, así que ese pedido cada dos segundos nunca sale. el contador corre igual, pero está contando sobre algo que no se refrescó nunca. eso explica por qué los segundos se ven lindos y los datos no.
 
 # lo del podcast: se fue el informe leído
 a las ocho y cuarto de la noche me dijiste una frase que me ordenó todo: querés propuestas innovadoras, y me recordaste que estás frustrado. eso cambia lo que es esto que estás escuchando. la idea de que el podcast sea un informe leído en voz alta se murió ahí. lo que viene tiene que sonar a alguien contándote algo, no a un reporte.
@@ -65,6 +91,34 @@ de ahí salió una idea tuya que me gustó. me contaste que tu mamá a veces te 
 hubo un bug en las tarjetas de instagram que se cerró a las tres y once. cuando escribías un texto libre en el modal, ese texto se guardaba sin referencia a la candidata que estabas mirando. o sea que quedaban comentarios tuyos sueltos, sin dueño, y después no había manera de saber de quién hablabas. eso quedó arreglado.
 
 y enseguida, encadenado, se resolvió un caso puntual: tu cuarto texto en ese modal decía que no sabías quién era, que no veías su foto y que después vemos. eso no es una exclusión y no había que tratarlo como tal. quedó registrado como pasar, sin decidir, y la tarjeta se quedó en el embudo tal cual estaba.
+
+# el historial del chat ya distingue los días
+a las diez y veintidós, en dos pestañas distintas, me marcaste lo mismo: los mensajes del chat tienen hora y está bien, pero si son de otro día, en el historial, no se entiende de cuándo son. hace falta la fecha en formato día barra mes antes de la hora.
+
+te di dos opciones y fuiste por la b: fecha en los mensajes de otro día, más una línea separadora de día en el hilo. a las diez y treinta y siete quedó terminado, catorce minutos. en el mensaje, todo lo que no es de hoy sale con la fecha adelante de la hora, y lo de hoy queda exactamente como estaba, solo la hora. entre día y día se dibuja una línea separadora.
+
+# la retroid: la collection high performance quedó armada en el aparato
+a las nueve y dieciséis preguntaste cómo había salido lo de los juegos, y salió bien: la tanda cerró a las tres menos cuatro de la mañana y la lista candidata quedó ampliada con vita y dreamcast. en vita se midieron los cuarenta y uno, veintiocho a velocidad plena y seis que no bootean, que son downwell, olliolli, txk y los steamworld; ahí falla el emulador, no el juego. en dreamcast se midieron los setenta y cuatro, sesenta a velocidad plena y ninguno que no arranque.
+
+después te ofrecí dos caminos, mandarte las tandas por consola para que fueras tachando, o armar la collection entera y que sacaras desde el aparato lo que no te cerrara. primero dijiste las dos, y al minuto te arrepentiste de la primera: solo la segunda, nada de tandas por el chat. antes de encolar te avisé que eso sí toca la tarjeta, porque crea la collection y escribe en ella.
+
+alcancé a mandarte la primera de las seis tandas, la de ps2, cuarenta juegos: veintinueve van a sesenta clavados, y el resto corren a treinta de fábrica, que es como salieron en la consola original, no es que renqueen.
+
+a las nueve y veintiuno quedó creada y verificada en la retroid, en tres minutos. entraron todas, ninguna quedó sin matchear y ninguna ruta hubo que inventarla. no se borró ni se movió ningún rom y no se sacó nada de las otras ocho listas. un rato después quedó también el archivo de la collection custom en la tarjeta, con sus ciento cuarenta y nueve líneas, una ruta absoluta por rom, y cada ruta chequeada una por una contra la tarjeta.
+
+a las nueve y veintiséis preguntaste si ya podías sacar la consola y jugar. sí, no había nada tocando el aparato.
+
+# tu presencia en slack de ayer
+a las nueve y veinticuatro quisiste saber solamente una cosa: tu presencia en slack de ayer. el viernes figuraste activo de ocho de la mañana a seis y nueve de la tarde, con cuatro cortes cortos a la vista, uno a las ocho y media, otro cerca de las once menos veinte, otro al mediodía y otro poco después. antes de las ocho y después de las seis y nueve, away.
+
+antes de eso habías pedido el slack de ayer en general, y ahí lo que hay es poco: el token solo ve el mensaje directo con brian, y de ayer no hay nada. lo último es del martes al mediodía, vos contestándole lo de tower garden, que te lo reasignó, y lo del ticket de revisión de seguridad que estaba quemando tokens entre los dos agentes. si lo de ayer era en un canal, con estos permisos no lo veo.
+
+# lo que se movió en el agente al mediodía
+cerca de la una y cuarto hubo un rato movido con el reparto de modelos. el candado está puesto: fable está prohibido hasta que vos lo habilites, así que todo lo que pedía fable salió con opus, y quedó anotado una y otra vez, en el chat, en las tablas de los temas y en el respaldo del chat. la única excepción que se registró fue una donde el tag fable venía literal y ahí manda lo que vos pedís, aunque empuje a fable por encima del semanal.
+
+también salieron dos avisos. uno de la cola de instagram, cinco lecturas seguidas que fallaron por timeout. el otro aclarando que un aviso anterior del mediodía sobre la sesión de instagram no era lo que parecía: el html del home es un freno de lectura, no una sesión muerta.
+
+y hubo dos intentos de entrar al chat por la red de casa con un token rechazado, porque no es el del dueño del buzón. quedaron anotados los dos, sin pasar.
 
 # dejarte solo, y la tarea que dijo que seguía y no seguía
 a las cuatro menos diez me preguntaste algo directo: si podías dejarme solo y te aseguraba que iba a terminar todo lo que me habías pedido. te dije que sí, y te di el estado real: tres tareas con proceso vivo y ninguna esperando atrás. las tarjetas del modal de instagram, el plan de recorte, y el arreglo de la cola con el loop de mejora que le habías sumado recién.

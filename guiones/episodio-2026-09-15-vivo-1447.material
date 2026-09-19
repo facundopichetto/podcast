@@ -186,3 +186,70 @@ lo que hablo facundo en la pestaña:
 - 04:55 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
 - 04:57 aviso despachado: 2026-09-19 04:57 [info] hay margen de tokens: 2 pendientes en sueltos (18/09 1:1
 - 04:58...
+
+### tramo 04:59-13:22 (hecho)
+## [personal] lo que se hizo en personal
+lo que hablo facundo en la pestaña:
+- 09:20 facundo: el votador de la lista no es continuo! tiene que poder mover de derecha a izquierda y enviar o cancelar si toco en votar la lista. la vista que hay ahora esta ok si toco en una persona en particular / claudio: entendí: en instatinder, tocar una lista tiene que abrir el votador de ESA lista (swipe de derecha a izquierda, con enviar o cancelar), no la grilla de gente; la vista de gente actual queda solo para cuando tocás una persona. Dicho con más detalle, para que el ok sea sobre algo concreto: hoy la 2095 mandó que la lista...
+- 09:22 facundo: A: la lista abre el votador filtrado, swipe de derecha a izquierda, ← para volver, y el cierre es el enviar del pie más la ✕ de la 2002 como cancelar / claudio: dale, va con la A.
+- 10:01 facundo: (tarea listavotador: tema personal: (sigue a la 2095 {instatinder}) en la vista instatinder del boa) / claudio: terminó listavotador (opus, chrome, cuenta facundo (opus), 39 min, $9.97): [personal] Listo: tocar una lista en instatinder abre el votador continuo de ESA lista, con swipe. Cómo funciona hoy: el toque en la tarjeta de una lista va a [lisTocar](/home/agente/.claudio/tools/agente/web/index.html) (index.html:5113 →...
+- 10:17 facundo: en que quedó la lista de super candidatas ? / claudio: quedó en el estudio del patrón, terminado hoy a la madrugada. el capítulo está escrito en [patron-super-candidatas.md](/home/agente/.claudio/personal/patron-super-candidatas.md), 232 líneas, y el filtro vive en ig_super.py con su prueba verde. lo que dice: la muestra de referencia son las 16 cuentas de activa más...
+- 10:18 facundo: A: encolo el scoring sobre las de verificar mvp-5949 assignee alex perez portal y te devuelvo el top ordenado con el porqué de cada una / claudio: dale, va con la A.
+- 10:19 facundo: por que la lista es de la de verificar mvp-5949 assignee alex perez portal y no de mas ? / claudio: porque 533 no es el universo de instagram, es la lista candidata del embudo, que hoy tiene 534 (una se cae porque te sigue). corrí ig_super.resumen() recién: candidata: 534 · universo: 533 · descartadas: te sigue 1. y esa lista se llena sola con un tope: el barrido mete 500 nuevas recién cuando baja de la de urgente facundo dio ok a publicar (la regla...
+- 10:20 facundo: B: subo el tope del barrido para que candidata se llene a 2.000 y el próximo scoring salga sobre una tanda más grande / claudio: dale, va con la B.
+- 10:24 facundo: (tarea scoring: tema personal: aplicar el scoring de super candidatas sobre el universo limpio y) / claudio: terminó scoring (opus, chrome, cuenta facundo (opus), 6 min...
+
+## [juegos] lo que se hizo en juegos
+lo que hablo facundo en la pestaña:
+- 09:16 facundo: y rntonces ? / claudio: terminó todo bien: la tanda cerró a las 2:56 am y la lista candidata ya quedó ampliada con vita y dreamcast. vita: 41/41 medidos, 28 a velocidad plena, 6 que no bootean (Downwell, OlliOlli, TxK y los SteamWorld: falla el build de Vita3k, no el juego). dreamcast: 74/74, 60 a velocidad plena, ninguno que no arranque. de...
+- 09:16 facundo: A: te mando los de interceptar los atajos con command acá en tandas por consola para que vayas tachando / claudio: tanda 1 de 6: ps2, 40 juegos. los 1 al 29 van a 60 clavados, los 30 al 38 y el 40 son juegos que corren a 30 de fábrica (así salieron en la ps2, no es que renqueen). a 60 fps: 1. Metal Gear Solid 3 Snake Eater 2. Metal Gear Solid 2 Substance 3. Devil May Cry 3 Special Edition 4. Jak II 5. Jak 3 6. Ratchet & Clank Up...
+- 09:17 facundo: A y B: te mando los de interceptar los atajos con command acá en tandas por consola para que vayas tachando / armo la collection con los de interceptar los atajos con command enteros y después sacás lo que no te cierre desde el aparato / claudio:
+- 09:17 facundo: me arrepentí: A: te mando los de interceptar los atajos con command acá en tandas por consola para que vayas tachando / claudio: entendí: te arrepentiste de la A, así que queda solo la B: armo la collection high performance con los de interceptar los atajos con command enteros en la retroid, y después sacás desde el aparato lo que no te cierre. Nada de tandas por acá. Dos cosas antes de encolar, para que no haya sorpresa: - esto sí toca la tarjeta (crea la collection y escribe...
+- 09:21 facundo: (tarea collectionhp: tema juegos: crear en la Retroid Pocket 5 (conectada por adb) la collection hig) / claudio: terminó collectionhp (opus, cuenta facundo (opus), 3 min, $2.27): Listo: la collection quedó creada y verificada en la retroid. Entraron las de interceptar los atajos con command de la de interceptar los atajos con command — ninguna quedó sin matchear y ninguna ruta hubo que inventarla. No se borró ni se movió ningún rom, y no se sacó nada de las otras 8 listas: high performance solo...
+- 09:23 facundo: (tarea collection: tema juegos: crear en la Retroid Pocket 5 una collection custom llamada high pe) / claudio: terminó collection (opus, cuenta facundo (opus), 6 min, $2.87): Listo, la collection quedó creada en la retroid y verificada en el aparato. custom-high performance.cfg está en /storage/6820-BA69/ESDE/collections/ con las 149 líneas, una ruta absoluta por rom. Las de interceptar los atajos con command rutas existen en la tarjeta (chequeo una por una...
+- 09:26 facundo: ya puedo sacar la consola y jugar ? que mas nos queda ? / claudio: sí, sacala y jugá tranquilo: no hay nada tocando el aparato. lo...
+
+## [tools] lo que se hizo en tools
+lo que hablo facundo en la pestaña:
+- 10:22 facundo: os mensajes del chat tienen hora, está bien. pero si son de otro día que no es hoy (en el historial, ejemplo si veo una pestana de ayer), / claudio: entendí: en el historial del chat, un mensaje de otro día tiene que mostrar la fecha dd/mm antes de la hora; los de hoy siguen solo con la hora. esto toca el board (cómo se pinta el hilo), así que va a la cola. OPCION A: 19/09 2:45 am en el mensaje viejo, y los de hoy quedan igual (solo hora) OPCION B: además una...
+- 10:22 facundo: B: además una línea separadora de día en el hilo (ayer, 18/09) y los mensajes siguen solo con hora / claudio: dale, va la B: fecha dd/mm en los mensajes de otro día, más una línea separadora de día en el hilo.
+- 10:37 facundo: (tarea dia: tema tools: en el board (/home/agente/.claudio/tools/agente/web/), el historia) / claudio: terminó dia (opus, cuenta facundo (opus), 14 min, $3.60): Listo. El historial del chat ya distingue los días, las dos cosas de tu B. En el mensaje: selloMsg pone 18/09 11:00 pm en todo lo que no es de hoy; los de hoy quedan exactamente como estaban, solo 2:45 am. Entre día y día, sepDias mete una línea .diasep con el...
+- 10:51 facundo: las vistas de tinder tienen cortada la parte superior. queda por detras de la "barra" superior. corregi eso / claudio: miré el board y la causa está en el css: en la home de instatinder la cabecera es una capa de alto 0 superpuesta a la grilla (estilos.css:1266, .seltit en position:absolute con height:0), y abajo #sellistas va con padding-top:0 (línea 1269). O sea: la fila de arriba de las tarjetas se dibuja justo debajo de la ✕ y de...
+- 10:51 facundo: el widget de la cola no pareciera estar siempre actualizado.. no tiene sentido poner contador con segundos si muestra data vieja. como se puede actualizar sin poner contadores que esten todo el tiempo rompiendo las bolas? / claudio:
+- 10:52 facundo: > flaudio 10:51 am: miré el board y la causa está en el css: en la home de instatinder la cabecera es una capa de alto 0 superpuesta a … > es un cambio de diseño en el board, así que va a la cola. antes de encolar, dos lecturas posibles del arreglo: A: la vista arranca debajo de... / claudio: primero el tinder: confirmado, va la A. sobre el widget de la cola, encontré la causa exacta y no es que el server tarde: el widget solo pide cola.json si hay lan (web/widgets/agent.js:153, if(... !B.lan() ...) return). vos entrás desde la mac por internet, así que ese pedido de 2 s nunca...
+
+## [awtomic] lo que se hizo en awtomic
+lo que hablo facundo en la pestaña:
+- 09:23 facundo: slack de ayer / claudio: en slack solo veo el dm con brian (los scopes del token son de dm nomás: im:history, im:read), y ahí de ayer no hay nada: lo último es del 16/09 1:55 pm, vos contestándole lo de tower garden (te lo re-asignó a vos) y lo de [el ticket de ai safety review how much damage]( quemando tokens entre los dos agentes. si lo de ayer era en un canal (cx, general, un...
+- 09:24 facundo: solo quiero saber mi presencia en slack ayer / claudio: ayer (jueves 18/09) en slack figuraste activo de 8:00 am a 6:09 pm, con 4 cortes cortos a la vista: 8:29–8:31, 10:40–10:44, 11:52–12:01 y 12:46–12:50. antes de las 8 y después de las 6:09 pm, away. de los de correccion del contador de tiempo chequeos del día, 489 dieron active; en 516 tu propio cliente estaba conectado (o sea, buena parte fue...
+
+## [fuzzer] lo que se hizo en fuzzer
+lo que hablo facundo en la pestaña:
+- 10:22 facundo: también debería antes de la hora incluir la fecha en formato dd/mm / claudio: entendí: en el historial del chat, un mensaje de otro día tiene que mostrar la fecha dd/mm antes de la hora; los de hoy siguen solo con la hora. esto toca el board (cómo se pinta el hilo), así que va a la cola. OPCION A: 19/09 2:45 am en el mensaje viejo, y los de hoy quedan igual (solo hora) OPCION B: además una...
+
+## [log] movimiento del agente
+- 13:16 fable prohibido: sale con opus: [fable] x
+- 13:16 fable prohibido: sale con opus: tema tools: [fable] x
+- 13:16 fable prohibido: sale con opus: x
+- 13:16 modelo por % []: fable sin tag literal baja a opus en orugote (brecha +2, fable nunca por encima de week): tema tools: y
+- 13:16 modelo por % []: fable literal empuja fable por encima de week en orugote (brecha +2): facundo manda: tema tools: y (de chat)
+- 13:17 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 13:17 fable prohibido: sale con opus: x
+- 13:17 fable prohibido: sale con opus: [fable] tema tools: x
+- 13:17 fable prohibido: sale con opus: [fable] tema tools: x
+- 13:17 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 13:17 [respaldo-chat] fable prohibido: sale con opus [respaldo_chat]
+- 13:17 [respaldo-chat] fable prohibido: sale con opus [respaldo_chat]
+- 13:17 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 13:17 fable prohibido: sale con opus [chat:tag]: [fable] hola
+- 13:17 fable prohibido: sale con opus [chat:modo fable]: hola
+- 13:17 fable prohibido: sale con opus [chat:tabla tools]: hola
+- 13:17 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 13:18 aviso despachado: cola de instagram: 5 lectura seguidas fallaron (último @marialujan_santos: Timeo
+- 13:19 aviso despachado: 2026-09-19 13:20 [info] instagram (2141 {sesionig}): el aviso de las 12:13 estab
+- 13:20 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+- 13:20 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 13:20 chat lan: token rechazado (no es del duenio del buzon)
+- 13:21 fable prohibido: sale con opus [chat:tabla juegos]: 1 el out run de pickup and play se arrastra. arreglalo, reemplazalo o sacalo
+- 13:21 chat lan: token rechazado (no es del duenio del buzon)
+- 13:21 fable prohibido: sale con opus [chat:tabla tools]: como viene sesionig?

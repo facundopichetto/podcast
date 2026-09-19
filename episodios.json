@@ -9,7 +9,7 @@
   {
    "id": "ep-2026-09-15-vivo-1447",
    "fecha": "2026-09-15",
-   "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 04:59",
+   "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 13:22",
    "temas": [
     "audio",
     "awtomic",
@@ -24,120 +24,168 @@
     "server",
     "tools"
    ],
-   "palabras": 4093,
+   "palabras": 5566,
    "guion": "episodio-2026-09-15-vivo-1447.txt",
    "voces": {
     "daniela": {
      "archivo": "audio/ep-2026-09-15-vivo-1447-daniela.mp3",
-     "duracion": 1197.4,
+     "duracion": 1610.0,
      "capitulos": [
       {
        "t": 0.0,
-       "titulo": "actualizado hoy a las 04:59",
-       "duracion": 3.8,
+       "titulo": "actualizado hoy a las 13:22",
+       "duracion": 3.4,
        "archivo": "audio/ep-2026-09-15-vivo-1447-1-actualizado-hoy-a-las.daniela.mp3"
       },
       {
-       "t": 3.8,
+       "t": 3.4,
        "titulo": "de que va",
-       "duracion": 23.9,
+       "duracion": 23.8,
        "archivo": "audio/ep-2026-09-15-vivo-1447-2-de-que-va.daniela.mp3"
       },
       {
-       "t": 27.6,
+       "t": 27.2,
+       "titulo": "el votador de una lista: tocar y arrancar a votar",
+       "duracion": 51.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-3-el-votador-de-una-lista.daniela.mp3"
+      },
+      {
+       "t": 79.0,
+       "titulo": "super candidatas: el scoring, y por qué la lista era tan chica",
+       "duracion": 65.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-4-super-candidatas-el.daniela.mp3"
+      },
+      {
+       "t": 144.9,
+       "titulo": "el tinder que quedaba tapado por la barra de arriba",
+       "duracion": 35.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-5-el-tinder-que-quedaba.daniela.mp3"
+      },
+      {
+       "t": 180.7,
+       "titulo": "el widget de la cola mostraba data vieja, y no era culpa del server",
+       "duracion": 36.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-6-el-widget-de-la-cola.daniela.mp3"
+      },
+      {
+       "t": 217.6,
        "titulo": "lo del podcast: se fue el informe leído",
-       "duracion": 87.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-3-lo-del-podcast-se-fue.daniela.mp3"
+       "duracion": 86.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-7-lo-del-podcast-se-fue.daniela.mp3"
       },
       {
-       "t": 114.9,
+       "t": 304.2,
        "titulo": "el away natural de slack y la presencia que ya no depende del agente",
-       "duracion": 83.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-4-el-away-natural-de.daniela.mp3"
+       "duracion": 84.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-8-el-away-natural-de.daniela.mp3"
       },
       {
-       "t": 198.8,
+       "t": 388.6,
        "titulo": "el freno de horario laboral se fue del todo",
-       "duracion": 44.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-5-el-freno-de-horario.daniela.mp3"
+       "duracion": 44.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-9-el-freno-de-horario.daniela.mp3"
       },
       {
-       "t": 243.6,
+       "t": 433.3,
        "titulo": "la limpieza de instagram, lo que salió mal y lo que salió bien",
        "duracion": 162.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-6-la-limpieza-de.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-10-la-limpieza-de.daniela.mp3"
       },
       {
-       "t": 405.9,
+       "t": 595.6,
        "titulo": "la cola de instagram y las candidatas",
-       "duracion": 78.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-7-la-cola-de-instagram-y.daniela.mp3"
+       "duracion": 78.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-11-la-cola-de-instagram-y.daniela.mp3"
       },
       {
-       "t": 484.3,
+       "t": 674.0,
        "titulo": "lafayette, retool y dynamo",
-       "duracion": 99.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-8-lafayette-retool-y.daniela.mp3"
+       "duracion": 99.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-12-lafayette-retool-y.daniela.mp3"
       },
       {
-       "t": 583.8,
+       "t": 773.1,
        "titulo": "las dos últimas conversaciones de instagram, y tu mamá",
-       "duracion": 84.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-9-las-dos-ultimas.daniela.mp3"
+       "duracion": 85.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-13-las-dos-ultimas.daniela.mp3"
       },
       {
-       "t": 668.6,
+       "t": 858.2,
        "titulo": "el texto libre del votador que no sabía a quién pertenecía",
        "duracion": 36.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-10-el-texto-libre-del.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-14-el-texto-libre-del.daniela.mp3"
       },
       {
-       "t": 705.0,
+       "t": 894.6,
+       "titulo": "el historial del chat ya distingue los días",
+       "duracion": 36.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-15-el-historial-del-chat.daniela.mp3"
+      },
+      {
+       "t": 931.2,
+       "titulo": "la retroid: la collection high performance quedó armada en el aparato",
+       "duracion": 93.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-16-la-retroid-la.daniela.mp3"
+      },
+      {
+       "t": 1024.2,
+       "titulo": "tu presencia en slack de ayer",
+       "duracion": 43.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-17-tu-presencia-en-slack.daniela.mp3"
+      },
+      {
+       "t": 1067.2,
+       "titulo": "lo que se movió en el agente al mediodía",
+       "duracion": 50.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-18-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 1117.7,
        "titulo": "dejarte solo, y la tarea que dijo que seguía y no seguía",
-       "duracion": 66.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-11-dejarte-solo-y-la-tarea.daniela.mp3"
+       "duracion": 66.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-19-dejarte-solo-y-la-tarea.daniela.mp3"
       },
       {
-       "t": 771.1,
+       "t": 1183.6,
        "titulo": "la retroid, y los sesenta cuadros en las pesadas",
        "duracion": 63.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-12-la-retroid-y-los.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-20-la-retroid-y-los.daniela.mp3"
       },
       {
-       "t": 834.5,
+       "t": 1247.0,
        "titulo": "awtomic: penfolds, hafner, hall y una regla tuya sobre el estado",
-       "duracion": 85.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-13-awtomic-penfolds-hafner.daniela.mp3"
+       "duracion": 85.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-21-awtomic-penfolds-hafner.daniela.mp3"
       },
       {
-       "t": 919.6,
+       "t": 1332.2,
        "titulo": "los mails de fuzzer y cómo se contesta ahora",
-       "duracion": 45.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-14-los-mails-de-fuzzer-y.daniela.mp3"
+       "duracion": 45.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-22-los-mails-de-fuzzer-y.daniela.mp3"
       },
       {
-       "t": 965.0,
+       "t": 1377.9,
        "titulo": "la madrugada, y la votación que no abría",
        "duracion": 74.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-15-la-madrugada-y-la.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-23-la-madrugada-y-la.daniela.mp3"
       },
       {
-       "t": 1039.1,
+       "t": 1451.9,
        "titulo": "slack y las votaciones de animaciones",
        "duracion": 74.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-16-slack-y-las-votaciones.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-24-slack-y-las-votaciones.daniela.mp3"
       },
       {
-       "t": 1113.6,
+       "t": 1526.6,
        "titulo": "salud y el widget",
-       "duracion": 27.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-17-salud-y-el-widget.daniela.mp3"
+       "duracion": 27.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-25-salud-y-el-widget.daniela.mp3"
       },
       {
-       "t": 1141.5,
+       "t": 1554.4,
        "titulo": "lo que se movió en el agente",
-       "duracion": 55.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-18-lo-que-se-movio-en-el.daniela.mp3"
+       "duracion": 55.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-26-lo-que-se-movio-en-el.daniela.mp3"
       }
      ]
     }
@@ -145,8 +193,8 @@
    "grupo": "2026-09-15-vivo-1447",
    "version": "vivo",
    "emision": "vivo",
-   "actualizado": "2026-09-19T04:59-03:00",
-   "duracion": 1197.4,
+   "actualizado": "2026-09-19T13:22-03:00",
+   "duracion": 1610.0,
    "ts": "2026-09-15T14:47:00-03:00"
   },
   {
@@ -281,5 +329,5 @@
    "ts": "2026-09-18T11:33:08-03:00"
   }
  ],
- "actualizado": "2026-09-19 05:05"
+ "actualizado": "2026-09-19 13:28"
 }
