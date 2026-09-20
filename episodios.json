@@ -1126,7 +1126,113 @@
    },
    "duracion": 1294.7,
    "ts": "2026-09-20T08:11:44-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-inventario",
+   "fecha": "2026-09-20",
+   "titulo": "seguridad: cinco de cinco en dos cosas, y el unico que quiso gastar fue el mas chico",
+   "temas": [
+    "seguridad",
+    "inventario",
+    "consejo"
+   ],
+   "palabras": 3466,
+   "guion": "guion-inventario.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-inventario-daniela.mp3",
+     "duracion": 1061.1,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este capítulo",
+       "duracion": 46.8,
+       "archivo": "audio/ep-2026-09-20-inventario-1-de-que-va-este-capitulo.daniela.mp3"
+      },
+      {
+       "t": 46.8,
+       "titulo": "por qué el paquete va anónimo",
+       "duracion": 78.3,
+       "archivo": "audio/ep-2026-09-20-inventario-2-por-que-el-paquete-va.daniela.mp3"
+      },
+      {
+       "t": 125.0,
+       "titulo": "qué les conté, en criollo",
+       "duracion": 66.0,
+       "archivo": "audio/ep-2026-09-20-inventario-3-que-les-conte-en-criollo.daniela.mp3"
+      },
+      {
+       "t": 191.0,
+       "titulo": "lo que dijeron los cinco, sin excepción",
+       "duracion": 106.0,
+       "archivo": "audio/ep-2026-09-20-inventario-4-lo-que-dijeron-los.daniela.mp3"
+      },
+      {
+       "t": 297.0,
+       "titulo": "el tercero, cuatro de cinco",
+       "duracion": 35.4,
+       "archivo": "audio/ep-2026-09-20-inventario-5-el-tercero-cuatro-de.daniela.mp3"
+      },
+      {
+       "t": 332.5,
+       "titulo": "la parte que no esperaba: cuatro de cinco dijeron que no contrates nada",
+       "duracion": 101.1,
+       "archivo": "audio/ep-2026-09-20-inventario-6-la-parte-que-no.daniela.mp3"
+      },
+      {
+       "t": 433.5,
+       "titulo": "el hallazgo del método, y esta vez son los locales",
+       "duracion": 103.1,
+       "archivo": "audio/ep-2026-09-20-inventario-7-el-hallazgo-del-metodo.daniela.mp3"
+      },
+      {
+       "t": 536.6,
+       "titulo": "lo que no vio ninguno y encontré midiendo",
+       "duracion": 81.1,
+       "archivo": "audio/ep-2026-09-20-inventario-8-lo-que-no-vio-ninguno-y.daniela.mp3"
+      },
+      {
+       "t": 617.7,
+       "titulo": "lo que no es el sistema",
+       "duracion": 90.4,
+       "archivo": "audio/ep-2026-09-20-inventario-9-lo-que-no-es-el-sistema.daniela.mp3"
+      },
+      {
+       "t": 708.1,
+       "titulo": "el inventario completo, para que sepas qué hay en ese disco",
+       "duracion": 84.4,
+       "archivo": "audio/ep-2026-09-20-inventario-10-el-inventario-completo.daniela.mp3"
+      },
+      {
+       "t": 792.4,
+       "titulo": "la superficie más grande, y es a propósito",
+       "duracion": 78.0,
+       "archivo": "audio/ep-2026-09-20-inventario-11-la-superficie-mas.daniela.mp3"
+      },
+      {
+       "t": 870.5,
+       "titulo": "lo que aprendí preguntando esto",
+       "duracion": 72.6,
+       "archivo": "audio/ep-2026-09-20-inventario-12-lo-que-aprendi.daniela.mp3"
+      },
+      {
+       "t": 943.1,
+       "titulo": "lo accionable, en orden de rinde",
+       "duracion": 61.8,
+       "archivo": "audio/ep-2026-09-20-inventario-13-lo-accionable-en-orden.daniela.mp3"
+      },
+      {
+       "t": 1004.9,
+       "titulo": "para cerrar",
+       "duracion": 56.1,
+       "archivo": "audio/ep-2026-09-20-inventario-14-para-cerrar.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1061.1,
+   "ts": "2026-09-20T08:16:45-03:00"
   }
  ],
- "actualizado": "2026-09-20 08:11"
+ "actualizado": "2026-09-20 08:16"
 }
