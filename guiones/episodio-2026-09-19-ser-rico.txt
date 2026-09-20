@@ -1,0 +1,385 @@
+# de qué va este episodio
+
+Buen día. Este es el episodio del sábado diecinueve de septiembre, y tiene un solo tema de punta a punta.
+
+Anoche se le hizo una pregunta a un panel de modelos. No a uno: a seis, cada uno por su lado, sin verse
+entre ellos, todos con el mismo material adelante. La pregunta era la tercera de una serie de ideas tuyas,
+y es la más directa de las tres. Se llama ser rico.
+
+El plan de la media hora es este. Primero, qué se preguntó exactamente y por qué esa pregunta y no otra.
+Segundo, qué se le contó al panel, porque el material que se le da es la mitad de la respuesta que
+devuelve. Tercero, qué contestó cada uno. Cuarto, la parte incómoda: casi todos contestaron lo mismo, y lo
+mismo estaba mal, y ninguno se dio cuenta. Quinto, el freno que vio uno solo y que vale más que las
+cuarenta y nueve propuestas juntas. Sexto, la regla de forma que quedó después del filtro y que ordena la
+lista entera. Séptimo, lo que sobrevivió, una por una, con plata esperada, laburo de armado y si hace falta
+hablar con alguien. Octavo, lo que se cayó y con qué regla se cayó. Y el cierre, que son las decisiones que
+podés tomar mañana a la mañana sin hablar con nadie.
+
+Una aclaración antes de arrancar, la de siempre: todo lo que voy a contar salió del informe del panel, del
+paquete que se le mandó y de los archivos que ya estaban escritos. No de acordarme. Cuando diga un número,
+el número está medido o viene con la etiqueta de que es una estimación de un modelo, que no es lo mismo y
+lo voy a decir cada vez.
+
+# la pregunta, y por qué está redactada así
+
+La pregunta fue esta: qué puede montar flaudio, con lo que ya tiene, para que entre plata sin ningún
+contacto humano, afuera del laburo y afuera de la banda, y en qué orden conviene hacerlo por plata
+esperada contra laburo de armado.
+
+Vale la pena desarmarla porque cada pedazo fue puesto a propósito.
+
+Lo que ya tiene. No lo que habría que comprar ni lo que habría que aprender: lo que hay hoy encendido. Un
+servidor prendido las veinticuatro horas en la red de casa, una cola de órdenes que corre sola, cerca de
+cuatrocientas setenta recetas escritas y probadas, scraping que funciona, una cuenta de instagram con su
+embudo real andando, la infraestructura de modelos gratis, y tres cuentas pagas de claude. Eso es el
+inventario. La pregunta es qué se hace con eso, no qué se hace en general.
+
+Sin ningún contacto humano. Esta es la restricción dura y es la que terminó decidiendo todo. Nada de
+videollamadas, nada de llamadas, nada de chat en vivo. Correo electrónico como máximo, y preferentemente
+ni eso. Se descarta lo que pida cara, firma, trámite presencial de identidad o atención al cliente.
+
+Afuera del laburo y afuera de la banda. Ninguna de las dos cosas está en discusión: esto es lo que se
+construye al lado, no en lugar de.
+
+Y el marco económico, que también estaba en el prompt: el ingreso de hoy son seis mil quinientos dólares
+por mes, no hay detalle de gastos, así que cualquier idea que pida capital inicial tiene que decir cuánto.
+Y el objetivo es corto plazo. Plata en semanas, no en un año.
+
+Por qué esa redacción. Porque las tres veces que una pregunta de este tipo se hace suelta, la respuesta que
+vuelve es siempre la misma sopa de emprendedurismo. La restricción de cero contacto humano no es un
+capricho tuyo: es el filtro que convierte una lista de deseos en una lista de cosas que este sistema puede
+hacer de verdad mientras vos dormís.
+
+# lo que se le contó al panel
+
+El material que se empaquetó y se le mandó igual a todos pesaba unas cinco mil quinientas unidades de
+contexto en la versión larga, y hay una versión corta de mil cuatrocientas para los modelos chicos.
+
+Adentro iba el inventario que acabo de leer, las restricciones, y algo que me parece la parte más honesta
+del paquete: los números reales del embudo de instagram, tal como están hoy, no como quedarían bien.
+
+Dos mil candidatas. Mil ochenta y ocho ignoradas, o sea gente que miraste y dijiste que no. Quinientas
+treinta y seis que seguís y no te siguen. Noventa y una en el casillero de tal vez. Veintinueve
+solicitudes mandadas y todavía colgadas. Doce que ya seguís de verdad. Trece esperando activación. Y cinco
+activas.
+
+Ese último número es el que importa para esta conversación. Cinco. Todo el resto es maquinaria funcionando
+sobre un embudo que en la punta da cinco. Cuando un modelo dice "vendé tu embudo de instagram como
+servicio", está mirando los dos mil de arriba y no los cinco de abajo.
+
+# por qué un panel y no preguntarle a uno solo
+
+Antes de las respuestas, una digresión corta que sirve para entender qué estamos leyendo.
+
+Preguntarle esto a un solo modelo, por bueno que sea, tiene un problema conocido: te devuelve una respuesta
+que suena completa. Está bien escrita, tiene estructura, tiene números, y no tenés con qué compararla. Si
+es floja, no te enterás. Si repite el molde más manoseado de su entrenamiento, tampoco.
+
+Con seis modelos contestando lo mismo por separado, aparece algo que con uno solo es invisible: la forma de
+la respuesta promedio. Cuando cuatro de seis te devuelven exactamente el mismo molde, ya no estás leyendo
+una idea, estás leyendo un sesgo. Y cuando uno solo te dice una cosa que ninguno de los otros cinco dijo,
+esa frase merece que la mires con lupa, porque o está equivocada o es lo único original de la corrida. Acá
+resultó ser lo segundo.
+
+Hay un detalle más del método que vale la pena: un modelo no se puntúa a sí mismo. Cuando se filtran las
+respuestas, los que juzgan una propuesta son los otros, nunca el que la escribió. Es una regla chica y
+cambia bastante el resultado, porque un modelo defendiendo su propia idea es la cosa menos confiable de
+todo el sistema.
+
+Y una regla del filtro que también viene de antes: una propuesta que repite una regla que ya está vigente,
+o que propone algo que ya se hizo y está cerrado, no cuenta como hallazgo. Suena obvio y no lo es: buena
+parte de lo que devuelve un panel es el sistema describiéndose a sí mismo y sonando inteligente.
+
+# qué contestó cada uno
+
+Seis modelos. Contestaron cuatro.
+
+El modelo de google, en su versión liviana, devolvió cinco propuestas y además una sección de descartes
+propios. Fue el único que sirvió de verdad, y ya vas a ver por qué.
+
+El modelo francés devolvió diez propuestas. Las diez son la misma propuesta con distinto disfraz.
+
+Los dos modelos que corren acá en el servidor, sin pagar nada: uno devolvió siete propuestas y nueve
+descartes; el otro, cinco propuestas y cuatro descartes. El primero copió el mismo molde que el francés y
+se inventó los números. El segundo no devolvió propuestas: devolvió categorías. Vender productos de
+belleza. Vender tecnología. Vender salud. Vender cosas para mascotas. Eso no es una propuesta, es un
+rubro; no tiene qué, no tiene cómo y no tiene número.
+
+Y dos no contestaron. Uno devolvió su razonamiento crudo y nunca llegó a escribir la lista, que es
+exactamente lo que le pasó en la corrida anterior. El otro, el más grande del panel y el que había ganado
+la ronda pasada, respondió con un rechazo por cuota: se había terminado el cupo diario gratis de la
+organización entera. También por segunda vez seguida.
+
+Total: cuarenta y nueve propuestas sobre la mesa.
+
+# la parte incómoda: casi todas eran la misma, y estaba mal
+
+De esas cuarenta y nueve, la enorme mayoría tiene exactamente la misma forma. Vender un servicio mensual a
+empresas. Equis clientes pagando entre cincuenta y doscientos cincuenta dólares por mes cada uno,
+reutilizando una receta que ya existe. Diez del modelo francés así. Siete del local así. Tres de las cinco
+del de google, así.
+
+Esa forma no pasa la primera restricción. Y acá está lo interesante: ninguno de los panelistas lo vio.
+
+Conseguir cinco clientes que paguen, o cincuenta, es venta. Y la venta es contacto humano. No importa que
+después la entrega sea un correo automático con un informe adjunto; el correo automático es la entrega, no
+la consecución. Hay diez propuestas que dicen, con esas palabras, "captación por email automático con demo
+incluida", y las diez están haciendo el mismo autoengaño: confundir cómo se entrega el producto con cómo se
+consigue el que paga.
+
+Ninguna de las cuarenta y nueve costeó cómo se consigue el primer cliente. Ni una. Todas arrancan en el
+momento en que el cliente ya existe y ya dijo que sí.
+
+Esto vale como aprendizaje sobre el panel, más allá de esta pregunta: un modelo al que le pedís ideas de
+negocio te devuelve el molde más frecuente de su entrenamiento, y el molde más frecuente de los últimos
+años es el software por suscripción. Le podés poner la restricción en mayúsculas arriba de todo, igual te
+devuelve el molde. El filtro no lo hace el panel, lo hace el que lee el panel.
+
+# el freno que vio uno solo
+
+Y ahora la parte que justifica haber hecho la corrida.
+
+El modelo de google, en su sección de descartes, escribió algo que ninguno de los otros cinco mencionó: no
+hay por dónde cobrar.
+
+Estás en argentina. No hay una cuenta de cobro internacional abierta y verificada. No hay plataforma de
+pagos lista, no hay el equivalente digital de la inscripción fiscal resuelto para recibir dólares de un
+cliente de afuera.
+
+Diez de las propuestas asumen que cobrar es gratis y sale en cero horas. No lo es. Y eso es exactamente lo
+que llamamos "bloquearse en el medio": armás el producto, conseguís el primero que quiere pagar, y ahí te
+enterás de que no hay tubo por donde entre el dinero. La peor parte no es el trámite, es el orden: el
+trámite tarda por calendario, no por esfuerzo, así que hacerlo último cuesta un mes entero de espera y
+hacerlo primero cuesta cero, porque corre en paralelo mientras se hace todo lo demás.
+
+Un solo modelo de seis lo vio. Y lo vio en la sección que la mayoría de la gente ni lee, que es la de lo
+que él mismo descartaba.
+
+# la regla de forma que quedó
+
+Cruzando las cuarenta y nueve propuestas con las restricciones, quedó una sola regla de forma. Es corta y
+ordena la lista entera.
+
+Si el que paga es una persona, hay venta. Si el que paga es una plataforma, no hay nadie del otro lado.
+
+Eso es todo. Programas de afiliados, reparto de ingresos por publicidad, un mercado donde publicás y
+alguien aprieta comprar: en todos esos casos el que transfiere el dinero es una empresa con un sistema
+automático, y no hay ninguna conversación que tener. Suscripción a empresas, servicio administrado, interfaz
+de programación para desarrolladores: en todos esos casos, antes del primer peso, alguien tiene que
+explicarle algo a alguien.
+
+Con esa regla en la mano, la lista de cuarenta y nueve se vuelve manejable. Sobrevivieron cuatro.
+
+# uno: los dos amplificadores
+
+La única de la lista que da plata en días, no en semanas.
+
+Qué es: vender los dos amplificadores de guitarra que están en casa. El maryal origin de veinte vatios y el
+fénder champion. En el mercado de compraventa de acá, con publicación propia.
+
+Plata esperada: unos mil quinientos dólares, por única vez. Ochocientos cincuenta netos por el maryal y
+seiscientos cincuenta netos por el fénder, a los precios que ya se calcularon hace diez días. Y esto es
+importante: estos números no son una estimación de un modelo. Son números cerrados, con el precio de
+publicación y la comisión ya descontada, que estaban escritos antes de esta corrida.
+
+Laburo de armado: aproximadamente una hora de cola. Los dos borradores de publicación ya están escritos,
+con título, precio, ficha técnica y descripción. Hay un script que los imprime listos para pegar.
+
+Capital inicial: cero.
+
+Contacto humano: la mensajería interna de la plataforma con el comprador. Escrita, asincrónica, y podés
+contestarla cuando quieras. Es lo más cerca de cero a lo que se puede llegar vendiendo un objeto físico
+que alguien tiene que ir a buscar.
+
+Y lo que lo frena, que es lo único que no puede hacer la cola: las fotos. Las tenés que sacar vos. El guion
+de qué foto sacar y desde dónde está escrito, foto por foto, en cada uno de los dos borradores. Son
+quince minutos con el teléfono y buena luz.
+
+Esto no es un hallazgo del panel y quiero decirlo claro. Ya estaba pendiente desde antes. Dos de los
+modelos lo propusieron, sí, pero entra a la lista por otra razón: es la única plata verificada y a días de
+distancia de todo lo que se habló anoche.
+
+# dos: abrir la vía de cobro
+
+Esta no da plata. Desbloquea todo lo demás.
+
+Qué es: abrir el carril por el que pueda entrar un dólar que no venga del mercado local de compraventa. Sin
+eso, las dos propuestas que siguen no pueden facturar aunque funcionen.
+
+Plata esperada: cero directos.
+
+Laburo de armado: cero horas de cola. Esto no es código, es trámite.
+
+Capital inicial: cero.
+
+Contacto humano: ninguno, pero sí hay verificación de identidad. Subir un documento y esperar la
+aprobación. Eso tarda entre días y semanas, y no depende de vos una vez que lo mandaste. No es una llamada
+ni una firma delante de nadie: es carga de papeles.
+
+Por qué va segunda y no cuarta: porque es el cuello de botella real, y tarda por calendario. Si se arranca
+mañana, corre en paralelo a todo lo demás y para cuando haya algo que cobrar ya está resuelto. Si se
+arranca después, bloquea un mes.
+
+# tres: afiliados sobre contenido automatizado
+
+La única renta recurrente que cierra con la regla de forma.
+
+Qué es: la maquinaria que ya existe para generar contenido, buscar en la web y publicar, produciendo
+material de un nicho específico, sola, con enlaces de afiliado adentro. El que paga es el programa de
+afiliados, que es una empresa con un sistema automático. No hay cliente al que convencer.
+
+Plata esperada, y acá voy a ser honesta porque es la parte donde es fácil mentirse: entre cero y cien
+dólares por mes los primeros meses, y puede quedarse en cero. El modelo de google dijo ciento cincuenta por
+mes. No hay con qué sostener ese número: depende de tráfico que hoy no existe, y el tráfico no aparece
+porque el contenido esté bien hecho.
+
+Laburo de armado: entre seis y diez horas de cola, todo reutilizando recetas que ya funcionan. No hay que
+inventar ninguna pieza.
+
+Capital inicial: cero. Un dominio propio cuesta doce dólares al año si se quiere casa propia en vez de
+alquilada.
+
+Contacto humano: ninguno. Es la única de las cuatro que cumple la restricción entera sin asteriscos.
+
+Una pregunta razonable acá es cuál nicho. El panel no la contestó, ninguno de los cuatro bajó a ese nivel,
+y es justamente la decisión que define si esto da cero o da algo. Lo que se puede decir desde acá es cuál
+es la forma del nicho que le conviene a este sistema en particular: tiene que ser un tema donde el
+contenido se pueda armar a partir de datos públicos que un script pueda ir a buscar y comparar, no a
+partir de opinión. Donde el producto que se recomienda tenga un programa de afiliados abierto y con
+comisión decente. Y donde la pregunta que hace la gente se repita todos los meses, así el contenido no se
+vence. Comparar precios, comparar especificaciones, seguir un valor que cambia: esas formas las hace bien
+un sistema como este. Escribir una opinión que valga algo, no.
+
+Y la letra chica: los programas de afiliados aprueban por revisión, y varios piden tráfico previo para
+aceptarte. O sea que el primer peso puede tardar bastante más que "semanas".
+
+# cuatro: el motor de instagram apuntado a una cuenta nueva
+
+Qué es: la maquinaria de instagram que ya está construida y funcionando, la que busca candidatas, la que
+maneja la cola de acciones, la que mide, corriendo sobre una cuenta nueva, de nicho, creada para monetizar.
+Con afiliados o con reparto de ingresos por publicidad.
+
+Y tiene un dato duro a favor: esa maquinaria movió tres mil setecientas setenta y nueve personas en cinco
+días. Eso está medido. No es una promesa: es lo que ya hizo.
+
+Plata esperada: cero por ahora. Esto no es un ingreso, es infraestructura de audiencia.
+
+Laburo de armado: unas cuatro horas de cola. La maquinaria existe; es apuntarla a otra sesión y a otras
+cuentas fuente.
+
+Capital inicial: cero.
+
+Contacto humano: ninguno, mientras no se venda nada.
+
+Por qué va última: porque es la única de las cuatro que no da plata en semanas. Entra a la lista porque es
+el único activo que este sistema puede fabricar solo, y porque si funciona multiplica a la tercera. Una
+audiencia propia es exactamente lo que le falta a la propuesta de afiliados para dejar de depender de que
+un buscador tenga ganas.
+
+# lo que se cayó, y con qué regla
+
+Ahora la parte de tirar cosas, que es donde el panel gana su valor de verdad.
+
+Vender el embudo de instagram como servicio a cuentas comerciales. La propusieron dos modelos, uno de
+ellos dos veces. Se cae por dos lados. Primero, la restricción de cero contacto: hay que conseguir y
+sostener clientes. Y segundo, más grave: la automatización como servicio es motivo de bloqueo en esa
+plataforma, y pondría en riesgo tu cuenta personal, que es justamente el activo que estamos tratando de
+aprovechar. Se descarta doble.
+
+Vender la capacidad de cómputo de los modelos gratis como servicio de programación. También del francés,
+dos veces. Esta la voltea el propio paquete, y es casi gracioso: el cupo diario gratis del proveedor más
+grande del panel son doscientos mil unidades de texto por día, para toda la organización, y esta misma
+corrida se comió la cuota. Por eso ese modelo contestó con un rechazo. No alcanza para un cliente, mucho
+menos para cincuenta. Y revender un nivel gratuito va contra los términos del proveedor.
+
+Vender scripts, plantillas o informes a quince o cincuenta compradores por mes. Cuatro veces del francés,
+cuatro del local. Restricción uno: no hay audiencia, y conseguir treinta compradores es marketing, que es
+venta con otro nombre.
+
+Compra y reventa de objetos físicos con arbitraje de precio. La propuso el de google y se voltea sola: la
+propia propuesta dice "retiro en punto físico o envío". Eso es una persona, un horario y un lugar.
+
+Consultoría, mentoría, agencia, diseño, traducción, horas de programación, curso en línea, canal de video.
+Estas las listaron los propios modelos locales como sus descartes, lo cual habla bien de ellos. Todas caen
+por la misma restricción.
+
+Y una que se descarta por una regla tuya, no por el panel: monetizar el embudo personal de instagram. Va
+contra tus objetivos escritos para ese tema. Ese embudo es para conocer gente, no para vender. Convertirlo
+en un canal comercial lo rompe como lo que es, y no hay número que lo compense. Por eso la propuesta tres
+apunta a una cuenta nueva, y la cuatro también: la personal queda afuera de todo esto.
+
+# el filtro que podés aplicar solo, en diez segundos
+
+Hay un número que ordena esta conversación mejor que el panel entero, y es tu propio ingreso.
+
+Ganás seis mil quinientos dólares por mes. Una idea que promete ciento cincuenta por mes es el dos coma
+tres por ciento de eso, y cuesta horas de cola, atención tuya y un pedazo de cabeza que después no está
+disponible para otra cosa.
+
+Así que el filtro es este: por debajo de quinientos dólares por mes, una idea recurrente no mueve la aguja.
+Puede ser interesante, puede ser divertida de construir, puede ser un buen ejercicio. Pero no mueve la
+aguja, y conviene decirlo antes de empezarla y no seis semanas después.
+
+De las cuatro que sobrevivieron, el único número que mueve la aguja es el de los amplificadores, y es por
+única vez. Las otras tres son apuestas de piso: cuestan poco, no arriesgan nada, y si una pega cambia la
+escala. Pero ninguna es un sueldo.
+
+Eso no es un fracaso de la corrida. Es el resultado honesto. Preguntar "cómo hago plata sin hablar con
+nadie" y recibir cuarenta y nueve respuestas entusiastas de las cuales cuatro sobreviven es, de hecho, un
+buen día: el trabajo era descartar cuarenta y cinco, y quedó hecho.
+
+# lo que el panel mostró de sí mismo
+
+Dos cosas para anotar, porque son la segunda vez seguida que pasan y ya no son casualidad.
+
+El modelo más grande del panel se quedó sin cuota diaria antes de contestar. Segunda corrida consecutiva.
+El cupo gratis lo consume otro carril del sistema que corre todo el día, así que cuando llega la corrida del
+panel ya no queda nada. Eso tiene arreglo y es de una línea: o el panel corre antes, o ese carril deja
+reserva.
+
+El modelo que devuelve razonamiento en vez de respuesta lo hizo de nuevo. Segunda vez seguida también.
+Piensa en voz alta, se le acaba el espacio y nunca escribe la lista. Ese ya se puede dar por perdido o
+pedirle la respuesta primero y el razonamiento después.
+
+Y una tercera, menor: el modelo por defecto del panel devolvió un error de servicio y no hay reintento
+automático con su versión liviana. Hubo que dispararlo a mano. Es el tipo de cosa que cuesta dos minutos
+arreglar y ahorra una corrida entera la próxima vez.
+
+# mañana a la mañana
+
+Cierro con lo concreto, que es para lo que se hizo todo esto. Cuatro decisiones, ninguna de las cuales
+requiere hablar con nadie.
+
+La primera, y la única que necesita tus manos: las fotos de los dos amplificadores. Quince minutos, con luz
+de día, siguiendo el guion foto por foto que ya está escrito. Es el único paso del sistema entero que no
+puede hacer la cola, y es el que está delante de mil quinientos dólares reales. Si mañana hacés una sola
+cosa de esta lista, es esta.
+
+La segunda: dar el visto bueno para arrancar el trámite de la vía de cobro. No cuesta horas, no cuesta
+plata, y lo único que hace es empezar a correr un reloj que de todos modos vas a tener que esperar. Cuanto
+antes arranque, antes deja de ser un problema.
+
+La tercera: decidir si se encola la prueba de afiliados sobre contenido automatizado. Entre seis y diez
+horas de cola, sin plata nueva, reutilizando todo lo que ya anda. Es la única que cumple la restricción
+entera, y la honesta es que puede no devolver nada. Es una apuesta barata a algo que, si sale, sale sin
+vos.
+
+Y la cuarta: decidir si la cuenta nueva de instagram se arma ahora o después de ver cómo le va a la
+tercera. Yo la pondría después, porque sin un lugar a donde mandar el tráfico, una audiencia nueva es una
+lista de gente y nada más.
+
+Y quiero dejar dicha una cosa sobre el orden, porque es lo que más rápido se pierde cuando pasan los días.
+Las cuatro no compiten entre sí: se encadenan. Los amplificadores son plata que ya está ahí esperando una
+foto. El trámite de cobro es un reloj que conviene arrancar aunque hoy no haya nada que cobrar. Los
+afiliados son la única renta que puede quedar corriendo sola. Y la cuenta nueva es lo que le daría a esa
+renta un lugar de donde traer gente en vez de esperar a que la traiga un buscador. Si se hacen en ese
+orden, cada una llega cuando la anterior ya despejó lo que la frenaba. Si se hacen al revés, cada una se
+choca contra el cuello de botella de la anterior y se descubre tarde.
+
+Eso es todo. Lo que quedó de cuarenta y nueve propuestas fueron cuatro, una regla de forma que sirve para
+la próxima vez que preguntemos algo así, y un freno que apareció en la letra chica de un solo modelo y que
+vale más que las otras cuarenta y ocho propuestas juntas.
+
+Si algo de esto te suena mal, o querés que el próximo capítulo se meta a fondo en una sola de las cuatro
+en vez de repasarlas todas, dejámelo por audio en este episodio y lo contesto acá, en el hilo, no en el
+chat. Buen fin de semana.
