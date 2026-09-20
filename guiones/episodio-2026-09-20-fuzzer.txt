@@ -1,0 +1,426 @@
+# de qué va este episodio
+
+Buen día. Este es el episodio del domingo veinte de septiembre, y tiene un solo tema de punta a punta:
+la banda.
+
+Anoche se le hizo una pregunta a un panel de modelos. No a uno solo: a seis, cada uno por su lado, sin
+verse entre ellos, todos con el mismo material adelante. La pregunta fue sobre fuzzer, y es la cuarta de
+esta serie. Las anteriores fueron sobre el sistema, sobre la cola de trabajo y sobre cómo entra plata.
+Esta es la primera que no es de computadoras: es de gente en una sala.
+
+El plan de la media hora es este. Primero, qué se preguntó y quiénes contestaron, que esta vez no fueron
+todos. Segundo, el primer golpe, que es el más importante del episodio: los números con los que el panel
+pensó estaban mal, y se los dio el paquete. Tercero, cuáles son los números verdaderos, que cambian el
+tamaño del problema. Cuarto, la idea que sonaba mejor de toda la tanda y que es lisa y llanamente
+imposible, más la vuelta que sí se puede hacer en su lugar. Quinto, algo que el panel no podía ver porque
+no tiene internet, y que se verificó a mano: la web de la banda está sirviendo una versión vieja. Sexto,
+las ocho propuestas que sobrevivieron al filtro, una por una, con quién las hace y cuánto tiempo humano
+cuestan. Séptimo, las cuatro cosas que ningún panelista vio, que son las que valen. Y el cierre, que es
+qué se decide cuando arranque la semana.
+
+Una aclaración antes de empezar, la de siempre. Todo lo que voy a contar salió del informe del panel, del
+paquete que se le mandó y de archivos que ya estaban escritos. Nada de acordarme. Cuando diga un número,
+el número está medido, y si es una estimación de un modelo lo voy a decir cada vez. Y donde el informe
+dice que algo se verificó consultando internet, lo digo también, porque no es lo mismo una opinión que una
+medición.
+
+# quiénes contestaron, y quiénes no
+
+Contestaron cuatro de seis. Dos modelos de afuera y dos que corren acá en el server, en casa.
+
+El que más propuso fue mistral, con doce. Después gemini, en su versión liviana, con diez. Y los dos
+locales, que son los que no cuestan un centavo porque corren en la máquina de casa: qwen con doce y gemma
+con doce también. En total cuarenta y seis propuestas crudas.
+
+Los dos que faltaron tienen historia. Groq no contestó, y ya van cuatro veces seguidas: se queda sin cuota
+gratis a mitad de camino, tira el error de demasiadas consultas, y ni con cuatro reintentos en un cuarto
+de hora aparece. La otra falta es más molesta, porque es un error conocido: gemini en su versión completa
+devuelve la respuesta vacía cuando se le manda el paquete entero. No dice que no puede: contesta nada. Hubo
+que disparar la versión liviana a mano, otra vez, como en la corrida anterior. Está anotado como pendiente
+y sigue pendiente.
+
+Vale la pena parar un segundo acá. Que dos de seis fallen no es un detalle del informe: es el estado real
+de la herramienta. La gracia del panel es que varios modelos independientes miren lo mismo, y cuando se
+caen dos, la diversidad que queda es menor de la que se pagó. Especialmente porque groq, en las corridas
+donde sí contestó, fue el más concreto de todos.
+
+El material que se les dio fueron quince mil trescientas palabras de contexto de fuente. Los planes
+escritos de la banda, el estado del proyecto, la pauta, las métricas que había. Es bastante. Y ahí está el
+problema del que voy a hablar ahora.
+
+# la pregunta, y por qué está redactada así
+
+La pregunta que fue al panel tenía dos objetivos, y el orden entre ellos es parte de la pregunta. Primero,
+gente en los shows. Segundo, oyentes en spotify. En ese orden, y no al revés. Eso significa que una
+propuesta que sube escuchas pero no mete a nadie en una sala es peor que una que mete gente aunque no
+mueva las escuchas.
+
+También llevaba el presupuesto humano real, que es lo que hace que esta pregunta sea distinta de las
+anteriores. Facundo canta, toca la guitarra, es el líder y hace lo que haga falta: si hay que salir todos
+los días, sale. Santi, además del ensayo, banca dos días más por semana. Leo fue padre hace poco: ensayo y
+show, y se le respeta el tiempo. Ensayan una vez por semana y, si se ponen serios, pueden agregar una
+actividad más. Las semanas con show, el show ocupa esa actividad.
+
+Y llevaba el estado del material: tres temas cerrados y uno bastante bien, el disco nuevo de cuatro temas
+que se graba pronto como segunda parte del anterior, y la grabación ya muy pensada. En venta no hay nada.
+Cero merch, cero producto.
+
+Las restricciones: nada prohibido en general, pero dos redes que facundo prefiere evitar salvo que
+aparezca una vía copada, y el tope de pauta de un dólar por día por anuncio, que no se toca.
+
+Y las preguntas concretas fueron cinco. Qué hacer para llenar shows y subir oyentes con ese presupuesto de
+trabajo humano. Qué se puede automatizar desde ya. Cómo usar el disco nuevo y la grabación como contenido.
+Qué construir ahora que rinda dentro de seis meses. Y qué se puede monetizar sin romper el orden de
+objetivos.
+
+Vale la pena notar lo que la pregunta hace: no pide ideas de marketing en general. Pide ideas que quepan
+adentro de un calendario chico, con tres personas reales que tienen vidas. Esa restricción es la que, como
+vamos a ver, casi todos los panelistas ignoraron.
+
+# por qué un panel y no preguntarle a uno solo
+
+Un minuto sobre el método, porque esta corrida lo muestra bien.
+
+Preguntarle a un solo modelo tiene un problema conocido: contesta con seguridad aunque no sepa, y no hay
+con qué contrastarlo. Preguntarle a varios, por separado, con el mismo material y sin que se vean entre
+ellos, sirve para dos cosas distintas.
+
+La primera es la coincidencia. Cuando cuatro modelos que no se hablaron proponen lo mismo, eso es una
+señal de que la idea es la obvia. Ojo: obvia no quiere decir correcta. En esta corrida, la idea en la que
+coincidieron dos panelistas y un documento propio es justamente la imposible.
+
+La segunda, y es la que más rinde, es lo contrario: el hueco. Lo que ningún modelo propuso, teniendo todo
+el material adelante. Cuatro cabezas independientes que no ven algo que estaba escrito en el paquete
+marcan un punto ciego de verdad, no un olvido de uno.
+
+Y hay una tercera cosa, que es la de esta noche: el panel sirve para auditar el material que le diste. Los
+cuarenta y seis consejos calibrados contra un número equivocado no son cuarenta y seis errores del panel:
+son un espejo del paquete. Si todos razonan bien sobre un dato falso, el problema es el dato.
+
+# el primer golpe: los números estaban mal
+
+Este es el hallazgo más importante del episodio y conviene decirlo sin vueltas.
+
+En el paquete que se le mandó al panel había una frase, sacada del plan escrito de la banda, que decía que
+a los shows va un mínimo de cinco personas y un máximo de setenta. Sobre ese rango opinaron los cuatro
+modelos. Las cuarenta y seis propuestas están calibradas contra esos números.
+
+Después de mandar la pregunta se fueron a buscar las listas reales de la boletería de los tres shows en el
+salón. Las listas de ingreso, las de verdad, las que dicen quién entró. Y los números son otros.
+
+El show del veintisiete de septiembre del año pasado: setenta y una entradas, cincuenta y dos personas
+adentro. Y acá está el detalle que cambia todo: de esas, cuarenta fueron ventas, de las cuales entraron
+veintiocho, y treinta y uno fueron invitaciones, de las cuales entraron veinticuatro. O sea, casi la mitad
+de la sala no pagó.
+
+El show de diciembre: veinte entradas, dieciocho personas.
+
+Y el más reciente en esa sala, el de junio de este año, hace tres meses: treinta y seis entradas, treinta
+y dos personas.
+
+Entonces el mejor show de la historia de la banda no fueron setenta personas. Fueron cincuenta y dos, y
+veinticuatro de ellas entraron gratis. Y el último show fue de treinta y dos.
+
+Hay un número más, y es el que ordena todo lo demás. Ochenta y dos personas compraron alguna vez una
+entrada para ver a fuzzer. Ochenta y dos, en total, sumando los tres shows. Y de esas ochenta y dos,
+volvieron cinco. Cinco. Seis por ciento de retención entre un show y el siguiente.
+
+Ese es el tamaño real de la banda. No los tres mil setecientos noventa y tres seguidores de instagram:
+ochenta y dos personas que cruzaron una puerta y cinco que volvieron a cruzarla.
+
+# lo que ese número le hace a la meta de noviembre
+
+La meta escrita para el show del veintiocho de noviembre es de noventa a ciento veinte personas.
+
+Contra el rango que decía el paquete, eso sonaba a un poco más de lo de siempre. Vez y media el mejor
+show. Un esfuerzo grande pero razonable.
+
+Contra el número real, es tres veces el último show. Treinta y dos personas en junio, meta de noventa a
+ciento veinte en noviembre. Eso no es un empujón: es otra categoría de problema, y pide un plan distinto.
+
+Y hay una consecuencia que es incómoda de decir: ninguna de las cuarenta y seis propuestas se mide contra
+un número de asistencia real, porque el número real no estaba en el contexto que se les dio. Cada modelo
+propuso lo que propuso imaginando una banda que llena setenta lugares y que apunta a cien. La banda que
+existe llenó treinta y dos hace tres meses.
+
+Quiero ser claro en de quién es el error, porque es la parte que sirve para la próxima. No es del panel.
+Es del empaquetado. Los datos estaban en la casa, en las listas de la boletería, y no entraron al paquete;
+lo que entró fue la frase del plan, que era una aproximación de memoria. Y un panel de modelos no tiene
+forma de saber que el dato que le diste es viejo: lo toma como verdad y construye encima.
+
+La lección operativa, y va anotada: antes de armar el paquete de una pregunta, los números que van adentro
+se leen de la fuente, no de un documento que los resume. Si hay una lista de ingreso, la lista de ingreso
+manda. Si hay un corte de métricas, se saca el día que se pregunta, no el del mes pasado.
+
+# la idea que sonaba mejor, y por qué es imposible
+
+Ahora la propuesta estrella de la tanda.
+
+Mistral la puso primera. Gemini la puso segunda. Y un documento propio de la banda, escrito hace semanas,
+pide exactamente lo mismo en su punto dieciséis. O sea, tres fuentes independientes coinciden: usar las
+listas de asistentes de la boletería para armar una base de correo y de whatsapp, y escribirle a la gente
+que ya fue a un show para invitarla al próximo.
+
+Suena perfecto. Es la definición de lo que hay que hacer: tenés ochenta y dos personas que pagaron para
+verte, la retención es del seis por ciento, entonces hablales.
+
+No se puede. Y no es difícil, ni caro, ni discutible: es imposible.
+
+La cabecera del archivo que bajó esas listas lo dice con todas las letras: la boletería no expone correo
+ni teléfono en la lista de ingreso. Lo único que hay es el nombre y el número de documento. Nombre y de
+ene i. No hay canal. No hay a dónde escribirle a esas ochenta y dos personas. La idea de mandarles un mail
+supone un dato que nunca existió.
+
+Mistral encima habló de trescientos asistentes. Trescientos no hay: hay ciento veintisiete entradas
+sumando los tres shows y ochenta y dos personas distintas. Ese número se lo inventó, y es un buen
+recordatorio de lo que hace un modelo cuando le falta un dato: no dice "me falta", rellena.
+
+Pero la propuesta imposible tiene una vuelta que sí se puede, y es de las cosas más útiles que dejó la
+noche. Si el contacto no se puede rescatar hacia atrás, se pide hacia adelante. El contacto se pide en la
+puerta, el día del show. Y eso hay que montarlo antes del veintiocho de noviembre, no después.
+
+Pensalo así: el veintiocho de noviembre es el único momento del año en que treinta, cuarenta, cincuenta
+personas que eligieron ir a ver a fuzzer van a estar juntas en un mismo cuarto. Si esa noche termina sin
+una lista, el año que viene se arranca otra vez desde cero, con seis por ciento de retención. Si esa noche
+termina con cuarenta correos o cuarenta teléfonos, el show siguiente arranca con una base.
+
+Y ojo con el detalle de las invitaciones, que se cruza con esto. En el mejor show, veinticuatro de
+cincuenta y dos entraron gratis. Eso, para el objetivo de llenar la sala, no es una mala noticia: es gente
+que fue. Pero para la boletería son invisibles como compradores. Sea como sea, en la puerta están.
+
+# la web está sirviendo una versión vieja
+
+Esta parte el panel no la podía ver, porque los modelos no tienen internet. Se verificó a mano, hoy,
+consultando el sitio.
+
+La página principal contesta bien. Los atajos cortos —el del tema, el de instagram, el del disco, el de
+spotify, el del video— también andan, pero andan como redirección del servidor.
+
+Y tres direcciones contestan que no existen. Error cuatrocientos cuatro. Las tres son exactamente las
+piezas nuevas.
+
+La primera es la página de escucha. Es la que se escribió para resolver el problema del clic frío: alguien
+ve un anuncio, toca, y en vez de caer contra el muro de login de spotify, cae en una página de la banda
+que le da la opción que le sirva. Esa página no existe para nadie.
+
+La segunda es el destino del código cu ere de los stickers. Los stickers están impresos y andando dando
+vueltas por ahí. El cu ere impreso lleva a una página que no existe desde el siete de septiembre. Trece
+días.
+
+La tercera son los carteles con cu ere para la puerta del show. Tampoco están.
+
+Y hay un síntoma más fino, que es el que explica todo. El repositorio dice, textualmente, que el archivo
+de redirecciones quedó vacío a propósito, para que cada atajo sea una página de verdad que dispara el
+medidor de analítica antes de redirigir. Si los atajos contestan como redirección de servidor, esa versión
+no está publicada.
+
+La conclusión es una sola: el despliegue nunca se hizo. El código está escrito, está confirmado y está
+subido al repositorio desde el diecisiete de septiembre, y el paso a paso se mandó por correo el mismo
+día. Falta que alguien apriete el botón de conectar en el panel del proveedor, y ese alguien es santi.
+
+Mientras tanto pasan tres cosas a la vez. El cu ere impreso lleva a la nada hace trece días. La página que
+iba a arreglar el clic frío no existe. Y todo el tráfico que la banda manda a su propio dominio es
+invisible, porque el medidor no corre. Se está pagando pauta y mandando gente a una casa donde nadie
+cuenta quién entra.
+
+Gemini, dicho sea de paso, propuso "configurar y publicar la página de escucha" como si faltara
+escribirla. Ya está escrita. Lo que falta es un botón, y no lo aprieta ni facundo ni el agente.
+
+# las ocho que sobrevivieron: las tres que hace el agente solo
+
+De cuarenta y seis propuestas sobrevivieron ocho. Antes de contarlas, el criterio de lo que se cayó, que
+es tan informativo como lo que quedó.
+
+Se cayó lo que ya está hecho: excluir a los mayores de cuarenta y cinco en la pauta, el canal de whatsapp,
+el canal de video, el motor de escuchas nocturnas. Se cayó lo que ya está decidido: sacar los temas del
+disco nuevo de a uno, el guardado anticipado, el retargeting tibio. Se cayó lo que rompe una regla: qwen
+propuso dos redes que están prohibidas por decisión de facundo, y se descartan nombrando la regla. Y se
+cayó lo imposible, que es todo lo de la boletería.
+
+Las tres primeras que quedaron las hace el agente solo, sin una hora de nadie. Esas son las que más me
+interesan, porque son las únicas que no compiten contra el tiempo de la banda.
+
+La primera: apuntar el motor de instagram del agente a los seguidores de la escena porteña. Es la única
+propuesta de automatización que usa una receta que ya está corriendo, hoy, probada. El motor busca
+candidatas a partir de una cuenta fuente, sigue y deja de seguir con ritmo humano, con tope de sesenta por
+día. Existe y funciona. Simplemente hoy corre para la cuenta personal de facundo y no para la de la banda.
+
+La segunda: bajar automáticamente las fechas de las otras bandas de la escena para armar cartel. Esta es
+la única propuesta que ataca el objetivo de llenar la sala de frente, y explico por qué. En un cartel de
+tres bandas, la asistencia la deciden en buena medida las otras dos. Hoy nadie midió cuánta gente llevan
+las dos bandas que comparten el veintiocho de noviembre. Nadie. Se armó el cartel por afinidad y por
+relación, que está bien, pero sin ningún dato de arrastre.
+
+La tercera: bajada nocturna automática de las métricas de spotify y de la pauta. Hoy los números se sacan
+a mano cuando alguien se acuerda, y el último corte de escuchas es del ocho de septiembre. Doce días sin
+mirar. Esto es el trabajo típico del server de madrugada: no decide nada, junta.
+
+# las otras cinco: las que sí cuestan tiempo humano
+
+La cuarta es la que ya conté: publicar la página de escucha, que en la práctica es que santi apriete
+conectar. Costo: dos minutos. Verificado hoy que sigue sin existir.
+
+La quinta es una lista de reproducción propia, de fuzzer más amigos, mezclando el catálogo de la banda con
+bandas de la escena local. Una hora de santi. Esta no está en ningún plan escrito, y me gusta por una
+razón concreta: hoy la banda tiene cero escuchas que vengan de listas de reproducción. Cero. Y las listas
+ajenas no se consiguen apretando un botón. Una lista propia es la única fuente de ese canal que la banda
+puede fabricar sola, y además es una excusa perfecta para escribirle a las otras bandas: te metí en mi
+lista.
+
+La sexta es poner la animación en bucle en todos los temas de spotify. Una hora de santi. Esto no es un
+hallazgo: está pedido en un documento propio desde el cuatro de septiembre y nunca se hizo. El panel lo
+volvió a poner arriba de la mesa, y con eso alcanza.
+
+La séptima: escribirle a la única banda local de verdad que aparece en las recomendaciones de spotify, los
+santos diurnos, para armar una fecha juntos. El resto de las bandas que aparecen ahí son mexicanas, lo
+cual dice bastante sobre a dónde fue a parar la pauta. Una hora de facundo. Importante: esto no sirve para
+el veintiocho de noviembre, que ya tiene cartel cerrado. Sirve para el show siguiente.
+
+Y la octava es la única de plata: preventa digital o ensayo abierto pago. Es floja y el informe lo dice
+así, pero es la única que no rompe el orden de objetivos. La entrada del show la cobra la sala, con lo
+cual lo único que la banda puede cobrar es algo propio. El merch digital que propuso mistral —fondos de
+pantalla— no lo paga nadie. Eso no es un juicio de valor, es una observación de mercado.
+
+# lo que ninguno vio, primero: la audiencia no es local
+
+Y ahora las cuatro cosas que no vio ningún panelista, que son, como siempre, la mejor parte.
+
+La primera es un cruce de dos números que estaban los dos en el paquete y que nadie puso uno al lado del
+otro. Tres mil setecientos noventa y tres seguidores en instagram. Diecisiete oyentes mensuales en buenos
+aires. Diecisiete.
+
+Dos años de trabajo y dos mil cuatrocientos dólares de pauta compraron alcance nacional y
+latinoamericano. Eso no es un fracaso: el alcance es real, la pauta funcionó para lo que se le pidió. El
+problema es que se le pidió lo que no era. Para meter cien personas en una sala hacen falta cuatrocientos
+o seiscientos humanos locales enterados. Y para eso, tres mil setecientos seguidores repartidos por
+latinoamérica son casi ruido.
+
+Mistral rozó el tema: propuso seguir cuentas parecidas en instagram. Pero el filtro que importa no es la
+similitud, es la localidad. Un seguidor de una banda de stoner de guadalajara es tan inútil para el
+veintiocho de noviembre como uno de tokio. En cambio, los seguidores del salón donde se toca, los de las
+dos bandas del cartel, los de los santos diurnos: esos son porteños por definición. La sala misma es el
+filtro geográfico.
+
+Y esto se conecta con la primera propuesta que sobrevivió, la del motor. El motor hace exactamente eso, ya
+está hecho, y hoy apunta a otro lado.
+
+Hay un freno real y conviene decirlo: hoy no están cargadas en el server las credenciales del perfil de la
+banda. Por eso ni siquiera se pudo medir cuántos seguidores tienen las dos bandas del cartel. O sea, lo
+primero que hay que resolver para esta línea no es estrategia, es un acceso.
+
+# segundo: el show todavía no tiene un motivo
+
+Esta es, para mí, la palanca más grande de todo el informe, y está escrita en un plan propio de la banda
+desde antes de la pregunta.
+
+Dice así: el show de cincuenta y dos personas fue una presentación de disco. Los shows de cinco personas
+eran fechas sin ocasión. Y la frase, textual, es: la lección no es hacer más shows, es que cada show tenga
+una razón de ser.
+
+Ahora crucemos eso con el otro plan, el del disco nuevo, que ningún panelista cruzó. El primer tema nuevo
+sale antes de noviembre. Si sale antes del veintiocho, la fecha deja de ser "tocan tres bandas un viernes"
+y pasa a ser la presentación del primer tema nuevo en un año.
+
+Eso no cuesta una hora más de nadie. Los dos planes ya existen, las dos cosas ya van a pasar: lo único que
+se decide es el orden. Y es la única palanca que en la historia de esta banda ya demostró triplicar la
+asistencia.
+
+Que un panel de cuatro modelos, con los dos planes en el mismo paquete, no haya hecho ese cruce, dice algo
+sobre qué hace bien un panel y qué no. Genera opciones, y de eso genera mucho. Conectar dos documentos que
+están a diez párrafos de distancia, no.
+
+# tercero: filmar la grabación es gratis en calendario
+
+El presupuesto humano de esta banda es duro y conviene repetirlo, porque es la restricción que ordena
+todo. Ensayan una vez por semana. Como mucho, si se ponen serios, pueden agregar una cosa más por semana.
+Las semanas que hay show, el show ocupa ese lugar. Leo fue padre hace poco: ensayo y show, y se le respeta
+el tiempo, punto.
+
+Los cuatro panelistas propusieron contenido nuevo como si hubiera lugar en el calendario. Series de reels,
+videos de ensayo, detrás de escena, contenido semanal. No hay lugar. Cada una de esas propuestas compite
+contra la única actividad extra disponible.
+
+Pero hay una jornada que ya está decidida y ya está planeada, y que va a ocurrir igual: la grabación del
+disco nuevo. Está muy pensada, dice el material. Un celular en un trípode durante esa jornada produce
+semanas de material sin gastar un solo turno del presupuesto de la banda.
+
+Eso es lo único que hace que "más contenido" y "una actividad por semana" dejen de contradecirse. No es
+una actividad nueva: es una cámara prendida en una actividad que ya existe.
+
+# cuarto: la pauta mide lo que no es
+
+La última que no vio nadie es la más incómoda para los documentos propios de la banda.
+
+Todo el aparato de medición de la pauta —costo por seguidor, costo por mil impresiones, tasa de clics— mide
+seguidores. Está bien medido, con rigor, con historia, con comparaciones. El tema ganador tiene un costo
+por seguidor de setenta y dos centavos y eso se sabe con precisión.
+
+Pero el objetivo número uno es gente en la sala. Y el puente entre las dos cosas no se midió nunca. De
+tres mil setecientos noventa y tres seguidores, los que cruzaron una puerta alguna vez son ochenta y dos.
+Dos coma dos por ciento histórico.
+
+No existe, en ningún documento, una métrica de asistentes por peso gastado. Y esa es la única que contesta
+la pregunta que se hizo. Si un seguidor sale setenta y dos centavos y dos de cada cien seguidores van
+alguna vez a un show, entonces un asistente conseguido por esa vía sale del orden de treinta y tres
+dólares. Ese número —con todas las comillas del caso, porque mezcla años y campañas— es el que hay que
+poner al lado de cualquier otra idea para decidir.
+
+# el filtro automático, quinta vez que no sirve
+
+Un apartado corto de cocina, porque se repite y hay que arreglarlo.
+
+El filtro automático, que debería descartar las propuestas que repiten algo ya hecho o que rompen una
+regla, dejó pasar cuarenta y cuatro de cuarenta y seis. Y los dos que descartó fueron falsos positivos: a
+una propuesta sobre video le aplicó una regla sobre qué modelo usar para qué tarea, y a otra le aplicó una
+regla sobre a qué hora salen los correos. Nada que ver, ninguna de las dos.
+
+La causa es clara. La lista de prohibiciones del filtro es toda de sistema: qué modelo se usa, qué se hace
+con un script. En una pregunta que no es de sistema no descarta nada, y encima ensucia.
+
+El arreglo también es claro y ya está anotado: cada paquete de contexto tiene que traer sus propias
+restricciones duras, y el filtro tiene que cruzarlas. Este paquete las traía escritas en la pregunta —el
+tiempo de leo, las redes prohibidas, el tope de un dólar por día de pauta, el problema del tráfico frío—.
+El filtro no las lee. El filtro de esta tanda se hizo a mano.
+
+# qué no se tocó
+
+Como siempre, y esto es una regla, no una aclaración de cortesía: el informe es una lista para decidir, no
+un cambio.
+
+No se tocó la pauta. No se publicó nada en ninguna red. No se mandó ningún correo. No se subió nada a
+ningún repositorio. No se apretó ningún botón en el panel del proveedor de la web. Y no se prendió ningún
+motor: el de instagram sigue apuntando a donde apuntaba.
+
+Todo lo que se hizo, además de correr el panel, fue leer: las listas de ingreso de los tres shows, y una
+consulta al sitio de la banda para ver qué está publicado de verdad.
+
+# cuando arranque la semana
+
+Y el cierre. Lo que quedó sobre la mesa se ordena solo, porque hay cosas que dependen de otra persona,
+cosas que no cuestan tiempo de nadie y cosas que sí.
+
+Lo que depende de santi y cuesta dos minutos: apretar conectar para que se publique la web. Eso arregla
+tres páginas que hoy no existen, incluido el destino del cu ere de los stickers que está roto hace trece
+días, y prende la medición del tráfico propio. Es lo más barato de toda la lista y es lo que está trabado
+hace más tiempo.
+
+Lo que no cuesta tiempo de nadie, porque lo hace el agente: apuntar el motor de instagram a la escena
+porteña, empezar a bajar las fechas de las bandas del cartel y de la escena, y automatizar la bajada
+nocturna de métricas. De las tres, la primera necesita un acceso que hoy no está cargado, así que eso es
+lo primero.
+
+Lo que cuesta una decisión y ninguna hora: que el primer tema nuevo salga antes del veintiocho de
+noviembre, para que la fecha sea una presentación y no un viernes cualquiera. Es la palanca con
+antecedente.
+
+Lo que cuesta una jornada que ya iba a pasar: filmar la grabación.
+
+Y lo que hay que montar antes del show, aunque no sea urgente hoy: la forma de pedir el contacto en la
+puerta. Porque el rescate hacia atrás es imposible, y el veintiocho de noviembre es la única noche del año
+en la que la gente que le importa a esta banda va a estar junta en un cuarto.
+
+Un último número para cerrar, que es el que yo me llevaría de esta media hora: ochenta y dos personas
+compraron una entrada alguna vez, y cinco volvieron. Todo lo demás de este episodio es una forma u otra de
+mover ese cinco.
+
+Hasta la próxima.

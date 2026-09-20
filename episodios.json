@@ -1,451 +1,574 @@
 {
-  "voces": {
-    "daniela": "daniela, argentina",
-    "claude": "claude, mexico",
-    "davefx": "davefx, españa",
-    "sharvard": "sharvard, españa"
-  },
-  "episodios": [
-    {
-      "id": "ep-2026-09-15-vivo-1447",
-      "fecha": "2026-09-15",
-      "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 13:22",
-      "temas": [
-        "audio",
-        "awtomic",
-        "awtomic/qa",
-        "flaudio",
-        "fuzzer",
-        "general",
-        "juegos",
-        "personal",
-        "plata",
-        "podcast",
-        "server",
-        "tools"
-      ],
-      "palabras": 5566,
-      "guion": "episodio-2026-09-15-vivo-1447.txt",
-      "voces": {
-        "daniela": {
-          "archivo": "audio/ep-2026-09-15-vivo-1447-daniela.mp3",
-          "duracion": 1610.0,
-          "capitulos": [
-            {
-              "t": 0.0,
-              "titulo": "actualizado hoy a las 13:22",
-              "duracion": 3.4,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-1-actualizado-hoy-a-las.daniela.mp3"
-            },
-            {
-              "t": 3.4,
-              "titulo": "de que va",
-              "duracion": 23.8,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-2-de-que-va.daniela.mp3"
-            },
-            {
-              "t": 27.2,
-              "titulo": "el votador de una lista: tocar y arrancar a votar",
-              "duracion": 51.9,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-3-el-votador-de-una-lista.daniela.mp3"
-            },
-            {
-              "t": 79.0,
-              "titulo": "super candidatas: el scoring, y por qué la lista era tan chica",
-              "duracion": 65.9,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-4-super-candidatas-el.daniela.mp3"
-            },
-            {
-              "t": 144.9,
-              "titulo": "el tinder que quedaba tapado por la barra de arriba",
-              "duracion": 35.8,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-5-el-tinder-que-quedaba.daniela.mp3"
-            },
-            {
-              "t": 180.7,
-              "titulo": "el widget de la cola mostraba data vieja, y no era culpa del server",
-              "duracion": 36.9,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-6-el-widget-de-la-cola.daniela.mp3"
-            },
-            {
-              "t": 217.6,
-              "titulo": "lo del podcast: se fue el informe leído",
-              "duracion": 86.6,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-7-lo-del-podcast-se-fue.daniela.mp3"
-            },
-            {
-              "t": 304.2,
-              "titulo": "el away natural de slack y la presencia que ya no depende del agente",
-              "duracion": 84.4,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-8-el-away-natural-de.daniela.mp3"
-            },
-            {
-              "t": 388.6,
-              "titulo": "el freno de horario laboral se fue del todo",
-              "duracion": 44.7,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-9-el-freno-de-horario.daniela.mp3"
-            },
-            {
-              "t": 433.3,
-              "titulo": "la limpieza de instagram, lo que salió mal y lo que salió bien",
-              "duracion": 162.3,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-10-la-limpieza-de.daniela.mp3"
-            },
-            {
-              "t": 595.6,
-              "titulo": "la cola de instagram y las candidatas",
-              "duracion": 78.4,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-11-la-cola-de-instagram-y.daniela.mp3"
-            },
-            {
-              "t": 674.0,
-              "titulo": "lafayette, retool y dynamo",
-              "duracion": 99.1,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-12-lafayette-retool-y.daniela.mp3"
-            },
-            {
-              "t": 773.1,
-              "titulo": "las dos últimas conversaciones de instagram, y tu mamá",
-              "duracion": 85.1,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-13-las-dos-ultimas.daniela.mp3"
-            },
-            {
-              "t": 858.2,
-              "titulo": "el texto libre del votador que no sabía a quién pertenecía",
-              "duracion": 36.4,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-14-el-texto-libre-del.daniela.mp3"
-            },
-            {
-              "t": 894.6,
-              "titulo": "el historial del chat ya distingue los días",
-              "duracion": 36.6,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-15-el-historial-del-chat.daniela.mp3"
-            },
-            {
-              "t": 931.2,
-              "titulo": "la retroid: la collection high performance quedó armada en el aparato",
-              "duracion": 93.1,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-16-la-retroid-la.daniela.mp3"
-            },
-            {
-              "t": 1024.2,
-              "titulo": "tu presencia en slack de ayer",
-              "duracion": 43.0,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-17-tu-presencia-en-slack.daniela.mp3"
-            },
-            {
-              "t": 1067.2,
-              "titulo": "lo que se movió en el agente al mediodía",
-              "duracion": 50.5,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-18-lo-que-se-movio-en-el.daniela.mp3"
-            },
-            {
-              "t": 1117.7,
-              "titulo": "dejarte solo, y la tarea que dijo que seguía y no seguía",
-              "duracion": 66.0,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-19-dejarte-solo-y-la-tarea.daniela.mp3"
-            },
-            {
-              "t": 1183.6,
-              "titulo": "la retroid, y los sesenta cuadros en las pesadas",
-              "duracion": 63.4,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-20-la-retroid-y-los.daniela.mp3"
-            },
-            {
-              "t": 1247.0,
-              "titulo": "awtomic: penfolds, hafner, hall y una regla tuya sobre el estado",
-              "duracion": 85.2,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-21-awtomic-penfolds-hafner.daniela.mp3"
-            },
-            {
-              "t": 1332.2,
-              "titulo": "los mails de fuzzer y cómo se contesta ahora",
-              "duracion": 45.6,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-22-los-mails-de-fuzzer-y.daniela.mp3"
-            },
-            {
-              "t": 1377.9,
-              "titulo": "la madrugada, y la votación que no abría",
-              "duracion": 74.1,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-23-la-madrugada-y-la.daniela.mp3"
-            },
-            {
-              "t": 1451.9,
-              "titulo": "slack y las votaciones de animaciones",
-              "duracion": 74.6,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-24-slack-y-las-votaciones.daniela.mp3"
-            },
-            {
-              "t": 1526.6,
-              "titulo": "salud y el widget",
-              "duracion": 27.8,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-25-salud-y-el-widget.daniela.mp3"
-            },
-            {
-              "t": 1554.4,
-              "titulo": "lo que se movió en el agente",
-              "duracion": 55.5,
-              "archivo": "audio/ep-2026-09-15-vivo-1447-26-lo-que-se-movio-en-el.daniela.mp3"
-            }
-          ]
-        }
+ "voces": {
+  "daniela": "daniela, argentina",
+  "claude": "claude, mexico",
+  "davefx": "davefx, españa",
+  "sharvard": "sharvard, españa"
+ },
+ "episodios": [
+  {
+   "id": "ep-2026-09-15-vivo-1447",
+   "fecha": "2026-09-15",
+   "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 13:22",
+   "temas": [
+    "audio",
+    "awtomic",
+    "awtomic/qa",
+    "flaudio",
+    "fuzzer",
+    "general",
+    "juegos",
+    "personal",
+    "plata",
+    "podcast",
+    "server",
+    "tools"
+   ],
+   "palabras": 5566,
+   "guion": "episodio-2026-09-15-vivo-1447.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-15-vivo-1447-daniela.mp3",
+     "duracion": 1610.0,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "actualizado hoy a las 13:22",
+       "duracion": 3.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-1-actualizado-hoy-a-las.daniela.mp3"
       },
-      "grupo": "2026-09-15-vivo-1447",
-      "version": "vivo",
-      "emision": "vivo",
-      "actualizado": "2026-09-19T13:22-03:00",
-      "duracion": 1610.0,
-      "ts": "2026-09-15T14:47:00-03:00"
-    },
-    {
-      "id": "ep-2026-09-18-cuenta",
-      "fecha": "2026-09-18",
-      "titulo": "la tercera cuenta, y lo que bajo a codigo",
-      "temas": [
-        "flaudio",
-        "tools",
-        "plata",
-        "podcast"
-      ],
-      "palabras": 5100,
-      "guion": "episodio-2026-09-18-cuenta.txt",
-      "voces": {
-        "daniela": {
-          "archivo": "audio/ep-2026-09-18-cuenta-daniela.mp3",
-          "duracion": 1672.9,
-          "capitulos": [
-            {
-              "t": 0.0,
-              "titulo": "de qué va este episodio",
-              "duracion": 66.3,
-              "archivo": "audio/ep-2026-09-18-cuenta-1-de-que-va-este-episodio.daniela.mp3"
-            },
-            {
-              "t": 66.3,
-              "titulo": "las apuestas de ayer, una por una",
-              "duracion": 98.6,
-              "archivo": "audio/ep-2026-09-18-cuenta-2-las-apuestas-de-ayer.daniela.mp3"
-            },
-            {
-              "t": 164.9,
-              "titulo": "el preámbulo de cada orden: la palanca que sí se movió",
-              "duracion": 142.1,
-              "archivo": "audio/ep-2026-09-18-cuenta-3-el-preambulo-de-cada.daniela.mp3"
-            },
-            {
-              "t": 307.0,
-              "titulo": "el cerrador: la ronda no termina hasta que alguien mira",
-              "duracion": 101.9,
-              "archivo": "audio/ep-2026-09-18-cuenta-4-el-cerrador-la-ronda-no.daniela.mp3"
-            },
-            {
-              "t": 408.9,
-              "titulo": "el cerrador se equivocó hoy, y así tiene que ser",
-              "duracion": 88.5,
-              "archivo": "audio/ep-2026-09-18-cuenta-5-el-cerrador-se-equivoco.daniela.mp3"
-            },
-            {
-              "t": 497.4,
-              "titulo": "todas las pruebas en un solo viaje",
-              "duracion": 92.7,
-              "archivo": "audio/ep-2026-09-18-cuenta-6-todas-las-pruebas-en-un.daniela.mp3"
-            },
-            {
-              "t": 590.2,
-              "titulo": "lo chico que se toca todo el día",
-              "duracion": 45.2,
-              "archivo": "audio/ep-2026-09-18-cuenta-7-lo-chico-que-se-toca.daniela.mp3"
-            },
-            {
-              "t": 635.4,
-              "titulo": "instagram, donde el camino se arregla solo",
-              "duracion": 95.0,
-              "archivo": "audio/ep-2026-09-18-cuenta-8-instagram-donde-el.daniela.mp3"
-            },
-            {
-              "t": 730.5,
-              "titulo": "juegos: cerrar en vez de seguir midiendo",
-              "duracion": 58.1,
-              "archivo": "audio/ep-2026-09-18-cuenta-9-juegos-cerrar-en-vez-de.daniela.mp3"
-            },
-            {
-              "t": 788.5,
-              "titulo": "awtomic: la ronda, la bodega y un mensaje de una línea",
-              "duracion": 66.3,
-              "archivo": "audio/ep-2026-09-18-cuenta-10-awtomic-la-ronda-la.daniela.mp3"
-            },
-            {
-              "t": 854.8,
-              "titulo": "lo que quedó escrito y no se encoló",
-              "duracion": 125.6,
-              "archivo": "audio/ep-2026-09-18-cuenta-11-lo-que-quedo-escrito-y.daniela.mp3"
-            },
-            {
-              "t": 980.5,
-              "titulo": "anticipar en vez de esperar",
-              "duracion": 56.3,
-              "archivo": "audio/ep-2026-09-18-cuenta-12-anticipar-en-vez-de.daniela.mp3"
-            },
-            {
-              "t": 1036.8,
-              "titulo": "tres ideas que no estaban en el pedido",
-              "duracion": 100.3,
-              "archivo": "audio/ep-2026-09-18-cuenta-13-tres-ideas-que-no.daniela.mp3"
-            },
-            {
-              "t": 1137.1,
-              "titulo": "qué podemos sumar",
-              "duracion": 86.4,
-              "archivo": "audio/ep-2026-09-18-cuenta-14-que-podemos-sumar.daniela.mp3"
-            },
-            {
-              "t": 1223.5,
-              "titulo": "la tercera cuenta: qué cuesta de verdad",
-              "duracion": 130.1,
-              "archivo": "audio/ep-2026-09-18-cuenta-15-la-tercera-cuenta-que.daniela.mp3"
-            },
-            {
-              "t": 1353.5,
-              "titulo": "por qué ayer la respuesta era esperar, y qué cambió",
-              "duracion": 125.4,
-              "archivo": "audio/ep-2026-09-18-cuenta-16-por-que-ayer-la.daniela.mp3"
-            },
-            {
-              "t": 1478.9,
-              "titulo": "cómo sabemos si se paga sola",
-              "duracion": 74.3,
-              "archivo": "audio/ep-2026-09-18-cuenta-17-como-sabemos-si-se-paga.daniela.mp3"
-            },
-            {
-              "t": 1553.2,
-              "titulo": "cierre, y lo que viene",
-              "duracion": 119.6,
-              "archivo": "audio/ep-2026-09-18-cuenta-18-cierre-y-lo-que-viene.daniela.mp3"
-            }
-          ]
-        }
+      {
+       "t": 3.4,
+       "titulo": "de que va",
+       "duracion": 23.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-2-de-que-va.daniela.mp3"
       },
-      "duracion": 1672.9,
-      "ts": "2026-09-18T11:33:08-03:00"
-    },
-    {
-      "id": "ep-2026-09-19-ser-rico",
-      "fecha": "2026-09-19",
-      "titulo": "ser rico",
-      "temas": [
-        "consejo",
-        "plata",
-        "podcast"
-      ],
-      "palabras": 4167,
-      "guion": "episodio-2026-09-19-ser-rico.txt",
-      "voces": {
-        "daniela": {
-          "archivo": "audio/ep-2026-09-19-ser-rico-daniela.mp3",
-          "duracion": 1457.8,
-          "capitulos": [
-            {
-              "t": 0.0,
-              "titulo": "de qué va este episodio",
-              "duracion": 96.2,
-              "archivo": "audio/ep-2026-09-19-ser-rico-1-de-que-va-este-episodio.daniela.mp3"
-            },
-            {
-              "t": 96.2,
-              "titulo": "la pregunta, y por qué está redactada así",
-              "duracion": 117.8,
-              "archivo": "audio/ep-2026-09-19-ser-rico-2-la-pregunta-y-por-que.daniela.mp3"
-            },
-            {
-              "t": 214.0,
-              "titulo": "lo que se le contó al panel",
-              "duracion": 64.0,
-              "archivo": "audio/ep-2026-09-19-ser-rico-3-lo-que-se-le-conto-al.daniela.mp3"
-            },
-            {
-              "t": 278.0,
-              "titulo": "por qué un panel y no preguntarle a uno solo",
-              "duracion": 92.2,
-              "archivo": "audio/ep-2026-09-19-ser-rico-4-por-que-un-panel-y-no.daniela.mp3"
-            },
-            {
-              "t": 370.3,
-              "titulo": "qué contestó cada uno",
-              "duracion": 80.2,
-              "archivo": "audio/ep-2026-09-19-ser-rico-5-que-contesto-cada-uno.daniela.mp3"
-            },
-            {
-              "t": 450.5,
-              "titulo": "la parte incómoda: casi todas eran la misma, y estaba mal",
-              "duracion": 93.1,
-              "archivo": "audio/ep-2026-09-19-ser-rico-6-la-parte-incomoda-casi.daniela.mp3"
-            },
-            {
-              "t": 543.6,
-              "titulo": "el freno que vio uno solo",
-              "duracion": 65.3,
-              "archivo": "audio/ep-2026-09-19-ser-rico-7-el-freno-que-vio-uno.daniela.mp3"
-            },
-            {
-              "t": 608.9,
-              "titulo": "la regla de forma que quedó",
-              "duracion": 50.3,
-              "archivo": "audio/ep-2026-09-19-ser-rico-8-la-regla-de-forma-que.daniela.mp3"
-            },
-            {
-              "t": 659.2,
-              "titulo": "uno: los dos amplificadores",
-              "duracion": 107.3,
-              "archivo": "audio/ep-2026-09-19-ser-rico-9-uno-los-dos.daniela.mp3"
-            },
-            {
-              "t": 766.5,
-              "titulo": "dos: abrir la vía de cobro",
-              "duracion": 59.6,
-              "archivo": "audio/ep-2026-09-19-ser-rico-10-dos-abrir-la-via-de.daniela.mp3"
-            },
-            {
-              "t": 826.1,
-              "titulo": "tres: afiliados sobre contenido automatizado",
-              "duracion": 131.9,
-              "archivo": "audio/ep-2026-09-19-ser-rico-11-tres-afiliados-sobre.daniela.mp3"
-            },
-            {
-              "t": 958.1,
-              "titulo": "cuatro: el motor de instagram apuntado a una cuenta nueva",
-              "duracion": 72.2,
-              "archivo": "audio/ep-2026-09-19-ser-rico-12-cuatro-el-motor-de.daniela.mp3"
-            },
-            {
-              "t": 1030.3,
-              "titulo": "lo que se cayó, y con qué regla",
-              "duracion": 141.4,
-              "archivo": "audio/ep-2026-09-19-ser-rico-13-lo-que-se-cayo-y-con.daniela.mp3"
-            },
-            {
-              "t": 1171.7,
-              "titulo": "el filtro que podés aplicar solo, en diez segundos",
-              "duracion": 71.5,
-              "archivo": "audio/ep-2026-09-19-ser-rico-14-el-filtro-que-podes.daniela.mp3"
-            },
-            {
-              "t": 1243.2,
-              "titulo": "lo que el panel mostró de sí mismo",
-              "duracion": 57.1,
-              "archivo": "audio/ep-2026-09-19-ser-rico-15-lo-que-el-panel-mostro.daniela.mp3"
-            },
-            {
-              "t": 1300.3,
-              "titulo": "mañana a la mañana",
-              "duracion": 157.4,
-              "archivo": "audio/ep-2026-09-19-ser-rico-16-manana-a-la-manana.daniela.mp3"
-            }
-          ]
-        }
+      {
+       "t": 27.2,
+       "titulo": "el votador de una lista: tocar y arrancar a votar",
+       "duracion": 51.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-3-el-votador-de-una-lista.daniela.mp3"
       },
-      "duracion": 1457.8,
-      "ts": "2026-09-19T23:03:33-03:00"
+      {
+       "t": 79.0,
+       "titulo": "super candidatas: el scoring, y por qué la lista era tan chica",
+       "duracion": 65.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-4-super-candidatas-el.daniela.mp3"
+      },
+      {
+       "t": 144.9,
+       "titulo": "el tinder que quedaba tapado por la barra de arriba",
+       "duracion": 35.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-5-el-tinder-que-quedaba.daniela.mp3"
+      },
+      {
+       "t": 180.7,
+       "titulo": "el widget de la cola mostraba data vieja, y no era culpa del server",
+       "duracion": 36.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-6-el-widget-de-la-cola.daniela.mp3"
+      },
+      {
+       "t": 217.6,
+       "titulo": "lo del podcast: se fue el informe leído",
+       "duracion": 86.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-7-lo-del-podcast-se-fue.daniela.mp3"
+      },
+      {
+       "t": 304.2,
+       "titulo": "el away natural de slack y la presencia que ya no depende del agente",
+       "duracion": 84.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-8-el-away-natural-de.daniela.mp3"
+      },
+      {
+       "t": 388.6,
+       "titulo": "el freno de horario laboral se fue del todo",
+       "duracion": 44.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-9-el-freno-de-horario.daniela.mp3"
+      },
+      {
+       "t": 433.3,
+       "titulo": "la limpieza de instagram, lo que salió mal y lo que salió bien",
+       "duracion": 162.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-10-la-limpieza-de.daniela.mp3"
+      },
+      {
+       "t": 595.6,
+       "titulo": "la cola de instagram y las candidatas",
+       "duracion": 78.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-11-la-cola-de-instagram-y.daniela.mp3"
+      },
+      {
+       "t": 674.0,
+       "titulo": "lafayette, retool y dynamo",
+       "duracion": 99.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-12-lafayette-retool-y.daniela.mp3"
+      },
+      {
+       "t": 773.1,
+       "titulo": "las dos últimas conversaciones de instagram, y tu mamá",
+       "duracion": 85.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-13-las-dos-ultimas.daniela.mp3"
+      },
+      {
+       "t": 858.2,
+       "titulo": "el texto libre del votador que no sabía a quién pertenecía",
+       "duracion": 36.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-14-el-texto-libre-del.daniela.mp3"
+      },
+      {
+       "t": 894.6,
+       "titulo": "el historial del chat ya distingue los días",
+       "duracion": 36.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-15-el-historial-del-chat.daniela.mp3"
+      },
+      {
+       "t": 931.2,
+       "titulo": "la retroid: la collection high performance quedó armada en el aparato",
+       "duracion": 93.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-16-la-retroid-la.daniela.mp3"
+      },
+      {
+       "t": 1024.2,
+       "titulo": "tu presencia en slack de ayer",
+       "duracion": 43.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-17-tu-presencia-en-slack.daniela.mp3"
+      },
+      {
+       "t": 1067.2,
+       "titulo": "lo que se movió en el agente al mediodía",
+       "duracion": 50.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-18-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 1117.7,
+       "titulo": "dejarte solo, y la tarea que dijo que seguía y no seguía",
+       "duracion": 66.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-19-dejarte-solo-y-la-tarea.daniela.mp3"
+      },
+      {
+       "t": 1183.6,
+       "titulo": "la retroid, y los sesenta cuadros en las pesadas",
+       "duracion": 63.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-20-la-retroid-y-los.daniela.mp3"
+      },
+      {
+       "t": 1247.0,
+       "titulo": "awtomic: penfolds, hafner, hall y una regla tuya sobre el estado",
+       "duracion": 85.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-21-awtomic-penfolds-hafner.daniela.mp3"
+      },
+      {
+       "t": 1332.2,
+       "titulo": "los mails de fuzzer y cómo se contesta ahora",
+       "duracion": 45.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-22-los-mails-de-fuzzer-y.daniela.mp3"
+      },
+      {
+       "t": 1377.9,
+       "titulo": "la madrugada, y la votación que no abría",
+       "duracion": 74.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-23-la-madrugada-y-la.daniela.mp3"
+      },
+      {
+       "t": 1451.9,
+       "titulo": "slack y las votaciones de animaciones",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-24-slack-y-las-votaciones.daniela.mp3"
+      },
+      {
+       "t": 1526.6,
+       "titulo": "salud y el widget",
+       "duracion": 27.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-25-salud-y-el-widget.daniela.mp3"
+      },
+      {
+       "t": 1554.4,
+       "titulo": "lo que se movió en el agente",
+       "duracion": 55.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-26-lo-que-se-movio-en-el.daniela.mp3"
+      }
+     ]
     }
-  ],
-  "actualizado": "2026-09-19 23:03"
+   },
+   "grupo": "2026-09-15-vivo-1447",
+   "version": "vivo",
+   "emision": "vivo",
+   "actualizado": "2026-09-19T13:22-03:00",
+   "duracion": 1610.0,
+   "ts": "2026-09-15T14:47:00-03:00"
+  },
+  {
+   "id": "ep-2026-09-18-cuenta",
+   "fecha": "2026-09-18",
+   "titulo": "la tercera cuenta, y lo que bajo a codigo",
+   "temas": [
+    "flaudio",
+    "tools",
+    "plata",
+    "podcast"
+   ],
+   "palabras": 5100,
+   "guion": "episodio-2026-09-18-cuenta.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-18-cuenta-daniela.mp3",
+     "duracion": 1672.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 66.3,
+       "archivo": "audio/ep-2026-09-18-cuenta-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 66.3,
+       "titulo": "las apuestas de ayer, una por una",
+       "duracion": 98.6,
+       "archivo": "audio/ep-2026-09-18-cuenta-2-las-apuestas-de-ayer.daniela.mp3"
+      },
+      {
+       "t": 164.9,
+       "titulo": "el preámbulo de cada orden: la palanca que sí se movió",
+       "duracion": 142.1,
+       "archivo": "audio/ep-2026-09-18-cuenta-3-el-preambulo-de-cada.daniela.mp3"
+      },
+      {
+       "t": 307.0,
+       "titulo": "el cerrador: la ronda no termina hasta que alguien mira",
+       "duracion": 101.9,
+       "archivo": "audio/ep-2026-09-18-cuenta-4-el-cerrador-la-ronda-no.daniela.mp3"
+      },
+      {
+       "t": 408.9,
+       "titulo": "el cerrador se equivocó hoy, y así tiene que ser",
+       "duracion": 88.5,
+       "archivo": "audio/ep-2026-09-18-cuenta-5-el-cerrador-se-equivoco.daniela.mp3"
+      },
+      {
+       "t": 497.4,
+       "titulo": "todas las pruebas en un solo viaje",
+       "duracion": 92.7,
+       "archivo": "audio/ep-2026-09-18-cuenta-6-todas-las-pruebas-en-un.daniela.mp3"
+      },
+      {
+       "t": 590.2,
+       "titulo": "lo chico que se toca todo el día",
+       "duracion": 45.2,
+       "archivo": "audio/ep-2026-09-18-cuenta-7-lo-chico-que-se-toca.daniela.mp3"
+      },
+      {
+       "t": 635.4,
+       "titulo": "instagram, donde el camino se arregla solo",
+       "duracion": 95.0,
+       "archivo": "audio/ep-2026-09-18-cuenta-8-instagram-donde-el.daniela.mp3"
+      },
+      {
+       "t": 730.5,
+       "titulo": "juegos: cerrar en vez de seguir midiendo",
+       "duracion": 58.1,
+       "archivo": "audio/ep-2026-09-18-cuenta-9-juegos-cerrar-en-vez-de.daniela.mp3"
+      },
+      {
+       "t": 788.5,
+       "titulo": "awtomic: la ronda, la bodega y un mensaje de una línea",
+       "duracion": 66.3,
+       "archivo": "audio/ep-2026-09-18-cuenta-10-awtomic-la-ronda-la.daniela.mp3"
+      },
+      {
+       "t": 854.8,
+       "titulo": "lo que quedó escrito y no se encoló",
+       "duracion": 125.6,
+       "archivo": "audio/ep-2026-09-18-cuenta-11-lo-que-quedo-escrito-y.daniela.mp3"
+      },
+      {
+       "t": 980.5,
+       "titulo": "anticipar en vez de esperar",
+       "duracion": 56.3,
+       "archivo": "audio/ep-2026-09-18-cuenta-12-anticipar-en-vez-de.daniela.mp3"
+      },
+      {
+       "t": 1036.8,
+       "titulo": "tres ideas que no estaban en el pedido",
+       "duracion": 100.3,
+       "archivo": "audio/ep-2026-09-18-cuenta-13-tres-ideas-que-no.daniela.mp3"
+      },
+      {
+       "t": 1137.1,
+       "titulo": "qué podemos sumar",
+       "duracion": 86.4,
+       "archivo": "audio/ep-2026-09-18-cuenta-14-que-podemos-sumar.daniela.mp3"
+      },
+      {
+       "t": 1223.5,
+       "titulo": "la tercera cuenta: qué cuesta de verdad",
+       "duracion": 130.1,
+       "archivo": "audio/ep-2026-09-18-cuenta-15-la-tercera-cuenta-que.daniela.mp3"
+      },
+      {
+       "t": 1353.5,
+       "titulo": "por qué ayer la respuesta era esperar, y qué cambió",
+       "duracion": 125.4,
+       "archivo": "audio/ep-2026-09-18-cuenta-16-por-que-ayer-la.daniela.mp3"
+      },
+      {
+       "t": 1478.9,
+       "titulo": "cómo sabemos si se paga sola",
+       "duracion": 74.3,
+       "archivo": "audio/ep-2026-09-18-cuenta-17-como-sabemos-si-se-paga.daniela.mp3"
+      },
+      {
+       "t": 1553.2,
+       "titulo": "cierre, y lo que viene",
+       "duracion": 119.6,
+       "archivo": "audio/ep-2026-09-18-cuenta-18-cierre-y-lo-que-viene.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1672.9,
+   "ts": "2026-09-18T11:33:08-03:00"
+  },
+  {
+   "id": "ep-2026-09-19-ser-rico",
+   "fecha": "2026-09-19",
+   "titulo": "ser rico",
+   "temas": [
+    "consejo",
+    "plata",
+    "podcast"
+   ],
+   "palabras": 4167,
+   "guion": "episodio-2026-09-19-ser-rico.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-19-ser-rico-daniela.mp3",
+     "duracion": 1457.8,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 96.2,
+       "archivo": "audio/ep-2026-09-19-ser-rico-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 96.2,
+       "titulo": "la pregunta, y por qué está redactada así",
+       "duracion": 117.8,
+       "archivo": "audio/ep-2026-09-19-ser-rico-2-la-pregunta-y-por-que.daniela.mp3"
+      },
+      {
+       "t": 214.0,
+       "titulo": "lo que se le contó al panel",
+       "duracion": 64.0,
+       "archivo": "audio/ep-2026-09-19-ser-rico-3-lo-que-se-le-conto-al.daniela.mp3"
+      },
+      {
+       "t": 278.0,
+       "titulo": "por qué un panel y no preguntarle a uno solo",
+       "duracion": 92.2,
+       "archivo": "audio/ep-2026-09-19-ser-rico-4-por-que-un-panel-y-no.daniela.mp3"
+      },
+      {
+       "t": 370.3,
+       "titulo": "qué contestó cada uno",
+       "duracion": 80.2,
+       "archivo": "audio/ep-2026-09-19-ser-rico-5-que-contesto-cada-uno.daniela.mp3"
+      },
+      {
+       "t": 450.5,
+       "titulo": "la parte incómoda: casi todas eran la misma, y estaba mal",
+       "duracion": 93.1,
+       "archivo": "audio/ep-2026-09-19-ser-rico-6-la-parte-incomoda-casi.daniela.mp3"
+      },
+      {
+       "t": 543.6,
+       "titulo": "el freno que vio uno solo",
+       "duracion": 65.3,
+       "archivo": "audio/ep-2026-09-19-ser-rico-7-el-freno-que-vio-uno.daniela.mp3"
+      },
+      {
+       "t": 608.9,
+       "titulo": "la regla de forma que quedó",
+       "duracion": 50.3,
+       "archivo": "audio/ep-2026-09-19-ser-rico-8-la-regla-de-forma-que.daniela.mp3"
+      },
+      {
+       "t": 659.2,
+       "titulo": "uno: los dos amplificadores",
+       "duracion": 107.3,
+       "archivo": "audio/ep-2026-09-19-ser-rico-9-uno-los-dos.daniela.mp3"
+      },
+      {
+       "t": 766.5,
+       "titulo": "dos: abrir la vía de cobro",
+       "duracion": 59.6,
+       "archivo": "audio/ep-2026-09-19-ser-rico-10-dos-abrir-la-via-de.daniela.mp3"
+      },
+      {
+       "t": 826.1,
+       "titulo": "tres: afiliados sobre contenido automatizado",
+       "duracion": 131.9,
+       "archivo": "audio/ep-2026-09-19-ser-rico-11-tres-afiliados-sobre.daniela.mp3"
+      },
+      {
+       "t": 958.1,
+       "titulo": "cuatro: el motor de instagram apuntado a una cuenta nueva",
+       "duracion": 72.2,
+       "archivo": "audio/ep-2026-09-19-ser-rico-12-cuatro-el-motor-de.daniela.mp3"
+      },
+      {
+       "t": 1030.3,
+       "titulo": "lo que se cayó, y con qué regla",
+       "duracion": 141.4,
+       "archivo": "audio/ep-2026-09-19-ser-rico-13-lo-que-se-cayo-y-con.daniela.mp3"
+      },
+      {
+       "t": 1171.7,
+       "titulo": "el filtro que podés aplicar solo, en diez segundos",
+       "duracion": 71.5,
+       "archivo": "audio/ep-2026-09-19-ser-rico-14-el-filtro-que-podes.daniela.mp3"
+      },
+      {
+       "t": 1243.2,
+       "titulo": "lo que el panel mostró de sí mismo",
+       "duracion": 57.1,
+       "archivo": "audio/ep-2026-09-19-ser-rico-15-lo-que-el-panel-mostro.daniela.mp3"
+      },
+      {
+       "t": 1300.3,
+       "titulo": "mañana a la mañana",
+       "duracion": 157.4,
+       "archivo": "audio/ep-2026-09-19-ser-rico-16-manana-a-la-manana.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1457.8,
+   "ts": "2026-09-19T23:03:33-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-fuzzer",
+   "fecha": "2026-09-20",
+   "titulo": "fuzzer: lo que dijo el panel sobre la banda",
+   "temas": [
+    "fuzzer",
+    "consejo"
+   ],
+   "palabras": 4903,
+   "guion": "episodio-2026-09-20-fuzzer.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-fuzzer-daniela.mp3",
+     "duracion": 1675.0,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 116.8,
+       "archivo": "audio/ep-2026-09-20-fuzzer-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 116.8,
+       "titulo": "quiénes contestaron, y quiénes no",
+       "duracion": 100.5,
+       "archivo": "audio/ep-2026-09-20-fuzzer-2-quienes-contestaron-y.daniela.mp3"
+      },
+      {
+       "t": 217.3,
+       "titulo": "la pregunta, y por qué está redactada así",
+       "duracion": 119.8,
+       "archivo": "audio/ep-2026-09-20-fuzzer-3-la-pregunta-y-por-que.daniela.mp3"
+      },
+      {
+       "t": 337.1,
+       "titulo": "por qué un panel y no preguntarle a uno solo",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-09-20-fuzzer-4-por-que-un-panel-y-no.daniela.mp3"
+      },
+      {
+       "t": 411.7,
+       "titulo": "el primer golpe: los números estaban mal",
+       "duracion": 113.0,
+       "archivo": "audio/ep-2026-09-20-fuzzer-5-el-primer-golpe-los.daniela.mp3"
+      },
+      {
+       "t": 524.7,
+       "titulo": "lo que ese número le hace a la meta de noviembre",
+       "duracion": 95.2,
+       "archivo": "audio/ep-2026-09-20-fuzzer-6-lo-que-ese-numero-le.daniela.mp3"
+      },
+      {
+       "t": 619.9,
+       "titulo": "la idea que sonaba mejor, y por qué es imposible",
+       "duracion": 151.2,
+       "archivo": "audio/ep-2026-09-20-fuzzer-7-la-idea-que-sonaba.daniela.mp3"
+      },
+      {
+       "t": 771.1,
+       "titulo": "la web está sirviendo una versión vieja",
+       "duracion": 139.2,
+       "archivo": "audio/ep-2026-09-20-fuzzer-8-la-web-esta-sirviendo.daniela.mp3"
+      },
+      {
+       "t": 910.3,
+       "titulo": "las ocho que sobrevivieron: las tres que hace el agente solo",
+       "duracion": 128.1,
+       "archivo": "audio/ep-2026-09-20-fuzzer-9-las-ocho-que.daniela.mp3"
+      },
+      {
+       "t": 1038.3,
+       "titulo": "las otras cinco: las que sí cuestan tiempo humano",
+       "duracion": 118.9,
+       "archivo": "audio/ep-2026-09-20-fuzzer-10-las-otras-cinco-las-que.daniela.mp3"
+      },
+      {
+       "t": 1157.2,
+       "titulo": "lo que ninguno vio, primero: la audiencia no es local",
+       "duracion": 106.2,
+       "archivo": "audio/ep-2026-09-20-fuzzer-11-lo-que-ninguno-vio.daniela.mp3"
+      },
+      {
+       "t": 1263.4,
+       "titulo": "segundo: el show todavía no tiene un motivo",
+       "duracion": 73.4,
+       "archivo": "audio/ep-2026-09-20-fuzzer-12-segundo-el-show-todavia.daniela.mp3"
+      },
+      {
+       "t": 1336.8,
+       "titulo": "tercero: filmar la grabación es gratis en calendario",
+       "duracion": 67.6,
+       "archivo": "audio/ep-2026-09-20-fuzzer-13-tercero-filmar-la.daniela.mp3"
+      },
+      {
+       "t": 1404.4,
+       "titulo": "cuarto: la pauta mide lo que no es",
+       "duracion": 65.9,
+       "archivo": "audio/ep-2026-09-20-fuzzer-14-cuarto-la-pauta-mide-lo.daniela.mp3"
+      },
+      {
+       "t": 1470.4,
+       "titulo": "el filtro automático, quinta vez que no sirve",
+       "duracion": 65.1,
+       "archivo": "audio/ep-2026-09-20-fuzzer-15-el-filtro-automatico.daniela.mp3"
+      },
+      {
+       "t": 1535.5,
+       "titulo": "qué no se tocó",
+       "duracion": 37.4,
+       "archivo": "audio/ep-2026-09-20-fuzzer-16-que-no-se-toco.daniela.mp3"
+      },
+      {
+       "t": 1573.0,
+       "titulo": "cuando arranque la semana",
+       "duracion": 102.0,
+       "archivo": "audio/ep-2026-09-20-fuzzer-17-cuando-arranque-la.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1675.0,
+   "ts": "2026-09-20T00:44:53-03:00"
+  }
+ ],
+ "actualizado": "2026-09-20 00:44"
 }
