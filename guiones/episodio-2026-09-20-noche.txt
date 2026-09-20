@@ -1,0 +1,453 @@
+# de qué va este episodio
+
+Buen día. Este es el episodio del domingo veinte de septiembre, y tiene un solo tema de punta a punta.
+
+Anoche se le hizo una pregunta a un panel de modelos. No a uno: a varios, cada uno por su lado, sin verse
+entre ellos, todos con el mismo material adelante. Es la sexta vez que se arma este panel, y la primera
+que junta siete preguntas tuyas en una sola corrida, porque hacerlas por separado era empaquetar el mismo
+contexto seis veces y pagarlo seis veces.
+
+Las siete partes, rápido. Cómo sería este sistema sin ningún modelo adentro. Qué se puede delegar de
+verdad a los gratis. El plan de la noche, hora por hora, con al menos una tarea que termine en plata. El
+negocio de las apps de celular que se cobran, con el metrónomo de android como caso concreto. Cómo cobrás
+desde argentina sin poner el cuerpo en otro país. Por cada delegación, una prueba chica ya corrida, con
+la salida del gratis y la del caro pegadas. Y la última, que agregaste sobre el filo: menos claude.
+
+El resultado te lo digo ahora, porque es lo único que cambia una decisión hoy: lo que contestó la
+pregunta no fue el panel. Fueron los archivos. Otra vez. El panel aportó una sola cosa buena, y la cuento
+al final, pero lo que da vuelta la mesa salió de medir lo que ya estaba escrito en el disco.
+
+El plan de la media hora. Primero, la cosa rota: el instrumento con el que venías decidiendo dónde
+ahorrar. Segundo, dónde se va la plata de verdad. Tercero, la frontera, hasta dónde llega un sistema sin
+modelos. Cuarto, las tres pruebas con las salidas pegadas. Quinto, el plan de la noche. Sexto, las apps y
+el metrónomo. Séptimo, el cobro. Octavo, si cierra con una sola cuenta. Y el cierre.
+
+La aclaración de siempre: todo salió del informe, del material que se le mandó al panel y de archivos que
+ya estaban escritos. Cuando diga un número medido, lo digo como medido.
+
+# el instrumento con el que venías decidiendo está roto
+
+Esta parte va antes que todo, porque invalida la mitad de las conversaciones de los últimos días.
+
+Hay un documento que venías leyendo para decidir dónde ahorrar. Dice que en una semana se gastaron nueve
+mil setecientos cincuenta y seis dólares, y señala con el dedo a una sola cosa como la mitad del gasto: la
+medición paso por paso de cada orden de la cola.
+
+Ese número está mal, y de una manera muy específica. La medición paso por paso es **la misma orden
+contada dos veces**, y la segunda copia está tarifada como si nada viniera de cache.
+
+El caso que podés verificar a mano: la corrida del panel sobre la banda, la de anoche. La fila real, la
+que devuelve la herramienta oficial, dice siete dólares con ochenta y cuatro. La fila del contador
+propio, por el mismo trabajo, dice ciento cuarenta y dos con treinta y uno. Dieciocho veces más.
+
+Sobre las ciento treinta y siete órdenes que tienen las dos filas, el gasto real suma novecientos noventa
+y un dólares y el contador roto suma tres mil trescientos cuatro. La mediana del error es cuatro veces.
+
+La causa es una línea de código, en la función que convierte tokens en dólares. Multiplica todo por el
+mismo precio plano: no distingue la entrada fresca del contexto releído, que sale a la décima parte, ni
+de la salida, que sale mucho más caro. Y suma la entrada de cada turno, que ya trae el contexto entero
+reenviado. Cuando algo se relee cuarenta veces, contarlo cuarenta veces al precio más caro no es una
+aproximación: es otro número.
+
+Sumando el archivo entero, tres días dan ocho mil ochocientos setenta y siete dólares. Sacando las filas
+duplicadas, dan dos mil novecientos noventa. **Sobra el sesenta y seis por ciento.**
+
+Y con el número corregido el gasto se reparte distinto de como veníamos diciendo. La cola es el setenta y
+cinco por ciento. El chat es el veinticuatro. El chat pesa **tres veces más** de lo que decía el informe
+viejo, y el chat sí tiene pedazos delegables. La cola no.
+
+La buena noticia, que no es menor: tu gasto real de claude es aproximadamente la mitad de lo que venías
+leyendo. Y el widget de gasto del board no está afectado, porque mira el porcentaje de la ventana semanal
+y no ese archivo.
+
+El arreglo es un filtro de una línea en dos lugares. Cero tokens. No es un script nuevo: es sacar una
+suma que estaba de más.
+
+Y acá va la autocrítica, que está escrita en el informe y me parece lo más importante de la corrida: **me
+lo comí yo también**. El paquete que le di al panel anoche lleva escrito el gasto con la copia inflada
+adentro. O sea que el panel opinó sobre un número que yo le pasé mal. Es exactamente lo que había pasado
+la corrida anterior con los números de la banda. Dos veces seguidas. Ya quedó como criterio fijo del
+tema: el número que va en el paquete se audita antes de mandarlo, y el paquete se arma con la fuente, no
+con un informe intermedio.
+
+# dónde se va la plata de verdad
+
+Con el contador arreglado, la pregunta de dónde ahorrar cambia de respuesta. Y la respuesta es incómoda.
+
+La plata no se va en el modelo. Se va en el tema.
+
+Sobre mil quinientas veintiocho órdenes con tema anotado, el tema herramientas, que es el agente
+construyéndose a sí mismo, se lleva seiscientas setenta y cuatro. Cuarenta y cuatro por ciento. Y en
+plata, sobre tres días, se lleva el cincuenta y seis por ciento de todo lo que gastó la cola.
+
+El laburo que se cobra, el de la empresa, es el siete y medio por ciento.
+
+De cada dos pesos que se van, poco más de uno se lo lleva el agente arreglándose a sí mismo. Y la parte
+que quiero marcar: esto no es un hallazgo nuevo. El mismo número, casi idéntico, ya estaba escrito hace
+tres días. Sigue igual y no se movió. Es la gotera más grande y la única que no se arregla con código,
+porque no es un error: es cuántas órdenes se encolan y de qué tema.
+
+La segunda gotera es más chica en plata y más grande en consecuencias. El proveedor gratis que más rinde
+tiene un tope de doscientos mil tokens por día para toda la organización. Ayer se gastaron ciento setenta
+y ocho mil. Y de esos, el setenta y tres por ciento se lo llevaron dos carriles que no producen trabajo:
+el que compara respuestas y el que las puntúa. Medir. Al único que hizo trabajo de verdad, el panel, le
+quedó una cuarta parte.
+
+Ese es el motivo exacto por el que ese proveedor está sin cuota cinco corridas seguidas, incluida la de
+anoche: rebotó en la segunda de diez tandas, con cuatro reintentos, y no salió igual.
+
+El arreglo no ahorra un dólar de claude. Hace otra cosa: ralear esos dos carriles a una muestra por día,
+en vez de correrlos en cada mensaje, libera ciento treinta mil tokens diarios. Es la diferencia entre
+tener un escalón gratis usable y tener uno decorativo. Hoy existe en el papel y está siempre agotado.
+
+Y la tercera da un poco de bronca, porque es sobre este mismo sistema. Una orden que corre en la máquina
+de afuera puede cerrar diciendo que salió todo bien, y dejar el entregable del otro lado. Pasó anoche,
+con el informe de cómo cobrar: la orden cerró bien, en seis minutos, y el archivo que prometía no estaba
+en el server. Estaba en la otra máquina, completo, pero invisible desde acá. Se trajo a mano en esta
+corrida, y por eso la parte del cobro de este episodio existe.
+
+El guard que vigila esto mira que haya un proceso vivo. No mira que el archivo que la orden prometió esté
+donde dijo. Se revisaron las otras diecisiete órdenes cerradas afuera y este es el único caso: un agujero
+confirmado, no una epidemia. Pero el agujero sigue abierto.
+
+# la frontera: hasta dónde llega un sistema sin modelos
+
+La primera pregunta era la más ambiciosa: cómo sería este sistema sin ningún modelo adentro. Función por
+función, cuál es el reemplazo determinístico, qué se pierde, y dónde está el punto en el que ya no se
+puede prescindir.
+
+La respuesta es más corta de lo que esperaba.
+
+Decidir a qué pestaña va un mensaje: ya es un script. Dos mil sesenta y una llamadas, cero pesos. Los
+comandos cortos del chat: ya son un script. Filtrar las respuestas del panel: ya es un script, aunque
+lleva cinco corridas sin servir, porque no lee las restricciones que trae cada paquete. El eco del chat:
+ya es gratis. Los chequeos de reglas: casi todo script.
+
+Decidir la prioridad de la cola sí se puede bajar a una tabla, por tema y por antigüedad. Reemplazo
+total. Se pierde el caso raro que pide criterio.
+
+Redactar la orden es parcial: una plantilla arregla el formato, no la comprensión. Vuelvo sobre eso en un
+minuto, porque hay prueba.
+
+Resumir el estado no tiene reemplazo determinístico: no hay regla que decida qué número sobrevive a un
+resumen. Pero sí se puede delegar a un gratis, y hay prueba.
+
+Y la última fila, que decide todo: **ejecutar una orden de la cola**. Reemplazo determinístico: ninguno.
+Una orden son cuarenta a ciento treinta y siete turnos con herramientas. No existe el script que haga
+eso, y tampoco existe el gratis que lo haga: no es una cuestión de calidad, es que no existe el
+mecanismo.
+
+Ese es el piso irreducible, y es el setenta y cinco por ciento del gasto. El otro veinticuatro es el
+chat, y ahí sí hay borde.
+
+Así que la frontera, en una línea: lo que se puede matar con scripts nuevos es cercano a cero, porque lo
+barato ya se mató. Lo que queda no es un problema de escalón de modelo. Es cuántas órdenes se encolan, y
+de qué tema.
+
+# las tres pruebas, con las dos salidas pegadas
+
+Esta parte la pediste vos, con una redacción que vale la pena repetir: que por cada delegación propuesta
+a un gratis, el informe vuelva con una prueba chica ya lista para correr. El comando tipeable, el input,
+la salida esperada, y la misma prueba contra el caro, con las dos salidas pegadas. Para que juzgues con
+tus ojos en vez de que alguien te cuente que conviene.
+
+Quedó hecho. Hay una receta nueva, con tres casos de trabajo real, el mismo prompt a los cuatro gratis y
+al caro. No prende nada y no corre sola: corre cuando la tipeás.
+
+Primera prueba: a qué pestaña va un mensaje. Ocho mensajes reales.
+
+El script que lo hace hoy acierta cinco de ocho, en cero segundos y cero pesos. Un gratis acierta seis de
+ocho en medio segundo. Otro, seis de ocho en menos de dos segundos. Y el caro acierta seis de ocho, en
+casi diez segundos, y sale dos centavos cada vez.
+
+O sea: **el caro no gana**. Empata con un gratis que tarda quince veces menos y sale cero. La conclusión
+del informe es tajante y me parece correcta: esta tarea no vuelve nunca al modelo caro, y si algún día se
+quiere mejorar el cinco de ocho del script, el destino es el gratis.
+
+Segunda prueba: resumir en tres viñetas el estado en curso de un tema real. Acá la diferencia se ve, y es
+interesante, porque las dos salidas son buenas y no son iguales.
+
+El gratis tardó dos segundos, salió cero, y devolvió tres viñetas limpias que no perdieron ningún número
+que importe. El caro tardó ocho segundos, salió cuatro centavos, y devolvió tres viñetas bastante más
+densas: nombra cada modelo y cómo falló cada uno, mete los tres números de los shows reales, agrega que
+la audiencia no es local, y cierra con los frenos concretos.
+
+Es más completo y más fiel. También es cuatro veces más lento y cuesta plata. Para un resumen que va al
+chat, esa diferencia la tenés que juzgar vos, y esa es la prueba que pediste.
+
+Y hay un detalle que el informe marca con honestidad. El banco de medición interno le pone a ese gratis
+un veinte por ciento en resumir, y el piso para delegar está en noventa y cinco. Con esa vara, la
+delegación estaría bloqueada. Pero el propio documento del banco aclara que en resumir no mide acierto:
+mide cuántas palabras de contenido repite. O sea, el piso está bloqueando algo que a ojo funciona. Esa
+es, textual, la razón por la que pediste juzgar con tus ojos.
+
+Tercera prueba: escribir la línea de orden a partir de un mensaje tuyo.
+
+Los cuatro gratis contestaron en poco más de un segundo y cero pesos. El caro tardó siete y medio y salió
+un centavo y medio. Y los cuatro gratis inventaron un tema que no existe. Pero el caro también inventó
+uno.
+
+Así que el veredicto no es que los gratis son peores: es que **el prompt está mal**. No les pasa la lista
+de temas ni el criterio de aceptación. La única diferencia real fue que el caro escribió un criterio
+verificable y los gratis no. Se delega cuando el prompt lleve la plantilla, y ahí se vuelve a correr esta
+misma prueba.
+
+Y el resultado general de las tres, que es el segundo hallazgo grande: **no hay ninguna tarea cara que un
+gratis pueda tomar**. Tres cuartas partes del gasto son la cola, y una orden de la cola no la corre
+ninguno. Y lo que los gratis sí pueden hacer ya cuesta cero pesos hoy. La única delegación nueva que pasó
+la prueba a ojo es la de resumir.
+
+# el plan de la noche, hora por hora
+
+Llegamos a la parte que daba nombre a todo esto. Y arranca con una frase del informe que quiero leer casi
+textual, porque es lo más honesto que trajo la corrida.
+
+Lo primero, antes del plan: **la noche ya está llena**. A las doce y media la cola tenía tres órdenes
+corriendo y cinco esperando. Dos de las que esperan tocan el corazón del agente, una toma el cable de la
+consolita, otra tiene el navegador ocupado del lado de afuera. Meterle ocho tareas nuevas encima es
+exactamente el trabajo por el trabajo mismo que vos prohibiste en la consigna, y además se pisarían entre
+ellas. Así que el plan es corto, y elige dónde entra.
+
+Y ahora la parte que menos me gusta decir, pero que es la respuesta correcta: **ninguna tarea que corra
+esta noche puede terminar en plata real a la mañana**. El requisito era duro y no se puede cumplir, y no
+por falta de ideas.
+
+Las tres vías de plata que tiene el sistema están trabadas, cada una, por una acción tuya. Los
+amplificadores, que son mil quinientos dólares netos y lo único a días de distancia: faltan las fotos, y
+la cola no puede sacar fotos. La web de la banda: falta que Santi apriete un botón en el panel del
+dominio. Y el cobro de una app: falta abrir la cuenta, que es un trámite tuyo.
+
+Lo que la noche sí puede hacer es dejar las tres **a un click**. Eso propone el plan. Son cuatro tareas:
+una que empuja la plata hacia el click, y tres mejoras internas. Un poco y un poco, como pediste.
+
+La primera, la única sin modelo, puro script: re-chequear los comparables del mercado y el dólar para los
+dos amplificadores, y dejar el precio de hoy pegado arriba de cada publicación, con la fecha y la
+diferencia contra el precio con el que están escritas, que es de hace dos semanas. Cinco minutos. No
+publica nada: solo el precio del día. Así, cuando saques las fotos, el precio ya está fresco.
+
+La segunda: pasar a muestra diaria los dos carriles que se comen la cuota del gratis. Quince minutos, y
+se mide la cuota del día antes y la del día después, con los dos números pegados.
+
+La tercera: que el cierre de una orden que corre afuera verifique que el archivo prometido existe del
+lado del server; si está solo del otro lado, que lo traiga; y si no está en ningún lado, que la marque
+fallada en vez de cerrarla bien. Veinte minutos.
+
+Y la cuarta: arreglar el contador roto. Veinte minutos. Es la única que espera a otra, la que está
+editando ese mismo archivo. El entregable es el documento del gasto regenerado, con la tabla vieja y la
+nueva pegadas para que veas el antes y el después.
+
+Las cuatro están **ya redactadas, listas para encolar**. No hace falta que las escribas: hace falta que
+digas que sí.
+
+Y una decisión del informe que me parece la mejor de la corrida: había una quinta tarea pensada, hacer el
+checklist para publicar en la tienda de android. Se la sacó a sí misma, porque ese checklist ya quedó
+escrito en la parte del cobro. Encolarla era pagar por reescribir algo que ya existe.
+
+Lo que explícitamente no entra: ninguna tarea nueva del tema herramientas que no sea una de estas tres.
+Ese tema ya es más de la mitad del gasto de la cola, y la noche no es para agrandar eso.
+
+# apps pagas, y el metrónomo sin caridad
+
+Esta parte la pediste como negocio, no como app suelta, y así volvió.
+
+El número honesto primero: la mediana de lo que gana un desarrollador solo con apps está abajo de mil
+dólares por mes. El cuartil de arriba llega a rangos que sí mueven la aguja, pero después de doce a
+dieciocho meses sostenidos sobre un nicho apretado. Tu propio filtro, el que quedó escrito en la corrida
+anterior, dice que abajo de quinientos dólares por mes una idea recurrente no mueve nada. Una app paga
+cruza esa línea, pero no en los primeros seis meses.
+
+La suscripción le gana a la compra única y a los anuncios en casi todo lo que no sea un juego muy casual.
+Mil suscriptores a diez dólares rinden más que cien mil usuarios con publicidad. Y las categorías donde
+hoy hay plata para una persona sola son cuatro: salud y entrenamiento en vertical, finanzas personales,
+utilidades de inteligencia artificial de un solo propósito, y preparación de exámenes. Las cuatro cumplen
+tu restricción dura: se venden solas.
+
+Ahora, lo que vos tenés y casi nadie tiene: un server prendido las veinticuatro horas, con cuatrocientas
+setenta y cuatro recetas escritas y cuatro proveedores de modelo conectados. Y acá viene la observación
+que más me gustó: **eso no sirve para una app de cliente puro**. Un metrónomo corre en el teléfono y no
+necesita ningún server. Tu ventaja sirve para una app cuyo valor sea algo que **se calcula de noche y
+baja al teléfono a la mañana**. Esa es la familia que conviene mirar, no la de utilidades que funcionan
+sin conexión.
+
+Y el metrónomo, evaluado sin caridad.
+
+El mercado está tomado. El metrónomo más grande de android lleva seis millones setecientas mil descargas
+y casi mil por día, es gratis con compras adentro, y viene de una empresa de hardware que lo usa de
+anzuelo. Competir de frente con un metrónomo pago es perder.
+
+Y encima hay un peaje que no estaba en la cuenta: una cuenta personal de desarrollador creada después de
+fines de dos mil veintitrés necesita **doce personas probando la app sin cortar durante catorce días**
+antes de poder publicarla, por cada app. Entre el metrónomo terminado y el metrónomo descargable hay dos
+semanas y once personas más que Santi.
+
+Dónde sí sirve, entonces. Como **el primer recorrido completo**: firmar, subir, aguantar los catorce
+días, publicar, cobrar el primer dólar. Con una app que ya sabés hacer y que además le sirve a Santi de
+verdad. El valor es el recorrido, no la app. Y si lo mirás así, los catorce días dejan de ser un
+obstáculo y pasan a ser el calendario: arrancan el día que subas el primer archivo.
+
+Si igual lo querés cobrar, lo único defendible es que sea el metrónomo de la banda: los tempos de los
+temas ya cargados, y el click que Santi usa en el ensayo. Eso es un buen regalo con distribución cero. No
+es un negocio.
+
+La recomendación, entonces: el metrónomo entra como lanzamiento de aprendizaje y regalo, gratis, para
+abrir el camino de publicación. El negocio se decide después, sobre esa familia donde algo se calcula de
+noche en tu server y baja al teléfono, que es la única donde tu ventaja existe.
+
+# cobrar desde argentina: no hace falta otro país
+
+Esta parte tiene la mejor noticia de toda la corrida, y salió de cruzar dos cosas que estaban separadas.
+
+Tu pregunta era si podés cobrar en estados unidos. La respuesta es que **no hace falta**.
+
+Argentina figura con tilde en las dos columnas de la tienda de android: registro de desarrollador y
+registro de comerciante, con el dólar como moneda por defecto. Y el pago sale por transferencia bancaria
+desde estados unidos y llega en dólares. O sea: no necesitás una sociedad afuera, ni una pasarela que no
+opera acá, ni el paquete caro para abrir una empresa, ni la cuenta de un tercero.
+
+Y eso se cruza con lo que ya estaba investigado y vos **no habías podido leer**, porque ese informe es
+justamente el archivo que se quedó varado del otro lado y que se recuperó ayer. Dice que desde septiembre
+del año pasado, para exportación de servicios de una persona humana, se eliminó el tope anual y la
+obligación de liquidar, y que los bancos no pueden cobrar comisión por acreditar esas transferencias en
+cuentas locales en moneda extranjera. Los dólares se pueden quedar dólares.
+
+La tabla corta. La consola de desarrollador de android: titular argentino sí, pide identidad, cuenta
+bancaria y perfil de pagos, cuesta veinticinco dólares una sola vez y cero por año, tarda días. La contra
+es la comisión de la tienda, del quince por ciento hacia arriba, y el corte exacto quedó marcado como a
+confirmar. Una billetera internacional de las que sí operan acá: gratis abrirla, casi treinta dólares al
+año si no la movés, y el retiro tiene un porcentaje más un fijo. Una plataforma que actúa como vendedor
+oficial y te resuelve los impuestos del mundo: gratis, cinco por ciento más medio dólar por venta. La
+pasarela grande directo: argentina no está soportada. Y abrir una sociedad afuera: quinientos dólares
+para empezar, más tasas, más agente registrado, más contador en dos países.
+
+Así que la más simple para empezar cobrando poco es la consola de android: veinticinco dólares una vez,
+titular argentino, pago en dólares a tu banco, y nadie en el medio. Si escala, o si vendés fuera de la
+tienda, la que actúa como vendedor oficial. Y la sociedad afuera queda descartada hasta que haya un
+ingreso que la justifique.
+
+Lo impositivo, corto: hay que facturar, con la factura de exportación. Un monotributista puede exportar
+servicios y emitirla sin inscribirse en el impuesto al valor agregado, mientras no se pase de categoría.
+Y hay tres cosas marcadas explícitamente como a confirmar con contador, no de memoria: si una venta por
+la tienda se documenta como exportación de servicios o como otra figura, cuál es el plazo de ingreso de
+los fondos al país, y el corte exacto de la comisión de la tienda.
+
+Y el paso a paso, con quién hace qué, que es lo más útil. Vos: entrar a la consola, cuenta personal,
+pagar los veinticinco dólares. Vos: la verificación de identidad. Yo: preparar el archivo firmado, la
+ficha, el ícono y las capturas. Vos: crear el perfil de pagos y cargar la cuenta en dólares. Vos y once
+personas más, Santi incluido: los catorce días de prueba cerrada. Y yo: pedir el acceso a producción
+cuando el reloj cierre.
+
+# menos claude: qué se apaga hoy, y si cierra con una sola cuenta
+
+La última parte, que agregaste sobre el filo, era la más ambiciosa: bajar la dependencia del modelo caro,
+con el objetivo escrito de que una sola cuenta de doscientos dólares por mes alcance para todo el
+sistema.
+
+Lo que se apaga hoy mismo son las tres del plan de la noche, que ya conté, más una cuarta que no es
+código: pasar los resúmenes al gratis que ganó la prueba. Eso vale unos veintidós dólares cada siete
+días, y es lo más fácil de la lista: diez minutos.
+
+Lo de más adelante, ordenado por lo que ahorra contra lo que cuesta hacerlo, queda así.
+
+Primero, y es el único grande: **encolar menos órdenes del tema herramientas**. Cero código. Es una
+decisión tuya. Vale hasta más de la mitad de la cola.
+
+Segundo: el reintento que arranca del último paso cerrado en vez de rehacer todo. Ya está encolado como
+tarea propia. Vale los trescientos cincuenta y cinco dólares que se perdieron en cortes a mitad de
+camino, cada dos semanas. Y vale más de lo que parece, porque hoy el reintento relee todo, y releer es
+justamente lo caro.
+
+Tercero: redactar la orden con el gratis, pero **después** de darle la plantilla con la lista de temas.
+Medio día de laburo. Eso toca el veinticuatro por ciento que es el chat.
+
+Cuarto: los resúmenes al gratis, la de diez minutos.
+
+Y quinto, que está en la lista para decir que no: comprar más cuentas o más proveedores. El rinde es
+negativo, y ya estaba cerrado con números de antes.
+
+Y ahora la pregunta del millón: ¿cierra con una sola cuenta?
+
+Hoy no. Y el número dice por qué, y no es el que uno esperaría.
+
+Tu cuenta principal sola proyecta treinta y siete mil llamadas por mes, y casi veinticinco mil millones
+de unidades de contexto de entrada. Si eso se pagara por interfaz de programación, a precio de lista,
+serían cincuenta y cinco mil dólares. Doscientas setenta y ocho veces lo que pagás. O sea: **la
+suscripción es un negocio buenísimo y no es el problema**.
+
+El problema es que el caudal que le pedís no entra en la ventana semanal. Las tres cuentas se saturan.
+
+Para que una sola alcance hacen falta dos cosas juntas, y ninguna es un modelo más barato. Una: bajar ese
+cincuenta y seis por ciento del agente construyéndose a sí mismo, que es la única palanca grande y es
+tuya. Dos: que una orden cortada no tire el trabajo.
+
+Con esas dos, el reparto que cierra sería: el chat y las órdenes de todos los temas que producen algo
+hacia afuera, en una cuenta; el tema herramientas racionado a lo que sobre; y los resúmenes, la
+clasificación, el idioma, el eco y los juicios, en los gratis.
+
+Con el número corregido la cuenta da bastante menos lejos de lo que parecía. Pero el informe cierra esta
+parte con la frase correcta: **lo que falta para poder afirmarlo con un número y no con una estimación es
+arreglar el contador**. Mientras el medidor infle tres veces, no se puede calcular si una cuenta alcanza.
+
+# qué dijo el panel, y qué hay que tirar
+
+De los cuatro modelos invitados contestaron tres. El gratis más rápido quedó afuera otra vez, por quinta
+corrida seguida, esta vez con el tope ya bajado y cuatro reintentos: pasó la primera de diez tandas y
+murió en la segunda. Sin cuota. Uno de los locales lo saqué del panel antes de arrancar, porque la
+corrida anterior había contestado con el campo principal en blanco.
+
+Y pasó algo que no había pasado en seis corridas: **un panelista encontró el hallazgo central solo**. El
+gratis chico de google, mirando la tabla del documento de gasto que iba adentro del paquete, dijo
+textualmente que había que cortar la duplicación del contador, y nombró el archivo y la línea. Sin que
+nadie se lo sugiriera. Lo único que erró fue la consecuencia: dijo que ahorraba casi cinco mil dólares
+por semana, y no ahorra un peso. Corrige el número, no el gasto. Pero el diagnóstico fue exacto.
+
+También quedó confirmado algo operativo: con el paquete entero, el modelo chico de google sí anduvo. O
+sea que el que tiene que ser el default del panel es ese, y no el grande, que viene devolviendo vacío.
+
+Y de ahí para abajo, la mayor parte hay que tirarla, y vale la pena saber por qué.
+
+Cinco recetas inventadas. Nombres de archivo que suenan perfectos y no existen. Un plan de la noche de
+seis horas con tareas que no se pueden correr: generar facturas de apps pagas cuando no hay una sola app
+vendida, borrar mensajes viejos usando el guard de red, y un respaldo que ya corre solo. Un modelo se
+contradice a sí mismo: propone dos medios de pago para lo mismo, y dice que el mercado del metrónomo no
+está saturado cuando el dato del competidor con seis millones de descargas estaba adentro del material
+que le dieron. Otro propuso apagar algo que ya está prohibido por una regla tuya vigente.
+
+Y todas las cifras de ahorro que devolvieron son inventadas. Ninguna sale de un número del material.
+
+El filtro automático, sexta corrida: de treinta y ocho propuestas dejó pasar treinta y seis, y esta vez
+los dos descartes fueron correctos. Primera corrida sin falso positivo. Pero dejó pasar las cinco recetas
+inventadas y todas las cifras sin fuente. Lo que falta sigue siendo lo mismo, y es de una línea:
+verificar si el archivo que una propuesta nombra existe de verdad. Ya quedó escrito como criterio fijo
+del tema: una propuesta que nombra un archivo que no existe no es un hallazgo.
+
+# lo que debería estar pasado en limpio cuando te despiertes
+
+Cierro con lo que queda, sin vueltas.
+
+No se prendió ni se cambió nada. No se tocó el router, ni el eco, ni el reparto de modelo, ni ninguna
+configuración. La receta nueva de las pruebas existe pero no corre sola.
+
+No se abrió ninguna cuenta. Ni la de android, ni ninguna billetera. No se pagó nada. No se publicó, no se
+mandó y no se subió nada a ningún lado.
+
+Y las cuatro tareas del plan de la noche **están redactadas y no están encoladas**. Esperan tu letra.
+
+Así que lo que tenés adelante, en orden de lo que más rinde por minuto tuyo, es esto.
+
+Uno: las fotos de los dos amplificadores. Es lo único que separa mil quinientos dólares de tu cuenta. El
+guion foto por foto ya está escrito, y el precio del día lo deja fresco una tarea de cinco minutos sin
+modelo.
+
+Dos: decir que sí a las cuatro tareas de la noche. La del contador primero, porque todo lo demás se
+decide con ese número, incluida la pregunta de si una cuenta alcanza.
+
+Tres: veinticinco dólares y un rato en la consola de desarrollador, si querés que el camino del metrónomo
+empiece a correr. Los catorce días de prueba arrancan el día que se sube el archivo, así que cuanto antes
+arranca el reloj, antes termina. Y esa parte del plan no tiene nada que ver con vender un metrónomo:
+tiene que ver con haber recorrido una vez el camino entero, de la firma al primer dólar.
+
+Y cuatro, que no es una tarea sino una decisión, y es la única grande: el tema del agente arreglándose a
+sí mismo es más de la mitad de lo que se gasta. Ninguna de las otras palancas se le acerca. Esa no la
+puede tomar un script, ni un modelo gratis, ni yo.
+
+Nos escuchamos en el próximo.

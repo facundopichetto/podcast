@@ -1,9 +1,6 @@
 {
  "voces": {
-  "daniela": "daniela, argentina",
-  "claude": "claude, mexico",
-  "davefx": "davefx, españa",
-  "sharvard": "sharvard, españa"
+  "daniela": "daniela, argentina"
  },
  "episodios": [
   {
@@ -568,7 +565,102 @@
    },
    "duracion": 1671.7,
    "ts": "2026-09-20T00:45:12-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-noche",
+   "fecha": "2026-09-20",
+   "titulo": "la noche: el plan, la plata y el contador roto",
+   "temas": [
+    "consejo",
+    "tools",
+    "plata"
+   ],
+   "palabras": 5320,
+   "guion": "episodio-2026-09-20-noche.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-noche-daniela.mp3",
+     "duracion": 1912.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 123.5,
+       "archivo": "audio/ep-2026-09-20-noche-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 123.5,
+       "titulo": "el instrumento con el que venías decidiendo está roto",
+       "duracion": 193.5,
+       "archivo": "audio/ep-2026-09-20-noche-2-el-instrumento-con-el.daniela.mp3"
+      },
+      {
+       "t": 317.0,
+       "titulo": "dónde se va la plata de verdad",
+       "duracion": 166.7,
+       "archivo": "audio/ep-2026-09-20-noche-3-donde-se-va-la-plata-de.daniela.mp3"
+      },
+      {
+       "t": 483.8,
+       "titulo": "la frontera: hasta dónde llega un sistema sin modelos",
+       "duracion": 121.2,
+       "archivo": "audio/ep-2026-09-20-noche-4-la-frontera-hasta-donde.daniela.mp3"
+      },
+      {
+       "t": 605.0,
+       "titulo": "las tres pruebas, con las dos salidas pegadas",
+       "duracion": 224.3,
+       "archivo": "audio/ep-2026-09-20-noche-5-las-tres-pruebas-con.daniela.mp3"
+      },
+      {
+       "t": 829.3,
+       "titulo": "el plan de la noche, hora por hora",
+       "duracion": 212.9,
+       "archivo": "audio/ep-2026-09-20-noche-6-el-plan-de-la-noche.daniela.mp3"
+      },
+      {
+       "t": 1042.1,
+       "titulo": "apps pagas, y el metrónomo sin caridad",
+       "duracion": 205.2,
+       "archivo": "audio/ep-2026-09-20-noche-7-apps-pagas-y-el.daniela.mp3"
+      },
+      {
+       "t": 1247.4,
+       "titulo": "cobrar desde argentina: no hace falta otro país",
+       "duracion": 209.5,
+       "archivo": "audio/ep-2026-09-20-noche-8-cobrar-desde-argentina.daniela.mp3"
+      },
+      {
+       "t": 1456.8,
+       "titulo": "menos claude: qué se apaga hoy, y si cierra con una sola cuenta",
+       "duracion": 195.6,
+       "archivo": "audio/ep-2026-09-20-noche-9-menos-claude-que-se.daniela.mp3"
+      },
+      {
+       "t": 1652.4,
+       "titulo": "qué dijo el panel, y qué hay que tirar",
+       "duracion": 153.0,
+       "archivo": "audio/ep-2026-09-20-noche-10-que-dijo-el-panel-y-que.daniela.mp3"
+      },
+      {
+       "t": 1805.4,
+       "titulo": "lo que debería estar pasado en limpio cuando te despiertes",
+       "duracion": 106.9,
+       "archivo": "audio/ep-2026-09-20-noche-11-lo-que-deberia-estar.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "tts": {
+    "tts_ritmo": 1.2,
+    "tts_pausa": 0.45,
+    "tts_expresion": 0.67,
+    "tts_silabas": 0.8,
+    "tts_volumen": 1.0
+   },
+   "duracion": 1912.4,
+   "ts": "2026-09-20T01:24:07-03:00"
   }
  ],
- "actualizado": "2026-09-20 00:45"
+ "actualizado": "2026-09-20 01:24"
 }
