@@ -1,6 +1,9 @@
 {
  "voces": {
-  "daniela": "daniela, argentina"
+  "daniela": "daniela, argentina",
+  "claude": "claude, mexico",
+  "davefx": "davefx, españa",
+  "sharvard": "sharvard, españa"
  },
  "episodios": [
   {
@@ -660,7 +663,131 @@
    },
    "duracion": 1912.4,
    "ts": "2026-09-20T01:24:07-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-board",
+   "fecha": "2026-09-20",
+   "titulo": "board: seis modelos, un tema oscuro y lo que dijo el disco",
+   "temas": [
+    "board",
+    "consejo",
+    "tools"
+   ],
+   "palabras": 4967,
+   "guion": "guion-board.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-board-daniela.mp3",
+     "duracion": 1535.8,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este capítulo",
+       "duracion": 77.1,
+       "archivo": "audio/ep-2026-09-20-board-1-de-que-va-este-capitulo.daniela.mp3"
+      },
+      {
+       "t": 77.1,
+       "titulo": "quién contestó, y quién no pudo",
+       "duracion": 111.4,
+       "archivo": "audio/ep-2026-09-20-board-2-quien-contesto-y-quien.daniela.mp3"
+      },
+      {
+       "t": 188.6,
+       "titulo": "la trampa de contar propuestas",
+       "duracion": 62.3,
+       "archivo": "audio/ep-2026-09-20-board-3-la-trampa-de-contar.daniela.mp3"
+      },
+      {
+       "t": 250.8,
+       "titulo": "los seis se equivocaron juntos, y la culpa es del paquete",
+       "duracion": 114.7,
+       "archivo": "audio/ep-2026-09-20-board-4-los-seis-se-equivocaron.daniela.mp3"
+      },
+      {
+       "t": 365.5,
+       "titulo": "tools no pesa de código: pesa de basura que nadie borra",
+       "duracion": 110.9,
+       "archivo": "audio/ep-2026-09-20-board-5-tools-no-pesa-de-codigo.daniela.mp3"
+      },
+      {
+       "t": 476.5,
+       "titulo": "ochocientos megas de mp3 que nadie va a escuchar nunca más",
+       "duracion": 52.6,
+       "archivo": "audio/ep-2026-09-20-board-6-ochocientos-megas-de.daniela.mp3"
+      },
+      {
+       "t": 529.1,
+       "titulo": "el widget que nadie mide",
+       "duracion": 79.2,
+       "archivo": "audio/ep-2026-09-20-board-7-el-widget-que-nadie-mide.daniela.mp3"
+      },
+      {
+       "t": 608.3,
+       "titulo": "las órdenes sin tema son dos problemas distintos, no uno",
+       "duracion": 82.0,
+       "archivo": "audio/ep-2026-09-20-board-8-las-ordenes-sin-tema.daniela.mp3"
+      },
+      {
+       "t": 690.3,
+       "titulo": "siete pestañas que nunca se usaron",
+       "duracion": 101.7,
+       "archivo": "audio/ep-2026-09-20-board-9-siete-pestanas-que.daniela.mp3"
+      },
+      {
+       "t": 792.0,
+       "titulo": "la pregunta que ninguno contestó: las apps",
+       "duracion": 93.8,
+       "archivo": "audio/ep-2026-09-20-board-10-la-pregunta-que-ninguno.daniela.mp3"
+      },
+      {
+       "t": 885.7,
+       "titulo": "server no está muerto, está desatendido",
+       "duracion": 63.0,
+       "archivo": "audio/ep-2026-09-20-board-11-server-no-esta-muerto.daniela.mp3"
+      },
+      {
+       "t": 948.7,
+       "titulo": "modelos fijos por tema: tres contra tres",
+       "duracion": 94.9,
+       "archivo": "audio/ep-2026-09-20-board-12-modelos-fijos-por-tema.daniela.mp3"
+      },
+      {
+       "t": 1043.6,
+       "titulo": "tus quejas, leídas como patrón y no como lista",
+       "duracion": 123.7,
+       "archivo": "audio/ep-2026-09-20-board-13-tus-quejas-leidas-como.daniela.mp3"
+      },
+      {
+       "t": 1167.3,
+       "titulo": "lo que queda en pie del diseño y de la estructura",
+       "duracion": 121.0,
+       "archivo": "audio/ep-2026-09-20-board-14-lo-que-queda-en-pie-del.daniela.mp3"
+      },
+      {
+       "t": 1288.4,
+       "titulo": "el chat: una sola propuesta real, y no es la que parece",
+       "duracion": 140.8,
+       "archivo": "audio/ep-2026-09-20-board-15-el-chat-una-sola.daniela.mp3"
+      },
+      {
+       "t": 1429.2,
+       "titulo": "lo que aprendió el método",
+       "duracion": 66.2,
+       "archivo": "audio/ep-2026-09-20-board-16-lo-que-aprendio-el.daniela.mp3"
+      },
+      {
+       "t": 1495.4,
+       "titulo": "qué tenés que decidir vos",
+       "duracion": 40.4,
+       "archivo": "audio/ep-2026-09-20-board-17-que-tenes-que-decidir.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1535.8,
+   "ts": "2026-09-20T04:00:13-03:00"
   }
  ],
- "actualizado": "2026-09-20 01:24"
+ "actualizado": "2026-09-20 04:00"
 }

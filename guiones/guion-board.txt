@@ -1,0 +1,271 @@
+# de qué va este capítulo
+
+Hola Facundo. Este es el capítulo de la primera de las cinco corridas que dejaste pedidas para la noche: la del board.
+
+Te la leo como la pediste, en tus palabras: cómo mejorar el board, themes, apps, cambios de estructura, cambios de diseño y de arquitectura principal, tus quejas, el chat, los tabs, cuáles están de más, cómo los reorganizás, si conviene poner modelos fijos por tema, cómo dividís tools, y si borrás server.
+
+Siete preguntas en una. Se las hice a seis modelos, con el mismo contexto y el mismo tope de respuesta para todos, y te lo cuento en el orden que importa, no en el orden que las hiciste.
+
+Te adelanto el final, porque es el titular y no quiero que te lo pierdas si te dormís en el medio. Los seis modelos, los seis, sin excepción, te propusieron ponerle un tema oscuro al board. El board es negro puro desde el primer día. Negro de cero cero cero, con las cajas apenas un pelito más claras y el acento en cian, con look de terminal. O sea: el consejo unánime del panel fue que hagas lo que ya está hecho.
+
+Eso no es una anécdota graciosa. Es el hallazgo más caro de la corrida y la mitad de este capítulo va a ser sobre por qué pasó, porque la culpa no es de ellos, es mía, y es repetible.
+
+Y la otra mitad va a ser lo que dijeron tus propios archivos, que otra vez le ganó al panel por varios cuerpos.
+
+# quién contestó, y quién no pudo
+
+Arranco por el panel, que tiene una novedad que te toca a vos.
+
+Vos me dijiste, textual, que en gemini y en mistral incluyera los modelos pagos que ya tenemos, los mejores disponibles. Lo hice, y encontré algo.
+
+De mistral salieron los dos mejores, el large y el medium, y los dos contestaron de una, rápido y bien. Ese es el único proveedor pago de verdad que tenemos, y se nota: fueron los dos que más pensaron.
+
+De gemini no salió nada, y el motivo es que gemini pago no existe en casa. Nunca se creó la cuenta de facturación de google, así que seguimos en el plan gratis. Los modelos pro figuran con límite cero barra cero, o sea inaccesibles, y los flash grandes tienen veinte pedidos por día. Mientras corría esta consulta, se quedaron sin cuota. Le pegué tres veces con espera en el medio y las tres me devolvió el mismo rechazo por cuota agotada. Así que el flash grande no contestó, y el que salvó la ropa fue el flash chiquito, que tiene quinientos pedidos por día.
+
+Grabate eso, porque te va a aparecer otra vez esta noche: cuando decimos "los mejores modelos pagos que tenemos", en gemini no tenemos ninguno. Tenemos el gratis con techo.
+
+El tercero fue groq, al que le mando el contexto troceado en tandas porque su plan gratis te da ocho mil tokens por minuto y doscientos mil por día para toda la organización. Contestó, pero le costó cuarenta y cinco minutos de reloj. Cada una de las tres tandas rebotó tres veces contra el límite antes de pasar. El motivo lo sabemos: el carril del juez y el carril de la sombra, que corren todo el día adentro del daemon, le vacían la cuota diaria a groq. Ya lo habíamos medido: un día de estos se fueron ciento treinta y un mil tokens de los doscientos mil en esos dos carriles.
+
+Y los dos últimos fueron los locales del server, el qwen y el gemma, que ven un contexto chico, de dos mil seiscientos tokens nada más.
+
+Seis contestaron, uno no. Setenta y cinco propuestas.
+
+# la trampa de contar propuestas
+
+Antes de contarte qué dijeron, un apunte sobre el número.
+
+Setenta y cinco propuestas suena a mucho. No lo es. Cuando las junté y saqué las repetidas de verdad, no las que repiten palabras sino las que repiten idea, quedaron trece ideas distintas. El resto es la misma cosa dicha seis veces con distinta redacción.
+
+Eso también es un dato del método, y es bueno: cuando seis modelos que no se hablan entre sí llegan a lo mismo, la coincidencia significa algo. El problema es cuando la coincidencia es el error, como pasó con el tema oscuro.
+
+Y hay una cosa más que salió mal y te la digo de frente. El juez automático, que es el modelo gratis de otro proveedor que revisa si una propuesta ya está hecha, se murió con la cuota de groq. De las setenta y cinco propuestas, sesenta y tres quedaron sin veredicto, con un signo de pregunta. Así que el filtro de esta corrida lo hice yo a mano, leyendo una por una. Funcionó, pero no escala, y te lo anoto como algo a arreglar: cuando groq devuelve cuota agotada, el juez tiene que caer a mistral en vez de encogerse de hombros.
+
+# los seis se equivocaron juntos, y la culpa es del paquete
+
+Volvamos al tema oscuro.
+
+El más elaborado fue el de mistral large, que te bajó la paleta completa: fondo uno dos uno dos uno dos, texto casi blanco, bordes grises, y los controles en verde neón para las acciones principales. Es una paleta linda. Es, con más luz, exactamente la que ya tenés.
+
+Gemma te propuso "tema oscuro con fuentes más grandes, de dieciocho". Dieciocho es el tope que ya tiene el board desde que pediste agrandar todo un veinticinco por ciento. Qwen te propuso "un tema oscuro para mejorar la legibilidad con poca luz". Groq te propuso "tema oscuro de alto contraste con variables de la hoja de estilos, conservando el límite de texto de dieciocho y los controles táctiles de cuarenta". O sea: te describió el board que tenés, y te lo vendió como cambio.
+
+Ahora, por qué pasó. Yo armé el paquete de contexto con tres cosas: el estado medido del board, o sea las vistas, la barra, los widgets, las pestañas con cuánto se usa cada una; tus quejas textuales sacadas del historial de correcciones; y las reglas tuyas que ya rigen el board.
+
+No mandé una sola línea de la hoja de estilos. No mandé una captura. Nada visual.
+
+Un panel que no ve la pantalla propone la pantalla que se imagina. Y lo que se imagina un modelo cuando le decís "board de un sistema de agentes" es un dashboard claro de los que vienen por default, así que lo primero que te propone es oscurecerlo.
+
+Es el mismo error que la corrida anterior cometió con los números, cuando le mandé al panel una cifra sacada de un informe intermedio en vez de la fuente, y el panel razonó impecable sobre un número mal. La lección es la misma y ahora ya la tengo escrita en dos lugares: el paquete decide la respuesta. Si el paquete está incompleto, seis modelos buenos te dan seis respuestas inútiles, y encima coincidentes, que es lo que te hace creer que tienen razón.
+
+La buena noticia es que para la corrida dos, la del instatinder, ya pediste mandar capturas de todo. Ahí no va a pasar.
+
+# tools no pesa de código: pesa de basura que nadie borra
+
+Y ahora sí, lo que dijeron tus archivos.
+
+Me preguntaste cómo dividís tools. Los seis modelos te contestaron repartiendo carpetas de código: core y recetas, o el daemon y la web y los documentos y los registros, o core y board y documentos. Todas razonables sobre el papel.
+
+Fui a mirar el disco, y el disco dice otra cosa.
+
+Tools pesa seis coma siete gigas. Te desarmo de dónde salen.
+
+Dos coma cuatro gigas son los modelos de reconocimiento de voz, los de whisper. Quinientos setenta y tres megas son las voces de piper, con las que se hace este audio que estás escuchando. Quinientos veintisiete megas son el entorno de python. Quinientos noventa y tres megas son la aplicación del celular. Eso ya es más de la mitad, y no es código tuyo: son pesos de modelos y dependencias.
+
+Después vienen las dos que sí son culpa nuestra.
+
+La carpeta de temporales del agente pesa novecientos sesenta y un megas. Mil setecientas cuarenta y tres entradas adentro, sin ninguna política de borrado. Casi cuatrocientos megas son temporales de la lan y doscientos ochenta y tres son temporales de audio. Nadie los borra nunca.
+
+La carpeta de backups tiene mil novecientos treinta y un archivos y cuatrocientos sesenta y cinco megas.
+
+Y los registros, noventa y ocho megas, donde el archivo de pruebas de un solo día pesa veinte megas. Un día. Veinte megas de salida de pruebas.
+
+¿Y el código? Las cuatrocientas ochenta y seis recetas de python, que son el sistema entero, pesan veintitrés megas. La web, sesenta y seis.
+
+Entonces la respuesta honesta a "cómo divido tools" es: el problema no es que la carpeta esté mal dividida. Partirla en core, board y docs no borra un solo byte de los que te están comiendo el disco. El problema es que tiene casi un giga de temporales sin política de retención, dos mil archivos de respaldo y registros de pruebas de veinte megas por día.
+
+# ochocientos megas de mp3 que nadie va a escuchar nunca más
+
+Y falta el mejor, que descubrí buscando otra cosa.
+
+El repositorio del podcast, este mismo, el que publica lo que estás escuchando ahora, pesa novecientos setenta y seis megas.
+
+De esos, el audio vivo, los capítulos que están publicados y que podés escuchar hoy, pesa ochenta y dos megas.
+
+Los otros setecientos noventa y seis megas son el historial del repositorio. Diez veces lo que está vivo.
+
+¿Por qué? Porque cada vez que se publica un capítulo, el archivo de audio entero entra al historial del repositorio y se queda ahí para siempre. Los capítulos viejos, los que se reemplazaron, las versiones que se re renderizaron porque algo salió mal: todo eso sigue adentro, pesando, y se copia entero cada vez que alguien clona.
+
+Cada capítulo nuevo le suma once megas más, para siempre. Este capítulo que estás escuchando le va a sumar los suyos.
+
+Eso no lo dijo ningún modelo. Lo dijo el disco.
+
+# el widget que nadie mide
+
+Me preguntaste, dentro del punto de los widgets, cómo se mide si un widget sirve.
+
+La respuesta es incómoda: hoy no se mide de ninguna manera. Ninguna.
+
+El board no registra qué caja mirás, cuál tocás, cuál tenés oculta ni hace cuánto que no abrís una. Busqué en el código de la página una sola llamada de telemetría y no hay ninguna.
+
+Hoy tenés dieciséis cajas en el board. Las conté en el código, una por una, en la lista que arma el panel de widgets.
+
+Y de esas dieciséis, no sabés cuántas mirás.
+
+Por eso el único widget que se sacó en la historia del board, el de oportunidades, se sacó a ojo, con una frase tuya que fue, textual, "sacá el widget oportunidades, es feo y no tiene sentido". Que estuvo perfecto, ojo. Pero es una decisión de humor, no de dato.
+
+Y por eso mistral medium te propuso borrar tres widgets, el de música, el de qué ver y el de nodos, con un criterio que él mismo escribió así: "si no se usa ni se queja, sobra". Es un criterio honesto para alguien que no tiene el dato. Pero sin dato, "si no se usa" es una suposición, no una medición.
+
+Acá hay una propuesta chica y concreta que sí sobrevivió el filtro, y es de mistral medium: un widget que muestre cuánto bajó el gasto contra el histórico. El dato ya existe, lo tiene entero el widget de gasto. Es juntar dos números que ya están.
+
+# las órdenes sin tema son dos problemas distintos, no uno
+
+En el contexto le mandé al panel un dato que me había llamado la atención: seiscientas treinta y dos órdenes de la cola no tienen tema asignado.
+
+Tres modelos, mistral large, gemini y qwen, te propusieron lo mismo: un script sin tokens que las reclasifique con el clasificador que ya existe. Y tienen razón a medias. Fui a mirar las órdenes una por una, y el número se parte en dos cosas que no se arreglan igual.
+
+Treinta y siete de esas órdenes tienen el tema escrito adentro de su propio texto. Dice "tema tools", dice "tema personal", dice "tema awtomic", y sin embargo la columna del tema está vacía. Y cuando miré qué tienen en común, apareció el patrón: casi todas son líneas reencoladas. Trece llevan la marca de reintento, ocho llevan la marca de retomar donde quedó, y ocho llevan la marca de pasos.
+
+O sea: cuando una orden se cae y se vuelve a encolar, el tema se pierde en el camino. Eso es un bug, es chiquito, y esas treinta y siete se recuperan con una consulta a la base de datos sin gastar un token.
+
+Las otras quinientas ochenta y siete no tienen tema en ningún lado, ni en la columna ni en el texto, y van desde las primeras órdenes de la historia hasta casi la dos mil. Son de antes de que el tema existiera como campo. Esas no se recuperan con ningún script: se archivan y listo.
+
+Dos problemas, dos arreglos distintos. El panel vio uno solo porque yo le mandé el número junto.
+
+# siete pestañas que nunca se usaron
+
+Me preguntaste cuáles tabs están de más y cómo los reorganizás. Acá el panel estuvo bien y los datos lo mejoraron.
+
+Lo unánime: fundir las dos etiquetas de awtomic con qa, que hoy son dos nombres para la misma cosa, una con ochenta y cuatro órdenes y la otra con una sola. Y borrar las pestañas de claudio, que tiene cero mensajes, y la automática, que tiene uno solo del catorce de septiembre.
+
+Lo que agregaron los archivos es más grande. De las dieciséis pestañas que la web declara hoy, **siete no recibieron nunca un solo mensaje**. Ni uno. No existe siquiera el archivo de chat.
+
+Están claudio con cero, la automática con uno, flabs sin archivo, awtomic con qa sin archivo, y las cuatro pestañas de proveedor, las de gemini, groq, groq en tandas y mistral, las cuatro sin archivo, las cuatro en cero.
+
+Ahí quiero ser justo con vos y con la regla: esas cuatro de proveedor las creaste a propósito, con una regla que dice que las pestañas de flaudio son por tema y que las pestañas por modelo son solo para un proveedor externo. O sea que no están de más por error, están vacías porque todavía no las usaste. No es lo mismo. Pero el dato es el dato: cuatro pestañas creadas y cero mensajes.
+
+Y las que sí usás, para que tengas la proporción: tools tiene mil trescientos noventa y nueve mensajes, más del doble que la segunda. Awtomic setecientos quince. Personal cuatrocientos cincuenta y ocho. Juegos trescientos cuarenta y siete. Después ya se cae fuerte.
+
+Gemma propuso ordenar las pestañas por frecuencia de uso, con las más usadas primero. Es la única propuesta de reorganización que se puede hacer sola, con un script, porque el dato existe.
+
+# la pregunta que ninguno contestó: las apps
+
+Hay una parte de tu pregunta que no te contestó nadie, y me parece la más interesante de todas.
+
+Vos preguntaste, y lo leo textual otra vez, "cómo mejorar el board, themes, apps". Dos palabras sueltas, themes y apps.
+
+Themes te lo contestaron los seis, mal, ya lo vimos.
+
+Apps no te lo contestó ninguno. Cero. Busqué la palabra en las seis respuestas, en castellano y en inglés, y no aparece una sola vez.
+
+Y lo que esa palabra abría es la pregunta más grande que se le puede hacer al board: si tiene sentido que tengas un tablero escrito a mano, de doce mil líneas, que mantenés vos, en vez de usar algo que ya existe. Un tablero de los que se arman solos, una herramienta de tareas, una aplicación de notas con base de datos, cualquiera de las cosas que la gente usa para esto.
+
+Nadie te lo dijo ni para bien ni para mal. Ni "usá esto que ya existe", ni "no, lo tuyo no lo hace ninguna herramienta de las que hay".
+
+Yo creo que es por cómo armé la pregunta. Les mandé las siete partes numeradas, y las dos palabras sueltas, themes y apps, quedaron dentro de la parte uno, la de estructura, que les pedía opinar sobre las vistas y sobre el archivo grande. Les di una pregunta concreta al lado de una palabra suelta, y contestaron la concreta. Es lo que hace cualquiera.
+
+Así que te lo dejo anotado como lo que es: una pregunta tuya que quedó sin respuesta, y no porque los modelos sean malos, sino porque la escondí adentro de otra. Si querés esa respuesta, es una consulta propia, con su propio contexto, y esta vez preguntando derecho: qué parte de esto lo hace mejor una herramienta que ya existe.
+
+# server no está muerto, está desatendido
+
+Y la última de las siete: si borrás server.
+
+Cinco de los seis dijeron que sí, que lo fundas adentro de tools. Los argumentos: tiene ciento treinta órdenes en la cola y ciento setenta y dos mensajes de chat, pero solo treinta y uno en los últimos siete días, y su archivo de estado no se toca desde el trece de septiembre. Hace una semana.
+
+Qwen fue el único que dijo que lo dejes separado, y su argumento fue, textual, "mantener server como pestaña separada debido a su baja actividad reciente", que no se entiende, porque la baja actividad es el argumento del otro lado.
+
+Yo te agrego lo que ninguno podía ver. Lo que envejeció no es el tema: es el archivo de estado. Y no es el único. El de plata no se toca desde el once de septiembre. El de buscar, desde el ocho. El de tools dice que se actualizó el catorce, y estamos a veinte.
+
+O sea que si el criterio para borrar un tema es "su archivo de estado está viejo", el criterio se te lleva puestos tres temas más, incluido tools, que es el que más usás. El archivo de estado viejo mide que nadie lo escribe, no que el tema esté muerto.
+
+# modelos fijos por tema: tres contra tres
+
+Esta la dejé para el final porque es la única donde el panel se partió al medio.
+
+Tres dijeron que no clavés un modelo por tema: mistral large, mistral medium y el gemini chico. Los tres con el mismo argumento, que es tuyo: el reparto actual mira la ventana semanal de cada cuenta, y está justamente para no saturar una. Mistral large lo puso en números: si clavás el modelo grande en tools, que son seiscientas sesenta órdenes, saturás una cuenta sola.
+
+Tres dijeron que sí: groq, qwen y gemma. Y los tres se cayeron en el filtro.
+
+Gemma propuso clavarle a tools un modelo viejo de openai que el banco de proveedores nunca midió. El filtro automático lo volteó solo, sin que yo hiciera nada, con la regla de que un modelo gratis o local atiende una tarea solo si el banco la banca. Bien ahí el filtro.
+
+Qwen dijo "crear un modelo fijo para tools con criterio de prioridad y urgencia", sin nombrar ningún modelo. Eso no es una propuesta, es un título.
+
+Y groq propuso el modelo grande para tools y un modelo local gratuito para server, y eso choca de frente con tu escalera: entender un pedido nunca lo hace una mula. Una mula ejecuta lo que ya está redactado.
+
+Así que el lado del no ganó tres a cero en calidad, aunque fue empate en cantidad.
+
+Hubo una excepción que propuso mistral large y que quiero mencionarte aparte porque es la única matizada: mandar personal y juegos a un modelo intermedio, porque son temas de bajo volumen. La idea tiene sentido, pero tampoco sobrevive, por una razón boba: ese modelo intermedio no está configurado en ningún lado del sistema. No existe como destino hoy.
+
+# tus quejas, leídas como patrón y no como lista
+
+Me pediste que tus quejas entraran al paquete, y entraron: le mandé al panel las doce correcciones que ya tuviste que hacer sobre el board, con tus palabras exactas y su fecha. No para que las apliquen, que ya están aplicadas, sino para que vean qué tipo de cosa te molesta.
+
+Te las devuelvo como patrón, que es lo que saqué yo armando el paquete, porque es la parte que te sirve mirar.
+
+Uno. Todo lo que es chico en el celular se lo tenés que pedir dos veces. La letra: primero pediste sumar dos píxeles a todas las fuentes, sin excepciones; al día siguiente pediste que todo, textos e iconos, fuera un veinticinco por ciento más grande. Los controles: pediste que los botones de cerrar y las cositas de los widgets fueran al ciento sesenta por ciento porque seguían siendo muy chicos. El padding de las pestañas, lo mismo. Nunca alcanzó a la primera.
+
+Dos. Odiás el toque que no muestra nada. Lo dijiste de la pantalla que preguntaba qué querías hacer antes de mostrarte las listas, y lo dijiste del renglón del título: "sacá todo el título ese, dejame solo la cruz arriba". Una pantalla que gasta un toque en preguntar, o un renglón en decir dónde estás, es espacio que no muestra contenido.
+
+Tres. Odiás más ver información vieja que ver la pantalla parpadear. Cuando votaste treinta y ocho tarjetas y abriste la lista y seguía igual que antes, lo escribiste con carita triste. El cache estaba pintando lo viejo.
+
+Cuatro. Odiás que te notifiquen. Fuiste muy claro: necesitás recibir menos del diez por ciento de las notificaciones que te estaba mandando, y solo las que te piden una decisión.
+
+Y cinco, que es el que más me costó aprender: cuando decís "no me pongas esto acá", casi siempre querés que se saque, no que se mude. Pasó exacto con la tira de notificaciones del chat: se entendió como mudarla más abajo, la mudé, y una semana después tuviste que decir que lo que habías pedido era sacarla.
+
+De esos cinco, el único que el panel leyó bien fue el primero, y de ahí sacaron la única propuesta de diseño que quedó viva: adelantá el tercer pedido de agrandar la letra, porque va a llegar igual.
+
+# lo que queda en pie del diseño y de la estructura
+
+Te junto lo poco y bueno que quedó de las dos primeras preguntas, la de estructura y la de diseño.
+
+De estructura: cuatro de los seis te pidieron partir el archivo de la página, que tiene doce mil trescientas treinta y tres líneas escritas a mano. Y los cuatro coinciden en el cómo, que además es el único camino que no rompe tu regla de no meter un armado previo ni un armazón de los que vienen hechos: un archivo de código por vista, cargado como módulo nativo del navegador.
+
+Eso no es una apuesta, y te digo por qué: ya lo hacés. Cinco widgets, el de gasto, el de la cola, el de modelos, el de seguidores y el de la cola de instagram, ya viven cada uno en su archivo aparte y se cargan así. Funciona. Lo que proponen es extenderlo de los widgets a las vistas.
+
+Lo que no sobrevive de estructura es "fusionar votar con el tinder": ya son dos sub vistas de lo mismo por una regla tuya de hace tres días.
+
+Y hubo una atrevida que te menciono porque es la única del panel que usa tus propias quejas para ir contra una orden tuya: tres modelos te propusieron sacar la vista home. El argumento que usaron es literalmente el tuyo, el que dijiste cuando sacaste el selector del instatinder: que odiás los toques que no muestran nada. Vos pediste esa home hace dos días. Ellos te dicen que por tu propio criterio sobra. No la voy a defender ni a atacar, es tuya, pero el razonamiento es honesto.
+
+De diseño, sacando todo el tema oscuro que está muerto, queda una sola cosa y es buena. Mistral large y mistral medium llegaron los dos, por separado, sin verse, a la misma conclusión: subí el tope de texto de dieciocho a veinte ahora. Y el argumento es de lectura de patrón, no de gusto: pediste agrandar la letra dos veces en dos días, la primera vez sumando y la segunda multiplicando, y la tercera vez va a llegar igual, así que adelantala.
+
+Mistral large le suma llevar el área de dedo de cuarenta a cuarenta y ocho, que está arriba de los cuarenta y cuatro que recomienda apple y de los cuarenta que el board usa hoy.
+
+Es la única propuesta de diseño de toda la corrida que no era el board que ya tenés.
+
+# el chat: una sola propuesta real, y no es la que parece
+
+Del chat salieron cinco propuestas y cuatro se caen solas. Te las paso rápido porque el contraste vale.
+
+Gemini te propuso agregarle al chat un botón que mantenga fija la primera línea visible cuando llegan muchos mensajes de golpe. Eso ya es una regla tuya, y está implementada: el chat nunca pierde la primera línea visible, guarda el ancla antes de sacar la vista de pantalla y la repone al volver. Se lo pediste al board hace cuatro días. Propuesta que repite una regla vigente no es un hallazgo, y esta la debería haber volteado el filtro automático: no lo hizo porque el juez estaba muerto.
+
+Qwen te propuso borrar el widget de notificaciones del chat porque, dijo, el reproductor de audio ya cumple esa función. Ese widget no existe. Es más: la tira de notificaciones adentro del chat la mandaste sacar vos hace dos días, con una frase que fue, textual, "las notificaciones en el chat te había dicho que las saques". Ya no está.
+
+Y también te propuso borrar el widget de historial de chat y reemplazarlo por uno de resumen de conversaciones. Tampoco existe ese widget. Inventó los dos.
+
+Mistral medium te propuso un botón de leer todo en el pie, para marcar como leídos los mensajes no vistos. Es razonable, pero el chat no tiene concepto de mensaje no leído: lo que tiene no leído son los avisos, y eso ya vive en la campana con su "cerrar todas".
+
+Y queda una, de gemma, que es la única que sobrevive y que a mí me parece la mejor propuesta de toda la corrida sobre el chat: que el chat tenga búsqueda.
+
+Fui a chequearlo antes de decírtelo, porque acá el pecado sería contarte como hallazgo algo que ya tenés. No lo tenés. No hay ninguna búsqueda en el chat, en ningún lado de la página.
+
+Y mirá el tamaño de lo que no se puede buscar: tres mil cuatrocientos mensajes repartidos en trece archivos de conversación, uno por tema. Mil trescientos noventa y nueve solo en tools. Toda la historia de lo que hablamos, las decisiones, los drafts, las correcciones que después se volvieron reglas. Todo eso está guardado y no hay forma de encontrar nada adentro salvo scrolleando.
+
+Y hay algo que la hace todavía más fácil de lo que suena: no hace falta ningún modelo. Son archivos de texto, línea por línea, con la fecha y el tema adentro. Buscar ahí es un script. Cero tokens, que es exactamente lo que dice tu escalera: cualquier modelo lo menos posible contra un script.
+
+# lo que aprendió el método
+
+Cierro con lo que me llevo yo, que es la parte que no se le pregunta al panel.
+
+Primero, el chequeo del archivo inventado tenía un agujero y ya lo tapé mientras corría esto. Ese chequeo es el que descarta una propuesta que nombra un archivo que no existe, y es el de mayor rendimiento del tema desde que una corrida dejó pasar cinco recetas inventadas. Bueno: esta vez se pasó de frenada. Descartó la propuesta de partir el archivo de la página, que es la más repetida de la corrida, porque el modelo lo nombró sin su carpeta y el chequeo solo buscaba en la raíz y en recetas. Ahora busca el nombre pelado también en la carpeta de la web, en la de documentos y en la de scripts, y encima aprendió que decir "archivos nuevos" en plural vale igual que en singular. Tres casos nuevos en la prueba, y la prueba está en verde.
+
+Segundo, y es el grande: un paquete sin la pantalla adentro hace que el panel invente la pantalla. Seis de seis pidieron tema oscuro a un board negro. Para cualquier consulta de interfaz va el estilo o va una captura, sin excepción.
+
+Y tercero, el juez gratis no puede depender de un solo proveedor. Sesenta y tres propuestas sin veredicto porque groq estaba sin cuota es un juez que no juzga.
+
+# qué tenés que decidir vos
+
+Y eso es todo, Facundo. No aplico nada: el board no se toca, como pediste. Esto es informe y es este capítulo, y la letra la ponés vos mañana.
+
+Lo que yo pondría arriba de la pila, si me lo preguntás, no es nada de lo que dijo el panel. Es lo que dijo el disco: casi un giga de temporales sin borrar, ochocientos megas de audio muerto en el historial del podcast, y dieciséis cajas en el board de las que no sabemos cuáles mirás.
+
+Las otras cuatro corridas están en la cola: el instatinder con capturas, los nombres para el producto, la seguridad y el flujo de awtomic. Cada una cierra con su capítulo, así que mañana tenés cinco para escuchar.
+
+Que descanses.
