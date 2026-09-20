@@ -1,0 +1,225 @@
+# de qué va este capítulo
+
+Hola Facundo. Este es el capítulo de la segunda de las cinco corridas que dejaste pedidas para la noche: la del instatinder.
+
+Te leo tu pedido tal cual me llegó, porque es corto y es toda la brújula que tuve: el instatinder es horrible, si alguno acepta capturas mostrale las fotos, y solo querés propuestas de interfaz, que después vemos cómo programamos lo de atrás. Necesitás que sea algo usable.
+
+Y después me dijiste dos cosas más que cambiaron bastante la corrida. La primera: mandá capturas de todo. La segunda, cuando te pregunté si la interfaz nueva podía proponer romper el embudo de listas o si solamente podía cambiar cómo se ve, me contestaste una palabra: puede.
+
+Así que el panel tuvo permiso para tocar el embudo, no solo la pintura.
+
+Te adelanto lo importante, porque el titular de este capítulo no es lo que dijeron ellos. El titular es algo que encontré yo antes de preguntarle a nadie, midiendo la pantalla con el tablero abierto. Y es una de esas cosas que cuando la ves, ya no la podés dejar de ver.
+
+# lo que hice antes de preguntar
+
+La primera vez que este tema le mandó una pantalla al panel, en la corrida del tablero, hubo un papelón que ya quedó escrito como regla de la casa: el paquete no llevaba una sola línea de estilo, y los seis modelos, que no se hablan entre ellos, coincidieron los seis en recomendarme adoptar un tema oscuro. El tablero es negro puro. Los seis inventaron la pantalla porque yo no se las mostré.
+
+Así que esta vez hice lo contrario. Abrí el tablero en el navegador del server, le puse exactamente el ancho de tu teléfono, entré al instatinder, y en vez de describir lo que veía, lo medí. Pixel por pixel, preguntándole al navegador el tamaño real de cada caja.
+
+Después saqué cuatro capturas: la pantalla de listas, la grilla de gente de una lista, la ficha de una persona, y el votador abierto. Y le enseñé al sistema algo que antes no sabía hacer: mandarle imágenes a un modelo. Eso no existía. Tres de los panelistas vieron las fotos de verdad; los que no ven imágenes recibieron el mismo paquete con todo medido en números.
+
+# el bicho
+
+Acá está el titular.
+
+El estilo del votador tiene un comentario escrito arriba, de tu propia orden, la que pedía que el votador abriera a pantalla completa. Ese comentario dice, con estas palabras: la foto se lleva todo lo que sobra, y los datos lo que necesitan, hasta el cuarenta y cinco por ciento del alto.
+
+Ahora te digo lo que hace de verdad, medido con el votador abierto en tu teléfono.
+
+La tarjeta mide quinientos veinticuatro píxeles de alto. Y se parte en dos franjas. La franja de la foto se queda con ciento veintiocho. La franja de los datos se queda con trescientos ochenta y ocho.
+
+O sea: la foto, el veinticuatro por ciento. Los datos, el setenta y cuatro.
+
+Hace exactamente lo contrario de lo que dice que hace.
+
+El motivo es una sutileza de cómo funcionan las grillas. La franja de los datos está declarada de manera que puede crecer hasta lo que necesite su contenido, y la franja de la foto está declarada de manera que puede achicarse hasta cero. Entonces los datos se sirven primero y la foto come lo que queda. El tope del cuarenta y cinco por ciento que el comentario menciona está puesto sobre el bloque de datos, no sobre la franja de la grilla, así que no frena nada.
+
+# los tres síntomas, todos juntos en la misma pantalla
+
+De ese solo error salen las tres cosas que te hacen decir que es horrible, y salen las tres al mismo tiempo.
+
+La primera: la cara se ve a ciento veintiséis por ciento veintiséis píxeles, en una pantalla de trescientos noventa por ochocientos cuarenta y cuatro. Es el cinco coma seis por ciento de la pantalla. En una aplicación cuya única razón de existir es que mires una cara y decidas.
+
+La segunda: el texto se corta a mitad de palabra. En la captura que le mandé al panel, la frase se interrumpe justo en "historial, se siguen desde antes". Y no hay ninguna señal de que siga. La única forma de leerlo es descubrir que ese bloque, y solamente ese bloque, scrollea por dentro. La pantalla entera no scrollea: tiene el desborde tapado.
+
+Y la tercera, que es la que da bronca: al mismo tiempo que el texto se corta, sobran doscientos trece píxeles de negro completamente vacío abajo. La pantalla te oculta texto y te regala vacío, las dos cosas juntas.
+
+Y el remate, que es casi una broma: la misma persona, con exactamente la misma foto, se ve seis veces más grande en la ficha, que es un cuadrito chico que se abre encima, que en la pantalla completa que existe justamente para verla grande.
+
+# la pantalla de listas
+
+La otra mitad de la vista es la casa: las nueve listas del embudo.
+
+Medí eso también. El contenido son tres mil trescientos nueve píxeles, en una ventana que muestra setecientos sesenta y siete. Cuatro pantallas y pico de scroll para ver nueve listas.
+
+Pero lo interesante no es el scroll. Es cómo está repartido.
+
+Las cinco listas chicas, las que tienen sesenta y cuatro personas entre todas, se llevan dos mil cuatrocientos treinta y siete píxeles, porque cada una dibuja las fotitos de toda su gente adentro. Las tres listas grandes, las que tienen tres mil seiscientas veinticuatro personas entre todas, se llevan quinientos setenta y tres, porque no dibujan a nadie.
+
+El tamaño de cada caja está exactamente al revés de cuánta gente tiene. Y la lista de las solicitudes mandadas, con veintinueve personas, ocupa ella sola novecientos un píxeles. Dos pantallas y media para una sola caja.
+
+# qué contestaron
+
+Contestaron cuatro. Dos modelos grandes pagos de un proveedor, uno chico de otro, y uno local corriendo acá en tu casa. De los seis que salieron, uno se cayó porque el proveedor estaba saturado, y el otro porque no había memoria libre en el server para cargarlo: el modelo pesa cinco coma cuatro gigas y había cuatro libres, con el anterior todavía cargado.
+
+Lo que dijeron coincidió mucho más de lo que esperaba. Y ojo, que eso hay que mirarlo con desconfianza después de lo del tema oscuro. Pero acá la coincidencia viene de algo distinto: los cuatro estaban mirando el mismo número medido, no un hueco.
+
+Los cuatro, sin excepción, dicen lo mismo del votador: la foto manda. Que se lleve entre el sesenta y el setenta por ciento del alto, y que los datos vayan abajo, scrolleando dentro de su franja, sin robarle lugar a la cara. Uno de ellos incluso te bajó la línea de estilo exacta para invertir la grilla.
+
+Tres de los cuatro dicen que sobra el botón enviar. Que el toque en el voto ya tendría que mandar. Hoy ese botón flota solo, pegado a la derecha, arriba de los tres votos, y no se entiende qué hace ahí.
+
+Tres de los cuatro dicen que sobra la grilla intermedia de gente. Que tocar una lista abra directo el votador de esa lista y listo. Porque hoy hay tres maneras distintas de mirar a la misma persona, con tres diseños distintos, y la del medio no aporta nada.
+
+Y los cuatro, sin excepción, dicen que sobran listas. Ninguno se quedó con nueve. Uno bajó a seis, otro a cinco, otro a cuatro, otro a tres. Y los cuatro, por separado, señalaron el mismo detalle: hay tres listas distintas que abren exactamente el mismo proceso de votación. Para el sistema son tres cosas; para el dedo tuyo son una sola.
+
+La propuesta más concreta deja cinco: las candidatas, una sola lista de "en proceso" que junta las tres que hoy se pisan, las activas, las que quedaron en duda, y un archivo con todo lo descartado.
+
+# la regla de oro
+
+A cada uno le pedí una sola cosa más, y creo que es la parte más útil de la corrida. Le pedí que me diera una regla de diseño que, si se hubiera respetado desde el principio, se hubiera comido la mayoría de las treinta correcciones que vos ya hiciste sobre esta pantalla en tres días.
+
+Treinta. Las conté. Treinta órdenes tuyas corrigiendo esta misma vista entre el diecisiete y el diecinueve de septiembre. Y después de las treinta, tu veredicto sigue siendo una línea: es horrible.
+
+Las cuatro reglas que me dieron fueron distintas. Te leo la que me parece que da en el clavo, porque es la única que explica el bicho de la grilla:
+
+Una sola fuente de verdad por pantalla. Cada dato, la foto, la bio, los votos, se pinta igual en todos los contextos donde aparece. Sin diseños distintos para lo mismo.
+
+Y eso es literalmente lo que falla. La foto tiene una regla de tamaño para cuando la tarjeta es chica, y otra regla para cuando es pantalla completa, y la segunda pisa a la primera sin que nadie mire el resultado. Treinta parches puntuales sobre tres diseños que no se hablan entre ellos. Así se llega a "es horrible": no falló ninguna corrección, falló acumular correcciones sin un modelo de pantalla atrás.
+
+# lo que me equivoqué yo, y lo corregí a tiempo
+
+Esto te lo cuento porque es la tercera vez seguida que este tema tropieza con lo mismo, y cada vez desde un ángulo distinto.
+
+En la primera versión del paquete escribí que el votador bajaba la foto chica y la ficha bajaba la grande. Sonaba redondo. Explicaba todo.
+
+Era falso. Los dos usan el mismo archivo.
+
+Me di cuenta yendo a chequear otra cosa, con la corrida ya lanzada. La frené, corregí el paquete y la largué de nuevo. No llegó a contestar nadie con el dato mal.
+
+Lo que sí es cierto, y ahora está medido: de las mil setecientas cuarenta y seis fotos de perfil que el server tiene bajadas, mil trescientas siete son de seiscientos cuarenta píxeles, o sea buenas. Pero ciento ochenta y tres, una de cada diez, son de ciento cincuenta píxeles o menos. Para esa décima parte de la gente, ninguna pantalla puede mostrar una cara decente, porque lo que hay guardado es una miniatura. Y la persona que salió en la captura del votador que le mandé al panel es justo una de esas.
+
+La lección, y esta va al archivo del tema: auditar los números no alcanza. La frase que explica por qué pasa el número también es un dato, y también se audita. En la corrida del tablero faltaba la pantalla y los seis la inventaron. En la del nombre sobraba un nombre y la mitad me lo devolvió. En esta el número estaba bien y la causa estaba mal.
+
+# lo que queda sobre la mesa
+
+Te resumo lo accionable, sabiendo que no se tocó ni una línea del tablero ni se movió una sola persona del embudo.
+
+Invertir la grilla del votador para que la foto se lleve el sesenta o setenta por ciento: lo dicen los cuatro, y es una línea de estilo.
+
+Sacar el desborde tapado de la tarjeta, o darle scroll a la pantalla entera, para que no haya más texto escondido con vacío al lado.
+
+Que el toque en el voto mande, y que se vaya el botón enviar: tres de cuatro.
+
+Que tocar una lista abra su votador, sin la grilla de gente en el medio: tres de cuatro.
+
+Fundir las tres listas que hoy abren el mismo proceso: los cuatro.
+
+Y bajar la foto grande de esa décima parte de la gente que quedó en miniatura, que es lo único de esta lista que no es interfaz sino una receta del server.
+
+Nada de esto está hecho. La letra la ponés vos, y mañana me lo preguntás por número.
+
+# cómo se le enseña a un modelo a mirar una pantalla
+
+Quiero volver un momento sobre la parte técnica de esta corrida, porque es lo que más trabajo llevó y es lo que vas a poder reusar en las próximas.
+
+Hasta anoche, el panel no podía ver nada. Le mandaba texto y contestaba texto. Cuando vos me dijiste "mandá capturas de todo", eso simplemente no existía como capacidad del sistema.
+
+Los dos proveedores que usamos hablan dialectos distintos para las imágenes. Uno las quiere dentro del mensaje, como un bloque más al lado del texto, codificadas. El otro las quiere como una parte aparte del contenido, con su tipo declarado. Hubo que enseñarle las dos formas al módulo que habla con los proveedores, y hubo que marcar, panelista por panelista, cuál de ellos ve y cuál no.
+
+Porque eso es lo delicado. Si le mando una imagen a un modelo que no ve, no me dice "no veo": me devuelve un error y pierdo un panelista entero. Y si a los que no ven les mando un paquete distinto que a los que ven, entonces ya no estoy comparando respuestas comparables, que es toda la gracia de tener un panel.
+
+La solución fue esa: el mismo paquete de texto para todos, con la pantalla descrita en números medidos, y las imágenes arriba, solamente para los que pueden mirarlas. El que ve tiene el texto y la foto; el que no ve tiene el texto. Los dos contestan sobre lo mismo.
+
+Y una cosa más, chiquita pero que vale la pena: el sistema chequea que cada captura exista de verdad antes de mandarla. Suena obvio, pero este tema ya tuvo una corrida entera que dejó pasar cinco archivos inventados. Acá la regla es la misma para los archivos que menciona el panel y para los que mando yo.
+
+Todo eso quedó con su prueba automática, así que la próxima vez que quieras mandarle una pantalla a alguien, ya funciona.
+
+# las dos cosas que me pasaron en el camino y que te van a pasar de nuevo
+
+Dos panelistas se cayeron, y las dos caídas dejan enseñanza.
+
+El primero se cayó con un error del proveedor que dice, textual, que el modelo está experimentando mucha demanda y que suele ser temporal. O sea: volvé a intentar en un rato. El sistema ya sabía reintentar cuando un proveedor te frena por cuota, porque eso pasa todos los días. Pero no sabía reintentar cuando el proveedor está saturado, que es exactamente el mismo problema desde el punto de vista de una corrida: se pierde un panelista entero por algo que se arregla esperando cuarenta y cinco segundos. Eso ya quedó arreglado, con su prueba.
+
+El segundo se cayó con un error que al principio no tenía sentido, un error interno del motor local. Fui a mirar y era memoria. El modelo pesa cinco coma cuatro gigas, había cuatro libres, y el anterior todavía estaba cargado ocupando su lugar. O sea que dos modelos locales seguidos, en este server, no entran si no se descarga el primero. Es una limitación física de la máquina, no un bug, pero hay que saberla: el panel local es de a uno.
+
+Y hay una tercera que ya venía sabida y se confirmó. El modelo de mayor calidad gratuita que teníamos para partir el paquete en pedazos quedó afuera de las dos corridas, porque su cuota diaria se la come el carril de fondo del sistema, ese que corre todo el día midiendo. Cada tanda del paquete rebotaba y se comía catorce minutos en reintentos. Lo saqué y puse otro en su lugar. Es la misma lección que dejó la corrida de los widgets, y ya está escrita.
+
+# por qué el embudo es el problema de fondo
+
+Hay algo que los cuatro panelistas rozaron y que quiero dejarte dicho con todas las letras, porque creo que es la decisión de verdad que tenés por delante.
+
+Hoy tenés nueve listas. Y si las mirás con cuidado, no son nueve cosas del mismo tipo. Hay tres clases distintas mezcladas.
+
+Están las que son una cola de trabajo: gente que está esperando que vos hagas algo. Las candidatas, las que te interesan y todavía no tienen follow, las que hay que activar. Ahí vos tenés algo pendiente.
+
+Están las que son un estado, no un trabajo: las solicitudes mandadas, las que ya seguís y no te siguen. Esas no esperan nada de vos. Son el resultado de algo que ya hiciste. Están ahí para que sepas en qué anda el sistema, no para que las toques.
+
+Y están las que son un archivo: las ignoradas, la gran masa de candidatas sin procesar. Miles de personas que están ahí por si acaso.
+
+El problema es que la pantalla las trata a las nueve igual. Todas son una caja, todas son tocables, todas están en la misma columna, una abajo de la otra. Y como las listas chicas dibujan a su gente y las grandes no, terminás con las colas de trabajo perdidas entre cajas gigantes y el archivo comprimido en una cajita.
+
+Cuando los cuatro te dicen "menos listas", no te están diciendo que borres datos. Te están diciendo que la pantalla tiene que mostrar primero lo que te está esperando, después lo que está en curso, y por último lo que ya pasó. Y que las tres listas que abren el mismo proceso de voto son, para tu dedo, una sola cola.
+
+Esa es la parte donde me dijiste "puede". Y es la que de verdad cambia la experiencia, mucho más que cualquier ajuste de píxeles.
+
+# lo que nadie dijo y me parece que falta
+
+Hay una cosa que no propuso ninguno de los cuatro y que se me hizo evidente mientras medía.
+
+El votador, hoy, no tiene ninguna manera de decirte cuánto falta. Entrás, votás, aparece la siguiente, votás, aparece la siguiente. No hay un número, no hay una barra, no hay nada que te diga si estás en la tercera de trece o en la tercera de doscientas.
+
+Y eso importa mucho más de lo que parece, porque cambia por completo cómo votás. Si sabés que son trece, mirás bien cada una. Si sabés que son doscientas, entrás en modo barrido. Hoy no sabés, y entonces siempre votás igual, que es la peor de las dos opciones.
+
+En la pantalla de listas el número está: cada caja dice cuánta gente tiene. En el votador desaparece. Es información que el sistema ya tiene y que la pantalla tira justo en el momento en que hace falta.
+
+No se lo propuso nadie, así que lo dejo como mío y vos verás.
+
+# panelista por panelista, qué trajo cada uno
+
+Te cuento uno por uno, porque no todos aportaron lo mismo y vale la pena saber a quién escuchar la próxima.
+
+El primero de los dos modelos grandes pagos fue el más útil de largo. Fue el único que bajó la línea de estilo exacta para arreglar la grilla, con los porcentajes puestos. Fue el único que te armó el embudo nuevo completo, con las cinco listas y qué se funde con qué. Y fue el único que notó algo del que yo ni me había dado cuenta: que si fundís las tres listas que abren el mismo proceso, entonces esa cola nueva necesita un orden de prioridad adentro, porque no es lo mismo revisar cinco personas que veintinueve. Te propuso el orden. Doce propuestas, todas concretas, todas con el número al lado.
+
+El segundo modelo grande, el que ve imágenes, fue el más quirúrgico. Cinco propuestas, ni una de relleno. Fue el que dijo que el botón enviar tiene que desaparecer porque el voto ya es el envío. Y fue el que dio la regla de oro que te leí antes, la de una sola fuente de verdad por pantalla, que es la que explica el bicho.
+
+El tercero, el modelo chico del otro proveedor, también ve imágenes, y fue el más radical de los cuatro. Te propuso bajar de nueve listas a tres y, sobre todo, te propuso tirar la metáfora entera de "lista". Su idea es que no haya listas que se abren: que haya una sola cola continua de tarjetas, y que el destino de cada persona lo decida el voto en el momento. O sea, que la lista deje de ser un lugar donde la gente está y pase a ser el resultado de lo que votaste. Es la propuesta más lejos de lo que hay hoy, y es la única que de verdad respondería a "puede romper el embudo".
+
+Y el cuarto, el local de tu casa, el que corre sin internet y sin costar un peso, fue el más flojo y hay que decirlo. Cinco líneas, casi todas repitiendo números del paquete en vez de proponer. Pero tiró una cosa que ninguno de los tres grandes dijo, y que es fina: que las solicitudes mandadas y la gente que te interesa no son listas, son estados. Que no merecen una caja propia en la casa, merecen ser una marca sobre una persona. Eso es exactamente la distinción que te contaba hace un rato, y la dijo el modelo más chico.
+
+Moraleja, para la próxima: los grandes te dan el cómo, el local te da de vez en cuando un qué. No es un panelista de auditoría, pero para una pregunta de criterio a veces pone algo que los otros no vieron.
+
+# una cosa más sobre las fotos
+
+Quiero cerrar la parte de las fotos porque tiene una punta práctica.
+
+Te dije que una de cada diez fotos guardadas es una miniatura de ciento cincuenta píxeles o menos, y que ochenta y dos de ellas son directamente de noventa y seis por noventa y seis. Noventa y seis píxeles es el tamaño del avatar chiquito que aparece al lado de un comentario. No es una foto de perfil, es un ícono.
+
+Eso pasó porque esas personas se bajaron en un momento en que el sistema agarraba lo primero que la red le daba, y después nunca se volvieron a pedir. Las que se bajaron más tarde vinieron en seiscientos cuarenta, que es lo que se ve bien hasta en pantalla completa.
+
+O sea que el problema no es de diseño y no lo arregla ningún cambio de interfaz: son ciento ochenta y tres personas a las que hay que volver a pedirles la foto buena una sola vez. Una receta que recorre las que están en miniatura, pide la grande y la reemplaza. Es de esas cosas que se hacen una vez y quedan resueltas para siempre.
+
+Lo propuso uno solo de los cuatro, y creo que tiene razón, porque si arreglás la grilla y le das a la foto el setenta por ciento de la pantalla, a esas ciento ochenta y tres personas lo que vas a ver es una miniatura estirada a pantalla completa. Vas a haber empeorado su caso arreglando el de todos los demás.
+
+# lo que esta corrida le dejó al sistema, más allá del informe
+
+Antes de cerrar te enumero lo que quedó escrito en el código, porque una corrida que no deja nada atrás es plata tirada.
+
+Primero: el sistema ahora sabe mandar imágenes a un modelo, con los dos dialectos de los dos proveedores, con la marca de cuál panelista ve y cuál no, y con el chequeo de que la captura exista. Con su prueba.
+
+Segundo: cuando un proveedor contesta que está saturado, ya no se pierde el panelista. Se espera y se vuelve a pedir, igual que cuando te frena por cuota. También con su prueba, y la prueba incluye el caso contrario: si el error es que el modelo no existe, no se reintenta, porque esperar no lo va a hacer existir.
+
+Tercero: quedó medido y escrito que dos modelos locales grandes seguidos no entran en la memoria de este server. El segundo se cae. Hay que descargar el primero o usar uno más chico.
+
+Y cuarto, el más barato de todos y el que más vale: quedó la manera de armar un paquete de una pantalla. Se abre el tablero en el navegador del server con el ancho del teléfono, se mide el árbol vivo, se sacan las capturas, y recién entonces se pregunta. Esta corrida tardó más en prepararse que en correrse, y esa proporción está bien: los modelos contestaron en tres minutos, y lo que hizo que las respuestas valieran la pena fue lo que pasó antes.
+
+# para cerrar
+
+Te resumo en dos frases lo que me llevo de esta corrida.
+
+La primera: no hacía falta un panel para encontrar el bicho grande. Hacía falta abrir la pantalla y medirla en vez de describirla. El error estaba escrito en el propio comentario del código, que dice una cosa mientras el código hace la contraria, y estuvo ahí adentro durante treinta correcciones tuyas sin que nadie lo mirara con un centímetro.
+
+La segunda: el panel sirvió para otra cosa, y sirvió bien. Cuatro modelos que no se hablan entre ellos, mirando los mismos números, coincidieron en las mismas cuatro decisiones de diseño. Y ninguna de las cuatro estaba sugerida en lo que yo les mandé. Eso es lo que un panel te da y una medición no: no el error, sino la dirección.
+
+Los informes están escritos, las cuatro capturas guardadas, las respuestas crudas de cada uno también. No se tocó ni una línea del tablero ni se movió una sola persona del embudo.
+
+Mañana me lo preguntás por número.

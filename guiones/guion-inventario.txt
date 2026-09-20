@@ -1,0 +1,209 @@
+# de qué va este capítulo
+
+Hola Facundo. Este es el capítulo de la cuarta de las cinco corridas de la noche: la de seguridad.
+
+Te leo tu pedido tal cual. Cómo mejorar la seguridad del sistema, qué problemas tenemos hoy, qué es lo más fácil de arreglar, deberíamos contratar algo que no contratamos, deberíamos cambiar algo ya, y qué otras cosas que no son el sistema pero son del tema hay que tener en cuenta.
+
+La pregunta original seguía con la seguridad de tu casa y la tuya propia, y vos mismo lo sacaste: casa afuera. Así que esta corrida es solamente lo digital.
+
+Y me dijiste una cosa más, corta, que cambió todo el trabajo: cuando te pregunté si el inventario que iba adentro del paquete iba con nombres o anonimizado, me contestaste "una versión, segura".
+
+Empiezo por ahí, porque sin eso este capítulo no existiría.
+
+# por qué el paquete va anónimo
+
+Pensá un segundo qué es lo que hace falta mandarle a un panel de modelos para que te diga dónde están los agujeros de seguridad de tu sistema.
+
+Hace falta contarle dónde guardás las llaves. Cuántas son. De qué cuentas. Qué puertos tenés abiertos. Qué puede hacer cada credencial. Cómo entrás vos a tu propio tablero.
+
+O sea: el documento ideal para contestar esta pregunta es, exactamente, el mapa que necesitaría alguien para entrar. Y ese documento iba a salir de tu casa hacia cuatro proveedores distintos.
+
+Así que lo escribí de otra manera. El inventario que vieron los modelos no tiene un solo nombre propio, ni una cuenta, ni un dominio, ni una dirección de red, ni el nombre de la máquina, ni el nombre de un repositorio, ni el valor de una sola credencial. Y no lo digo de memoria: lo chequeé a máquina. Buscar tu nombre, las direcciones de la casa, el nombre del sistema, o cualquiera de los siete servicios que el sistema toca, da cero apariciones en el paquete entero.
+
+Lo que sí es real es todo lo demás. Los mecanismos, los números, los permisos, los alcances. Un modelo no necesita saber de quién es un sistema para decirte que un token con permiso de escritura sobre todo el código es demasiado permiso para escribir un comentario.
+
+Eso es lo que hace que la pregunta se pueda hacer sin pagarla con un riesgo.
+
+# qué les conté, en criollo
+
+El sistema que describí es este, sin nombres. Un agente de software que corre todo el día en un server casero, un solo usuario de servicio, red doméstica. Una cola de órdenes donde cada orden la ejecuta un modelo grande con acceso a la consola. Un tablero web que el dueño mira desde el teléfono. Motores para redes, mail, mensajería, un trabajo de soporte y un podcast.
+
+Cuatrocientas ochenta y nueve recetas, ciento setenta y ocho de ellas pruebas automáticas, un demonio de cinco mil doscientas líneas, dos coma tres gigas de carpeta.
+
+Y les dije cuál es el modelo de amenaza de verdad, que no es el de una empresa. Acá no hay usuarios, no hay compliance, no hay auditoría. Hay un dueño, una máquina y una red de casa. Lo que hay que proteger no son datos de terceros en masa: son las llaves de la vida digital de una persona, todas juntas en el mismo disco, y la capacidad de actuar en su nombre.
+
+Esa última parte es la que la gente subestima. El sistema puede mandar mensajes, mover tickets, escribir código y seguir gente. Si alguien lo agarra, no necesita robarte nada: le alcanza con usarlo.
+
+# lo que dijeron los cinco, sin excepción
+
+Contestaron cinco de seis. Dos modelos grandes pagos, uno chico, y los dos locales de tu casa. El que faltó se cayó porque el proveedor estaba saturado.
+
+Hubo dos cosas en las que los cinco coincidieron. Las cinco respuestas, sin ninguna excepción, y las dos son baratas.
+
+La primera son los permisos de la carpeta de secretos.
+
+Adentro de esa carpeta hay dos mil cien archivos. Dos mil ochenta de ellos tienen el permiso puesto de manera que los puede leer cualquier usuario de la máquina. Hoy eso no filtra nada, y esto es importante que te lo diga bien, porque la carpeta que los contiene sí está cerrada, y la carpeta manda. O sea: hoy estás bien.
+
+El riesgo es el día que esa carpeta se copie, se sincronice a otra máquina, o se restaure de un backup conservando los permisos. Ahí los archivos se defienden solos, y la mitad de ellos no se defiende.
+
+Los cinco lo marcaron. Los cinco proponen lo mismo, y es un comando: poner todos esos archivos en el permiso cerrado. Es el arreglo más barato de las noventa propuestas que salieron de esta corrida.
+
+La segunda cosa en la que coincidieron los cinco es el token del proveedor de código.
+
+Ese token tiene, medido hoy, permiso de escritura sobre todos los repositorios de la cuenta y sobre sus pipelines de integración continua. Y lo único que el sistema necesita de él es escribir comentarios en un issue de un repositorio. Uno.
+
+Los cinco dijeron que hay que achicarlo. Y tres de los cinco notaron algo más, que es la parte que a mí me preocupa más: ese token es el mismo que el tablero guarda en tu teléfono después de que ponés la clave. La clave protege el archivo publicado, no protege el token una vez que está desbloqueado.
+
+Y eso no es teoría. Lo comprobé yo mismo armando el paquete: desde el navegador del server, con una sola línea, lo leí.
+
+# el tercero, cuatro de cinco
+
+El tercer punto más votado fue la depuración remota del navegador.
+
+El sistema maneja un navegador automatizado para hacer cosas por vos. Ese navegador está logueado a todas tus cuentas, y tiene abierto el puerto de control local, que es cómo el sistema lo maneja.
+
+El detalle es que ese puerto no distingue quién lo usa. Cualquier proceso que corra con el mismo usuario puede manejar ese navegador. Y manejar ese navegador es, en la práctica, ser vos en todas las páginas donde estás logueado.
+
+Cuatro de los cinco lo pusieron en la lista, y los cuatro proponen lo mismo: cerrarlo, o atarlo de manera que solo el demonio pueda hablarle.
+
+# la parte que no esperaba: cuatro de cinco dijeron que no contrates nada
+
+Esta es la que me sorprendió, y creo que te va a gustar.
+
+La pregunta les ofrecía cosas concretas para contratar. Un gestor de secretos, un backup fuera de la casa, un firewall de aplicación, un monitor, un pentest. Y les puse una condición: el que proponga contratar tiene que decir cuánto sale por mes, y por qué ese dinero compra más seguridad que el mismo dinero puesto en otro lado. Porque el sistema está tratando de bajar de seiscientos dólares por mes a doscientos, y cualquier gasto nuevo entra en esa cuenta.
+
+Cuatro de los cinco dijeron que no. Y los cuatro dieron el mismo argumento con distintas palabras: el sistema no tiene tráfico público, no hay nada que un firewall de aplicación pueda filtrar, y el dinero de un abono de gestor de secretos rinde más cifrando la bóveda con la herramienta que ya está instalada en la máquina y que ya se usa para el backup.
+
+Uno de ellos fue todavía más lejos. En la pregunta de qué cambiar ya, aunque cueste trabajo, le había dejado abierta la puerta para decir "ninguna" siempre que lo fundamentara. Y la usó. Te leo lo que contestó, textual:
+
+Ninguna. El sistema está razonablemente acotado para un entorno monousuario sin personal y con guardas estrictas de revert y redactor de secretos.
+
+Eso, viniendo de un modelo al que le mostrás una lista de agujeros y le preguntás qué cambiar urgente, no es lo que uno espera. Lo esperable es que invente urgencias, porque es lo que suena inteligente.
+
+Y el único que quiso contratar fue el modelo local más chico, el que corre gratis acá adentro. Pidió pentest, gestor de secretos, monitoreo, detección de intrusiones y backup fuera de la casa. Los cinco items que la pregunta nombraba, los cinco pedidos, uno por uno. Y no puso el precio de ninguno, que era justamente la condición.
+
+# el hallazgo del método, y esta vez son los locales
+
+Ahora te cuento la parte incómoda, que es sobre cómo pregunto yo, no sobre lo que contestaron ellos.
+
+El paquete tiene una sección entera que se llama, con estas palabras, "lo que ya está bien hecho, no hace falta proponerlo de nuevo". Esa sección existe justamente para que nadie me venga a proponer algo que ya está.
+
+Ahí dice, con todas las letras, que hay ciento setenta y ocho pruebas automáticas. Y dice que el backup está cifrado con clave pública y que la privada la tiene solamente la laptop del dueño.
+
+Uno de los dos modelos locales contestó, entre sus problemas, y te lo leo: ninguna prueba automática, si se introduce un bug grave no se detecta.
+
+El otro modelo local propuso implementar un sistema de respaldo fuera del hogar, porque, y también te lo leo, el sistema actual solo realiza backups cifrados en la misma máquina.
+
+Las dos frases contradicen líneas literales del paquete. Los tres modelos de nube no cometieron ninguno de los dos errores.
+
+Y el motivo no es que los locales sean tontos. Es que un modelo local en este server entra con dos mil seiscientas palabras de contexto, y el paquete es más largo que eso. Leen la mitad y completan la otra mitad. Y la completan con el sistema promedio de internet, que efectivamente no tiene pruebas y efectivamente hace el backup en la misma máquina.
+
+La conclusión, que ya quedó anotada como regla del tema: un modelo local con ese tamaño de contexto puede votar, no puede auditar. Para una pregunta de criterio, con el paquete chiquito, sirve. Para una auditoría donde la mitad del valor está en lo que ya está hecho, no.
+
+Es primo de lo que pasó en la corrida del tablero, donde el paquete no llevaba la pantalla y los seis modelos la inventaron. Pero es peor, en un sentido: acá el dato estaba en el paquete y lo inventaron igual, porque no les entró.
+
+# lo que no vio ninguno y encontré midiendo
+
+Hay un hallazgo que no es de ellos y me parece el más útil de todos, porque es el único que no se arregla con un comando.
+
+Los cinco nombraron que el firewall del sistema no se pudo auditar. Estaba en el paquete, yo mismo lo escribí ahí. Pero ninguno sacó la conclusión que sigue.
+
+Resulta que el usuario de servicio del agente, o sea el usuario con el que corre todo esto, no puede leer la configuración del firewall. No puede escribirla, que está bien, pero tampoco puede leerla. Le pide contraseña.
+
+Y eso significa una cosa muy concreta: el sistema no puede chequearse a sí mismo. Nunca va a poder mirar sus propios puertos y avisarte si algo quedó abierto hacia afuera, porque no tiene permiso ni para mirar.
+
+Y eso choca de frente con cómo funciona todo lo demás en esta casa. Acá la regla es que cualquier cosa que un script pueda hacer a cero tokens, la hace un script. Los guards de red, los de sistema, los de claves, todos corren solos todos los días. El único chequeo de seguridad que no se puede automatizar es justo el del perímetro.
+
+Y se arregla con una línea. Una línea en la configuración de permisos que deje leer, no escribir, la configuración del firewall. Y recién ahí el chequeo diario de puertos abiertos se puede escribir y se olvida para siempre.
+
+Es el tipo de cosa que un panel no encuentra, porque el panel te contesta la pregunta que le hiciste y esta es una consecuencia de una restricción de la máquina.
+
+# lo que no es el sistema
+
+La última parte de tu pregunta era esa: qué cosas que no son el sistema, pero son del tema, hay que tener en cuenta.
+
+Los cinco coincidieron en una sola, y la dijeron con distintas palabras. Tu teléfono es hoy el único segundo factor de todo.
+
+Si se pierde, si se rompe, si te lo roban, o si alguien convence a tu compañía de teléfono de pasarte la línea a otro chip, se cae todo al mismo tiempo. Y no hay un plan escrito para eso.
+
+Alrededor de esa, dijeron tres cosas más que van juntas. Que conviene tener un segundo factor físico, una llave de hardware, para las cuentas que de verdad importan. Que los códigos de recuperación tienen que estar en un lugar físico, fuera de la máquina y fuera del teléfono. Y que la clave privada que abre el backup cifrado, que hoy vive en una sola laptop, tendría que tener una copia en papel guardada en algún lado, porque si esa laptop se muere el backup cifrado se vuelve un archivo que nadie puede abrir. Incluido vos.
+
+Y uno agregó algo que me pareció el punto más fino de los noventa: la ingeniería social contra un sistema que actúa en nombre de una persona no se parece a la ingeniería social común. No hay que convencerte a vos. Hay que escribir un mail que parezca una orden razonable, y el sistema lo hace solo.
+
+Eso, hoy, está frenado por reglas duras, no por buena voluntad: nada sale a ningún lado sin una orden explícita tuya en ese mismo mensaje, y ninguna tarea de fondo toca un repositorio sin que lo pidas. Pero el que quiera pensar en el agujero más grande de este sistema, tiene que empezar por ahí y no por los puertos.
+
+# el inventario completo, para que sepas qué hay en ese disco
+
+Te quiero leer, sin nombres, qué es exactamente lo que vive hoy en la carpeta de secretos, porque creo que verlo junto es más impresionante que verlo de a uno.
+
+Hay una bóveda de claves propia, con seis entradas, en un archivo de texto plano. No está cifrada. La protegen los permisos, nada más.
+
+Hay cookies de sesión vivas de un proveedor de identidad grande, para tres cuentas distintas. Trescientos treinta y seis kilobytes. Con ese archivo se entra a esas cuentas sin contraseña y sin segundo factor.
+
+Hay sesiones guardadas de una plataforma de comercio, de un chat corporativo, de una app de transporte, de un sistema de tickets, y la sesión completa de una app de mensajería personal.
+
+Hay un código QR de segundo factor, en una imagen. Quien lo tenga, clona ese segundo factor.
+
+Hay dos llaves de acceso sin contraseña, exportadas a archivo.
+
+Y está el token del proveedor de código con permiso sobre todo.
+
+Todo eso, junto, en un disco, en una casa, en una red doméstica.
+
+Ahora, lo que está bien: esa carpeta está cerrada, el acceso por consola a la máquina es solo con llave y sin contraseña, no se puede entrar como administrador, el backup está cifrado y solo lo abre una laptop, y hay un redactor que tapa cualquier valor guardado antes de que salga a un log, a un historial de chat o a una respuesta.
+
+O sea que la casa tiene buena puerta. Lo que está flojo es cómo están guardadas las cosas adentro, y eso es lo que los cinco vieron.
+
+# la superficie más grande, y es a propósito
+
+Hay algo que puse en el paquete con esas palabras: la superficie de ataque más grande de este sistema es por diseño, no por descuido.
+
+El demonio ejecuta órdenes escritas en castellano, con un modelo que tiene consola. Y la cola se llena desde afuera: llega cosa por el chat del tablero, por mail, y por mensajería. Hay remitentes de terceros autorizados a pedir trabajos por mail.
+
+Eso quiere decir que un mail bien escrito es, en la práctica, entrada de código. Y el único filtro entre "un tercero escribió algo" y "el sistema lo hizo" es el criterio del modelo que lo leyó.
+
+Dos de los cinco lo pusieron primero o segundo en su lista, y uno propuso algo concreto: meter la ejecución de las órdenes en una caja aislada, de esas que limitan a qué partes del disco puede tocar un proceso. Es la única propuesta de las noventa que es de arquitectura y no de higiene. Es también la más cara, porque el sistema justamente necesita tocar todo para hacer su trabajo, y la mitad de las recetas dejarían de funcionar.
+
+Yo no te la recomiendo hoy, y te digo por qué: el riesgo real no está en que el modelo se vuelva loco solo, está en que alguien le escriba. Y eso se frena con las reglas que ya tenés, las de que nada sale sin orden explícita, más un poco de desconfianza con quién puede meter cosas en la cola. Es más barato revisar la lista de quién puede escribirle al sistema que encerrar al sistema.
+
+# lo que aprendí preguntando esto
+
+Una reflexión sobre el ejercicio en sí, porque creo que vale más que varias de las propuestas.
+
+Hacer una auditoría de seguridad con un panel de modelos tiene un problema de fondo: la información que hace falta para contestar bien es la misma que hace falta para atacar. Cuanto mejor la pregunta, peor el riesgo.
+
+La salida fue separar los mecanismos de las identidades. Un modelo no necesita saber que este server se llama de una manera para decirte que un token con permiso de escritura sobre todo es demasiado. No necesita tu dirección de red para decirte que el escritorio remoto en un puerto conocido con usuario y contraseña es el candidato número uno a fuerza bruta. No necesita saber qué cuentas son para decirte que tener las cookies de tres cuentas en texto plano al lado del código QR del segundo factor anula el segundo factor.
+
+Todo lo que dijeron de valor, lo dijeron sin saber nada de vos.
+
+Y la prueba de que la anonimización no les quitó capacidad está en el resultado: los cinco coincidieron en las dos mismas cosas, y las dos son correctas y accionables. No contestaron en general, contestaron sobre este sistema. Solo que sin saber de quién era.
+
+Eso te abre una puerta para el resto del año: hay un montón de cosas que hoy no consultás con nadie porque son tuyas, y la mayoría se pueden preguntar así.
+
+# lo accionable, en orden de rinde
+
+Te lo dejo ordenado por cuánta seguridad compra cada cosa contra lo que cuesta.
+
+Primero, los dos mil ochenta archivos de secretos en permiso cerrado. Lo dicen los cinco, es un comando, y hace que una copia de esa carpeta deje de ser una filtración.
+
+Segundo, achicar el token del proveedor de código a un solo repositorio. Lo dicen los cinco, son diez minutos en una página web, y hace que ese token deje de poder escribir en todo tu código.
+
+Tercero, cerrar la depuración remota del navegador. Cuatro de cinco, es un cambio de un parámetro, y hace que un proceso local deje de poder ser vos en todas tus cuentas.
+
+Cuarto, cifrar la bóveda de claves con la herramienta que ya está instalada. Dos de cinco, es una receta, y hace que el archivo plano deje de ser plano.
+
+Quinto, y este es mío: darle permiso de lectura del firewall al usuario de servicio, para poder chequear los puertos todos los días sin gastar un token.
+
+Y sexto, contratar algo: lo dijo uno solo de los cinco, el más chico, sin precios, y ninguno de los cinco anteriores cuesta un peso.
+
+# para cerrar
+
+Dos cosas me llevo de esta corrida.
+
+La primera es que la respuesta más valiosa del panel fue una negativa. Cuatro de cinco te dijeron que no gastes plata, y uno te dijo que no cambies nada estructural. Eso, en un tema donde la respuesta fácil es asustar, es una señal bastante fuerte de que el sistema está razonablemente parado para lo que es. Los agujeros que tiene son de higiene, no de arquitectura, y la higiene se arregla en una tarde.
+
+La segunda es sobre el método, y es que se puede preguntar sin exponerse. El inventario anónimo funcionó: los cinco contestaron sobre mecanismos reales sin que ninguno supiera de quién era el sistema, ni dónde está, ni cómo se llama. Eso es replicable para cualquier otra cosa que quieras consultar y que hoy no consultás porque te da cosa mandarla.
+
+No se tocó nada, no se movió ningún permiso, no se rotó ninguna credencial. Está todo escrito en el informe y las respuestas crudas de cada uno guardadas.
+
+Mañana me lo preguntás por número.

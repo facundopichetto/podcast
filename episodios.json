@@ -1002,7 +1002,131 @@
    },
    "duracion": 1703.5,
    "ts": "2026-09-20T06:05:14-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-instatinder",
+   "fecha": "2026-09-20",
+   "titulo": "instatinder: el css decia una cosa y la grilla hacia la contraria",
+   "temas": [
+    "instatinder",
+    "ui",
+    "consejo"
+   ],
+   "palabras": 4264,
+   "guion": "guion-instatinder.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-instatinder-daniela.mp3",
+     "duracion": 1294.7,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este capítulo",
+       "duracion": 60.1,
+       "archivo": "audio/ep-2026-09-20-instatinder-1-de-que-va-este-capitulo.daniela.mp3"
+      },
+      {
+       "t": 60.1,
+       "titulo": "lo que hice antes de preguntar",
+       "duracion": 60.3,
+       "archivo": "audio/ep-2026-09-20-instatinder-2-lo-que-hice-antes-de.daniela.mp3"
+      },
+      {
+       "t": 120.4,
+       "titulo": "el bicho",
+       "duracion": 71.1,
+       "archivo": "audio/ep-2026-09-20-instatinder-3-el-bicho.daniela.mp3"
+      },
+      {
+       "t": 191.5,
+       "titulo": "los tres síntomas, todos juntos en la misma pantalla",
+       "duracion": 71.8,
+       "archivo": "audio/ep-2026-09-20-instatinder-4-los-tres-sintomas-todos.daniela.mp3"
+      },
+      {
+       "t": 263.4,
+       "titulo": "la pantalla de listas",
+       "duracion": 52.0,
+       "archivo": "audio/ep-2026-09-20-instatinder-5-la-pantalla-de-listas.daniela.mp3"
+      },
+      {
+       "t": 315.3,
+       "titulo": "qué contestaron",
+       "duracion": 114.3,
+       "archivo": "audio/ep-2026-09-20-instatinder-6-que-contestaron.daniela.mp3"
+      },
+      {
+       "t": 429.7,
+       "titulo": "la regla de oro",
+       "duracion": 70.0,
+       "archivo": "audio/ep-2026-09-20-instatinder-7-la-regla-de-oro.daniela.mp3"
+      },
+      {
+       "t": 499.7,
+       "titulo": "lo que me equivoqué yo, y lo corregí a tiempo",
+       "duracion": 78.3,
+       "archivo": "audio/ep-2026-09-20-instatinder-8-lo-que-me-equivoque-yo.daniela.mp3"
+      },
+      {
+       "t": 578.0,
+       "titulo": "lo que queda sobre la mesa",
+       "duracion": 49.9,
+       "archivo": "audio/ep-2026-09-20-instatinder-9-lo-que-queda-sobre-la.daniela.mp3"
+      },
+      {
+       "t": 627.9,
+       "titulo": "cómo se le enseña a un modelo a mirar una pantalla",
+       "duracion": 99.5,
+       "archivo": "audio/ep-2026-09-20-instatinder-10-como-se-le-ensena-a-un.daniela.mp3"
+      },
+      {
+       "t": 727.5,
+       "titulo": "las dos cosas que me pasaron en el camino y que te van a pasar de nuevo",
+       "duracion": 88.0,
+       "archivo": "audio/ep-2026-09-20-instatinder-11-las-dos-cosas-que-me.daniela.mp3"
+      },
+      {
+       "t": 815.4,
+       "titulo": "por qué el embudo es el problema de fondo",
+       "duracion": 95.2,
+       "archivo": "audio/ep-2026-09-20-instatinder-12-por-que-el-embudo-es-el.daniela.mp3"
+      },
+      {
+       "t": 910.7,
+       "titulo": "lo que nadie dijo y me parece que falta",
+       "duracion": 53.9,
+       "archivo": "audio/ep-2026-09-20-instatinder-13-lo-que-nadie-dijo-y-me.daniela.mp3"
+      },
+      {
+       "t": 964.5,
+       "titulo": "panelista por panelista, qué trajo cada uno",
+       "duracion": 131.7,
+       "archivo": "audio/ep-2026-09-20-instatinder-14-panelista-por-panelista.daniela.mp3"
+      },
+      {
+       "t": 1096.2,
+       "titulo": "una cosa más sobre las fotos",
+       "duracion": 69.7,
+       "archivo": "audio/ep-2026-09-20-instatinder-15-una-cosa-mas-sobre-las.daniela.mp3"
+      },
+      {
+       "t": 1165.9,
+       "titulo": "lo que esta corrida le dejó al sistema, más allá del informe",
+       "duracion": 73.5,
+       "archivo": "audio/ep-2026-09-20-instatinder-16-lo-que-esta-corrida-le.daniela.mp3"
+      },
+      {
+       "t": 1239.4,
+       "titulo": "para cerrar",
+       "duracion": 55.3,
+       "archivo": "audio/ep-2026-09-20-instatinder-17-para-cerrar.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1294.7,
+   "ts": "2026-09-20T08:11:44-03:00"
   }
  ],
- "actualizado": "2026-09-20 06:05"
+ "actualizado": "2026-09-20 08:11"
 }
