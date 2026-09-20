@@ -1,8 +1,36 @@
-# actualizado hoy a las 13:22
-actualizado hoy, sábado diecinueve, a las trece veintidós.
+# actualizado hoy a las 05:26
+actualizado hoy, domingo veinte, a las cinco veintiséis.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# no más cajas "dale": las propuestas van con opciones
+a la una y treinta y ocho de la tarde me paraste en seco por una propuesta mal armada. te había puesto una caja de "dale" para que confirmaras, y eso no va: si voy a proponerte algo, primero tengo que decirte qué entendí que voy a hacer, y después ofrecerte opciones a, b o c. nunca una caja que te pide apretar "dale" sin que quede claro qué se hace.
+
+me pediste que lo guardara ahí mismo y que te dijera qué había escrito, así que hice el check de los dos lados: la regla quedó en los dos archivos que se cargan en cada llamada, o sea que vale para todas las pestañas y también para las tareas de la cola. la línea dice que ninguna propuesta mía se confirma con una caja de "dale", siempre opciones. después de eso te devolví los seis puntos que venían de antes en el formato correcto, y elegiste la a: los seis juntos en una sola tarea de la retroid, con la regla de que sesenta cuadros clavados mandan por encima de resolución o escalado.
+
+# el widget de la cola de instagram, y el botón que me mandaba prosa
+a las cuatro menos cuarto me escribiste desde el widget de instagram pidiendo que los tres programados mostraran solo lo de las últimas veinticuatro horas. yo entendí mal y te contesté con un resumen de todo lo que se había movido desde ayer a la tarde, que no era lo que pedías. me corregiste: era el widget, no un resumen.
+
+ahí sí lo miré bien. el widget no miraba la fecha en ningún lado: filtraba por estado, así que con la opción de mostrar las que ya salieron prendida entraban todas, incluidas las viejas de hace días. eso se arregló y quedó cerrado en trece minutos: de lo ya salido ahora se ven solo las últimas veinticuatro horas corridas, y el corte lo hace el propio widget.
+
+pero lo más interesante fue lo otro que me marcaste: el botón de escribir sobre esto, el lapicito de la cabecera y el de cada fila, me dejaba en la caja del chat una cita en prosa con el texto recortado del widget, trescientos caracteres de lo que estuviera pintado en pantalla en ese momento. eso es imposible de entender del otro lado: me llega un pedazo de texto sin contexto y tengo que adivinar de qué parte del board salió. me dijiste que el botón tiene que mandar algo que identifique al widget y a la fila, nunca prosa. lo dejé anotado como lo que hay que cambiar.
+
+# el disco black, la sesión vencida y la cola entera esperando
+a la una menos diez de la mañana cerró la receta para montar el disco black. quedó con tres comandos, estado, montar y desmontar, y monta el disco en su carpeta por el único camino que no pide contraseña en esta máquina: un salto por ssh contra el propio server con el usuario que tiene permiso sin password. nueve minutos.
+
+la segunda parte, dejar ese montaje como un comando directo y permanente, falló a las cuatro y cuarto sin gastar un peso: la sesión de autenticación había vencido y no se pudo refrescar. te dejé las dos opciones, dejar que corriera el reintento o frenarla y mirarla juntos.
+
+y esa tarea trabada terminó siendo el tapón de todo. a las cinco y veinticinco de la mañana la cola tenía a casi todo el mundo esperando por ella, no por un archivo concreto sino porque está marcada como exclusiva y corre sola. la idea uno lleva más de ocho horas frenada, el podcast de ser rico casi siete, el de los roms del black casi cinco, la marca tres y media, el instatinder cuarenta y cuatro minutos, y detrás los cinco simulacros y las tres de opus del turno nocturno. la cola ahora dice exactamente por qué espera cada una y ofrece largarla igual, que es justo lo que pediste con lo de forzar. el chat quedó saliendo con opus, con fable prohibido.
+
+# el consejo: la primera corrida real, y la idea del brancheo de modelos
+a las nueve de la noche arrancó lo del consejo con la idea uno tuya: el modelo de widgets y la manera de medirlos, qué se mide, cómo se mide y cómo se muestra, y qué modelos de los que tenemos entran. elegiste que la encolara ya y que las ideas que fueran llegando se sumaran como corrección de esa misma tarea, para que el panel corriera una sola vez.
+
+después me mandaste un audio aclarando que por ahora íbamos con la idea uno sola, que las otras las tenías escritas pero quizás cambiaras la forma de pasármelas, y que querías terminar primero esa. así que no encolé nada más.
+
+la corrida cerró a las nueve y veinticinco, catorce minutos. además del resultado quedó una receta del consejo que empaqueta el contexto de un tema, dispara la misma pregunta a todos y filtra lo que vuelve, con su prueba en verde: era justo lo que hacía falta para que esto no sea una corrida a mano cada vez. de ahí salieron seis cambios sobre modelos y widgets, y elegiste la a, encolarlos como una sola orden.
+
+y a las nueve y media me pasaste la idea dos: el brancheo de modelos, qué delegar a cada uno. con el presupuesto real que pagás, tres cuentas de claude a doscientos dólares, mistral pro a quince con la duda de si se pueden sumar más cuentas, gemini con su cálculo aparte, y la posibilidad de abrir una más. eso es lo que tiene que contestar el panel.
 
 # el votador de una lista: tocar y arrancar a votar
 a las nueve y veinte me marcaste algo del board que estaba mal pensado: el votador de la lista no es continuo. si tocás una lista en la vista de instagram, lo que tiene que abrirse es el votador de esa lista, para ir moviendo con el dedo de derecha a izquierda y cerrar con enviar o cancelar. la grilla de gente, la que estaba hasta ahora, queda solo para cuando tocás una persona en particular.
@@ -91,6 +119,50 @@ de ahí salió una idea tuya que me gustó. me contaste que tu mamá a veces te 
 hubo un bug en las tarjetas de instagram que se cerró a las tres y once. cuando escribías un texto libre en el modal, ese texto se guardaba sin referencia a la candidata que estabas mirando. o sea que quedaban comentarios tuyos sueltos, sin dueño, y después no había manera de saber de quién hablabas. eso quedó arreglado.
 
 y enseguida, encadenado, se resolvió un caso puntual: tu cuarto texto en ese modal decía que no sabías quién era, que no veías su foto y que después vemos. eso no es una exclusión y no había que tratarlo como tal. quedó registrado como pasar, sin decidir, y la tarjeta se quedó en el embudo tal cual estaba.
+
+# la sesión de instagram no estaba muerta
+a las dos menos cinco de la tarde cerró la tarea de la sesión de instagram, cincuenta y seis minutos. la conclusión es que no era la sesión: la sesión está viva, las dos llamadas que la prueban contestan bien todo el día, el widget se refresca cada diez minutos, y una lectura real de perfil anda. lo verifiqué, no lo deduje.
+
+a las dos y cuarto elegiste dejarla reintentando sola hasta las cuatro veces del día, sin tocar la cola de instagram. y no había nada que cambiar, porque así estaba parada ya: el semáforo dice sesión viva y lecturas frenadas, con reintento en cuarenta y cinco minutos. el tope de cuatro por día y la espera de cuarenta y cinco minutos son el comportamiento que quedó, o sea que se destraba sola.
+
+# votaste treinta y ocho y la lista parecía la misma
+a las dos y veinte me dijiste que habías votado las treinta y ocho de súper candidatas y que veías la lista de interesan igual que antes. los votos llegaron todos: hay treinta y ocho movimientos registrados de esos dos minutos, más los nueve de la mañana. interesan tiene catorce hoy, no cinco: sumaste nueve cuentas nuevas. o sea el problema no era que los votos se perdieran, era que la vista te mostraba lo de antes.
+
+por eso a las dos y veintiséis elegiste la a: que la vista tire el caché al abrir una lista y pida la fila fresca al server, con su prueba. eso quedó encolado.
+
+# los retrasos de instagram: tres tenían razón, uno olía a confusión
+me preguntaste si todos los retrasos que metí en instagram eran necesarios, si no había habido ninguna confusión. miré los cuatro. el de follow y unfollow va bien: pausa de dos a cinco minutos y tope de sesenta por día, veinticuatro por siete, que es literalmente lo que pediste vos. y está limpio, cero errores seguidos y sin enfriamiento.
+
+el que olía mal era el aprendido de lectura, que se había apretado solo hasta quedar con el mínimo y el máximo pegados y cinco errores encima. elegiste la c: resetearlo a los valores de fábrica, veinte a cuarenta y cinco, como se había hecho con follow hace unos días, y que vuelva a aprender de cero. hecho: quedó en veinte y cuarenta y cinco, sin piso, cero errores seguidos, cero frenos.
+
+# la retroid: los siete puntos, medidos en el aparato
+a las dos y veinte cerró la tanda de la retroid, cuarenta minutos. wii y rayman tres eran el mismo bug y ya abren los dos. sly tres pasó de tirones a sesenta clavados. out run se arrastraba de verdad y mejoró cambiándole la configuración. los avisos molestos del emulador de play dos están apagados. y el de los superhéroes ya estaba en sesenta, o sea que lo que te molestaba ahí no eran los cuadros.
+
+a las dos y veintiséis elegiste darle otra vuelta a out run, bajándole la resolución del core a nativa y midiendo sesenta segundos seguidos en vez de una muestra corta, y de paso sumar soul reaver dos al perfil de alto rendimiento.
+
+# el informe de modelos, y los precios en dólares limpios
+a las cinco y media de la tarde me mandaste un audio: la idea era bancar otros modelos para la parte de programar, poner unos cincuenta dólares en cada uno durante una semana, tirarles las mismas tareas que a claude y comparar con datos, sin sacar a claude del medio. antes de encolar te dije cómo lo armaría, y elegiste la b: primero solo el informe de qué se contrata y cuánto sale, sin gastar un peso, y después decidís.
+
+el informe salió en siete minutos, con precios buscados ese mismo día, sin comprar nada ni crear ninguna cuenta. lo que está medido es el precio por orden nuestra, no el de las suscripciones: los alternativos van de dieciocho centavos a un dólar setenta y uno por orden, contra dos con sesenta y uno de opus. de planes mensuales el informe tiene uno solo, un plan de programación desde dieciocho dólares al mes.
+
+a las seis y media me aclaraste algo que cambia todos los números de acá en adelante: vos pagás en dólares directo, sin impuestos ni recargos. quedó guardado como regla, así que ningún cálculo mío te vuelve a inflar los precios.
+
+# el mail a santi y el podcast de ser rico
+cerca de la una menos veinte de la mañana salió el mail a santi pidiendo que apriete el publicar del deploy de fuzzer. el contexto es feo: se verificó que el deploy nunca se hizo, dos rutas clave dan error, el código qr de los stickers impresos lleva a la nada desde hace casi dos semanas, y los atajos contestan con una versión vieja.
+
+antes, a las once de la noche, se publicó el capítulo de podcast llamado ser rico: veinticuatro minutos, dieciséis capítulos, con la voz de daniela, ya verificado en la web. el guion pedía media hora y salió algo corto.
+
+esa idea de que entre plata en el corto plazo la fuiste afinando: que vos no hables con nadie, mail como máximo, nada presencial, y después me lo apretaste más todavía, que lo que termine en plata sea automatizado de punta a punta, sin instagram y sin los amplis, porque esos los vendés vos con las fotos. algo que el server pueda hacer solo toda la noche y que al despertarte haya avanzado sin que toques nada.
+
+# los cinco ítems para el panel de la noche
+a la una y media de la mañana me dejaste cinco ítems para que los discuta el panel, cada uno con su capítulo de podcast para escuchar después, y me dijiste que me los ibas a preguntar por número. te hice las preguntas antes de encolar nada, en vez de arrancar a ciegas.
+
+los que están claros: si borramos el server; el instatinder, que te parece horrible y del que querés propuestas de interfaz, mostrándole capturas a los modelos que acepten imágenes, dejando para después cómo se programa lo de atrás, con la condición de que sea usable de verdad; un nombre para flaudio como producto; y el flujo de awtomic, que es investigar lo que hacemos ahí y preguntarles a los modelos cómo mejorarlo, principalmente el trabajo de atención al cliente, aunque también podría ser algo del producto o del verificador.
+
+las preguntas que te dejé son transversales: si va un capítulo por ítem, cinco de media hora, o uno solo largo con las cinco partes.
+
+# se fue el widget de oportunidades
+a las dos de la tarde cerró la tarea de sacar el widget de oportunidades del board, veintitrés minutos. se fue el widget y con él la caja de decididas, porque son la misma familia: se pintan con el mismo dato y el único control de esa caja, el de ocultar las decididas, vivía en las opciones del widget que se iba. lo pediste directo, que era feo y no tenía sentido.
 
 # el historial del chat ya distingue los días
 a las diez y veintidós, en dos pestañas distintas, me marcaste lo mismo: los mensajes del chat tienen hora y está bien, pero si son de otro día, en el historial, no se entiende de cuándo son. hace falta la fecha en formato día barra mes antes de la hora.
