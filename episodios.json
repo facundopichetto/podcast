@@ -459,116 +459,116 @@
    "voces": {
     "daniela": {
      "archivo": "audio/ep-2026-09-20-fuzzer-daniela.mp3",
-     "duracion": 1675.0,
+     "duracion": 1671.7,
      "capitulos": [
       {
        "t": 0.0,
        "titulo": "de qué va este episodio",
-       "duracion": 116.8,
+       "duracion": 115.8,
        "archivo": "audio/ep-2026-09-20-fuzzer-1-de-que-va-este-episodio.daniela.mp3"
       },
       {
-       "t": 116.8,
+       "t": 115.8,
        "titulo": "quiénes contestaron, y quiénes no",
-       "duracion": 100.5,
+       "duracion": 99.6,
        "archivo": "audio/ep-2026-09-20-fuzzer-2-quienes-contestaron-y.daniela.mp3"
       },
       {
-       "t": 217.3,
+       "t": 215.4,
        "titulo": "la pregunta, y por qué está redactada así",
-       "duracion": 119.8,
+       "duracion": 119.2,
        "archivo": "audio/ep-2026-09-20-fuzzer-3-la-pregunta-y-por-que.daniela.mp3"
       },
       {
-       "t": 337.1,
+       "t": 334.6,
        "titulo": "por qué un panel y no preguntarle a uno solo",
-       "duracion": 74.6,
+       "duracion": 74.5,
        "archivo": "audio/ep-2026-09-20-fuzzer-4-por-que-un-panel-y-no.daniela.mp3"
       },
       {
-       "t": 411.7,
+       "t": 409.1,
        "titulo": "el primer golpe: los números estaban mal",
-       "duracion": 113.0,
+       "duracion": 113.4,
        "archivo": "audio/ep-2026-09-20-fuzzer-5-el-primer-golpe-los.daniela.mp3"
       },
       {
-       "t": 524.7,
+       "t": 522.5,
        "titulo": "lo que ese número le hace a la meta de noviembre",
-       "duracion": 95.2,
+       "duracion": 94.5,
        "archivo": "audio/ep-2026-09-20-fuzzer-6-lo-que-ese-numero-le.daniela.mp3"
       },
       {
-       "t": 619.9,
+       "t": 617.0,
        "titulo": "la idea que sonaba mejor, y por qué es imposible",
-       "duracion": 151.2,
+       "duracion": 150.9,
        "archivo": "audio/ep-2026-09-20-fuzzer-7-la-idea-que-sonaba.daniela.mp3"
       },
       {
-       "t": 771.1,
+       "t": 767.9,
        "titulo": "la web está sirviendo una versión vieja",
-       "duracion": 139.2,
+       "duracion": 139.6,
        "archivo": "audio/ep-2026-09-20-fuzzer-8-la-web-esta-sirviendo.daniela.mp3"
       },
       {
-       "t": 910.3,
+       "t": 907.5,
        "titulo": "las ocho que sobrevivieron: las tres que hace el agente solo",
-       "duracion": 128.1,
+       "duracion": 127.3,
        "archivo": "audio/ep-2026-09-20-fuzzer-9-las-ocho-que.daniela.mp3"
       },
       {
-       "t": 1038.3,
+       "t": 1034.9,
        "titulo": "las otras cinco: las que sí cuestan tiempo humano",
        "duracion": 118.9,
        "archivo": "audio/ep-2026-09-20-fuzzer-10-las-otras-cinco-las-que.daniela.mp3"
       },
       {
-       "t": 1157.2,
+       "t": 1153.8,
        "titulo": "lo que ninguno vio, primero: la audiencia no es local",
-       "duracion": 106.2,
+       "duracion": 106.6,
        "archivo": "audio/ep-2026-09-20-fuzzer-11-lo-que-ninguno-vio.daniela.mp3"
       },
       {
-       "t": 1263.4,
+       "t": 1260.4,
        "titulo": "segundo: el show todavía no tiene un motivo",
-       "duracion": 73.4,
+       "duracion": 73.6,
        "archivo": "audio/ep-2026-09-20-fuzzer-12-segundo-el-show-todavia.daniela.mp3"
       },
       {
-       "t": 1336.8,
+       "t": 1333.9,
        "titulo": "tercero: filmar la grabación es gratis en calendario",
-       "duracion": 67.6,
+       "duracion": 67.9,
        "archivo": "audio/ep-2026-09-20-fuzzer-13-tercero-filmar-la.daniela.mp3"
       },
       {
-       "t": 1404.4,
+       "t": 1401.8,
        "titulo": "cuarto: la pauta mide lo que no es",
-       "duracion": 65.9,
+       "duracion": 65.7,
        "archivo": "audio/ep-2026-09-20-fuzzer-14-cuarto-la-pauta-mide-lo.daniela.mp3"
       },
       {
-       "t": 1470.4,
+       "t": 1467.5,
        "titulo": "el filtro automático, quinta vez que no sirve",
        "duracion": 65.1,
        "archivo": "audio/ep-2026-09-20-fuzzer-15-el-filtro-automatico.daniela.mp3"
       },
       {
-       "t": 1535.5,
+       "t": 1532.6,
        "titulo": "qué no se tocó",
        "duracion": 37.4,
        "archivo": "audio/ep-2026-09-20-fuzzer-16-que-no-se-toco.daniela.mp3"
       },
       {
-       "t": 1573.0,
+       "t": 1570.0,
        "titulo": "cuando arranque la semana",
-       "duracion": 102.0,
+       "duracion": 101.6,
        "archivo": "audio/ep-2026-09-20-fuzzer-17-cuando-arranque-la.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 1675.0,
-   "ts": "2026-09-20T00:44:53-03:00"
+   "duracion": 1671.7,
+   "ts": "2026-09-20T00:45:12-03:00"
   }
  ],
- "actualizado": "2026-09-20 00:44"
+ "actualizado": "2026-09-20 00:45"
 }
