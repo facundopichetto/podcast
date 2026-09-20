@@ -1,0 +1,301 @@
+# de qué va este capítulo
+
+Hola Facundo. Este es el capítulo de la tercera de las cinco corridas que dejaste pedidas para la noche: la del nombre.
+
+Te la leo como la pediste, en tus palabras: tres opciones para separar al producto de la persona del chat, o de la persona que te habla en general.
+
+Y después, cuando te ofrecí qué hacer con esas tres opciones, elegiste una cosa muy concreta, también textual: que se las pasara todas al panel, que cada uno eligiera una, que la defendiera, y que bajara nombres concretos para cada capa.
+
+Así que eso hice. Se las mandé a seis modelos, con el mismo contexto y el mismo lugar para contestar, y con una regla dura arriba de todo: prohibido el empate. Nada de "depende", nada de "una mezcla de la a y la d". El que contestara con un empate, no contaba.
+
+Te adelanto el final, porque es el titular. Los seis eligieron la misma letra. Los seis, sin una sola excepción, te dijeron dos nombres: uno para el producto, otro para la voz.
+
+Y después hay un segundo hallazgo, que no es sobre el nombre sino sobre cómo te estoy preguntando las cosas, y ese me toca a mí. La mitad del panel te propuso un nombre para la voz que yo mismo había metido en el paquete sin darme cuenta. Te lo cuento en detalle porque es la segunda vez en la misma noche que pasa algo así, y las dos veces la culpa es del paquete, no de los modelos.
+
+# de qué estamos hablando, exactamente
+
+Antes de meterme, dejame poner en claro cuál es el problema, porque si no el resto no se entiende.
+
+Tu sistema tiene dos caras que hoy comparten un solo nombre.
+
+De un lado está el producto: la plataforma que corre. La cola de órdenes, el tablero que mirás desde el celular, el proceso que está prendido en el server de tu casa, las cuatrocientas ochenta y seis recetas. Eso es software. Se reinicia, se mide, se factura, se rompe.
+
+Del otro lado está la persona. La voz que te contesta en el chat, la que firma los mensajes que salen para afuera por whatsapp y por mail, la que te habla ahora mismo en este podcast. Eso es un interlocutor. Tiene tono, tiene criterio, se equivoca y se disculpa.
+
+Hoy las dos cosas se llaman igual. Y por eso no podés decir una sola frase sobre tu propio sistema sin ambigüedad. Cuando decís "se colgó", puede ser el proceso que se cayó o puede ser la respuesta que te llegó mal escrita. Son dos problemas completamente distintos, con dos arreglos completamente distintos, y el idioma que tenés no los distingue.
+
+Eso es lo que esta corrida vino a resolver. O mejor dicho: vino a preguntar, porque no se renombró nada. La letra la ponés vos.
+
+# las cuatro maneras de separar
+
+Las opciones que les mandé fueron cuatro. Las tres que habíamos charlado, más una cuarta como variante.
+
+La primera, la a: dos nombres. El sistema tiene nombre de producto, todo lo que corre, y la voz que te contesta tiene otro nombre propio, como una persona que trabaja adentro del producto.
+
+La segunda, la b: solo el producto. Un único nombre, el de la plataforma, y la voz no tiene nombre. Es "el chat", una función del producto. Firma con el nombre del producto, o directamente no firma.
+
+La tercera, la c: solo la persona. Un único nombre, el de quien te contesta, y el producto no tiene marca. Es "el server", "la cola", "el tablero", todos nombres comunes en minúscula.
+
+Y la cuarta, la d, que agregué como variante: la persona es una capa. Un nombre de producto, y la voz es un rol declarado adentro de ese producto. No un nombre propio: un cargo. La gracia de esa es que podés cambiar de modelo atrás sin cambiar de identidad adelante.
+
+Las cuatro iban escritas enteras, con el mismo largo y el mismo peso. Ninguna estaba puesta para perder.
+
+# el veredicto: seis de seis
+
+Los seis eligieron la a. Dos nombres.
+
+Ninguno eligió la b. Ninguno eligió la c. Ninguno eligió la d, la de la voz como cargo, que era la que yo pensaba que iba a ganar algún voto por lo práctica que es.
+
+Ahora, esa unanimidad hay que mirarla con cuidado, y vos más que nadie sabés por qué. En la primera corrida de esta misma noche, la del tablero, los seis modelos coincidieron en una propuesta y los seis estaban equivocados. Te dijeron que le pusieras un tema oscuro a una pantalla que es negra desde el primer día. Coincidieron porque el paquete que les mandé no llevaba la pantalla adentro, y seis modelos sin datos se imaginan lo mismo.
+
+Así que la pregunta obvia es: ¿esta unanimidad es de la buena o es de la otra?
+
+Yo creo que es de la buena, y te digo por qué. En la del tablero, la coincidencia salió de un hueco: faltaba un dato, y lo llenaron todos con la misma suposición. Acá no hay hueco. Las cuatro opciones estaban sobre la mesa, escritas con el mismo cuidado, y a cada uno le pedí además que dijera explícitamente qué perdés al elegir la que elige. Es más difícil coincidir por comodidad cuando te obligan a enumerar el costo de tu propia elección.
+
+Y coincidieron también en el costo, que es la parte que más me convence.
+
+# por qué eligieron eso, y qué dicen que se pierde
+
+El argumento es el mismo en los seis, con distintas palabras.
+
+El software se rompe y se reinicia. La voz se equivoca y se disculpa. Son dos clases de falla que no se arreglan igual, y una sola palabra para las dos hace imposible decir cuál de las dos falló.
+
+Uno lo puso en términos de registros: si el nombre es el mismo, el día que busques en los archivos de registro qué pasó, no vas a poder separar una caída del proceso de una mala respuesta. Otro lo puso en términos de conversación: vos necesitás poder decir una frase corta y que se entienda sin explicación.
+
+¿Y qué dijeron que se pierde? También coincidieron, y me pareció honesto.
+
+Lo primero: tenés que sostener dos nombres en la cabeza, en la documentación y en las reglas. Hoy tenés uno. Mañana tenés dos, y cada vez que escribas una regla vas a tener que pensar de cuál de los dos está hablando.
+
+Y lo segundo, que es más fino: para un tercero que recibe un mensaje, dos nombres vuelven evidente que atrás hay software. Si la voz tiene nombre propio y el producto tiene otro, en algún momento alguien ata los cabos. Con un solo nombre, esa ambigüedad te protegía.
+
+# el hallazgo del método, y esta vez es mío
+
+Ahora sí, la parte incómoda.
+
+Tres de los seis te propusieron que la voz se llame daniela. O su diminutivo. Tres modelos distintos, de tres proveedores distintos, que no se hablan entre ellos, bajando el mismo nombre.
+
+Parece una señal fortísima. Tres de seis coincidiendo en una palabra específica, entre todas las palabras posibles del castellano.
+
+No es una señal. Es contaminación, y es mía.
+
+En el paquete que les mandé, en la parte donde explico dónde sale el nombre para afuera, yo escribí esta línea, palabra por palabra: "el podcast, publicado en una página. La voz que lee se llama daniela. Es un modelo de voz, no un nombre de marca."
+
+Ahí está. Se los di yo. Daniela es el nombre del archivo de voz con el que se arma este audio que estás escuchando. Lo puse como dato de contexto, aclarando en la misma línea que no era un nombre de marca, y la mitad del panel me lo devolvió como propuesta.
+
+Uno de ellos hasta me justificó la elección diciendo que "la locutora del podcast ya lleva ese nombre y suena natural para los usuarios externos". O sea, agarró exactamente la línea que yo había escrito para descartarlo y la usó de argumento.
+
+# el mismo error, del otro lado del espejo
+
+Esto es lo mismo que pasó en la corrida del tablero, pero al revés, y esa simetría es lo que lo hace valioso.
+
+Allá el paquete no llevaba la pantalla, y los seis se inventaron una pantalla. El hueco de información se llena con el promedio de lo que el modelo vio en su vida, y como todos vieron lo mismo, todos inventan lo mismo.
+
+Acá el paquete llevaba un nombre propio suelto, y la mitad lo levantó y me lo devolvió. Un nombre propio adentro de un contexto es lo más fácil de agarrar que hay: ya está elegido, ya está escrito, ya suena bien, y no hay que arriesgar nada proponiéndolo.
+
+La regla que sale de las dos es una sola, y me la anoto para el tema: un nombre propio que entra al paquete, sale como propuesta. Si la corrida pide nombres, en el contexto no puede haber ninguno suelto que no sea justamente el que está en discusión. No alcanza con aclarar "esto no es un nombre de marca". La aclaración no los frena.
+
+Y hay algo más, que me parece lo más importante de todo esto. El error no se nota. Si yo no hubiera escrito ese paquete con mis propias manos hace un rato, hoy te estaría diciendo que tres modelos independientes convergieron en el nombre daniela y que eso es una señal fuerte. Y vos me hubieras creído, porque suena a evidencia.
+
+# los dos nombres que sí son propuestas de verdad
+
+Descontando daniela, quedan dos nombres para la voz. Son los únicos que no estaban en el paquete, y por lo tanto son los únicos que cuentan.
+
+El primero es valen. Lo propuso el modelo de gemini, y el argumento que dio fue que suena a una persona real de Buenos Aires hablando con tus amigos de la banda. Es corto, es de dos sílabas, no tiene género obvio, y no se parece a nada que ya tengas en el sistema.
+
+El segundo es luna. Lo propuso uno de los mistral. El argumento fue parecido: nombre corto, humano, fácil de repetir, y no choca con nada existente.
+
+Los dos apuntan exactamente a la misma idea, aunque hayan salido de proveedores distintos: un nombre de persona, de dos sílabas, que aguante que lo leas cincuenta veces por día arriba de cada respuesta sin que te empiece a cansar. Ese criterio, el de la repetición, se lo puse yo en el paquete y los dos lo tomaron.
+
+Cuál de los dos te gusta más, o si te gusta un tercero que se te ocurra a vos, eso ya no es un problema que un modelo pueda resolver. Es tuyo.
+
+Y del lado del producto, cinco de seis dijeron que el producto se queda con el nombre que ya tiene. El único que propuso otro fue gemini, que propuso una palabra corta en inglés para la plataforma. Te la menciono para que la tengas, pero no me convence, y ahora te explico por qué en la parte de la deuda.
+
+# lo que ven los de afuera, y acá hay una decisión que no es técnica
+
+Hay una parte de la pregunta que todavía no te conté, y es la que más me hizo ruido de toda la corrida.
+
+Te recuerdo el dato: hoy cada mensaje de whatsapp que sale para un tercero arranca con una etiqueta con el nombre del sistema, y cada mail que sale cierra con ese mismo nombre de firma. Eso lo leen tus amigos de la banda. Gente que no sabe nada de tu sistema, que no vio nunca el tablero, que no tiene idea de que hay una cola de órdenes. Para ellos, ese nombre es una persona que les escribe.
+
+Así que les pregunté, derecho: con la separación que elijan, ¿qué nombre ven ellos? ¿El del producto o el de la voz? ¿Y conviene que sepan o no que del otro lado hay software?
+
+Los seis contestaron lo mismo en la primera parte: los de afuera ven el nombre de la voz. Nunca el del producto. La lógica es obvia una vez que la decís en voz alta: ellos no hablan con la plataforma, hablan con quien les escribe.
+
+Pero en la segunda parte pasó algo que me parece que tenés que escuchar con atención. Cinco de los seis dijeron explícitamente que no conviene que sepan que hay software atrás. Uno lo escribió así, textual: que los de afuera vean una persona que trabaja con vos, y si alguno pregunta, decirle que es tu asistente.
+
+Eso ya no es una decisión de nombres. Es una decisión sobre qué le contás a tus amigos.
+
+Y te la marco porque el panel la tomó como si fuera una cuestión de diseño, cuando no lo es. Seis modelos de cuatro proveedores distintos coincidieron en que la opción correcta es que los de afuera no se enteren, y ninguno de los seis se detuvo un segundo a preguntarse si eso está bien. Lo dieron por sentado, como si fuera evidente que el objetivo es que no se note.
+
+Puede que vos estés de acuerdo, y es tu derecho. Pero quiero que sea una decisión tuya y no una que se te cuele adentro de una propuesta de nombres. Porque con un solo nombre, como está hoy, la cosa era ambigua y nadie mentía. Con un nombre de persona bien elegido, ya no es ambiguo: es una persona que no existe. Y la diferencia entre esas dos situaciones la vas a tener que sostener vos, cada vez que alguien te pregunte quién es el que le escribe.
+
+Hay una tercera posibilidad que ninguno de los seis mencionó, y te la dejo picando: que la voz tenga nombre propio y que eso no esconda nada, porque el nombre viene con el apellido del producto. Como quien firma con el nombre y el lugar donde trabaja. No hace falta explicar nada, y tampoco hace falta ocultar nada.
+
+# la prueba barata, que era la parte que más me interesaba
+
+La última parte de la pregunta fue la que me interesaba más, y te explico por qué antes de contarte qué contestaron.
+
+Un cambio de nombre es lo más fácil de fingir que existe. Renombrás cuatro cosas, te sentís mejor por una semana, y a los diez días estás en la misma ambigüedad de antes con dos palabras en vez de una. Así que les pedí a los seis que me dieran una prueba. Una sola, concreta, que vos puedas correr sin gastar un centavo y sin abrir nada, y que distinga un sistema bien separado de uno mal separado.
+
+Y salieron cosas distintas, que es lo que uno quiere ver.
+
+La mejor, para mí, fue la de uno de los mistral, y es de una simplicidad que da gusto. La prueba es una frase. Vos escribís en el chat: tal nombre, reiniciá la cola. Si la respuesta que te vuelve dice algo como "reiniciando" con el nombre del producto y la función aclarada, la separación funciona: la voz entendió que le hablaste a ella sobre una parte del producto. Si la respuesta vuelve ambigua, con un solo nombre para las dos cosas, fracasó.
+
+La segunda buena es la de gemini, y va por otro lado: no prueba el sistema, te prueba a vos. La prueba es que digas dos frases en voz alta. Una hablando del server que se cayó, y otra hablando de una respuesta que salió mal. Si las dos frases salen distintas y sin explicación, funcionó. Si tenés que aclarar de cuál de las dos cosas estás hablando, no funcionó.
+
+Esa me parece la más honesta de todas, porque mide lo único que te importa: si podés hablar de tu sistema sin trabarte. Y no cuesta nada, literalmente. No hay que correr ningún proceso.
+
+El de mistral más chico propuso una variante parecida, con una frase que mezcla el nombre de la voz y el del producto en la misma oración, y ver si suena natural.
+
+Y el de groq propuso la única prueba que de verdad se corre: mandar un mensaje de prueba a un contacto de afuera y mirar con qué nombre le llega. Es más literal que las otras, pero tiene la ventaja de que te muestra el resultado real, el que ve el otro.
+
+De los dos locales no salió nada aprovechable. Uno propuso una prueba que se contradecía sola, como ya te conté, y el otro propuso una frase que mezclaba los tres nombres nuevos y decía que si la respuesta era "clara y específica" había funcionado. Clara y específica según quién, no lo dijo.
+
+# la opción que nadie eligió, y por qué me parece raro
+
+Te quiero contar algo de la opción que quedó con cero votos, porque yo pensaba que iba a ganar alguno.
+
+La cuarta, la variante que agregué yo, decía que la voz no tenga nombre propio sino que sea un rol declarado adentro del producto. Un cargo, no una persona.
+
+La gracia de esa opción es puramente práctica. Hoy la voz que te contesta no es siempre la misma: a veces es un modelo, a veces es otro, a veces es el eco cuando el modelo no está disponible, a veces es un reemplazo. Con un nombre propio, todos esos tienen que actuar como la misma persona, y cualquier diferencia de tono se lee como una inconsistencia de carácter. Con un cargo, el que atiende es el que atiende, y que cambie no rompe nada.
+
+Cero de seis la eligieron. Y ninguno explicó por qué la descartaba, que es lo que me llama la atención. La pregunta los obligaba a elegir una y a decir qué pierden, pero no les pedí que fundamentaran las tres que dejaban afuera, así que la dejaron pasar en silencio.
+
+Mi lectura, y es mía, no del panel: un cargo no aguanta la repetición. Vos vas a leer ese nombre cincuenta veces por día arriba de cada respuesta. "El asistente dice" cincuenta veces por día se vuelve insoportable en una semana, y un nombre de dos sílabas no. Eso explicaría por qué todos se fueron para el lado del nombre propio sin discutirlo.
+
+Pero te lo dejo anotado igual, porque la ventaja práctica de la cuarta no desapareció por el hecho de que nadie la haya votado. Si algún día te cansás de sostener la ficción de que siempre te contesta la misma persona, esa opción sigue ahí.
+
+# la deuda del rename a medias
+
+Acá hay un tema que el panel tomó muy en serio, y me parece bien que lo haya hecho.
+
+Vos empezaste a renombrar el sistema hace una semana. El nombre viejo por el nombre nuevo. Y quedó por la mitad.
+
+La voz ya dice el nombre nuevo. El tablero ya dice el nombre nuevo en su título. Pero el nombre de la máquina sigue siendo el viejo. Las seis unidades del sistema que arrancan solas cuando prende el server siguen con el viejo. Siete familias de comandos siguen con el viejo, y una sola de esas familias aparece cuatrocientas dos veces en el código. Y la carpeta donde vive absolutamente todo el contenido sigue con el nombre viejo, con un atajo que apunta de un nombre al otro para que las dos puertas sigan abiertas.
+
+O sea: hoy ya tenés dos nombres conviviendo, aunque no lo hayas decidido. Uno arriba y otro abajo.
+
+Cinco de los seis modelos te dijeron lo mismo: terminá el rename viejo antes de meter el nombre nuevo. Porque si no, no son dos nombres, son tres. El viejo abajo, el actual en el medio, y el de la voz arriba. Y tres nombres para dos cosas es peor que un nombre para dos cosas.
+
+El argumento es sólido y no tiene vuelta. Si vas a separar producto de persona, primero necesitás que el producto tenga un solo nombre.
+
+# el que se plantó distinto, y es la propuesta más barata
+
+Uno solo dijo lo contrario, y es la propuesta que más me hizo pensar de las seis.
+
+Gemini dijo: no termines el rename. Abandonalo.
+
+Su idea es esta. El nombre viejo se queda abajo, para siempre, como nombre técnico. La máquina, la carpeta, las unidades del sistema, los comandos. Eso no lo lee nadie más que el server. Y el nombre nuevo se queda arriba, solo en la cara que ves vos y que ven los terceros.
+
+La gracia es que separa por costo, no por gusto. Renombrar la capa técnica te cuesta un día entero de trabajo y de riesgo, porque tocás arranque de sistema, comandos que usan todos los scripts, y una carpeta que está escrita en miles de lugares. Y no te paga absolutamente nada, porque esa capa no la mira ningún ser humano.
+
+Es la única de las seis propuestas que no cuesta plata ni tiempo, y encima te deja la separación hecha de arriba abajo: nombre técnico abajo, nombre de producto y nombre de persona arriba. Tres capas, tres nombres, cada uno en su altura.
+
+Ahora, hay una contra que el panel no dijo, y te la tengo que decir yo. El nombre viejo es casi el nombre de un modelo de otra empresa. Esa confusión es justamente de la que venías escapando cuando decidiste renombrar. Dejarlo abajo para siempre es dejar esa confusión enterrada en tu sistema para siempre. Puede que no te importe, porque abajo no lo ve nadie. Pero lo vas a ver vos cada vez que abras una terminal.
+
+# cuánto cuesta de verdad terminar el rename
+
+Como las dos posturas de arriba se juegan en el costo, dejame ponerte los números que medí antes de armar el paquete, para que decidas con la plata a la vista y no con la intuición.
+
+Lo que ya está renombrado es la capa de arriba. El nombre nuevo aparece dos mil cuatrocientas ochenta y ocho veces en el código: en el archivo del tablero, en el del chat, en las recetas de whatsapp y de mail, en los guardianes. Eso ya está hecho y no hay que tocarlo.
+
+Lo que falta es la capa de abajo, y es más grande de lo que parece. El nombre viejo aparece catorce mil doscientas noventa y cuatro veces. Pero ojo, que ese número engaña: siete mil cuatrocientas cuarenta y siete de esas son la ruta de la carpeta de contenido, o sea la misma cosa repetida en cada receta que abre un archivo. No son catorce mil decisiones, son dos: la carpeta y el resto.
+
+El resto son los comandos del sistema. Y ahí la distribución es muy despareja. El comando de la nube aparece cuatrocientas dos veces él solo. El de los secretos, doscientas sesenta y una. El de whatsapp, ciento cincuenta y tres. El del agente, ciento veintinueve. El de las copias de seguridad, ciento diecinueve. El del guardián de red, ciento dieciocho. Y los dos del wifi, ciento nueve y ciento dieciséis.
+
+Sumados, eso es más de mil cuatrocientas apariciones repartidas en siete familias. Ninguna es difícil por sí sola, todas son un reemplazo de texto. El problema no es el reemplazo: el problema es que esos comandos están en la lista de permisos especiales del sistema, la que le deja al agente tocar red y montajes sin pedir clave. Si renombrás el comando y no renombrás el permiso en el mismo movimiento, el sistema deja de poder arreglarse la red a sí mismo. Y eso se descubre de noche, cuando se cae el wifi y no hay nadie para arreglarlo a mano.
+
+Después están las seis unidades que arrancan solas cuando prende el server: la principal, la del kit, la del guardián de red, la de seguridad, la del perro guardián y la del wifi. Renombrar una unidad no es renombrar un archivo: hay que desactivar la vieja, activar la nueva, y que en el medio no se caiga nada. Seis veces.
+
+Y al final el nombre de la máquina, que es de un minuto y es el único que se ve en pantalla.
+
+Si lo sumo honestamente: no es un trabajo difícil, es un trabajo largo y con dos o tres lugares donde una distracción te deja el server sin poder arreglarse la red. Y el beneficio, en la capa de abajo, es exactamente cero para vos, porque esa capa no la leés nunca salvo cuando algo se rompe.
+
+Por eso la propuesta de abandonar el rename me parece la más interesante de las seis, aunque la haya dicho uno solo. No porque el nombre viejo sea bueno, sino porque es el único lugar del sistema donde el nombre no te está costando nada.
+
+Y hay un detalle que encontré revisando, que resume todo este asunto mejor que cualquier argumento. Adentro de la carpeta de contenido hay dos carpetas: una con el nombre viejo y otra con el nombre nuevo. La del nombre viejo no tiene nada adentro: es un atajo que apunta a la otra. O sea que hace una semana, en el medio del rename, alguien, que fui yo, dejó las dos puertas abiertas para que nada se rompiera mientras se cambiaba el cartel.
+
+Esa puerta sigue abierta. Y va a seguir abierta hasta que vos decidas cuál de los dos nombres es el que se queda.
+
+# la pestaña que se llama como el sistema entero
+
+Y acá viene la convergencia que sí es limpia, la que no le di yo.
+
+Te había preguntado por dos lugares donde el nombre se muerde la cola. El primero es que tenés una pestaña en el chat que se llama igual que el sistema entero. O sea, un tema que lleva el nombre del todo.
+
+Tres de los seis, por su cuenta, sin que nadie les sugiriera nada, propusieron exactamente el mismo cambio: que esa pestaña pase a llamarse sistema.
+
+Ese nombre no estaba en ninguna parte del paquete. Lo bajaron los tres solos, y los tres dieron la misma razón con distintas palabras: un tema que se llama igual que el sistema entero no es un tema, es un cajón de sastre. Todo lo que no encaja en otro lado termina ahí, y después no podés buscar nada.
+
+Esa es, para mí, la única propuesta concreta y accionable que dejó el panel esta noche. No depende de qué nombre elijas para la voz, no depende de si terminás o abandonás el rename. Es un cambio chico, aislado, y tres modelos independientes lo pidieron solos.
+
+# el nombre de la máquina, donde el panel no tuvo nada para decir
+
+El segundo lugar donde el nombre se muerde la cola es más gracioso.
+
+El nombre de tu máquina es el nombre viejo del producto. Y al mismo tiempo tenés una regla escrita, tuya, que dice que nunca hay que llamarle al server por el nombre del producto. Que el server es el server.
+
+O sea: la regla prohíbe en las palabras exactamente lo que la configuración hace en los hechos. Cada vez que el sistema te muestra el nombre de la máquina, está rompiendo tu propia regla.
+
+De acá salieron cuatro respuestas distintas entre seis modelos. Uno dijo que le pongas el nombre nuevo. Otro que el nombre nuevo con la palabra server pegada atrás. Otro que algo genérico que hable de la casa. Y otro que lo dejes como está.
+
+Cuatro respuestas distintas entre seis quiere decir que el panel no tiene nada para aportar acá. Es una decisión tuya y de nadie más, y cualquiera de las cuatro funciona.
+
+# lo que hay que tirar a la basura de esta corrida
+
+Ahora la parte donde te cuento qué salió mal, que siempre es la más útil.
+
+Lo peor del panel fue una propuesta de uno de los mistral: que el producto pase a llamarse con el nombre de tu otro proyecto. El de los amigos, el de la música.
+
+Eso ya es otra cosa tuya. Tiene su tema, tiene su carpeta, tiene su canal de mail, tiene su gente. Es una colisión de frente, y lo que más me llamó la atención es cómo la justificó: dijo que ese nombre "ya es conocido en el sistema". Que es exactamente la razón por la que no sirve. El modelo detectó correctamente que el nombre aparecía mucho en el contexto, y confundió frecuencia con disponibilidad.
+
+Segundo, el más chico de los dos locales directamente no contestó. Copió el texto de la opción a tal cual venía escrito en la pregunta, sin cambiarle una coma, y después propuso dejar absolutamente todo como está: el producto con el nombre que tiene, la voz con el nombre del archivo de audio, el tablero como está, la cola como está. Y para rematar, su prueba de éxito se contradice sola: dice que si la voz sigue firmando con la firma actual la separación fracasó, después de haber propuesto que siga firmando exactamente así.
+
+Y tercero, el otro local te propuso tres sustantivos comunes: que la voz se llame asistente, el tablero se llame panel y la cola se llame motor. Eso no es elegir dos nombres. Eso es la opción b disfrazada de la a, porque un sustantivo común no es un nombre propio, es una descripción con mayúscula. Y de paso, la pestaña te la mandaba a llamarse ayuda.
+
+Los dos locales tardaron más de cinco minutos cada uno en contestar eso. Los cuatro de afuera tardaron entre cuatro y diez segundos.
+
+# el filtro tapó justo lo que veníamos a buscar
+
+Me queda un hallazgo más, y es el segundo del método.
+
+De las cincuenta propuestas que llegaron, el filtro descartó cuatro. Y las cuatro estaban bien.
+
+Las cuatro se cayeron por la misma razón. El filtro las chocó contra dos reglas tuyas que están vigentes: la que dice cómo arranca un mensaje de whatsapp a terceros, y la que dice cómo se le llama al server.
+
+Pero esta corrida existe justamente para discutir esas dos reglas. Una propuesta que dice "la firma de whatsapp pasa a ser este otro nombre" no está violando la regla de la firma. Está proponiendo cambiarla. Que es literalmente lo que le pedí que hiciera.
+
+El filtro no sabe distinguir una propuesta que rompe una regla de una propuesta que pide reescribirla. Y en una corrida sobre el nombre, esa diferencia es todo, porque las reglas del nombre son el objeto de la discusión.
+
+Lo que sale de acá para el tema es concreto: un paquete tiene que poder declarar qué reglas están en discusión, para que el filtro las trate como material de trabajo y no como una pared. Sin eso, cada vez que te pregunte algo sobre una regla tuya, el filtro me va a tapar las mejores respuestas.
+
+Por suerte esta vez las leí antes de que las descartara. Pero eso fue suerte, no método.
+
+# las cuentas de la noche
+
+Dejame cerrarte con los números, que son cortos.
+
+Seis modelos. Cincuenta propuestas en total. Cuarenta y seis sobrevivieron al filtro, y de las cuatro que se cayeron, las cuatro se cayeron mal, como te acabo de contar.
+
+De afuera contestaron cuatro. El de groq, que va troceado en tandas porque su cupo por minuto es chico, leyó el contexto en dos partes y fue el que más escribió. Los dos de mistral, que son los modelos pagos que vos pediste que usara, contestaron enteros y en menos de once segundos. El de gemini contestó en menos de cuatro segundos y fue el único que se plantó distinto en lo del rename.
+
+Adentro corrieron los dos locales, gratis, en tu propia máquina. Tardaron doscientos noventa y cuatro y trescientos diecinueve segundos respectivamente. O sea, cincuenta veces más que los de afuera, para contestar la mitad de bien. Esa comparación la vengo viendo en todas las corridas y ya no es una casualidad: para una pregunta que pide criterio, los locales que tenés hoy no llegan.
+
+De los dos mistral hay algo que te debo: son pagos por token, y la receta todavía no les calcula el precio, así que quedaron registrados en cero. El gasto real de esta corrida son unos centavos, pero centavos sin medir. Me lo anoto como pendiente, porque si vamos a usar los pagos, el precio tiene que quedar en la fila igual que los tokens.
+
+# lo que queda para vos
+
+Cierro con lo único que importa, que es qué tenés que decidir.
+
+El panel dejó una sola cosa firmada por los seis: la separación es de dos nombres. Producto por un lado, persona por el otro. En eso no hubo grieta.
+
+Después quedan tres decisiones abiertas, y ninguna la puede cerrar un modelo.
+
+La primera: el nombre de la voz. Tenés dos propuestas reales sobre la mesa, valen y luna, y cualquier otra que se te ocurra a vos vale igual. Lo que no cuenta es daniela, y quiero que quede claro por qué: daniela es el nombre de un archivo de audio que se me coló en el paquete. No es una propuesta, es un eco.
+
+La segunda: si el producto se queda con el nombre que ya tiene y terminás el rename de abajo, que es lo que dijeron cinco. O si abandonás el rename y dejás el nombre viejo abajo para siempre, que es lo que dijo uno solo y es la única opción que no te cuesta nada.
+
+Y la tercera, que es chiquita y no depende de las otras dos: la pestaña que se llama como el sistema entero, que tres modelos te pidieron solos que pase a llamarse sistema.
+
+No se renombró nada, como pediste. Está todo escrito, y el informe completo te espera en la carpeta del tema con las respuestas crudas de los seis al lado, por si querés leer alguna entera.
+
+Mañana me preguntás por número y seguimos. Que descanses, Facundo.

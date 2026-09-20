@@ -860,7 +860,149 @@
    },
    "duracion": 1535.8,
    "ts": "2026-09-20T04:00:13-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-marca",
+   "fecha": "2026-09-20",
+   "titulo": "marca: seis de seis, y un nombre que se lo dio el paquete",
+   "temas": [
+    "consejo",
+    "marca",
+    "nombre"
+   ],
+   "palabras": 5668,
+   "guion": "guion-marca.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-marca-daniela.mp3",
+     "duracion": 1703.5,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este capítulo",
+       "duracion": 79.6,
+       "archivo": "audio/ep-2026-09-20-marca-1-de-que-va-este-capitulo.daniela.mp3"
+      },
+      {
+       "t": 79.6,
+       "titulo": "de qué estamos hablando, exactamente",
+       "duracion": 69.4,
+       "archivo": "audio/ep-2026-09-20-marca-2-de-que-estamos-hablando.daniela.mp3"
+      },
+      {
+       "t": 149.1,
+       "titulo": "las cuatro maneras de separar",
+       "duracion": 66.9,
+       "archivo": "audio/ep-2026-09-20-marca-3-las-cuatro-maneras-de.daniela.mp3"
+      },
+      {
+       "t": 215.9,
+       "titulo": "el veredicto: seis de seis",
+       "duracion": 71.5,
+       "archivo": "audio/ep-2026-09-20-marca-4-el-veredicto-seis-de.daniela.mp3"
+      },
+      {
+       "t": 287.4,
+       "titulo": "por qué eligieron eso, y qué dicen que se pierde",
+       "duracion": 67.4,
+       "archivo": "audio/ep-2026-09-20-marca-5-por-que-eligieron-eso-y.daniela.mp3"
+      },
+      {
+       "t": 354.8,
+       "titulo": "el hallazgo del método, y esta vez es mío",
+       "duracion": 69.3,
+       "archivo": "audio/ep-2026-09-20-marca-6-el-hallazgo-del-metodo.daniela.mp3"
+      },
+      {
+       "t": 424.2,
+       "titulo": "el mismo error, del otro lado del espejo",
+       "duracion": 69.9,
+       "archivo": "audio/ep-2026-09-20-marca-7-el-mismo-error-del-otro.daniela.mp3"
+      },
+      {
+       "t": 494.1,
+       "titulo": "los dos nombres que sí son propuestas de verdad",
+       "duracion": 76.8,
+       "archivo": "audio/ep-2026-09-20-marca-8-los-dos-nombres-que-si.daniela.mp3"
+      },
+      {
+       "t": 570.9,
+       "titulo": "lo que ven los de afuera, y acá hay una decisión que no es técnica",
+       "duracion": 138.8,
+       "archivo": "audio/ep-2026-09-20-marca-9-lo-que-ven-los-de.daniela.mp3"
+      },
+      {
+       "t": 709.6,
+       "titulo": "la prueba barata, que era la parte que más me interesaba",
+       "duracion": 132.7,
+       "archivo": "audio/ep-2026-09-20-marca-10-la-prueba-barata-que.daniela.mp3"
+      },
+      {
+       "t": 842.3,
+       "titulo": "la opción que nadie eligió, y por qué me parece raro",
+       "duracion": 88.4,
+       "archivo": "audio/ep-2026-09-20-marca-11-la-opcion-que-nadie.daniela.mp3"
+      },
+      {
+       "t": 930.7,
+       "titulo": "la deuda del rename a medias",
+       "duracion": 72.1,
+       "archivo": "audio/ep-2026-09-20-marca-12-la-deuda-del-rename-a.daniela.mp3"
+      },
+      {
+       "t": 1002.8,
+       "titulo": "el que se plantó distinto, y es la propuesta más barata",
+       "duracion": 81.6,
+       "archivo": "audio/ep-2026-09-20-marca-13-el-que-se-planto.daniela.mp3"
+      },
+      {
+       "t": 1084.4,
+       "titulo": "cuánto cuesta de verdad terminar el rename",
+       "duracion": 191.6,
+       "archivo": "audio/ep-2026-09-20-marca-14-cuanto-cuesta-de-verdad.daniela.mp3"
+      },
+      {
+       "t": 1276.0,
+       "titulo": "la pestaña que se llama como el sistema entero",
+       "duracion": 56.9,
+       "archivo": "audio/ep-2026-09-20-marca-15-la-pestana-que-se-llama.daniela.mp3"
+      },
+      {
+       "t": 1333.0,
+       "titulo": "el nombre de la máquina, donde el panel no tuvo nada para decir",
+       "duracion": 50.5,
+       "archivo": "audio/ep-2026-09-20-marca-16-el-nombre-de-la-maquina.daniela.mp3"
+      },
+      {
+       "t": 1383.5,
+       "titulo": "lo que hay que tirar a la basura de esta corrida",
+       "duracion": 97.3,
+       "archivo": "audio/ep-2026-09-20-marca-17-lo-que-hay-que-tirar-a.daniela.mp3"
+      },
+      {
+       "t": 1480.7,
+       "titulo": "el filtro tapó justo lo que veníamos a buscar",
+       "duracion": 69.7,
+       "archivo": "audio/ep-2026-09-20-marca-18-el-filtro-tapo-justo-lo.daniela.mp3"
+      },
+      {
+       "t": 1550.5,
+       "titulo": "las cuentas de la noche",
+       "duracion": 76.8,
+       "archivo": "audio/ep-2026-09-20-marca-19-las-cuentas-de-la-noche.daniela.mp3"
+      },
+      {
+       "t": 1627.2,
+       "titulo": "lo que queda para vos",
+       "duracion": 76.2,
+       "archivo": "audio/ep-2026-09-20-marca-20-lo-que-queda-para-vos.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1703.5,
+   "ts": "2026-09-20T06:05:14-03:00"
   }
  ],
- "actualizado": "2026-09-20 05:37"
+ "actualizado": "2026-09-20 06:05"
 }
