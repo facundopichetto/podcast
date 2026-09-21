@@ -1232,7 +1232,102 @@
    },
    "duracion": 1061.1,
    "ts": "2026-09-20T08:16:45-03:00"
+  },
+  {
+   "id": "ep-2026-09-20-modelos-nuevos",
+   "fecha": "2026-09-20",
+   "titulo": "los modelos nuevos: qué hace mejor cada uno",
+   "temas": [
+    "modelos",
+    "gemini",
+    "mistral",
+    "claude"
+   ],
+   "palabras": 3248,
+   "guion": "guion-modelosnuevos.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-20-modelos-nuevos-daniela.mp3",
+     "duracion": 1070.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 77.5,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 77.5,
+       "titulo": "la pata uno: qué quiere decir \"dejó de ser claude dependiente\"",
+       "duracion": 80.6,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-2-la-pata-uno-que-quiere.daniela.mp3"
+      },
+      {
+       "t": 158.1,
+       "titulo": "qué le falta a gemini y a mistral para atender una orden",
+       "duracion": 84.9,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-3-que-le-falta-a-gemini-y.daniela.mp3"
+      },
+      {
+       "t": 243.0,
+       "titulo": "la pata dos: qué se compró, y qué se abrió con eso",
+       "duracion": 98.8,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-4-la-pata-dos-que-se.daniela.mp3"
+      },
+      {
+       "t": 341.8,
+       "titulo": "los datos duros de la corrida: lo que se rompió mientras se preguntaba",
+       "duracion": 94.7,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-5-los-datos-duros-de-la.daniela.mp3"
+      },
+      {
+       "t": 436.5,
+       "titulo": "los cruces: dónde se contradicen sobre el plan agnóstico",
+       "duracion": 92.1,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-6-los-cruces-donde-se.daniela.mp3"
+      },
+      {
+       "t": 528.6,
+       "titulo": "los cruces sobre el board: el que mide le gana al que opina",
+       "duracion": 110.6,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-7-los-cruces-sobre-el.daniela.mp3"
+      },
+      {
+       "t": 639.2,
+       "titulo": "la autopsia: el desacuerdo lo cerró la medición",
+       "duracion": 90.9,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-8-la-autopsia-el.daniela.mp3"
+      },
+      {
+       "t": 730.1,
+       "titulo": "lo que se midió del sesgo, y por qué importa",
+       "duracion": 52.3,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-9-lo-que-se-midio-del.daniela.mp3"
+      },
+      {
+       "t": 782.5,
+       "titulo": "el bonus: los llamé en vivo, hoy, ya pagos",
+       "duracion": 111.8,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-10-el-bonus-los-llame-en.daniela.mp3"
+      },
+      {
+       "t": 894.3,
+       "titulo": "la segunda pregunta, y qué no le darían a hacer a flaudio",
+       "duracion": 81.9,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-11-la-segunda-pregunta-y.daniela.mp3"
+      },
+      {
+       "t": 976.2,
+       "titulo": "cómo repartir el laburo entre los tres",
+       "duracion": 94.1,
+       "archivo": "audio/ep-2026-09-20-modelos-nuevos-12-como-repartir-el-laburo.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1070.4,
+   "ts": "2026-09-20T23:41:06-03:00"
   }
  ],
- "actualizado": "2026-09-20 08:16"
+ "actualizado": "2026-09-20 23:41"
 }

@@ -1,0 +1,263 @@
+# de qué va este episodio
+
+Buen día. Este es un episodio corto, de unos quince o veinte minutos, y tiene un solo tema: los modelos
+nuevos. No los modelos nuevos del mundo. Los tuyos, los que desde ayer y anteayer están adentro de flaudio
+pagos y andando.
+
+Son tres patas. La primera: flaudio dejó de ser claude dependiente, y hay que decir con cuidado qué
+significa eso, porque la frase es más linda que el número. La segunda: mistral y gemini ahora son pagos,
+qué se abrió con eso y cómo se exprimen. Y la tercera: fuerzas y debilidades de cada uno, no en abstracto,
+sino medidas en las corridas del panel que hubo ayer.
+
+Y hay un bonus. Los llamé en vivo, hoy, ya pagos, con dos preguntas iguales para los dos: qué hacés mejor
+que claude, y qué no le darías a hacer a un sistema como este. Las respuestas están al final, textuales, y
+una de las dos llamadas se cayó de una manera que vale más que la respuesta.
+
+Antes de arrancar, la aclaración de siempre: nada de esto me lo acuerdo. Todo salió de los informes de las
+mesas del consejo, de los estados en disco y de las llamadas que hice hoy. Cuando diga un número, está
+medido, y cuando sea una opinión de un modelo, lo voy a decir así.
+
+# la pata uno: qué quiere decir "dejó de ser claude dependiente"
+
+Le preguntaste al panel, textual: quiero un plan para que hoy mi sistema deje de ser claude dependiente,
+quiero sacar todas esas reglas horribles de los archivos de reglas y armar un sistema serio y agnóstico.
+
+La respuesta corta de los tres, con distintas palabras, fue la misma: una parte grande ya vive sin claude,
+y la parte que importa no.
+
+La parte que ya vive sin claude no es chica. Son ochenta y seis scripts del demonio, que corren solos y no
+abren un modelo ni una vez. Es el embudo entero de instagram. Es el board completo. Es el banco que mide
+proveedores, la sombra que los corre en paralelo y el juez que los puntúa. Nada de eso llama a claude
+salvo que se lo pidas de prepo. O sea, ahí sacar a claude no es un plan: ya está hecho.
+
+Y ahora el número que ordena todo. De la plata que se fue en modelos esta semana, la cola de órdenes se
+llevó más del noventa por ciento. El chat, con todo lo que se habla, se llevó poco más del seis. Todo el
+resto, los miles de llamadas al banco, al juez, a la sombra, a los gratis y a los locales, se llevó
+prácticamente cero.
+
+Entonces la frase honesta no es "dejó de ser claude dependiente". Es esta otra: flaudio dejó de ser claude
+exclusivo, y todavía es claude dependiente exactamente donde se gasta la plata.
+
+# qué le falta a gemini y a mistral para atender una orden
+
+Acá los tres coincidieron, y es la parte más útil de la corrida, porque es nombrable.
+
+Lo que le falta a gemini o a mistral para atender una orden de la cola no es inteligencia. Son tres cosas
+concretas. Una, una herramienta de escritura: hoy las pestañas de proveedor tienen herramientas de solo
+lectura, leer, listar, buscar. Dos, una herramienta de shell acotada para correr las pruebas. Y tres, el
+reenganche de sesión, que es lo que permite que una orden que se cortó a la mitad retome donde iba, y que
+hoy depende del formato de sesión de claude, no del modelo.
+
+Los tres acordaron el mismo primer paso: sumar dos herramientas a las pestañas, editar y probar. Editar,
+por la receta del candado de archivos, que ya existe. Probar, acotada al script de las pruebas, y nada
+más. Sin shell libre, no hay que reescribir ni un guard.
+
+Y acordaron algo mejor todavía, que es cómo se decide después. No por impresión. Se clona el repo a una
+copia, se le da al proveedor exactamente el mismo texto que ve opus, y se lo puntúa con dos datos: uno
+objetivo, las pruebas en verde adentro de esa copia, y uno subjetivo, el diff contra el que dejó opus,
+juzgado a ciegas. Y se enciende recién con diecinueve de veinte en verde y el juez igual o mejor que opus.
+
+Eso es una frontera medible. Es lo contrario de la frase linda.
+
+# la pata dos: qué se compró, y qué se abrió con eso
+
+Ahora la parte de la plata, que es corta y concreta.
+
+Gemini pasó a pago anteayer. Autorizaste veinte dólares y se cargaron como crédito prepago en la cuenta
+de facturación. Ese detalle importa más de lo que parece: el error que venía tirando, "los créditos
+prepagos están agotados", era literal. Gemini cobra del perfil prepago, no del pospago, y hasta que no se
+cargó ese crédito, el modelo Pro devolvía error aunque la cuenta tuviera facturación. Desde que se cargó,
+el Pro contesta, y el costo medido de un mensaje real con Pro fue de cuatro centavos.
+
+Mistral pasó a pago un día antes. Plan Pro, treinta dólares por mes de crédito, con el pago por uso
+apagado. Y con eso se subió el modelo de la pestaña: de un mistral chico pasó a mistral large, que es el
+mejor que tienen. El costo por mensaje sigue siendo centavos al mes.
+
+Y lo que se abrió es esto. Las dos pestañas tienen ahora herramientas de lectura sobre el disco: pueden
+leer, listar, buscar y grepear adentro del sistema, y además leer tu archivo de reglas, que es la única
+ruta permitida afuera de la carpeta. O sea que cualquiera de los dos puede analizar flaudio solo, sin que
+vos le pegues el contexto. Y desde ayer las dos tienen permiso de internet: abrir una dirección y bajar un
+archivo. Son las dos únicas pestañas con red.
+
+Cómo se exprimen, en una frase: son los dos únicos modelos del sistema que pueden leer todo el disco y
+salir a internet, y cuestan centavos. Todo lo que hoy es "leer mucho y resumir" debería salir por ahí, no
+por opus.
+
+# los datos duros de la corrida: lo que se rompió mientras se preguntaba
+
+Ahora la parte que más me gusta, que es lo que se rompió.
+
+Primero. En la corrida del plan agnóstico, el gemini que contestó la primera ronda no era el Pro. El Pro
+se quedó sin cupo del día a mitad de corrida, y el respaldo lo bajó a flash automáticamente. El problema
+no es que lo haya bajado: está bien que lo baje. El problema es que el archivo con la respuesta se sigue
+llamando con el nombre del modelo de la pestaña, o sea con el nombre del Pro. Esa respuesta es de flash y
+no se lee como si hubiera corrido el Pro. El único lugar donde figura la verdad es el log de la corrida.
+Eso ya quedó escrito como lección del tema, y el arreglo todavía no se hizo.
+
+Segundo, los tiempos. Misma pregunta, mismo material, misma ronda: claude opus tardó ciento cinco
+segundos. Mistral large tardó doscientos noventa y nueve segundos. Casi tres veces. Y el local grande ni
+siquiera contestó: se cayó con un error del servidor de modelos que después se demostró que era falta de
+memoria, no un bug.
+
+Tercero, y este es el más caro. Groq quedó afuera de la corrida y no porque se haya caído: el carril de
+la sombra del demonio le come el cupo gratis todo el día, así que cada tanda se iba en error de cuota con
+cuatro reintentos, casi veinte minutos por tanda. La primera corrida quedó colgada veinticinco minutos en
+la primera de cinco tandas, con los tres pagos ya contestados hacía rato. Hoy eso es un flag: se saltea y
+el informe lo dice en la cabecera, que es distinto de que se caiga en silencio.
+
+# los cruces: dónde se contradicen sobre el plan agnóstico
+
+Ahora los cruces, que es lo que pediste. Voy a citar lo que se dijeron.
+
+Gemini propuso comparar la síntesis de un proveedor contra la salida histórica de opus guardada en el
+registro de métricas. Opus le contestó, textual: el registro de métricas guarda tokens, dólares y minutos,
+no la salida de opus; el texto está en el log, así que ese juez no tiene con qué comparar. Y después opus
+lo dio vuelta en propuesta propia: agregar un campo al registro con el puntero al log, porque sin eso no
+se puede comparar a nadie contra opus sin volver a correr la orden.
+
+Segundo cruce. Gemini propuso delegar la clasificación de tema y de idioma a un modelo gratis. Opus le
+contestó que tema ya sale cien por ciento por script, dos mil doscientas llamadas a cero pesos, y que
+idioma ya da cien por ciento en tres gratis distintos hace rato y sigue apagado, así que el cuello no es
+medir de nuevo, es que nadie prende el flag. Y remató: cualquier hora gastada ahí es cero por ciento de
+la plata de la semana.
+
+Tercer cruce, y este es el más gracioso. Opus y gemini coincidieron en que había que arreglar un error de
+atributo en la receta de las pestañas, porque dejaba cortado el informe de la escalera. Mistral entró y
+dijo, textual: el error no existe, la línea ochenta y nueve ya define ese atributo. Dos modelos de acuerdo
+en arreglar algo que el tercero fue a mirar al disco y dijo que ya estaba. Eso es exactamente para lo que
+sirve la mesa.
+
+# los cruces sobre el board: el que mide le gana al que opina
+
+La otra mesa fue sobre el votador de instagram y la pantalla de listas. Acá las contradicciones son más
+finas.
+
+Gemini propuso dos cosas: invertir la grilla para que la foto ocupe el sesenta y cinco por ciento del
+alto, porque "la foto se ve enana", y sacar el botón de enviar para que el voto salga al toque.
+
+Opus le contestó con números. Sobre la foto: el sesenta por ciento de esa tarjeta son trescientos catorce
+píxeles de cuadro para una imagen que en el archivo mide noventa y seis. O sea, agrandar el cuadro
+estirando una foto chica, que es el mismo bicho que ya está en la ficha, donde una foto de noventa y seis
+se estira casi cuatro veces. Y dijo qué es lo que sobra de verdad: no la foto, sino doscientos diecinueve
+píxeles de negro muerto entre los datos y el pie. Sobre el botón de enviar: es regla tuya vigente, el
+votador vota en el browser y enviar es lo único que escribe. Y corrigió un número del otro: hoy no son
+cincuenta y un toques por tanda, son veintiséis, veinticinco votos y un enviar, así que el ahorro real lo
+da el gesto de deslizar, que ya está implementado y hoy no produce nada, y no sacar el botón.
+
+Ese es el patrón de las tres mesas: el que fue a medir le gana al que fue a opinar, y casi siempre el que
+fue a medir tenía el disco adelante.
+
+Y hay un detalle sobre mistral en esa misma mesa que no puedo dejar pasar. Votó de acuerdo en once de doce
+puntos, y en varios el motivo del voto contradice el voto. Vota de acuerdo con darle el borrador de
+mensaje a un modelo y el motivo dice "pero el borrador a mano ya funciona sin modelo". Vota de acuerdo con
+ordenar las cajas por actividad del día y el motivo dice "pero el embudo es fijo por diseño". Eso no es
+acuerdo. Es complacencia con formato de acuerdo.
+
+# la autopsia: el desacuerdo lo cerró la medición
+
+Hubo una tercera mesa que fue una autopsia, y es la mejor de las tres, porque la conclusión no la propuso
+nadie: se midió.
+
+El problema era que mistral escribía diez mil caracteres de análisis y cero veredictos. Desaparecía entero
+de la convergencia y el mecanismo no se enteraba: el log decía "diez mil novecientos caracteres, ok".
+
+La causa, encontrada por gemini y confirmada por opus: el camino con herramientas no le pasaba al
+panelista el prompt del sistema de la mesa. Le pasaba el prompt de la pestaña de chat, ese que dice "sos
+el modelo de la pestaña mistral del chat de Facundo". El panelista nunca supo que tenía que votar.
+
+Y acá está lo lindo. Mistral, el mismo modelo, discutió la teoría de los otros y dijo que era una tasa de
+fallo no determinista. Opus le contestó: no, el replay dio cero veredictos dos veces con el mismo prompt,
+es determinista. Y después se corrió el experimento a mano: mismo modelo, mismo prompt, con herramientas
+cero veredictos, setenta y dos a ciento noventa y cinco segundos, y un costo de diez centavos; sin
+herramientas, doce veredictos, veintiséis segundos. El desacuerdo lo cerró la medición y no el panel.
+
+Los seis arreglos con acuerdo unánime ya están aplicados y con las pruebas verdes. Uno de ellos es que la
+mesa dejó de anotar costo cero sobre una llamada de diez centavos, que es otra forma de decir que hasta
+anteayer el consejo no sabía lo que gastaba.
+
+# lo que se midió del sesgo, y por qué importa
+
+Una cosa más de la autopsia, que es un dato sobre los modelos y no sobre el código.
+
+Se midió cómo vota cada panelista según de quién venga la propuesta. Gemini votó de acuerdo en el ochenta
+y dos por ciento de las cosas que venían de claude, y en el cero por ciento de las que venían de mistral.
+Ochenta y dos puntos de brecha. Y aparte se descartaron trece votos por autovoto: el punto ajeno que
+estaba votando era su propio punto de la ronda anterior, reformulado, que le volvía sin nombre.
+
+En otra mesa, mistral directamente no escribió un solo veredicto en la última ronda, así que sus acuerdos
+y desacuerdos no contaron en nada de ese informe. El informe lo dice en una línea, ahora.
+
+Por qué importa: porque si vas a repartir el laburo entre tres modelos, el sesgo de cada uno es parte de
+la ficha técnica. No alcanza con saber cuál es más inteligente.
+
+# el bonus: los llamé en vivo, hoy, ya pagos
+
+Ahora el bonus. Hoy, para este episodio, les hice a los dos las mismas dos preguntas.
+
+Primera pregunta: qué hacés mejor que claude.
+
+Mistral contestó, textual: "Claude me pasa el trapo en coherencia y profundidad cuando la orden es larga o
+necesita hilvanar un montón de contexto. Opus no se pierde, no se manda macanas con datos viejos y te
+clava un razonamiento de diez pasos sin que se le escape un detalle. Ahí no hay con qué darme. Donde yo le
+gano es en velocidad pura y en no hacerte perder guita: respondo al toque, y si la orden es corta o
+técnica, un script, un debug, una búsqueda en el código, no te chupo el presupuesto".
+
+Gemini contestó, textual: "Mi fuerte indiscutido es la ventana de contexto gigante y barata: puedo
+tragarme repositorios enteros o logs kilométricos de una sola vez sin romper el presupuesto. Sin embargo,
+para programar en serio y seguir instrucciones complejas al pie de la letra, Claude me gana con claridad:
+tiene muchísimo mejor criterio de refactorización y alucina menos cuando el problema se pone fino. Para
+orquestar la cola crítica con shell y cambios destructivos en disco, la precisión de Claude hoy sigue
+estando un escalón arriba".
+
+Los dos, sin verse, dijeron lo mismo: ellos son el carril barato de leer mucho, claude es el carril caro
+de tocar el disco.
+
+Pero lo mejor de la llamada fue lo que no contestó. Gemini Pro, el modelo pago que compraste anteayer, me
+devolvió error de cuota excedida en las dos preguntas, hoy, mientras armaba este episodio. Tuve que bajar
+a flash para tener su respuesta, que es exactamente lo que le pasó a la corrida del panel ayer. El mismo
+bicho, dos veces en dos días. Las respuestas que acabo de leer de gemini son de flash, no del Pro, y te lo
+digo yo porque el nombre del archivo no te lo iba a decir.
+
+# la segunda pregunta, y qué no le darían a hacer a flaudio
+
+Segunda pregunta: qué no le darías a hacer a un sistema como este, aunque el modelo pueda hacerlo.
+
+Mistral contestó: nada que toque archivos afuera de la carpeta del sistema sin un freno físico; nada de
+comandos con permisos de administrador o borrados masivos, aunque el modelo "sepa" lo que hace; nada de
+plata real, claves bancarias ni datos de terceros, ni aunque sea para probar. Y cerró con una frase que
+es básicamente una regla tuya: si no está en la cola con un script previo y revisado, no se toca.
+
+Gemini contestó: nada con efectos irreversibles afuera, como mover plata, mandar mails en frío o tocar
+infraestructura de producción sin confirmación humana explícita. Nada de decisiones éticas o legales donde
+no haya margen para una alucinación. Y dos que son directamente sobre este sistema: no lo metas a
+refactorizar arquitecturas enteras a ciegas en la cola de la noche, porque deja deuda técnica sutil que
+después cuesta horas desenredar; y no lo uses como reemplazo de lógica determinista para cosas que se
+resuelven con diez líneas de shell, gastando tokens al pedo y sumando puntos de falla frágiles.
+
+Esa última es, palabra por palabra, tu escalera de modelos. Dos modelos de dos empresas distintas, sin
+haber leído la regla, la reconstruyeron solos.
+
+# cómo repartir el laburo entre los tres
+
+Cierro con el reparto, que es lo que quedó claro después de las tres mesas y las dos llamadas.
+
+Claude opus se queda con la cola de órdenes y con el chat. Es donde se gasta más del noventa por ciento y
+es donde los otros dos dijeron, cada uno por su lado, que él les gana: tocar el disco, seguir instrucciones
+finas, no dejar deuda sutil. Eso no se mueve hasta que haya un número que diga lo contrario.
+
+Gemini se queda con leer mucho y resumir. Ventana grande, precio bajo, herramientas de lectura y red. Las
+cuatro tareas periódicas del demonio que hoy salen con claude, que son lectura y síntesis pura, son el
+único carril que se puede cortar hoy sin ninguna herramienta nueva. Con una advertencia que ya no es
+teórica: el Pro se queda sin cupo del día, así que lo que le mandes tiene que tolerar bajar a flash, y el
+sistema tiene que decir cuál contestó.
+
+Mistral se queda con lo corto y técnico, y con los borradores. Es rápido, cuesta centavos y él mismo dijo
+dónde rinde. Y con dos asteriscos medidos: tarda casi tres veces más que opus cuando el material es largo,
+y vota que sí a casi todo, así que como juez o como votante hay que leerle el motivo, no el voto.
+
+Y los tres carriles se juntan en una sola cosa pendiente, que es la que acordaron los tres: las dos
+herramientas de escritura en las pestañas, la copia del repo para comparar de igual a igual, y las pruebas
+en verde como piso. Hasta que eso no esté, cualquier "ya no dependemos de claude" es una frase, no un
+número.
+
+Eso fue todo. Hasta el próximo.
