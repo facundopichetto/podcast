@@ -1327,7 +1327,113 @@
    },
    "duracion": 1070.4,
    "ts": "2026-09-20T23:41:06-03:00"
+  },
+  {
+   "id": "ep-2026-09-22-obra-social",
+   "fecha": "2026-09-22",
+   "titulo": "obra social con monotributo C: las tres opciones reales",
+   "temas": [
+    "personal",
+    "obra-social",
+    "monotributo"
+   ],
+   "palabras": 5312,
+   "guion": "guion-obrasocial.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-22-obra-social-daniela.mp3",
+     "duracion": 1833.5,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 98.6,
+       "archivo": "audio/ep-2026-09-22-obra-social-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 98.6,
+       "titulo": "la regla que cambia todo: ya no se puede derivar el aporte a una prepaga",
+       "duracion": 138.1,
+       "archivo": "audio/ep-2026-09-22-obra-social-2-la-regla-que-cambia.daniela.mp3"
+      },
+      {
+       "t": 236.7,
+       "titulo": "cómo funciona el aporte, y los tres caminos posibles",
+       "duracion": 113.8,
+       "archivo": "audio/ep-2026-09-22-obra-social-3-como-funciona-el-aporte.daniela.mp3"
+      },
+      {
+       "t": 350.5,
+       "titulo": "qué tenés cubierto desde el día uno",
+       "duracion": 99.4,
+       "archivo": "audio/ep-2026-09-22-obra-social-4-que-tenes-cubierto.daniela.mp3"
+      },
+      {
+       "t": 450.0,
+       "titulo": "opción uno: ASSPE, plan Salud 100",
+       "duracion": 123.1,
+       "archivo": "audio/ep-2026-09-22-obra-social-5-opcion-uno-asspe-plan.daniela.mp3"
+      },
+      {
+       "t": 573.0,
+       "titulo": "opción dos: OSDEPYM, entrar por abajo y subir cuando quieras",
+       "duracion": 132.8,
+       "archivo": "audio/ep-2026-09-22-obra-social-6-opcion-dos-osdepym.daniela.mp3"
+      },
+      {
+       "t": 705.9,
+       "titulo": "opción tres: OSPYSA, y la puerta a Prevención Salud",
+       "duracion": 115.7,
+       "archivo": "audio/ep-2026-09-22-obra-social-7-opcion-tres-ospysa-y-la.daniela.mp3"
+      },
+      {
+       "t": 821.5,
+       "titulo": "las otras del padrón, y las que conviene descartar",
+       "duracion": 158.4,
+       "archivo": "audio/ep-2026-09-22-obra-social-8-las-otras-del-padron-y.daniela.mp3"
+      },
+      {
+       "t": 980.0,
+       "titulo": "la recomendación, sin quedarme en depende",
+       "duracion": 134.7,
+       "archivo": "audio/ep-2026-09-22-obra-social-9-la-recomendacion-sin.daniela.mp3"
+      },
+      {
+       "t": 1114.7,
+       "titulo": "el alta, paso a paso desde hoy",
+       "duracion": 216.8,
+       "archivo": "audio/ep-2026-09-22-obra-social-10-el-alta-paso-a-paso.daniela.mp3"
+      },
+      {
+       "t": 1331.5,
+       "titulo": "y una vez adentro: facturar y cobrar",
+       "duracion": 152.4,
+       "archivo": "audio/ep-2026-09-22-obra-social-11-y-una-vez-adentro.daniela.mp3"
+      },
+      {
+       "t": 1483.9,
+       "titulo": "las llamadas que tenés que hacer vos",
+       "duracion": 107.1,
+       "archivo": "audio/ep-2026-09-22-obra-social-12-las-llamadas-que-tenes.daniela.mp3"
+      },
+      {
+       "t": 1590.9,
+       "titulo": "lo que se hizo ayer y hoy en el sistema",
+       "duracion": 173.4,
+       "archivo": "audio/ep-2026-09-22-obra-social-13-lo-que-se-hizo-ayer-y.daniela.mp3"
+      },
+      {
+       "t": 1764.3,
+       "titulo": "cierre",
+       "duracion": 69.1,
+       "archivo": "audio/ep-2026-09-22-obra-social-14-cierre.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1833.5,
+   "ts": "2026-09-22T00:42:33-03:00"
   }
  ],
- "actualizado": "2026-09-20 23:41"
+ "actualizado": "2026-09-22 00:42"
 }
