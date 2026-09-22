@@ -1,8 +1,45 @@
-# actualizado hoy a las 05:26
-actualizado hoy, domingo veinte, a las cinco veintiséis.
+# actualizado hoy a las 04:48
+actualizado hoy, martes veintidós, a las cuatro cuarenta y ocho.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# los saturn que faltaban: convertir y probar los veintinueve
+cerca de las once menos diez de la mañana me pediste algo concreto con los juegos de saturn: copiarlos del disco black a la retroid, pero probándolos todos, uno por uno, y con una vara clara: el mínimo es la resolución y el framerate originales de la consola. nada de "anda más o menos".
+
+antes de eso quedó claro por qué faltaban veintinueve. no es que no se puedan jugar en tu aparato: en el disco black están en formato crudo, el de imagen de disco con su archivo de pistas al lado, y a la retroid solo se pasaron en su momento los que ya estaban en el formato comprimido. la conversión nunca se hizo, y por eso quedaron afuera. son casi todos clásicos de primera, así que no hay nada que descartar ahí. de paso corregí un número del informe de ayer: lo que decía que saturn ocupaba dos décimas de giga estaba mal, contaba solo una parte.
+
+pediste la opción de convertir los veintinueve que faltan, testearlos todos y de paso medir los veintidós que ya están en la retroid, para tener el catálogo entero con número. y te arrepentiste enseguida, con razón: los veintidós ya están testeados. están en la planilla verificada de anoche, veintidós líneas, una por juego, todas con sesenta cuadros de mínimo y de medio, dieciséis milésimas y pico en el percentil noventa y cinco, y el veredicto de velocidad plena. uno solo tiene una micro caída. medirlos otra vez era laburo repetido.
+
+así que quedó como corresponde: se convierten y se testean solo los veintinueve que faltan, los veintidós no se tocan porque ya tienen su número, y todo va como una sola tarea: convertir, pasar y medir uno por uno.
+
+# hall: esconder productos del portal, todo por css
+a la noche revisamos los tickets de hall que estaban en curso o esperando trabajo de ingeniería. son seis abiertos, y uno solo está en curso: el de las ventanas abiertas del wine club del último trimestre, que es el caliente, con el arreglo ya armado en la copia del theme y la fecha encima. los otros cinco esperan. fuimos de a uno, empezando por el de esconder productos del portal del cliente.
+
+ese ticket es una línea de descripción y una planilla adjunta; el trabajo posta ya estaba en dos comentarios del agente de hace unos días. me diste la instrucción fina: de las botellas de aniversario se esconden solo los botones de cantidad y el precio, y a editar y a las acciones hay que sacarles los eventos de puntero por css. todo por css, con el mismo patrón que se usa para el newsletter, porque el producto puede aparecer adentro de una suscripción y ahí tiene que seguir viéndose. lo que se corta es que se pueda agregar como extra.
+
+después preguntaste si de los productos a esconder teníamos los identificadores de producto y no los de variante. tenemos las dos cosas: la planilla de adrián trae los de producto con su código, trece filas, y el agente ya los resolvió contra la api del admin y adjuntó al ticket el mapa con los identificadores de variante.
+
+elegiste ir directo al archivo de estilos propio del theme vivo, con backup del archivo antes de tocarlo, como el cambio chico ya validado. trece variantes, bloqueo por css al estilo newsletter, y quedó encolado con eso. y dejaste dicho qué hacer cuando esté vivo y funcionando: poner en jira que quedó hecho en el theme vivo y también en el de integraciones.
+
+# el votador de super candidatas no dejaba votar, y no era el filtro
+a las seis y media de la tarde volviste con lo mismo: entrás a super candidatas y no podés votar nada. la primera lectura fue que el problema era la lista virtual, porque nadie tiene esa lista en el embudo y el votador arma la fila filtrando por el nombre de la lista, así que daba cero. pediste que antes de encolar nada te contara qué pasa de punta a punta, server y board, y ahí apareció la causa de verdad.
+
+el proceso de candidatas armaba su fila bien, dos mil pendientes. el paso siguiente las tiraba todas por el tope de seguidores: sin el dato de seguidores, afuera. de dos mil, mil novecientas noventa y nueve se caían ahí. o sea que el filtro virtual era lo de menos.
+
+elegiste sacar el tope de seguidores como filtro duro: la tarjeta sale igual aunque no tenga el número, con el lugar en blanco, y votás ya mismo mientras se arregla el dato. y lo juntaste todo en una sola orden, cuatro pasos: el tope deja de ser filtro duro, se arregla por qué la lectura no guarda los seguidores, se reprocesa lo que ya se leyó, y el cartel de lista vacía pasa a decir la frase real en vez del texto genérico. preguntaste si el resto estaba contemplado y sí, los cuatro van adentro de la misma orden.
+
+y salió: la tarea terminó en veinticinco minutos y las tarjetas pasaron de cero a cuatro, subiendo solas mientras la cola sigue leyendo perfiles.
+
+# las cuatro propuestas de la cola que se pagan solas
+a las diez menos cuarto de la mañana miramos qué había quedado de las corridas del panel. las cinco de la noche terminaron, todas con informe en disco, y de la de la cola había informe y material crudo pero nunca capítulo de podcast.
+
+preguntaste qué deberíamos hacer con la cola, cuáles propuestas valen la pena de verdad. del informe quedaban ocho vivas, pero solo cuatro se pagan solas. las ordené por plata recuperada, no por prolijidad. la que toca plata grande es que el reintento arranque del paso ya cerrado en vez de empezar de nuevo: de todo lo que se perdió, la mayor parte son cortes a mitad de camino, y el punto de control ya se escribe en decenas de órdenes, nada más que no se usa al reintentar.
+
+elegiste una sola orden con las cuatro en orden, cada paso con su prueba y su punto de control anotado en el estado del tema. va como tema de herramientas porque toca el agente.
+
+# el panel deja de ser una sola pregunta y pasa a ser una mesa
+a las cuatro menos cinco de la tarde se cerró el rehacer de la pestaña del panel, el consejo de modelos. hasta hoy funcionaba de una sola pasada: la misma pregunta con el mismo contexto se le manda a seis panelistas pagos, cada uno contesta, y listo. ahora la idea es que yo modere un ida y vuelta real entre ellos, que se lean, se contesten y se corrijan, en vez de seis monólogos paralelos.
 
 # no más cajas "dale": las propuestas van con opciones
 a la una y treinta y ocho de la tarde me paraste en seco por una propuesta mal armada. te había puesto una caja de "dale" para que confirmaras, y eso no va: si voy a proponerte algo, primero tengo que decirte qué entendí que voy a hacer, y después ofrecerte opciones a, b o c. nunca una caja que te pide apretar "dale" sin que quede claro qué se hace.
@@ -129,6 +166,65 @@ a las dos y cuarto elegiste dejarla reintentando sola hasta las cuatro veces del
 a las dos y veinte me dijiste que habías votado las treinta y ocho de súper candidatas y que veías la lista de interesan igual que antes. los votos llegaron todos: hay treinta y ocho movimientos registrados de esos dos minutos, más los nueve de la mañana. interesan tiene catorce hoy, no cinco: sumaste nueve cuentas nuevas. o sea el problema no era que los votos se perdieran, era que la vista te mostraba lo de antes.
 
 por eso a las dos y veintiséis elegiste la a: que la vista tire el caché al abrir una lista y pida la fila fresca al server, con su prueba. eso quedó encolado.
+
+# a la mañana temprano: cómo venía la cola
+a las siete y cuarto preguntaste cómo venía la cola, si estaba bien o si había habido problemas de noche. la respuesta corta es que se mueve, no está trabada: una corriendo con su proceso vivo, cinco pendientes y treinta y cuatro fallidas acumuladas. lo que sí pasó fue que el turno nocturno se cortó.
+
+después pediste largar una de las corridas del consejo y archivar las fallidas de más de dos días. la primera ya había terminado, así que para que vuelva hay que encolarla de nuevo. y el archivado dejó un número distinto al que decía el turno nocturno: archivé dos, no treinta y cuatro. el número de la noche contaba todas las fallidas, pero la regla es "más de dos días", y con el corte de hoy solo dos lo pasaban. las otras treinta y cuatro son más nuevas que el corte, catorce de ellas del mismo día.
+
+a las diez menos veinte pediste el cruce completo: mirar lo que falló, lo que hay y lo que se está haciendo, y decir qué falta. de las treinta y cuatro fallidas, la mitad es ruido: se rehicieron después con otro nombre. lo que falló y nadie está cubriendo hoy es el clasificador de recursos de la cola, que se cayó cuatro veces, la última a las nueve menos cuarto de la mañana. y pediste algo para adelante: que antes de que se ejecute cada uno de los que faltaron, haya un paso previo.
+
+# instagram sigue sin datos, y el peso de mistral bajó
+a las diez y veinte me dijiste que no veías la lista de super candidatas y si la podía arreglar. no era el board: está vacía de verdad. el archivo del ranking se reescribió a las dos menos cinco de la mañana con dos mil en el universo, cero rankeadas y dos mil sin datos. la causa es que instagram te tiene la interfaz privada frenada desde ayer a la tarde, así que no entran lecturas.
+
+con eso arriba de la mesa elegiste bajar el peso de mistral en el ranking hasta que haya lecturas de verdad, porque hoy la calibración no lo banca. quedó en cinco, verificado leyendo el archivo después de escribirlo. no hacía falta regenerar el ranking ahora mismo: las dos mil candidatas siguen sin biografía ni textos.
+
+y encolaste dos cosas juntas: que el ranking pueda puntuar aunque falten seguidores, reescalando sobre las señales que sí hay, igual que ya hace con las cuentas privadas, para que super candidatas te muestre gente hoy mismo; y que el board avise cuando la lista está vacía por falta de lecturas en vez de mostrarse pelada.
+
+media hora después preguntaste qué pasó con esa tarea. no llegó a arrancar: entró a las diez y veintidós, el guard la marcó caída a las once menos veinte por quedarse sin proceso y sin latido, y el agente la reprogramó sola como reintento. ninguna de las dos alcanzó a tocar código.
+
+# la foto del votador en el celular
+a las once menos diez se cerró el cambio de la foto en el votador de instagram. en celular, la foto de la tarjeta pasa a ocupar el ancho completo, y eso vale también para la lista virtual de super candidatas. toca la hoja de estilos y el shell del board, nada más.
+
+# merch de fuzzer: remeras, pins y folletos
+a las once de la noche me contaste que convenciste a los pibes de fuzzer de meterle con todo, y que la clave es poca interacción nuestra: mandar a hacer las cosas, con los diseños ya listos, y que no dependa de nuestro tiempo. mi lectura de entrada fue que para remeras el modelo que casi no te ocupa tiempo es el de impresión bajo demanda.
+
+más tarde, pasada la una, volviste sobre el tema y me marcaste algo: te había escrito "me decís dale y sale" en vez de ponerte cajas, que es literalmente para lo que escribimos la regla. tenías razón, fallé yo: conté qué había entendido, que es la mitad correcta, y después te pedí el dale escrito a mano, que es justo lo que la regla prohíbe. no se rompió nada, nada más que lo escribí mal.
+
+y me corregiste el alcance de la búsqueda: no querías unity sola, querías el panorama de opciones reales para merch de fuzzer, remeras, pins y folletos, cada cosa con sus opciones comparadas y una recomendación. una de las alternativas es comprar las remeras peladas y mandarlas a estampar con los amigos.
+
+# gemini y mistral leyendo el sistema por su cuenta
+cerca del mediodía abriste la pestaña de gemini y le preguntaste qué modelo era y qué sabía del sistema. al principio contestó a ciegas: sin acceso a archivos, ni al server, ni al código, solo lo que se habla en el chat. le planteaste el problema de fondo, que todo esto está hecho con claude y que querés poder delegar a otros modelos, y te tiró consejo genérico de desacoplar la lógica del proveedor. le pediste que analizara flaudio en serio y volvió a decir que estaba ciego.
+
+a la una y media, con el contexto actualizado, empezó a leer de verdad: listó la carpeta del agente, leyó el archivo de reglas y siguió los archivos que necesitaba para contar cómo funciona el sistema, qué es el agente de fondo, cómo entra un mensaje del chat, cómo se decide el tema y cómo sale una orden a la cola.
+
+a las dos de la tarde hiciste lo mismo con mistral, con una consigna más dura: antes de opinar, recaudar información leyendo el código, en un orden concreto, y recién ahí un análisis de fortalezas, debilidades, oportunidades y amenazas. después le pediste un plan de reparto, y ahí se tropezó con las rutas: buscaba carpetas que no existían porque las estaba armando mal, relativas al lugar equivocado. con las rutas corregidas y la consigna de leer el código en vez de creerte a vos, sacó un diagnóstico de la cola: que el modelo de recursos inferidos por patrón de texto no se salva, y que hay que reemplazarlo por bloqueos reales con detección de conflictos al escribir.
+
+# el cupo diario de gemini y el proyecto aparte para la mesa
+pasada la una de la mañana preguntaste quién representa a gemini en la mesa, si ponemos el modelo rápido y listo, si groq ya tiene espacio y si no convendría sacar otra cuenta de groq. lo que representa a gemini ahí no es el rápido: es el pro de vista previa, porque la configuración de la mesa dice "el de la pestaña" y la pestaña está en el pro pago desde que cargaste el prepago.
+
+después preguntaste de qué depende el cupo del día. se cuenta por modelo y por proyecto de la nube de google, no por cuenta ni por plata disponible: cada modelo tiene su propio tope de pedidos diarios, y el pro de vista previa son doscientos cincuenta por día. el tope exacto del segundo escalón no lo tengo medido; lo que está anotado es el tope de gasto por escalón, que es otra cosa.
+
+elegiste dejar el dato como está y armar un proyecto de google cloud propio para la mesa, con su clave, así los pedidos del día del modelo pro no se los come la pestaña de gemini del chat.
+
+# el disco black se monta sin contraseña, y la raíz del server creció
+a las cinco y media de la mañana se cerró dejar el montaje del disco black como un comando directo y permanente: el agente ya lo monta y lo desmonta sin llave ni contraseña, con un permiso acotado que solo habilita montar ese disco en ese punto, validado antes de quedar puesto.
+
+y un rato antes, a la una y media, se cerró el agrandar la raíz del server con el espacio sin asignar: pasó de noventa y ocho gigas a cuatrocientos cuarenta y cuatro, en caliente y sin reiniciar, con trescientos cincuenta y un gigas libres contra los veinte de antes. frigate quedó intacto, no se achicó nada.
+
+a las doce y veinte del mediodía apareció otra cosa del server: la clave de instagram no está en la bóveda. busqué y no hay ninguna entrada de instagram; hay de shopify, google, jira, netflix, groq y gemini, pero de instagram nada. elegiste pasármela para guardarla y que el login lo haga yo en el chrome del server.
+
+# la obra social y el monotributo
+a la madrugada se cerró la comparativa de obras sociales para monotributo categoría C, con el aporte mensual real, el alta prevista para octubre, capital y alrededores, y titular solo sin familiares a cargo. y un par de horas después se cerró la consulta con la norma en la mano sobre si la exportación de servicios a un cliente del exterior está exenta o no gravada de ingresos brutos en la ciudad.
+
+pediste un podcast de media hora con las opciones de obra social, la recomendación y qué podés hacer ahora con el monotributo. descartaste el alemán por completo y quedaron las tres opciones de la recomendación: una prepaga superadora sin copago para capital, con la cartilla a chequear porque la cartera es chica, y las otras dos entrando por el plan médico obligatorio.
+
+# el agente de madrugada: presencia, avisos y una votación trabada
+entre las cuatro y veinte y las cinco menos cuarto pasaron varias cosas solas. el agente dejó de tickear diez minutos y el respaldo tomó la presencia de slack; cuando volvió a tickear, se la devolvió. no pude subir una foto al buzón por un choque de versiones y quedó para reintentar.
+
+fable sigue prohibido, así que todo salió con opus, tanto el chat como la tarea de reintento del asistente. esa tarea terminó bien en un minuto, aunque declaró que iba a escribir en una carpeta y no escribió nada ahí. el reparto de modelo anotó que en una de las cuentas fable ya estaría permitido por estar debajo de la semana, pero la prohibición manda.
+
+el archivo de votaciones quedó trabado casi veinte minutos con cinco votaciones abiertas, y eso sí te tocó el celular: es de las que avisan directo. el turno nocturno arrancó a las cinco menos veinticinco, con el corte a las ocho o a los doce pasos. el token de autorización venció y se refrescó con una llamada mínima, pero después el de una de las cuentas murió del todo y seguí con la otra; para arreglarlo hace falta un login en esta máquina. y las dos remotas de la mac están caídas, el servicio inactivo: el aviso de la segunda no se reenvió porque ya había salido uno igual hace poco.
 
 # los retrasos de instagram: tres tenían razón, uno olía a confusión
 me preguntaste si todos los retrasos que metí en instagram eran necesarios, si no había habido ninguna confusión. miré los cuatro. el de follow y unfollow va bien: pausa de dos a cinco minutos y tope de sesenta por día, veinticuatro por siete, que es literalmente lo que pediste vos. y está limpio, cero errores seguidos y sin enfriamiento.
