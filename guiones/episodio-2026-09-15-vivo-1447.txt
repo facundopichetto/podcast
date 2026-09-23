@@ -1,8 +1,40 @@
-# actualizado hoy a las 03:45
-actualizado hoy, miércoles veintitrés, a las tres cuarenta y cinco.
+# actualizado hoy a las 10:24
+actualizado hoy, miércoles veintitrés, a las diez veinticuatro.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# hall: el bug de emily y lo que ve brian no son lo mismo
+a las ocho y cuarto me pediste mirar el ticket de hall, el de la investigación por addons, y leer la descripción y las respuestas antes de opinar. lo leí entero. lo que reporta emily es que el grupo de addons apuntaba a una collection y, en ese modo, el flujo del portal —caja, addons, compra— no andaba; ya lo habían vuelto a productos sueltos antes de que yo lo mirara.
+
+vos frenaste antes de escribir nada y elegiste que primero revisara si la subscription que probó brian cae en ventana cerrada y con qué grupo de addons matchea. eso fue a la cola y volvió en doce minutos, investigado punta a punta en el live, sin postear nada, sin transicionar el ticket y sin tocar el theme ni la subscription. el gif que adjuntó brian lo bajé y lo miré cuadro por cuadro.
+
+la conclusión es que son dos cosas distintas y conviene contarlas separadas. lo de emily, la collection devolviendo la lista de addons vacía, hoy ya no se reproduce, porque el grupo volvió a productos el veintidós: queda como pasó, pero no lo podemos medir hoy. lo que ve brian no es ese bug: es nuestro css, la regla que esconde cosas sin condición.
+
+me dijiste dos veces que fuera más corto: primero la mitad de largo, después directamente que responda lo que me preguntan, ponga mi input y sea breve. elegiste que armara el comment para brian con las dos cosas separadas y que te lo muestre antes de postear. el draft quedó listo en un minuto, bajo su título, y ahí sigue: nada posteado, el ticket sigue en needs to follow up y no le toqué ningún label. la versión larga quedó guardada también, por si querés recuperar algo de ahí.
+
+# el chequeo de los juegos de gamecube: no dio limpio
+pasadas las diez me contaste que bajaste todos los juegos de gamecube y todos los de wii a la mac, cada cosa en su carpeta, y me pediste chequear las dos listas: qué falta, si te van a gustar, si sobra algo.
+
+la planilla que armé tiene quince juegos de gamecube repartidos en veinte discos, porque cinco son de dos discos: resident evil remake, resident evil zero, baten kaitos, tales of symphonia y killer seven. de wii hay siete. sobre si te van a gustar: los elegí con tu criterio de siempre, no hay nada de baile ni de party, y te marqué dos avisos honestos antes de que te pusieras a bajar nada.
+
+decidiste hacer gamecube primero y dejar wii para después, y que donkey kong jungle beat y rhythm heaven quedaran marcados como candidatos a salir, por si más adelante hay que hacer lugar o si los probás y no te gustan. encolaste el chequeo de la carpeta contra la planilla, disco por disco, con la condición de que, si daba limpio, siguiera solo: convertir, copiar a la tarjeta y probar los juegos uno por uno midiendo cuadros por segundo.
+
+no dio limpio, así que freno antes de convertir, que es exactamente lo que decía la orden. son diecinueve archivos en la carpeta de descargas, y los hasheé en la mac misma, con una sola lectura por archivo, para que no viajaran veintiséis gigas por la red. de ahí, diecisiete juegos en dieciocho discos dan bien. lo que falta te lo tengo identificado y esperando tu ok para seguir.
+
+# el board tardaba en todo, y era una sola causa
+cerca de las nueve menos cuarto me escribiste algo bastante claro: el board estaba lentísimo, querías tocar una pestaña e ir a esa pestaña al instante, y cada tanto se colgaba; escribías y no veías lo que escribías hasta que, un segundo después, aparecía todo junto. dijiste que eso hace la interfaz inusable, y tenés razón.
+
+lo busqué y es una sola causa de fondo, no varias. cada vez que el board repinta, tira todo el historial y lo vuelve a armar de cero: vacía la lista entera y después dibuja mensaje por mensaje, con su formato, en el hilo principal. o sea cientos de mensajes rearmados cada vez. eso pasa al tocar una pestaña, y por eso el gesto no es instantáneo.
+
+elegiste el arreglo de raíz, no el parche: repintado incremental, la pestaña que se abre al instante desde lo que ya está guardado, y nada de pedirle nada a la red mientras hacés el gesto. quedó encolado así.
+
+# la barrita de las cinco horas de awtomic marcaba cien desde ayer
+casi al mismo tiempo me dijiste que el indicador de las cinco horas de la cuenta de awtomic estaba mal, clavado en cien por ciento desde el día anterior, y que tendría que mostrar el valor real y, a la derecha, cuánto falta para que renueve.
+
+no era la barrita: era el dato. lo guardado de esa cuenta es de las tres menos diez de la madrugada de hoy, y viene marcado como vencido, con la sesión en cien y el reset de la ventana de cinco horas dos minutos después. o sea: a esa hora estaba efectivamente al cien, renovó enseguida, y desde entonces nadie volvió a medirla. lo que ves es una foto vieja que nunca se actualizó.
+
+encolaste el arreglo de las dos puntas: que el uso de awtomic se refresque, y que una ventana de cinco horas ya vencida nunca quede mostrándose como si estuviera llena. eso último es la regla de fondo, y ahora la va a cumplir el código.
 
 # la cuarta cuenta de claude, y la pestaña que se quedó sin crédito
 a las diez y media me pediste dar de alta la cuenta de claude de awtomic como cuarta cuenta del sistema, con el login ya hecho y aprobada, y que entre al reparto como las otras tres. te dije lo que iba a hacer y quedó entendido así.
@@ -240,6 +272,25 @@ con eso arriba de la mesa elegiste bajar el peso de mistral en el ranking hasta 
 y encolaste dos cosas juntas: que el ranking pueda puntuar aunque falten seguidores, reescalando sobre las señales que sí hay, igual que ya hace con las cuentas privadas, para que super candidatas te muestre gente hoy mismo; y que el board avise cuando la lista está vacía por falta de lecturas en vez de mostrarse pelada.
 
 media hora después preguntaste qué pasó con esa tarea. no llegó a arrancar: entró a las diez y veintidós, el guard la marcó caída a las once menos veinte por quedarse sin proceso y sin latido, y el agente la reprogramó sola como reintento. ninguna de las dos alcanzó a tocar código.
+
+# la cola de hoy está sana, lo colgado era viejo
+a las nueve menos un par de minutos me preguntaste qué pasa en la cola y me pediste, otra vez, que me encargue de que no queden cosas colgadas. me dijiste que me lo pedís varias veces por día, y es cierto.
+
+te miré el estado en ese momento: la orden de la ventana estaba corriendo de verdad, con proceso vivo y quince minutos encima; la del board esperaba por un archivo que la otra estaba tocando, o sea un choque real, no un cuelgue; y la de addons arrancaba en el ciclo siguiente. el chequeo de cola trabada daba cero caídas. la cola de hoy estaba sana.
+
+lo que sí es verdad es que lo colgado viejo no lo barría nadie. elegiste la opción más completa: además de barrer lo que quedó tirado, que la cola nunca deje una orden marcada como fallida sin reintentarla al menos una vez por su cuenta. así quedó.
+
+# el votador de following: cada botón dice lo que hace
+casi a las diez me corregiste el pie del votador de following. querías tres acciones concretas: unfollow más ignorar a la izquierda, ignorar al medio, y dejar en following a la derecha. y además que el botón de quedarse diga siempre dejar en, con el nombre de la lista adentro, en todas las listas, no solo en esa.
+
+era una corrección de una orden que ya venía con tu ok, así que salió derecho, sin volver a preguntarte nada.
+
+# lo que se movió en el agente cerca de las diez y veinte
+el guard de fugas de claves estuvo trabajando solo un rato largo: tapó valores de la bóveda en nueve archivos de log de ayer a la noche, cada uno con su copia de respaldo guardada, y no te molestó por ninguno. eso es exactamente lo que tiene que hacer.
+
+el tope de hilos estuvo subiendo y bajando entre cuatro y siete varias veces en dos minutos, según la memoria y la carga de cada momento. dos intentos de hablarle al chat por la red de casa se rechazaron porque el token no era del dueño del buzón. y el chat siguió saliendo con opus en cada turno, porque fable está prohibido hasta que vos lo habilites.
+
+hubo una cosa que quiero que sepas: el guard intentó arreglar una prueba de forma mecánica, el parche no la dejó verde, y lo revirtió solo, con respaldo del archivo anterior. el aviso queda en pie, no se lo comió. y se aplicó un cambio de sistema simulado, de los de caos, con su revert automático a los sesenta segundos.
 
 # la vista de documentos: dos controles arriba y el ancho aprovechado
 a las nueve menos diez me dijiste que la vista de documentos está buena pero le faltan cosas: poder ordenarse por fecha, poder agruparse o no por tema, y aprovechar mejor el ancho en escritorio.

@@ -597,3 +597,60 @@ lo que hablo facundo en la pestaña:
 - 03:43 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: 2026-09-23 03:43 [gris][info] hay margen de tokens: 3 pendientes en sueltos
 - 03:43 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
 - 03:43 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+
+### tramo 03:45-10:24 (hecho)
+## [awtomic] lo que se hizo en awtomic
+lo que hablo facundo en la pestaña:
+- 08:19 facundo: podes mirar el ticket de hall que es una investigacion por addons ? por lo que entiendo los addons estan escondidos via css por deecision previa, pero no se si es ese el problema. lee el ticket desc y las respuestas / claudio: leído. es el ticket de hall, investigate why collection broke add-on flow (hall, Needs to Follow Up, reporter emily, labels cx-agent-done + cx-agent-needs-human). lo que pide emily: el grupo de addons apuntaba a la collection 536473796910 (add-bottles-primary-colors-nomf) y en ese modo el flujo del portal box → addons → compra no andaba; ya lo volvieron a productos sueltos...
+- 08:48 facundo: B: antes de contestar, reviso si el sub que probó brian cae en ventana cerrada (cp-edit-hidden) y con qué grupo matchea, y recién ahí armamos el comment / claudio: dale, va a la cola: revisar el sub que probó brian contra la ventana cp-edit-hidden y ver con qué grupo de addons matchea, antes de escribir nada en el ticket.
+- 09:18 facundo: (tarea addons: tema awtomic: [toca: qa/2026-09/el ticket de hall, investigate why collection broke add-on flow-draft.md, qa/2026-09/ESTADO.md] investig) / claudio: terminó addons (opus, chrome, cuenta faacuu (opus), 12 min, $5.21): el ticket de hall, investigate why collection broke add-on flow investigado punta a punta en el live, [draft completo acá](qa/2026-09/el ticket de hall, investigate why collection broke add-on flow-draft.md). Nada posteado, nada transicionado, nada tocado en el theme ni en la sub. La sub del gif de brian (adjunto 36031, bajado y leído frame a frame) es...
+- 09:32 facundo: la mitad de largo, a ver / claudio:
+- 09:32 facundo: responde lo que te preguntan, pone tu input. se breve y directo / claudio: mi lectura del ticket de hall, investigate why collection broke add-on flow: son dos cosas distintas y conviene decirlas separadas. lo de emily (la collection devolviendo {"addons":[]}) ya no se reproduce: el grupo volvió a productos el 22/09, así que eso queda como "pasó, no lo podemos medir hoy". lo que ve brian no es ese bug: es nuestro css, la regla incondicional de...
+- 09:33 facundo: A: armo el comment para brian con las dos cosas separadas y te lo muestro antes de postear / claudio: dale, lo armo: el comment para brian con las dos cosas separadas, y te lo muestro acá antes de postear nada.
+- 09:34 facundo: (tarea comment: tema awtomic: [toca: qa/2026-09/el ticket de hall, investigate why collection broke add-on flow-draft.md] redactar el draft del comment ) / claudio: terminó comment (opus, chrome, cuenta faacuu (opus), 0 min, $0.68): [awtomic] draft listo en [qa/2026-09/el ticket de hall, investigate why collection broke add-on flow-draft.md](qa/2026-09/el ticket de hall, investigate why collection broke add-on flow-draft.md), bajo el título draft comment para brian. Nada posteado, el ticket sigue en Needs to Follow Up y no le toqué ningún label. La versión larga...
+
+## [tools] lo que se hizo en tools
+lo que hablo facundo en la pestaña:
+- 08:41 facundo: el indicador de las 5h de awtomic me parece que funciona mal. esta mostrando 100% desde ayer. tendria que mostrar el valor real y a la derecha en cuanto renews!! / claudio: lo encontré, y no es la barrita: es el dato, que quedó viejo. el cache de la cuenta awtomic es de las 2:47 am de hoy y dice fuente: cache-vencido, sesion: 100.0, con el reset de la ventana de 5 h en 2:49 am. o sea: a esa hora estaba al 100%, renovó dos minutos después, y desde entonces nadie volvió a medirla (la...
+- 08:42 facundo: A: dale, encolo el arreglo de las dos puntas: refresco del uso de awtomic y ventana de 5 h vencida que nunca queda en la de users f claudio tools agente% / claudio: dale: encolo el arreglo de las dos puntas.
+- 08:44 facundo: otra cosa: el board board está lentísimo, quiero tocar en la pestaña y que vaya inmediatamente a la pestana que eleji. ademas cada tanto se queda colgado. escribo y no veo lo que escribo y en un segundo actualiza. eso hace a la interfaz INUSABLE. lo mismo pasa en general en el... / claudio: lo encontré, y es una sola causa de fondo: cada repintado tira todo el historial y lo vuelve a armar de cero. renderYa() hace lista.innerHTML = "" y después msgs.forEach(pintarMsg) sincrónico (web/index.html:3085), o sea cientos de mensajes con su markdown en el hilo principal. eso corre al tocar una pestaña (abrirTab...
+- 08:48 facundo: A: dale, encolo el arreglo de raíz: render incremental, pestaña instantánea desde cache y nada de red en el gesto / claudio: dale: encolo el arreglo de raíz del board.
+- 08:57 facundo: que pasa en la cola? por favor encargate que no queden más cosas colgadas. te lo pido varias veces por dia esto / claudio: la cola de hoy está sana; lo colgado es viejo y nadie lo barre. ahora mismo: 1804 ventana corriendo (pid 1468524 vivo, 15 min), 1805 pestana esperando por web/index.html (choque real con la que corre), 1806 addons de awtomic arranca en el próximo ciclo. cola_trabada da caidas: [], o sea nada trabado hoy. lo que sí...
+- 09:04 facundo: C: además de barrerlas, que la cola nunca deje una orden en [!] sin reintentar al menos una vez sola / claudio: dale: la C, que es la A más el reintento automático.
+- 09:04 facundo: (tarea ventana: tema tools: [toca: recetas/usage_claude.py, recetas/reparto_cuentas.py, web/widg) / claudio: terminó ventana (opus, chrome, cuenta faacuu (opus), 23 min, $6.79): Arreglado, y con la barrita mirada en el board. Eran dos cosas, no una. La de fondo: /api/oauth/usage le...
+
+## [juegos] lo que se hizo en juegos
+lo que hablo facundo en la pestaña:
+- 10:09 facundo: JUEGOS 1- bajé "todos" los juegos de GC que me pasaste hace poco. dentro de GC en Downloads de la mac 2- bajé "todos" los juegos de wii que me pasaste hace poco. dentro de wii en Downloads de la mac 3- chequeá ambas listas 1ro - me falta algo? 2- estos juegos me gustan? estas... / claudio: miré la planilla: rp5/redump-gc-wii-2026-09-22.md. gc son 15 juegos en 20 discos (los de 2 discos: Resident Evil remake, RE Zero, Baten Kaitos, Tales of Symphonia y Killer7), wii son 7. sobre si te van a gustar: los elegí yo con tu criterio de siempre, no hay nada de baile ni party. dos avisos honestos antes de que...
+- 10:11 facundo: bueno primero hacemos GC , luego vemos wii. fijate lo que te digo SOLO DE GC. y dejas DKJB y RHF marcados para mas adelante si queremos hacer lugar o si los pruebo y no me gustan / claudio: entendí: arrancamos solo con gc, wii queda para después. Chequeo la carpeta GC de Downloads de la mac contra la planilla, disco por disco, y te digo qué falta y qué está mal bajado. Si da limpio, sigo con .rvz, copia a la SD y prueba de los juegos uno por uno con fps medido. Donkey Kong Jungle Beat y Rhythm Heaven...
+- 10:12 facundo: A: dale, encolo el chequeo de GC contra la planilla y, si da limpio, sigue con .rvz + copia a la SD + prueba de los juegos con fps, y DKJB y RHF quedan marcados como candidatos a salir / claudio: dale, encolo.
+- 10:17 facundo: (tarea planilla: tema juegos: [toca: /home/agente/.claudio/juegos/rp5/redump-gc-wii-2026-09-22.md) / claudio: terminó planilla (opus, cuenta faacuu (opus), 4 min, $1.60): [juegos] chequeo hecho, no da limpio, así que freno antes de convertir (la orden decía eso). los 19 archivos de ~/Downloads/GC los hasheé en la mac misma, una sola lectura por archivo, así que no viajaron los 26 GiB por la red. 17 juegos / 18 discos dan...
+
+## [tinder] lo que se hizo en tinder
+lo que hablo facundo en la pestaña:
+- 09:51 facundo: el votador de following deberia tener estas acciones: unfollow + ignore , ignore , dejar en {nombre de la lista} / claudio: entendí: en following el pie va unfollow + ignorar a la izquierda, ignorar al medio y dejar en following a la derecha, y el botón de quedarse dice dejar en <nombre de la lista> en todas las listas. es corrección de la orden que ya te venía con el ok, así que sale derecho.
+
+## [log] movimiento del agente
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-215716.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-220246.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-220714.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-213824.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-215450.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 hilos: tope 4 -> 7 (escalon bajo: ram 3171 mb, load 0.29 por cpu)
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-213453.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-200046_1.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:19 hilos: tope 7 -> 4 (escalon medio: ram 2944 mb, load 0.31 por cpu)
+- 10:20 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-215119.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:20 claves_fuga: tape 1 valor(es) de la boveda en ~/.claudio/tools/agente/logs/20260922-215119_1.txt (backup en backup/claves-fuga/), sin molestar a facundo
+- 10:20 hilos: tope 4 -> 7 (escalon bajo: ram 3300 mb, load 0.26 por cpu)
+- 10:20 chat lan: token rechazado (no es del duenio del buzon)
+- 10:20 hilos: tope 7 -> 4 (escalon medio: ram 2983 mb, load 0.26 por cpu)
+- 10:20 hilos: tope 4 -> 7 (escalon bajo: ram 3080 mb, load 0.26 por cpu)
+- 10:20 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 10:20 prueba_falsa: el parche mecanico del guard NO la dejo verde, lo revirti (backup en backup/prueba_falsa.py.20260923-102049): queda el aviso
+- 10:21 chat lan: token rechazado (no es del duenio del buzon)
+- 10:22 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+- 10:22 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 10:22 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 10:22 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+-...
