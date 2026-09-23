@@ -1,8 +1,66 @@
-# actualizado hoy a las 04:48
-actualizado hoy, martes veintidós, a las cuatro cuarenta y ocho.
+# actualizado hoy a las 03:45
+actualizado hoy, miércoles veintitrés, a las tres cuarenta y cinco.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# la cuarta cuenta de claude, y la pestaña que se quedó sin crédito
+a las diez y media me pediste dar de alta la cuenta de claude de awtomic como cuarta cuenta del sistema, con el login ya hecho y aprobada, y que entre al reparto como las otras tres. te dije lo que iba a hacer y quedó entendido así.
+
+el mismo día, más tarde, eso se cruzó con un pedido tuyo en la pestaña de flaudio: querías que esa pestaña contestara con fable y por la cuenta de awtomic, dejando el resto del sistema como está. te marqué que hoy eso no sale solo, por dos candados tuyos: el reparto tiene a awtomic fuera del pool general y solo primera en los temas de awtomic. elegiste la opción de hacer la excepción únicamente para esa pestaña, el resto intacto, y encolé la orden.
+
+y ahí apareció lo que no se había previsto. dos mensajes tuyos seguidos volvieron con la respuesta vacía: fable pedía créditos de uso. la pestaña había quedado fija en fable de la cuenta de awtomic, y esa cuenta no tiene crédito para ese modelo. te lo dije de frente cuando pude contestarte, y esa respuesta salió con opus.
+
+antes, a la mañana, ya había habido un aviso parecido pero por otro lado: la cuenta faacuu estaba por cortar, con la ventana semanal en noventa y siete por ciento. te avisé que cuando cortara te iba a contestar sin claude, solo con lo que no necesita modelo, y que volvía al mediodía. con margen quedaba orugote, y te dejé dicho cómo cambiarte.
+
+# el daemon no se murió: se congeló
+cerca de las cinco y media de la tarde me contaste que hacía un rato se había caído el daemon y tuviste que entrar por claude remoto para levantarlo. me pediste dos cosas: cómo evitamos que vuelva a pasar, al menos lo que pasó esta vez, y qué alternativa tenemos si claude remoto también se cae.
+
+lo miré con el rastro en la mano y la respuesta corta es que no se cayó el proceso: se congeló. el servicio nunca murió, sigue vivo desde las tres y cuarenta y siete de la tarde, y el corte que aparece en el registro es del propio watchdog. lo que sí pasó es que el latido quedó clavado doce minutos desde las tres y treinta y cinco. en el registro de errores el último rastro es un fallo al leer algo que estaba vacío.
+
+elegiste la opción de una sola orden con las tres cosas del daemon: techo de memoria, el latido bajado a cuatro minutos, y un aviso al celu en el primer reinicio, más el link del kit adentro del aviso y una prueba semanal que verifique que todo eso sigue en pie.
+
+esa orden cerró. el daemon ahora tiene techo de memoria, con un límite blando y uno duro, y los seis pasos quedaron cerrados y verificados. adentro apareció además una sorpresa grande que no estaba en el plan.
+
+# fuzzer no le contesta nada a nadie de afuera
+pasado el mediodía me escribiste fuerte sobre esto: el mensaje automático de "lo veo" en fuzzer solo puede ser para conversaciones internas, o sea entre la cuenta de la banda, santiago y orugote. a alguien de afuera no le responde nada automático. ni un acuse, ni una respuesta, nada.
+
+lo entendí así y te lo repetí para confirmar: el acuse sale solo cuando el mail viene de adentro. si es de afuera, no sale nada. y te dije que iba a arreglar el filtro y revisar qué pasó con unity, que fue donde saltó.
+
+elegiste la opción de cancelar lo de las remeras y el presupuesto, arreglar el filtro y dejar su prueba, todo junto.
+
+el contexto de eso viene de un rato antes. a la mañana escribiste el mail para los proveedores de remeras: treinta remeras negras, talles surtidos, estampa grande, para el show del veintiocho de noviembre en el salón pueyrredón. te dije que faltaban dos cosas que no invento: a cuáles de los ocho proveedores iba, y las direcciones, porque ninguno tenía mail confirmado y había que sacarlo de su web o de su formulario.
+
+elegiste mandarlo a los cuatro que pasaron la auditoría: unity, remanija, naga y estampa ya. salió desde la cuenta de la banda, uno por uno, sin copia entre ellos, con el texto exacto que aprobaste. de los cuatro llegaron tres: los tres quedaron en enviados y no volvió ningún rebote. el cuarto no tenía mail publicado, así que a ese no se le mandó nada.
+
+# el alta de galicia, el monotributo y la tarjeta que no servía
+temprano, cerca de las ocho y cuarto, elegiste probar en vivo si arca aceptaba la tarjeta de deel para el débito automático. te avisé antes de que saliera: arca acepta tarjeta de crédito, y la de deel es prepaga de débito, así que si el formulario la tomaba pero después el débito rebotaba, la cuota quedaba impaga con intereses. la orden verificaba en pantalla qué tipo de tarjeta estaba aceptando.
+
+la respuesta fue corta y clara: la tarjeta de deel no sirve, y no quedó nada adherido. quedó todo documentado con capturas y los textos que aparecieron, y la tarea cerró limpia, sin procesos vivos, sin pestañas abiertas y sin fuga de claves.
+
+con eso elegiste la otra vía: abrir la caja de ahorro en pesos de galicia, habilitar la declaración de cbu y adherir con ese cbu, todo encadenado en una orden. te avisé que el alta online de galicia en algún punto pide selfie con el documento o validación biométrica, y eso lo tenés que hacer vos desde el celu: la orden llega hasta ahí, te avisa y sigue con lo demás cuando la cuenta esté.
+
+de los tres pasos salió el del medio, y trajo una corrección. la declaración de cbu funciona. lo que no se puede es adherir desde el administrador de relaciones: por los dos caminos contesta que el servicio a delegar no se puede adherir. entrando directo por otro lado sí.
+
+después te ofrecí terminar el alta de galicia, registrar el cbu con el check de monotributo pago y adherir el débito, todo de una, con el estado civil como único dato que me faltaba.
+
+también quedó anotado tu celular en el archivo de cobros del exterior: en los formularios de galicia va el área once y el número sin el nueve, y ese mismo número al tocar validar teléfono.
+
+# el ticket de ponzi, y el cambio del flow
+a las nueve me pediste ver rápido en qué quedó lo del shipping flow de ponzi. estaba en need eng work, asignado a vos, con las etiquetas de hecho por el agente, necesita humano y saltear, y el último movimiento era del lunes a la tarde. estaba bloqueado por otro ticket de awtomic, con el link ya limpio, y el mensaje a producto y diseño había salido el catorce.
+
+después preguntaste por el diff del mvp: si era cortito, si el cambio en el flow es obligatorio, y sobre todo cómo afectaría a los merchants que ya están usando esa parte de shopify flow.
+
+es chico: unas noventa líneas que entran y doce que salen en la api del shipping rate, más catorce en la extensión, que son dos campos nuevos. la lógica pesada de renombrar ya existía, acá solo se usa. y no es obligatorio: los dos campos van como no requeridos, y el renombrado solo corre si alguno viene con un valor. si vienen vacíos, para el merchant que ya lo usa no cambia nada.
+
+para el mediodía el ticket había cambiado de estado: pasó a in progress con ingeniería, seguía asignado a vos y con las mismas etiquetas, movido esa misma mañana temprano en hora del pacífico. no hubo comentario nuevo: fue estado y etiquetas, no gente. lo último hablado había sido el día anterior, cuando mari preguntó si se puede poner ups como código de envío.
+
+con eso se actualizó el archivo de estado del qa: la línea que decía que se esperaba respuesta de brian ya no dice eso, ahora dice que está en curso con ingeniería y asignado a vos.
+
+# los dos comments de penfolds, con dos minutos de separación
+a las ocho y cuarto me dijiste que ya se podía hacer el comentario final y los pasos de setup, con dos minutos de separación entre uno y otro. salió ahí mismo, con el orden que pediste: primero el comentario final del ticket de la personalización de la página de producto de vinos, y los pasos de setup después.
+
+los dos salieron públicos y como vos, con dos minutos entre uno y otro. el primero es el comentario final con las dos correcciones que habías pedido: el tercer párrafo reescrito y sin la línea de avisame y quedamos a la espera. el ticket no se tocó en nada más.
 
 # los saturn que faltaban: convertir y probar los veintinueve
 cerca de las once menos diez de la mañana me pediste algo concreto con los juegos de saturn: copiarlos del disco black a la retroid, pero probándolos todos, uno por uno, y con una vara clara: el mínimo es la resolución y el framerate originales de la consola. nada de "anda más o menos".
@@ -182,6 +240,43 @@ con eso arriba de la mesa elegiste bajar el peso de mistral en el ranking hasta 
 y encolaste dos cosas juntas: que el ranking pueda puntuar aunque falten seguidores, reescalando sobre las señales que sí hay, igual que ya hace con las cuentas privadas, para que super candidatas te muestre gente hoy mismo; y que el board avise cuando la lista está vacía por falta de lecturas en vez de mostrarse pelada.
 
 media hora después preguntaste qué pasó con esa tarea. no llegó a arrancar: entró a las diez y veintidós, el guard la marcó caída a las once menos veinte por quedarse sin proceso y sin latido, y el agente la reprogramó sola como reintento. ninguna de las dos alcanzó a tocar código.
+
+# la vista de documentos: dos controles arriba y el ancho aprovechado
+a las nueve menos diez me dijiste que la vista de documentos está buena pero le faltan cosas: poder ordenarse por fecha, poder agruparse o no por tema, y aprovechar mejor el ancho en escritorio.
+
+te conté lo que había hasta ese momento: el server armaba el índice ya agrupado por tema y ordenado por fecha dentro de cada grupo, así que el board no tenía de dónde sacar ni una lista plana ni otro orden.
+
+elegiste la opción de los dos controles arriba del índice, agrupar sí o no y orden por fecha o por título, y en escritorio el índice a la izquierda con el documento al lado, a ancho completo.
+
+salió y quedó verde. los dos controles van en una fila arriba del índice, con el mismo molde que las solapas, y en escritorio la vista se parte en dos.
+
+# volvió el tick del ritmo en el widget de consumo
+a las cinco y media de la tarde cerró una cosa chica pero molesta: en el widget de consumo del board había desaparecido el tick de ritmo de cada fila. se había ido por error, arrastrado cuando se sacó el pie del widget. volvió a pintarse, con sus dos pruebas, y la regla quedó anotada donde va.
+
+# el votador: tocar a una persona y caer parado en ella
+cerca de las siete de la tarde cerró el cambio de entrar al votador desde una lista: tocar a una persona ahora te mete en el votador de su lista, parado justo en ella, reusando lo que ya estaba. el chequeo de los dos lados dio que coincide con lo que pediste.
+
+esa noche, cerca de las once, se cerró también el último paso del lote de cambios de las listas, y de paso apareció un estropicio del primer paso que no estaba visto: lo de que la lista de los que seguís junte a toda cuenta que seguís y no esté en otra lista no coincidía con el embudo real.
+
+antes de eso, ese lote se había quedado a mitad de camino: una corrida llegó al límite de sesión de la cuenta de awtomic y quedó encolada esperando el reset de las tres menos diez de la mañana. volvió a salir después por otra cuenta y cerró.
+
+hubo además una tanda tuya de cinco puntos sobre el tinder: que las listas muestren el número automáticamente y, si el número puede estar mal, que no muestren nada; que el texto de dejar a alguien en la lista de duda diga solo eso donde corresponde; y unas cuantas cosas más. te contesté dos con el código en la mano, entre ellas cómo funciona hoy el filtro de las mejores candidatas, que son dos filtros encadenados: primero el universo limpio, gente que no te sigue, que no seguís, sin follow tirado. elegiste encolar una sola orden con los cinco puntos.
+
+y de madrugada cerró lo de los botones del votador, el que define desde un archivo qué botones aparecen en cada lista.
+
+# quién cobra primero, y la mesa de panelistas
+a la hora y media del mediodía cerró la revisión de la facturación de las cuentas de claude, abriendo el navegador con el perfil de cada una. la primera en cobrar es orugote, el cuatro de octubre, antes que la tuya. la página de facturación de orugote la pude ver en pantalla; la de faacuu no, así que esa fecha salió de la interfaz de programación, sin verla con los ojos.
+
+y a las tres y diez de la tarde me pediste ver qué panelistas tengo listos para armar una mesa y darle más vueltas al tema del tinder. configurados hay cinco, pero listos de verdad son menos: en la primera ronda contestaron dos de forma seria. el más grande de mistral fue el único que anduvo en las tres rondas y es el que decide; el de gemini quedó segundo, con herramientas y siendo el que puede mirar fotos.
+
+# lo que se movió en el agente de madrugada
+cerca de las cuatro menos veinte de la mañana el daemon arrancó de nuevo y quedó escuchando en la red de casa, con el tope de hilos en siete porque la máquina estaba en el escalón bajo de memoria y carga. quedó anotado otra vez que el tema de flabs no tiene carpeta en esta máquina, así que sus órdenes se rutean a herramientas.
+
+en ese mismo rato se probó el detector de trabajo a medias y funcionó en los dos sentidos: cuando una tarea dice que sigue corriendo y hay un proceso vivo, se da por buena; cuando dice lo mismo y no queda nada vivo, cuenta como fallo.
+
+también se ve en el registro el candado que pusiste sobre fable: cada vez que algo pide fable sin que esté habilitado, sale con opus y queda anotado. y en un caso donde vos lo escribiste explícito, el registro dice que manda lo que pediste vos.
+
+el recolector borró siete temporales, la conexión por internet quedó de respaldo con tope bajo, y un aviso repetido no se reenvió porque ya había salido uno igual hace poco. hubo también un cambio de sistema de prueba, aplicado con su vuelta atrás automática a los sesenta segundos.
 
 # la foto del votador en el celular
 a las once menos diez se cerró el cambio de la foto en el votador de instagram. en celular, la foto de la tarjeta pasa a ocupar el ancho completo, y eso vale también para la lista virtual de super candidatas. toca la hoja de estilos y el shell del board, nada más.
