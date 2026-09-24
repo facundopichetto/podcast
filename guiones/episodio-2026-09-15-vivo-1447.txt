@@ -1,8 +1,44 @@
-# actualizado hoy a las 10:24
-actualizado hoy, miércoles veintitrés, a las diez veinticuatro.
+# actualizado hoy a las 04:00
+actualizado hoy, jueves veinticuatro, a las cuatro en punto.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# hafner: la regla de escribir corto, y el comment que se rehizo cuatro veces
+a las once y veinte me paraste en seco con hafner. el pedido fue claro: muy breves, decir qué se arregló y qué falta, y nada más. lo pusiste en una frase que me quedó grabada: si pongo diez palabras, leen una, así que mejor poner una y que tenga sentido. y aclaraste que eso no es una regla de awtomic sino una regla general de la vida, para todo, incluso cuando te hablo a vos. nadie quiere leer pelotudeces, no hay tiempo, para eso está la inteligencia artificial.
+
+quedó guardada así, general y para siempre. el efecto inmediato fue que los dos drafts que tenía para hafner se fundieron en uno solo, corto.
+
+después vino el ida y vuelta para que el comment realmente sirviera. la primera versión era demasiado seca y me dijiste que tampoco escriba como un retrasado mental, que tiene que tener sentido, y que explique un poco más la parte de la api. la rehice con eso. la segunda te seguía sobrando: pediste sacar lo de "want them created" y explicar que la situación de hoy es que el rosé está aparte, que no pueden ir dos planes, y que el otro tiene que incluir al rosé. la rehice de nuevo.
+
+la tercera pasada fue la más filosa. me hiciste tres preguntas juntas: por qué no pusheé al live, que saque la explicación de dónde lee el customer portal y de cómo se mandaba antes —eso lo marcaste como el tipo de cosa innecesaria de decir—, y por qué había saltos de línea en el medio de las líneas. lo del push te lo contesté derecho: no pusheé porque un push al theme live necesita tu ok explícito, que es la regla de siempre.
+
+el contenido del arreglo, que es lo que importa, quedó así: el fix del gift form está hecho sobre el theme live pero sin pushear, y ahora el nombre, el mail y la nota del destinatario viajan pegados a la línea de la subscription. antes se mandaban con nombres inventados a nivel contrato, donde nada los lee. lo que falta es del lado de la api: rechaza atributos a nivel línea, así que hasta que eso no salga, los datos no aterrizan. y el add-on del rosé está inerte porque hay un solo selling plan por contrato.
+
+# el aislamiento de pestañas: lo que compartían y los cinco arreglos
+a las once y cuarto de la noche me preguntaste algo directo: cómo puedo asegurarme de que lo que preguntás en una pestaña se quede en esa pestaña. te contesté con lo que sabía sin abrir el código: lo que me llega en cada turno es el historial de esa pestaña y nada más, no tengo forma de leer lo que hablaste en otra aunque quisiera.
+
+pero no te alcanzó con mi palabra, y estuvo bien. encolaste una revisión del daemon para ver, pestaña por pestaña, qué contexto se comparte y qué no. el resultado fue incómodo: se aísla de verdad poco. lo que sí está separado es el log de la pestaña, la charla que entra al prompt, el resumen rodante, el carril de la cola y la cuenta con su modelo. el resto es común.
+
+encolaste un solo arreglo con las cinco cosas, por orden de gravedad y con pruebas. terminó en veintitrés minutos, con las cinco marcadas como arregladas y la prueba de aislamiento cerrando en verde.
+
+después de eso viniste con la sospecha de que seguía mezclando, y preguntaste si era porque el historial mezclado ya estaba guardado de antes. mi primera hipótesis fue esa: el arreglo cambia lo que se guarda y lo que se manda de acá en adelante, pero las líneas viejas ya estaban en el log y en el resumen rodante.
+
+no te cerró, y tenías un caso concreto: me habías preguntado algo de otra pestaña de awtomic y la respuesta apareció ahí mismo, justo después de preguntarme por las pestañas mezcladas. fui a mirar los archivos: los logs están separados de verdad, cada pestaña tiene el suyo, y el resumen de esa hablaba solo de aislamiento y de nada más. o sea que el prompt que me llega ahí no trae lo de las otras. la conclusión fue que lo que estás viendo mezclado no es lo que yo leo: es otra cosa, del lado del board. encolaste la revisión del board.
+
+el síntoma lo habías visto varias veces esa noche desde distintas pestañas: preguntaste por un ticket y te contesté en otra; pediste hacer algo live y la respuesta se fue a otro lado; preguntaste cómo había salido una tarea y te preguntaste si te había respondido en otra pestaña. cada vez tuve que repetir la respuesta donde correspondía.
+
+# hall: el push al live del gate del portal
+a las once y veinte de la noche preguntaste qué pasaba con el ticket de sacar la regla de treinta días y usar el "on hold". estaba en need eng work, asignado a vos, reportado por emily, con las etiquetas de que el agente necesita una persona y de que quedó a medias. el agente de brian ya lo había analizado esa mañana y lo había dejado listo, clasificado como cambio de theme, esfuerzo chico, con el diff conceptual.
+
+me preguntaste cuál sería el cambio puntual. estaba medido: un solo archivo del theme live de hall. son dos cambios. el primero es el gate del customer portal, donde la condición de hoy mezcla que no esté deshabilitada la customización, que no esté bloqueado el pickup, y una excepción de bloqueo de edición combinada con que no se haya facturado hace poco. el segundo es que la función que decide si una subscription está en hold mire también la marca de hold.
+
+dijiste hacelo live. antes de tocar el live te dejé el detalle exacto, que es lo que autoriza el push: la store, el número del theme live, el único archivo que se toca, y las dos advertencias. tocaste la opción y quedó encolado con relogin del cli, backup del asset actual y push del archivo al live con los dos cambios.
+
+# el board se destrabó: el repintado ya no rearma nada
+a las diez y media te avisé que había terminado la tarea del board, esa que se bloqueaba uno o dos segundos en cualquier cosa. tardó ochenta y cinco minutos. la causa era una sola y tenía cinco puntas, todas en el mismo archivo del board.
+
+el corazón del arreglo es que el repintado del historial ya no rearma nada. cada burbuja lleva ahora su propia clave, que es el identificador del mensaje, y su propia firma, que es todo lo que se pinta de ella. al sincronizar la lista, la burbuja que no cambió se reusa tal cual está en vez de volver a construirse.
 
 # hall: el bug de emily y lo que ve brian no son lo mismo
 a las ocho y cuarto me pediste mirar el ticket de hall, el de la investigación por addons, y leer la descripción y las respuestas antes de opinar. lo leí entero. lo que reporta emily es que el grupo de addons apuntaba a una collection y, en ese modo, el flujo del portal —caja, addons, compra— no andaba; ya lo habían vuelto a productos sueltos antes de que yo lo mirara.
@@ -263,6 +299,71 @@ a las siete y cuarto preguntaste cómo venía la cola, si estaba bien o si habí
 después pediste largar una de las corridas del consejo y archivar las fallidas de más de dos días. la primera ya había terminado, así que para que vuelva hay que encolarla de nuevo. y el archivado dejó un número distinto al que decía el turno nocturno: archivé dos, no treinta y cuatro. el número de la noche contaba todas las fallidas, pero la regla es "más de dos días", y con el corte de hoy solo dos lo pasaban. las otras treinta y cuatro son más nuevas que el corte, catorce de ellas del mismo día.
 
 a las diez menos veinte pediste el cruce completo: mirar lo que falló, lo que hay y lo que se está haciendo, y decir qué falta. de las treinta y cuatro fallidas, la mitad es ruido: se rehicieron después con otro nombre. lo que falló y nadie está cubriendo hoy es el clasificador de recursos de la cola, que se cayó cuatro veces, la última a las nueve menos cuarto de la mañana. y pediste algo para adelante: que antes de que se ejecute cada uno de los que faltaron, haya un paso previo.
+
+# la pc de lanús y la impresora del papá: sigue offline
+hubo dos intentos de entrar por escritorio remoto a la pc de lanús para dejar andando la impresora del papá. el de la mañana terminó sin entrar: la pc sigue offline en el relay, así que los cuatro pasos quedaron sin empezar. el identificador que pasaste es el mismo de siempre, pero la clave temporal es nueva, y eso significa que alguien abrió el escritorio remoto de allá y la leyó. quedó una segunda tanda encolada para volver a intentarlo.
+
+# el tapador de claves ahora distingue campos
+terminó la tarea de las claves, en diez minutos, y quedó probada con un texto real. el tapador ahora decide campo por campo: mira el nombre del campo y define si ese valor es secreto o no. entran como secretos las contraseñas, los pines, los códigos de seguridad, los tokens, las claves de api, los números de cuenta y las frases de recuperación. el resto no se tapa, así que lo que se lee sigue siendo legible.
+
+# la prueba del board estaba vieja, no el board
+hubo una prueba del board que fallaba por dos expectativas de tamaño de letra. antes de tocar nada verifiqué el css: los dos selectores en cuestión pintan trece píxeles, en el bloque base, sin ninguna media query que los pise, y el tope de texto está en dieciocho. o sea que la prueba estaba desactualizada, no el board. cambié la prueba y quedó verde. después encolaste estabilizar otra prueba del board, la del render, midiendo tres veces y quedándose con la mediana.
+
+# los dieciocho discos de gamecube, convertidos y probados
+terminó la conversión de gamecube, en cuarenta y siete minutos. los dieciocho discos quedaron convertidos y verificados, diecisiete ya copiados a la tarjeta, y trece juegos probados uno por uno. veinticuatro giga y medio en crudo pasaron a bastante menos.
+
+antes de eso habías agregado los dos que faltaban, resident evil zero y viewtiful joe. los metí en la misma tanda para que se hashearan contra la base de referencia y, si daban bien, entraran a convertir con el resto.
+
+al mediodía sumaste los que faltaban de gamecube y también algunos de wii. como la tanda de tuneo ya estaba por salir, lo que encolé fue una tanda nueva: hashear lo que hubiera en la carpeta de descargas que todavía no estuviera verificado.
+
+# el tuneo de resolución interna no sirvió, y quedó revertido
+la prueba fue bajar a resolución interna uno dos juegos pesados de gamecube y medir cuánto ganaban. terminó en veintiún minutos y el resultado fue que no sirve. rogue squadron tres pasó de treinta y nueve con dos a treinta y nueve con nueve cuadros, y fire emblem bajó de cincuenta y cuatro con ocho a cincuenta y cuatro con cuatro. eso es ruido, no mejora. quedó revertido. tu conclusión fue que no hay que bajar la resolución interna global si la mayoría de los juegos no la necesitan.
+
+también quedó encolada la remedición de todos los juegos de play dos y después los de psp, con el script de medición ya arreglado, el que espera cinco segundos después de cerrar el juego y no mide la pantalla de título.
+
+# el votador de following: cada botón dice lo que hace, y el celular ya scrollea
+terminó el votador, en treinta y tres minutos, con los cuatro pasos cerrados y verificados contra producción. quedó como lo pediste: en following, a la izquierda unfollow más ignorar, al medio ignorar, y a la derecha dejar en following. el botón de quedarse, en todas las listas, dice el nombre de la lista.
+
+a la noche abriste el tinder en el celular y no podías scrollear para abajo, ni en la home de listas ni en el votador. miré los estilos antes de encolar nada: el html del board está clavado, sin scroll, así que solo scrollea el contenedor que lo tiene habilitado adentro, y tanto la home como la fila del votador sí lo tienen. con eso apuntado quedó la orden.
+
+en el mismo rato notaste que la lista de limbo, a la que le habías puesto cosas, estaba vacía. no se perdió: están en el backup y se pueden devolver. los catorce votos a limbo quedaron registrados como hechos, con fecha y hora.
+
+# la pestaña de awtomic y su cuenta: ya estaba, pero el consumo asusta
+preguntaste si la pestaña de awtomic usa la cuenta de awtomic. ya está así, no había nada que encolar: la pestaña está fijada a esa cuenta y además la cuenta está reservada para los temas de awtomic, así que el reparto general nunca la elige.
+
+después preguntaste por qué no veías subir el consumo si estuviste trabajando con awtomic. sí sube, y bastante: está en veintiséis por ciento de la semana, pero esa semana arrancó hace poco más de un día y renueva recién en cinco días y monedas. a ese ritmo llega al tope antes del reset. otra cuenta marca el mismo veintiséis por ciento pero con la semana casi entera corrida, así que awtomic viene consumiendo mucho más rápido.
+
+también preguntaste qué cuenta usan las órdenes de la cola que vienen de awtomic. la respuesta es la misma: las órdenes con tema awtomic van siempre a esa cuenta, primero.
+
+# fuzzer: nada automático, y el draft de nic
+a las nueve y cuarto de la noche pediste chequear que estuviera todo en pie antes de contestarle a santi. lo chequeé: el sitio y el www responden bien desde el cdn, con cache caliente y en tres décimas de segundo, y los dos redirects andan. lo único que no existe es una ruta de código qr, pero eso no lo tocó santi.
+
+después vino la regla, y es fuerte: nada de respuestas automáticas, ni siquiera el "lo veo y te respondo". el sistema lee y te avisa, y vos decidís. salió también la tarea de las seis de la mañana. el acuse automático ya estaba sacado.
+
+hubo un momento en que te reescribí un texto que no correspondía reescribir: el texto era tuyo, yo solo tenía que meterle el link. tenías razón, fue de más. quedó tal cual lo escribiste, con el link del flow y sin el guion largo.
+
+y apareció el draft para nic, el del problema de acceso. la lectura es que no es el plan ni la instalación sino los permisos: su usuario figura como member en el dev store y member no tiene ningún permiso, así que toda pantalla le da acceso denegado. me preguntaste si eso lo podemos hacer nosotros en vez de depender de ashley, y la respuesta es sí, por dos caminos, y los dos son nuestros: los roles viven en la configuración de la tienda, en la pantalla de permisos de usuario, que lo único que hace es guardar los settings.
+
+# el rollup del carrito de gatlinburg: arreglado y esperando tu ok
+el fix del total de línea del carrito está hecho, buildeado y verificado con capturas, en un theme sin publicar: nada tocado en el live, nada posteado. terminó en veinte minutos.
+
+lo que encontró: el theme pinta el total de línea dos veces por fila, una para celular y otra para escritorio, y el código escribía con un selector único que caía en la celda del celular. en escritorio se veía la primera botella en vez del total del bundle. el arreglo pasa a escribir en todas las apariciones, y la librería subió de versión.
+
+al día siguiente a la una y media pediste un draft de resolución. como el fix está en un theme sin publicar y el live todavía no se tocó, el comment que corresponde es el que le pide a emily el ok para pushear al live.
+
+# la clave nueva de la mac entra a las dos máquinas
+terminó rápido, en cuatro minutos: la clave pública nueva de la mac ya entra a las dos máquinas, y el documento del server quedó rotado con la huella nueva. la clave se sumó a las autorizadas del server.
+
+# la madrugada: instagram frenado y el buzón rechazando fotos
+cerca de las tres y media el agente quedó con el tope de hilos en siete, por carga baja, y hablando por la nube con github de respaldo.
+
+instagram avisó dos veces lo mismo: la sesión está viva pero frenó las lecturas de lista. la foto del día reintenta sola y no hace falta resembrar cookies, así que el aviso salió sin sonar el celular. el segundo se agrupó con el primero y no se reenvió.
+
+lo que sí dio trabajo fue el buzón de la red de casa: varias subidas de fotos de instagram rebotaron y quedaron para reintentar después, y en el medio el token quedó rechazado cuatro veces seguidas por no ser del dueño del buzón.
+
+a las tres y cuarenta y cinco se publicó una versión nueva del board. y el chequeo a los veinte minutos de la tarea del board dio que venía avanzando, con ciento cincuenta y cuatro turnos y escribiendo en ese mismo momento, así que no la toqué. terminó bien poco después, con reintento, en veinticinco minutos, aunque declaró que iba a tocar dos archivos y al final no escribió ninguno.
+
+fable sigue prohibido, así que todo lo del chat sale con opus.
 
 # instagram sigue sin datos, y el peso de mistral bajó
 a las diez y veinte me dijiste que no veías la lista de super candidatas y si la podía arreglar. no era el board: está vacía de verdad. el archivo del ranking se reescribió a las dos menos cinco de la mañana con dos mil en el universo, cero rankeadas y dos mil sin datos. la causa es que instagram te tiene la interfaz privada frenada desde ayer a la tarde, así que no entran lecturas.
