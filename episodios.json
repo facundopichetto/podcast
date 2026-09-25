@@ -9,7 +9,7 @@
   {
    "id": "ep-2026-09-15-vivo-1447",
    "fecha": "2026-09-15",
-   "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 08:49",
+   "titulo": "vivo · mar 15/9 desde 05:46 · actualizado 09:50",
    "temas": [
     "audio",
     "awtomic",
@@ -30,624 +30,672 @@
     "tinder",
     "tools"
    ],
-   "palabras": 19943,
+   "palabras": 21740,
    "guion": "episodio-2026-09-15-vivo-1447.txt",
    "voces": {
     "daniela": {
      "archivo": "audio/ep-2026-09-15-vivo-1447-daniela.mp3",
-     "duracion": 5734.8,
+     "duracion": 6232.1,
      "capitulos": [
       {
        "t": 0.0,
-       "titulo": "actualizado hoy a las 08:49",
-       "duracion": 3.6,
+       "titulo": "actualizado hoy a las 09:50",
+       "duracion": 3.4,
        "archivo": "audio/ep-2026-09-15-vivo-1447-1-actualizado-hoy-a-las.daniela.mp3"
       },
       {
-       "t": 3.6,
+       "t": 3.4,
        "titulo": "de que va",
-       "duracion": 23.7,
+       "duracion": 24.1,
        "archivo": "audio/ep-2026-09-15-vivo-1447-2-de-que-va.daniela.mp3"
       },
       {
-       "t": 27.3,
-       "titulo": "el ticket del shipping rate de awtomic: listo a medias, y lo que falta es justo lo que pediste",
-       "duracion": 63.3,
+       "t": 27.6,
+       "titulo": "el ticket del shipping rate: el rate vacío ponía el envío en cero, y se arregló",
+       "duracion": 43.8,
        "archivo": "audio/ep-2026-09-15-vivo-1447-3-el-ticket-del-shipping.daniela.mp3"
       },
       {
-       "t": 90.7,
-       "titulo": "el ticket del shipping rate: sí se testeó de punta a punta, y hay capturas",
-       "duracion": 51.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-4-el-ticket-del-shipping.daniela.mp3"
+       "t": 71.3,
+       "titulo": "los cuerpos de los dos pull requests: el hook los frenó tres veces, y está bien que lo haya hecho",
+       "duracion": 89.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-4-los-cuerpos-de-los-dos.daniela.mp3"
       },
       {
-       "t": 142.0,
+       "t": 160.4,
+       "titulo": "los votos de following no se habían registrado, y se repusieron",
+       "duracion": 65.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-5-los-votos-de-following.daniela.mp3"
+      },
+      {
+       "t": 225.9,
+       "titulo": "el backup de black no está corriendo, y no hay nada que esperar",
+       "duracion": 66.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-6-el-backup-de-black-no.daniela.mp3"
+      },
+      {
+       "t": 292.0,
+       "titulo": "el ticket del shipping rate de awtomic: listo a medias, y lo que falta es justo lo que pediste",
+       "duracion": 64.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-7-el-ticket-del-shipping.daniela.mp3"
+      },
+      {
+       "t": 356.2,
+       "titulo": "el ticket del shipping rate: sí se testeó de punta a punta, y hay capturas",
+       "duracion": 50.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-8-el-ticket-del-shipping.daniela.mp3"
+      },
+      {
+       "t": 406.9,
        "titulo": "el cuil que dije que guardé y no estaba",
        "duracion": 66.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-5-el-cuil-que-dije-que.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-9-el-cuil-que-dije-que.daniela.mp3"
       },
       {
-       "t": 208.2,
+       "t": 473.1,
        "titulo": "una orden anunciada que no llegaba a la cola",
-       "duracion": 44.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-6-una-orden-anunciada-que.daniela.mp3"
+       "duracion": 44.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-10-una-orden-anunciada-que.daniela.mp3"
       },
       {
-       "t": 252.6,
+       "t": 517.8,
        "titulo": "ponzi: los doce pausados reparados en live",
-       "duracion": 48.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-7-ponzi-los-doce-pausados.daniela.mp3"
+       "duracion": 48.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-11-ponzi-los-doce-pausados.daniela.mp3"
       },
       {
-       "t": 301.0,
+       "t": 565.9,
        "titulo": "penfolds: me equivoqué con el form del theme",
-       "duracion": 49.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-8-penfolds-me-equivoque.daniela.mp3"
+       "duracion": 49.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-12-penfolds-me-equivoque.daniela.mp3"
       },
       {
-       "t": 350.4,
+       "t": 614.9,
        "titulo": "la mac sin espacio, y el respaldo antes de borrar",
-       "duracion": 59.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-9-la-mac-sin-espacio-y-el.daniela.mp3"
+       "duracion": 59.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-13-la-mac-sin-espacio-y-el.daniela.mp3"
       },
       {
-       "t": 410.2,
+       "t": 674.2,
        "titulo": "hafner: la regla de escribir corto, y el comment que se rehizo cuatro veces",
-       "duracion": 118.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-10-hafner-la-regla-de.daniela.mp3"
+       "duracion": 119.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-14-hafner-la-regla-de.daniela.mp3"
       },
       {
-       "t": 529.0,
+       "t": 793.3,
        "titulo": "el aislamiento de pestañas: lo que compartían y los cinco arreglos",
-       "duracion": 121.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-11-el-aislamiento-de.daniela.mp3"
+       "duracion": 120.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-15-el-aislamiento-de.daniela.mp3"
       },
       {
-       "t": 650.2,
+       "t": 914.2,
        "titulo": "hall: el push al live del gate del portal",
-       "duracion": 66.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-12-hall-el-push-al-live.daniela.mp3"
+       "duracion": 66.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-16-hall-el-push-al-live.daniela.mp3"
       },
       {
-       "t": 716.3,
+       "t": 980.7,
        "titulo": "el board se destrabó: el repintado ya no rearma nada",
-       "duracion": 31.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-13-el-board-se-destrabo-el.daniela.mp3"
+       "duracion": 31.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-17-el-board-se-destrabo-el.daniela.mp3"
       },
       {
-       "t": 748.0,
+       "t": 1012.1,
        "titulo": "hall: el bug de emily y lo que ve brian no son lo mismo",
-       "duracion": 90.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-14-hall-el-bug-de-emily-y.daniela.mp3"
+       "duracion": 90.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-18-hall-el-bug-de-emily-y.daniela.mp3"
       },
       {
-       "t": 838.6,
+       "t": 1102.9,
        "titulo": "el chequeo de los juegos de gamecube: no dio limpio",
-       "duracion": 79.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-15-el-chequeo-de-los.daniela.mp3"
+       "duracion": 79.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-19-el-chequeo-de-los.daniela.mp3"
       },
       {
-       "t": 917.8,
+       "t": 1182.2,
        "titulo": "el board tardaba en todo, y era una sola causa",
-       "duracion": 53.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-16-el-board-tardaba-en.daniela.mp3"
+       "duracion": 53.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-20-el-board-tardaba-en.daniela.mp3"
       },
       {
-       "t": 971.6,
+       "t": 1236.0,
        "titulo": "la barrita de las cinco horas de awtomic marcaba cien desde ayer",
-       "duracion": 48.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-17-la-barrita-de-las-cinco.daniela.mp3"
+       "duracion": 48.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-21-la-barrita-de-las-cinco.daniela.mp3"
       },
       {
-       "t": 1020.1,
+       "t": 1284.7,
        "titulo": "la cuarta cuenta de claude, y la pestaña que se quedó sin crédito",
-       "duracion": 77.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-18-la-cuarta-cuenta-de.daniela.mp3"
+       "duracion": 78.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-22-la-cuarta-cuenta-de.daniela.mp3"
       },
       {
-       "t": 1097.9,
+       "t": 1363.0,
        "titulo": "el daemon no se murió: se congeló",
-       "duracion": 67.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-19-el-daemon-no-se-murio.daniela.mp3"
+       "duracion": 67.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-23-el-daemon-no-se-murio.daniela.mp3"
       },
       {
-       "t": 1165.5,
+       "t": 1430.4,
        "titulo": "fuzzer no le contesta nada a nadie de afuera",
        "duracion": 83.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-20-fuzzer-no-le-contesta.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-24-fuzzer-no-le-contesta.daniela.mp3"
       },
       {
-       "t": 1249.1,
+       "t": 1513.9,
        "titulo": "el alta de galicia, el monotributo y la tarjeta que no servía",
-       "duracion": 96.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-21-el-alta-de-galicia-el.daniela.mp3"
+       "duracion": 95.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-25-el-alta-de-galicia-el.daniela.mp3"
       },
       {
-       "t": 1345.8,
+       "t": 1609.6,
        "titulo": "el ticket de ponzi, y el cambio del flow",
-       "duracion": 87.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-22-el-ticket-de-ponzi-y-el.daniela.mp3"
+       "duracion": 87.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-26-el-ticket-de-ponzi-y-el.daniela.mp3"
       },
       {
-       "t": 1433.3,
+       "t": 1696.9,
        "titulo": "los dos comments de penfolds, con dos minutos de separación",
-       "duracion": 32.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-23-los-dos-comments-de.daniela.mp3"
+       "duracion": 33.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-27-los-dos-comments-de.daniela.mp3"
       },
       {
-       "t": 1466.1,
+       "t": 1729.9,
        "titulo": "los saturn que faltaban: convertir y probar los veintinueve",
-       "duracion": 92.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-24-los-saturn-que-faltaban.daniela.mp3"
+       "duracion": 93.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-28-los-saturn-que-faltaban.daniela.mp3"
       },
       {
-       "t": 1558.8,
+       "t": 1822.9,
        "titulo": "hall: esconder productos del portal, todo por css",
-       "duracion": 91.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-25-hall-esconder-productos.daniela.mp3"
+       "duracion": 91.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-29-hall-esconder-productos.daniela.mp3"
       },
       {
-       "t": 1650.6,
+       "t": 1914.2,
        "titulo": "el votador de super candidatas no dejaba votar, y no era el filtro",
-       "duracion": 77.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-26-el-votador-de-super.daniela.mp3"
+       "duracion": 77.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-30-el-votador-de-super.daniela.mp3"
       },
       {
-       "t": 1728.4,
+       "t": 1992.0,
        "titulo": "las cuatro propuestas de la cola que se pagan solas",
-       "duracion": 49.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-27-las-cuatro-propuestas.daniela.mp3"
+       "duracion": 49.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-31-las-cuatro-propuestas.daniela.mp3"
       },
       {
-       "t": 1778.1,
+       "t": 2041.3,
        "titulo": "el panel deja de ser una sola pregunta y pasa a ser una mesa",
-       "duracion": 22.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-28-el-panel-deja-de-ser.daniela.mp3"
+       "duracion": 22.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-32-el-panel-deja-de-ser.daniela.mp3"
       },
       {
-       "t": 1800.8,
+       "t": 2063.7,
        "titulo": "no más cajas \"dale\": las propuestas van con opciones",
-       "duracion": 51.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-29-no-mas-cajas-dale-las.daniela.mp3"
+       "duracion": 51.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-33-no-mas-cajas-dale-las.daniela.mp3"
       },
       {
-       "t": 1852.7,
+       "t": 2115.1,
        "titulo": "el widget de la cola de instagram, y el botón que me mandaba prosa",
-       "duracion": 70.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-30-el-widget-de-la-cola-de.daniela.mp3"
+       "duracion": 70.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-34-el-widget-de-la-cola-de.daniela.mp3"
       },
       {
-       "t": 1923.5,
+       "t": 2186.0,
        "titulo": "el disco black, la sesión vencida y la cola entera esperando",
-       "duracion": 72.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-31-el-disco-black-la.daniela.mp3"
+       "duracion": 71.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-35-el-disco-black-la.daniela.mp3"
       },
       {
-       "t": 1995.6,
+       "t": 2257.9,
        "titulo": "el consejo: la primera corrida real, y la idea del brancheo de modelos",
        "duracion": 73.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-32-el-consejo-la-primera.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-36-el-consejo-la-primera.daniela.mp3"
       },
       {
-       "t": 2069.5,
+       "t": 2331.8,
        "titulo": "el votador de una lista: tocar y arrancar a votar",
-       "duracion": 52.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-33-el-votador-de-una-lista.daniela.mp3"
+       "duracion": 52.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-37-el-votador-de-una-lista.daniela.mp3"
       },
       {
-       "t": 2121.8,
+       "t": 2384.2,
        "titulo": "super candidatas: el scoring, y por qué la lista era tan chica",
-       "duracion": 65.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-34-super-candidatas-el.daniela.mp3"
+       "duracion": 65.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-38-super-candidatas-el.daniela.mp3"
       },
       {
-       "t": 2187.4,
+       "t": 2450.0,
        "titulo": "el tinder que quedaba tapado por la barra de arriba",
-       "duracion": 35.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-35-el-tinder-que-quedaba.daniela.mp3"
+       "duracion": 35.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-39-el-tinder-que-quedaba.daniela.mp3"
       },
       {
-       "t": 2223.3,
+       "t": 2485.4,
        "titulo": "el widget de la cola mostraba data vieja, y no era culpa del server",
-       "duracion": 37.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-36-el-widget-de-la-cola.daniela.mp3"
+       "duracion": 36.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-40-el-widget-de-la-cola.daniela.mp3"
       },
       {
-       "t": 2260.3,
+       "t": 2522.2,
        "titulo": "lo del podcast: se fue el informe leído",
-       "duracion": 86.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-37-lo-del-podcast-se-fue.daniela.mp3"
+       "duracion": 86.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-41-lo-del-podcast-se-fue.daniela.mp3"
       },
       {
-       "t": 2347.3,
+       "t": 2608.4,
        "titulo": "el away natural de slack y la presencia que ya no depende del agente",
-       "duracion": 84.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-38-el-away-natural-de.daniela.mp3"
+       "duracion": 84.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-42-el-away-natural-de.daniela.mp3"
       },
       {
-       "t": 2431.6,
+       "t": 2692.6,
        "titulo": "el freno de horario laboral se fue del todo",
-       "duracion": 44.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-39-el-freno-de-horario.daniela.mp3"
+       "duracion": 44.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-43-el-freno-de-horario.daniela.mp3"
       },
       {
-       "t": 2476.5,
+       "t": 2737.1,
        "titulo": "la limpieza de instagram, lo que salió mal y lo que salió bien",
        "duracion": 162.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-40-la-limpieza-de.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-44-la-limpieza-de.daniela.mp3"
       },
       {
-       "t": 2638.5,
+       "t": 2899.1,
        "titulo": "la cola de instagram y las candidatas",
-       "duracion": 78.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-41-la-cola-de-instagram-y.daniela.mp3"
+       "duracion": 78.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-45-la-cola-de-instagram-y.daniela.mp3"
       },
       {
-       "t": 2717.0,
+       "t": 2977.5,
        "titulo": "lafayette, retool y dynamo",
-       "duracion": 99.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-42-lafayette-retool-y.daniela.mp3"
+       "duracion": 99.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-46-lafayette-retool-y.daniela.mp3"
       },
       {
-       "t": 2816.6,
+       "t": 3076.5,
        "titulo": "las dos últimas conversaciones de instagram, y tu mamá",
-       "duracion": 84.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-43-las-dos-ultimas.daniela.mp3"
+       "duracion": 85.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-47-las-dos-ultimas.daniela.mp3"
       },
       {
-       "t": 2901.5,
+       "t": 3161.6,
        "titulo": "el texto libre del votador que no sabía a quién pertenecía",
-       "duracion": 36.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-44-el-texto-libre-del.daniela.mp3"
+       "duracion": 36.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-48-el-texto-libre-del.daniela.mp3"
       },
       {
-       "t": 2938.1,
+       "t": 3198.1,
        "titulo": "la sesión de instagram no estaba muerta",
        "duracion": 41.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-45-la-sesion-de-instagram.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-49-la-sesion-de-instagram.daniela.mp3"
       },
       {
-       "t": 2979.4,
+       "t": 3239.4,
        "titulo": "votaste treinta y ocho y la lista parecía la misma",
-       "duracion": 34.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-46-votaste-treinta-y-ocho.daniela.mp3"
+       "duracion": 34.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-50-votaste-treinta-y-ocho.daniela.mp3"
       },
       {
-       "t": 3013.3,
+       "t": 3273.6,
        "titulo": "a la mañana temprano: cómo venía la cola",
-       "duracion": 73.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-47-a-la-manana-temprano.daniela.mp3"
+       "duracion": 73.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-51-a-la-manana-temprano.daniela.mp3"
       },
       {
-       "t": 3087.0,
+       "t": 3347.5,
        "titulo": "la pc de lanús y la impresora del papá: sigue offline",
        "duracion": 25.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-48-la-pc-de-lanus-y-la.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-52-la-pc-de-lanus-y-la.daniela.mp3"
       },
       {
-       "t": 3112.2,
+       "t": 3372.7,
        "titulo": "el tapador de claves ahora distingue campos",
-       "duracion": 24.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-49-el-tapador-de-claves.daniela.mp3"
+       "duracion": 24.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-53-el-tapador-de-claves.daniela.mp3"
       },
       {
-       "t": 3136.9,
+       "t": 3397.6,
        "titulo": "la prueba del board estaba vieja, no el board",
-       "duracion": 26.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-50-la-prueba-del-board.daniela.mp3"
+       "duracion": 26.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-54-la-prueba-del-board.daniela.mp3"
       },
       {
-       "t": 3163.7,
+       "t": 3424.5,
        "titulo": "los dieciocho discos de gamecube, convertidos y probados",
-       "duracion": 40.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-51-los-dieciocho-discos-de.daniela.mp3"
+       "duracion": 40.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-55-los-dieciocho-discos-de.daniela.mp3"
       },
       {
-       "t": 3204.2,
+       "t": 3464.8,
        "titulo": "las pestañas del chat se arrastran",
-       "duracion": 28.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-52-las-pestanas-del-chat.daniela.mp3"
+       "duracion": 28.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-56-las-pestanas-del-chat.daniela.mp3"
       },
       {
-       "t": 3232.6,
+       "t": 3493.2,
+       "titulo": "el mensaje de slack del shipping rate, y las cuatro pasadas hasta que quedó",
+       "duracion": 81.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-57-el-mensaje-de-slack-del.daniela.mp3"
+      },
+      {
+       "t": 3574.9,
+       "titulo": "juegos: la limpieza salió, pero uno de los dos se borró sin respaldo verificado",
+       "duracion": 64.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-58-juegos-la-limpieza.daniela.mp3"
+      },
+      {
+       "t": 3639.0,
+       "titulo": "la pestaña de awtomic sale con opus, y el reparto no tiene nada que decidir",
+       "duracion": 57.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-59-la-pestana-de-awtomic.daniela.mp3"
+      },
+      {
+       "t": 3696.1,
+       "titulo": "lo que se movió en el agente cerca de las diez menos diez",
+       "duracion": 36.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-60-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 3732.8,
        "titulo": "la pestaña de awtomic sale con opus, y quedó dicho varias veces",
-       "duracion": 67.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-53-la-pestana-de-awtomic.daniela.mp3"
+       "duracion": 67.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-61-la-pestana-de-awtomic.daniela.mp3"
       },
       {
-       "t": 3299.6,
+       "t": 3800.0,
        "titulo": "instagram sigue viva pero no lee las listas",
-       "duracion": 58.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-54-instagram-sigue-viva.daniela.mp3"
+       "duracion": 57.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-62-instagram-sigue-viva.daniela.mp3"
       },
       {
-       "t": 3357.8,
+       "t": 3857.8,
        "titulo": "la cuenta de orugote se puso en rojo y se arregló sola",
-       "duracion": 47.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-55-la-cuenta-de-orugote-se.daniela.mp3"
+       "duracion": 47.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-63-la-cuenta-de-orugote-se.daniela.mp3"
       },
       {
-       "t": 3405.2,
+       "t": 3904.9,
        "titulo": "el disco nuevo, y el respaldo de black que no salió",
-       "duracion": 42.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-56-el-disco-nuevo-y-el.daniela.mp3"
+       "duracion": 42.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-64-el-disco-nuevo-y-el.daniela.mp3"
       },
       {
-       "t": 3447.4,
+       "t": 3947.3,
        "titulo": "los accesos a los tres stores",
-       "duracion": 25.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-57-los-accesos-a-los-tres.daniela.mp3"
+       "duracion": 25.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-65-los-accesos-a-los-tres.daniela.mp3"
       },
       {
-       "t": 3472.9,
+       "t": 3972.8,
        "titulo": "el widget de la noche, y los tickets partidos en tres",
-       "duracion": 24.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-58-el-widget-de-la-noche-y.daniela.mp3"
-      },
-      {
-       "t": 3497.4,
-       "titulo": "el standup que se rehizo tres veces",
-       "duracion": 20.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-59-el-standup-que-se.daniela.mp3"
-      },
-      {
-       "t": 3518.2,
-       "titulo": "la impresora del papá, y el router",
-       "duracion": 36.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-60-la-impresora-del-papa-y.daniela.mp3"
-      },
-      {
-       "t": 3554.4,
-       "titulo": "lo que se movió en el agente entre las cuatro y las cinco y media",
-       "duracion": 62.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-61-lo-que-se-movio-en-el.daniela.mp3"
-      },
-      {
-       "t": 3616.7,
-       "titulo": "el tuneo de resolución interna no sirvió, y quedó revertido",
-       "duracion": 36.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-62-el-tuneo-de-resolucion.daniela.mp3"
-      },
-      {
-       "t": 3653.6,
-       "titulo": "el votador de following: cada botón dice lo que hace, y el celular ya scrollea",
-       "duracion": 53.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-63-el-votador-de-following.daniela.mp3"
-      },
-      {
-       "t": 3707.1,
-       "titulo": "la pestaña de awtomic y su cuenta: ya estaba, pero el consumo asusta",
-       "duracion": 48.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-64-la-pestana-de-awtomic-y.daniela.mp3"
-      },
-      {
-       "t": 3755.0,
-       "titulo": "fuzzer: nada automático, y el draft de nic",
-       "duracion": 77.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-65-fuzzer-nada-automatico.daniela.mp3"
-      },
-      {
-       "t": 3832.2,
-       "titulo": "el rollup del carrito de gatlinburg: arreglado y esperando tu ok",
-       "duracion": 42.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-66-el-rollup-del-carrito.daniela.mp3"
-      },
-      {
-       "t": 3874.3,
-       "titulo": "la clave nueva de la mac entra a las dos máquinas",
-       "duracion": 11.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-67-la-clave-nueva-de-la.daniela.mp3"
-      },
-      {
-       "t": 3886.0,
-       "titulo": "la madrugada: instagram frenado y el buzón rechazando fotos",
-       "duracion": 58.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-68-la-madrugada-instagram.daniela.mp3"
-      },
-      {
-       "t": 3944.3,
-       "titulo": "instagram sigue sin datos, y el peso de mistral bajó",
-       "duracion": 75.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-69-instagram-sigue-sin.daniela.mp3"
-      },
-      {
-       "t": 4019.3,
-       "titulo": "la cola de hoy está sana, lo colgado era viejo",
-       "duracion": 47.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-70-la-cola-de-hoy-esta.daniela.mp3"
-      },
-      {
-       "t": 4066.3,
-       "titulo": "el votador de following: cada botón dice lo que hace",
        "duracion": 24.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-66-el-widget-de-la-noche-y.daniela.mp3"
+      },
+      {
+       "t": 3997.4,
+       "titulo": "el standup que se rehizo tres veces",
+       "duracion": 20.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-67-el-standup-que-se.daniela.mp3"
+      },
+      {
+       "t": 4017.9,
+       "titulo": "la impresora del papá, y el router",
+       "duracion": 36.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-68-la-impresora-del-papa-y.daniela.mp3"
+      },
+      {
+       "t": 4054.3,
+       "titulo": "lo que se movió en el agente entre las cuatro y las cinco y media",
+       "duracion": 63.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-69-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 4117.4,
+       "titulo": "el tuneo de resolución interna no sirvió, y quedó revertido",
+       "duracion": 37.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-70-el-tuneo-de-resolucion.daniela.mp3"
+      },
+      {
+       "t": 4154.3,
+       "titulo": "el votador de following: cada botón dice lo que hace, y el celular ya scrollea",
+       "duracion": 52.9,
        "archivo": "audio/ep-2026-09-15-vivo-1447-71-el-votador-de-following.daniela.mp3"
       },
       {
-       "t": 4090.9,
-       "titulo": "lo que se movió en el agente cerca de las diez y veinte",
-       "duracion": 51.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-72-lo-que-se-movio-en-el.daniela.mp3"
+       "t": 4207.3,
+       "titulo": "la pestaña de awtomic y su cuenta: ya estaba, pero el consumo asusta",
+       "duracion": 48.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-72-la-pestana-de-awtomic-y.daniela.mp3"
       },
       {
-       "t": 4142.2,
+       "t": 4255.7,
+       "titulo": "fuzzer: nada automático, y el draft de nic",
+       "duracion": 77.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-73-fuzzer-nada-automatico.daniela.mp3"
+      },
+      {
+       "t": 4332.9,
+       "titulo": "el rollup del carrito de gatlinburg: arreglado y esperando tu ok",
+       "duracion": 41.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-74-el-rollup-del-carrito.daniela.mp3"
+      },
+      {
+       "t": 4374.6,
+       "titulo": "la clave nueva de la mac entra a las dos máquinas",
+       "duracion": 11.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-75-la-clave-nueva-de-la.daniela.mp3"
+      },
+      {
+       "t": 4386.1,
+       "titulo": "la madrugada: instagram frenado y el buzón rechazando fotos",
+       "duracion": 58.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-76-la-madrugada-instagram.daniela.mp3"
+      },
+      {
+       "t": 4445.0,
+       "titulo": "instagram sigue sin datos, y el peso de mistral bajó",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-77-instagram-sigue-sin.daniela.mp3"
+      },
+      {
+       "t": 4519.6,
+       "titulo": "la cola de hoy está sana, lo colgado era viejo",
+       "duracion": 46.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-78-la-cola-de-hoy-esta.daniela.mp3"
+      },
+      {
+       "t": 4566.5,
+       "titulo": "el votador de following: cada botón dice lo que hace",
+       "duracion": 24.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-79-el-votador-de-following.daniela.mp3"
+      },
+      {
+       "t": 4591.1,
+       "titulo": "lo que se movió en el agente cerca de las diez y veinte",
+       "duracion": 51.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-80-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 4642.7,
        "titulo": "la vista de documentos: dos controles arriba y el ancho aprovechado",
        "duracion": 41.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-73-la-vista-de-documentos.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-81-la-vista-de-documentos.daniela.mp3"
       },
       {
-       "t": 4184.1,
+       "t": 4684.6,
        "titulo": "volvió el tick del ritmo en el widget de consumo",
-       "duracion": 17.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-74-volvio-el-tick-del.daniela.mp3"
+       "duracion": 16.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-82-volvio-el-tick-del.daniela.mp3"
       },
       {
-       "t": 4201.1,
+       "t": 4701.3,
        "titulo": "el votador: tocar a una persona y caer parado en ella",
-       "duracion": 80.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-75-el-votador-tocar-a-una.daniela.mp3"
+       "duracion": 80.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-83-el-votador-tocar-a-una.daniela.mp3"
       },
       {
-       "t": 4281.7,
+       "t": 4781.8,
        "titulo": "quién cobra primero, y la mesa de panelistas",
-       "duracion": 43.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-76-quien-cobra-primero-y.daniela.mp3"
-      },
-      {
-       "t": 4325.5,
-       "titulo": "lo que se movió en el agente de madrugada",
-       "duracion": 58.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-77-lo-que-se-movio-en-el.daniela.mp3"
-      },
-      {
-       "t": 4383.8,
-       "titulo": "la foto del votador en el celular",
-       "duracion": 15.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-78-la-foto-del-votador-en.daniela.mp3"
-      },
-      {
-       "t": 4398.9,
-       "titulo": "merch de fuzzer: remeras, pins y folletos",
-       "duracion": 57.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-79-merch-de-fuzzer-remeras.daniela.mp3"
-      },
-      {
-       "t": 4456.9,
-       "titulo": "gemini y mistral leyendo el sistema por su cuenta",
-       "duracion": 82.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-80-gemini-y-mistral.daniela.mp3"
-      },
-      {
-       "t": 4538.9,
-       "titulo": "el cupo diario de gemini y el proyecto aparte para la mesa",
-       "duracion": 52.6,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-81-el-cupo-diario-de.daniela.mp3"
-      },
-      {
-       "t": 4591.5,
-       "titulo": "el disco black se monta sin contraseña, y la raíz del server creció",
-       "duracion": 50.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-82-el-disco-black-se-monta.daniela.mp3"
-      },
-      {
-       "t": 4642.4,
-       "titulo": "la obra social y el monotributo",
-       "duracion": 41.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-83-la-obra-social-y-el.daniela.mp3"
-      },
-      {
-       "t": 4684.1,
-       "titulo": "el agente de madrugada: presencia, avisos y una votación trabada",
-       "duracion": 68.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-84-el-agente-de-madrugada.daniela.mp3"
-      },
-      {
-       "t": 4753.0,
-       "titulo": "los retrasos de instagram: tres tenían razón, uno olía a confusión",
        "duracion": 43.7,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-85-los-retrasos-de.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-84-quien-cobra-primero-y.daniela.mp3"
       },
       {
-       "t": 4796.6,
+       "t": 4825.5,
+       "titulo": "lo que se movió en el agente de madrugada",
+       "duracion": 58.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-85-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 4884.0,
+       "titulo": "la foto del votador en el celular",
+       "duracion": 14.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-86-la-foto-del-votador-en.daniela.mp3"
+      },
+      {
+       "t": 4898.6,
+       "titulo": "merch de fuzzer: remeras, pins y folletos",
+       "duracion": 58.0,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-87-merch-de-fuzzer-remeras.daniela.mp3"
+      },
+      {
+       "t": 4956.6,
+       "titulo": "gemini y mistral leyendo el sistema por su cuenta",
+       "duracion": 82.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-88-gemini-y-mistral.daniela.mp3"
+      },
+      {
+       "t": 5038.8,
+       "titulo": "el cupo diario de gemini y el proyecto aparte para la mesa",
+       "duracion": 52.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-89-el-cupo-diario-de.daniela.mp3"
+      },
+      {
+       "t": 5091.7,
+       "titulo": "el disco black se monta sin contraseña, y la raíz del server creció",
+       "duracion": 51.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-90-el-disco-black-se-monta.daniela.mp3"
+      },
+      {
+       "t": 5143.0,
+       "titulo": "la obra social y el monotributo",
+       "duracion": 41.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-91-la-obra-social-y-el.daniela.mp3"
+      },
+      {
+       "t": 5184.9,
+       "titulo": "el agente de madrugada: presencia, avisos y una votación trabada",
+       "duracion": 69.2,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-92-el-agente-de-madrugada.daniela.mp3"
+      },
+      {
+       "t": 5254.1,
+       "titulo": "los retrasos de instagram: tres tenían razón, uno olía a confusión",
+       "duracion": 43.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-93-los-retrasos-de.daniela.mp3"
+      },
+      {
+       "t": 5297.5,
        "titulo": "la retroid: los siete puntos, medidos en el aparato",
-       "duracion": 35.3,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-86-la-retroid-los-siete.daniela.mp3"
+       "duracion": 34.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-94-la-retroid-los-siete.daniela.mp3"
       },
       {
-       "t": 4831.9,
+       "t": 5332.4,
        "titulo": "el informe de modelos, y los precios en dólares limpios",
-       "duracion": 61.1,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-87-el-informe-de-modelos-y.daniela.mp3"
+       "duracion": 60.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-95-el-informe-de-modelos-y.daniela.mp3"
       },
       {
-       "t": 4893.0,
+       "t": 5393.0,
        "titulo": "el mail a santi y el podcast de ser rico",
-       "duracion": 53.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-88-el-mail-a-santi-y-el.daniela.mp3"
+       "duracion": 53.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-96-el-mail-a-santi-y-el.daniela.mp3"
       },
       {
-       "t": 4946.9,
+       "t": 5446.7,
        "titulo": "los cinco ítems para el panel de la noche",
        "duracion": 52.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-89-los-cinco-items-para-el.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-97-los-cinco-items-para-el.daniela.mp3"
       },
       {
-       "t": 4999.3,
+       "t": 5499.1,
        "titulo": "se fue el widget de oportunidades",
        "duracion": 20.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-90-se-fue-el-widget-de.daniela.mp3"
+       "archivo": "audio/ep-2026-09-15-vivo-1447-98-se-fue-el-widget-de.daniela.mp3"
       },
       {
-       "t": 5019.6,
+       "t": 5519.5,
        "titulo": "el historial del chat ya distingue los días",
-       "duracion": 36.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-91-el-historial-del-chat.daniela.mp3"
+       "duracion": 36.1,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-99-el-historial-del-chat.daniela.mp3"
       },
       {
-       "t": 5056.0,
+       "t": 5555.6,
        "titulo": "la retroid: la collection high performance quedó armada en el aparato",
-       "duracion": 92.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-92-la-retroid-la.daniela.mp3"
+       "duracion": 92.7,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-100-la-retroid-la.daniela.mp3"
       },
       {
-       "t": 5148.1,
+       "t": 5648.3,
        "titulo": "tu presencia en slack de ayer",
-       "duracion": 43.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-93-tu-presencia-en-slack.daniela.mp3"
+       "duracion": 42.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-101-tu-presencia-en-slack.daniela.mp3"
       },
       {
-       "t": 5191.5,
+       "t": 5691.2,
        "titulo": "lo que se movió en el agente al mediodía",
-       "duracion": 50.4,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-94-lo-que-se-movio-en-el.daniela.mp3"
-      },
-      {
-       "t": 5242.0,
-       "titulo": "dejarte solo, y la tarea que dijo que seguía y no seguía",
-       "duracion": 66.0,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-95-dejarte-solo-y-la-tarea.daniela.mp3"
-      },
-      {
-       "t": 5308.0,
-       "titulo": "la retroid, y los sesenta cuadros en las pesadas",
-       "duracion": 63.5,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-96-la-retroid-y-los.daniela.mp3"
-      },
-      {
-       "t": 5371.5,
-       "titulo": "awtomic: penfolds, hafner, hall y una regla tuya sobre el estado",
-       "duracion": 85.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-97-awtomic-penfolds-hafner.daniela.mp3"
-      },
-      {
-       "t": 5456.7,
-       "titulo": "los mails de fuzzer y cómo se contesta ahora",
-       "duracion": 45.9,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-98-los-mails-de-fuzzer-y.daniela.mp3"
-      },
-      {
-       "t": 5502.6,
-       "titulo": "la madrugada, y la votación que no abría",
-       "duracion": 74.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-99-la-madrugada-y-la.daniela.mp3"
-      },
-      {
-       "t": 5576.8,
-       "titulo": "slack y las votaciones de animaciones",
-       "duracion": 74.2,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-100-slack-y-las-votaciones.daniela.mp3"
-      },
-      {
-       "t": 5651.0,
-       "titulo": "salud y el widget",
-       "duracion": 27.8,
-       "archivo": "audio/ep-2026-09-15-vivo-1447-101-salud-y-el-widget.daniela.mp3"
-      },
-      {
-       "t": 5678.7,
-       "titulo": "lo que se movió en el agente",
-       "duracion": 56.0,
+       "duracion": 49.9,
        "archivo": "audio/ep-2026-09-15-vivo-1447-102-lo-que-se-movio-en-el.daniela.mp3"
+      },
+      {
+       "t": 5741.1,
+       "titulo": "dejarte solo, y la tarea que dijo que seguía y no seguía",
+       "duracion": 65.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-103-dejarte-solo-y-la-tarea.daniela.mp3"
+      },
+      {
+       "t": 5806.9,
+       "titulo": "la retroid, y los sesenta cuadros en las pesadas",
+       "duracion": 63.4,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-104-la-retroid-y-los.daniela.mp3"
+      },
+      {
+       "t": 5870.3,
+       "titulo": "awtomic: penfolds, hafner, hall y una regla tuya sobre el estado",
+       "duracion": 84.5,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-105-awtomic-penfolds-hafner.daniela.mp3"
+      },
+      {
+       "t": 5954.8,
+       "titulo": "los mails de fuzzer y cómo se contesta ahora",
+       "duracion": 45.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-106-los-mails-de-fuzzer-y.daniela.mp3"
+      },
+      {
+       "t": 6000.4,
+       "titulo": "la madrugada, y la votación que no abría",
+       "duracion": 73.6,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-107-la-madrugada-y-la.daniela.mp3"
+      },
+      {
+       "t": 6074.0,
+       "titulo": "slack y las votaciones de animaciones",
+       "duracion": 74.3,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-108-slack-y-las-votaciones.daniela.mp3"
+      },
+      {
+       "t": 6148.3,
+       "titulo": "salud y el widget",
+       "duracion": 27.9,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-109-salud-y-el-widget.daniela.mp3"
+      },
+      {
+       "t": 6176.3,
+       "titulo": "lo que se movió en el agente",
+       "duracion": 55.8,
+       "archivo": "audio/ep-2026-09-15-vivo-1447-110-lo-que-se-movio-en-el.daniela.mp3"
       }
      ]
     }
@@ -655,11 +703,9 @@
    "grupo": "2026-09-15-vivo-1447",
    "version": "vivo",
    "emision": "vivo",
-   "actualizado": "2026-09-25T08:49-03:00",
-   "duracion": 5734.8,
-   "ts": "2026-09-15T14:47:00-03:00",
-   "audio_borrado": "2026-09-25",
-   "audio_mb": 0.7
+   "actualizado": "2026-09-25T09:50-03:00",
+   "duracion": 6232.1,
+   "ts": "2026-09-15T14:47:00-03:00"
   },
   {
    "id": "ep-2026-09-18-cuenta",
@@ -1826,5 +1872,5 @@
    "ts": "2026-09-22T00:42:33-03:00"
   }
  ],
- "actualizado": "2026-09-25 10:15"
+ "actualizado": "2026-09-25 10:20"
 }
