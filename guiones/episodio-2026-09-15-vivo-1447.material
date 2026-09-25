@@ -937,3 +937,29 @@ tareas cerradas:
 - 05:25 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
 - 05:25 chat lan: no pude subir img/ig-9917820530.jpg al buzon (http 409), reintento despues
 - 05:26 chat lan: token rechazado (no es del duenio del buzon)
+
+### tramo 05:27-08:49 (hecho)
+## [awtomic#2] lo que se hizo en awtomic#2
+lo que hablo facundo en la pestaña:
+- 08:44 facundo: que tal salio esto? / claudio: [awtomic#2] salió a medias, y lo que falta es justo lo que pediste. lo hecho, verificado: las cinco correcciones están aplicadas y commiteadas en las dos branches. awtomic-api quedó en d2e44249 (sobre 69bd01e6) y shopify-app-extensions en 0971c0e (sobre aa1fe5b). tests 32/32 verdes. el diff de producción son 2...
+- 08:48 facundo: A: dale, encolo el push de las dos branches y los dos PRs en draft, con el ok explícito para el hook, sin merge ni jira / claudio: [awtomic#2] dale, tocaste la A: la encolo ahora.
+- 08:48 facundo: y pudiste testear y sacar screens ? funciona esto? / claudio: [awtomic#2] sí, se testeó e2e y hay capturas. funciona, con dos cosas que conviene decidir antes del merge. cómo funciona hoy, verificado contra el dev store awtomic-mvp6484-qa y el contrato 74327982311 (informe en qa/2026-09/el ticket de update shipping rate action cannot set/paso5-6-resultados-1979.txt): backwards compat ok. un step guardado antes del cambio...
+
+## [log] movimiento del agente
+- 08:26 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: 2026-09-25 08:26 [gris][info] hay margen de tokens: 3 pendientes en sueltos
+- 08:29 instagram: la sesión está viva pero frenó las lecturas de lista (api rebotada al login (http 200, sesión sin confirmar)). la foto del día reintenta sola; no hay que resembrar cookies (aviso, sin push)
+- 08:29 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: 2026-09-25 08:29 [verde][info] instagram: la sesión está viva pero frenó las l
+- 08:44 instagram: la sesión está viva pero frenó las lecturas de lista (api rebotada al login (http 200, sesión sin confirmar)). la foto del día reintenta sola; no hay que resembrar cookies (aviso, sin push)
+- 08:44 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: 2026-09-25 08:44 [verde][info] instagram: la sesión está viva pero frenó las l
+- 08:44 pestaña awtomic#2: awtomic no tiene fable habilitado: la pestaña se queda ahi y sale con opus
+- 08:46 atajo: caja #9recA -> A: dale, encolo el push de las dos branches y los dos PRs en
+- 08:46 pestaña awtomic#2: awtomic no tiene fable habilitado: la pestaña se queda ahi y sale con opus
+- 08:47 pestaña awtomic#2: awtomic no tiene fable habilitado: la pestaña se queda ahi y sale con opus
+- 08:47 fable prohibido: sale con opus: {explicito} [pestana awtomic#2] tema awtomic: [toca: ] facundo dio el ok explícito por el chat para pushear las dos bran
+- 08:47 salvame: 1. red: ok (la default va por eno1) | 2. oauth: refresque faacuu, orugote, facundo | 3. cuenta: faacuu tiene margen; el reparto la usa sola en la proxima llamada (para fijarla, cuenta...
+- 08:47 salud: claude orugote (server) en rojo, dispare solo su comando salvame -> ok: [sin modelo] salvame: · 1. red: ok (la default va por eno1) · 2. oauth: refresque faacuu, orugote, facundo · 3. cuenta...
+- 08:47 hook_git_push: ok de facundo abierto por 30 min (el ticket de update shipping rate action cannot set: push de las 2 branches nuevas + 2 PRs draft (ok explicito de facundo por el chat, orden 1981))
+- 08:47 hook_git_push: un git push -u de una rama nueva sale con el ok de facundo (el ticket de update shipping rate action cannot set: push de las 2 branches nuevas + 2 PRs draft (ok explicito de facundo por el chat, orden 1981))
+- 08:47 hook_git_push: un git push -u de una rama nueva sale con el ok de facundo (el ticket de update shipping rate action cannot set: push de las 2 branches nuevas + 2 PRs draft (ok explicito de facundo por el chat, orden 1981))
+- 08:47 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 08:47 fable prohibido...

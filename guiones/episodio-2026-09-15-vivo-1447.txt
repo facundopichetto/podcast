@@ -1,8 +1,20 @@
-# actualizado hoy a las 05:27
-actualizado hoy, viernes veinticinco, a las cinco veintisiete.
+# actualizado hoy a las 08:49
+actualizado hoy, viernes veinticinco, a las ocho cuarenta y nueve.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el ticket del shipping rate de awtomic: listo a medias, y lo que falta es justo lo que pediste
+a las ocho y cuarenta y cuatro me preguntaste qué tal había salido esto, y la respuesta honesta fue: a medias. lo que está hecho está hecho y verificado. las cinco correcciones quedaron aplicadas y commiteadas en las dos branches, una en la api y la otra en las extensiones de la app. los tests dieron treinta y dos de treinta y dos verdes. el diff que toca producción es chico. lo que faltaba era el paso de sacarlo de la máquina: pushear las dos branches y abrir los pull requests.
+
+eso fue lo que te ofrecí y lo que elegiste. tocaste la opción de encolar el push de las dos branches y los dos pull requests en draft, con el ok explícito para el hook, sin merge y sin tocar jira. lo encolé ahí mismo, a las ocho y cuarenta y seis. el ok explícito tuyo abrió una ventana de treinta minutos en el guard de push, que es lo que hace falta para que un push de una branch nueva salga: sin esa ventana el hook lo frena y queda esperando. quedó anotado como lo que es, un ok tuyo por el chat, con el detalle de qué se pushea y para qué. draft, sin merge, sin jira: nada se mueve solo del otro lado.
+
+# el ticket del shipping rate: sí se testeó de punta a punta, y hay capturas
+apenas después me preguntaste si se había podido testear y sacar pantallas, si esto funciona de verdad. sí. se testeó de punta a punta contra el dev store de qa y contra un contrato concreto, y quedó un informe escrito con los resultados del paso cinco y el seis. hay capturas.
+
+la compatibilidad hacia atrás dio bien: un step guardado antes del cambio sigue andando como andaba. esa era la parte que más miedo daba, porque si se rompía se rompía para todos los que ya tenían algo configurado, y no se rompió.
+
+lo que sí quedó son dos cosas que conviene que decidas vos antes del merge. no son bugs, son decisiones de producto que salieron a la luz probando. por eso los pull requests quedaron en draft y no en listo para revisar: la idea es que los mires, decidas esas dos cosas, y recién ahí se saca el draft. mientras tanto el código está pusheado y nadie lo mergea.
 
 # el cuil que dije que guardé y no estaba
 esto es lo más feo del rato y va primero. me pasaste el cuil de gabriel bendahan para cargarlo en el formulario de mailamericas, y me dijiste textual que lo guardara. yo contesté que lo había guardado, tapado en pantalla y todo. después la tarea del formulario entró al mail de orugote, encontró el mail que pedía actualizar información, abrió el link, llegó hasta el formulario andando, y ahí frenó: el cuil no estaba en la bóveda. ni en el store de claves ni en el archivo de credenciales. o sea que te lo tuve que volver a pedir.
@@ -353,6 +365,27 @@ al mediodía sumaste los que faltaban de gamecube y también algunos de wii. com
 pediste tres cosas del chat y la tercera, la del cruce de temas, te la contesté con el estado real en el momento: siete filtraciones encontradas, seis arregladas con su prueba.
 
 las otras dos salieron juntas en una sola orden y ya están andando, verificadas en un chrome sin pantalla: las pestañas se reacomodan arrastrándolas, con el orden que queda guardado, y el hover es el mismo verde pero más flojo que el de la pestaña seleccionada. la versión del board quedó marcada para que el daemon la publique en su pasada.
+
+# la pestaña de awtomic sale con opus, y quedó dicho varias veces
+durante todo el rato del ticket del shipping rate, cada vez que la pestaña de awtomic necesitaba pensar algo, quedó la misma línea anotada: awtomic no tiene fable habilitado, así que la pestaña se queda en su cuenta y sale con opus. pasó a las ocho y cuarenta y cuatro, a las ocho y cuarenta y seis y dos veces a las ocho y cuarenta y siete.
+
+esto es exactamente lo que tiene que pasar y está bueno que se vea. la pestaña de awtomic tiene cuenta fija, esa es tu regla: el trabajo de awtomic sale por la cuenta de awtomic y no se mezcla con lo demás. pero esa cuenta no tiene fable habilitado. la regla dice que en ese caso la cuenta manda y el modelo cae a opus, en vez de saltar a otra cuenta para conseguir fable. o sea: se respeta con quién se trabaja antes que con qué modelo.
+
+en el mismo rato hay otra línea parecida pero por otro motivo: fable prohibido, sale con opus. esa es la que dejaste puesta vos, el candado de fable apagado hasta nuevo aviso. las dos cosas empujan para el mismo lado, así que no hubo ninguna llamada con fable en todo el tramo. la orden de pushear las branches salió con opus, y lo dice en el log con el motivo al lado.
+
+# instagram sigue viva pero no lee las listas
+desde las ocho y media y otra vez cerca de las nueve menos cuarto apareció el mismo aviso de instagram: la sesión está viva, pero las lecturas de lista están frenadas. la api rebota al login, con una respuesta que dice que todo bien pero sin confirmar la sesión.
+
+lo importante acá es lo que esto no es. no es una sesión muerta. no hay que resembrar cookies ni relogear a mano ni tocar nada. es un freno de lectura, que es una cosa distinta: la sesión sigue sirviendo para lo que importa, y lo que se cae son las lecturas de lista. la foto del día reintenta sola, sin que nadie la empuje. por eso salió como aviso y sin push al celular: no es algo que tengas que atender vos.
+
+las dos veces que apareció, la segunda no se reenvió: el sistema vio que era el mismo texto hace un rato y lo dejó pasar sin volver a molestar. lo mismo pasó un poco antes con el aviso de que había margen de tokens y tres pendientes esperando en sueltos: salió una vez y la repetición quedó silenciada.
+
+# la cuenta de orugote se puso en rojo y se arregló sola
+a las ocho y cuarenta y siete el chequeo de salud vio la cuenta de orugote en rojo en el server y disparó solo su comando de rescate, sin preguntarle a nadie y sin gastar un modelo. el rescate hizo tres cosas y las tres dieron bien.
+
+primero miró la red: ok, la salida por defecto va por el cable de siempre. segundo, refrescó el oauth de las tres cuentas, faacuu, orugote y facundo. tercero, revisó el reparto y encontró que faacuu tiene margen, así que el reparto la va a usar sola en la próxima llamada, sin que haya que fijarla a mano.
+
+o sea que fue un susto de un minuto: se vio rojo, se disparó el rescate, se refrescaron los tokens y quedó ok. no hizo falta que te enteraras en el momento, pero está bueno que sepas que ese camino funciona: cuando una cuenta se pone en rojo hay un comando que se dispara solo y en general la levanta.
 
 # el disco nuevo, y el respaldo de black que no salió
 tenés tres discos en el server: el black de cinco teras casi lleno, el toshiba de dos, y el wd nuevo de cinco que estaba en un formato de windows, vacío y sin montar. la duda era si convenía reformatear los viejos, y la respuesta fue no tocarlos ahora.
