@@ -1,8 +1,36 @@
-# actualizado hoy a las 08:49
-actualizado hoy, viernes veinticinco, a las ocho cuarenta y nueve.
+# actualizado hoy a las 09:50
+actualizado hoy, viernes veinticinco, a las nueve cincuenta.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el ticket del shipping rate: el rate vacío ponía el envío en cero, y se arregló
+a las ocho y cincuenta tocaste la opción de encolar el fix del rate vacío: que el handler solo toque el precio si el campo viene con un valor real. la tarea tardó treinta y siete minutos y cerró arreglada y verificada de punta a punta. el rate vacío ya no pone el envío en cero.
+
+lo interesante es de dónde salió la solución. la diferencia no la podía dar el handler, así que se resolvió del otro lado, en la declaración de la acción: el campo del rate pasó de ser un número decimal a ser un campo de texto de una línea, que es lo único que permite distinguir un valor vacío de un cero de verdad. con el campo declarado como número, un vacío ya llegaba convertido a cero y no había manera de saber desde el código si eso era lo que el usuario había escrito o lo que faltaba escribir.
+
+# los cuerpos de los dos pull requests: el hook los frenó tres veces, y está bien que lo haya hecho
+esto es lo que más vueltas dio en la mañana. después de que los dos pull requests quedaran abiertos en draft, pediste reemplazar el cuerpo de los dos por la versión corta. se escribieron los dos cuerpos cortos en un archivo de la carpeta de qa del ticket, con el puntero agregado desde el documento principal, y eso salió sin drama, en un minuto.
+
+el problema fue al ir a aplicarlo sobre github. a las nueve y cuarenta y dos la tarea corrió el comando para editar el cuerpo de los dos pull requests, exactamente como lo pediste, y el hook de push lo bloqueó: ningún cuerpo cambió. la razón es la regla que pusiste vos: una tarea de fondo nunca abre sola el permiso de escribir en github. ese permiso lo abre el agente cuando vos das el dale en el chat, y no había ninguno abierto.
+
+a las nueve y cuarenta y nueve se volvió a intentar por el mismo camino y volvió a pasar lo mismo. van tres intentos seguidos por la misma puerta, y el hook los paró a todos. no es un error del hook: es el hook haciendo justo lo que le pediste que haga. lo que hay que cambiar es el camino, no el guard. mientras tanto los cuerpos cortos ya están escritos y guardados: cuando abras el permiso, aplicarlos es un comando.
+
+en el medio tocaste dos cajas: una fue que el guard vaya global, en todos los repositorios de la máquina, no solo en estos dos. la otra fue sacar la firma de coautoría de los commits de las dos branches. el bloqueo tampoco te sonó en el celular: pasó el tope de cuatro avisos por hora y se juntó con los otros, así que quedó esperando en la campana en vez de hacer ruido.
+
+# los votos de following no se habían registrado, y se repusieron
+a las nueve y seis me dijiste que habías votado en following y no veías que quedara registrado. lo primero que verifiqué fue si los votos habían llegado, y sí: había una tanda de las nueve y tres con un montón de cuentas votadas para bajar, entre ellas explores punto berlin, knifecenter, johnny ramone, yamaha guitars y varias más. o sea, el problema no era que los votos se perdieran en el camino desde el navegador: era que llegaban y después nadie los aplicaba al embudo.
+
+a las nueve y catorce elegiste la opción de una sola orden que hiciera las tres cosas: arreglar la aplicación de votos, arreglar el guard de duplicados y reponer los que habían quedado colgados. la tarea tardó diecisiete minutos y cerró bien. tus votos ya están en el embudo: following bajó de noventa y seis cuentas a veintisiete, y el archivo de votos pendientes quedó en cero votos sin resultado. explores punto berlin quedó en ignorada, que es exactamente lo que habías votado.
+
+o sea que la lista que veías igual no estaba mintiendo: los votos existían, simplemente el paso que los mueve de la tanda al embudo no estaba corriendo. ahora corre, y lo que quedó atrasado se repuso de una.
+
+# el backup de black no está corriendo, y no hay nada que esperar
+esto apareció dos veces, en dos pestañas distintas, y conviene dejarlo clarísimo. a las nueve y treinta y cinco preguntaste si black se había copiado. no: quedó cortada al treinta y cuatro por ciento. el rsync murió a las dos y cuarenta de la madrugada con ochocientos setenta y seis gigas copiados de los cuatro coma cuatro teras. el proceso ya no existe, el reporte quedó clavado en la etapa del rsync, y la causa no fue el disco ni el espacio: los dos estaban bien. lo que lo mató fue el reinicio de la sesión.
+
+a las nueve y treinta y siete tocaste la opción de retomar el backup como servicio de sistema y dejar anotada la caída. va como servicio, que es justamente lo que evita que un reinicio de sesión se lo vuelva a llevar puesto.
+
+el mismo tema volvió a las nueve y treinta y ocho desde el lado de juegos, cuando preguntaste si convenía dejar la limpieza para cuando terminara el backup de black. la respuesta fue que no hay nada que esperar, porque no hay nada corriendo: no hay proceso vivo, el servicio directamente no existía todavía, y la última línea del log es de la madrugada. o sea, esperar habría sido esperar a algo que ya estaba muerto.
 
 # el ticket del shipping rate de awtomic: listo a medias, y lo que falta es justo lo que pediste
 a las ocho y cuarenta y cuatro me preguntaste qué tal había salido esto, y la respuesta honesta fue: a medias. lo que está hecho está hecho y verificado. las cinco correcciones quedaron aplicadas y commiteadas en las dos branches, una en la api y la otra en las extensiones de la app. los tests dieron treinta y dos de treinta y dos verdes. el diff que toca producción es chico. lo que faltaba era el paso de sacarlo de la máquina: pushear las dos branches y abrir los pull requests.
@@ -365,6 +393,34 @@ al mediodía sumaste los que faltaban de gamecube y también algunos de wii. com
 pediste tres cosas del chat y la tercera, la del cruce de temas, te la contesté con el estado real en el momento: siete filtraciones encontradas, seis arregladas con su prueba.
 
 las otras dos salieron juntas en una sola orden y ya están andando, verificadas en un chrome sin pantalla: las pestañas se reacomodan arrastrándolas, con el orden que queda guardado, y el hover es el mismo verde pero más flojo que el de la pestaña seleccionada. la versión del board quedó marcada para que el daemon la publique en su pasada.
+
+# el mensaje de slack del shipping rate, y las cuatro pasadas hasta que quedó
+a las ocho y cincuenta y cuatro pediste que te explicara en inglés qué habíamos testeado y cómo, para poder contar el estado. la primera versión salió completa: qué es el cambio, qué se probó, cómo se probó. y era demasiado larga, porque el destino era un mensaje de slack y no un informe. me lo dijiste derecho: tenía que ser como el quince por ciento de eso.
+
+la segunda versión salió en tamaño slack. después me pasaste tu propia manera de decirlo, con el tono que querías, que el update no es gran cosa, que son dos pull requests, que probaste esto y aquello y que dejaste a la ia testeando durante la noche, y pediste unirlo con lo mío. salió unido, en tu tono. y ahí apareció la corrección de las ocho y cincuenta y seis, que era usar la primera persona del singular, no la del plural: yo probé, yo no pude usar el entorno de qa compartido, yo levanté la app de desarrollo. quedó reescrito entero con esa persona.
+
+a las ocho y cincuenta y ocho me mandaste tu versión final del mensaje y le di una pasada corta. el contenido que sobrevivió las cuatro vueltas es: el update está hecho y testeado, la acción del flow ahora puede setear el título y el código del método de envío, los pasos viejos siguen funcionando igual que antes, y el entorno de qa compartido no se pudo usar porque solamente despliega desde main, así que se corrió el flow real contra un contrato de suscripción real en una app y un store de desarrollo.
+
+# juegos: la limpieza salió, pero uno de los dos se borró sin respaldo verificado
+a las nueve y seis preguntaste en qué había quedado esto, y lo que había era una tarea cerrada con tres informes escritos y la cola de juegos vacía, con lo único pendiente del lado de una ronda de awtomic.
+
+el dato que salió de esos informes es el de pes seis: la versión usa le gana por lejos a la europea, casi cincuenta cuadros contra treinta y siete, con exactamente la misma configuración. pero ninguna de las dos llega a sesenta, así que la europea no aporta nada que la usa no dé mejor.
+
+con eso elegiste encolar la limpieza: sacar la europea de pes seis y sacar rogue squadron tres, con respaldo verificado antes de borrar, y cerrar el estado del tema con el resultado de todo. la tarea tardó seis minutos y cerró, pero no salió limpia y te lo digo derecho: de los dos juegos, uno se borró sin respaldo verificado. rogue squadron tres salió por el procedimiento completo, ya estaba en black y la huella coincidía de los dos lados antes de borrar. la europea de pes seis no pasó por ese chequeo. es exactamente el tipo de cosa que el procedimiento existe para evitar, así que queda anotado como lo que es: un borrado sin red.
+
+# la pestaña de awtomic sale con opus, y el reparto no tiene nada que decidir
+durante toda la mañana aparecieron seguidas las líneas que dicen lo mismo: fable prohibido, sale con opus. pasó en las tareas de la pestaña de awtomic y también en el chat, una y otra vez en el mismo minuto.
+
+la razón es doble y las dos son cosas tuyas. por un lado fable está prohibido hasta que vos lo habilites. por el otro, la cuenta de awtomic no tiene fable habilitado, así que la pestaña se queda donde está, con su cuenta fija, y el modelo cae a opus. o sea, el reparto no está eligiendo nada raro: no tiene entre qué elegir. las dos órdenes que se encolaron en ese rato, la de los cuerpos y la de las branches, salieron las dos con opus y las dos en paralelo con otra tarea que ya estaba corriendo, dejando que el lock decida el orden.
+
+de paso, lo que costó la mañana en esa pestaña: la tarea del arreglo del rate fue la cara, casi catorce dólares por treinta y siete minutos. las de escritura de cuerpos y de textos salieron alrededor de un dólar cada una, de un minuto.
+
+# lo que se movió en el agente cerca de las diez menos diez
+hubo un cambio de sistema aplicado, con revert automático a los sesenta segundos, del caos simulado. salió con código cero.
+
+el chat de la red de casa rechazó un token que no era del dueño del buzón, dos veces en el mismo rato. no es una caída: es el guard haciendo su trabajo.
+
+y quedó una cosa prolija de anotar: cuando la orden de los cuerpos cerró, el chequeo de lo declarado contra lo escrito dio que declaraba no tocar nada y efectivamente no escribió nada, así que coincide. el guard que compara lo que una orden dice que va a escribir contra lo que escribió de verdad está funcionando incluso en el caso aburrido, que es el caso donde uno no lo mira.
 
 # la pestaña de awtomic sale con opus, y quedó dicho varias veces
 durante todo el rato del ticket del shipping rate, cada vez que la pestaña de awtomic necesitaba pensar algo, quedó la misma línea anotada: awtomic no tiene fable habilitado, así que la pestaña se queda en su cuenta y sale con opus. pasó a las ocho y cuarenta y cuatro, a las ocho y cuarenta y seis y dos veces a las ocho y cuarenta y siete.
