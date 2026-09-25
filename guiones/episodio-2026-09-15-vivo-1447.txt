@@ -1,8 +1,44 @@
-# actualizado hoy a las 12:52
-actualizado hoy, viernes veinticinco, a las doce cincuenta y dos.
+# actualizado hoy a las 15:04
+actualizado hoy, viernes veinticinco, a las quince y cuatro.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# los tres juegos que no te gustaron salieron de la tarjeta
+a la una y once me dijiste cuáles se iban y cuáles se quedaban, y el criterio fue tuyo y clarito: xenoblade, red faction y donkey kong jungle beat se van porque no te gustaron, independientemente de lo dudosos que sean; winning eleven y nba street se quedan; resident evil no lo viste todavía. los tres que se iban ya estaban en black, así que no hacía falta montar nada en escritura ni esperar a que terminara ninguna copia: xenoblade como archivo comprimido en la carpeta de wii, jungle beat igual en gamecube, y red faction en la de playstation dos, que además estaba duplicado en dos formatos.
+
+a la una y treinta y cinco elegiste la opción de borrarlos de la tarjeta ya, sin verificar el hash, confiando en que el respaldo de black está bien. te lo confirmé tal cual y salió así.
+
+la tarea terminó en ocho minutos y los tres salieron. la collection de dudosos quedó en dos. pero hubo dos cosas que no cerraron del todo y te las digo derecho, porque es lo que corresponde: como autorizaste saltar el hash, en vez del hash comparé el tamaño en bytes contra el respaldo, que es más débil pero es lo que había. y el espacio liberado no coincidía con lo esperado: faltaban más de seis gigas de los que deberían haber aparecido.
+
+a la una y cuarenta y nueve elegiste la opción de cerrar dolphin y retroarch para que ese espacio apareciera, y de paso correr la prueba del error de entradas ignoradas con el aparato desbloqueado. eso quedó encolado y salió.
+
+# el saque quedó cerrado, pero el aparato volvió con pin
+la tarea del espacio tardó dieciocho minutos y cerró los cuatro pasos del saque, con el informe escrito. lo de las entradas ignoradas dio cero, y lo verificó por dos caminos distintos, no por uno solo, que es como me gusta cuando el número es cero y podría ser cero por estar mirando mal.
+
+lo que no pude medir es un número, uno solo, y el motivo es de lo más tonto: la retroid volvió con el pin puesto. mientras esté bloqueada no hay forma de leer eso desde acá.
+
+y eso encadenó con lo de las dos y diez, cuando me preguntaste qué queda de la retroid y me pediste la cantidad de juegos por sistema de hoy. el conteo exacto de hoy no lo puedo sacar: en el server no existe la herramienta de conexión con el aparato, y encima la retroid está desenchufada y la tarjeta no monta hasta que la desbloquees. lo último medido de verdad es el inventario del veintiuno de septiembre, mil ochocientos veinte roms en total. te lo di como lo que es, un número viejo, no como si fuera el de hoy.
+
+o sea: dudosos ya no quedan, eso sí está cerrado. el conteo fresco por sistema lo tenés en cuanto desbloquees el aparato y lo enchufes.
+
+# los comments de brian: dos aplicados, uno afuera, y con tu texto
+a la una y veintiocho me dijiste que hiciera lo que pidió brian y que mientras tanto escribiéramos qué responderíamos en los pull requests. lo encolé como una sola orden. pero cuatro minutos después me corregiste con algo importante: no aplicar los tres a ciegas, aplicar solo lo que tiene sentido y el resto contestarlo con el dato.
+
+el corte quedó así: dos de los tres van, porque leer el método de envío real de shopify y ramificar por tipo es lo correcto y es lo que pide la compatibilidad hacia atrás. el tercero no lo toqué: fijar el precio en una corrida que solo renombra escribe arriba el precio guardado en la base lo que shopify tenga hoy, así que un merchant que solo renombra el método puede pisarle a un cliente un precio que ya tenía. eso no es una mejora, es un riesgo.
+
+la tarea de aplicarlos corrió en seis minutos y quedó verde. después hubo una segunda pasada de tres minutos que confirmó el estado: los dos aplicados, el tercero afuera, commit local, nada pusheado, ningún comment contestado, los dos pull requests todavía en borrador, jira sin tocar. exactamente el perímetro que pediste.
+
+y a las dos menos tres me mandaste tu propio texto para el comment del que dejamos afuera, que cierra preguntándole a brian en vez de ofrecerle el cambio. es mejor que el mío, porque el mío ofrecía y el tuyo consulta, que es lo que va cuando el que decide es él. salió con tu texto.
+
+# marcar como resuelto en vez de escribir un comment
+a la una y treinta y siete me tiraste una idea que cambió el trabajo entero: si algo lo vamos a resolver, capaz conviene marcar el thread directamente como resuelto, y dejar el comment solo para lo que no aplicamos.
+
+es correcto y es mejor. para lo que sí aplicamos no escribimos nada, se marca resuelto y listo. el comment queda solo donde nos desviamos o donde no lo hicimos. eso deja dos comments en vez de once, que es la diferencia entre un pull request que se lee y uno que nadie abre.
+
+hice el reparto contra lo que estaba en el código local y te lo mostré antes de tocar nada. a las dos y nueve tocaste la opción de encolar el push de los commits, el marcado como resuelto de los nueve threads y los dos comments tal cual quedaron.
+
+vale decir algo del hook: mientras esto se armaba, el guard frenó una edición de pull request porque no tenía tu ok explícito. está bien que lo haya frenado. esa es la idea.
 
 # los cuerpos de los pull requests: al final quedaron cortos, y el timeline no se pudo limpiar
 a las diez y dieciocho me marcaste que los dos pull requests seguían con la descripción de un solo párrafo, que es horrible. lo verifiqué en el momento y tenías razón: el cuerpo de uno era un párrafo de once líneas y el del otro de nueve. el draft corto con viñetas estaba escrito en un archivo de qa y nunca había llegado a github. o sea, la orden anterior escribió el archivo y no tocó los pull requests. eso es la mitad del trabajo contada como entera, y me lo quedo.
@@ -423,6 +459,34 @@ las otras dos salieron juntas en una sola orden y ya están andando, verificadas
 a las once y veintisiete me pediste que te contara la revisión, y son tres informes. el que importa es el de los seis juegos borrados que eran recuperables, remedidos con el limitador de velocidad apagado. de esos seis, cuatro corren pleno y vuelven a estar justificados. call of duty dos clava treinta cuadros, que es su nativo. vexx da treinta y cinco contra un nativo de treinta. devil may cry también anda.
 
 esa medición cambia la cuenta: con el limitador puesto parecían peores de lo que son, y eso había pesado en la decisión de borrarlos.
+
+# el agujero del hook de git, tapado en cincuenta repos
+a la una y treinta y cuatro tocaste dos opciones seguidas que eran el mismo plan, así que las encolé juntas en una sola orden: dejar dos repos exentos como están, agregar un chequeo que corra solo y reinstale el hook en cualquier repo nuevo que aparezca, y que el daemon abra el permiso desde la línea de la orden y lo cierre al terminar, con prueba y reinicio.
+
+la tarea corrió veintitrés minutos y cerró los seis pasos. el agujero era real y estaba justo donde dijiste: el guard de idioma se instala repo por repo, así que un repo nuevo nacía sin él. el barrido ahora corre de forma idempotente, o sea que podés pasarlo mil veces y no rompe nada: cincuenta repos ya lo tenían, cero reinstalados, dos exentos, cero con error.
+
+después hubo una prueba en un repo de descarte que confirmó las dos mitades: un push frenado por el guard, y el mismo push salteado a mano cuando alguien pone la variable que lo apaga. las dos cosas funcionan.
+
+# el barrido de los toques de caja: ciento veinticuatro y ninguno en el aire
+cerca de la una menos tres terminó una tarea larga, de media hora, que cerró los dos pasos en verde y no reencoló nada.
+
+el primer paso era el barrido: ciento veinticuatro toques de caja desde ayer, todas las pestañas, y ninguno quedó en el aire. ese era justo el miedo, que un toque tuyo en una caja se perdiera sin convertirse en nada. no pasó ni una vez en ciento veinticuatro. el listado completo quedó escrito.
+
+# la standup del día y lo que no quedó en el aire
+a la una y treinta y cinco tocaste la opción de actualizar la línea de la última standup a hoy y seguir con lo que faltaba. la tarea salió en un minuto, actualizó la línea del estado y escribió el archivo de la standup de hoy, que cubre desde ayer al mediodía. nada posteado en jira ni en slack.
+
+de paso revisé qué era eso de "lo que faltó", porque no quería que quedara como una bolsa vaga. tu pedido de las once y trece, el de los comments de los dos pull requests, no quedó en el aire: está corriendo en la sub de awtomic desde que tocaste la opción al mediodía y veinticinco. y lo de brian de la una y media también estaba en marcha.
+
+# lo que se movió en el agente entre las tres menos cinco y las tres
+hubo dos órdenes que declararon una cosa y escribieron otra. una dijo que iba a tocar dos archivos del guard y terminó escribiendo archivos de prueba; la otra declaró dos archivos de la retroid y escribió varios más. queda anotado: cada orden tiene que declarar lo que va a escribir, y cuando lo escrito no coincide con lo declarado, se ve. no es un error grave, es que la declaración quedó corta, pero es justo el tipo de cosa que si no se mira se vuelve costumbre.
+
+una orden estaba esperando hace siete minutos y medio, con más de ciento veinte pasadas dando el mismo motivo, sin que hubiera un choque real con nada. arrancó. eso es la cola decidiendo bien: si el motivo por el que espera no es un choque de verdad, no tiene sentido que siga esperando.
+
+fable sigue prohibido, así que todo salió con opus. y un aviso de que hay margen de tokens no se reenvió porque ya había salido uno igual hacía poco.
+
+hubo un parche mecánico a una prueba que no la dejó en verde, así que lo revertí y quedó el backup. la prueba sigue roja y el aviso queda: no la voy a tapar con un parche que no arregla nada.
+
+y a las tres y un minuto, instagram: la sesión está viva pero frenó las lecturas de lista, con la api rebotando al login. la foto del día reintenta sola y no hay que resembrar cookies. te lo dejo como aviso, sin push, porque no es algo que tengas que atender ahora.
 
 # pro evolution soccer: queda solo la versión americana, y el respaldo espera a que termine la copia
 a las once y treinta y uno fuiste directo: la versión europea te chupa un huevo si la americana es mejor. que quede respaldada la americana y que la europea se borre de donde esté, sin preguntarte más nada por ella. mac, server, tarjeta.
