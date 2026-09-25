@@ -1024,3 +1024,73 @@ lo que hablo facundo en la pestaña:
 - 09:49 cola: 1990 en paralelo con 1987 (el lock decide) [tools, toca /home/agente/w/awtomic/repos/awtomic-api, /home/agente/w/awtomic/repos/shopify-app-extensions]: [grande] {claude} [pestana awtomic#2]...
 - 09:49 fable prohibido: sale con opus: {claude} [pestana awtomic#2] tema awtomic: [toca: /home/agente/w/awtomic/repos/awtomic-api, /home/agente/w/awtomic/repos
 - 09:49 chat lan: token rechazado (no es...
+
+### tramo 09:50-12:52 (hecho)
+## [juegos] lo que se hizo en juegos
+lo que hablo facundo en la pestaña:
+- 10:21 facundo: A: dale, relanzo el backup de black como servicio de systemd que retoma desde el 34%, y lo de juegos sigue aparte / claudio: dale, relanzo el backup de black como servicio que sobreviva al reinicio de sesión y retome desde los 876G ya copiados. lo de juegos queda quieto hasta que vos digas.
+- 10:21 facundo: no esta corriendo ya? / claudio: sí, ya está corriendo, y arrancó hace 40 min: relanzó a las 9:42 am y los tres procesos de rsync están vivos (pid 1749382 y compañía). el destino ya tiene 1,1 TB copiados de los 4,6 TB del disco. lo que dice el contador de la corrida de ahora: 220 GB pasados a 106 MB/s, con estimado de 6:25 hs para terminar. ojo con...
+- 11:27 facundo: ok contame la review entonces hacmee un resumen no se / claudio: te lo cuento como quedó la revisión entera, que son tres informes. los seis borrados recuperables, remedidos con el limitador apagado (rp5/recuperables-2026-09-25.md): cuatro corren pleno y vuelven a estar justificados. Call of Duty 2 clava 30,0 que es su nativo, Vexx da 35 contra un nativo de 30, Devil May Cry da...
+- 11:31 facundo: me chupa un huevo PES 6 version europea si la version USA es mejor. que te quede respaldar la version USA y borrar la europea de cualquier lado y listo / claudio: entendí: PES 6 queda solo la usa. me aseguro de que esté respaldada de verdad en black y borro la europea de donde sea que haya quedado (mac, server, tarjeta), sin pedirte más nada por ella. el detalle que importa: la europea ya la borré de la tarjeta, pero sin respaldo verificado porque /mnt/black está montada de...
+- 11:37 facundo: el respaldo lo hacemos despues, ahora black está siendo copiado / claudio: dale, queda quieto: el respaldo de PES 6 usa y el barrido de la europea esperan a que termine la copia de black. no encolo nada ahora. cuando el backup cierre me decís y sale la tarea: montar black en escritura con revert, copiar la usa, verificar sha1 de los dos lados y borrar cualquier resto de la europea.
+- 11:38 facundo: > flaudio: entendí: PES 6 queda solo la usa. me aseguro de que esté respaldada de verdad en black y borro la europea de donde se… > el detalle que importa: la europea ya la borré de la tarjeta, pero sin respaldo verificado porque /mnt/black está mon… > OPCION A: dale, respaldo... / claudio: te la repito, era corta. quedó quieto: el respaldo de PES 6 usa y el barrido de la europea esperan a que termine la copia de black. no encolé nada. la copia sigue viva, 4...
+
+## [awtomic#2] lo que se hizo en awtomic#2
+lo que hablo facundo en la pestaña:
+- 09:50 facundo: eso abajo, donde se menciona el chat... lo veo solo yo o es publico? ![Screenshot 2026-09-25 at 9.49.45 AM.png](img/b4b17c3a275e-Screenshot-2026-09-25-at-9.49.45-AM.png) / claudio: [awtomic#2] lo ves solo vos. el evento viene de facundopichetto/agente-buzon, que la api devuelve con "private": true y dueño facundopichetto: github filtra los cross-references por permiso, así que un compañero de awtomic que no tiene acceso a ese repo no ve esa fila en el timeline. por eso está el candadito al lado....
+- 09:51 facundo: A: dale, encolo que el guard además saque los links a repos de awtomic del issue #6 y del buzón en general, y me fijo si el evento viejo se puede eliminar desde la ui / claudio: [awtomic#2] dale, tocaste la A: la encolo ahora.
+- 10:17 facundo: en que quedo esto? / claudio: [awtomic#2] quedó así, las tres órdenes terminaron y lo verifiqué recién. el guard global está: recetas/guard_idioma_git.py (escrito 9:54 am), más recetas/buzon_sin_links.py con sus pruebas, que convierte cualquier link a un repo de awtomic en texto pelado tipo awtomic-api el pull request. eso es lo que pediste: que el buzón...
+- 10:18 facundo: los PR todavia tienen la descripcion de 1 solo parrafo que es horrible / claudio: [awtomic#2] confirmado, siguen los largos. lo verifiqué recién con gh pr view: el body del 1685 es un solo párrafo de 11 líneas y el del 632 uno de 9; el draft corto con viñetas está en qa/2026-09/el ticket de update shipping rate action cannot set/prs-cuerpos-cortos.md y nunca llegó a github. o sea la orden anterior escribió el archivo pero no tocó los PRs....
+- 10:20 facundo: A: dale, encolo que borre del buzón el comment que generó ese cross-reference, así el evento cae solo del timeline del PR / claudio: [awtomic#2] dale, tocaste la A: la encolo ahora.
+- 10:20 facundo: pero que no se pisen las tareas. estas haciendo todo ecomo el orto y no terminas 1 cosa / claudio: [awtomic#2] no se pisan. la cola ya las serializa por tema y hoy quedan solo dos: - repo corriendo, pid 1805499 vivo hace 1:16 min: es la que reemplaza los dos cuerpos de PR por los cortos. - timeline pendiente, y dice textual espera a 1993 por tema:awtomic: no arranca hasta que termine la otra. o sea una sola a la...
+- 10:36 facundo: ya comparti los PRs y los puse ready for review... algo mas que hacer cuadno termine lo que esta corriendo ahora? / claudio: [awtomic#2] del ticket de update shipping rate action cannot set no queda nada pendiente de mi lado: los dos PRs tienen el cuerpo corto, están ready for review y en manos de...
+
+## [tools] lo que se hizo en tools
+lo que hablo facundo en la pestaña:
+- 09:52 facundo: (tarea claude: [pestana awtomic#2] tema awtomic: [toca: /home/agente/w/awtomic/repos/awtomic-ap) / claudio: terminó claude (opus, chrome, cuenta orugote (opus), 2 min, $1.48): Los seis commits reescritos y force-pusheados, con el diff verificado idéntico en los dos repos. Nada mergeado, los dos PRs siguen en draft con su título y cuerpo intactos. Cada branch quedó en tres commits, todos sin el trailer y sin ninguna mención...
+- 09:59 facundo: (tarea guard: [pestana awtomic#2] tema tools: [toca: /home/agente/.claudio/tools/agente/receta) / claudio: terminó guard (opus, cuenta orugote (opus), 8 min, $2.82): Listo. El guard está armado, instalado y verde. recetas/guard_idioma_git.py frena seis patrones: castellano (tildes, ¿/¡ y una lista de palabras frecuentes), las rutas /home/agente/.claudio y ~/.claudio, los nombres de pestaña tipo awtomic#2, la identidad...
+- 10:11 facundo: (tarea github: [pestana awtomic#2] tema tools: [toca: recetas/, .claudio/tools/agente/docs/] ex) / claudio: terminó github (opus, cuenta orugote (opus), 18 min, $4.44): Done. Everything verified. El buzón ya no puede linkear un repo de awtomic, y los links que ya estaban salieron. El evento de cross-reference que quedó en los PRs no se puede borrar: eso es lo único que quedó sin resolver, y no por falta de permisos. El...
+- 10:24 facundo: (tarea repo: [pestana awtomic#2] tema awtomic: [toca: ] reemplazar el cuerpo (body) de los PR) / claudio: terminó repo (opus, chrome, cuenta orugote (opus), 4 min, $1.79): Los dos cuerpos quedaron aplicados y verificados contra la api: awtomic-api el pull request y shopify-app-extensions el pull request tienen ahora el texto exacto de su bloque, byte a byte idéntico al archivo. Los dos empiezan con [JIRA: el ticket de update shipping rate action cannot set], con 4 y 3 viñetas....
+- 12:38 facundo: (tarea draft: [pestana awtomic#2] tema awtomic: [toca: /home/agente/w/awtomic/awtomic-api (bra) / claudio: terminó draft (opus, chrome, cuenta orugote (opus), 12 min, $4.38): Los 8 comments de agus y copilot aplicados y verdes en los dos repos, los 3 de brian sin tocar y analizados. Nada pusheado (las dos branches quedan ahead 1), ningún comment contestado, jira sin tocar, los dos working trees limpios. Los commits...
+
+## [awtomic] lo que se hizo en awtomic
+lo que hablo facundo en la pestaña:
+- 11:52 facundo: por que desde el 22? tiene que ser desde el 24 al mediodia para aca / claudio: con el corte bien (24 al mediodía en adelante) el recuento cambia: de los ~40 pedidos que hiciste en esta pestaña y sus subs, casi todos salieron. las órdenes de la cola van de la 74501 a la 74575 y están todas en hecha, salvo dos corriendo: timeline y destino. el hueco real de anoche fue uno solo, entre 6:44 pm y...
+- 11:54 facundo: primero dame la standup desde ayer 24 al mediodia a hoy. luego vemos lo que te faltó / claudio: standup desde ayer 24 al mediodía hasta ahora. la línea última standup del ESTADO.md está vieja (dice 22/09), la actualizo cuando la mandes. [PONZI]: the box editor question is answered on the ticket, it was the club's 6 bottle minimum and not a bug. The live theme now shows a "This club has a 6 bottle minimum."...
+- 11:59 facundo: [PONZI]: Issue with the club. it was the club's 6 bottle minimum and not a bug. The live theme now shows a "This club has a 6 bottle minimum." the placeholder line cleanup is done. Ran the paused contracts yesterday and all the cancelled ones during the night. I worked on the... / claudio: entendí: querés la standup con tus palabras, y que yo complete el MVP de ponzi en una línea. [PONZI]: Issue with the club. it was the club's 6 bottle minimum and not a bug. The live theme now shows a "This club has a 6 bottle minimum." the placeholder line cleanup is done. Ran the paused contracts yesterday and all...
+- 12:03 facundo: [PONZI]: Issue with the club. it was the club's 6 bottle minimum and not a bug. The live theme now shows a "This club has a 6 bottle minimum." the placeholder line cleanup is done. Ran the paused contracts yesterday and all the cancelled ones during the night. I'm working on the... / claudio: entendí: esa es tu versión final de la standup, con el MVP de ponzi contado como "shipping code and title" y en review ahora mismo. no toco nada ni mando nada. queda igual salvo el detalle de creekside: ahí va : después del corchete como en el resto ([CREEKSIDE]: collaborator access requested...). OPCION A: dale...
+
+## [server] lo que se hizo en server
+lo que hablo facundo en la pestaña:
+- 09:55 facundo: (tarea retomar: tema server: [toca: /mnt/copias, /home/agente/.claudio/server/backup-black.sh, /) / claudio: terminó retomar (opus, cuenta orugote (opus), 16 min, $3.08): [server] el backup de black volvió a correr, ahora como servicio de systemd que no depende de la sesión. cómo lo pediste: "retomá el backup como servicio de sistema y dejá anotada la caída". cómo funciona hoy: backup-black.service está active (running)...
+
+## [board] lo que se hizo en board
+lo que hablo facundo en la pestaña:
+- 10:41 facundo: 1- sigue pasando que si mando algo en una pestaña y cambio a otra, cuando vuelvo a la primera la respuesta NUNCA está ahí. tengo que volver a preguntar porque seguro la respuesta se fue a cualquier lado. tan difícil es mantener las pestañas como una conversación? 2- a la derecha... / claudio: entendí: tres cosas del panel del chat, y la 1 es un bug de verdad, no solo diseño. - respuestas que se pierden al cambiar de pestaña: hoy, al volver a una pestaña, el panel pinta lo que tiene en memoria y no le vuelve a pedir la charla al server (web/index.html:4043: si ya hay historial cargado, corta y no refresca)....
+
+## [log] movimiento del agente
+- 12:47 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 12:47 atajo: draft pelado -> el ultimo de prueba (19:41)
+- 12:47 atajo: tema pelado -> estado de prueba
+- 12:47 atajo: tema pelado -> estado de awtomic
+- 12:47 prueba_falsa: el parche mecanico del guard NO la dejo verde, lo revirti (backup en backup/prueba_falsa.py.20260925-124706): queda el aviso
+- 12:47 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 12:47 trabajo a medias: dice "sigue en background" y no queda ningun proceso vivo de la tarea, cuenta como fallo: prueba
+- 12:47 trabajo a medias: dice "sigue corriendo" y quedan vivos [1961077], se da por buena:
+- 12:47 trabajo a medias: dice "queda en segundo plano" y quedan vivos [1961077], se da por buena:
+- 12:47 trabajo a medias: dice "queda en segundo plano" y no queda ningun proceso vivo de la tarea, cuenta como fallo:
+- 12:47 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 12:48 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 12:48 fable prohibido: sale con opus: [fable] tema tools: x
+- 12:48 fable prohibido: sale con opus: [fable] x
+- 12:48 fable prohibido: sale con opus: tema tools: [fable] x
+- 12:48 fable prohibido: sale con opus: x
+- 12:48 modelo por % []: fable sin tag literal baja a opus en orugote (brecha +2, fable nunca por encima de week): tema tools: y
+- 12:48 modelo por % []: fable literal empuja fable por encima de week en orugote (brecha +2): facundo manda: tema tools: y (de chat)
+- 12:48 reinicio ya pedido (por tarea 1998 {lock}: 2312 {lock}: _LockArchivo con timeout, guard_antes fuera del lock y el guard lock_cola), se suma: por tarea 2004 {caja}: cambio de codigo
+- 12:49 instagram: la sesión está viva pero frenó las lecturas de lista (api rebotada al login (http 200, sesión sin confirmar)). la foto del día reintenta sola; no hay que resembrar cookies (aviso, sin push)
+- 12:49 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: 2026-09-25 12:49 [verde][info] instagram: la sesión está viva pero frenó las l
+- 12:49 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 12:50 fable prohibido: sale con opus [chat]: modelo_chat: settings.json
+- 12:50 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+- 12:51 fable prohibido: sale con opus [chat]: modelo_chat: settings.json

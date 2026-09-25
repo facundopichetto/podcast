@@ -1,8 +1,33 @@
-# actualizado hoy a las 09:50
-actualizado hoy, viernes veinticinco, a las nueve cincuenta.
+# actualizado hoy a las 12:52
+actualizado hoy, viernes veinticinco, a las doce cincuenta y dos.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# los cuerpos de los pull requests: al final quedaron cortos, y el timeline no se pudo limpiar
+a las diez y dieciocho me marcaste que los dos pull requests seguían con la descripción de un solo párrafo, que es horrible. lo verifiqué en el momento y tenías razón: el cuerpo de uno era un párrafo de once líneas y el del otro de nueve. el draft corto con viñetas estaba escrito en un archivo de qa y nunca había llegado a github. o sea, la orden anterior escribió el archivo y no tocó los pull requests. eso es la mitad del trabajo contada como entera, y me lo quedo.
+
+a las diez y veinticuatro salió la tarea que lo arregló de verdad. tardó cuatro minutos y quedó verificado contra la api de github: los dos pull requests tienen ahora el texto exacto de su bloque, byte a byte idéntico al archivo. los dos arrancan con el ticket de update shipping rate action cannot set entre corchetes, uno con cuatro viñetas y el otro con tres. nada mergeado.
+
+en el medio pasó otra cosa. a las nueve y cincuenta me preguntaste por una línea que aparecía abajo del pull request, donde se menciona el chat, y si eso lo veías solo vos o era público. lo miraste en una captura. la respuesta es que lo ves solo vos: el evento viene del repo del buzón, que es privado y tuyo, y github filtra las referencias cruzadas por permiso. un compañero de awtomic que no tiene acceso a ese repo no ve esa fila en el timeline, por eso al lado hay un candadito.
+
+igual tocaste la opción de encolar el guard, y está bien encolado. quedaron tres órdenes terminadas. hay un guard global que frena seis patrones antes de que algo se escriba en git: castellano con tildes y signos de apertura, las rutas de tus carpetas, los nombres de pestaña con numeral, la identidad del sistema. y aparte un componente del buzón que convierte cualquier link a un repo de awtomic en texto pelado, del estilo awtomic-api el pull request, con sus pruebas. el buzón ya no puede linkear un repo de awtomic, y los links que ya estaban salieron.
+
+lo único que quedó sin resolver: el evento de referencia cruzada que ya estaba en los pull requests no se puede borrar. no es falta de permisos, es que github no lo deja. a las diez y veinte encolaste borrar el comment del buzón que lo generó, para ver si el evento caía solo del timeline. ahí te enojaste, con razón, porque parecía que se pisaban las tareas. no se pisaban: la cola las serializa por tema y quedaban solo dos, una corriendo y la otra esperando explícitamente a la primera por el tema awtomic. una sola a la vez.
+
+a las diez y treinta y seis me dijiste que ya habías compartido los pull requests y los habías puesto ready for review, y preguntaste si quedaba algo más. de mi lado, del ticket del shipping rate no quedaba nada pendiente.
+
+# los comments de la review de los pull requests: ocho aplicados, tres sin tocar
+cerca de las doce y media salió una tarea sobre los dos repos que tardó doce minutos. los ocho comments de agus y de copilot quedaron aplicados y verdes en los dos repos. los tres de brian no se tocaron, pero sí se analizaron.
+
+lo importante es lo que no hizo: no pusheó nada, las dos branches quedan un commit adelante; no contestó ningún comment; no tocó jira; y los dos working trees quedaron limpios. o sea, está todo listo para que lo mires vos y decidas cuándo sale.
+
+# el backup de black está corriendo como servicio, y ahora sí sobrevive a un reinicio de sesión
+a las diez y veintiuno tocaste la opción de relanzar el backup del disco black como servicio de sistema, que retome desde lo que ya estaba copiado. y enseguida preguntaste si no estaba corriendo ya. sí, ya estaba corriendo: había relanzado a las nueve cuarenta y dos, o sea cuarenta minutos antes, y los tres procesos de copia estaban vivos.
+
+la tarea que lo dejó así terminó a las nueve y cincuenta y cinco y tardó dieciséis minutos. el servicio está activo y ya no depende de que la sesión siga abierta, que era exactamente el problema de antes. también quedó anotada la caída anterior.
+
+los números de ese momento: el destino tenía un tera y pico copiado de los cuatro y medio que tiene el disco. el contador de esa corrida marcaba doscientos veinte gigas pasados a ciento seis megas por segundo, con un estimado de seis horas y media para terminar.
 
 # el ticket del shipping rate: el rate vacío ponía el envío en cero, y se arregló
 a las ocho y cincuenta tocaste la opción de encolar el fix del rate vacío: que el handler solo toque el precio si el campo viene con un valor real. la tarea tardó treinta y siete minutos y cerró arreglada y verificada de punta a punta. el rate vacío ya no pone el envío en cero.
@@ -393,6 +418,45 @@ al mediodía sumaste los que faltaban de gamecube y también algunos de wii. com
 pediste tres cosas del chat y la tercera, la del cruce de temas, te la contesté con el estado real en el momento: siete filtraciones encontradas, seis arregladas con su prueba.
 
 las otras dos salieron juntas en una sola orden y ya están andando, verificadas en un chrome sin pantalla: las pestañas se reacomodan arrastrándolas, con el orden que queda guardado, y el hover es el mismo verde pero más flojo que el de la pestaña seleccionada. la versión del board quedó marcada para que el daemon la publique en su pasada.
+
+# la revisión de los juegos: cuatro de los seis borrados vuelven a estar justificados
+a las once y veintisiete me pediste que te contara la revisión, y son tres informes. el que importa es el de los seis juegos borrados que eran recuperables, remedidos con el limitador de velocidad apagado. de esos seis, cuatro corren pleno y vuelven a estar justificados. call of duty dos clava treinta cuadros, que es su nativo. vexx da treinta y cinco contra un nativo de treinta. devil may cry también anda.
+
+esa medición cambia la cuenta: con el limitador puesto parecían peores de lo que son, y eso había pesado en la decisión de borrarlos.
+
+# pro evolution soccer: queda solo la versión americana, y el respaldo espera a que termine la copia
+a las once y treinta y uno fuiste directo: la versión europea te chupa un huevo si la americana es mejor. que quede respaldada la americana y que la europea se borre de donde esté, sin preguntarte más nada por ella. mac, server, tarjeta.
+
+el detalle que importa es que la europea ya la había borrado de la tarjeta, pero sin respaldo verificado, porque el disco black está montado de una forma que no me dejaba escribir en ese momento.
+
+a las once y treinta y siete lo frenaste vos mismo: el respaldo se hace después, ahora black está siendo copiado. así que quedó quieto y no se encoló nada. cuando el backup cierre y me digas, sale la tarea completa: montar black en escritura con revert armado, copiar la americana, verificar la huella de los dos lados y recién ahí barrer cualquier resto de la europea.
+
+a las once treinta y ocho me citaste esa respuesta de vuelta, y te la repetí corta: quedó quieto, no encolé nada, la copia sigue viva.
+
+# la standup desde ayer al mediodía, y la fecha que estaba mal
+a las once y cincuenta y dos me corregiste el corte: no desde el veintidós, sino desde el veinticuatro al mediodía para acá. con el corte bien, el recuento cambia. de los cuarenta pedidos que hiciste en esa pestaña y sus subpestañas, casi todos salieron: las órdenes están todas en hecha salvo dos corriendo. el hueco real de anoche fue uno solo, a la tarde.
+
+también apareció que la línea de última standup del estado estaba vieja, marcaba el veintidós. se actualiza cuando mandes la standup de verdad.
+
+a las once y cincuenta y cuatro te armé la standup por merchant. después, a las once cincuenta y nueve y de nuevo a las doce y tres, la reescribiste vos con tus palabras y me pediste que completara lo de ponzi en una línea. la versión final tuya cuenta lo del club como shipping code and title, en review ahora mismo, y deja claro que el mínimo de seis botellas no era un bug sino la regla del club, que el theme live ya lo muestra con su cartel, y que la limpieza de la línea de placeholder está hecha. el único detalle que marqué es de puntuación: en creekside faltaban los dos puntos después del corchete, como en el resto. no toqué nada ni mandé nada.
+
+# el panel del chat: las respuestas que se pierden al cambiar de pestaña son un bug de verdad
+a las diez y cuarenta y uno me pasaste tres cosas del panel del chat, y la primera no es diseño, es un bug. decís que si mandás algo en una pestaña y te cambiás a otra, cuando volvés a la primera la respuesta nunca está ahí, y tenés que volver a preguntar porque seguro se fue a cualquier lado. y preguntaste si es tan difícil mantener las pestañas como una conversación.
+
+lo miré y está confirmado de dónde sale. al volver a una pestaña, el panel pinta lo que tiene en memoria y no le vuelve a pedir la charla al server: si ya hay historial cargado, corta ahí y no refresca. o sea la respuesta sí llegó y sí está guardada, lo que falla es que la pantalla se queda con la foto vieja. no es que la respuesta se fue a cualquier lado.
+
+# lo que se movió en el agente cerca del mediodía
+fable sigue prohibido, así que todo lo del chat salió con opus, y quedó anotado cada vez. hubo una prueba del reparto por porcentaje: sin la etiqueta literal, fable baja a opus en orugote porque nunca puede quedar por encima de la ventana semanal; con la etiqueta literal puesta a mano, manda lo que digas vos.
+
+se probaron los atajos que no gastan tokens: el draft pelado devolviendo el último draft, y el nombre de un tema pelado devolviendo su estado. andan.
+
+el detector de trabajo a medias se ejercitó en los dos sentidos. cuando una tarea dice que sigue corriendo o que queda en segundo plano y efectivamente hay un proceso vivo, se da por buena. cuando dice lo mismo y no queda nada vivo, cuenta como fallo. las cuatro combinaciones dieron lo esperado.
+
+hubo un parche mecánico que un guard intentó aplicar para dejar verde una prueba. no la dejó verde, así que lo revertí y quedó el respaldo del archivo original. el aviso queda en pie en vez de taparse con un arreglo que no arreglaba.
+
+instagram: la sesión está viva pero frenó las lecturas de lista, con la api rebotada al login. la foto del día reintenta sola y no hay que resembrar cookies. el aviso salió sin push, y una repetición del mismo texto no se reenvió.
+
+también quedó pedido un reinicio por cambio de código, que se sumó a uno que ya estaba pendiente por el trabajo del lock de la cola: ahora el lock tiene timeout y el guard previo quedó fuera del lock, que es lo correcto, porque el lock es para leer y escribir, nunca para pensar. y hubo un simulacro de cambio de sistema con revert automático a los sesenta segundos, que es el guard de siempre: nada se aplica sin poder volver atrás.
 
 # el mensaje de slack del shipping rate, y las cuatro pasadas hasta que quedó
 a las ocho y cincuenta y cuatro pediste que te explicara en inglés qué habíamos testeado y cómo, para poder contar el estado. la primera versión salió completa: qué es el cambio, qué se probó, cómo se probó. y era demasiado larga, porque el destino era un mensaje de slack y no un informe. me lo dijiste derecho: tenía que ser como el quince por ciento de eso.
