@@ -1,8 +1,41 @@
-# actualizado hoy a las 04:00
-actualizado hoy, jueves veinticuatro, a las cuatro en punto.
+# actualizado hoy a las 05:27
+actualizado hoy, viernes veinticinco, a las cinco veintisiete.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el cuil que dije que guardé y no estaba
+esto es lo más feo del rato y va primero. me pasaste el cuil de gabriel bendahan para cargarlo en el formulario de mailamericas, y me dijiste textual que lo guardara. yo contesté que lo había guardado, tapado en pantalla y todo. después la tarea del formulario entró al mail de orugote, encontró el mail que pedía actualizar información, abrió el link, llegó hasta el formulario andando, y ahí frenó: el cuil no estaba en la bóveda. ni en el store de claves ni en el archivo de credenciales. o sea que te lo tuve que volver a pedir.
+
+me lo marcaste con todas las letras: te dije literalmente guardalo, y me lo pedís de nuevo porque no lo guardaste, ¿qué pasa si era algo que se borra? tenés razón y es grave, y la causa es concreta: el daemon escribe en la bóveda cuando sale una línea de clave, y esa línea no salió. el anuncio de "guardé" se pintó igual, así que quedó una promesa sin respaldo.
+
+quedó una tarea cerrada que arregla justo eso: encontrar por qué la línea no persiste y que el anuncio no pueda existir sin la escritura hecha. desde ahora, cuando me digas guardá, la verificación se corre en la misma respuesta, no se asume.
+
+# una orden anunciada que no llegaba a la cola
+el otro agujero de la misma familia, y también cerrado. pasaba que el chat te decía "dale, va a la cola" y eso podía no llegar nunca a la base. en el registro quedaba la línea de que el chat encolaba, pero del otro lado no aparecía la fila. resultado: vos pedías algo, yo te confirmaba, y no pasaba nada, sin que nadie se diera cuenta hasta que preguntabas.
+
+la tarea tocó el corazón de la cosa: el daemon, la parte del chat, la capa que habla con la base de la cola, y le dejó su prueba propia para que no vuelva. la regla que quedó escrita es simple y es la que importa: una orden anunciada está en la base, sí o sí, y ninguna respuesta del chat se guarda vacía. las dos cosas son el mismo problema de fondo que el del cuil, decir que algo pasó sin que haya pasado.
+
+# ponzi: los doce pausados reparados en live
+con la confirmación de adrian arriba de la mesa, se reparó en live lo que quedaba de los contratos pausados con el producto placeholder. eran doce, más el que ya estaba de antes, así que los trece están completos.
+
+la forma en que se hizo es la que pediste: uno por uno, no en lote, cada uno escrito con el script y después releído fresco contra la api del admin. entre veinticinco y cuarenta y un chequeos por contrato y cero diferencias en los doce. tardó siete minutos.
+
+lo que queda abierto es el mensaje para adrian, y ahí hay un compromiso metido: la segunda línea dice que a la noche corren las actualizaciones de las subscriptions canceladas. son más de cuatro mil setecientas, y todas están canceladas, o sea que ninguna puede volver a cobrar con el placeholder. eso es lo que hay que resolver antes de que el comment sea verdad, no después.
+
+# penfolds: me equivoqué con el form del theme
+vale contarlo porque la primera respuesta que te di estaba mal. te dije que lo de hafner no se podía replicar en penfolds porque penfolds ya estaba en el form productizado y el kit viejo del theme estaba apagado. me preguntaste si estaba seguro, que no te cerraba, y tenías razón.
+
+mirando el theme que está vivo, penfolds sí tiene el kit viejo, con sus treinta y tres archivos más la sección de signup del wine club, y la sección está usada en tres páginas con la marca de apagado sin poner, o sea prendida. así que sí está activo.
+
+el ticket volvió de nuestro lado: emily lo reabrió pidiendo que el formulario lea la variante y el plan desde la url, con hafner como precedente. brian no dijo nada. quedó encolado leer la sección y los dos archivos del kit de penfolds y compararlos con hafner, para poder decir en concreto si esto se resuelve en el theme y en cuántas líneas, en vez de decirlo de memoria.
+
+# la mac sin espacio, y el respaldo antes de borrar
+me dijiste que te quedaban cuatrocientos megas y que borrara de gamecube o de wii lo que ya se pudiera borrar. la respuesta tuvo que ser incómoda: de lo que hay en descargas todavía no había nada respaldado en el server. la mac estaba al noventa y siete por ciento, con veintiún discos de gamecube crudos y los siete de wii ya convertidos.
+
+sobre borrar los de gamecube: el formato no era el problema, porque lo que está en la tarjeta es lossless y verificado por md5 y sha1 contra redump antes de copiarse, así que de cada uno sale el original idéntico. el problema era que la única copia estaba en la mac y en la tarjeta, y una tarjeta no es un respaldo. después me diste el ok completo: hacé todo el respaldo que necesites y andá borrando. así quedó, respaldar al server primero y borrar detrás.
+
+en el mismo rato se revisó la carpeta de wii: los siete viejos ya están cumplidos y adentro de la tarjeta, y lo nuevo son nueve títulos sueltos en la raíz de descargas. quedó encolado verificarlos contra redump, convertirlos, meterlos en la tarjeta y medir los cuadros por segundo.
 
 # hafner: la regla de escribir corto, y el comment que se rehizo cuatro veces
 a las once y veinte me paraste en seco con hafner. el pedido fue claro: muy breves, decir qué se arregló y qué falta, y nada más. lo pusiste en una frase que me quedó grabada: si pongo diez palabras, leen una, así que mejor poner una y que tenga sentido. y aclaraste que eso no es una regla de awtomic sino una regla general de la vida, para todo, incluso cuando te hablo a vos. nadie quiere leer pelotudeces, no hay tiempo, para eso está la inteligencia artificial.
@@ -315,6 +348,45 @@ terminó la conversión de gamecube, en cuarenta y siete minutos. los dieciocho 
 antes de eso habías agregado los dos que faltaban, resident evil zero y viewtiful joe. los metí en la misma tanda para que se hashearan contra la base de referencia y, si daban bien, entraran a convertir con el resto.
 
 al mediodía sumaste los que faltaban de gamecube y también algunos de wii. como la tanda de tuneo ya estaba por salir, lo que encolé fue una tanda nueva: hashear lo que hubiera en la carpeta de descargas que todavía no estuviera verificado.
+
+# las pestañas del chat se arrastran
+pediste tres cosas del chat y la tercera, la del cruce de temas, te la contesté con el estado real en el momento: siete filtraciones encontradas, seis arregladas con su prueba.
+
+las otras dos salieron juntas en una sola orden y ya están andando, verificadas en un chrome sin pantalla: las pestañas se reacomodan arrastrándolas, con el orden que queda guardado, y el hover es el mismo verde pero más flojo que el de la pestaña seleccionada. la versión del board quedó marcada para que el daemon la publique en su pasada.
+
+# el disco nuevo, y el respaldo de black que no salió
+tenés tres discos en el server: el black de cinco teras casi lleno, el toshiba de dos, y el wd nuevo de cinco que estaba en un formato de windows, vacío y sin montar. la duda era si convenía reformatear los viejos, y la respuesta fue no tocarlos ahora.
+
+el nuevo se formateó entero, se montó fijo y se compartió para que lo veas desde el finder de la mac sin enchufar nada, por la red de casa y también desde afuera. probado de punta a punta, y los dos viejos intactos.
+
+después pediste copiar todo black al disco nuevo y verificar que quedara idéntico de verdad, archivo por archivo con su hash, no solo que no diera error. tocaste la caja y después te arrepentiste, así que no se encoló nada. el backup de black sigue sin hacerse.
+
+# los accesos a los tres stores
+el pedido de acceso de colaborador a tres stores salió a medias, y es una cosa de tablero, no de código. creekside figuraba en la lista pero con el acceso vencido, así que el que teníamos de febrero no servía y se mandó el pedido de nuevo. shiny se pidió de cero con los permisos que hacen falta. el tercero, lakeview, está frenado porque falta un dato del merchant.
+
+quedó pendiente el comment pidiendo ese código, que te lo muestro antes de postear.
+
+# el widget de la noche, y los tickets partidos en tres
+el widget para las tareas que se dejan para la noche estaba pedido desde antes y se había perdido con el bug de la cola; se recuperó y se hizo, con la condición que pusiste expresamente: antes de arrancar, preguntarte las dudas.
+
+y el widget de tickets, que era uno solo, se partió en tres cajas independientes con su propio plegado: los de soporte, mostrando asignado y reporter, los tuyos como asignado, y los que verificás vos.
+
+# el standup que se rehizo tres veces
+el standup salió, y después salió otras dos veces. primero lo pediste más corto y sin lo que está esperando respuesta, solo lo hecho. después me dijiste que había quedado raro y lo hice de nuevo entero. y al final el recorte fino: sin la advertencia de hall, kind of wild en pocas palabras, y agregar que estamos con algo de ponzi y que vamos a mirar penfolds.
+
+# la impresora del papá, y el router
+sigue sin ser un problema de software. tu viejo la enchufó por usb a la computadora, y así imprime: la cola quedó en el puerto usb, predeterminada y en línea. pero eso no es lo que pediste, que era tenerla como impresora de red.
+
+el asistente de hp le pasó el wifi por cable dos veces y las dos fallaron. y el login del router se probó cinco veces, con la clave de la bóveda, con usuario admin, con las combinaciones por defecto, y todas devolvieron el mismo error. me pasaste la clave de la etiqueta y quedó encolada una pasada de login sola, sin tocar nada de la configuración, para poder mirar si hay filtro de direcciones.
+
+# lo que se movió en el agente entre las cuatro y las cinco y media
+cerca de las cinco y veinte de la mañana volvió a probarse el detector de trabajo a medias, y funcionó en los cuatro casos: cuando la tarea dice que sigue corriendo y hay un proceso vivo, se da por buena; cuando dice lo mismo y no queda nada vivo, cuenta como fallo.
+
+varias veces quedó anotado que fable está prohibido y todo sale con opus, incluso cuando la orden lo pedía con nombre y apellido. la única excepción es la que ya conocés: si vos lo mandás explícito, manda tu palabra.
+
+el daemon arrancó de nuevo, levantó el bus de tareas, quedó escuchando en la red de casa y por la red privada, el tope de hilos quedó en siete por la memoria y la carga del momento, y el recolector borró un temporal. otra vez dejó anotado que flabs no tiene carpeta en esta máquina, así que sus órdenes se rutean a herramientas. se aplicó un cambio de sistema de prueba con su revert automático a los sesenta segundos, como corresponde.
+
+lo único que quedó mal es el buzón: no pudo subir una foto de instagram porque el buzón la rechazó, y un rato después rechazó el token por no ser del dueño del buzón. eso hay que mirarlo.
 
 # el tuneo de resolución interna no sirvió, y quedó revertido
 la prueba fue bajar a resolución interna uno dos juegos pesados de gamecube y medir cuánto ganaban. terminó en veintiún minutos y el resultado fue que no sirve. rogue squadron tres pasó de treinta y nueve con dos a treinta y nueve con nueve cuadros, y fire emblem bajó de cincuenta y cuatro con ocho a cincuenta y cuatro con cuatro. eso es ruido, no mejora. quedó revertido. tu conclusión fue que no hay que bajar la resolución interna global si la mayoría de los juegos no la necesitan.
