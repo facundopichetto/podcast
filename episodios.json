@@ -1,9 +1,6 @@
 {
  "voces": {
-  "daniela": "daniela, argentina",
-  "claude": "claude, mexico",
-  "davefx": "davefx, españa",
-  "sharvard": "sharvard, españa"
+  "daniela": "daniela, argentina"
  },
  "episodios": [
   {
@@ -2126,7 +2123,105 @@
    },
    "duracion": 1435.0,
    "ts": "2026-09-26T00:20:29-03:00"
+  },
+  {
+   "id": "ep-2026-09-26-plan-plata",
+   "fecha": "2026-09-26",
+   "titulo": "el plan de tu plata: de ahora a futuro",
+   "temas": [
+    "plata"
+   ],
+   "palabras": 3830,
+   "guion": "guion-plan-plata.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-26-plan-plata-daniela.mp3",
+     "duracion": 1313.4,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 116.1,
+       "archivo": "audio/ep-2026-09-26-plan-plata-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 116.1,
+       "titulo": "los cuatro números",
+       "duracion": 79.0,
+       "archivo": "audio/ep-2026-09-26-plan-plata-2-los-cuatro-numeros.daniela.mp3"
+      },
+      {
+       "t": 195.1,
+       "titulo": "la regla: traer solo lo que se gastó",
+       "duracion": 74.3,
+       "archivo": "audio/ep-2026-09-26-plan-plata-3-la-regla-traer-solo-lo.daniela.mp3"
+      },
+      {
+       "t": 269.5,
+       "titulo": "la primera entrada: que lo que sobra haga plata en estados unidos",
+       "duracion": 163.4,
+       "archivo": "audio/ep-2026-09-26-plan-plata-4-la-primera-entrada-que.daniela.mp3"
+      },
+      {
+       "t": 432.9,
+       "titulo": "el pie en estados unidos y cómo sacar efectivo en miami",
+       "duracion": 106.9,
+       "archivo": "audio/ep-2026-09-26-plan-plata-5-el-pie-en-estados.daniela.mp3"
+      },
+      {
+       "t": 539.8,
+       "titulo": "los próximos cuatro meses, paso a paso",
+       "duracion": 109.5,
+       "archivo": "audio/ep-2026-09-26-plan-plata-6-los-proximos-cuatro.daniela.mp3"
+      },
+      {
+       "t": 649.3,
+       "titulo": "la segunda entrada: productos que se venden solos",
+       "duracion": 192.5,
+       "archivo": "audio/ep-2026-09-26-plan-plata-7-la-segunda-entrada.daniela.mp3"
+      },
+      {
+       "t": 841.8,
+       "titulo": "la tercera entrada: fuzzer",
+       "duracion": 100.8,
+       "archivo": "audio/ep-2026-09-26-plan-plata-8-la-tercera-entrada.daniela.mp3"
+      },
+      {
+       "t": 942.6,
+       "titulo": "a un año",
+       "duracion": 82.3,
+       "archivo": "audio/ep-2026-09-26-plan-plata-9-a-un-ano.daniela.mp3"
+      },
+      {
+       "t": 1024.9,
+       "titulo": "a cinco años",
+       "duracion": 61.8,
+       "archivo": "audio/ep-2026-09-26-plan-plata-10-a-cinco-anos.daniela.mp3"
+      },
+      {
+       "t": 1086.8,
+       "titulo": "lo que queda automático desde el día uno",
+       "duracion": 46.0,
+       "archivo": "audio/ep-2026-09-26-plan-plata-11-lo-que-queda-automatico.daniela.mp3"
+      },
+      {
+       "t": 1132.8,
+       "titulo": "las tres decisiones de mañana",
+       "duracion": 128.7,
+       "archivo": "audio/ep-2026-09-26-plan-plata-12-las-tres-decisiones-de.daniela.mp3"
+      },
+      {
+       "t": 1261.5,
+       "titulo": "cierre",
+       "duracion": 51.8,
+       "archivo": "audio/ep-2026-09-26-plan-plata-13-cierre.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1313.4,
+   "ts": "2026-09-26T00:36:37-03:00"
   }
  ],
- "actualizado": "2026-09-26 00:20"
+ "actualizado": "2026-09-26 00:36"
 }

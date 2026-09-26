@@ -1,0 +1,332 @@
+# de qué va este episodio
+
+Hola. Este episodio es el plan de tu plata, de ahora en adelante. No es un resumen del día ni una lista de
+lo que hizo el sistema: es un solo tema, de punta a punta, y termina en tres decisiones que podés tomar
+mañana sin hablar con nadie.
+
+El punto de partida es lo que dijiste en la charla. Cobrás seis mil setecientos dólares por mes con
+awtomic, y te pagan por dil. Hoy tenés unos diez mil dólares disponibles, y en pocos días cobrás de nuevo.
+Alquilás. Para vivir necesitás unos tres mil dólares, capaz algo más. Y elegiste una regla, la opción ce:
+cada mes traés a argentina solo lo que gastaste el mes anterior, mes a mes, y todo lo que sobra queda afuera
+haciendo plata.
+
+Con esos números, el plan tiene tres entradas. La primera, que la plata que sobra haga plata en estados
+unidos, con un pie allá: un bróker y una cuenta desde la que se pueda sacar efectivo en miami. La segunda,
+productos que se vendan solos, sin que tengas que hablar con nadie. La tercera, que fuzzer haga plata.
+
+Y tiene dos restricciones que valen para todo lo que voy a contar. Una: nada de videollamada, ni llamada,
+ni chat con nadie; mail como máximo. Todo automatizado de punta a punta, con poco input tuyo y el mínimo de
+tokens. Dos: no se le pide plata a nadie. Cada vía que aparece en este episodio cumple las dos, y cuando
+haya un paso que requiere tu cara, tu documento o tu firma, te lo digo con esas palabras.
+
+Una aclaración sobre los números. Los cuatro de base son tuyos, de la charla. Los de rendimiento son
+supuestos y los voy a marcar como supuestos cada vez. Y hay una cosa que este episodio no mira: gastos
+chicos. No hay una sola línea de recorte acá adentro. El plan mira las entradas grandes y el monto para
+vivir, nada más.
+
+Vamos.
+
+# los cuatro números
+
+Todo el plan sale de cuatro números, así que los digo despacio.
+
+Primero, lo que entra: seis mil setecientos dólares por mes. Por año, ochenta mil cuatrocientos.
+
+Segundo, lo que cuesta vivir en argentina: entre tres mil y tres mil quinientos por mes. Tomé el rango
+porque dijiste "capaz algo más". Por año, entre treinta y seis mil y cuarenta y dos mil.
+
+Tercero, lo que sobra. Es la resta: entre tres mil doscientos y tres mil setecientos dólares, todos los
+meses. Para las cuentas de este episodio uso tres mil trescientos, que está del lado prudente. Por año,
+entre treinta y ocho mil y cuarenta y cuatro mil dólares.
+
+Cuarto, lo que hay hoy: diez mil dólares disponibles, más el cobro que entra en estos días.
+
+Y acá va la primera idea del episodio, la que ordena todo lo demás. El número que cambia tu situación
+económica no es un negocio nuevo. Es ese tercero: casi cuarenta mil dólares por año que hoy sobran y se
+quedan quietos, o peor, se van pesificando de a poco porque están a mano. Si ese sobrante deja de estar a
+mano, la situación cambia sola, sin que aparezca ningún cliente ni ningún producto. Los productos y fuzzer
+pueden acortar el plazo. Lo que sostiene el plan es la resta.
+
+# la regla: traer solo lo que se gastó
+
+La regla que elegiste es simple y se puede automatizar entera.
+
+Cada mes se trae a argentina solo lo que se gastó el mes anterior. El resto no se toca. No importa por dónde
+pagás, si con la tarjeta de dil, con prex, con la cuenta de uruguay o con una cuenta en pesos. No importa
+si técnicamente "traés" o no. Lo único que importa es usar lo menos posible, y que el sobrante salga del
+alcance de la mano.
+
+Cómo funciona en la práctica. El día uno de cada mes, un script suma lo que se gastó el mes anterior. Ese
+script ya existe: lee los recibos que llegan al mail y arma la tabla de gastos y cobros. Le falta una sola
+cosa para estar completo: los débitos de la tarjeta que no mandan recibo por mail. Eso se resuelve con un
+resumen de tarjeta guardado en la carpeta del tema, una vez por mes, y el script hace el resto.
+
+Vos recibís un número, no un trabajo. "El mes pasado gastaste tanto; eso es lo que se trae." Y el día de
+cobro, un segundo aviso: "cobraste; lo que sobra es tanto; movelo al bróker." Dos avisos por mes, dos clics
+por mes. Eso es todo tu input en la primera entrada del plan.
+
+# la primera entrada: que lo que sobra haga plata en estados unidos
+
+Esta es la entrada que ya existe, que tiene número cierto, que rinde desde el primer mes y que no necesita
+que aparezca nadie. Por eso va primera.
+
+El plan de inversión ya estaba decidido y escrito, y no cambia. Lo repaso en cinco líneas.
+
+La plata va a un bróker en estados unidos, interáctiv brókers, que acepta no residentes con mínimo cero, tiene
+seguro sobre la cuenta y tiene una interfaz para leer datos por programa. La cuenta es de tipo cash, no
+margin: nunca se pide prestado, no hay riesgo de que te pidan cubrir nada. La moneda base es el dólar.
+
+Adentro se compran dos cosas, y nada más. Una que crece: el fondo del índice de las quinientas empresas
+más grandes de estados unidos, el de vanguard, cuyo código en la bolsa se deletrea ve o o. Y una que espera:
+un fondo de letras del tesoro a corto plazo, que hoy rinde alrededor del cuatro por ciento anual y no se
+mueve; se deletrea ese ge o ve. Uno crece, el otro es el estacionamiento. Dos instrumentos, no más, y la
+diversificación se hace por tiempo, con un aporte todos los meses, no eligiendo instrumentos.
+
+La salida, cuando haya que sacar, es por transferencia en dólares. El bróker manda una transferencia
+gratis por mes. Y la interfaz de lectura se usa para eso, para leer: un script que deja escrito cuánto se
+aportó, cuánto hay y cuánto rindió. Nunca para operar. Un robot operando plata real no aporta nada sobre
+cuatro clics por mes, y sí puede romper.
+
+Ahora, la apertura. Es online, sin llamada. Documento, dni o pasaporte, y un comprobante de domicilio, una
+factura de servicio o un resumen. Veinte minutos. Es el único cuello de botella de toda esta entrada:
+sin número de cuenta no se puede probar el fondeo ni armar el script de lectura. El sistema te deja el
+formulario armado en un archivo, para que sea copiar y pegar.
+
+Después, una prueba con cien dólares desde dil al bróker, para ver que el camino funciona antes de mover
+plata en serio. Si rebota, se repite por payonír o por uáis, que también son sin llamada. Cuando la prueba
+entra, se mueven los diez mil que hay hoy, menos lo que se trae para octubre. Y a partir de ahí, cada mes,
+el aporte de tres mil trescientos.
+
+Sobre qué hacer con los diez mil de golpe: la propuesta es que entren enteros al fondo que espera, el de
+letras del tesoro, y que pasen al índice en tres tandas, una por mes. Así no entrás todo el mismo día en el
+índice, que es la única forma de tener mala suerte con una compra de largo plazo. Pero la proporción es
+tuya, y es una de las tres decisiones de mañana.
+
+# el pie en estados unidos y cómo sacar efectivo en miami
+
+Pediste dos cosas para el pie allá: un banco y un bróker. El bróker ya está: interáctiv brókers. El banco
+es la parte que hay que decir con cuidado, porque un banco de verdad en estados unidos, para un no residente
+sin ir a una sucursal, no existe sin armar una empresa allá. Y armar una empresa allá cuesta quinientos
+dólares de entrada, una contadora todos los años, y una multa de veinticinco mil dólares si se olvida un
+formulario. No va.
+
+Lo que sí existe, y funciona como banco para lo que necesitás, es una cuenta en dólares de uáis. Te da un
+número de cuenta y un código de ruteo en estados unidos, o sea que recibe una transferencia del bróker como
+si fuera un banco de allá. Tiene tarjeta. Y esa tarjeta saca efectivo en cajeros de miami. Se abre online,
+con una selfie con el documento en la mano, sin llamada.
+
+Entonces, cómo sacar dólares en miami desde lo que queda afuera. El bróker no da tarjeta a no residentes,
+así que el camino es este: una semana antes de viajar, una transferencia del bróker a uáis, que es gratis
+una vez por mes. Y en miami, la tarjeta de uáis en el cajero. Para gasto chico o de último momento, la
+tarjeta de dil que ya tenés, que se carga con el cobro del mes; esa no llega a lo que ya está invertido,
+pero para un fin de semana alcanza.
+
+Hay una alternativa que ya existe, la tarjeta del banco de uruguay: se le manda una transferencia desde el
+bróker y se usa la tarjeta de allá. Existe, pero cada transferencia de salida hacia uruguay se probó cara,
+entre cincuenta y ochenta dólares. Sirve de respaldo; no para cada viaje. Cuál pie usar es la tercera
+decisión de mañana.
+
+# los próximos cuatro meses, paso a paso
+
+Octubre, noviembre, diciembre y enero. Lo digo como calendario, con qué hacés vos y qué queda solo.
+
+Esta semana. Vos: abrís la cuenta del bróker, veinte minutos, documento y comprobante de domicilio. Solo:
+el sistema te deja los datos para pegar y espera la aprobación mirando el mail; nadie tiene que llamar a
+nadie.
+
+Cuando llega el cobro. Vos: un retiro de cien dólares desde dil al bróker, con el destinatario guardado una
+vez. Solo: un script confirma que entró y te avisa al celular. Ese mismo día, si dil deja programar el retiro
+al bróker, se activa y ya no lo tocás; si no, son dos clics por mes.
+
+Cuando la prueba entra. Vos: un retiro con los diez mil menos lo que se trae para octubre. Solo: entra al
+fondo que espera. Y el día uno de noviembre llega el primer número automático: lo que se gastó en octubre,
+eso es lo que se trae.
+
+Noviembre y diciembre. Vos: el retiro del día de cobro, un clic. La compra mensual, cero clics si el bróker
+habilita compras programadas en la cuenta, un clic si no. Solo: el script de lectura arranca apenas hay
+número de cuenta y deja un archivo con aporte, tenencia y rendimiento, una vez por semana.
+
+Y en algún momento de estos cuatro meses, una transferencia de salida de prueba, con doscientos dólares,
+del bróker a uáis. Para tener el camino de miami probado con plata chica antes de necesitarlo con plata
+grande. El sistema verifica que llegó y anota los costos reales, que hoy son estimados.
+
+Al cierre de enero, sin contar rendimiento: los diez mil de hoy más tres aportes, alrededor de diecinueve
+mil novecientos dólares afuera. Cuatro meses, y ya es el doble de lo que hay hoy.
+
+# la segunda entrada: productos que se venden solos
+
+Acá voy a ser honesta desde la primera frase, porque es la parte donde es fácil mentirse. Hoy esta entrada
+vale cero. Y la meta a cuatro meses no es un ingreso: es tener el tubo abierto y una venta.
+
+El tubo primero. Hace una semana un panel de seis modelos analizó qué podía montar flaudio para que entre
+plata sin contacto humano, y uno solo de los seis vio el freno real: no hay por dónde cobrar. No hay una
+cuenta de cobro internacional abierta. Y ese trámite tarda por calendario, no por esfuerzo. Si se arranca
+hoy, corre en paralelo y cuando haya algo que cobrar ya está. Si se arranca después, bloquea un mes.
+
+La vía elegida ya está investigada, trece opciones comparadas, y ninguna exige videollamada. La
+recomendada es lémon scuisi: acepta titular argentino, cobra cinco por ciento más medio dólar por venta, y
+paga por transferencia en dólares a una caja de ahorro en dólares acá, que desde el año pasado puede quedarse
+en dólares sin pesificar. El alta es con documento y una selfie al conectar el banco. Ese es el único paso
+que requiere tu cara. Plan be, si traban el alta: pádel, mismo precio. Y si en vez de vender con un
+carrito lo que hacés es facturarle a un cliente fijo, la vía es payonír y te ahorrás ese cinco por ciento.
+Esa es la decisión de la semana que viene, no de mañana.
+
+Y ahora los productos, tres, en orden.
+
+El primero es flaudio como servicio, en la forma más concreta que tiene hoy: una auditoría automática de
+una tienda de shopify. El motor que revisa tiendas para awtomic ya existe, ya sabe hacerlo, y no necesita
+hablar con nadie. Entrada: la dirección de la tienda. Salida: un informe por mail en veinticuatro horas.
+Cero contacto. Precio de lista, entre cuarenta y nueve y noventa y nueve dólares. Lo único que decidís vos
+es el precio.
+
+El segundo son afiliados sobre contenido automatizado. La maquinaria que ya genera contenido, busca en la
+web y publica, apuntada a un nicho donde el contenido se arma con datos públicos que un script pueda ir a
+buscar y comparar: precios, especificaciones, un valor que cambia. No opinión. El que paga es un programa
+de afiliados, que es una empresa con un sistema automático. Plata esperada, el número real: entre cero y
+cien dólares por mes el primer año, y puede quedarse en cero. Lo único que decidís vos es el nicho, una
+línea.
+
+El tercero no da plata: da público. El motor de instagram que ya corre para tu cuenta personal, y que movió
+tres mil setecientas setenta y nueve personas en cinco días, apuntado a una cuenta nueva de nicho. Es el
+único activo que este sistema puede fabricar solo, y si funciona multiplica al segundo. Cero input tuyo.
+
+Una cosa más, para que no haya sorpresa: la tercera cuenta de claude ya está paga. Nada de esto agrega un
+gasto. Y hay una regla de corte escrita en el plan: si en abril el primer producto no vendió nada, se apaga
+y no se insiste.
+
+# la tercera entrada: fuzzer
+
+Fuzzer hoy no es una entrada de plata, y no voy a disfrazarlo. En dos mil veintiséis la meta es una sola:
+que el show del veintiocho de noviembre no pierda plata. La meta escrita es de noventa a ciento veinte
+personas. El último show fueron treinta y dos. Es tres veces, y eso pide un plan distinto, no un empujón.
+
+Lo que hace plata a largo con una banda es la audiencia propia y las escuchas. Y ahí el sistema ya tiene
+las tres piezas que corren solas, sin una hora de nadie.
+
+La primera: el mismo motor de instagram, apuntado a la cuenta de la banda y a los seguidores de la escena
+porteña. Sigue y deja de seguir con ritmo humano, sesenta por día. Existe y funciona; hoy corre para tu
+cuenta y no para la de fuzzer. Decidir si corre también para la banda es lo único que te pido en esta
+entrada, y es un sí o un no.
+
+La segunda: bajar solas las fechas y el arrastre de las otras bandas de la escena, para que el cartel se
+arme con datos. En un cartel de tres bandas, la asistencia la deciden en buena medida las otras dos, y hoy
+nadie midió cuánta gente llevan las que comparten el veintiocho.
+
+La tercera: la bajada nocturna de las métricas de spotify y de la pauta, para que los números no se saquen
+a mano cuando alguien se acuerda.
+
+Y para el show, lo tuyo es una sola cosa: pasarle a santi el precio y el link de las entradas. La pieza del
+reel está armada y le falta solo eso; no se inventó ningún número. Después del show va a haber un número
+real de puerta y de escuchas, y con eso se decide si en dos mil veintisiete se paga pauta o se sigue solo
+con motor gratis.
+
+# a un año
+
+Septiembre de dos mil veintisiete. Los diez mil de hoy más doce aportes de tres mil trescientos: alrededor
+de cuarenta y nueve mil seiscientos dólares afuera, sin contar rendimiento. Con el fondo de letras al
+cuatro y el índice a lo que dé, y acá uso siete por ciento promedio como supuesto, no como promesa,
+alrededor de cincuenta y dos mil.
+
+Y ahí aparece el único número de revisión del plan: sesenta mil. Por arriba de sesenta mil dólares en
+activos de estados unidos, un no residente entra en el impuesto a la herencia de allá, que es alto. Con este
+ritmo se toca en el mes quince, alrededor de diciembre de dos mil veintisiete. La decisión se toma en julio,
+con tiempo, y es simple: los aportes nuevos pasan a la versión irlandesa del mismo índice, que se compra
+desde el mismo bróker y no tiene ese problema, o se parte la plata entre el bróker y otro lado. El script de
+lectura avisa cuando se pasan los cincuenta mil. Hasta ahí, no hay nada que pensar.
+
+A un año la regla mensual ya no se piensa: el día uno llega el número a traer, el día de cobro un retiro, y
+el resto, cero.
+
+Productos: si el primero vendió, se le suma un segundo entregable del mismo motor. Meta de lista a un año,
+trescientos dólares por mes. Puede ser cero, y si es cero, se apagó en abril y no gastó nada.
+
+# a cinco años
+
+El aporte no cambia. Tres mil trescientos por mes son treinta y nueve mil seiscientos por año. En cinco
+años, alrededor de doscientos mil dólares puestos. Con siete por ciento promedio, y repito que es un
+supuesto, alrededor de doscientos treinta y cinco mil.
+
+Y acá está el punto al que apunta todo el plan. A partir de ahí, el rendimiento de un año, unos dieciséis
+mil dólares, empieza a parecerse a medio año de vivir. No es dejar de trabajar. Es que la mitad del año ya
+no dependa de que entre el cobro. Eso es lo que quiere decir cambiar la situación drásticamente, con
+números y no con frases.
+
+Lo que lo hace posible no es un ingreso nuevo. Es que la parte que sobra nunca vuelva a argentina. Los
+productos y fuzzer son lo que puede acortar el plazo. Lo que lo sostiene es la resta, mes a mes, sin
+excepciones.
+
+Y la salida, cuando haga falta, siempre por transferencia en dólares, a uáis o a uruguay. Nunca pesificando
+lo invertido.
+
+# lo que queda automático desde el día uno
+
+Cinco scripts, cero tokens, para que esto no dependa de acordarse.
+
+El de gastos, que ya existe: el día uno suma lo del mes anterior y deja el número a traer.
+
+El de lectura del bróker, que se arma apenas haya número de cuenta: aporte, tenencia y rendimiento en un
+archivo del tema, una vez por semana, y aviso al pasar los cincuenta mil.
+
+El recordatorio de aporte: el día de cobro, "cobraste, mové tanto", al celular.
+
+La conciliación de ventas, cuando esté abierta la vía de cobro: cada quincena cruza lo que pagó la plataforma
+con lo que entró al banco.
+
+Y las métricas de fuzzer, de noche, a disco.
+
+Ninguno de los cinco toma una decisión. Juntan, calculan y avisan. Las decisiones son tuyas, y son pocas.
+
+# las tres decisiones de mañana
+
+Cada una con tres opciones. La a es la que haría yo. Decime a, be o ce en cada una.
+
+Uno. Abrir el bróker.
+
+A: mañana, con el dni y un comprobante de domicilio a mano. Veinte minutos. Hoy te dejo el paso a paso y
+los datos para pegar. Desbloquea todo lo demás.
+
+Be: abrirla cuando llegue el cobro de estos días, para mandar la prueba de cien el mismo día. Una semana.
+
+Ce: no abrir el bróker. Dejar la plata en dil o en uáis, al cero por ciento, y decidir en diciembre. Cuesta
+unos ciento diez dólares de rendimiento perdido por trimestre sobre los diez mil, más los meses en que no se
+compra el índice.
+
+Dos. La proporción, y qué hacer con los diez mil de hoy.
+
+A: cada mes, setenta por ciento al índice y treinta al fondo de letras. Los diez mil entran enteros al
+fondo de letras y pasan al índice en tres tandas, una por mes. Son dos mil trescientos diez al índice y
+novecientos noventa a letras, por mes.
+
+Be: mitad y mitad, con la misma entrada en tres meses para los diez mil. Más quieto, menos crecimiento.
+
+Ce: todo al índice desde el día uno, los diez mil de una. Más rendimiento esperado, y más sacudón si el
+índice cae justo el mes que entrás.
+
+Tres. El pie en estados unidos para sacar efectivo en miami.
+
+A: la cuenta en dólares de uáis, online, con selfie, sin llamada, y su tarjeta. El bróker manda una
+transferencia gratis por mes. Te armo el alta y la pruebo con doscientos dólares.
+
+Be: solo la tarjeta de dil que ya tenés, cargada con el cobro del mes. Cero altas nuevas, pero no llega a lo
+que ya está en el bróker.
+
+Ce: la tarjeta del banco de uruguay, con transferencia del bróker a esa cuenta. Ya existe, pero cada
+transferencia hacia allá salió entre cincuenta y ochenta dólares.
+
+Y la decisión que sigue, la semana que viene, no mañana: lémon scuisi o payonír para cobrar los productos.
+Depende de una sola cosa, si vendés con un carrito o le facturás a un cliente fijo.
+
+# cierre
+
+Resumo en treinta segundos, por si escuchaste esto de noche y querés quedarte con una sola idea.
+
+Entran seis mil setecientos. Se viven tres mil y pico. Sobran tres mil trescientos, todos los meses, y eso
+es casi cuarenta mil dólares por año que hoy están quietos. La regla que elegiste, traer solo lo que se
+gastó el mes anterior, hace que ese sobrante salga solo del alcance de la mano. A un año son cincuenta mil
+afuera. A cinco, más de doscientos mil, y el rendimiento de un año empieza a parecerse a medio año de vivir.
+
+Los productos y fuzzer pueden acortar ese plazo, y se arman solos, sin que hables con nadie. Pero lo que
+sostiene el plan es la resta, mes a mes.
+
+Lo tuyo mañana son tres letras: abrir el bróker, la proporción, y el pie en miami. Lo demás lo armo yo.
+Dejame un audio con las tres y sigo.
