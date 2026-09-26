@@ -1,8 +1,59 @@
-# actualizado hoy a las 15:04
-actualizado hoy, viernes veinticinco, a las quince y cuatro.
+# actualizado hoy a las 05:36
+actualizado hoy, sábado veintiséis, a las cinco treinta y seis.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# los ocho de playstation dos que entran hoy, y los god of war esperando lugar
+a las tres y cuarto de la tarde terminó el informe de candidatos de playstation dos. nada se descomprimió, nada se convirtió, no se tocó ni la tarjeta ni la retroid: solo la medición del espacio libre y el cruce contra el set de black para armar el universo real de lo que se puede subir.
+
+a las cuatro menos cuarto elegiste la opción de bajar y convertir los ocho que entran en el espacio libre de hoy y que son apuesta segura. son casi trece gigas comprimidos, y con eso la cuenta cierra sin dejar la tarjeta al borde. los god of war quedaron afuera por tamaño, no por criterio: quedan esperando a que saques algo grande de la tarjeta y aparezca lugar. cuando eso pase, entran.
+
+casi a la par pediste otra cosa: bajar la versión americana de melee verificada por hash y dejarla en black, sin tocar la tarjeta todavía. y en el mensaje siguiente agregaste el otro pal capado a cincuenta cuadros, la zelda de las cuatro espadas. las dos salieron juntas, con la misma condición: verificadas por hash y guardadas en black, la tarjeta sin tocar.
+
+a las cuatro menos ocho me preguntaste si podías desenchufar la retroid, y la respuesta fue que sí, tranquilo. las dos tareas que estaban corriendo en ese momento no tocaban el aparato: la de tamaño trabajaba solo en black, con la orden diciendo literal que no se toca la tarjeta ni la retroid ni se copia nada al aparato, y la de hash estaba bajando las dos de gamecube a black. así que desenchufar no rompía nada.
+
+y a las cuatro y cuarto llegó el resultado de esa segunda tarea, que no es el que esperábamos: las dos siguen sin versión americana, y la razón es concreta. en black solo están las europeas, y los archivos no los bajé de la web: conseguir copias de juegos comerciales de sitios de roms no es algo que haga por mi cuenta. así que ahí quedó, dicho de frente en vez de dar una vuelta.
+
+# el rosé de hafner: emily pedía un fix que no hacía falta
+a las tres y media me pasaste lo que te escribió emily por slack, y era sobre hafner. lo textual de ella, a las tres y doce: que estaban en un loop de muerte con la inteligencia artificial, que seguía pidiendo que se agregue el checkbox del add-on del rosé y que no aparecía, y que necesitaba resolverlo hoy porque tenía que mandar los links. le habías contestado a las tres y media que te parecía haberlo visto y que estabas mirando.
+
+me pediste el draft de la resolución en el theme live, con el aviso a cargo tuyo. a las tres y treinta y seis tocaste la opción de armarlo y salió al frente de la cola con permiso de browser.
+
+pero a las cuatro menos cinco, cuando pediste ver el fix y me preguntaste si emily entrando ahora iba a ver algo distinto, la respuesta fue la que importa: el fix no existe porque no hay nada que arreglar. el checkbox del rosé ya está en el gift form del live. lo verifiqué por código, no por informe: las dos páginas, la del gift y la del signup, traen la misma configuración del add-on, y el componente del paso del club decide mostrar el checkbox según el vino, no según la página. o sea que lo que emily vio en su captura y lo que va a ver si entra ahora no son lo mismo.
+
+antes de eso, a las tres y cincuenta y dos, había cerrado la tarea del live: el monitor viejo que parecía colgado era el de una corrida que ya había terminado, la que había fallado por el viewport, y no hacía falta rearmarlo porque la evidencia ya estaba capturada y verificada. el estado del ticket no cambió.
+
+y a las cuatro menos seis me dijiste que no te habían llegado las opciones, así que te las mostré tal cual quedaron de la corrida: postear el comment del fix y pedir el ok del push aparte, guardar el comment y arrancar por el push con las líneas exactas a la vista, o no tocar nada.
+
+# el reparto de cuentas: los tokens de orugote que se pierden si no los usamos
+a las cinco y dos de la tarde me marcaste algo del reparto que no estaba funcionando como querés, y el razonamiento es el correcto: deberíamos estar usando orugote hasta arrimarnos a la línea, porque es la cuenta que corta antes. los tokens que no se usen ahí se pierden, mientras que lo que se gasta en las otras dos ya está heredado como deuda.
+
+lo que vi antes de tocar nada es que el reparto de tareas ya elige orugote bien. el problema está en otro lado, y quedó para corregir con el diagnóstico hecho en vez de arrancar a probar.
+
+tres minutos antes me habías preguntado por qué el server estaba en naranja, la mac en amarillo y cloud en gris. los tres colores son el estado real del nodo, no quién publica. el naranja del server era un problema que no es emergencia, y era el token de claude, por dos motivos: al login de orugote le faltaban menos de dos horas y la llamada mínima no lo renovó.
+
+# following not followers no abría el votador, y me pediste cuidado
+a las cuatro y cinco me escribiste que tocabas following not followers esperando votar, y en vez del votador te quedaba una vista maximizada con la misma lista y nada adentro. y me lo pediste con una condición que tomé en serio: quirúrgico, sin tocar la cola ni romper las otras listas del board, porque ya venía rompiendo cosas al arreglar.
+
+a las cinco menos cuarto tocaste la opción de una sola orden: que esa lista sirva sus quinientos sesenta y seis y abra el votador, con prueba de las siete listas y sin tocar cola ni daemon.
+
+a las seis menos siete cerró, y tardó más de una hora. following not followers abre su votador y ninguna lista se rompió: las doce de la home votan en compu y al ancho del teléfono. quedó publicado y verificado en vivo, no solo en el clon.
+
+a las diez de la noche me preguntaste qué quedaba pendiente del tinder, y en la cola no había ninguna orden abierta. lo que quedaba era el rediseño de super candidatas, que habías pedido y nunca se encoló: sacar el renglón chico de botones de arriba, el cuarto botón y un par de cosas más. a las diez y cinco tocaste la opción de una sola orden con eso y el pie de limbo, con prueba lista por lista, y a las once menos cuarto cerró: super candidatas abre con cuatro botones y el check de los dos lados salió cambio por cambio, verificado contra las doce listas de la home, en compu y al ancho del teléfono.
+
+y a las once de la noche encontraste dos cosas más: que esa lista no ordena de menos seguidores a más, y que te estaba mostrando gente que ya no seguís. son dos problemas distintos y el diagnóstico quedó hecho.
+
+# el server nuevo, y mudar el que tenés a lo de tu vieja
+a las siete y siete de la tarde me tiraste la idea completa: comprar otro server un poco mejor, mudar el que tenés a lo de tu mamá, delegar ahí lo que se pueda hacer externo y que de paso quede de respaldo. y con el detalle de que también sirve para ayudarla desde ahí si hace falta.
+
+me gusta, y no solo como capricho de fierros. hoy todo vive en una sola máquina en tu casa: si se corta la luz, internet o un disco, se cae el chat, la cola y todo lo demás de una sola vez.
+
+a las siete y diez pusiste las condiciones de la compra: por amazon, con tu cuenta, mini pc que de verdad se puedan enviar a argentina con la dirección de dorrego, filtrando solo entre esas opciones, entre quinientos y dos mil dólares y del estilo del que ya compraste. el de referencia es el geekom que tenés, con ryzen cinco, dieciséis gigas y un tera, a menos de quinientos dólares.
+
+a las siete y cuarenta y cinco cerró la búsqueda, con capturas del checkout. los ocho equipos que probé pasan el checkout real a dorrego, con envío global estándar gratis. a las ocho menos cuarto pediste que te contara qué onda cada cosa en vez de la lista pelada.
+
+antes, a las once de la noche del día anterior, había cerrado una averiguación puntual sobre el beelink de sesenta y cuatro gigas: si viene con los dos slots ocupados o con uno libre, y hasta cuánto escala la memoria. y a la medianoche y cuarenta cerró el plan de plata de ahora a futuro, en dos pasos con checkpoint al cerrar cada uno, y armado para que salga como podcast.
 
 # los tres juegos que no te gustaron salieron de la tarjeta
 a la una y once me dijiste cuáles se iban y cuáles se quedaban, y el criterio fue tuyo y clarito: xenoblade, red faction y donkey kong jungle beat se van porque no te gustaron, independientemente de lo dudosos que sean; winning eleven y nba street se quedan; resident evil no lo viste todavía. los tres que se iban ya estaban en black, así que no hacía falta montar nada en escritura ni esperar a que terminara ninguna copia: xenoblade como archivo comprimido en la carpeta de wii, jungle beat igual en gamecube, y red faction en la de playstation dos, que además estaba duplicado en dos formatos.
@@ -459,6 +510,40 @@ las otras dos salieron juntas en una sola orden y ya están andando, verificadas
 a las once y veintisiete me pediste que te contara la revisión, y son tres informes. el que importa es el de los seis juegos borrados que eran recuperables, remedidos con el limitador de velocidad apagado. de esos seis, cuatro corren pleno y vuelven a estar justificados. call of duty dos clava treinta cuadros, que es su nativo. vexx da treinta y cinco contra un nativo de treinta. devil may cry también anda.
 
 esa medición cambia la cuenta: con el limitador puesto parecían peores de lo que son, y eso había pesado en la decisión de borrarlos.
+
+# los dos pull requests: el re-review pedido a mano, y el nit contestado
+a las cuatro menos seis me preguntaste cómo proceder con los pull requests, y el paso era pedir que vuelvan a mirar. los threads resueltos y los dos comments ya estaban. el de close tiene un thread abierto a propósito, el del pin del precio, esperando la respuesta de brian, y eso no frena la re-review: es justamente lo que queremos que conteste.
+
+a las cuatro menos uno tocaste la opción de encolar el pedido de re-review a los revisores de los dos, sin escribir ningún comment. y ahí pasó algo que está bien que haya pasado: el hook de github lo frenó. pedir un re-review no está en la lista cerrada de recetas permitidas, que solo tiene crear y editar pull request, resolver thread y responder thread, así que el permiso no se abrió y la tarea terminó en un minuto sin escribir nada.
+
+a las cuatro y tres cuartos me dijiste que te parecía que brian ya había respondido a una de las reviews, y sí: contestó, y te dio la razón en lo que dejamos abierto a propósito. el review nuevo es su pre-review automático, el bot que corre en su máquina, no él escribiendo. lo textual dice que los hallazgos uno y tres están arreglados y que el dos queda retirado.
+
+a las cinco menos ocho tocaste la opción de contestar ese nit con el draft y dejar anotado en el ticket del shipping rate que el cuarto fix queda como follow-up. a las cinco menos cinco cerró: el nit contestado, el thread resuelto y el follow-up declarado en jira, con los cinco pasos verificados leyendo de github y de jira después de escribir. el hallazgo era un inline review comment en el archivo de test, no un comment de conversación, que es por lo que antes no se encontraba dónde responder.
+
+# los cuatro tickets de brian: cuál es el más fácil, y el que ya va a live
+a las cinco y ocho me preguntaste si entre cuatro tickets había algo que pudiéramos hacer nosotros y cuál era el más fácil. los cuatro están en need eng work con el agente de brian ya pasado, marcados como listos del lado del agente y necesitando humano, y ninguno en hold.
+
+el más fácil y cien por ciento nuestro es el de rosenblum cellars: esconder la burbuja del chat de gorgias solo en las páginas de sign-up del club. es css en el theme, una regla con el template como scope, todo de nuestro lado.
+
+a las cinco y doce me dijiste que se testee uno de ellos y que si está bien lo mandamos a live, y que lo ponga en la cola.
+
+# el backup de cinco teras: sesenta y ocho por ciento, y la carpeta que lo atraganta
+a las cuatro y seis de la tarde me preguntaste cómo venía el backup y estaba en el cincuenta y seis por ciento, ya lento. el servicio corre desde las diez y veintitrés de la mañana como unidad de sistema, habilitada, así que ya no depende de la sesión: eso quedó resuelto de verdad. tenía dos teras y medio copiados.
+
+a las nueve de la noche seguía corriendo y había llegado al sesenta y ocho, sin ninguna caída nueva en diez horas. dos teras y medio largos de los cuatro y medio que cuenta la copia, y el destino con tres teras y medio usados y algo más de un tera libre. lo que lo atraganta es una carpeta de fotos del teléfono, que son millones de archivos chicos: ahí el ritmo cae solo, no es que se haya colgado.
+
+# las tres tandas de votos de instagram
+hubo tres tandas. a las cuatro y diecisiete de la tarde votaste nueve: una queda en interesan, dos a maybe y seis no van. después, ya de madrugada, a las tres y dos votaste una sola, que pasó a seguir. y a las tres y seis votaste dieciséis, todas para dejar de seguir, ninguna ignorada y ninguna que quede como está.
+
+# el widget de inversiones, armado con datos de mentira
+a las tres menos diez de la madrugada cerró el widget de inversiones. está hecho con datos simulados y probado, y entra con el próximo reinicio del daemon, que quedó pedido en diferido porque había tareas vivas. el módulo sigue el molde de los demás, así que repinta su propia caja sin arrastrar el resto del board.
+
+# la madrugada del agente: instagram sin lecturas y cloud limpiándose solo
+desde las cinco de la mañana el watchdog reinició el daemon del server y lo dejó escuchando de nuevo, con el tope de hilos en siete porque la máquina estaba holgada. el disco black quedó montado en modo lectura.
+
+instagram está en la misma: la sesión está viva pero frenó las lecturas de lista, con la interfaz rebotando al login sin confirmar sesión. la foto del día reintenta sola y no hay que resembrar cookies, así que salió como aviso sin despertarte. el aviso se repitió a los quince minutos y el segundo no se reenvió por ser el mismo texto.
+
+en cloud la limpieza corrió sola varias veces: cero procesos colgados y más de mil sesiones zombi cerradas en cada pasada, con el código sincronizado atrás. y de la cola de instagram quedó pendiente lo mismo de antes, cinco fallidas sin revisar, porque la interfaz no contesta de verdad: eso se revisa solo cuando la sesión vuelva, no a ciegas.
 
 # el agujero del hook de git, tapado en cincuenta repos
 a la una y treinta y cuatro tocaste dos opciones seguidas que eran el mismo plan, así que las encolé juntas en una sola orden: dejar dos repos exentos como están, agregar un chequeo que corra solo y reinstale el hook en cualquier repo nuevo que aparezca, y que el daemon abra el permiso desde la línea de la orden y lo cierre al terminar, con prueba y reinicio.
