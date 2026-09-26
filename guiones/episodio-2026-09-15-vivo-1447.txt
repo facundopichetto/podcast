@@ -1,40 +1,8 @@
-# actualizado hoy a las 22:46
-actualizado hoy, viernes veinticinco, a las veintidós cuarenta y seis.
+# actualizado hoy a las 15:04
+actualizado hoy, viernes veinticinco, a las quince y cuatro.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
-
-# el reparto de cuentas: tenías razón con orugote, y qué cambió
-a las cinco de la tarde me marcaste algo que venía mal: deberíamos estar usando orugote hasta arrimarnos a la línea, porque es la cuenta que corta antes y lo que no se use ahí se pierde, mientras que lo que gastamos en las otras dos ya lo heredamos como deuda.
-
-lo primero que miré, antes de tocar nada, fue si el reparto estaba eligiendo mal. y no: el reparto de tareas ya elegía orugote bien, y el motivo que devuelve es el correcto, que resetea antes. de hecho las llamadas del día iban veintiuna con orugote contra dos con faacuu y dos con awtomic. o sea que el gasto que te molestaba no venía del reparto de tareas sino de otro lado. con eso a la vista elegiste una opción y agregaste algo más de tu cabeza: sacarle la cuenta fija a la pestaña personal para que esa también caiga en el reparto en vez de quedarse pegada a una cuenta.
-
-en el mismo rato preguntaste por qué el server estaba en naranja, la mac en amarillo y cloud en gris. los tres colores son el estado real del nodo, no quién publica. el naranja del server era problema que no llega a emergencia, y era el token de claude: al login de orugote le faltaban menos de dos horas y la llamada mínima no alcanzó para renovarlo.
-
-# hafner: emily veía un loop de muerte, y el fix no existía
-emily te escribió por slack a las tres y cuarto diciendo que estaban en un loop de muerte, que pedía una y otra vez que agregaran el checkbox del rosé y seguía sin aparecer, y que necesitaba mandarles los links ese mismo día. vos le contestaste que ya lo mirabas.
-
-armamos el draft del fix para el live del theme, con el ok de chrome para que saliera al frente, y la corrida terminó en dieciséis minutos. pero cuando pediste ver el fix y si emily iba a ver algo distinto entrando ahora, la respuesta honesta fue que el fix no existe: no hay nada que arreglar. el checkbox del rosé ya está en el gift form del live. las dos páginas, la de gift y la de signup, traen la misma configuración del rosé, y el archivo que arma el paso del club decide mostrar el checkbox solo según el vino. o sea que lo que emily veía y lo que estaba publicado no son lo mismo.
-
-también hubo un momento en que me dijiste que no te habían llegado las opciones y te las mostré tal cual quedaron de la corrida: postear el comment del fix y pedir el ok del push al live aparte, o guardarnos el comment y arrancar por el push con las líneas exactas a la vista, o no tocar nada.
-
-más tarde, a las cinco y diez, preguntaste entre cuatro tickets cuál era el más fácil y si había algo que pudiéramos resolver nosotros. los cuatro estaban en need eng work con el agente de brian ya pasado, ninguno en hold. el más fácil y cien por ciento nuestro es el de rosenblum cellars: esconder la burbuja del chat de gorgias solo en las páginas de club sign-up. es css en el theme, una regla con el template como alcance. dijiste que lo testeáramos y, si está ok, va al live, y que lo dejáramos en la cola.
-
-# following not followers no abría el votador, y se arregló sin romper nada
-a las cuatro me lo contaste con una advertencia adelante: tocabas following not followers esperando votar y caías en una vista maximizada con la misma lista y nada adentro, pero pediste expresamente que el arreglo fuera quirúrgico, sin romper la cola ni el board como había venido pasando.
-
-a las cinco menos cuarto saliste con una sola orden: que esa lista sirva sus quinientas sesenta y seis y abra el votador, con prueba de las siete listas y sin tocar cola ni daemon. la corrida tardó sesenta y seis minutos. quedó cerrado y publicado: following not followers abre su votador y ninguna otra lista se rompió, las doce de la home votan en computadora y al ancho del iphone. la versión se verificó publicada de verdad en pages, no solo en el clon.
-
-más de noche, cerca de las diez, preguntaste qué quedaba pendiente de tinder. en la cola no había ninguna orden abierta del tema: lo único que quedaba era el rediseño de super candidatas, que habías pedido y nunca se había encolado, con el renglón chico de botones de arriba que sobra y un cuarto botón entre otras cosas. a las diez y cuarto saliste con una sola orden que junta eso y el pie de limbo, con prueba lista por lista. terminó veintinueve minutos después: super candidatas abre con cuatro botones y todo verificado contra las doce listas de la home, en computadora y al ancho del iphone.
-
-# el server nuevo: la idea es buena, la compu no era el límite
-a las siete y cuarto tiraste la idea de comprar otro server un poco mejor, mudar el que tenés hoy a lo de tu vieja, delegar ahí las cosas que se puedan hacer externas y que de paso quede de backup, y que desde ahí yo pueda ayudarla si hace falta. me gustó, y no como capricho de fierros: hoy todo vive en una sola máquina en tu casa, así que si se corta la luz, internet o un disco, se cae el chat y se cae la cola.
-
-pediste buscar en amazon con tu cuenta, mini pc que de verdad se puedan enviar a argentina con la dirección de dorrego, filtrando solo entre esas, entre quinientos y dos mil dólares y del estilo del que ya compraste. la referencia era el que ya tenés. la búsqueda tardó treinta y cinco minutos y terminó con ocho equipos que pasan el checkout real a dorrego, con envío internacional gratis, y capturas de cada checkout.
-
-después pediste que te contara qué onda cada uno, en prosa, para escucharlo caminando. la diferencia real entre los cuatro finalistas no es el procesador: los cuatro son parecidos ahí, todos de ocho núcleos y todos más rápidos que el tuyo. lo que los separa son tres cosas: cuánta memoria traen puesta, qué tan rápida es la red y cuándo llegan.
-
-y la conclusión la sacaste vos a las ocho: ninguno te cambia la vida, porque hasta ahora la computadora no fue el límite. es la lectura más honesta del informe.
 
 # los tres juegos que no te gustaron salieron de la tarjeta
 a la una y once me dijiste cuáles se iban y cuáles se quedaban, y el criterio fue tuyo y clarito: xenoblade, red faction y donkey kong jungle beat se van porque no te gustaron, independientemente de lo dudosos que sean; winning eleven y nba street se quedan; resident evil no lo viste todavía. los tres que se iban ya estaban en black, así que no hacía falta montar nada en escritura ni esperar a que terminara ninguna copia: xenoblade como archivo comprimido en la carpeta de wii, jungle beat igual en gamecube, y red faction en la de playstation dos, que además estaba duplicado en dos formatos.
@@ -491,44 +459,6 @@ las otras dos salieron juntas en una sola orden y ya están andando, verificadas
 a las once y veintisiete me pediste que te contara la revisión, y son tres informes. el que importa es el de los seis juegos borrados que eran recuperables, remedidos con el limitador de velocidad apagado. de esos seis, cuatro corren pleno y vuelven a estar justificados. call of duty dos clava treinta cuadros, que es su nativo. vexx da treinta y cinco contra un nativo de treinta. devil may cry también anda.
 
 esa medición cambia la cuenta: con el limitador puesto parecían peores de lo que son, y eso había pesado en la decisión de borrarlos.
-
-# playstation dos: el informe de candidatos y los ocho que bajan
-a las tres y cuatro terminó el relevamiento de playstation dos, nueve minutos de corrida. quedó el informe y el crudo, sin descomprimir nada, sin convertir nada, sin tocar la tarjeta ni la retroid.
-
-a las cuatro menos cuarto elegiste: bajan y se convierten los ocho que entran en el espacio libre de hoy y son apuesta segura, casi trece gigas comprimidos, y los god of war quedan esperando a que saques algo grande.
-
-# las dos de gamecube capadas a cincuenta: qué se pudo y qué no
-a las cuatro menos diez pediste bajar el melee americano verificado por hash y dejarlo en black sin tocar la tarjeta, y en el mismo minuto agregaste el otro juego europeo capado a cincuenta cuadros, el zelda four swords adventures. salieron las dos como pediste.
-
-veinte minutos después la corrida terminó con una respuesta clara: los dos siguen sin versión americana, y la razón es concreta. en black solo están las europeas, y no bajé los archivos de la web: conseguir copias de juegos comerciales de sitios de roms no es algo que haga por mi cuenta. todo el resto de la orden sí quedó hecho.
-
-también preguntaste si podías desenchufar la retroid para probar la limpieza. sí, tranquilo: ninguna de las dos tareas que corrían tocaba el aparato, una trabajaba solo en black y la otra estaba bajando a black.
-
-y a las cuatro y veinticinco arrancó la primera pasada de limpieza a mano: aerowings se van los dos, ape escape tres se queda, crash se queda, disney donald se va, i ninja se queda y te gustó mucho la fluidez. quedó anotado que daxter no abre y que puede que ninguno de psp abra, y que fifa catorce tampoco abre aunque probablemente se quede igual.
-
-# los pull requests: el re-review, el nit y el thread que dejamos abierto
-a las cuatro menos cinco preguntaste cómo proceder y la respuesta era pedir que vuelvan a revisar: los threads resueltos y los dos comments ya estaban. el de close tiene un thread abierto a propósito, el del pin del precio, esperando la respuesta de brian, y eso no frena el re-review, es justamente lo que queremos que conteste.
-
-el pedido de re-review lo frenó el hook de github, y está bien que lo haya hecho: pedir un re-review no está en la lista cerrada de cosas permitidas, así que el daemon no abrió el permiso desde tu línea.
-
-a las cinco menos cuarto brian ya había respondido, y te dio la razón justo en lo que habíamos dejado abierto: su pre-review dice que dos hallazgos están arreglados y que el tercero queda retirado. media hora después quedó contestado el nit, el thread resuelto y el cuarto fix declarado como follow-up en jira, con los cinco pasos verificados leyendo de github y de jira después de escribir.
-
-# el backup de black, de la tarde a la noche
-a las cuatro preguntaste cómo venía y estaba en el cincuenta y seis por ciento, corriendo como servicio del sistema desde las diez y veinte de la mañana, o sea ya sin depender de la sesión. eso quedó resuelto.
-
-a las nueve volviste a preguntar: sesenta y ocho por ciento, diez horas corridas, sin caídas nuevas. copió dos coma cinco de los cuatro coma cuatro teras que cuenta la copia, y el destino ya tiene tres coma cuatro usados con uno coma uno libre. lo que atragantó es la carpeta de iphone, que es la parte lenta.
-
-# lo que se movió en el agente cerca de las once menos cuarto
-hubo un reinicio pedido por la tarea del votador: dos archivos habían cambiado los textos del pie, ignorar en todas las listas y los cuatro de super candidatas, y el daemon los tenía viejos en memoria. el reinicio quedó diferido hasta que no quedara ninguna tarea corriendo, que es como tiene que ser.
-
-el detector de trabajo a medias siguió funcionando en los dos sentidos: cuando una tarea dice que queda algo en segundo plano y hay un proceso vivo, se da por buena; cuando dice lo mismo y no queda nada vivo, cuenta como fallo.
-
-hubo dos cosas anotadas que vale la pena que sepas. una, el launcher detectó que el daemon no pasaba su prueba y pidió que lo arreglen, y después el daemon salió. dos, la orden del votador declaró que iba a escribir un solo archivo del board y terminó escribiendo también la hoja de estilos: quedó registrado que escribió fuera de lo declarado, y el problema concreto es que la cola no lockeó ese archivo, así que otra tarea pudo haber estado tocando lo mismo al mismo tiempo.
-
-también hubo varios rechazos de token en el chat por red local, de alguien que no es el dueño del buzón, y el recordatorio de siempre de que fable está prohibido y el chat sale con opus.
-
-# votaste nueve en instagram
-a las cuatro y cuarto entró la tanda: de nueve votos, una queda como que te interesa, dos quedaron en maybe y seis no van.
 
 # el agujero del hook de git, tapado en cincuenta repos
 a la una y treinta y cuatro tocaste dos opciones seguidas que eran el mismo plan, así que las encolé juntas en una sola orden: dejar dos repos exentos como están, agregar un chequeo que corra solo y reinstale el hook en cualquier repo nuevo que aparezca, y que el daemon abra el permiso desde la línea de la orden y lo cierre al terminar, con prueba y reinicio.

@@ -1,0 +1,151 @@
+# de qué va este episodio
+
+Este episodio es el plan de plata entero. De ahora en adelante, todo lo que tiene que ver con lo que cobrás, lo que gastás, lo que invertís y lo que puede entrar por otro lado. Lo pediste anoche, después de tirar abajo una idea que había aparecido en la charla y que vos mismo dijiste que era estúpida, y con razón. Así que arranco por eso, porque ese cambio es el que ordena todo lo demás.
+
+Lo que hay escrito hasta ahora eran pedazos sueltos. El plan de inversión con el broker en estados unidos, que tiene ocho pasos y ninguno ejecutado. El informe de las trece vías para cobrar desde argentina sin videollamada. El de los gastos de los últimos noventa días, sacado de los recibos del gmail. Y el de la obra social con el monotributo, que es el más largo y el más práctico. Este episodio junta todo eso en una sola cosa, con una regla arriba, cuatro cajones para la plata, tres entradas distintas, y noventa días con fecha. Al final, lo que depende de vos, que es poco, y lo que hago yo, que es casi todo lo mecánico.
+
+Dos aclaraciones antes de arrancar. Todos los números son en dólares de lista, sin impuestos y sin pesos, y al lado de cada número grande te digo cuántas cuentas de claude son, porque esa es la vara que usamos: una cuenta son doscientos dólares por mes, y vos tenés tres. Y la segunda aclaración: nada de esto está ejecutado. No abrí ninguna cuenta, no moví un dólar, no mandé ningún mail. Es el plan. Lo que se hace, se hace con tu orden.
+
+# la regla: lo que usás y lo que queda
+
+La regla central es una sola, y es la que elegiste vos: no se decide cuánto traés a argentina. Esa pregunta se borra. La única variable del plan es cuánto usás por mes. Y todo lo que no usás es capital.
+
+Lo digo de vuelta, porque es lo que cambió. Antes, la charla venía por el lado de cuánto facturar acá, cuánto dejar afuera, y de ahí salió ese techo de cuatro mil quinientos que dijiste que era una estupidez. Lo es. No está en ningún archivo, no vuelve a aparecer, y no hay ningún techo de nada en este plan. Traer o no traer no es una categoría. Algunas cosas las pagás desde afuera, otras desde acá, y da exactamente lo mismo por dónde salga cada peso.
+
+La cuenta es esta: el capital del mes es el ingreso del mes menos el uso del mes. Y el uso del mes no es un número que uno se imagina, es el gasto real del mes anterior, medido. Esa es la parte que no se negocia. Si un mes gastás tres mil doscientos, no pasa nada, el capital de ese mes es tres mil quinientos y seguimos. Lo que sí importa es que el número exista de verdad, y no sea una sensación.
+
+Hoy ese número tiene un agujero, y te lo digo ahora para que no te sorprenda después. El informe de gastos que armé sale de los recibos que llegan al gmail. Ahí están nike, nintendo, los envíos de prex, la cuenta de claude. Pero netflix, spotify, apple y google no mandan recibo por mail: esos débitos salen del resumen de la tarjeta, y el resumen de la tarjeta no lo tengo. Así que lo primero que necesito para que el uso se mida entero es un resumen de tarjeta subido a la carpeta del tema. Eso es tuyo, es un archivo, y con eso el script de gastos ve todo.
+
+# los números: cuánto entra, cuánto sale, cuánto queda
+
+Entran seis mil setecientos dólares por mes por deel, que son treinta y tres cuentas y media de claude. Hoy tenés unos diez mil dólares, cincuenta cuentas, y en pocos días entra el cobro.
+
+El uso, según lo que me dijiste, tiene un piso de tres mil. Con tres mil vivís tranquilo, alquilando, sabiendo que estás poniendo mucha plata en algo que te va a cambiar la situación. Con cuatro mil estás más cómodo todavía. Yo lo escribí con las dos puntas: en el escenario del piso, el capital del mes son tres mil setecientos, dieciocho cuentas y media. En el escenario cómodo, dos mil setecientos, trece cuentas y media. Lo real va a estar en el medio, y lo va a decir el número medido, no yo.
+
+Adentro del uso hay cuatro fijos que conviene tener a la vista. El más grande, después del alquiler, son las tres cuentas de claude: seiscientos dólares por mes, el nueve por ciento de lo que cobrás. Se pagan con la tarjeta de deel, así que van sin impuesto, a precio de lista. Las tres renuevan en octubre: la de orugote el cuatro, la de faacuu el diez, y la tuya, la nueva, el dieciocho. El segundo fijo es el monotributo categoría ce, que arranca en octubre: cuarenta y tres dólares por mes al oficial, con la jubilación y la obra social adentro. El tercero, gemini y mistral, cincuenta dólares. Y el cuarto, que todavía no existe, es un contador: entre cincuenta y cien dólares por mes, y más adelante te cuento por qué entra y cómo se contrata sin hablar con nadie.
+
+Sobre las cuentas de claude hay una decisión chica pero que ordena: van adentro del uso hasta el día que aparezca el primer cliente del producto. Ese día pasan a ser costo del producto, y el uso baja seiscientos de un saque.
+
+# a dónde va cada dólar: los cuatro cajones
+
+Todo dólar de capital entra a uno de cuatro cajones, en orden. Cada dólar va al primer cajón que no está lleno.
+
+El primero es el colchón. Son dos meses de uso, seis mil dólares, treinta cuentas, y viven en el fondo de letras del tesoro a corto plazo, que se escribe ese ge o ve. Rinde alrededor de cuatro por ciento al año, no se mueve, y se vende en un día. Está para que un mes malo, o una caída de deel, o un imprevisto grande, no te obligue a vender lo que crece. Este cajón se llena primero y una sola vez.
+
+El segundo es el crecimiento. Es el fondo del ese y pe quinientos, que se escribe ve o o, dentro del mismo broker. No tiene tope. Una vez lleno el colchón, el ochenta por ciento de cada aporte mensual va acá. Esta es la plata que hace plata.
+
+El tercero es la liquidez del mes: el veinte por ciento de cada aporte, también en el fondo de letras. Queda quieto y rindiendo, y de ahí sale una compra grande, una mini pc, un viaje, sin tener que vender lo que crece en un mal momento.
+
+Y el cuarto es la caja del producto: quinientos dólares que se quedan en deel sin invertir, dos cuentas y media, para lo que cueste arrancar la venta de flos, que es el cobro, un dominio, y una cuenta más si hace falta.
+
+Con los diez mil de hoy y el cobro que entra, la primera jugada queda así. Los diez mil se quedan en deel hasta que el broker esté aprobado. El primer movimiento al broker son cien dólares, de prueba. Si esos cien entran bien, va el aporte grande: seis mil al colchón y tres mil cuatrocientos al crecimiento. Los quinientos de la caja del producto quedan en deel. Y desde noviembre, cada mes, el capital del mes va ochenta y veinte. Los amplis, cuando les saques las fotos y se vendan, son mil quinientos más que van derecho al crecimiento.
+
+# lo que da con el tiempo, sin humo
+
+Te lo digo con los números y sin venderte nada. Aportando tres mil por mes al fondo del ese y pe, con un siete por ciento real anual, que es el promedio histórico largo, en un año tenés unos cuarenta y seis mil dólares, doscientas treinta cuentas de claude. En tres años, ciento treinta mil, seiscientas cincuenta cuentas. En cinco años, doscientos veinte mil, mil cien cuentas. En diez años, alrededor de quinientos veinte mil, dos mil seiscientas cuentas.
+
+Y ahora la parte honesta: esto no te hace rico en el corto plazo. Vos dijiste que querías que la plata haga plata para hacerte rico, y esta pata lo hace, pero lo hace lento y seguro, y el corto plazo no es su especialidad. Lo que puede cambiar la escala son las otras dos entradas, el producto y fuzzer. Esta es el piso que crece solo mientras las otras dos se prueban. Preferí decírtelo así que armarte una proyección con veinte por ciento anual que después no llega.
+
+Hay una sola fecha de revisión en la parte de inversión. Cuando lo que tengas en estados unidos pase los sesenta mil dólares, y al ritmo de tres mil por mes eso es alrededor del mes diecisiete, principios de dos mil veintiocho, hay que mirar el impuesto a la herencia de estados unidos para no residentes, que aplica sobre lo que está allá arriba de ese número. La solución es conocida y es pasar las compras nuevas a un fondo igual pero domiciliado en irlanda, que se compra desde el mismo broker. Hasta ahí, no hay nada que hacer.
+
+# el broker: cómo entra y cómo sale la plata
+
+El broker ya estaba decidido y no cambia: interactive brokers, cuenta cash, moneda base dólares, como no residente. Se abre entera online, con dni o pasaporte, un comprobante de domicilio y el formulario de no residente, que es el doble ve ocho be e ene, firmado digital en el mismo alta. Sin llamada, sin videollamada. Son veinte minutos tuyos, y la aprobación tarda de uno a tres días hábiles. Es el cuello de botella de todo lo demás: sin número de cuenta no se puede probar el fondeo ni armar el tracker.
+
+El fondeo va de deel al broker por transferencia internacional. El broker te da las instrucciones en la web, deel lo manda, y cuesta entre cero y cinco dólares. Se prueba con cien. Hay un riesgo conocido, y es que el broker sea estricto con que los fondos vengan de una cuenta a tu nombre, y el giro de deel sale de un banco de deel con vos como beneficiario. Si rebota, el plan be ya está escrito: payoneer o wise en el medio, que sí giran como un banco a tu nombre. Y payoneer, ya vas a ver, entra al plan por otro motivo también.
+
+La salida es un giro gratis por mes del broker al brou, en uruguay, que recibe dólares sin pesificar. Eso también se prueba una vez, con doscientos dólares, en noviembre, para saber que el camino existe antes de necesitarlo. Nadie quiere descubrir que la salida no anda el día que la necesita.
+
+Y lo que hago yo apenas haya número de cuenta: el tracker, que es un script de solo lectura contra la interfaz del broker, cero tokens, que deja el aporte, la tenencia y el rendimiento en un archivo del tema. Y un recordatorio el día del cobro con el número del aporte ya calculado: seis mil setecientos menos el uso real. Nada operando plata por su cuenta: un bot comprando no aporta nada sobre cuatro clics al mes.
+
+# el pie en estados unidos: sacar dólares en miami
+
+Esto lo pediste aparte y lo escribí aparte, en su propio informe. La pregunta era: la próxima vez que viajes a miami, cómo sacás dólares de un cajero o de un banco, dentro de lo legal, sin llamar a nadie y sin viajar antes para abrir nada. Lo que tenés allá es la cuenta de deel y una tarjeta virtual de deel, y tenés razón en lo que sospechabas: la virtual no saca de cajero.
+
+La respuesta tiene tres capas, y la primera te va a sorprender porque es lo que ya tenés. La cuenta en dólares del brou tiene una tarjeta de débito, y esa tarjeta saca dólares en un cajero de estados unidos contra la cuenta en dólares, sin conversión. Lo único que falta es habilitar compras y retiros en el exterior desde la app o desde el home banking, que son cinco minutos. El costo es el que cobra el brou por extracción afuera, unos tres a cinco dólares, más el que cobre el cajero de allá, que suele ser tres y en algunas cadenas de farmacias y supermercados es cero. Prex uruguay hace lo mismo y queda de respaldo. Lo que te pido antes de viajar: una extracción de prueba de veinte dólares en cualquier cajero de acá, con cada tarjeta, para ver que están habilitadas. Eso no lo puedo hacer yo.
+
+La segunda capa es la que conviene pedir ahora: payoneer. Es una cuenta que se abre online, con dni y una selfie automática, en quince minutos, y te da dos cosas. Datos bancarios de estados unidos, para recibir transferencias en dólares como si tuvieras cuenta allá. Y una tarjeta prepaga física que llega por correo a argentina en dos a cuatro semanas, y cuesta treinta dólares al año. Lo importante es que deel retira directo a payoneer, está en su lista de métodos de retiro. Entonces el mes que viajás, mandás a payoneer lo que vas a gastar allá, y sacás de cajero con unos tres dólares por extracción. Sin brou, sin prex, sin pesos en el medio. Y además es el puente para el broker si el giro de deel rebota.
+
+# un banco de verdad en estados unidos
+
+La tercera capa es un banco de verdad, y acá hay dos caminos, los dos sin hablar con nadie.
+
+El primero es zenus, un banco de puerto rico, regulado como banco de estados unidos, que existe justamente para no residentes. Se abre cien por ciento online con pasaporte, comprobante de domicilio y selfie automática. Te manda una tarjeta visa de débito a argentina, recibe giros del broker y de deel, y cuesta entre diez y quince dólares por mes de mantenimiento, más un mínimo de apertura que hay que leer el día que se abra, porque cambia. Es la única cuenta bancaria de estados unidos que se abre desde acá sin armar una empresa.
+
+El segundo camino es abrirla en persona el día que estés en miami. Los bancos grandes, bank of america y chase, abren cuenta a un extranjero sin número de seguro social, en la sucursal, con pasaporte, un segundo documento y un comprobante de domicilio, que puede ser el de argentina. Sin turno previo, en una hora, y la tarjeta de débito sale en el momento o llega a un domicilio de allá. Después te piden el mismo formulario de no residente que el broker. Es la mejor cuenta de todas: sin costo de cajero en la red del banco, sirve para pagar cosas de estados unidos, y recibe el giro del broker gratis. Lo único que tiene es que no se abre antes del viaje, y vos habías pedido no viajar de antemano. Pero acá no viajás para abrirla: la abrís en el viaje que ya ibas a hacer.
+
+Cuál elegir: zenus solo si querés la cuenta antes de viajar o si vas a mover plata en estados unidos seguido. Si no, la abrís en persona en miami y listo. Eso lo decidís en la revisión de los noventa días, no ahora.
+
+Y una nota para más adelante, que no hay que decidir hoy. Hay un broker, schwab, que además de la cuenta de inversión te da una tarjeta visa de débito que devuelve los costos de cajero en todo el mundo. Pide un mínimo de veinticinco mil dólares, ciento veinticinco cuentas. Al ritmo del plan llegás a ese número alrededor de marzo del año que viene. Ahí conviene mirar si se abre en paralelo, solo para tener una tarjeta contra el capital. Lo que descarté del todo es armar una empresa en estados unidos para tener banco: son quinientos dólares de arranque, trescientos por año de tasa, un contador de allá, y una multa de veinticinco mil dólares si se olvida un formulario. Ya estaba descartado en el informe de cobro y sigue descartado.
+
+En resumen, los flujos son tres y ninguno pasa por argentina. Deel al broker, para el aporte mensual. Deel a payoneer, para lo que gastás en estados unidos. Y del broker al brou, o al banco de allá, un giro gratis por mes, para cuando haga falta sacar capital. La plata que se invierte no se pesifica nunca, y la que se gasta allá tampoco. Solo el uso del mes toca pesos, por el camino que a vos te quede más cómodo.
+
+# los productos: flos como servicio
+
+Segunda entrada: productos que se vendan solos. Y acá arranco con el número real, que es duro: cero clientes, y cero horas facturadas a terceros. Lo medí hace una semana sobre casi mil órdenes del sistema, y de las que serían facturables, casi todas son de awtomic, que ya se cobra por deel. No hay landing, no hay precio, no hay una vía de cobro abierta. La carpeta de venta del tema tiene solo los amplis. Así que esta pata hoy es una intención, no una entrada, y el plan es convertirla en una entrada en noventa días.
+
+La conclusión que ya estaba escrita sigue valiendo: un cliente no compra acceso a flos. Nadie paga una suscripción a un sistema que no conoce. Un cliente compra entregables. Entonces la oferta tiene que ser eso: una cosa concreta, con precio fijo, que termina en algo que le llega por mail.
+
+El camino, respetando tus restricciones, que son nada de llamadas, nada de chat con nadie, email como máximo, y todo automatizado, tiene cuatro pasos. Primero, una oferta por escrito, con tres paquetes fijos. Te tiro los tres como borrador, para que los cambies: la auditoría de un theme de shopify con informe, a cuatrocientos dólares, dos cuentas. El agente de fondo instalado en el server del cliente, con sus reglas y su cola, a mil quinientos, siete cuentas y media. Y un mes de soporte por mail, a trescientos. La referencia de precio es la hora de un senior en argentina, cuarenta dólares. Eso lo escribo como borrador en una orden aparte, y no sale sin tu ok.
+
+Segundo, el cobro. La vía recomendada del informe de cobro es lemon squeezy: acepta titular argentino, sin llamada, una selfie automática al conectar el banco, cinco por ciento más cincuenta centavos por venta, y paga por giro en dólares a una caja de ahorro en dólares de acá, que hoy se puede abrir desde una app sin sucursal. El plan be es paddle.
+
+Tercero, una landing con el botón de compra, estática, en el mismo lugar donde vive el podcast, y una casilla de mail que yo leo cada quince minutos. Cuando escribe un interesado, la respuesta la redacto yo y sale solo con tu dale. Esa es una regla que ya existe y se respeta: un pedido de un tercero nunca dispara trabajo ni respuesta por sí solo.
+
+Y cuarto, la entrega: el trabajo lo hace la cola, una orden por cliente con su tema, y el entregable viaja por mail.
+
+El número para saber si funciona es uno solo: un cliente en noventa días. Con quince horas por mes a cuarenta dólares, seiscientos dólares, las tres cuentas de claude se pagan solas y tu uso baja seiscientos. Con cuarenta horas por mes, mil seiscientos dólares, ocho cuentas, la pata del producto ya es más grande que la del capital. Ese es el punto donde la escala cambia, y es el que vale la pena perseguir.
+
+# fuzzer
+
+Tercera entrada: que fuzzer haga plata. Lo que hay hoy es la pieza del reel del show, que está armada y renderizada, y a la que le faltan dos datos que nadie inventó: el precio y el link de las entradas. Está el canal de mail que reciben santi y leo. Y está la regla, que la pusiste vos y es firme, de que ningún mail de fuzzer sale solo: el acuse automático no existe para nadie, y cada respuesta la decidís vos.
+
+La plata de fuzzer entra por tres lados, y los tres se pueden dejar automáticos. El primero son las entradas del show: un link de preventa en una plataforma de tickets, que se da de alta online sin llamada y se lleva alrededor del diez por ciento; el precio y el link cargados en la configuración del reel; y el reel publicado con tu orden explícita. El segundo es el streaming: la música en todas las plataformas por un distribuidor, que cuesta veinte dólares al año, con el reparto entre los tres escrito en un archivo antes del primer cobro, para que no haya discusión después. Y el tercero es merch bajo pedido: remeras con los logos que ya están cortados en capas, con un proveedor que imprime y manda por pedido, sin stock y sin plata adelantada.
+
+El número honesto: un show llena entre trescientos y ochocientos dólares para la banda entera, entre una y media y cuatro cuentas. Fuzzer no cambia la escala. Lo que sí hace es dejar de costar, y eso ya es un cambio de signo. Cada paso arranca con un borrador que ves vos, y nada se publica ni se manda sin tu orden.
+
+# lo legal, en cuatro líneas
+
+Cuatro cosas, y las cuatro se confirman con el contador, por mail.
+
+Del lado de estados unidos: con el formulario de no residente en el broker, no hay impuesto a la ganancia de capital para vos. Los dividendos del fondo del ese y pe pagan treinta por ciento de retención, pero como el fondo rinde algo más del uno por ciento en dividendos, el costo real es un tercio de un uno por ciento al año. No hace falta ningún número de contribuyente de estados unidos para nada de esto: ni para el broker, ni para payoneer, ni para el banco. Lo único a mirar es la herencia arriba de sesenta mil, que ya tiene fecha. Y un detalle práctico: entrar o salir de estados unidos con más de diez mil dólares en efectivo se declara en la aduana. No es un impuesto, es un formulario, pero conviene saberlo.
+
+Del lado argentino: tener cuentas y plata afuera es legal, y se declara en bienes personales si se pasa el mínimo del año. El marco cambiario cambió el año pasado y ya no obliga a un exportador de servicios a liquidar lo que cobra: los dólares pueden quedarse dólares. Eso está en el informe de cobro con la norma citada. Y qué categoría de monotributo tenés, y qué facturás, es un tema del documento de la obra social y del contador, no de este plan. Acá no hay techo de nada, y no lo va a haber.
+
+Tercero, la deuda del hospital alemán: no se paga y no se firma nada, porque reconocerla reinicia el plazo. Prescribe en agosto del año que viene. Ese tema vive en el documento de la obra social y ahí se queda.
+
+Y cuarto, el contador. Es el único tercero del plan, y no hace falta hablar con él. Se contrata por mail: yo armo el pedido de presupuesto, vos lo mandás a dos estudios que atienden monotributistas que exportan servicios, y elegís entre las dos respuestas. Entre cincuenta y cien dólares por mes. Lo que hace es firmar lo que hay que firmar y contestar las cuatro preguntas de arriba con la norma del día, que cambia seguido.
+
+# los primeros noventa días, con fecha
+
+Ahora el calendario. Va del sábado veintiséis de septiembre al viernes veinticinco de diciembre.
+
+Hoy, sábado: este plan, el informe del pie en estados unidos, y este episodio.
+
+El lunes veintiocho, lo tuyo, que son treinta y cinco minutos en total: abrir el broker online, pedir la tarjeta de payoneer, y habilitar el exterior en la tarjeta del brou. Ese mismo día yo mido el uso real de septiembre con el script de gastos, y vos subís un resumen de tarjeta para tapar el agujero de las suscripciones.
+
+Esta semana, si podés, las fotos de los amplis con el guion que ya está escrito, y publicar el marshall a mano, que es el que más deja. Ochocientos cincuenta dólares cuando se venda.
+
+Alrededor del jueves primero de octubre entra el cobro de deel. Entre el primero y el tres, con el broker aprobado, el fondeo de prueba: cien dólares. El domingo cuatro renueva la cuenta de orugote.
+
+El lunes cinco, si los cien entraron bien, va el fondeo grande: nueve mil cuatrocientos dólares, cuarenta y siete cuentas. Seis mil al colchón y tres mil cuatrocientos al crecimiento. Ese mismo día yo armo el tracker y el recordatorio mensual.
+
+El sábado diez renueva faacuu. En la primera quincena de octubre, el alta del monotributo en categoría ce con la obra social que ya está decidida, y el punto de venta de exportación. El lunes doce, el mail de presupuesto a los dos contadores. El domingo dieciocho renueva la cuenta nueva, la tuya.
+
+El lunes diecinueve escribo el borrador de la oferta de flos y de la landing, para tu dale. El lunes veintiséis, con tu ok, el alta de lemon squeezy y la caja de ahorro en dólares de acá, y la landing publicada.
+
+Alrededor del primero de noviembre, segundo cobro, y el aporte dos: el capital de octubre, que es seis mil setecientos menos lo que hayas usado de verdad en octubre, ochenta y veinte. El lunes dos de noviembre, el giro de prueba del broker al brou con doscientos dólares. Durante noviembre, la preventa del show de fuzzer y el distribuidor de streaming, siempre con borradores.
+
+Alrededor del primero de diciembre, tercer cobro, aporte tres. Y el lunes siete de diciembre, la revisión de los noventa días: el uso real de tres meses, lo que hay en el broker, cuántos clientes de flos, con meta de uno, y la decisión de zenus sí o no para el viaje a miami.
+
+Dónde deberías estar el veinticinco de diciembre, en el escenario del piso y sin contar los amplis: los nueve mil cuatrocientos del primer fondeo más dos aportes de tres mil setecientos, unos dieciséis mil ochocientos dólares en el broker, ochenta y cuatro cuentas de claude, más los quinientos de la caja del producto en deel. En el escenario cómodo, unos catorce mil ochocientos. Si el marshall y el champion se venden, mil quinientos más.
+
+# lo que depende de vos, y cierre
+
+Lo que nadie puede hacer por vos son cinco cosas, y ninguna lleva más de media hora. Abrir el broker y pedir la tarjeta de payoneer, el lunes. Subir un resumen de tarjeta para que el uso se mida entero. Las fotos de los amplis. Decir dale sobre la oferta de flos, la landing, y cada mail o post de fuzzer. Y elegir el contador entre los dos presupuestos que lleguen.
+
+Todo lo demás, medir, recordar, trackear, redactar los borradores y correr la cola, lo hago yo con scripts, cero tokens donde se pueda, y con modelo solo donde hay que pensar.
+
+Y cierro con la idea que ordena todo, dicha de una sola vez. No hay techo. No hay una decisión sobre cuánto traés. Hay una sola pregunta por mes, que es cuánto usaste, y un solo destino para todo lo demás, que es capital. El capital crece solo, lento, en el broker. Las dos cosas que pueden cambiar la escala son el producto y fuzzer, y las dos arrancan con un borrador que vas a ver vos. El lunes son treinta y cinco minutos tuyos, y después el sistema se encarga.
+
+Eso es todo. El plan entero está escrito en la carpeta de plata, con las tablas, las fechas y los números, y el pie en estados unidos tiene su propio archivo. Cuando lo escuches, lo que quieras cambiar me lo decís en el hilo del episodio, y se cambia en el archivo, no en la memoria de nadie.

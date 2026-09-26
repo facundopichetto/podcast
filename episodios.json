@@ -2028,7 +2028,105 @@
    },
    "duracion": 1833.5,
    "ts": "2026-09-22T00:42:33-03:00"
+  },
+  {
+   "id": "ep-2026-09-26-plan",
+   "fecha": "2026-09-26",
+   "titulo": "el plan de plata: lo que usás, y todo lo demás es capital",
+   "temas": [
+    "plata"
+   ],
+   "palabras": 4705,
+   "guion": "guion-plan.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-09-26-plan-daniela.mp3",
+     "duracion": 1435.0,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 85.3,
+       "archivo": "audio/ep-2026-09-26-plan-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 85.3,
+       "titulo": "la regla: lo que usás y lo que queda",
+       "duracion": 98.5,
+       "archivo": "audio/ep-2026-09-26-plan-2-la-regla-lo-que-usas-y.daniela.mp3"
+      },
+      {
+       "t": 183.8,
+       "titulo": "los números: cuánto entra, cuánto sale, cuánto queda",
+       "duracion": 98.2,
+       "archivo": "audio/ep-2026-09-26-plan-3-los-numeros-cuanto.daniela.mp3"
+      },
+      {
+       "t": 282.0,
+       "titulo": "a dónde va cada dólar: los cuatro cajones",
+       "duracion": 102.3,
+       "archivo": "audio/ep-2026-09-26-plan-4-a-donde-va-cada-dolar.daniela.mp3"
+      },
+      {
+       "t": 384.3,
+       "titulo": "lo que da con el tiempo, sin humo",
+       "duracion": 81.3,
+       "archivo": "audio/ep-2026-09-26-plan-5-lo-que-da-con-el-tiempo.daniela.mp3"
+      },
+      {
+       "t": 465.6,
+       "titulo": "el broker: cómo entra y cómo sale la plata",
+       "duracion": 103.0,
+       "archivo": "audio/ep-2026-09-26-plan-6-el-broker-como-entra-y.daniela.mp3"
+      },
+      {
+       "t": 568.5,
+       "titulo": "el pie en estados unidos: sacar dólares en miami",
+       "duracion": 109.0,
+       "archivo": "audio/ep-2026-09-26-plan-7-el-pie-en-estados.daniela.mp3"
+      },
+      {
+       "t": 677.5,
+       "titulo": "un banco de verdad en estados unidos",
+       "duracion": 158.3,
+       "archivo": "audio/ep-2026-09-26-plan-8-un-banco-de-verdad-en.daniela.mp3"
+      },
+      {
+       "t": 835.8,
+       "titulo": "los productos: flos como servicio",
+       "duracion": 163.7,
+       "archivo": "audio/ep-2026-09-26-plan-9-los-productos-flos-como.daniela.mp3"
+      },
+      {
+       "t": 999.5,
+       "titulo": "fuzzer",
+       "duracion": 87.2,
+       "archivo": "audio/ep-2026-09-26-plan-10-fuzzer.daniela.mp3"
+      },
+      {
+       "t": 1086.7,
+       "titulo": "lo legal, en cuatro líneas",
+       "duracion": 113.8,
+       "archivo": "audio/ep-2026-09-26-plan-11-lo-legal-en-cuatro.daniela.mp3"
+      },
+      {
+       "t": 1200.5,
+       "titulo": "los primeros noventa días, con fecha",
+       "duracion": 157.0,
+       "archivo": "audio/ep-2026-09-26-plan-12-los-primeros-noventa.daniela.mp3"
+      },
+      {
+       "t": 1357.4,
+       "titulo": "lo que depende de vos, y cierre",
+       "duracion": 77.5,
+       "archivo": "audio/ep-2026-09-26-plan-13-lo-que-depende-de-vos-y.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1435.0,
+   "ts": "2026-09-26T00:20:29-03:00"
   }
  ],
- "actualizado": "2026-09-25 23:58"
+ "actualizado": "2026-09-26 00:20"
 }
