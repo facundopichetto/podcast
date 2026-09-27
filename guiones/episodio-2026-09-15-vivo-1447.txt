@@ -1,8 +1,45 @@
-# actualizado hoy a las 05:36
-actualizado hoy, sábado veintiséis, a las cinco treinta y seis.
+# actualizado hoy a las 06:32
+actualizado hoy, domingo veintisiete, a las seis treinta y dos.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# la pestaña tinder tenía cuatro cosas mal, y ya sé de dónde sale cada una
+cerca de las once menos diez mandaste una captura de la pestaña tinder y dijiste que había varias cosas mal. la primera respuesta no sirvió: salió por el eco, te devolvió un resumen genérico de que iba a revisar la vista y te ofreció opciones. elegiste que la revise, y ahí sí miré la captura de verdad.
+
+no era una cosa sola, eran cuatro, y las cuatro tienen causa conocida. los tres avisos rojos de no pude bajar la charla, uno de tools, uno de juegos y uno de awtomic, están pintados adentro del chat de tinder. eso va contra tu regla de que ningún aviso se pinta adentro del chat: la campana es el único lugar donde van. salen del shell del board como mensajes de sistema, así que es sacarlos de ahí y mandarlos donde corresponde. el resto de la lista quedó identificado en la misma pasada, y el fix salió como una sola orden que también toca el daemon.
+
+esa orden la vi corriendo un rato después con el proceso vivo y setenta y cuatro turnos encima. no es una tarea chica.
+
+# la lista de following not followers mostraba gente que ya no seguís, y venías pidiéndolo hace rato
+a las nueve de la mañana me dijiste que al entrar a following not followers te seguían apareciendo personas que ya no seguís, y que había algo que venía haciendo mal porque ya me lo habías pedido diez veces. tenías razón, y ahora sé exactamente qué era.
+
+las tres órdenes anteriores arreglaron el filtro, el código que decide quién entra a esa lista, y las tres lo midieron contra la misma foto vieja. el dato de a quién seguís no sale del embudo: sale de la última foto de seguidos de instagram. si la foto es de hace días, el filtro puede estar perfecto y la lista igual te muestra gente que dejaste de seguir. tres arreglos correctos midiendo contra un dato podrido.
+
+me pediste además que arregle todos los follow y unfollow pendientes, y de manera que no vuelva a pasar o se solucione solo. la cola de instagram tenía doce unfollows pendientes, cuatro unfollows y un follow en fallida, un unfollow enfriándose y la lectura frenada. la recuperación de las fallidas corre solo si la sesión está viva, y como la sesión rebotaba al login, nunca corría: se acumulaba todo ahí.
+
+elegiste una sola orden con todo adentro: foto de seguidos ya, relogin automático tanto en el lector de seguidores como en la cola de instagram, las fallidas y los unfollows colgados vuelven a salir, y la lista avisa cuando la foto es vieja. salió en veintisiete minutos, los cuatro pasos marcados y sin corrección pendiente. hizo login con el segundo factor a las nueve y veintitrés y dejó una foto nueva: trescientos cincuenta y nueve seguidores, setecientos ochenta y cuatro seguidos. la lista ahora sale de esa foto.
+
+# wise te rebota la contraseña, y la orden que dije que encolaba no estaba
+cerca de las dos menos cuarto me escribiste que pusiste la contraseña que empieza con doble ve ocho y wise te dice que el usuario o la contraseña están mal. antes de eso habíamos repasado qué falta de wise: una sola cosa antes de todo lo demás, la verificación de identidad, que wise pide desde el celular con foto del documento y de la cara. elegiste que te mande el link al mail y que te espere, porque todavía no habías hecho las fotos.
+
+acá hay algo que corregí en el momento y te lo digo derecho: dije que lo encolaba y no quedó ninguna orden en la cola. no se perdió nada de lo hablado, pero no estaba encolado como te dije. queda para resolver el tema de la contraseña, que es lo urgente de ahora.
+
+# el mapa de la plata en estados unidos, y los nueve mil quinientos que salen cuando cobres
+a la una y pico abrimos la pestaña de plata para estados unidos y me explicaste el flujo entero. deel es la entrada. las salidas son la tarjeta de deel para gastos directos y transferencias a brou en tandas de nueve mil quinientos cada tanto, armadas así para esquivar los costos fijos de deel y de brou. desde brou pagás el alquiler en uruguay, mil cuatrocientos treinta y tres con todo, seis meses, y de ahí pasa a prex uruguay, que compra directo o manda a prex argentina.
+
+después lo acotaste: en esta pestaña va solo estados unidos, el resto de plata queda afuera. lo que importa acá es que cada tanto tenés que sacar nueve mil quinientos, y lo vas a hacer prolijo cuando cobres en unos días. quedan unos tres mil para invertir el primer mes, que es el estimado mensual a revisar el mes que viene. el camino que anoté es deel a wise a ibkr, con brou, santander y lo demás fuera de esta pestaña. hoy en estados unidos el estado es ibkr con la solicitud en curso y wise en proceso.
+
+elegiste que lo anote en el estado de plata, y la orden agrega ahí una sección de estados unidos con ese mapa completo.
+
+# formatear black: la verificación primero, y recién después se toca el disco
+a la una y media larga preguntaste si terminó el backup y si se puede formatear black y volver a copiarlo. sí terminó y está cerrado: el archivo de terminado existe desde las dos de la mañana, el estado dice cerrado con la pasada corta en cero, sin temporales, la unidad quedó inactiva y el destino tiene cuatro teras usados con quinientos cuarenta y nueve gigas libres. black sigue montado sin que nadie lo haya tocado.
+
+antes de eso, a la mañana, la pasada corta había cerrado lo que faltaba: copió los cuatro roms pendientes y borró el temporal de novecientos setenta y dos megas que había quedado colgado de resident evil cuatro, con el archivo real entero de los dos lados.
+
+se puede formatear, y elegiste la orden completa: verificar la copia entera, formatear black en ext4, copiar todo de vuelta y verificar al final. esto es lo único de todo el asunto que no se deshace, así que la orden formatea recién después de que la verificación entera pase con cero diferencias, y si algo no cierra frena y avisa antes de tocar el disco.
+
+la orden falló dos veces. la primera a las dos y cuarto, después de treinta y ocho minutos, con el paso de la verificación final quedando en manos del mismo servicio al terminar. la segunda quedó reprogramada para la madrugada. o sea: black todavía no se tocó, que es exactamente lo que queremos si la verificación no cerró.
 
 # los ocho de playstation dos que entran hoy, y los god of war esperando lugar
 a las tres y cuarto de la tarde terminó el informe de candidatos de playstation dos. nada se descomprimió, nada se convirtió, no se tocó ni la tarjeta ni la retroid: solo la medición del espacio libre y el cruce contra el set de black para armar el universo real de lo que se puede subir.
@@ -519,6 +556,70 @@ a las cuatro menos uno tocaste la opción de encolar el pedido de re-review a lo
 a las cuatro y tres cuartos me dijiste que te parecía que brian ya había respondido a una de las reviews, y sí: contestó, y te dio la razón en lo que dejamos abierto a propósito. el review nuevo es su pre-review automático, el bot que corre en su máquina, no él escribiendo. lo textual dice que los hallazgos uno y tres están arreglados y que el dos queda retirado.
 
 a las cinco menos ocho tocaste la opción de contestar ese nit con el draft y dejar anotado en el ticket del shipping rate que el cuarto fix queda como follow-up. a las cinco menos cinco cerró: el nit contestado, el thread resuelto y el follow-up declarado en jira, con los cinco pasos verificados leyendo de github y de jira después de escribir. el hallazgo era un inline review comment en el archivo de test, no un comment de conversación, que es por lo que antes no se encontraba dónde responder.
+
+# la barra de iconos del board se rearmó como la pediste por audio
+cerca de las doce y media mandaste un audio pidiendo cambios en la barra de iconos, en el celular y en la mac. lo que entendí y confirmaste: las tres bolitas de nodo, cloud, server y mac, pasan al lado derecho de la barra. todos los botones de vista, chat, widgets, instatinder, podcast, documentos, claves y cuenta, se van adentro de una hamburguesa a la izquierda. afuera queda la campana siempre, y el toggle de chat contra widgets solo en el celular, al lado de la campana. en la mac afuera queda la campana sola. la hamburguesa se anima a cruz y el menú abre a pantalla completa en el celular.
+
+salió como una sola orden y terminó a la una y media: cincuenta y cinco minutos. quedó publicado como versión nueva del board, y como cambió el shell no alcanzó el repintado por pedazos.
+
+# la vista de claves te daba error, y era el candado funcionando
+a la una y media pasadas mandaste una captura y dijiste resolvé esto urgente. no era un bug del server: era el candado de la vista de claves funcionando como se diseñó, solo que el widget no te decía por qué. el listado sale por cualquier vía, pero el valor de una clave lo contesta solo el board local: si el pedido entra por la nube, devuelve un rechazo.
+
+elegiste sacar el candado y servir el valor también por la url pública. va encolado. la url pública ya pide el token del board, el servidor de adelante rechaza cualquier pedido sin autorización, así que el valor sigue detrás de tu login: lo único que deja de exigir es estar en la red de casa. la regla que decía que un secreto nunca sale del tailnet queda pisada por este pedido tuyo.
+
+# la cola tenía una orden repetida cuatro veces, y el alta ya estaba hecha
+a las once y media preguntaste si no había cosas repetidas en la cola. había una: alta figuraba dos veces con el mismo texto, una pendiente y otra corriendo sin proceso vivo. y eran la tercera y la cuarta copia, porque otras dos ya habían corrido lo mismo esa misma mañana, todas para dar de alta a la misma cuenta en follow.
+
+lo que quedó hecho de verdad ya estaba hecho. cancelaste la de alta, que no había arrancado, y encolaste un alta chica que solo la agrega al embudo, sin volver a mandar el follow.
+
+después pediste que te explique las cinco órdenes corriendo o en cola, una por una, contra el registro de órdenes y el log. solo una tenía algo raro, el resto estaba bien. y cuando preguntaste si no estaban muy trabadas por codependencia, la respuesta es que no: de las tres pendientes, solo una dependía de verdad de otra. la prioritaria la dejaste como estaba, pendiente con su etiqueta, arrancando cuando se suelte el archivo del board.
+
+# la burbuja del chat en la landing del wine club: el css ni se descargaba
+a las diez de la mañana propusiste apuntar al wine club o a la página de registro con un selector puntual para esconder la burbuja del chat. hay target de sobra, pero el problema no era el selector: en la landing el archivo de css directamente no se descarga, porque el tema lo carga solo dentro del portal. sumar una línea más ahí no cambiaba nada.
+
+después dijiste que no querías meterle candados al snippet, porque ese archivo trae cosas del widget y generales que van a tener que cargar en más páginas, y que el gate del liquid debería ser solo para esta regla puntual. el dato que cambia la decisión es que ese css no está limpio para cargarlo en todo el sitio: tiene reglas sueltas.
+
+pediste la regla bien scopeada, solo css. te propuse el bloque en el head del tema, tres líneas, y dijiste que no, que querías un cambio solo en el archivo de css del tema. ahí volvimos al mismo punto de partida. la salida que elegiste fue sacar el if del liquid, dejar la regla completa en el css y probar en la copia escondida: landing sin burbuja, home, producto y carrito con burbuja, en ancho de escritorio y de celular. lo encolé con permiso de chrome para que salga al frente, y nada va al live hasta que veas las capturas. terminó cerca del mediodía.
+
+# ibkr y el domicilio: el comprobante está en revisión y no se puede resubir
+cerca de las diez menos cinco dijiste que ibkr marca mal tu domicilio, porque en el alta quedó el fiscal y el comprobante tiene el real. mejor cambiar el domicilio en ibkr al real: lo que ibkr quiere es que el residencial coincida con el comprobante, y una factura a tu nombre en el fiscal sería un papel que dice que vivís donde no vivís. si después piden otro comprobante o un resumen de tarjeta, vuelve a chocar.
+
+me pasaste el domicilio real, el de la factura, y quedó guardado en la bóveda. la tarea entra al portal, cambia el residencial y el del formulario fiscal que va atado, y deja el otro como postal o afuera.
+
+la primera corrida falló: el comprobante sigue cargado y en revisión, y cuando probó resubir el mismo pdf, ibkr lo rebota porque lo deduplica por hash. elegiste dejar correr el reintento, y ese cerró bien en un minuto, sin abrir chrome ni tocar ibkr. no hacía falta rehacer nada: el fallo anterior era un tecnicismo de la cola. el paso de pedir el cambio por el centro de mensajes no aplicaba, quedó marcado como falta, y el chequeo de cierre lo contó como fallado.
+
+# la mesa cambia de reglas: decidís vos, mistral no decide más
+anoche planteaste revisar super candidatas porque lo que se te ofrece es una cagada, y que habiendo votado tanto debería ser más preciso. antes de llevarlo a la mesa quisiste saber quiénes están para debatir. los que están: mistral large, el único que anduvo en las tres rondas; gemini pro, el único que mira fotos; claude opus como guardián, que solo dice qué se rompe y no propone; y un local gratis que vota los puntos ajenos y no cuenta en la decisión.
+
+después rompiste el formato. mistral deja de decidir, decidís vos. cada ronda es un párrafo por modelo, todos con el mismo paquete y la misma pregunta, y vos cerrás la ronda eligiendo quién gana o escribiendo un texto que entra al frente.
+
+y lo dejaste como regla, no como excepción: las reglas de esta mesa son las reglas hasta que vos las cambies. también marcaste fuerte que fable no está prohibido, que solo no está en awtomic porque no lo tenés ahí, y que eso se arreglaba antes de arrancar. elegiste que participen los cuatro más groq esperando su cupo y el local como quinto párrafo marcado como flojo. salió en una sola orden, primero el candado de fable y después la primera ronda del tinder con los seis párrafos. terminó en siete minutos: mistral ya no decide y la mesa tiene modo rondas, verificado.
+
+# el reparto de cuentas ya pasa a la que vence primero, y fable no gana en nada
+a las tres de la tarde pediste que cuando orugote llega a noventa y nueve se pase a la siguiente que está por vencer. ya anda así desde la orden prioritaria de la mañana, que salió de una pregunta tuya: el reparto elige la cuenta usable con menos tiempo hasta que renueve la semana, y cuando orugote pasa su línea, sale sola. orugote estaba en noventa y ocho, así que con lo que consumiera esa misma charla probablemente cruzara en un rato. el reparto lo decide en cada llamada nueva, no por reloj.
+
+después preguntaste cómo volvería lo de sacar el fijo de fable, con la idea de usar fable para lo que realmente es mejor y opus para todo el resto que no pueda reemplazarse con modelos más baratos. con lo medido, esa idea tiene un problema: fable no gana en nada fuera del ruido. el sesenta y ocho contra sesenta en código es sobre diez casos con un intervalo enorme, y las otras cuatro tareas tampoco se distinguen.
+
+ahí preguntaste cómo entendemos mejor dónde funciona cada cosa, porque hacemos agua. sí, hacemos agua, y el informe mismo lo dice: el banco mide tareas cortas, de una pasada, sin herramientas, y lo de código son diez planes a ciegas puntuados por un juez gratis. eso mide al clasificador del chat, no lo que fable hace de verdad en la cola, que son órdenes largas con decenas de llamadas a herramientas. elegiste encolar la medición real y alternar modelos mientras junta datos: opus contra fable sobre las órdenes que cierran todos los días, con la base de la cola como fuente, y el reparto alternando los dos por cuenta para que caigan órdenes parecidas a cada uno.
+
+# los siete de playstation dos, medidos con la consola enchufada
+a las diez menos diez preguntaste qué faltó de juegos. lo que faltaba era todo lo que necesita el aparato desbloqueado: los siete de playstation dos nuevos ya estaban en la tarjeta pero sin medir. de la cola, nada de juegos corría ni esperaba. lo que había entrado con verificación completa eran los dos god of war y castlevania lament, entre otros.
+
+me avisaste que el backup en black estaba terminando pero la consola estaba enchufada, así que medí. la tarea armó su propio script y recorrió los siete con el preset de arranque, probando los siguientes solo si alguno no llegaba a cincuenta y cinco cuadros. arrancó con god of war a las diez y media, y que el script estuviera corriendo confirmó que la consola desbloqueada se veía bien.
+
+la tarea terminó con fallo después de cincuenta y tres minutos. lo que quedó hecho son los tres primeros, verificados en el aparato. lo que no quedó es el respaldo de pro evolution soccer seis a black, porque el backup seguía vivo y el disco seguía en solo lectura. queda pendiente tal cual, sin tocar la configuración de montaje. la decisión que quedó abierta es si dejás los dos god of war en la tarjeta a treinta y siete, treinta y nueve cuadros.
+
+# las tandas de votos de instagram del mediodía
+entre las diez y media y las doce y cuarto cerraste siete tandas de votos. veintiséis, con cuatro para dejar de seguir y veintidós que quedan como están. sesenta y cuatro, con cinco maybe, cincuenta y cinco que no van y cuatro que pasan a follow. treinta y cuatro, con tres que quedan en interesan, dos maybe, veintisiete que no van y dos a follow. dos que pasan a seguir, y una más sola después. ochenta y tres, la tanda grande: diez quedan en maybe, sesenta y ocho a ignoradas, cuatro suben a activar y una a dejar de seguir con ignorar. y cuarenta, con tres en interesan, cinco maybe, veintinueve que no van y tres a follow.
+
+de madrugada, cerca de las cinco menos diez, había cerrado otra de cuarenta y nueve: cinco quedan, veinte maybe, veinticuatro no van.
+
+# lo que se movió en el agente entre las seis menos veinte y las seis y media
+en ese rato el agente estuvo casi todo el tiempo limpiando cloud y subiendo código. cinco pasadas de limpieza, cada una cerrando entre dos mil quinientas y dos mil seiscientas sesiones zombi, sin nada colgado, con carga baja y memoria libre estable. cada limpieza vino con su deploy, entre once y quince archivos sincronizados, y el código de cloud quedó al día cuatro veces seguidas.
+
+instagram avisó dos veces lo mismo: la sesión está viva pero frenó las lecturas de lista. la foto del día reintenta sola y no hay que resembrar cookies. el segundo aviso no se reenvió porque era el mismo texto dentro de la ventana de repetidos, que es exactamente para lo que está ese filtro.
+
+también quedó un aviso del simulacro de caos del server, el de perdí un nodo, que salió solo al buzón sin interrumpir nada. y las pruebas de la mula se pospusieron porque no era momento de downtime: habías escrito hacía menos de una hora.
 
 # los cuatro tickets de brian: cuál es el más fácil, y el que ya va a live
 a las cinco y ocho me preguntaste si entre cuatro tickets había algo que pudiéramos hacer nosotros y cuál era el más fácil. los cuatro están en need eng work con el agente de brian ya pasado, marcados como listos del lado del agente y necesitando humano, y ninguno en hold.
