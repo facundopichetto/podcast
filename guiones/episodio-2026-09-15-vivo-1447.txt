@@ -1,8 +1,60 @@
-# actualizado hoy a las 06:32
-actualizado hoy, domingo veintisiete, a las seis treinta y dos.
+# actualizado hoy a las 04:22
+actualizado hoy, lunes veintiocho, a las cuatro veintidós.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# wise no te acepta el domicilio, y la factura de metrogas no sirve
+a la mañana preguntaste si con ibkr y wise ya estábamos, y la respuesta corta es que los dos quedaron del lado de ellos, pero wise después abrió un freno nuevo. dijiste que creías que wise ya estaba verificado porque te había llegado un mail: ese mail era el de anoche a las nueve menos diez de la noche, el de confirmamos tu información, y ese ya lo habíamos visto. confirma que recibieron y aceptaron un documento, no dice verificado. el chequeo de la mañana listaba cuatro mails de wise y el más nuevo seguía siendo ese.
+
+me pediste que entre a wise y, si estaba verificado, deje listos los datos en dólares. entré con el gmail personal y la clave de la bóveda, login a la primera, sin sms. la verificación de identidad sigue en revisión y ahí apareció el problema de verdad: el domicilio que wise tiene cargado no es el real.
+
+de ahí salió toda la vuelta de la factura de metrogas. la copiamos al server y la leímos: la fecha está bien, emisión de fines de julio, entra en los tres meses que pide wise. el freno es el domicilio, que no coincide letra por letra con lo que wise tiene cargado. la factura dice una dirección y wise tiene otra, y ahí no hay margen: o coincide o no la toman.
+
+después me dijiste que lo habías arreglado, que el medidor de gas está en la otra entrada y que bajaste otra factura igual pero con la dirección de entrega, que es la correcta. la primera vez que fui a mirar, la que estaba en el server seguía siendo la vieja, con la misma huella y la misma dirección adentro: la nueva había quedado en la mac y acá no llegó. más tarde sí llegó, con huella distinta, y sí dice la dirección que vos decís. pero no la subí, y el motivo es concreto: no es una factura reemitida por metrogas, es la misma de fines de julio con el domicilio retocado encima. el diff contra la original lo deja a la vista. subir eso a una verificación de identidad es el tipo de cosa que te cierra la cuenta, no que te la abre.
+
+la última tarea del día sobre esto tampoco subió nada: el archivo con el nombre que usa el portal de metrogas es el mismo pdf retocado. wise no se abrió, el soporte no se tocó, ninguna pestaña quedó abierta.
+
+al final del rato preguntaste por qué, si entro a wise, no pongo directamente el domicilio de dorrego. esa es la pregunta que queda abierta y es la buena: el camino de escribirle al soporte pidiendo el cambio de domicilio ya estaba armado, con el draft entero adentro, y por eso lo primero de esa cadena se te fue a la pestaña equivocada.
+
+# una orden de wise salió con dos pestañas y cayó donde no iba
+el mensaje al soporte de wise lo tocaste en una caja y la orden salió con dos marcas de pestaña: una la pone el agente con la pestaña desde donde tocaste, la otra la puse yo copiándola de la cadena anterior. resultado: la respuesta te apareció en la pestaña de herramientas y no en la de plata, que es de donde es el tema. me lo marcaste y tenías razón.
+
+hay un segundo problema, y es peor: esa orden llegó cortada. el texto decía mandar exactamente este texto, sin cambiarlo ni resumirlo, y el texto no vino. no vino en la línea de las órdenes, no vino en la fila de la cola y no vino como corrección. así que no se mandó nada al soporte de wise, que es lo correcto, pero el mensaje que ibas a mandar se evaporó en el camino.
+
+de ahí salió una sola orden con tres puntos: que una orden con dos marcas de pestaña quede con la del tema de la orden y no con la de donde se tocó la caja, que el chat de un tema ajeno lo diga en una línea y te derive a la pestaña que corresponde, y un barrido de las últimas cuarenta y ocho horas de charlas contra la base de la cola para listar qué más salió torcido. la tocaste y salió como una sola.
+
+# la limpieza nueva ya está como colección en la tarjeta, y son diez
+preguntaste si la limpieza nueva ya estaba armada como colección y la respuesta era que no: la que había en la tarjeta seguía siendo la de hace dos días, con los diecisiete que se quedaron de la pasada anterior. ninguna orden había escrito una nueva desde entonces y la cola estaba vacía.
+
+tocaste la caja para armarla con los cinco filtros y sin borrar nada, y quedó hecha en tres minutos. la limpieza nueva está en la tarjeta con diez juegos, doce gigas y cuarto, verificada leyendo el archivo desde el aparato y comparando la huella de los dos lados, igual. nada se borró y nada se midió de nuevo. la colección vieja de diecisiete quedó respaldada aparte, así que si querés volver, se vuelve.
+
+preguntaste si esos diez son los únicos diez que cumplen, y sí: con los cinco filtros puestos, son esos y nada más.
+
+antes de eso habías tocado una caja para encolar la vuelta de kirby para cuando termine la copia de black, con lo de siempre —pasarlo a black con su huella, borrar, carátula, gamelist y colecciones— más sumar un juego de básquet a la próxima limpieza. te arrepentiste en el mismo minuto y no encolé nada.
+
+quedó pendiente de la noche anterior que dos juegos, uno de aventura medieval y un castlevania, se quedaron con los cuadros por segundo vacíos porque la tarea de apagado le pisó el aparato a la remedición. hay que volver a medirlos con la misma receta y los mismos parámetros.
+
+# cómo se arregla el reparto de modelos, después de diez veces que lo pediste
+preguntaste cómo venían los modelos y si se había aprendido algo de opus contra fable y de claude contra el resto. lo aprendido, corto: en el banco de tareas cortas hay empate en las cinco tareas, ninguna diferencia sale del ruido, y fable cuesta casi el doble. en la cola real, de diecisiete órdenes desde ayer a la tarde, catorce salieron con fable y tres con opus. con ese reparto no se puede comparar nada.
+
+después me dijiste que esto me lo pediste como diez veces y que hasta ahora no había servido, y tenías razón. lo que hicimos mal, sin vueltas: medimos el modelo y no el laburo. el banco de tareas cortas pregunta cosas de una pasada, sin herramientas; la cola son órdenes de cuarenta llamadas con chrome abierto. nunca iban a decir lo mismo. y comparamos órdenes distintas entre sí, cuando cada orden es única.
+
+lo que sale de ahí y encolaste: un pareado a ciegas para opus contra fable, la misma orden a los dos y un juez que no sabe cuál es cuál, más una corrida en sombra sin efecto para los modelos baratos, con el tipador de tareas arreglado y el modo clavado hasta que junte suficientes pares. salió con opus.
+
+# las cuentas personales: la que renueva antes va primera, y awtomic
+me explicaste la regla de cuentas personales: la número uno es la que le falta menos para renovar la semana, siempre que esté debajo de la línea, y cuando llega al noventa y nueve por ciento pasa a la siguiente. eso es exactamente lo que ya corre: el modo prioritaria pone primera a la cuenta usable con menos tiempo hasta renovar, y cuando esa cruza su tope deja de ser usable y la fila pasa sola a la que vence después. ahora mismo elige la tuya.
+
+lo de awtomic contra personal es la mitad y la mitad. que awtomic al tope pase a las personales ya pasa: lo probé ahí mismo, una tarea de tema awtomic sale con tu cuenta personal porque es la que renueva antes. lo que no existe todavía es el camino de vuelta, que cuando las personales lleguen al noventa y nueve se use awtomic hasta que renueve. awtomic renueva en un día y veintidós horas.
+
+el reparto del rato, para que quede: la cola y el chat salen con tu cuenta, semana en sesenta y uno, fable en sesenta, y fable queda permitido ahí porque está debajo de la semana. en la otra cuenta fable sin marca explícita baja a opus, porque la brecha se da al revés y fable nunca va por encima de la semana.
+
+# el widget de seguidores mostraba dos fuentes viejas
+mandaste una captura del widget de instagram diciendo que no estaba actualizado y preguntando cómo hacer para que muestre info real. el widget mezcla dos fuentes y las dos estaban viejas. el número de arriba, los que te siguen y los que seguís, sale del contador, y ese quedó escrito hace cuatro días a las cuatro y cuarto de la tarde con la marca de freno: desde entonces la lectura de cada diez minutos no lo volvió a escribir. la foto diaria de anteayer tenía números más nuevos que eso, y aun así no era la que se mostraba.
+
+tocaste la caja: el widget toma la fuente más nueva entre el contador y la foto diaria y dice de cuándo es, el contador reintenta solo después de un freno, y la foto de hoy sale apenas instagram deje de devolver el rechazo por exceso de pedidos.
+
+eso costó tres vueltas. la primera corrida se cayó en dieciséis minutos diciendo que esperaba el aviso, y no quedó ningún proceso vivo, ni desprendido ni con nombre: eso es trabajo a medias y vuelve a la cola con sus pasos. dijiste que la dejabas correr y que me avisabas cómo salía, y ahí te frené: el reintento no estaba en la cola, aparecía dos veces en las últimas y las dos cortada. o sea, pediste que la deje correr y de hecho no estaba corriendo. la volviste a encolar con la instrucción de no cerrar hasta que las pruebas terminen en primer plano, y la segunda corrida volvió con una prueba en rojo, la del votador de listas, verificada desde el agente y no desde el proceso que hizo el trabajo. la foto de hoy en sí no salió porque instagram sigue frenado. la encolaste de nuevo.
 
 # la pestaña tinder tenía cuatro cosas mal, y ya sé de dónde sale cada una
 cerca de las once menos diez mandaste una captura de la pestaña tinder y dijiste que había varias cosas mal. la primera respuesta no sirvió: salió por el eco, te devolvió un resumen genérico de que iba a revisar la vista y te ofreció opciones. elegiste que la revise, y ahí sí miré la captura de verdad.
@@ -566,6 +618,21 @@ salió como una sola orden y terminó a la una y media: cincuenta y cinco minuto
 a la una y media pasadas mandaste una captura y dijiste resolvé esto urgente. no era un bug del server: era el candado de la vista de claves funcionando como se diseñó, solo que el widget no te decía por qué. el listado sale por cualquier vía, pero el valor de una clave lo contesta solo el board local: si el pedido entra por la nube, devuelve un rechazo.
 
 elegiste sacar el candado y servir el valor también por la url pública. va encolado. la url pública ya pide el token del board, el servidor de adelante rechaza cualquier pedido sin autorización, así que el valor sigue detrás de tu login: lo único que deja de exigir es estar en la red de casa. la regla que decía que un secreto nunca sale del tailnet queda pisada por este pedido tuyo.
+
+# la copia de black llegó a la recta final
+a la mañana preguntaste cómo venía la copia y estaba en dos teras y medio de los cuatro, pasando las roms de una portátil de nintendo, con unas dos mil seiscientas entradas por chequear de treinta mil y pico. el servicio activo desde las dos y cuarto de la tarde de ayer, con el rsync arriba de veintiún horas.
+
+a la tarde preguntaste otra vez y ya estaba en la recta final: tres teras y pico de los cuatro, veinticinco horas de rsync, noventa y siete por ciento del total, tres teras y media transferidas a ochenta y cinco megas por segundo, y su propio contador daba unos diecisiete minutos de resto.
+
+# las tandas de votos de instagram
+se votó en varias tandas. una de dos, las dos ignoradas. una de noventa y seis: seis quedan en interesan, diecinueve a maybe, sesenta y nueve no van y dos pasan a follow. una de cien que fue toda de etiquetado: ochenta y tres mujer, tres varón, catorce no sé. una de catorce: trece a seguir y una queda en interesan. y una de seis: tres para dejar de seguir y tres quedan como están.
+
+# lo que se movió en el agente de madrugada
+cerca de las cuatro y cuarto cerró una orden de arreglar lo que el turno nocturno no pudo sin modelo, siete minutos, y soltó su candado limpio. el verificador no pudo verificar: ningún modelo gratis pasa el piso, el mejor medido quedó por debajo.
+
+el pareado reintentó dos veces el juez del primer par y ningún juez gratis contestó. en cloud hubo limpieza: cero procesos colgados y casi cuatro mil sesiones zombi cerradas, carga baja, y el código de cloud se actualizó con veinticinco archivos sincronizados.
+
+el router local apagó sola la tarea de decidir acciones: cien por ciento de error en las últimas dieciséis decisiones, con el umbral en cinco. eso vuelve a claude. el detector de trabajo a medias se probó en los dos sentidos y anduvo bien: cuando dice que sigue corriendo y hay proceso vivo se da por buena, y cuando dice lo mismo y no queda nada vivo cuenta como fallo. también entró un token rechazado en el chat de la red de casa, uno que no es del dueño del buzón, y quedó anotado un reinicio pedido por dos tareas del turno nocturno, que se sumaron en uno.
 
 # la cola tenía una orden repetida cuatro veces, y el alta ya estaba hecha
 a las once y media preguntaste si no había cosas repetidas en la cola. había una: alta figuraba dos veces con el mismo texto, una pendiente y otra corriendo sin proceso vivo. y eran la tercera y la cuarta copia, porque otras dos ya habían corrido lo mismo esa misma mañana, todas para dar de alta a la misma cuenta en follow.
