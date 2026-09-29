@@ -1,8 +1,50 @@
-# actualizado hoy a las 06:32
-actualizado hoy, domingo veintisiete, a las seis treinta y dos.
+# actualizado hoy a las 03:34
+actualizado hoy, martes veintinueve, a las tres treinta y cuatro.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# wise te rebota la factura de metrogas, y el domicilio es de otra entrada
+todo el día giró alrededor de un pdf. wise tiene cargado salta 910 y la factura de metrogas dice salta 902 2 A, dirección del suministro salta 902 2-A, así que no coincide letra por letra y no se subió. la fecha sí servía: emisión 29 de julio, entra en los tres meses que pide wise.
+
+cerca de la una y media preguntaste cómo venía, y era eso: la factura estaba copiada al server, leída, y frenada por el domicilio. a las dos menos cuarto me dijiste que la habías arreglado, que el medidor de gas está en la entrada de al lado y que bajaste otra factura igual pero con la dirección de entrega, que es la correcta. miré la ruta y la del server seguía siendo la vieja, mismo md5 que a la una y cuarto, mismo salta 902 adentro: la nueva había quedado en la mac y acá no llegó.
+
+a las dos y dos apareció la nueva, con md5 distinto, y sí decía salta 910. tampoco la subí, y por un motivo que conviene que sepas: no es una factura reemitida por metrogas, es la misma del 29 de julio con el domicilio retocado encima. el diff contra la original lo deja a la vista. a las dos y cuarto me preguntaste por qué, si entro a wise, no pongo directamente la de dorrego. quedó ahí, sobre la mesa.
+
+antes de todo eso, a las once y cuarto tocaste la caja para escribirle al soporte de wise pidiendo el cambio de domicilio al real, dorrego 1835, y subir la factura recién cuando ellos lo corrijan. esa orden salió mal: llegó cortada, decía "mandar exactamente este texto" y el texto no venía, ni en la línea de las órdenes, ni en la fila de la cola, ni como corrección. no se mandó nada al soporte. y hay una variante tuya de la una y cuarto que quedó abierta: no hablar con soporte y buscar un comprobante a nombre de salta 910, un resumen de tarjeta o de banco de los últimos tres meses, para subirlo tal cual está el domicilio.
+
+# la orden de wise cayó en la pestaña equivocada, y eso ahora es una regla
+a la una y media te quejaste de que una respuesta de wise no tenía nada que ver con la pestaña donde estaba, y tenías razón. la orden del soporte de wise salió con dos marcas de pestaña: una adelante, que pone el agente con la pestaña desde donde tocaste la caja, y otra atrás, que copié yo de la cadena anterior. ganó la de donde tocaste, no la del tema. de ahí que respuestas de plata aparecieran en tools, y varias de awtomic en tools también, todas con esa nota de "esta respuesta había salido en la otra pestaña, es la misma con su hora original".
+
+a la una y media tocaste la caja y salió una sola orden de tools con tres puntos: que una orden con dos marcas quede con la del tema de la orden y no con la de donde se tocó la caja; que el chat de un tema ajeno lo diga en una línea y te derive a la pestaña que corresponde; y revisar los registros de las últimas cuarenta y ocho horas contra la base de la cola para listar lo que se perdió por esto.
+
+# ibkr y wise están los dos del lado de ellos
+a las diez preguntaste si con ibkr y wise ya estábamos, y la respuesta corta es casi: no queda nada pendiente tuyo ni mío, los dos esperan revisión de ellos.
+
+ibkr tiene la solicitud en revisión, con el comprobante de domicilio re-subido anoche a las diez y media, que quedó en recibido y en proceso. el chequeo de la mañana no vio ningún mail nuevo. pero a las nueve y media entró uno: ibkr pide algo más, con asunto documento requerido para la cuenta, y no había pestaña viva para avisarte ahí.
+
+de wise dijiste que creías que ya estaba verificado porque te había llegado un mail. ese mail es el de anoche a las nueve menos diez, el de "confirmamos tu información", y ya lo habíamos visto: confirma que recibieron y aceptaron un documento, no dice verificado. el chequeo de las diez y cuarto listaba cuatro mails de wise y el más nuevo era ese. media hora después llegó otro, con asunto no pudimos verificar tu dirección, que es exactamente el freno del que vino todo lo del pdf.
+
+del lado de ibkr sí quedó algo cerrado: se entró al portal de cliente y se leyeron el routing number y el número de cuenta propios de la cuenta para transferencias directas, solo lectura, con capturas y a la bóveda.
+
+# el ticket de hafner: los dos atributos en el mismo formato, y las subs que ya nacieron con T
+a las ocho y media mandaste el comment nuevo de emily y te contesté el tema viejo. me lo marcaste sin vueltas y tenías razón: el fix del rosé no era esto.
+
+lo que pide emily es concreto: en los atributos de una sub ve un atributo del rosé con valor T y otro del bundle con valor true, y dice que los dos deberían ser booleanos y del mismo formato. el T lo había pedido ella misma antes, ahora lo quiere como el otro. hay que tocar tres lugares, en orden, y a las nueve menos veinte tocaste la caja: cambio local de los dos archivos del theme a true y false, el flow que acepte las dos formas, con backup del live y las líneas exactas a la vista antes de pushear, y el push al live recién con tu ok sobre ese detalle.
+
+en el mismo minuto preguntaste lo que realmente importaba: si hay subs ya creadas con T. no lo sabía sin mirar el store. el atributo está en el live desde el 23 de septiembre, así que toda sub de hafner creada desde esa fecha por el signup o por el gift form nació con T o con F. de las anotadas, segura la de prueba; las reales había que contarlas. tocaste la caja para eso: antes de tocar nada, contar por lectura las subs de hafner con ese atributo y traer la lista con fechas, sin tocar el theme ni el flow hasta que lo veas.
+
+# hall: adrián tenía razón, y el producto escondido seguía dejando la fila
+a las siete menos diez me pediste que mire el comment de adrián, que lo habías chequeado y tenía razón, y que te plantee un draft de acción. también me dijiste, tres veces seguidas y cada vez más fuerte, algo que me guardo para siempre: primero resolver el problema, explicar la solución, y no contestarte un choclo. que si tiene razón, se arregla, no se explica por qué tiene razón.
+
+el primer turno se cayó antes de contestar y tu pregunta quedó guardada, y el segundo te salió con un a/b/c de otra cosa. cuando por fin fui al ticket: adrián tiene razón y el problema está claro. lo que pusheamos esconde las celdas de la fila del carrito, la cantidad, el precio, el total y las opciones, pero nunca esconde la fila en sí. el producto sigue ocupando su renglón.
+
+# el pareado a ciegas de opus contra fable, y las cuentas personales por orden de renovación
+a las diez preguntaste qué se aprendió de modelos. lo aprendido es poco y honesto: en el banco de tareas cortas, empate en las cinco, ninguna diferencia sale del ruido, y fable cuesta casi el doble. en la cola real hay diecisiete órdenes desde ayer a la tarde, pero catorce salieron con fable y tres con opus, así que eso no compara nada.
+
+a las diez y diez me preguntaste, con razón, cómo hacemos para que el reparto tenga sentido y se pueda medir, y me hiciste notar que es la décima vez que lo pedís. lo que hicimos mal: medimos el modelo y no el laburo, con preguntas de una pasada, sin herramientas, cuando la cola son órdenes de cuarenta llamadas con chrome abierto; y comparamos órdenes distintas entre sí, cuando cada orden es única. a las diez y cuarto tocaste la caja: pareado a ciegas para opus contra fable, sombra sin efecto para los baratos, el tipador arreglado y el modo clavado hasta que junte los pares. de madrugada ya iba por el par veintiocho, y ese terminó pendiente, gana opus sin juez.
+
+después pasamos a cuentas personales. la regla que dictaste es la que ya corre: la número uno es la que le falta menos para renovar la semana, siempre que esté por debajo de la línea, y al llegar al noventa y nueve deja de ser usable y la fila pasa sola a la siguiente por vencer. ahora mismo elige facundo. de lo de awtomic contra personales, la mitad ya corre: una tarea de tema awtomic sale con facundo porque es la que renueva antes. la otra mitad, que las personales al tope pasen a awtomic, no existe todavía.
 
 # la pestaña tinder tenía cuatro cosas mal, y ya sé de dónde sale cada una
 cerca de las once menos diez mandaste una captura de la pestaña tinder y dijiste que había varias cosas mal. la primera respuesta no sirvió: salió por el eco, te devolvió un resumen genérico de que iba a revisar la vista y te ofreció opciones. elegiste que la revise, y ahí sí miré la captura de verdad.
@@ -566,6 +608,55 @@ salió como una sola orden y terminó a la una y media: cincuenta y cinco minuto
 a la una y media pasadas mandaste una captura y dijiste resolvé esto urgente. no era un bug del server: era el candado de la vista de claves funcionando como se diseñó, solo que el widget no te decía por qué. el listado sale por cualquier vía, pero el valor de una clave lo contesta solo el board local: si el pedido entra por la nube, devuelve un rechazo.
 
 elegiste sacar el candado y servir el valor también por la url pública. va encolado. la url pública ya pide el token del board, el servidor de adelante rechaza cualquier pedido sin autorización, así que el valor sigue detrás de tu login: lo único que deja de exigir es estar en la red de casa. la regla que decía que un secreto nunca sale del tailnet queda pisada por este pedido tuyo.
+
+# la foto de instagram y el contador viejo: tres intentos y ninguno cerró
+a las diez menos diez mandaste una captura del widget de seguidores y dijiste que no estaba actualizado. el widget mezclaba dos fuentes y las dos estaban viejas: el número de arriba salía de un contador escrito el 23 a las cuatro y cuarto con la marca de freno, y desde entonces la lectura de cada diez minutos no lo volvió a escribir; y la foto del 26 tenía números más nuevos que eso.
+
+tocaste la caja para arreglarlo: que el widget tome la fuente más nueva entre el contador y la foto diaria y diga de cuándo es, que el contador reintente solo después de un freno, y que la foto de hoy salga apenas instagram deje de devolver el rechazo por demasiadas consultas.
+
+la tarea se llamó foto y no cerró ninguna de las tres veces. la primera dijo "espero el aviso" y no quedó ningún proceso vivo, ni desprendido ni con pid, así que contó como trabajo a medias. a las diez y cuarto tocaste la caja para dejarla correr y avisarme cómo sale, y ahí te tuve que frenar: el reintento no estaba en la cola, corriendo había solo otras dos cosas y foto aparecía dos veces en las últimas, las dos cortadas. o sea, pediste que la deje correr y no estaba corriendo. a las diez y media la volvimos a encolar con los mismos pasos y con la instrucción de no cerrar hasta que las pruebas terminen. esa vez sí corrió las pruebas y una salió en rojo, verificada desde el agente y no desde el proceso que hizo el trabajo, así que volvió a la cola. la foto de hoy en sí sigue sin salir: instagram sigue frenado.
+
+# la limpieza nueva ya está como collection en la tarjeta
+a las diez menos cuarto preguntaste si la limpieza nueva ya estaba armada como colección, y no: la que había en la tarjeta seguía siendo la del 26 con los diecisiete que se quedaron de la pasada anterior. ninguna orden había escrito una nueva y la cola estaba vacía. tocaste la caja y salió: la limpieza nueva como collection en la tarjeta, con los cinco filtros, sin borrar nada. la tarea corrió tres minutos con fable en tu cuenta y quedó armada.
+
+también hubo un arrepentimiento limpio: a las nueve y media tocaste una caja para encolar la vuelta de kirby para cuando termine la copia de black y sumar un juego de básquet a la próxima limpieza, y un minuto después escribiste "me arrepentí". quedó anulada, no se encoló nada.
+
+y lo que sí cerró de madrugada: dos juegos de playstation habían quedado con el cuadro por segundo vacío porque una tarea de apagar le pisó el aparato a la remedición, y se volvieron a medir con la misma receta y los mismos parámetros. más tarde se scrapearon los dos que entraron el 28, carátula, snap y título, verificando por consola que quedaran en el aparato.
+
+# los seis tickets que solo esperan el done, y sin ping a brian
+a las tres y media me contaste que hay tickets que ya verificamos, con vos como verifier, donde el comment quedó posteado y quedaron esperando que brian los mueva, y que siguen ahí. el primer barrido dio seis; el índice del día daba doce en verify con vos como verifier.
+
+tocaste la caja para revisar los doce por rest, con una tabla de último comment, quién habló último y la acción propuesta por ticket, y me aclaraste al toque que no va a haber ningún ping a brian. salió así: nada de slack, nada posteado, nada movido, assignee y verifier sin tocar. los seis que solo esperan el done son el de esconder la fila de envío cuando se elige retiro en el local, el del layout mobile del portal con scroll horizontal, el de las desviaciones de diseño en el estilo de los botones, el de las tarjetas de producto desalineadas, el del z-index con el autocompletado de direcciones de google y el de los descuentos en los precios de envío de la membresía: todos con nuestro comment de verificación posteado, sin objeción abierta y con el fix ya en su lugar.
+
+# el dry run del plan custom de hafner va por retool, no por script
+a las cuatro y cuarto me pediste que revise si hay algún ticket de plan custom que diga cómo se hace lo del final, y que vaya armando un plan. ya estaba: lo dejó el propio agente de brian en un comment restringido del ticket del dry run de pricing de hafner. ningún otro ticket de plan custom hizo un cero por ciento en el cobro con tarjeta guardada: cuatro merchants cobraban lo mismo en las dos vías, y ahí cae solo al porcentaje de fee. el único precedente con cero por ciento son otros dos.
+
+el camino no es el script, es retool: la app de soporte tiene un formulario de crear plan custom cuyo submit pisa el array entero de planes con una escritura condicional. a las cuatro y veinticinco tocaste la caja: dry run completo, sesión, lectura más backup, formulario lleno sin guardar, la escritura impresa, y todo a la vista antes de tocar nada. sin una sola escritura en dynamo ni submit en retool.
+
+en el mismo rato preguntaste si los topes te frenaban, y no: el tope de plata está apagado y no hay límite de paralelo que la mate, lo único que puede hacerla esperar es un choque por chrome. y de ahí salió una orden aparte, porque dijiste que el tope de plata es una estupidez y que lo saque por completo: la medición se queda, el corte se va. me hiciste notar que la había dicho encolada sin encolarla, y se encoló recién con tu dale, con la marca de madrugada. también me marcaste que nunca viste una sola tarea en el widget de madrugada, que está al pedo, y ahí hicimos el chequeo antes de prometerte nada.
+
+# adobe queda en la mac, y jira no la necesita
+a las siete de la tarde preguntaste si con tus licencias de adobe se puede instalar todo en el server, y la respuesta es que no: adobe no corre en linux. dos caminos reales, windows en el server con la máquina virtual que está armada y apagada, o la mac. elegiste la mac.
+
+de paso corregí algo que dije mal: jira hoy no necesita la mac, va por rest directo desde el server con su token, y el puente es el camino viejo que quedó de respaldo. igual sirve, y por ahí pasa adobe: en veintitrés minutos quedó armado el manejo de adobe en la mac desde el server, por el mismo puente que usaba jira, con los tres pasos cerrados y verificados, arrancando por photoshop sobre los psd de santi.
+
+a las ocho menos veinte dijiste que arrancábamos a laburar y pediste dos cosas, sin hacer nada todavía: ver si hay mail de santi sin responder, y empezar por el flyer, primero en photoshop y después animado. santi tiene tres mails sin respuesta nuestra: los tres logos en psd del hilo del flyer del salón de noviembre, que ya bajamos y exportamos a png con alfa sin decirle ni gracias, y dos hilos más. a las diez de la noche empezaste a repartirlo por partes: al del flyer, decirle que ya los tenemos, gracias, y que los vamos a meter en el proyecto.
+
+# las tandas de votos de instagram del día
+hubo mucho votado. dos ignoradas en una tanda corta al mediodía, y enseguida una de noventa y seis: seis quedan como que te interesan, diecinueve en maybe, sesenta y nueve que no van y dos que pasan a solicitud enviada. a la mañana, una de treinta con una que queda, cinco maybe y veinticuatro que no van. a la tarde, una tanda de cien que fue toda de etiquetar: ochenta y tres mujer, tres varón y catorce sin saber; y una de catorce donde trece pasaron a seguir y una quedó en interesan. más tarde otra de cuarenta y ocho, con dos que quedan, nueve maybe, treinta y cinco que no van y dos a solicitud. y tres tandas chicas de dejar de seguir, de seis, seis y siete, donde casi todas quedaron como están.
+
+# la copia de black llegó a la recta final
+a las once y media preguntaste cómo venía la copia y estaba bien: el servicio activo desde las dos y cuarto del día anterior, con el rsync corriendo veintiuna horas y media, dos coma seis teras de los cuatro, yendo por las roms de game boy advance. a las tres y veinte volviste a preguntar y ya estaba en la recta final: veinticinco horas de rsync, tres coma uno teras usados, noventa y siete por ciento del total, tres coma treinta y ocho teras transferidos a ochenta y cinco megas por segundo, y unos diecisiete minutos de resto según su propio contador.
+
+# tu mamá, el moco duro y la solución fisiológica
+a las nueve menos veinte de la noche me pediste ayuda con tu mamá: setenta y siete años, vive a unas cuarenta y cinco cuadras, dolor de garganta y mocos duros que le cuesta sonarse, y estabas pensando en la palangana con vapor. lo que más le va a mover el moco duro no es el vapor, es suero fisiológico en la nariz.
+
+preguntaste si la solución fisiológica es lo mismo, y sí: las dos son cloruro de sodio al cero coma nueve por ciento, cambia el envase y no el líquido. la del frasco sirve igual, se la pone con una jeringa sin aguja o un gotero, la cabeza inclinada sobre la pileta; la única ventaja del pomito es la presión. y con el gotero que ya tiene alcanza, no hace falta nada más: sentada o parada, la cabeza hacia adelante y girada un poco al costado, cinco a diez gotas en la fosa de arriba, unos segundos, sonarse suave, y del otro lado igual. si le arde un poco es normal.
+
+# la mesa quiere reemplazar partes de flos con software que ya existe
+a las cuatro y media trajiste un tema para la mesa: analizar el sistema y pensar qué se puede reemplazar por software que ya existe, por ejemplo algo que maneje chrome en lugar de un modelo con chrome, usando node lo más posible. te aclaré que el tema en sí es de tools y la respuesta entera te la dejé allá, aunque la mesa no es un tema y las respuestas van en su pestaña.
+
+las cinco condiciones quedaron claras: no pasar a node por pasar, si algo es pesadísimo no va; el panel sin claude, con los otros cuatro, y yo solo organizo, empaqueto y te explico; el paquete lo escribo yo. la ronda uno no salió todavía: la tarea del paquete corrió veintiún minutos, escribió las piezas —la estructura real del sistema medida a máquina, la cola, y sus generadores— pero cerró sin dejar rastro de eso donde se lo esperaba, así que volvió a la cola con sus pasos.
 
 # la cola tenía una orden repetida cuatro veces, y el alta ya estaba hecha
 a las once y media preguntaste si no había cosas repetidas en la cola. había una: alta figuraba dos veces con el mismo texto, una pendiente y otra corriendo sin proceso vivo. y eran la tercera y la cuarta copia, porque otras dos ya habían corrido lo mismo esa misma mañana, todas para dar de alta a la misma cuenta en follow.
