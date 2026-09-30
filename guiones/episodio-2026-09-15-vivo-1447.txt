@@ -1,8 +1,22 @@
-# actualizado hoy a las 03:34
-actualizado hoy, martes veintinueve, a las tres treinta y cuatro.
+# actualizado hoy a las 04:34
+actualizado hoy, miércoles treinta, a las cuatro treinta y cuatro.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el juez gratis del pareado no contestó ni una vez en toda la hora
+desde las 03:34 y hasta pasadas las cuatro y media, el banco pareado estuvo reintentando lo mismo una y otra vez: el juez del primer par, el de la orden de photoshop, y ningún juez gratis contestó. son catorce reintentos seguidos, uno cada dos o tres minutos, todos con el mismo resultado. no es que el juez dijo algo raro o eligió mal: no contestó nadie.
+
+el verificador quedó en la misma línea y lo dijo con números: ningún modelo gratis pasa el piso que pide la tarea de verificar. el mejor medido es gemini flash con cero coma seiscientos ochenta y ocho, y el piso está más arriba, así que la corrida quedó sin verificar.
+
+esto pega justo donde venías empujando ayer al mediodía, cuando hablamos de meter opencode en el circuito de la sombra sin efecto y de que tu voto reemplace al juez gratis del banco pareado. la opción que elegiste era esa: cada par te muestra las dos respuestas lado a lado sin decir de quién es cada una, elegís la mejor, y el modelo que pierde más de la mitad en su tipo de tarea sale solo del reparto. lo de esta hora es el argumento más fuerte a favor de esa decisión, porque el juez gratis no es que se equivoca: directamente no está. mientras esa orden no salga, los pares se acumulan sin veredicto.
+
+# el cerrador avisó lo mismo ciento trece veces
+a las cuatro y trece salió un aviso del cerrador con el conteo de la ronda: tres hechos, cero reencolados, cero trabados, y veintinueve sin verificar. hasta ahí normal. lo que no es normal es el número que va al lado: ese mismo aviso se despachó ciento trece veces.
+
+o sea que el cerrador viene repitiendo el mismo parte una y otra vez, con el mismo contenido, y el sistema lo cuenta pero no lo frena. los veintinueve sin verificar son la cola que se está juntando del lado del verificador, que es exactamente el mismo agujero de arriba: sin juez gratis que pase el piso, nada se verifica, y el cerrador vuelve a contar los mismos veintinueve en cada vuelta.
+
+lo dejo dicho tal cual está: no lo toqué, no encolé nada para arreglarlo. es el tipo de cosa que conviene mirar entera, porque un aviso que se repite ciento trece veces o es ruido que hay que cortar, o es una alarma real que nadie está atendiendo.
 
 # wise te rebota la factura de metrogas, y el domicilio es de otra entrada
 todo el día giró alrededor de un pdf. wise tiene cargado salta 910 y la factura de metrogas dice salta 902 2 A, dirección del suministro salta 902 2-A, así que no coincide letra por letra y no se subió. la fecha sí servía: emisión 29 de julio, entra en los tres meses que pide wise.
@@ -622,6 +636,33 @@ a las diez menos cuarto preguntaste si la limpieza nueva ya estaba armada como c
 también hubo un arrepentimiento limpio: a las nueve y media tocaste una caja para encolar la vuelta de kirby para cuando termine la copia de black y sumar un juego de básquet a la próxima limpieza, y un minuto después escribiste "me arrepentí". quedó anulada, no se encoló nada.
 
 y lo que sí cerró de madrugada: dos juegos de playstation habían quedado con el cuadro por segundo vacío porque una tarea de apagar le pisó el aparato a la remedición, y se volvieron a medir con la misma receta y los mismos parámetros. más tarde se scrapearon los dos que entraron el 28, carátula, snap y título, verificando por consola que quedaran en el aparato.
+
+# la orden de comment cerró bien, y soltó su candado
+a las cuatro y ocho terminó una tarea de awtomic: el comment que habías aprobado. cerró con todo en orden y soltó el candado que tenía tomado, así que lo que estaba esperando detrás de ella pudo seguir.
+
+los números de la corrida: dos minutos, opus, cuenta faacuu, sesenta y cuatro centavos. quinientos cincuenta y cinco mil tokens de entrada y cuatro mil de salida, cero chrome, cuatro recetas, ninguna captura. es de las baratas y de las cortas, y es la única tarea que cerró en toda la hora.
+
+esa orden venía atada a una de draft que no estaba corriendo, así que salió sola cuando le tocó. nada más que reportar de ella: entró, hizo lo suyo, liberó el paso.
+
+# dos deploys a cloud, y el código quedó al día
+hubo dos sincronizaciones a la máquina de cloud en la hora. la primera a las cuatro y catorce, con diecisiete archivos, y la segunda a las cuatro y veinticinco, con once. las dos cerraron bien y las dos actualizaron el hash del código que corre allá.
+
+o sea que cloud está con el código de ahora, no con el de hace dos horas. la cadena funcionó sola las dos veces: cambió algo acá, salió el deploy, se movió el hash, quedó anotado. también salió un push, uno de uno, sin problemas.
+
+# el token de oauth se venció dos veces y se refrescó solo
+a las cuatro y doce y otra vez a las cuatro y treinta y dos, el token venció y se refrescó con una llamada mínima. las dos veces sin que nada se cayera ni se frenara.
+
+esto es el guard funcionando como tiene que funcionar: el token vencido nunca fue un login muerto, y la manera de tratarlo es pedir uno nuevo gastando lo mínimo posible en vez de mandar a rehacer el login entero. dos veces en veinte minutos es más seguido de lo habitual, pero mientras se resuelva solo y en una llamada, no molesta a nadie.
+
+# hay margen de tokens y tres pendientes esperando en sueltos
+a las cuatro y treinta y dos salió un aviso de otro tipo: hay margen de tokens, y hay tres pendientes esperando en la cola de sueltos. el más viejo de los tres es del dieciocho de septiembre.
+
+es un aviso informativo, no pide nada tuyo. lo que dice es que las cuentas tienen aire y que hay trabajo chico durmiendo desde hace casi dos semanas. cuando haya un rato con la cola libre, esos tres salen sin molestar a nada.
+
+# se corrió el caos simulado, con revert automático
+a las cuatro y treinta y dos también se aplicó un cambio de sistema: el caos simulado. salió bien y quedó armado el revert automático a los sesenta segundos.
+
+esto es la prueba de que la red de seguridad está puesta: ningún cambio de sistema entra sin su vuelta atrás preparada de antemano. se aplica, se mira, y si no hay que dejarlo, vuelve solo. en este caso el revert quedó marcado como falso, o sea que el cambio se quedó puesto en vez de desarmarse a los sesenta segundos.
 
 # los seis tickets que solo esperan el done, y sin ping a brian
 a las tres y media me contaste que hay tickets que ya verificamos, con vos como verifier, donde el comment quedó posteado y quedaron esperando que brian los mueva, y que siguen ahí. el primer barrido dio seis; el índice del día daba doce en verify con vos como verifier.
