@@ -1,8 +1,78 @@
-# actualizado hoy a las 04:34
-actualizado hoy, miércoles treinta, a las cuatro treinta y cuatro.
+# actualizado hoy a las 03:47
+actualizado hoy, jueves uno, a las tres cuarenta y siete.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# gatlinburg: el descuento de la caja, probado en una copia del live
+desde las tres y cuarto de la tarde estuvimos con el ticket de gatlinburg, el del descuento de la caja que no se aplicaba. elegiste investigar, aplicar las tres líneas en una copia nueva del live y probar la caja hasta el checkout sin pagar, en desktop y en mobile, y traer los drafts del comment en inglés y del push al live. el preview viejo queda como está: eso era otra opción y no entró en esta orden. ni el comment ni el push salen sin tu ok.
+
+la primera corrida declaró seis pasos y marcó tres, así que no cerró y volvió a la cola. después me dijiste que la dejara correr y te avisara, y ahí tuve que decirte la verdad: en la cola figuraba corriendo pero no había ningún proceso detrás, no aparecía en los procesos del server, y esperar no llevaba a nada.
+
+cuando fui a reencolar desde el paso cuatro, resultó que no hacía falta: los pasos cuatro a seis ya estaban hechos, solo faltó marcarlos. está en el draft y en la carpeta del ticket: la copia del theme probada hasta el checkout sin pagar, en desktop y mobile, con cub al diez, yearling al quince y black bear al veinte, las club pages bien y las capturas sacadas. o sea que el trabajo estaba y lo que fallaba era la marca de los pasos.
+
+cerrando el tramo me pediste dos cosas a la vez: que salga el push al live y que, mientras pasa, te muestre el comment para aprobarlo, con el comment incluyendo el push y el ok en el live.
+
+# hall: adrián pregunta por qué filtramos por fecha, y los contratos de agosto
+a las dos menos cinco trajiste lo que te escribió adrián: que acaba de hablar con hall, que las next billing dates no se ven bien, que miró el primero de primary colors y sigue mostrando agosto, y si estamos seguros de que las bulk updates se hicieron todas.
+
+sí se hicieron. ese contrato nunca entró porque su fecha es de agosto, y el filtro de las tres corridas era billing date del primero al treinta y uno de octubre. los contratos con fecha de agosto quedaron afuera a propósito.
+
+después vino el dato del merchant: que los miembros de primary colors siguen repartidos en varias fechas, mil setecientos veintiocho en total, con un archivo adjunto. el por qué de solo octubre es simple: así quedó armado el plan y nadie lo cambió después. el ticket era correr la fecha del cuarto trimestre, y los contratos que ya estaban en una fecha de octubre pasaban a la fecha de su club. los de agosto quedaron como pregunta aparte para adrián, si se movían o no, y sin respuesta no se tocaron.
+
+me pediste el link al comment con esa pregunta para pasarlo por slack, bien breve, y no te lo pude dar: ese comment no existe. la respuesta sobre los contratos de agosto quedó como draft en la charla y nunca se posteó. tu último comment en el ticket es el de las fechas del cuarto trimestre y no pregunta nada. lo que sí apareció nuevo en el ticket es que adrián lanzó algo él mismo.
+
+entonces me pediste explicarlo en inglés, fácil, cortito y sin echarnos mucho la culpa: que las bulk updates solo tomaban contratos con billing date en octubre, que los de agosto quedaron fuera de ese rango y que si se movían o no quedó como pregunta abierta. y arriba de eso adrián te volvió a escribir preguntando por qué filtramos por fecha, diciendo que el propósito del ticket era corregir fechas que muchas veces estaban en el pasado, y si se puede volver a correr sin filtros de fecha, que si van en orden tampoco hace falta filtrar por tags.
+
+a las cuatro menos cuarto cerró la tarea del rerun de las next billing dates de hall, con el checklist, el draft y el estado del mes actualizados.
+
+# beauty heroes: la sub prepaga de tres meses, y la tarjeta que no se puede copiar
+arrancaste a las once pidiendo tres cosas en orden: leer el ticket y entenderlo, buscar cómo resolvimos algo muy parecido antes, y escribir los pasos completos de resolución incluyendo el comment y la acción en jira, para revisar todo desde el final hacia atrás.
+
+es el mismo caso que el de katy con otros datos: una sub prepaga de tres meses creada desde una compra suelta, con la caja uno ya pagada en su orden. corrí la receta de aquella vez en seco con los datos nuevos y cuadra todo: el customer es chris, en monroe, con envío de suscripción.
+
+preguntaste si no se puede copiar el payment method que el customer ya usó en esa compra. no se puede, y el motivo es de shopify: la tarjeta de una compra suelta no queda guardada. shopify solo la convierte en un método reusable cuando el checkout tiene un selling plan o cuando el customer la guarda a mano. la línea de esa orden vino sin selling plan, así que chris quedó con cero métodos de pago.
+
+elegiste encolar los pasos del tres al siete con fecha veintiséis de octubre, frenando antes del comment para mostrarte la sub creada, y después aclaraste que querías actualizar el comment. la tarea crea la sub, escribe en dynamo, chequea que quede dos de tres con esa fecha y para ahí, con el link de la sub y el comment nuevo. el comment y la transición salen recién con tu ok.
+
+la fecha que pusiste es la buena: el agente de brian dejó el veintiséis de octubre como next billing date, el batch de la caja, así que lo mío del veintisiete era el caso de katy. el comment quedó en inglés, sin saludo, diciendo que la caja dos de tres está en cero y cobra el veintiséis de octubre, que chris no tiene método de pago guardado y que la caja dos no se va a enviar salvo que agregue uno en el customer portal antes de esa fecha. ese es el que aprobaste.
+
+# mobile, nunca phone width, y la caja tocada es la orden entera
+a las once y media, con el ticket de gatlinburg del css de las club pages, te salté una corrección de dos palabras y te la tomé como regla: en inglés el ancho chico siempre se dice mobile, nunca phone width. quedó guardado con su línea en el índice.
+
+el segundo me lo marcaste más fuerte, y tenías razón: no te pida posteá. el camino supone que todo sale bien, y si todo sale bien ya tenés tu posteá aprobado en lo que decidiste con las opciones. me lo habías dicho antes con el ticket del descuento de ponzi. lo sumé a la memoria: la caja cubre todo el camino, de hacer y verificar hasta postear y pasar a seguimiento si todo da bien. si algo falla, freno y vuelvo con cajas nuevas.
+
+sobre el ticket en sí: el equipo de gatlinburg metió su css de las club pages adentro de nuestro archivo custom del theme live, y esas reglas pierden contra el css del kit por especificidad y por un important en un título. ya estaba arreglado prefijando los selectores. elegiste bajar el live, aplicar el diff, probar los tres clubs en desktop y mobile, subir el archivo al live con backup, verificarlo ahí, postear el comment y pasar el ticket a seguimiento. esa tarea después corrió sin cerrar: le quedaron pasos sin marcar.
+
+# el merge desde una orden: el hook te frenó cuatro veces, y el arreglo es definitivo
+a las ocho y cuarto autorizaste con una caja los dos merges del ticket del shipping rate, y la vuelta entera: merge, deploy, volver a guardar los steps, canaria y las cuatro pruebas. la tarea corrió un minuto y no cerró: quedaron seis pasos marcados como fallo o falta.
+
+cuando preguntaste qué pasó, la respuesta era que no salió nada. los dos pull requests seguían abiertos y en el mismo commit, lo chequeé por api. el hook de github volvió a frenar el merge, ya por cuarta vez con el mismo freno, y tocar la caja no le daba permiso porque el daemon no le pasaba nada.
+
+elegiste que armara el cambio en el daemon para que la caja de un merge le dé al hook el ok solo para esos dos pull requests, con revert automático, y repetir la vuelta. y me pusiste la condición clara: que sea un fix definitivo, que no vuelva a pasar, que seleccionar la caja vale más que escribir dale, porque nunca vas a escribir dale y eso ya lo hablamos.
+
+es definitivo: el merge entró como acción fija en la lista de lo que una caja tocada autoriza. antes el merge estaba afuera a propósito, y por eso el hook te pedía el dale. la tarea cerró a la media y pasa la prueba, sin mergear nada: se puede mergear desde una orden, pero solo para los pares de repo y pull request que la orden nombra. le encontré una trampa igual, y te la dije: si los dos merges van en la misma frase, el ok abre solo uno de los dos.
+
+# el authenticator de ibkr, y la transferencia de wise que estaba trabada
+a las diez y cuarto me pediste que te arme un authenticator para ibkr y me pasaste el código. quedó: la clave está en la bóveda, lo verifiqué listando y aparece tapada, y el código lo genero yo, sin celu y sin gastar tokens. el que te pasé le quedaban diez segundos, así que vencía enseguida. entró, y era el factor que te pedía ibkr.
+
+después te preocupó que todavía no hubiera llegado lo de wise. no te pude dar el estado real: lo que veo desde acá no alcanza y mirar la transferencia ya es trabajo de la cola. lo que sí: en tu gmail personal no había ningún mail de wise sobre el envío, ni enviado, ni rebote, ni pidiendo algo.
+
+a los diez minutos lo encontraste vos: el send estaba trabado desde wise, y lo arreglaste. entonces el reloj arranca de nuevo. lo de anoche nunca salió de wise, por eso ibkr no mostraba nada. con el pago hecho hoy, la transferencia llega en uno o dos días hábiles, jueves o viernes a más tardar, y en ibkr no hay que hacer nada: se acredita sola. quedó anotado arriba de todo en el estado de plata: el envío de hoy a la mañana, cien dólares, con la comisión de poco más de un dólar y el resto llegando a ibkr.
+
+# los seis tickets cerrados como verifier, y el comment en tu voz
+preguntaste cuáles eran los tickets para pasar a done como verifiers, los que tenían el comment para brian pero que íbamos a hacer nosotros. eran los seis que quedaban esperando el done en la tabla: todos con el comment de verificación posteado, sin objeciones abiertas y con el fix ya en producción.
+
+me pediste el draft para el que está en qa y el que está en producción, y te di los dos en tu voz, en primera persona, para pegar tal cual, sin firma de agente verificador porque el cierre lo firmás vos. corregiste dos palabras, previous comment en vez de comment above, y dijiste que fuera de a uno haciendo todos, avisándote si algo falla o no es como debería. la acción quedó así: verificar, verificar producción, postear y pasar a done.
+
+cerró a las cinco y pico y salió casi entero: cinco de los seis cerrados como verifier, con el comment posteado por api, pasados a done y releídos, sin cambiar el assignee. todo lo de producción fue solo lectura: nada escrito en ningún store ni en dynamo, y ningún mensaje a nadie. el séptimo no entraba porque ya había quedado en done a la mañana con su comment.
+
+# hafner: el theme entero al store de qa, y el prepaid que no vence
+a las ocho y veinte me pediste mirar los dm de brian sobre esto, leer el ticket y darte un plan que además probara el form en el store de qa de hafner. el dm de brian era de las seis y media de la mañana: te avisa que están tratando de lanzar hoy y que nos asegurem10s de no haberlos puesto sobre algo roto. vos ya le habías contestado que corrés estos tests y que verificás.
+
+me marcaste lo importante: probar el form sobre un plan genérico no le sirve a brian, tiene que ser el setup de hafner. elegiste subir el theme entero de hafner al store de qa sin publicar, recrear productos, add-ons y los cuatro planes, cambiar los ids del form y después correr las pruebas del signup prepaid y autorenew más los custom attributes. a hafner no se le toca nada, y lo que bajé lo busqué en los backups que ya tenía.
+
+la tarea corrió veintinueve minutos y dejó la evidencia armada. cuando preguntaste si estábamos para verificar, la respuesta fue que sí. y el hallazgo fue el contrario del que decía el ticket: el prepaid que supuestamente vence enseguida en realidad nunca vence.
 
 # el juez gratis del pareado no contestó ni una vez en toda la hora
 desde las 03:34 y hasta pasadas las cuatro y media, el banco pareado estuvo reintentando lo mismo una y otra vez: el juez del primer par, el de la orden de photoshop, y ningún juez gratis contestó. son catorce reintentos seguidos, uno cada dos o tres minutos, todos con el mismo resultado. no es que el juez dijo algo raro o eligió mal: no contestó nadie.
@@ -643,6 +713,66 @@ a las cuatro y ocho terminó una tarea de awtomic: el comment que habías aproba
 los números de la corrida: dos minutos, opus, cuenta faacuu, sesenta y cuatro centavos. quinientos cincuenta y cinco mil tokens de entrada y cuatro mil de salida, cero chrome, cuatro recetas, ninguna captura. es de las baratas y de las cortas, y es la única tarea que cerró en toda la hora.
 
 esa orden venía atada a una de draft que no estaba corriendo, así que salió sola cuando le tocó. nada más que reportar de ella: entró, hizo lo suyo, liberó el paso.
+
+# las capturas del regalo: el admin no muestra los atributos de la línea
+a las nueve y cuarto preguntaste si la sub se ve efectivamente como un regalo en el admin, si eso se testeó y si incluye capturas. sí: en el admin de qa la subscription aparece con el badge de regalo al lado de activa, y eso sale de un campo del contrato. lo que no se veía eran los cuatro atributos de regalo en la línea: eso estaba solo en el json.
+
+elegiste que sacara la segunda captura con esos atributos y la customer que recibe el regalo, y que te mostrara el comment con las dos antes de postear. nada se postea hasta que lo veas.
+
+esa tarea se encoló y quedó esperando un rato porque la cuenta de awtomic había llegado a su límite de sesión. cuando preguntaste si se había tildado o si podía seguir con tu cuenta personal, ya estaba corriendo: el daemon la había mandado por otra cuenta que tenía uso disponible, así que no hizo falta tocar nada.
+
+terminó y la conclusión quedó clara: el admin de la app no muestra los atributos de línea en ningún lado, el detalle solo muestra los de la sub y el portal muestra a la persona que recibe solo como dirección de envío. por eso quedaron dos capturas, leyendo el dato desde adentro de la página de la subscription. el draft del comment quedó en inglés y nada se posteó en jira.
+
+# el tope de las cinco horas de awtomic bajó a noventa y siete
+a las nueve y cuarto me propusiste bajar el límite de las cinco horas a noventa y siete por ciento para awtomic, porque tiene menos crédito y si arrancás una tarea larga con noventa y nueve se corta a la mitad. y preguntaste si noventa y siete está bien o debería ser menos, aclarando que es solo para awtomic y solo para la ventana de cinco horas.
+
+el estado de ese momento era que el tope era uno solo para todas las ventanas: noventa y nueve parejo, con la posibilidad de cambiarlo por cuenta pero no por ventana. así que lo que pedías necesitaba un cambio chico ahí, sin tocar la semana, ni fable, ni las otras tres cuentas.
+
+elegiste ponerlo en noventa y siete y, además, que una tarea mida cuánto suben las tareas largas de awtomic en esa ventana y proponga bajarlo si tres puntos no alcanzan, pero sin bajarlo sola. a los tres minutos estaba: la ventana de cinco horas de awtomic frena en noventa y siete, su semana y su fable siguen en noventa y nueve, y las otras tres cuentas no cambian en ninguna ventana.
+
+# las charlas de juegos se iban a la pestaña de modelos, y era la cita
+a las once me señalaste tres cosas: que había conversación de juegos en una pestaña donde no correspondía, qué versión de sonnet tenemos y cómo vienen los modelos nuevos.
+
+sobre la primera tenías razón. las dos charlas de juegos, la de arrancar y la de la compra de ports, no tendrían que haber estado ahí. las dos venían con una cita de una tarea que mencionaba sonnet y la palabra cuenta, y lo más probable es que el clasificador de temas viera eso en la cita y las mandara a la pestaña de modelos.
+
+elegiste que el clasificador ignore el texto citado y decida solo por lo que escribís vos, y que además las dos charlas de juegos se muevan a su pestaña. a las once y cuarto estaba arreglado: las líneas citadas no cuentan más para elegir la pestaña, así que decide solo lo que escribís abajo de la cita.
+
+hubo un detalle de proceso en el medio: esa orden se encoló con el tema correcto pero con una pestaña de otro tema. queda en la cola igual y su respuesta vuelve al tema, no a esa pestaña.
+
+# las votaciones multi-modelo, y el nombre de quién habla
+a las tres y veinte elegiste dos cosas con fable: armar la receta de votaciones multi-modelo y revisar las órdenes que no cerraron en la última semana. la idea de las votaciones es que un pedido tuyo vaya a la mayor cantidad de modelos posible y las cajas y los entendí de cada uno aparezcan a medida que llegan, sin tocar el daemon, lista para enchufar a la madrugada. cerró a las tres y cuarenta y cinco con su prueba.
+
+a la noche le sumaste lo que faltaba. primero, que lo querías en todas las pestañas menos las que tienen modelo fijo de claude, gemini o mistral, y después que en awtomic también compitan gemini, groq y opencode igual que en el resto: ahí se había decidido dejarlos afuera para que el trabajo no pasara por una api de afuera, y lo cambiaste.
+
+y pediste algo más: que cada parte diga quién habla. cada caja arranca con el nombre del modelo, por ejemplo groq con dos puntos, sin la palabra entendí, y el chat en general se sigue diciendo igual. también explicaste cómo funciona el relevo: cuando uno cae y pierde el lugar, entra el siguiente y se recalculan los puntos; si caen dos, el que hoy está tercero pasa a primero. a las once menos cinco preguntaste por qué en el chat gemini tiene ocho puntos y groq menos uno, que te parece que está mal, y eso quedó abierto para revisar la tabla.
+
+en el medio un turno se cayó antes de contestarte una de esas preguntas. no se perdió: quedó guardada.
+
+# la investigación de plata, con los tokens que se iban a perder
+a las tres y veinticinco me planteaste algo concreto: a la cuenta faacuu le quedaba más de la mitad de la semana y renovaba en dos horas y media, así que querías quemar esos tokens con fable en una investigación larga sobre todo lo que podés hacer con tu plata y tu situación actual, sin límite de tokens.
+
+elegiste la versión más grande: la investigación completa con agentes en paralelo por frente, y con lo que sobrara de tiempo una segunda ronda que le busque la trampa a cada conclusión, impuestos, liquidez, el riesgo de que te bloqueen el mep por noventa días, antes de dejarla en el archivo. salió entera, con las dos rondas, y terminó a las cuatro menos diez, antes del reset.
+
+la conclusión es más simple de lo que esperaba: el único rulo que te sirve no es dónde invertís, es cómo pasás a pesos los tres mil que gastás por mes. pasarlos por mep en vez del oficial te deja casi cuatro por ciento más.
+
+# la colección a probar en la retroid, y los tres ports de doom
+a las ocho y cuarto dijiste que dejabas correr el reintento de los wads y me avisabas. no hacía falta esperar: ya había terminado a las cuatro de la mañana y estaba marcado como hecho. heretic, hexen y deathkings corren bien, los tres entre cincuenta y siete y sesenta cuadros sin tirones, el salto quedó en el botón de abajo y el launcher quedó configurado.
+
+me pediste una colección con todo lo que tenés que probar. elegiste que entre la lista completa y que en el estado quede una nota por juego diciendo qué mirar en cada uno, cámara, tirones, si queda, y que los que no se puedan abrir queden anotados aparte. a los tres minutos estaba: la colección a probar quedó armada en el aparato, justo después de top games, con los catorce juegos.
+
+en el mismo rato cerraron dos cosas más de la retroid. una investigación de solo lectura sobre los setenta juegos con tirones, sin tocar el aparato. y la prueba de llevar a sesenta cuadros cinco juegos de playstation dos que hoy van a treinta, tomb raider legend y anniversary, vice city, vexx y tak. esa segunda tuvo un reintento: la primera vez se fue a cloud, que no ve el aparato, así que no podía hacer nada.
+
+# las tandas de votos de instagram del día
+hubo siete tandas repartidas por todo el día. a la mañana una corta de cuatro, las cuatro a seguir. después una de doce, con cuatro a maybe y ocho que no van. a la una y veinticinco una de catorce: una queda en interesan, cuatro a maybe y nueve que no van.
+
+a la tarde una de once del lado de dejar de seguir: seis para dejar de seguir, cinco que quedan como están, ninguna ignorada. a las diez y cuarto de la noche una de diecisiete, la más completa: una queda, cuatro a maybe, siete que no van y cinco que pasan a follow. y ya de madrugada dos más, una de tres y una de treinta y seis, esa última con seis a maybe, veintisiete que no van y tres a follow.
+
+# el turno nocturno que no quería cerrar, y la receta que el daemon servía vieja
+cerca de las tres y media de la madrugada la revisión del turno nocturno falló y volvió a la cola. el motivo: la orden declaraba seis pasos y no había ninguna marca de checkpoint, así que no cerraba. se reencoló una vez con el resumen del log pegado y el reintento cerró en cero minutos y veinte centavos, con el verificador dando hecho. esa corrida quedó con sonnet esperando tu juicio sobre si el modelo alcanzó.
+
+en el mismo rato apareció otra cosa: una receta de resumen del día había cambiado y el daemon la seguía sirviendo vieja, porque no pasaba por la carga fresca. quedó dicho cómo pedirla bien o, si no, reiniciar.
+
+también se despachó un aviso con una pregunta: instagram lleva sesenta y tres horas con lo de las lecturas pendientes, trescientas veintiuna esperando. y hubo un deploy a cloud que sincronizó veinte archivos y dejó el código al día. un aviso del cerrador no se reenvió porque ya había salido uno igual hace poco, y una orden que entró justo mientras se reescribía la cola quedó al final sin borrarse.
 
 # dos deploys a cloud, y el código quedó al día
 hubo dos sincronizaciones a la máquina de cloud en la hora. la primera a las cuatro y catorce, con diecisiete archivos, y la segunda a las cuatro y veinticinco, con once. las dos cerraron bien y las dos actualizaron el hash del código que corre allá.
