@@ -2584,100 +2584,100 @@
    "voces": {
     "daniela": {
      "archivo": "audio/ep-2026-10-02-plata-hoy-daniela.mp3",
-     "duracion": 1623.1,
+     "duracion": 1622.6,
      "capitulos": [
       {
        "t": 0.0,
        "titulo": "de qué va este episodio",
-       "duracion": 81.1,
+       "duracion": 81.0,
        "archivo": "audio/ep-2026-10-02-plata-hoy-1-de-que-va-este-episodio.daniela.mp3"
       },
       {
-       "t": 81.1,
+       "t": 81.0,
        "titulo": "cómo estamos en plata, hoy",
-       "duracion": 121.4,
+       "duracion": 121.7,
        "archivo": "audio/ep-2026-10-02-plata-hoy-2-como-estamos-en-plata.daniela.mp3"
       },
       {
-       "t": 202.5,
+       "t": 202.7,
        "titulo": "la pregunta de alta ganancia y poco riesgo",
-       "duracion": 81.0,
+       "duracion": 81.7,
        "archivo": "audio/ep-2026-10-02-plata-hoy-3-la-pregunta-de-alta.daniela.mp3"
       },
       {
-       "t": 283.6,
+       "t": 284.4,
        "titulo": "estados unidos: la cartera que elegiste",
-       "duracion": 148.6,
+       "duracion": 148.8,
        "archivo": "audio/ep-2026-10-02-plata-hoy-4-estados-unidos-la.daniela.mp3"
       },
       {
-       "t": 432.1,
+       "t": 433.2,
        "titulo": "lo que de verdad significa aguantar el año malo",
-       "duracion": 83.8,
+       "duracion": 84.0,
        "archivo": "audio/ep-2026-10-02-plata-hoy-5-lo-que-de-verdad.daniela.mp3"
       },
       {
-       "t": 515.9,
+       "t": 517.2,
        "titulo": "qué haría yo con los aportes de cada mes",
-       "duracion": 144.1,
+       "duracion": 143.8,
        "archivo": "audio/ep-2026-10-02-plata-hoy-6-que-haria-yo-con-los.daniela.mp3"
       },
       {
-       "t": 660.0,
+       "t": 661.0,
        "titulo": "argentina: lo primero es lo que no hay que hacer",
-       "duracion": 70.9,
+       "duracion": 70.8,
        "archivo": "audio/ep-2026-10-02-plata-hoy-7-argentina-lo-primero-es.daniela.mp3"
       },
       {
-       "t": 730.9,
+       "t": 731.8,
        "titulo": "los pesos: lo que sí y lo que no",
-       "duracion": 133.8,
+       "duracion": 133.1,
        "archivo": "audio/ep-2026-10-02-plata-hoy-8-los-pesos-lo-que-si-y.daniela.mp3"
       },
       {
-       "t": 864.7,
+       "t": 864.9,
        "titulo": "los bonos en dólares y la prima de riesgo argentino",
-       "duracion": 98.4,
+       "duracion": 98.6,
        "archivo": "audio/ep-2026-10-02-plata-hoy-9-los-bonos-en-dolares-y.daniela.mp3"
       },
       {
-       "t": 963.2,
+       "t": 963.5,
        "titulo": "el plan de cinco mil dólares desde galicia",
-       "duracion": 155.9,
+       "duracion": 155.3,
        "archivo": "audio/ep-2026-10-02-plata-hoy-10-el-plan-de-cinco-mil.daniela.mp3"
       },
       {
-       "t": 1119.1,
+       "t": 1118.8,
        "titulo": "la ruta, y las cosas que se hacen en octubre",
        "duracion": 83.0,
        "archivo": "audio/ep-2026-10-02-plata-hoy-11-la-ruta-y-las-cosas-que.daniela.mp3"
       },
       {
-       "t": 1202.1,
+       "t": 1201.8,
        "titulo": "un año de aportes, para ponerle números a la cabeza",
-       "duracion": 103.3,
+       "duracion": 103.6,
        "archivo": "audio/ep-2026-10-02-plata-hoy-12-un-ano-de-aportes-para.daniela.mp3"
       },
       {
        "t": 1305.4,
        "titulo": "qué rinde por minuto tuyo",
-       "duracion": 84.2,
+       "duracion": 84.5,
        "archivo": "audio/ep-2026-10-02-plata-hoy-13-que-rinde-por-minuto.daniela.mp3"
       },
       {
-       "t": 1389.6,
+       "t": 1389.9,
        "titulo": "los errores que más cuestan",
        "duracion": 68.6,
        "archivo": "audio/ep-2026-10-02-plata-hoy-14-los-errores-que-mas.daniela.mp3"
       },
       {
-       "t": 1458.2,
+       "t": 1458.5,
        "titulo": "lo que dejé afuera a propósito",
-       "duracion": 50.8,
+       "duracion": 50.4,
        "archivo": "audio/ep-2026-10-02-plata-hoy-15-lo-que-deje-afuera-a.daniela.mp3"
       },
       {
-       "t": 1508.9,
+       "t": 1508.8,
        "titulo": "la recomendación, en cuatro frases",
        "duracion": 72.4,
        "archivo": "audio/ep-2026-10-02-plata-hoy-16-la-recomendacion-en.daniela.mp3"
@@ -2685,14 +2685,14 @@
       {
        "t": 1581.3,
        "titulo": "cierre",
-       "duracion": 41.7,
+       "duracion": 41.3,
        "archivo": "audio/ep-2026-10-02-plata-hoy-17-cierre.daniela.mp3"
       }
      ]
     }
    },
-   "duracion": 1623.1,
-   "ts": "2026-10-02T00:32:34-03:00"
+   "duracion": 1622.6,
+   "ts": "2026-10-02T00:32:43-03:00"
   }
  ],
  "actualizado": "2026-10-02 00:32"
