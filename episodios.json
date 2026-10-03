@@ -2771,7 +2771,136 @@
    },
    "duracion": 1622.6,
    "ts": "2026-10-02T00:32:43-03:00"
+  },
+  {
+   "id": "ep-2026-10-02-plata-hoy-2",
+   "fecha": "2026-10-02",
+   "titulo": "cómo está tu plata hoy, al día: la primera compra y los cuatro fondos",
+   "temas": [
+    "plata",
+    "podcast"
+   ],
+   "palabras": 5815,
+   "guion": "guion-plata-hoy-2.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-10-02-plata-hoy-2-daniela.mp3",
+     "duracion": 1806.5,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 87.0,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 87.0,
+       "titulo": "cómo estamos en plata, hoy",
+       "duracion": 145.7,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-2-como-estamos-en-plata.daniela.mp3"
+      },
+      {
+       "t": 232.8,
+       "titulo": "la pregunta de alta ganancia y poco riesgo",
+       "duracion": 74.6,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-3-la-pregunta-de-alta.daniela.mp3"
+      },
+      {
+       "t": 307.4,
+       "titulo": "estados unidos: lo que compraste esta mañana",
+       "duracion": 204.1,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-4-estados-unidos-lo-que.daniela.mp3"
+      },
+      {
+       "t": 511.5,
+       "titulo": "la cartera a la que vas: cuatro fondos",
+       "duracion": 88.7,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-5-la-cartera-a-la-que-vas.daniela.mp3"
+      },
+      {
+       "t": 600.1,
+       "titulo": "lo que de verdad significa aguantar el año malo",
+       "duracion": 89.2,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-6-lo-que-de-verdad.daniela.mp3"
+      },
+      {
+       "t": 689.4,
+       "titulo": "qué haría yo con los aportes de cada mes",
+       "duracion": 195.4,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-7-que-haria-yo-con-los.daniela.mp3"
+      },
+      {
+       "t": 884.8,
+       "titulo": "argentina: lo primero es lo que no hay que hacer",
+       "duracion": 70.8,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-8-argentina-lo-primero-es.daniela.mp3"
+      },
+      {
+       "t": 955.6,
+       "titulo": "los pesos: lo que sí y lo que no",
+       "duracion": 111.0,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-9-los-pesos-lo-que-si-y.daniela.mp3"
+      },
+      {
+       "t": 1066.6,
+       "titulo": "los bonos en dólares y la prima de riesgo argentino",
+       "duracion": 81.5,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-10-los-bonos-en-dolares-y.daniela.mp3"
+      },
+      {
+       "t": 1148.1,
+       "titulo": "el plan de cinco mil dólares desde galicia",
+       "duracion": 146.4,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-11-el-plan-de-cinco-mil.daniela.mp3"
+      },
+      {
+       "t": 1294.5,
+       "titulo": "la ruta, y las cosas que se hacen en octubre",
+       "duracion": 102.9,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-12-la-ruta-y-las-cosas-que.daniela.mp3"
+      },
+      {
+       "t": 1397.4,
+       "titulo": "un año de aportes, para ponerle números a la cabeza",
+       "duracion": 105.9,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-13-un-ano-de-aportes-para.daniela.mp3"
+      },
+      {
+       "t": 1503.3,
+       "titulo": "qué rinde por minuto tuyo",
+       "duracion": 76.4,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-14-que-rinde-por-minuto.daniela.mp3"
+      },
+      {
+       "t": 1579.7,
+       "titulo": "los errores que más cuestan",
+       "duracion": 69.7,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-15-los-errores-que-mas.daniela.mp3"
+      },
+      {
+       "t": 1649.4,
+       "titulo": "lo que dejé afuera a propósito",
+       "duracion": 36.3,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-16-lo-que-deje-afuera-a.daniela.mp3"
+      },
+      {
+       "t": 1685.7,
+       "titulo": "la recomendación, en cuatro frases",
+       "duracion": 79.4,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-17-la-recomendacion-en.daniela.mp3"
+      },
+      {
+       "t": 1765.1,
+       "titulo": "cierre",
+       "duracion": 41.4,
+       "archivo": "audio/ep-2026-10-02-plata-hoy-2-18-cierre.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1806.5,
+   "ts": "2026-10-02T23:48:37-03:00"
   }
  ],
- "actualizado": "2026-10-02 06:38"
+ "actualizado": "2026-10-02 23:48"
 }

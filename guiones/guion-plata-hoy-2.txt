@@ -1,0 +1,245 @@
+# de qué va este episodio
+
+Hola. Hace mucho que no escuchabas un capítulo, así que este es de los de caminar un rato largo, media hora, y trata de una sola cosa: cómo está tu plata hoy y qué hacer con ella, en estados unidos y en argentina. Y es una versión puesta al día, porque entre la madrugada y la mañana de hoy pasaron dos cosas grandes: la primera compra ya está hecha, y la cartera objetivo cambió de forma.
+
+Te cuento cómo está armado. Primero, cómo estamos y qué número manda todo. Segundo, estados unidos, que es donde se genera la plata a largo plazo: qué compraste esta mañana, hacia qué cartera vas y qué haría yo con los aportes de cada mes. Tercero, argentina: qué rinde, qué trampas tiene y cómo meter cinco mil dólares sin hacer macanas. Y en el medio, la pregunta que me hiciste, la de alta ganancia y poco riesgo, que merece una respuesta sin vueltas.
+
+Antes de arrancar, tres cosas que dejo afuera a propósito, porque me dijiste que las tenés resueltas. No hablo de cómo facturás, no hablo del monotributo ni de impuestos, y no hablo de cómo traés la plata a argentina ni de cómo la sacás. Cuando digo estados unidos, hablo de dónde y cómo se genera plata, nada más. Lo demás lo manejás vos y lo hacés bien.
+
+Una aclaración sobre los números. Los de tu situación son tuyos. Los de rendimientos pasados son medidos, con fecha. Y cualquier número a futuro lo voy a marcar como supuesto, porque nadie sabe lo que viene, ni yo ni un economista ni un fondo.
+
+Vamos.
+
+# cómo estamos en plata, hoy
+
+Arranco por lo que ya existe, porque es bastante más que ayer.
+
+Cobrás seis mil setecientos dólares por mes con awtomic, y te pagan por dil. Vivir en argentina te cuesta entre tres mil y tres mil quinientos. Lo que sobra son unos tres mil trescientos por mes, del lado prudente: casi cuarenta mil dólares por año. Ese es el número que cambia tu situación, no un negocio nuevo ni una jugada brillante: que lo que ya sobra deje de quedarse quieto.
+
+De lo que tenías disponible, nueve mil quinientos dólares se fueron a brou, para gastos y alquiler de los próximos meses. Esa plata no es capital, es colchón de corto plazo, y está donde tiene que estar.
+
+Del lado de estados unidos, el armado dejó de ser un plan y pasó a ser una cuenta con cosas adentro. La cuenta de interáctiv brókers está aprobada, la de uáis en dólares está abierta y verificada, y el camino de dil a uáis y de uáis al bróker lo probaste primero con cien dólares: el costo fue un dólar con trece centavos fijos, no un porcentaje, así que mandar tres mil o diez mil cuesta lo mismo y conviene ir de a tandas grandes.
+
+Y después de la prueba mandaste la primera tanda de verdad. Esta mañana la cuenta del bróker tenía nueve mil ciento noventa dólares liquidados, y a las diez y media, con el mercado ya abierto, se hizo la primera compra: tres fondos, a precio de mercado, nueve mil veintiocho dólares en total, con un dólar de comisión por cada orden. Quedaron ciento sesenta y cuatro dólares en efectivo, sin ninguna orden abierta. Eso es un hito, y quiero que lo registres como tal: hace una semana no había cuenta, hoy hay una cartera comprada.
+
+Una cosa más que quedó andando hoy: la cuenta se lee sola. Una consulta de solo lectura baja el extracto del bróker todos los días y lo muestra en el board, en el widget de inversiones. El extracto llega con el cierre del día anterior, así que la compra de hoy la vas a ver mañana. Nada de esto opera plata: mira, no toca.
+
+Del lado de argentina, hay un plan escrito para invertir cinco mil dólares desde galicia, con fecha de arranque en noviembre, y todavía no se movió un peso. Lo cuento en detalle más adelante.
+
+Lo que falta ya no es técnico ni es abrir cuentas. Falta decidir el ritmo de los aportes y cumplirlo. Y si me preguntás cuál es el mayor riesgo de todo esto, no es un mercado que se cae: es que el segundo aporte se dilate. Un mes sin invertir son tres mil trescientos dólares quietos. Lo digo ahora porque el resto del episodio es sobre qué comprar, y lo que más rinde es seguir.
+
+# la pregunta de alta ganancia y poco riesgo
+
+Esto va primero, antes de los instrumentos, porque ordena todo lo que sigue.
+
+Me pediste inversiones de alta ganancia y poco riesgo. Te lo digo derecho: esa combinación no existe como producto. Cuando alguien te la ofrece, o el riesgo está escondido, o la ganancia es mentira. Lo que sí existe son tres cosas que se parecen a eso.
+
+Una: el tiempo. Un riesgo que parece enorme en un mes se achica mucho en diez años. Una cartera diversificada, que se compra todos los meses sin mirar el precio, y que no se vende en la caída, convierte el riesgo de un mal mes en el riesgo de un mal decenio, que es muchísimo más chico.
+
+Dos: el orden. Poco riesgo y poca ganancia es un lugar, el colchón. Mucha ganancia y mucho riesgo es otro lugar, la parte larga de la cartera. Lo que hace que el conjunto se sienta de poco riesgo es que el colchón cubre los gastos de los próximos meses, así que nunca estás obligado a vender lo largo en el peor momento.
+
+Tres: que lo más riesgoso del mundo es vender asustado. Ese es el riesgo que de verdad controlás vos, y por eso en la charla acordaste una condición: aguantar el año malo sin vender. Esa frase vale más que cualquier instrumento que te nombre hoy.
+
+Con eso en la cabeza, te cuento qué hay.
+
+# estados unidos: lo que compraste esta mañana
+
+La compra de hoy se hizo con la cartera que habías elegido ayer: cuarenta por ciento en un fondo de semiconductores, treinta por ciento en uno de empresas grandes de valor de estados unidos, y treinta por ciento en uno que tiene todo el mundo menos estados unidos.
+
+Los tres tienen nombre de ticker. El de semiconductores es ese eme hache, de vaneck: entraron seis unidades, a seiscientos veintinueve dólares con ochenta y dos cada una, tres mil setecientos setenta y nueve dólares. El de valor es ve te ve, de vanguard: doce unidades a doscientos diecisiete con treinta y nueve, dos mil seiscientos nueve dólares. El del resto del mundo es ve equis u ese, también de vanguard: treinta y una unidades a ochenta y cinco con diez, dos mil seiscientos treinta y ocho dólares. Como las unidades son enteras, el reparto real quedó en cuarenta y dos, veintinueve y veintinueve, muy cerca del objetivo.
+
+Un detalle para la próxima vez: el fondo del resto del mundo iba con treinta y dos unidades y el bróker la rebotó, porque en una orden a mercado reserva un cinco por ciento por si el precio se mueve. Se volvió a mandar con treinta y una y entró. No es un error, es cómo funciona.
+
+Y una aclaración, porque el capítulo anterior decía otra cosa. La cartera de hace una semana tenía, en lugar del fondo de valor, uno de crecimiento de las grandes empresas, ve u ge. Se cambió el primero de octubre por una razón concreta: el de crecimiento y el de semiconductores se mueven igual ochenta y una veces de cada cien; el de valor y el de semiconductores, cincuenta y nueve. O sea, el de valor diversifica de verdad y el de crecimiento duplicaba la misma apuesta. Fue un buen cambio, y se hizo antes de poner un dólar.
+
+Te cuento qué es cada uno de los tres que tenés, sin adornos.
+
+El de semiconductores es la apuesta más concentrada de toda la lista que comparé. Son unas veinticinco empresas, y las tres más grandes pesan casi la mitad: se mueve casi como una sola acción. En los últimos doce meses subió casi noventa por ciento, y en los cinco años anteriores rindió casi treinta y cuatro por ciento anual. Son números espectaculares y hay que leerlos con cuidado. Cuando una cosa sube casi noventa por ciento en un año, la pregunta correcta no es cuánto va a subir, es qué pasa si baja la mitad de eso. Un sector así puede caer más de un tercio en un año malo, y no es raro.
+
+El de valor de las grandes es el contrapeso. Son las grandes empresas de estados unidos que cotizan barato respecto de lo que ganan: bancos, salud, energía, consumo, industria, casi sin tecnología. Rindió casi veintidós por ciento en los últimos doce meses, casi dieciocho por ciento anual en los últimos tres años, catorce en los últimos cinco, y casi once en los cinco anteriores. Es más lento que los semiconductores en los años buenos y mucho más tranquilo en los malos. Cobra muy poco, tres centésimos por ciento al año.
+
+El de todo el mundo menos estados unidos es el más aburrido y el más útil. Más de ocho mil empresas de países desarrollados y emergentes. Rindió veintidós por ciento en el último año, pero a cinco años rinde menos que los de estados unidos. Está ahí porque cuando estados unidos tiene una década mala, los otros países a veces la tienen buena. Es tu seguro contra que el índice grande se quede dormido.
+
+Hasta acá, todo es renta variable pura. No hay nada quieto adentro de la cartera. El colchón es brou, afuera. Esa decisión es buena y es coherente: separaste el dinero que tiene que estar disponible del dinero que tiene que crecer.
+
+# la cartera a la que vas: cuatro fondos
+
+Y ahora lo que decidiste hoy, unas horas después de la compra. La cartera objetivo ya no es de tres fondos sino de cuatro, y con otros pesos: veintisiete y medio por ciento en semiconductores, treinta por ciento en el resto del mundo, veintidós y medio por ciento en valor de las grandes, y veinte por ciento en un fondo nuevo, de empresas chicas de valor de estados unidos.
+
+El nuevo es a ve u ve, de avántis. Son empresas chicas de estados unidos, elegidas con un filtro de valor y de rentabilidad: baratas y que ganan plata. Es la punta más cíclica del mercado americano: la que más cae en un año malo y la que más rebota en los buenos. Rindió casi veintitrés por ciento en los últimos doce meses, trece por ciento anual en los últimos tres años y casi dieciséis desde dos mil veintiuno, pero en el último mes bajó casi cuatro. Cobra un cuarto por ciento al año, más que los de vanguard, porque no sigue un índice pasivo sino un criterio de selección. Es el fondo más distinto de los otros tres, y por eso suma.
+
+Lo que cambia con esta cartera, dicho en una frase: los semiconductores pasan de ser casi la mitad a ser poco más de un cuarto, el resguardo fuera de estados unidos se queda igual, en treinta por ciento, y la pata de valor se parte en dos, grandes y chicas. Es una cartera menos concentrada que la de ayer, y eso es exactamente lo que yo hubiera pedido después de ver ese noventa por ciento del semiconductor.
+
+Y lo importante: no se vende nada de lo comprado hoy para llegar a esos porcentajes. Se llega con los aportes, que es la parte que sigue.
+
+# lo que de verdad significa aguantar el año malo
+
+Me quedo en esta idea un rato más, porque es donde se gana o se pierde todo.
+
+Imaginá que pasa lo que pasa una vez cada tantos años: la bolsa de estados unidos cae treinta por ciento en pocos meses, y los semiconductores, que suelen caer más, cuarenta o cincuenta. Hoy tenés nueve mil puestos. Supongamos que eso pasa dentro de un año, con unos cuarenta y cinco mil adentro. Mirás la cuenta y ves que perdiste quince mil. Todo en vos te pide vender.
+
+Ahí hay tres reglas que conviene decidir ahora, tranquilo, y no en ese momento.
+
+Primera regla: no se mira la cuenta todos los días. Cuanto más mirás, más caídas ves, y las caídas se sienten el doble que las subas. El widget está para que lo veas cuando quieras, no siempre. Una vez por mes, el día del aporte, alcanza.
+
+Segunda regla: en la caída se sigue comprando. El aporte mensual de tres mil trescientos no se frena porque los mercados caigan. Al contrario: compra más cantidad por el mismo dinero. Los que ganan en veinte años son los que compraron durante las caídas, no los que adivinaron el piso.
+
+Tercera regla: el colchón se respeta. Los gastos de los próximos meses están en brou. Eso quiere decir que nunca vas a necesitar vender nada de la cartera para pagar el alquiler, y esa es la pieza que sostiene todo lo demás.
+
+Si estas tres cosas se cumplen, el año malo es incómodo y nada más. Si no, es un desastre. Y el desastre nunca lo causa el mercado, lo causa la decisión que tomás con miedo.
+
+# qué haría yo con los aportes de cada mes
+
+Ahora sí, mi recomendación, sin rodeos.
+
+Primero, mantener la cartera de cuatro fondos que elegiste hoy, y no volver a cambiarla en un tiempo. Tiene una virtud que no se negocia: la elegiste vos, la entendés y vas a poder aguantarla. Una cartera teóricamente mejor que abandonás en el primer susto es peor que una cartera razonable que aguantás diez años.
+
+Segundo, la regla para llegar a esos porcentajes, que quedó escrita hoy y es simple. Cada vez que entra plata, se mira cuánto vale cada fondo ese día, se suma el aporte nuevo, y se calcula cuánto le falta a cada fondo para quedar en su porcentaje sobre el total. Lo que falta, se compra. Lo que ya está pasado, no se compra esta vez. Nunca se vende nada. Si el aporte es chico y no alcanza para cubrir todo lo que falta, se achica cada parte en la misma proporción. Y se redondea a unidades enteras, con el resto en efectivo para el mes siguiente.
+
+Te lo traduzco a tu situación de hoy, con la cartera comprada esta mañana y a precio de costo. Si el mes que viene entran tres mil dólares, el reparto da: nada al semiconductor, porque ya pesa cuarenta y dos por ciento y su objetivo es veintisiete y medio; unos ochocientos cuarenta al resto del mundo; unos ochenta al de valor de las grandes; y unos dos mil ochenta al fondo nuevo de empresas chicas. Con eso la cartera queda en treinta y uno, veintinueve, veintidós y diecisiete, y el aporte siguiente la sigue acercando. Si en cambio entran nueve mil, como hoy, da unos mil ciento ochenta al semiconductor, dos mil setecientos setenta al resto del mundo, mil cuatrocientos cincuenta al de valor y tres mil seiscientos al de empresas chicas, y la cartera queda exacta. Los números reales van a moverse un poco, porque se hacen con el precio del día, pero la lógica es esa.
+
+Lo que me gusta de esta regla es que rebalancea sin que tengas que decidir nada en el momento: el fondo que subió mucho deja de recibir plata solo, y el que quedó abajo la recibe. Es la forma suave de bajar la concentración, sin vender y sin apurarse.
+
+Tercero, una regla de emergencia, de una línea: si en algún momento el semiconductor llega a pesar más de la mitad de todo, ahí sí vale parar y mirar. No vender de golpe: dejar de aportarle y revisar. Con la cartera nueva es difícil que pase, pero la regla cuesta nada.
+
+Cuarto, y es el más importante: no sumar más fondos. Cuatro es el número. En la comparación que armé, de diecinueve fondos, los de semiconductores, tecnología, nasdaq y crecimiento comparten las mismas cinco o seis empresas: sumar uno de esos no diversifica nada, solo concentra más. La cartera de hoy ya tiene un pie en cada rincón distinto: tecnología concentrada, grandes de valor, chicas de valor y el resto del mundo.
+
+Y una cosa más sobre esta parte: el rendimiento esperado. Para las cuentas yo uso siete por ciento anual promedio sobre lo aportado. Es un supuesto, no una promesa. Con ese supuesto, al cabo de un año hay unos cuarenta y siete mil dólares afuera, sobre unos cuarenta y cinco mil puestos. Y en cinco años, unos doscientos cuarenta y cinco mil, sobre unos doscientos cuatro mil puestos. El siete por ciento es conservador contra lo que rindieron los últimos años, y está pensado así a propósito: prefiero que te sorprenda para arriba.
+
+# argentina: lo primero es lo que no hay que hacer
+
+Paso a argentina. Y lo primero que tengo que decirte es lo que no sirve, porque ahorra más plata que cualquier recomendación.
+
+Los rulos están cerrados. Comprar dólar oficial y venderlo caro por otra vía, que fue un deporte nacional durante años, está muerto desde la restricción cruzada de septiembre del año pasado, y se endureció en abril de este año. Si algún amigo te lo ofrece, está contando una historia vieja.
+
+Y hay una trampa que me importa que sepas: si en algún momento comprás un solo dólar oficial, en cualquier banco o cualquier aplicación, quedás bloqueado noventa días para operar con dólar mep, hacia atrás y hacia adelante. Como tus dólares nacen afuera, nunca tenés por qué comprar uno acá. Mientras eso sea cierto, el camino mep te queda abierto. Anotalo como regla: dólar oficial, nunca.
+
+El único rulo que de verdad le sirve a alguien en tu posición no es dónde invertís, es cómo pesificás lo que necesitás gastar. Pesificar por dólar mep en vez de por el oficial rinde unos tres con seis por ciento más. Sobre tres mil dólares por mes, son unos ciento ocho dólares por mes. No es una fortuna, pero es plata que aparece sin riesgo y sin esfuerzo, y vale más que cualquier bono de moda.
+
+# los pesos: lo que sí y lo que no
+
+Ahora, qué hacer con pesos.
+
+La respuesta corta: los pesos que vas a gastar en los próximos meses pueden rendir algo mientras esperan. Los pesos que querés ahorrar a largo plazo, no.
+
+Los números, medidos a fines de septiembre. El mejor plazo fijo paga alrededor de veintiséis por ciento anual. Las lecaps, que son letras del tesoro en pesos a plazo corto, entre veinticinco y veintinueve. Suena muy bien, y es muy bueno mientras el dólar se porte.
+
+El problema se ve en la columna de al lado. En los últimos doce meses el dólar mep subió seis y medio por ciento, y con esa suba una lecap rindió, en dólares, entre diecisiete y veintiuno. Excelente. Pero el punto de empate es la clave: una lecap a doce meses empata con el dólar cuando el dólar sube entre veinticinco y veintinueve por ciento, que es casi exactamente el techo de la banda cambiaria de hoy. Si el dólar salta de golpe a ese techo, una lecap a seis meses pierde entre nueve y diez por ciento en dólares.
+
+Traducido: ahorrar en pesos es una apuesta a que el dólar se porte como se portó el último año. Puede salir bien un año, dos, tres. Y cuando sale mal, sale mal de golpe y de a veinte por ciento.
+
+Para tu caso, la conclusión fue clara. Nada en pesos le gana a lo que ya tenés afuera de forma que pague el riesgo. Lo único que tiene sentido son los pesos que ya vas a gastar: uno a tres meses de alquiler y gastos en una lecap o un fondo de dinero rinden alrededor de uno con dos por ciento por mes más que tener dólares y vendérselos al banco mes a mes. Sobre el saldo que manejás, son unos cincuenta y cinco dólares por mes. Vale por no tener que pensarlo, no por la plata.
+
+Mi recomendación para esta parte: un mes de gastos en un fondo de dinero, y el resto del colchón en brou, en dólares. No te compliques con la curva de pesos. Es el único lugar donde una idea astuta puede salir muy cara.
+
+# los bonos en dólares y la prima de riesgo argentino
+
+Ahora algo que suena más atractivo: bonos que pagan en dólares.
+
+Los globales largos, los que vencen entre dos mil treinta y cinco y dos mil cuarenta y seis, rinden entre once y doce por ciento anual en dólares. Un bono de estados unidos a diez años paga cinco con veinticinco, y la diferencia son unos seiscientos treinta puntos básicos de riesgo país. En criollo: te pagan seis puntos de más por prestarle plata al estado argentino.
+
+Es mucho, y sale caro por una razón: el riesgo país subió cincuenta por ciento en dos meses y medio, y el propio tesoro no colocó un bono tres veces seguidas. Esos seis puntos de más son el precio de apostar a que el programa económico sobrevive a las elecciones de octubre de dos mil veintisiete. La versión corta, el bonar que vence justo antes de esas elecciones, rinde cuatro con cuatro, casi lo mismo que una letra del tesoro de estados unidos. Ahí es riesgo argentino sin premio.
+
+Mi opinión: para la plata del plan, que es de largo plazo, los bonos soberanos no. Pagan unos puntos más por una apuesta con nombre propio, y esa apuesta ya la tenés, porque vivís en argentina y gastás acá. Concentrar el ahorro en el mismo riesgo que la vida cotidiana es lo contrario de diversificar.
+
+Si algún día querés una apuesta argentina, que sea chica, decidida de antemano, con un monto que si se va a cero no te cambia nada. Para eso está el plan de los cinco mil dólares, que te cuento ahora.
+
+# el plan de cinco mil dólares desde galicia
+
+Hay un plan escrito, y está pensado para que la parte argentina sea un experimento chico y bien hecho: cinco mil dólares, en galicia, con arranque el lunes dos de noviembre, que es el primer día de mercado, porque el primero de noviembre cae domingo.
+
+La distribución: sesenta por ciento en obligaciones negociables, que son los bonos que emiten las empresas, tres mil dólares. Cuarenta por ciento en acciones locales, dos mil dólares.
+
+Las obligaciones, en tres emisores distintos, mil dólares cada una, para que ninguna sola pese demasiado. Los candidatos, con precios del primero de octubre: una de vista que vence en dos mil veintinueve y rinde cinco con treinta y cinco por ciento; una de tecpetrol que vence en dos mil veintinueve y rinde cinco con cincuenta y seis; una de i pe efe que vence en dos mil treinta y uno y paga un cupón de ocho con setenta y cinco por ciento. Hay otra de tecpetrol más larga, a dos mil treinta, que rinde siete con cincuenta y tres, pero está bajo ley de nueva york, y hay una pregunta pendiente a galicia sobre cómo se cobra.
+
+Ahora, la honestidad. Las de i pe efe y las de telecom vienen de un artículo de mayo del año pasado, y el cupón hay que confirmarlo en el suplemento de la emisión antes de comprar. La de pampa y la de pe a e no tienen ticker verificado todavía. El plan marca cada dato como verificado o sin verificar, y vale la pena leerlo así.
+
+Las acciones, con la plata que sobra: i pe efe, pampa, ternium, banco macro, galicia y central puerto. Las seis son de las más líquidas del mercado local, y la compra se hace en tandas, en dos días distintos, para no pagar todo al mismo precio. Una advertencia puntual: comprar acciones de galicia en la cuenta de galicia es concentrar el banco donde ya tenés la plata. Si no te gusta, dejala y usá macro.
+
+Y mirá cómo les fue. En el último mes, galicia cayó doce por ciento y macro catorce, medido en dólares. En tres meses, veinticinco y veintiocho. Pero en doce meses, galicia subió veintiocho por ciento y macro cincuenta y dos. Eso es una acción argentina: puede pagar cincuenta en un año y perder veinticinco en un trimestre. Si el semiconductor te hace temblar, esto te va a hacer temblar más. Por eso son dos mil dólares y no más.
+
+El rendimiento esperado de todo el paquete, en la charla, fue de once a quince por ciento anual en dólares. Lo marco otra vez como supuesto, no promesa: las obligaciones aportan entre cinco y ocho, y el resto depende de las acciones, que pueden dar mucho más o mucho menos.
+
+# la ruta, y las cosas que se hacen en octubre
+
+El plan tiene un calendario, y lo repaso porque es lo concreto que podés empezar mañana. Y ojo, que ya estamos en la primera semana de octubre: esta semana es la del primer paso.
+
+Primera semana de octubre: abrir la cuenta comitente en galicia, hacer el test de perfil de inversor, confirmar que tenés caja de ahorro en dólares, y mandarle a galicia las ocho preguntas que están escritas, para copiar y pegar.
+
+El test de perfil importa más de lo que parece: si sale conservador, galicia puede no dejarte comprar acciones. Tiene que salir moderado. Se contesta con calma, de acuerdo a lo que de verdad aguantarías, pero vale saber que el resultado cambia lo que te dejan hacer.
+
+Segunda semana: con las respuestas de galicia, decidir cómo entran los dólares. Tercera semana: una transferencia de prueba de cien dólares para ver cuánto tarda, cuánto cobra cada lado y qué piden justificar. Cuarta semana: si la prueba cayó bien, mandar los cuatro mil novecientos que faltan, antes del veintiocho de octubre. Y el lunes dos de noviembre, la compra, primero las obligaciones y después las acciones, con orden limitada siempre, nunca a mercado.
+
+Una regla que repito porque se olvida: orden limitada, siempre. En las obligaciones de poco volumen, el precio al que comprás puede estar un punto o más arriba del precio que ves. Una orden limitada al precio que querés evita esa sorpresa. Y fijate la diferencia con lo de esta mañana: en el bróker de estados unidos compraste a mercado y estuvo bien, porque esos fondos mueven cientos de millones por día y el precio que ves es el precio que pagás. En una obligación negociable argentina de poco volumen, no.
+
+Y después del primer paquete, cada trimestre se repite con otros cinco mil dólares, rebalanceando el sesenta y cuarenta con lo que quedó más abajo.
+
+# un año de aportes, para ponerle números a la cabeza
+
+Para que esto no quede abstracto, hagamos el ejercicio de un año entero, con los supuestos a la vista.
+
+Hoy, dos de octubre, ya hay nueve mil puestos. A partir de noviembre, tres mil trescientos por mes, repartidos con la regla de balanceo: casi todo a los tres fondos que no son el semiconductor, hasta que la cartera llegue a sus porcentajes, y de ahí en adelante a todos según lo que falte. En doce meses, con los once aportes que siguen, son unos cuarenta y cinco mil trescientos dólares puestos.
+
+Ahora el supuesto, que es solo eso: siete por ciento anual promedio. Al cabo del año, la cuenta muestra unos cuarenta y siete mil. O sea, el primer año el rendimiento es chico, menos de dos mil dólares, y eso es normal: la mayor parte de la plata entró de a poco, y la que entró en el último mes casi no tuvo tiempo de hacer nada. El interés compuesto no se nota en el primer año, se nota en el quinto.
+
+Y ahora el mismo año con un mal escenario. Supongamos que en el mes seis el mercado cae veinte por ciento: tenés puestos unos veinticinco mil y la cuenta muestra unos veinte. Se siente horrible. Pero los aportes de los seis meses que siguen compran más barato, y si el mercado se recupera, quedan con una ganancia mayor que los anteriores. Una caída temprana, con aportes constantes, a la larga te favorece. La que duele de verdad es la tardía, cuando ya hay mucha plata adentro, y por eso el colchón en brou y la regla de no mirar todos los días son las dos piezas que sostienen la cartera.
+
+La conclusión de este ejercicio es chica pero útil: el primer año no vas a sentir que pasa nada, y está bien. Lo que se construye son los hábitos. El que llega al año tres con el aporte mensual intacto, sin haber vendido nunca, ya ganó la parte difícil. Y vos hoy diste el paso que a la mayoría le cuesta más: el primero.
+
+# qué rinde por minuto tuyo
+
+Me gusta mirar todo con una vara: cuánta plata hace cada cosa y cuánto trabajo te pide.
+
+La cartera de estados unidos, con tres mil trescientos por mes, hace menos de dos mil dólares el primer año y mucho más cada año siguiente, porque el rendimiento se apila sobre lo ya puesto. Te pide un retiro al mes, una cuenta de reparto que ya está escrita y una mirada. Es lo que más rinde por minuto tuyo, por lejos.
+
+Pesificar por dólar mep en vez de por el oficial hace ciento ocho dólares por mes, sin riesgo. Es el segundo mejor negocio de toda la lista.
+
+Los cinco mil dólares en galicia pueden hacer entre quinientos cincuenta y setecientos cincuenta por año, o perder una parte en un mal año, y piden mucho más trabajo: cuenta nueva, test, preguntas, prueba, compra en tandas y seguimiento. Es el que más cuesta por dólar ganado, y por eso es un experimento y no el centro del plan.
+
+Los pesos de gastos en una lecap o un fondo de dinero hacen unos cincuenta y cinco dólares por mes. Es poco, y está bien que sea poco.
+
+Mirado así, el orden es claro. Lo que más rinde es no frenar el aporte mensual a estados unidos. Lo segundo es pesificar bien. Lo tercero, lejos, es la parte argentina. Y esto es al revés de lo que suele sentirse: la parte argentina es la que más ruido hace y la que menos pesa.
+
+# los errores que más cuestan
+
+Te dejo cinco errores típicos, para tenerlos a mano cuando se presenten.
+
+El primero: perseguir lo que más subió. El semiconductor subió casi noventa por ciento y hoy pesa cuarenta y dos de tu cartera. La tentación de poner más es enorme. Es exactamente la situación en la que ponemos plata al revés de lo que conviene. Con la regla de balanceo, se resuelve sola: no le toca nada hasta que baje a su peso.
+
+El segundo: pasar plata a pesos para aprovechar una tasa alta. La tasa en pesos no es la ganancia; la ganancia es lo que queda después de lo que subió el dólar. Mirá siempre la columna de dólares.
+
+El tercero: comprar un dólar oficial una sola vez. Bloquea el dólar mep por noventa días: un error de un minuto con una consecuencia de tres meses.
+
+El cuarto: sumar fondos que se parecen. Más posiciones no es más diversificación. Cuatro alcanzan, y ya los tenés elegidos.
+
+El quinto, el más caro de todos: frenar el aporte porque el mercado cae. Es lo contrario de lo que funciona. Si hay un mes en el que no tenés ganas de aportar, ese es el mes más importante para hacerlo.
+
+# lo que dejé afuera a propósito
+
+Para que no te quede la duda, repaso lo que este episodio no cubre y por qué.
+
+No cubre cómo facturás ni el monotributo, ni impuestos, ni cómo traer o sacar plata, porque lo tenés resuelto. No cubre noticias ni coyuntura del día, porque cambian cada semana y este capítulo tiene que servirte dentro de un mes.
+
+Sí hay una cosa que va a necesitar una decisión tuya más adelante, y la nombro sin resolverla: cuando lo invertido en estados unidos se acerque a los cincuenta mil dólares, hay una decisión de estructura sobre qué versión de los fondos conviene tener. El plan marca octubre del año que viene como fecha, y el tracker avisa cuando se pase de ese número.
+
+# la recomendación, en cuatro frases
+
+Cierro con lo que haría yo, en el orden en que lo haría.
+
+Primero: que el aporte mensual a estados unidos salga todos los meses, el día del cobro, sin importar cómo esté el mercado. Es lo que más importa y lo único que no podés dejar de hacer. El primero ya está, y eso es lo más difícil.
+
+Segundo: ir a la cartera de cuatro fondos que elegiste hoy, veintisiete y medio, treinta, veintidós y medio y veinte, con la regla de balanceo en cada aporte, sin vender nunca, y con el semiconductor sin recibir plata nueva hasta que baje a su peso.
+
+Tercero: en argentina, pesificar siempre por dólar mep, nunca comprar un dólar oficial, un mes de gastos en un fondo de dinero, y el resto del colchón en brou.
+
+Cuarto: los cinco mil dólares de galicia, como experimento chico y bien hecho, con el calendario de octubre y la compra del dos de noviembre. Y con una regla de antemano: si se pierde una parte en un mal mes, no se agrega más; se espera, y recién se decide en el trimestre siguiente.
+
+Y con esto vuelvo a tu pregunta. Alta ganancia y poco riesgo: la versión real de eso es una cartera diversificada, un colchón que cubra los gastos, aportes constantes y la decisión de no vender asustado. No se cuenta en una charla de café, pero es lo que de verdad funciona, y desde esta mañana ya no es un plan: está comprado.
+
+# cierre
+
+Para cerrar, lo concreto de esta semana, en tres pasos chicos. Uno: del lado de estados unidos, nada que hacer hasta el próximo cobro; mañana mirá el widget de inversiones, que va a mostrar la compra de hoy con el cierre de hoy, y después dejalo tranquilo. Dos: abrir la cuenta comitente en galicia y hacer el test de perfil. Tres: mandarle a galicia las ocho preguntas.
+
+Las tablas, los números y las fuentes están en las carpetas de plata, con la fecha en que se leyó cada dato, y las ejecuciones de hoy anotadas una por una. Si querés una versión de una hora de este mismo capítulo, decime qué parte ampliar cuando lo escuches.
+
+Gracias por escucharlo. Nos vemos en el próximo.
