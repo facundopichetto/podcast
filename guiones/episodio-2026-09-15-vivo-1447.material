@@ -2279,3 +2279,56 @@ lo que hablo facundo en la pestaña:
 - 11:24 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
 - 11:24 chat pendiente [flos]: el daemon que lo tomó no está más (reinicio o caída), guardo la pregunta sin respuesta
 - 11:25 acciones: 1 receta(s) con cli quedaron fuera del catalogo (barrida_hardcode): les...
+
+### tramo 11:26-05:13 (hecho)
+## [juegos] lo que se hizo en juegos
+tareas cerradas:
+- 13:11 {widescreen-rp5} [compromiso juegos-1003-1] [toca: rp5/] recupero de la noche del 03/10 (caja C de facundo en flos): la pasada de widescreen y controles modernos que widescreen-controles hizo en cloud sin la retroid y no aplico nada (su informe en tools/agente/logs/20261003-042958.txt; los archivos...
+lo que hablo facundo en la pestaña:
+- 13:31 facundo: (tarea limpieza-rp5: tema juegos: [compromiso juegos-1003-1#2854] [toca: ESTADO.md, rp5/] pasada 2 de) / claudio: terminó limpieza-rp5 (agy, cuenta orugote (sub gemini) (agy), 20 min, $0.00): compromiso juegos-1003-1 cumplido en 3 pasada(s), $0.00. limpieza reducida de 39 a 37 juegos (28,84 GiB). Todos los juegos restantes abajo de 40 fps tienen su mejor versión a 60 fps instalada o su prueba técnica escrita de que no tienen...
+- 13:37 facundo: como fue eso? / claudio: entendí: querés saber cómo fue la corrida de limpieza-rp5 y qué se hizo en la consola. voy a revisar el informe y el estado. » leyendo el informe de limpieza » leyendo el estado actual de juegos » buscando el registro del compromiso » revisando el compromiso del supervisor el supervisor corrió 3 pasadas seguidas bajo...
+- 13:38 facundo: consulta: de los juegos que quedan en limpieza. no quedaron alternativas a esos juegos que corran en "mejores sistemas" o al menos con mejores posibilidades? es decir no hay version de ps2.. o algo asi? / claudio: » revisando el informe de limpieza y el estado de juegos » viendo el estado del tema juegos » leyendo el informe de alternativas entre sistemas » verificando cruce de los 59 juegos » revisando la lista actual de 37 juegos en limpieza no, ya se cruzaron todos contra otros sistemas en...
+- 13:40 facundo: ok puedo desenchufar la consola y probar la coleccion limpieza o no esta actualizada? / claudio: entendí: querés saber si podés desenchufar la consola y si la colección limpieza en es-de está al día para probarla. voy a revisar el estado de la colección y de la consola » revisando el estado de la colección y de la consola » revisando el informe de la última limpieza » verificando el archivo de la colección en la...
+- 13:43 facundo: A: regenerar custom-LIMPIEZA.cfg con los 37 juegos reales de limpieza y reiniciar es-de / claudio: salió regenerar en tema juegos.
+- 13:51 facundo: (tarea regenerar: tema juegos: regenerar custom-LIMPIEZA.cfg con los 37 juegos reales de limpiez) / claudio: terminó regenerar (agy, cuenta orugote (sub gemini) (agy), 8 min, $0.00): [juegos] coleccion...
+
+## [flos] lo que se hizo en flos
+lo que hablo facundo en la pestaña:
+- 11:37 facundo: (tarea barrida-recurrente: tema flos: [toca: daemon.py, recetas/] barrida recurrente nocturna con modelo de) / claudio: barrida-recurrente corrió pero no cierra (agy, cuenta orugote (sub gemini) (agy), 14 min, $0.00): la tarea cerro diciendo "en segundo plano" pero no quedo ningun proceso vivo (ni desprendido ni con pid nombrado): vuelve a la cola con sus pasos: El módulo...
+- 11:43 facundo: A: dejo que corra el reintento de barrida-recurrente y te aviso como sale / claudio: dale, dejo que corra el reintento de barrida-recurrente y te aviso apenas termine.
+- 11:56 facundo: (tarea claude-2: tema flos: [toca: recetas/] cambiar las recetas para que claude quede únicamente) / claudio: terminó claude-2 (agy, cuenta orugote (sub gemini) (agy), 10 min, $0.00): las recetas quedaron ajustadas para que claude nunca actúe como primera opción y quede exclusivamente como fallback de auxilio ante fallos o tareas colgadas. en...
+
+## [tinder] lo que se hizo en tinder
+lo que hablo facundo en la pestaña:
+- 21:24 facundo: laura brrz o algo asi: unfollow and ignore / claudio: ojo: dije que lo encolaba y no quedo ninguna orden en la cola. no se perdio nada de lo de arriba, pero todavia no lo esta haciendo nadie: decime dale y lo encolo ahora. entendí: te referís a @laura.brrz, que está en limbo y es mutua. querés el voto unfollow + ignore: pasa a ignorada y el unfollow sale por la cola de...
+
+## [flaudio] lo que se hizo en flaudio
+lo que hablo facundo en la pestaña:
+- 13:11 facundo: (aviso de claudio) / claudio: una tarea de la cola está bloqueada y te necesita: el compromiso juegos-1003-1 (juegos) no avanza: dos pasadas seguidas dejaron lo mismo (la pasada no dijo que quedo pendiente (no quedó: ausente): revisar contra el objetivo). necesito que decidas como seguir
+
+## [log] movimiento del agente
+- 05:10 aviso despachado (solo buzon, sin pane de claude): 2026-10-04 05:10 [info] el oauth de la cuenta facundo murio (refresco preventivo
+- 05:10 push: 1/1 ok
+- 05:10 [parar_daemon] socorro: cola_avanza: TERM a 3070698 (daemon)
+- 05:10 daemon recibe SIGTERM
+- 05:10 daemon sale
+- 05:10 [launcher] daemon.py es el mismo que daemon.py.ok: salto el arranque en seco (76 s, 2059 {flow})
+- 05:10 daemon arranca (pid 3072463)
+- 05:10 bus: escuchando en /home/agente/.claudio/tools/agente/tmp/bus.sock
+- 05:10 bus de tareas: escuchando en /home/agente/.claudio/tools/agente/tmp/bus.sock
+- 05:10 OJO: temas sin carpeta en esta maquina: flabs. sus ordenes (tema <x>: ...) se rutean a tools: no encolar trabajo de esos temas aca.
+- 05:10 chat lan: escucho en la de users f claudio tools agente.0.0.1:8781, 192.168.1.80:8781, 192.168.1.81:8781, 100.77.97.14:8781
+- 05:10 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: claudio (watchdog): reinicie el daemon del server (cola_avanza | baje el daemo
+- 05:10 chat lan: github queda de respaldo (tope bajo): la nube contesta y el board habla por nube
+- 05:10 hilos: tope 7 (escalon bajo: ram 6511 mb, load 0.05 por cpu)
+- 05:11 reparto de modelo [base]: cola sonnet -> faacuu (week 6, fable 5), chat fable -> faacuu (week 6, fable 5), resumen opus: modo base: sonnet de base, opus para rescate, lo complejo y la muestra (fable...
+- 05:11 oauth: token vencido, refrescado con una llamada minima
+- 05:12 pasos al cerrar: cierra hecha (reintento): esta linea ya es el reintento que encolo el cerrador de pasos: no se rebota de nuevo, cierra hecha · tema juegos: {conseguir-pc-medianos} [toca: ESTADO.md...
+- 05:12 verificador: hecho (git: 1 de 1 archivo(s) de [toca:] commiteados desde la orden: ESTADO.md)
+- 05:12 cola: la orden conseguir pc medianos soltó su candado [juegos]: cerro con rc=0
+- 05:12 tarea ok (opus, reintento, cuenta faacuu (opus), 1 min, $0.50, 370k in/4k out, chrome 0, recetas 1, capturas 0): tema juegos: {conseguir-pc-medianos} [toca: ESTADO.md, rp5/] [facundo lo pidió desde...
+- 05:12 orden conseguir pc medianos (conseguir-pc-medianos): declarado vs escrito: declaro ['rp5/'], escribio nada; declaro y no toco: ['rp5/']
+- 05:12 deploy_cloud: limpieza en cloud: 0 colgado(s), 0 sesion(es) zombi cerrada(s) de 8192, 0.0 por encima del tope 3; carga 0.19, 2627.0 MB libres
+- 05:12 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 35 archivo(s) sincronizados
+- 05:12 nube_al_dia: codigo de cloud actualizado (66cff8eb44f0d8c2 -> 533725e21f4b5795)
+- 05:12 cambio_sistema: caos-simulado...

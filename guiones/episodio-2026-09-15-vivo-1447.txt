@@ -1,8 +1,24 @@
-# actualizado hoy a las 11:26
-actualizado hoy, sábado tres, a las once veintiséis.
+# actualizado hoy a las 05:13
+actualizado hoy, domingo cuatro, a las cinco trece.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# la retroid: la coleccion de limpieza quedo en treinta y siete juegos y lista para probar
+desde las once y veintiséis de la mañana el foco estuvo puesto en la consola retroid y en dejar lista la tanda de juegos. a eso de la una y diez saltó un aviso en flaudio porque la cola de trabajo se había quedado frenada: el compromiso de juegos no podía avanzar porque la tarea de pantalla ancha y controles modernos llevaba dos pasadas seguidas dejando exactamente el mismo estado. ese trabajo venía de un intento de la noche anterior que se había ejecutado en la nube sin tener la retroid conectada, por lo que no había podido aplicar ninguna modificación sobre los juegos.
+
+con esa traba resuelta se largó la segunda pasada de limpieza de la consola. el supervisor ejecutó tres pasadas consecutivas bajo el compromiso acordado, sin costo alguno y en unos veinte minutos de trabajo. el resultado fue que la lista de limpieza se redujo de treinta y nueve a treinta y siete títulos, sumando casi veintinueve gigas en total. se verificó que todos los juegos que corren por debajo de los cuarenta cuadros por segundo tengan instalada su mejor versión a sesenta cuadros, o bien que cuenten con una prueba técnica documentada que justifique por qué no hay una versión superior disponible.
+
+a la una y media preguntaste cómo había sido esa corrida y te fui contando el paso a paso de las tres pasadas. en esa charla te surgió una duda puntual: querías saber si para esos treinta y siete juegos que quedaron en limpieza no existían alternativas en sistemas más potentes, como playstation dos, que pudieran ofrecer un mejor rendimiento. me puse a revisar el cruce técnico de los cincuenta y nueve títulos analizados contra otros catálogos y te confirmé que ya estaban todos chequeados, de manera que ninguno de los que quedó en la lista tiene una versión superadora en otra plataforma.
+
+enseguida preguntaste si ya podías desenchufar la consola para ponerte a probar la colección depurada o si todavía no estaba actualizada. la lista interna estaba lista, pero para que impacte en la pantalla hacía falta volcarla a la configuración de emulationstation. te presenté las opciones y elegiste la de regenerar el archivo de la colección con los treinta y siete juegos reales y reiniciar el entorno. esa tarea tardó ocho minutos, cerró sin costo y dejó la consola lista para desconectar y probar con el catálogo al día.
+
+# flos: claude pasa a ser solo auxilio ante caidas y la barrida nocturna que no cerro
+cerca del mediodía hubo un movimiento central en las recetas de flos. a las doce menos cuatro terminó una tarea de diez minutos que redefinió el lugar de claude dentro de la estructura. a partir de este cambio, las recetas quedaron configuradas para que claude nunca actúe como primera alternativa en la ejecución de tareas. la regla es terminante: queda relegado de manera exclusiva como un modelo de auxilio y rescate para intervenir ante fallos imprevistos o tareas que se queden colgadas en el sistema.
+
+un rato antes, a las once y treinta y siete de la mañana, la barrida recurrente nocturna había intentado correr durante catorce minutos y terminó cerrando con un falso positivo. la tarea reportó que quedaba en segundo plano, pero cuando el sistema fue a inspeccionar el entorno descubrió que no había ningún proceso vivo, ni desprendido ni con un identificador de proceso asociado. el detector de tareas incompletas interceptó esa inconsistencia al instante y devolvió la orden a la cola con todos sus pasos para no dar por terminado algo que no estaba corriendo.
+
+a las doce menos cuarto te mostré la situación y elegiste la opción de dejar que corra el reintento de la barrida para evaluar cómo salía, con el compromiso de avisarte en cuanto estuviera el resultado definitivo.
 
 # el error de créditos de fable en awtomic, el guard con opus y la bolita del chat
 a eso de las diez menos diez de la mañana quisiste usar una pestaña de awtomic y saltó un cartel avisando que fable cinco punto uno requería créditos de uso y que había que cambiar de modelo para seguir. el problema venía de cómo estaba armada la receta del reparto de cuentas: en la rama de las cuentas exclusivas para awtomic y su entorno de pruebas, el código devolvía fable de forma directa sin verificar si el modelo estaba realmente habilitado. para destrabarlo pediste dos cosas juntas: corregir esa rama para que use opus y meter un control de resguardo en la llamada de claude, de manera que ante cualquier aviso de falta de créditos reintente solo con opus en vez de tirar el error en la cara.
@@ -752,6 +768,23 @@ a las diez menos cuarto preguntaste si la limpieza nueva ya estaba armada como c
 también hubo un arrepentimiento limpio: a las nueve y media tocaste una caja para encolar la vuelta de kirby para cuando termine la copia de black y sumar un juego de básquet a la próxima limpieza, y un minuto después escribiste "me arrepentí". quedó anulada, no se encoló nada.
 
 y lo que sí cerró de madrugada: dos juegos de playstation habían quedado con el cuadro por segundo vacío porque una tarea de apagar le pisó el aparato a la remedición, y se volvieron a medir con la misma receta y los mismos parámetros. más tarde se scrapearon los dos que entraron el 28, carátula, snap y título, verificando por consola que quedaran en el aparato.
+
+# tinder: el pedido por laura que no habia entrado a la cola
+a eso de las nueve y veinte de la noche pasaste por la pestaña de tinder para pedir que dejemos de seguir e ignoremos la cuenta de laura. apenas leí el mensaje te marqué un detalle importante: en la respuesta anterior te había dicho que mandaba la orden a la cola, pero en la práctica esa orden nunca había quedado registrada en el sistema de trabajo, por lo que nadie la estaba procesando.
+
+te tranquilicé confirmando que no se había perdido nada del contexto y te detallé el perfil en cuestión. se trataba de una cuenta que estaba ubicada en la lista de limbo y que formaba parte de las conexiones mutuas. el voto solicitado combinaba dejar de seguir con ignorar, lo que significa que el perfil pasa a la lista de descartadas y el pedido de unfollow se despacha por la cola en cuanto respondas con un dale.
+
+# juegos: conseguir pc medianos cerro en reintento pero sin tocar la consola
+a las cinco y doce de la madrugada se dio por finalizada la orden de conseguir computadoras medianas en el tema de juegos. la tarea se resolvió a través de un reintento utilizando opus, con una duración de un minuto y un costo de cincuenta centavos de dólar. el verificador de pasos la aprobó porque se registró y commiteó en el repositorio el archivo general de estado.
+
+sin embargo, quedó registrada una discrepancia entre lo que la orden declaró que iba a hacer y lo que efectivamente tocó. la tarea había anunciado que iba a modificar la carpeta de la retroid, pero al revisar el resultado se constató que no escribió ningún archivo en ese directorio y únicamente modificó el documento de estado. como esta ejecución ya correspondía al reintento generado por el cerrador automático, el sistema evitó rebotarla una vez más, liberó el candado de la cola y la marcó como terminada sin errores.
+
+# lo que se movio en el agente: reinicio del daemon, sesion renovada y deploy a cloud
+a las cinco y diez de la madrugada el supervisor detectó que la cola de trabajo no estaba avanzando y le envió una señal de corte al daemon del servidor. el proceso anterior se dio de baja de forma ordenada y de inmediato levantó una instancia nueva. como el script principal era idéntico a la copia de seguridad que ya estaba validada, se salteó la rutina de arranque en seco que suele tomar más de un minuto.
+
+en ese mismo momento se detectó que el token de autenticación de tu cuenta había expirado, por lo que se ejecutó una renovación preventiva mediante una llamada mínima sin generar demoras. el bus interno volvió a quedar a la escucha en su socket local y el chat de red se activó tanto en las direcciones hogareñas como en tailscale, manteniendo github como respaldo con un tope bajo mientras la nube y el tablero siguen respondiendo con normalidad. la cantidad de hilos de trabajo se fijó con un tope de siete, calibrado según los seis gigabytes y medio de memoria libre y la carga baja del procesador.
+
+también quedó asentado el recordatorio de que esta máquina no cuenta con un directorio local para flabs, por lo que cualquier orden de ese tema se rutea hacia la carpeta de herramientas para evitar encolar tareas acá. el reparto de modelos quedó establecido en el perfil base, utilizando sonnet para la cola, fable para el chat y reservando opus para rescates y tareas pesadas. a las cinco y doce se completó una limpieza en la nube sin sesiones colgadas y se ejecutó un deploy con treinta y cinco archivos sincronizados que dejó el código actualizado, seguido por una prueba de caos simulado con reversión automática.
 
 # la orden de comment cerró bien, y soltó su candado
 a las cuatro y ocho terminó una tarea de awtomic: el comment que habías aprobado. cerró con todo en orden y soltó el candado que tenía tomado, así que lo que estaba esperando detrás de ella pudo seguir.
