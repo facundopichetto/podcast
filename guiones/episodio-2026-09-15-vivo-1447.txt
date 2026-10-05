@@ -1,8 +1,41 @@
-# actualizado hoy a las 05:13
-actualizado hoy, domingo cuatro, a las cinco trece.
+# actualizado hoy a las 03:41
+actualizado hoy, lunes cinco, a las tres cuarenta y uno.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el dique de flos sigue cerrado, y la orden que lo quería abrir
+a la tarde, entre las seis menos cuarto y las seis y cuarto, preguntaste dos veces cómo venía el triage de las pruebas rojas y cómo había salido. después vino la pregunta de fondo: si ya se podía sacar la pausa de flos. antes de abrir el dique quisiste saber si había cosas repetidas, viejas o al pedo esperando, para no inundar el pueblo. en la cola ya no quedaban repetidas, porque las copias se habían borrado antes. lo que sí había eran órdenes viejas del dos de octubre: errado, me arrepentí y catálogo. aparte estaba la barrida recurrente, que era riesgosa con tantas pruebas en rojo.
+
+elegiste dejar flos en pausa y encolar el arreglo de los cuatro quick wins y de las cuatro pruebas viejas que había marcado el triage. después pediste cancelar cinco cosas antes de seguir: la barrida recurrente, el simulacro de claude, errado, me arrepentí y catálogo. ahí me equivoqué: la respuesta dijo que la orden cancelaba esas cinco y además reanudaba flos. me frenaste en el momento, con todas las letras: no había que reanudar nada, solo cancelar. lo corregí con una orden que sacó la reanudación, y flos quedó en pausa, con el dique cerrado.
+
+hay un detalle que conviene que sepas. en el movimiento del agente de la madrugada, cerca de las tres y media, la barrida recurrente sigue apareciendo como reintento, saltando entre opus y fable. es una de las cinco que pediste cancelar.
+
+# la madrugada del daemon: tres kills de socorro en setenta minutos
+cerca de las tres y media de la mañana el agente pasó un rato feo. el vigilante reinició el daemon del server porque se había trabado escribiendo la cola. el socorro lo bajó primero por las buenas y después a la fuerza, y a las tres y treinta y cinco salió el aviso de que era el tercer kill de socorro al daemon en setenta minutos.
+
+en el medio, la base de la cola no se pudo escribir porque había un dato vacío donde tenía que haber texto. como respaldo, el agente escribió la orden en el archivo de órdenes de siempre. también hubo un candado trabado: una parte del daemon esperó el lock de la cola mientras otro hilo lo tenía agarrado desde hacía más de un minuto.
+
+la barrida recurrente volvió a moverse: fallaba con opus, la quería rescatar fable un escalón más arriba, y el reparto por porcentaje la bajaba otra vez a opus en la cuenta facundo porque fable no puede pasar por encima de week. con eso terminó corriendo en paralelo, con el lock como árbitro.
+
+lo demás salió bien. el tope de hilos quedó en siete, con memoria y carga tranquilas. el deploy a cloud sincronizó veinticuatro archivos y el código de la nube quedó al día. el daemon principal no viajó porque cloud ya había rechazado esa versión. el caos simulado se aplicó sin problemas, con su revert automático armado. a las tres y treinta y nueve quedaron cambios acumulados y el reinicio quedó diferido hasta que no haya ninguna tarea viva. también quedó programada para la madrugada del martes, a las tres, la actualización nocturna de los tres programas del server.
+
+# la cadena del chat ahora arranca por groq, y claude quedó afuera
+a las cinco de la tarde preguntaste qué cuenta se estaba usando y cómo funcionaba el reparto. al rato pediste que la cadena del chat fuera rápida, con la idea de que era groq y después sonnet. hasta ese momento el chat iba por agy, sonnet, opencode, groq y local; la que tenía groq al frente era la de entendí. te propuse groq, sonnet, agy, opencode y local, y lo encolaste.
+
+esa tarea terminó en siete minutos, y sin sonnet: groq, agy, opencode y local. según la tarea, así el chat contesta en uno o dos segundos. elegiste dejarla así, sin claude, y que sonnet entre después con la orden de la cadena del chat. como eso era de flos, la respuesta entera fue a esa pestaña. la cadena rápida sin claude cerró a los tres minutos.
+
+más tarde se cerraron dos cosas más del mismo tema. a las ocho y cuarenta de la noche se apagó la api de gemini prepago de ai studio en las cadenas y en los respaldos, para que no gaste saldo: queda solo agy con la suscripción ultra. a las once y dieciocho se dio de alta la tercera cuenta de groq, los relevos quedaron calibrados al noventa y nueve por ciento por minuto y por día, y el widget de modelos pasó a una versión compacta con doble barra.
+
+# el widget de usage pasa a llamarse models, y orugote se esconde sin desconectarse
+a las seis y ocho de la tarde, en la pestaña de la mesa, pediste tres cosas para el widget de consumo. la primera, esconder orugote sin borrar la conexión, para que vuelva sola si reactivás esa cuenta. la segunda, cambiarle el nombre de usage a models. la tercera, que los medidores de mistral, gemini y groq tengan sentido, porque mostraban todo mal.
+
+te conté qué medían en ese momento y quedó encolado así: el widget se llama models, orugote se esconde mientras esté excluida y cada barra se mide contra su cuota real. groq va contra doscientos mil tokens por día, mistral contra los treinta dólares de crédito del plan pro y gemini contra los veinte dólares de saldo prepago. como era de modelos, la respuesta fue a esa pestaña.
+
+# el pedido del widget se cayó cuatro veces seguidas
+en la pestaña de flos mandaste lo mismo cuatro veces: código nuevo para el widget, y que lo mejore. fue a las dos y veintiocho, a las cuatro y seis, a las cuatro y diez y a las cuatro y veintiséis. las cuatro veces el turno se cayó antes de contestar. la pregunta quedó guardada, pero no llegó ninguna respuesta. ese pedido sigue sin atenderse.
+
+después, a las cinco y doce, me pasaste el contexto que traías de otra sesión de claude code. la suite tenía cincuenta y una pruebas en rojo, medidas ese día con la corrida completa. por eso el actualizador nocturno se negó a tocar algo: su primera regla es no actualizar con la suite rota. a las cinco y diecisiete preguntaste si ese mensaje me había llegado. llegó bien. al minuto pediste que te contara cómo venía todo y si la cola estaba sana o rota, y desde ahí la charla siguió por el triage de la pestaña del server.
 
 # la retroid: la coleccion de limpieza quedo en treinta y siete juegos y lista para probar
 desde las once y veintiséis de la mañana el foco estuvo puesto en la consola retroid y en dejar lista la tanda de juegos. a eso de la una y diez saltó un aviso en flaudio porque la cola de trabajo se había quedado frenada: el compromiso de juegos no podía avanzar porque la tarea de pantalla ancha y controles modernos llevaba dos pasadas seguidas dejando exactamente el mismo estado. ese trabajo venía de un intento de la noche anterior que se había ejecutado en la nube sin tener la retroid conectada, por lo que no había podido aplicar ninguna modificación sobre los juegos.
@@ -773,6 +806,26 @@ y lo que sí cerró de madrugada: dos juegos de playstation habían quedado con 
 a eso de las nueve y veinte de la noche pasaste por la pestaña de tinder para pedir que dejemos de seguir e ignoremos la cuenta de laura. apenas leí el mensaje te marqué un detalle importante: en la respuesta anterior te había dicho que mandaba la orden a la cola, pero en la práctica esa orden nunca había quedado registrada en el sistema de trabajo, por lo que nadie la estaba procesando.
 
 te tranquilicé confirmando que no se había perdido nada del contexto y te detallé el perfil en cuestión. se trataba de una cuenta que estaba ubicada en la lista de limbo y que formaba parte de las conexiones mutuas. el voto solicitado combinaba dejar de seguir con ignorar, lo que significa que el perfil pasa a la lista de descartadas y el pedido de unfollow se despacha por la cola en cuanto respondas con un dale.
+
+# juegos: donkey kong, idtech, las trece filas y los controles de max payne y celeste
+en juegos se cerraron cuatro tareas, cada una con la caja que tocaste y nada más. a las ocho de la noche siguió el tercer recomp de la lista, donkey kong sesenta y cuatro rekongpiled. a las once menos ocho quedó instalado y probado primero el bloque de idtech cuatro a, de casi nueve gigas y medio en la memoria interna, con todo ya respaldado en black.
+
+a las dos y nueve de la mañana cerró la tanda grande: las trece filas marcadas en la partida, instaladas y probadas con cuadros por segundo, tirones y controles modernos. a la rp5 subieron las que pasaron la regla de tirones, y quedó una lista de candidatos para la próxima con lo que falló y lo que quedó afuera. a las tres cerró el perfil de controles de winlator para los dos max payne y para celeste. los max payne quedaron a mil doscientos ochenta por setecientos veinte, y celeste y gran turismo dos se midieron jugando.
+
+el pedido de la mañana del domingo, el de conseguir los datos de los shooters para los ports y los juegos de windows para winlator, terminó encolado como un script de descarga que verifica los checksums y queda listo para correr en el server.
+
+# qué ver: youtube premium adentro, y faltan cuatro claves
+a las diez de la noche abriste algo nuevo en personal: que yo entre a tus servicios de streaming, vea lo que mirás y te recomiende qué ver. son netflix, plex, disney, flow, hbo max, prime video y youtube. en la bóveda ya estaban netflix y amazon, que sirve para prime, de la cuenta orugote. de plex, disney, flow y hbo max no había nada.
+
+me aclaraste que youtube no se usa con orugote, sino con la otra cuenta donde tenés premium. la primera vez, esa corrección no entró a la cola y te lo dije. se reintentó, y a las diez y veintiuno el login quedó verificado dos veces: la cuenta activa en youtube y la membresía premium a cuatro mil cuatrocientos noventa y nueve pesos por mes. la entrada de netflix y prime cerró a las diez y veinticuatro. faltan las cuatro claves que no tengo: plex, disney, flow y hbo max. en plex además hay que saber si el server es tuyo o de otra persona. recién con todo adentro se arma la primera lista de lo visto y la primera tanda de recomendaciones.
+
+# tinder: laura y chiaabal, afuera con unfollow e ignorar
+a la mañana pediste unfollow e ignorar a laura. el primer intento dijo que seguía en segundo plano, pero no quedaba ningún proceso vivo, así que el detector lo devolvió a la cola. a las dos de la tarde dejaste correr el reintento y pediste lo mismo para chiaabal. esa tarea cerró a las cinco y nueve: chiaabal pasó de solicitud enviada a ignorada y su unfollow quedó en la cola de instagram, con el ritmo de siempre.
+
+# los votos de la madrugada, y wise que sigue esperando
+entre la una y media y las dos menos tres de la mañana votaste tres tandas en instagram. en la primera, seis para dejar de seguir. en la segunda, nueve: uno que interesa, un maybe, seis que no van y un follow que pasó a solicitud enviada. en la tercera, otras seis para dejar de seguir.
+
+en plata, a las cinco y veintiséis de la tarde, wise seguía con la verificación pendiente. faltan las fotos del dni y de tu cara, que se sacan desde el celular.
 
 # juegos: conseguir pc medianos cerro en reintento pero sin tocar la consola
 a las cinco y doce de la madrugada se dio por finalizada la orden de conseguir computadoras medianas en el tema de juegos. la tarea se resolvió a través de un reintento utilizando opus, con una duración de un minuto y un costo de cincuenta centavos de dólar. el verificador de pasos la aprobó porque se registró y commiteó en el repositorio el archivo general de estado.

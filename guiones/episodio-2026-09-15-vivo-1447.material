@@ -2332,3 +2332,103 @@ lo que hablo facundo en la pestaña:
 - 05:12 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 35 archivo(s) sincronizados
 - 05:12 nube_al_dia: codigo de cloud actualizado (66cff8eb44f0d8c2 -> 533725e21f4b5795)
 - 05:12 cambio_sistema: caos-simulado...
+
+### tramo 05:13-03:41 (hecho)
+## [juegos] lo que se hizo en juegos
+tareas cerradas:
+- 19:59 {tercer-recomp-2} seguir con el tercer recomp de la lista (Donkey Kong 64 Rekongpiled) [facundo tocó la caja A y ese es su texto literal: hacer SOLO eso, ninguna otra letra del menú autoriza nada; el contexto está en la charla previa de la pestaña] (de chat)
+- 22:52 {instalar} instalar y probar primero el bloque de idTech4A++ (9,52 GiB en la interna, todo ya en black) [facundo tocó la caja A y ese es su texto literal: hacer SOLO eso, ninguna otra letra del menú autoriza nada; el contexto está en la charla previa de la pestaña] (de chat)
+- 02:09 {instalar-filas} instalar y probar las 13 filas marcadas en partida (fps, p95, controles modernos), subirlas a la rp5 las que anden con la regla de tirones, y armar rp5/candidatos-siguiente-*.md con lo que falló más lo que quedó afuera [facundo tocó la caja A y ese es su texto literal: hacer SOLO...
+- 03:00 {perfil-controles} armar el perfil de controles de Winlator para los dos Max Payne y Celeste, poner los dos Max Payne a 1280x720 y medir Celeste y Gran Turismo 2 jugando [facundo tocó la caja A y ese es su texto literal: hacer SOLO eso, ninguna otra letra del menú autoriza nada; el contexto está en...
+lo que hablo facundo en la pestaña:
+- 09:19 facundo: necesito que me consigas unas cosas para jugar en mi rp5 A. datos para los ports de shooters Los de GOG se bajan como instalador offline. Los de Steam hay que sacarlos de una instalación (Steam en la mac o steamcmd) y copiar la carpeta. juego versión y archivos que pide el port... / claudio: OPCION A: groq: que querés que baje e instale en el server los shooters para ports y los juegos Windows (Winlator) listados, con las versiones y tiendas específicas que detallaste.
+- 09:26 facundo: A: groq: que querés que baje e instale en el server los shooters para ports y los juegos Windows (Winlator) listados, con las versiones y tiendas específicas que detallaste. / claudio: voy a preparar la descarga y organización en el server separando los datos según tienda y motor. groq y codestral y agy y local:phi3.5:3.8b y local:qwen2.5:3b y local:llama3.2:3b y local:qwen2.5-coder:7b respondiendo en lugar de local:gemma2:9b, local:qwen2.5:7b-instruct-q4_K_M y opencode porque local:gemma2:9b: fallo...
+- 09:28 facundo: A: groq: armo el script de descarga con las URLs de los shooters y Winlator, verifico los checksums y lo dejo listo para ejecutar en el server. / claudio: lo encolo: va la opción a para armar el script de descarga de los shooters y los juegos...
+
+## [server] lo que se hizo en server
+lo que hablo facundo en la pestaña:
+- 17:44 facundo: como vienee triage rojas? / claudio: » mirando el log de triage rojas » mirando los logs de tareas recientes » leyendo la info de la tarea server-1791146179 » verificando si el proceso sigue vivo » leyendo las ultimas lineas de la salida de triage rojas » buscando el archivo triage-rojas.md » buscando la orden blue shift en ordenes.md » leyendo el transcript...
+- 18:06 facundo: como fue ? / claudio: » revisando el estado de la tarea de triage » leyendo el informe de triage de rojas » revisando el estado de server » revisando archivos de estado en toolscall:default_api:run_command{CommandLine:ls -la /home/agente/.claudio/tools/agente/*estado*.md /home/agente/.claudio/tools/agente/ESTADO.md...
+- 18:15 facundo: ok como seguimos? sacamos la pausa? / claudio: entendí: querés ver cómo seguir y si conviene levantar la pausa de flos tras el triage. voy a revisar las conclusiones de triage-rojas » leyendo el informe de triage de rojas » leyendo la cola de ordenes de flos » mirando las ultimas lineas de ordenes.md » mirando los archivos de tools upgrade » leyendo para seguir...
+- 18:15 facundo: antes de sacar la pausa y abrir el dique, no hay cosas repetidas, viejas o al pedo esperando? no quiero que caiga todo e inundar el pueblo :) / claudio: hay para limpiar en [ordenes.md](file:///home/agente/.claudio/tools/agente/ordenes.md): repetidas no (las copias ya se borraron), pero errado, arrepenti y catalogo son viejas del 2 de octubre. barrida-recurrente es riesgosa con 46 rojas en...
+- 18:16 facundo: A: mantener flos en pausa y encolar el arreglo de los 4 quick wins y las 4 pruebas viejas de triage-rojas / claudio: » leyendo el informe de triage de rojas » leyendo ordenes.md » leyendo las ultimas lineas de ordenes.md » leyendo la regla de caja una letra » revisando formato de toca en ordenes » consultando estado del upgrade » revisando que proceso corre en el upgrade » buscando campos chat web en el codigo » verificando modulo...
+- 18:17 facundo: A: cancelar barrida-recurrente, simulacro-claude, errado, arrepenti y catalogo antes de reanudar / claudio: Listo, salió la orden tema modelos toca tmp prueba-2577 txt para cancelar esas cinco y reanudar flos.
+- 18:17 facundo: > flaudio: Listo, salió la orden tema modelos toca tmp prueba-2577 txt para cancelar esas cinco y reanudar flos. no hay que reanudar flos!!!! cancelar sin reanudar / claudio: Entendido, mi error. Salió la orden modo 2 para cancelar la reanudación de la orden tema modelos toca tmp prueba-2577 txt. Queda todo pausado, sin abrir el dique.
+- 18:17 facundo: >...
+
+## [modelos] lo que se hizo en modelos
+tareas cerradas:
+- 20:40 {apagar-desactivar} [toca: modelo-partes.json] apagar y desactivar la api de gemini prepago de ai studio en cadenas y backups para que no consuma saldo, dejando solo agy con la suscripción ultra (de chat)
+- 23:18 {groq-cuentas} [toca: recetas/rotador_keys.py, recetas/widgets_json.py, web/, ~/.claudio/modelos/] dar de alta la tercera cuenta de groq, calibrar relevos al 99% por minuto y por día en recetas/rotador_keys.py, y rediseñar el widget MODELS compacto con doble barra. lo que pidió facundo (pestaña...
+lo que hablo facundo en la pestaña:
+- 17:06 facundo: que cuenta estamos usando y como funciona el reparto ahora? / claudio: entendí: querés saber qué cuenta está activa y cómo funciona el reparto ahora. voy a revisar el estado actual de las cuentas y el reparto » revisando la cuenta activa y la configuración del reparto » consultando el modo y la cuenta activa en la configuración » leyendo el modo de reparto y las cuentas configuradas »...
+- 17:10 facundo: ajustame la cadena del chat para que sea rapida, creo que era groq sonnet no? ajustala o decime como seria / claudio: entendí: querés acelerar la cadena de chat priorizando groq y sonnet. voy a pasarte cómo queda y las opciones para cambiarla. hoy el chat está en agy > sonnet > opencode > groq > local (la que tenía groq al frente era entendí). para que vuele quedaría groq > sonnet > agy > opencode > local. OPCION A: encolar el cambio...
+- 17:14 facundo: A: encolar el cambio a groq > sonnet > agy > opencode > local en modelo-partes.json / claudio: ya quedó encolada en tema modelos para cambiar la cadena en modelo-partes.json.
+- 17:23 facundo: (tarea encolar: tema modelos: encolar el cambio a groq > sonnet > agy > opencode > local en m) / claudio: terminó encolar (agy, cuenta orugote (sub gemini) (agy), 7 min, $0.00): La cadena del chat quedó acelerada en [modelo-partes.json](file:///home/agente/.claudio/tools/agente/modelo-partes.json) con groq al frente: groq > agy > opencode > local. Con este cambio el chat responde inmediatamente en 1 a 2 segundos por Groq...
+- 17:27 facundo: A: dejar la cadena rápida sin claude (groq > agy > opencode > local) y que sonnet entre con {cadena-chat} (orden aplicar voto) / claudio: esto es de flos, no de acá: te dejo la respuesta entera en esa pestaña.
+- 17:30 facundo: (tarea cadena-rapida: tema modelos: dejar la cadena rápida sin claude (groq > agy > opencode > local) / claudio: terminó cadena-rapida (agy, cuenta orugote (sub gemini) (agy), 3 min...
+
+## [flos] lo que se hizo en flos
+lo que hablo facundo en la pestaña:
+- 14:28 facundo: codigo nuevo para el widget, mejoralo / claudio: (el turno se cayó antes de contestar: tu pregunta quedó guardada acá, no se perdió. repetila o decime seguí con esto y la contesto de nuevo)
+- 16:06 facundo: codigo nuevo para el widget, mejoralo / claudio: (el turno se cayó antes de contestar: tu pregunta quedó guardada acá, no se perdió. repetila o decime seguí con esto y la contesto de nuevo)
+- 16:10 facundo: codigo nuevo para el widget, mejoralo / claudio: (el turno se cayó antes de contestar: tu pregunta quedó guardada acá, no se perdió. repetila o decime seguí con esto y la contesto de nuevo)
+- 16:26 facundo: codigo nuevo para el widget, mejoralo / claudio: (el turno se cayó antes de contestar: tu pregunta quedó guardada acá, no se perdió. repetila o decime seguí con esto y la contesto de nuevo)
+- 17:09 facundo: que version de opus hay aca ? / claudio: » buscando opus en la configuracion y codigo de flos » revisando configuraciones de modelos y versiones en el sistema » verificando la version de claude y modelos configurados » verificando claude --version directamente » buscando definicion de opus en daemon.py y recetas » mirando definicion de MODELOS en daemon.py »...
+- 17:12 facundo: segui flos contexto, porque esto lo venia haciendo claude code en otra sesion y vos no lo sabes: la suite esta en 51 rojas, medidas hoy con verde --todas (323 pruebas, 271 ok). por eso el actualizador nocturno programa se nego a actualizar nada: su primera regla es no tocar un... / claudio: » buscando agy-prompt-chat en el codigo de flos » buscando segui flos en daemon.py y recetas » buscando temas_pausados en daemon.py » buscando donde esta temas_pausados » buscando definicion de temas_pausados en el repositorio » viendo definicion de temas_pausados en daemon_cola.py » viendo cola_cmd.py para segui y...
+- 17:17 facundo: > f: segui flos > contexto, porque esto lo venia haciendo claude code en otra sesion y vos no lo > sabes: la suite esta en 51 rojas, medidas hoy con verde --todas (323 pruebas, te llegó este mensaje? / claudio: sí, llegó bien. acá estoy, decime cómo seguimos con flos.
+- 17:18 facundo: quiero que me cuentes como viene todo, y si me digas si la cola está ok o ta rota / claudio: » revisando el script que llama a agy y el estado de la cola y del sistema » leyendo recetas de chat y estado de la cola » consultando el estado general de flos con chat.status » revisando pausas y estado de la cola en el agente...
+
+## [personal#2] lo que se hizo en personal#2
+lo que hablo facundo en la pestaña:
+- 22:06 facundo: esto que sea sobre "que ver" idealmente quiero que tengas acceso a mi: netflix, plex, disney, flow (de argentina), hbomax, primevideo, youtube fijate de todo eso a que podes entrar y logeate a lo que no. quiero que vayas viendo que veo y me recomiendes que ver y lo vaymos... / claudio: [personal#2] en la bóveda ya hay netflix (orugote@gmail.com), amazon.com (orugote, sirve para prime video) y la cuenta google pichetto (sirve para youtube). no tengo nada de plex, disney, flow ni hbo max. para plex falta saber si es tu server o uno ajeno (el server de acá no lo tiene montado). lo que entendí: armo...
+- 22:07 facundo: A: encolo la entrada a las siete de una, me logueo con netflix, prime y youtube, y te vengo a pedir las claves de plex, disney, flow y hbo max; recién con todo adentro armo el primer visto.md y la primera tanda de recomendaciones / claudio: [personal#2] salió la a, tema personal#2: entro a las siete desde el chrome del server, me logueo con netflix, prime y youtube, y después te vengo a pedir las claves de plex, disney, flow y hbo max. recién con todo adentro armo el visto.md y la primera tanda de recomendaciones.
+- 22:08 facundo: la de youtube no es orugote , uso otra en donde tengo youtube premium. la cuenta es <clave: cuenta de youtube premium (gmail)> creo que en el chrome de orugote esta la clave / claudio: [personal#2] ojo: esta orden NO entro a la cola, la base la rechazo y no va a correr. la dejo escrita para reintentarla: - [ ] tema personal#2: CORRECCION 2943: youtube no se loguea con orugote sino con la cuenta de youtube premium que está en la bóveda como cuenta de youtube premium (gmail); la clave de esa cuenta...
+- 22:21 facundo: (tarea youtube-orugote: tema personal#2: CORRECCION 2943: youtube no se loguea con orugote sino con la c) / claudio: [personal#2] terminó youtube-orugote (opus, chrome, cuenta facundo (opus), 11 min, $3.20): Listo. Chequeo de dos lados: el login quedó verificado en youtube.com/account (cuenta activa <clave: cuenta de youtube premium (gmail)>) y en paid_memberships (Premium ARS 4,499.00/mo), que es lo que pedía la corrección. youtube...
+- 22:22 facundo: ok que mas falta? / claudio: [personal#2] youtube ya quedó. de las siete, siete sigue corriendo (pid vivo): es la que entra a netflix y prime con las cuentas de orugote que ya están en la bóveda. de eso no te falta nada a vos. lo que sí falta son las cuatro que no tengo en ningún lado: - plex: si es tu...
+
+## [tinder] lo que se hizo en tinder
+lo que hablo facundo en la pestaña:
+- 09:43 facundo: unfollow + ignore a @laura.brrz / claudio: dale, ya quedó encolada. frené 1 cosa que pidió cadena y toca algo sensible: - orden: tema tinder: [toca: personal/embudo.json, personal/ig-cola.json] aplicar el voto unfollow + ignore a @laura… (afuera) OPCION A: puente g4w3 ok · dejar pasar lo de cadena OPCION B: puente g4w3 no · descartarlo
+- 10:31 facundo: (tarea aplicar-voto: tema tinder: [toca: personal/embudo.json, personal/ig-cola.json] aplicar el voto) / claudio: aplicar-voto corrió pero no cierra (agy, cuenta orugote (sub gemini) (agy), 10 min, $0.00): la tarea cerro diciendo "en segundo plano" pero no quedo ningun proceso vivo (ni desprendido ni con pid nombrado): vuelve a la cola con sus pasos: - verifiqué en [embudo.json](file:///home/agente/.claudio/personal/embudo.json)...
+- 13:59 facundo: A: dejo que corra el reintento de aplicar-voto y te aviso como sale / claudio: (esto te lo contesté junto con tu mensaje siguiente de las 1:59 pm: la respuesta está ahí abajo)
+- 13:59 facundo: lo mismo a chiaabal / claudio: » buscando en recetas cómo se maneja el chat de agy » buscando chiaabal en el embudo y en tinder » buscando datos de chiaabal en embudo.json » buscando cómo se aplica el voto unfollow ignore en recetas » leyendo CLAUDE.md y ESTADO.md de tinder » leyendo tinder/CLAUDE.md » viendo items de cola.json de instagram »...
+- 17:02 facundo: A: aplicar el voto unfollow + ignore a @chiaabal: pasa a ignorada y cancela la solicitud con unfollow en la cola de instagram / claudio: » viendo cómo se arma la respuesta en daemon_chat.py » buscando prefijo de tema en daemon_chat.py » leyendo líneas 300 a la de not covered es inadmisible de daemon_chat.py » viendo últimas respuestas en logs/chat-tinder.jsonl » leyendo ordenes.md para ver la tarea encolada » viendo las últimas líneas de ordenes.md » buscando cómo están guardadas...
+- 17:09 facundo: (tarea aplicar-voto: tema tinder: aplicar el voto unfollow + ignore a @chiaabal: pasa a ignorada) / claudio: terminó aplicar-voto (agy, chrome, cuenta orugote (sub gemini) (agy), 6 min, $0.00): <RESPONSE> Launched test execution for prueba_ig_embudo_tarjetas. Waiting for completion. </RESPONSE> Ya está: @chiaabal pasó de follow_request_sent a ignorada y su unfollow quedó en la cola de instagram con el id adafd35d4e, saliendo...
+
+## [personal] lo que se hizo en personal
+tareas cerradas:
+- 22:24 {siete} encolo la entrada a las siete de una, me logueo con netflix, prime y youtube, y te vengo a pedir las claves de plex, disney, flow y hbo max; recién con todo adentro armo el primer visto.md y la primera tanda de recomendaciones [facundo tocó la caja A y ese es su texto literal: hacer SOLO...
+lo que hablo facundo en la pestaña:
+- 01:32 facundo: (aviso de claudio) / claudio: votaste 6: 0 ignoradas, 6 para dejar de seguir, 0 quedan como están
+- 01:33 facundo: (aviso de claudio) / claudio: votaste 9: 1 quedan (interesan), 1 maybe, 6 no van, 1 follow + move to follow request sent
+- 01:57 facundo: (aviso de claudio) / claudio: votaste 6: 0 ignoradas, 6 para dejar de seguir, 0 quedan como están
+
+## [mesa] lo que se hizo en mesa
+lo que hablo facundo en la pestaña:
+- 18:08 facundo: 1 esconde orugote del widget de USAGE (escondé, no borres la conexion, si vuelvo a activar esa cuenta que vuelva automáticamente) 2 renombra el widget USAGE a MODELS 3 ajustá los medidores de mistral gemini y groq de manera que tengan sentido. muestran todo mal, qué están... / claudio: esto es de mesa, no de acá: te dejo la respuesta entera en esa pestaña. [modelos] entendí: querés esconder orugote del widget si no está activa, renombrar USAGE a MODELS y que los medidores de mistral, gemini y groq tengan sentido según lo que miden. voy a contarte qué miden hoy y las opciones para calibrarlos. hoy...
+- 18:14 facundo: A: encolar en modelos renombrar a MODELS, ocultar orugote excluida y calibrar las barras a sus cuotas reales (groq a 200k tokens por día, mistral a los usd 30 de crédito del plan pro y gemini a los usd 20 de saldo prepago) / claudio: esto es de mesa, no de acá: te dejo la respuesta entera en esa pestaña. [modelos] Encolada la tarea en modelos: renombrar el widget a MODELS, ocultar orugote (sin borrar la conexión) y calibrar las barras de Groq (200k tokens/día), Mistral ($30 crédito) y Gemini ($20 saldo).
+
+## [plata] lo que se hizo en plata
+lo que hablo facundo en la pestaña:
+- 17:26 facundo: (aviso de claudio) / claudio: wise: la verificación sigue pendiente (faltan tus fotos del dni y la cara desde el celu).
+
+## [log] movimiento del agente
+- 03:33 chequeo de la orden encolar a los 45 min: avanzando (165 turnos, escribio hace 0 min), no la toco
+- 03:33 aviso despachado (solo buzon, sin pane de claude): claudio (watchdog): reinicie el daemon del server (cola_escribe | baje el daemon
+- 03:33 hilos: tope 7 (escalon bajo: ram 6154 mb, load 0.88 por cpu)
+- 03:33 cola: 2944 programada para las 06/10 3:00 am: tema server: {programa} actualizacion nocturna de los tres programas d
+- 03:33 aviso despachado (solo buzon, sin pane de claude): [info] claudio (socorro): cola_escribe | baje el daemon (TERM a [2275251], KILL
+- 03:34 cola_db: no pude escribir la base (TypeError: sequence item 1771: expected str instance, NoneType found), escribo ordenes.md
+- 03:35 modo base: vuelve porque fallo con opus, la rescata fable (un escalon arriba) -> fable: [reintento] tema flos: {barrida-recurrente} [toca: daemon.py, recetas/] barrida recurrente
+- 03:36 lock de .ordenes.lock: daemon_tandas.py:225 lleva 15 s esperando el lock del proceso; lo tiene cola_db.py:407 (hilo Thread-2 (correr_scripts)) hace 70 s
+- 03:36 modo base: vuelve porque fallo con opus, la rescata fable (un escalon arriba) -> fable: [reintento] tema flos: {barrida-recurrente} [toca: daemon.py, recetas/] barrida recurrente
+- 03:36 cola: 2988 en paralelo con la de siguiente (el lock decide) [flos, toca codigo:daemon, recetas/]: [grande] [reintento] tema flos: {barrida-recurrente} [toca: daemon.py,
+- 03:36 modo base: vuelve porque fallo con opus, la rescata fable (un escalon arriba) -> fable: [reintento] tema flos: {barrida-recurrente} [toca: daemon.py, recetas/] barrida recurrente
+- 03:36 modelo por % [flos]: fable sin tag literal baja a opus en facundo (brecha +9, fable nunca por encima de week): tema flos: {barrida-recurrente} [toca: daemon.py, recetas/] barrida recurrente nocturna...
+- 03:37 aviso despachado (solo buzon, sin pane de claude): 2026-10-05 03:35 [accion] upgrade: tercer kill de socorro al daemon en 70 min (3
+- 03:37 aviso repetido (mismo texto <6 h o mismo grupo <2 h) no reenviado: 2026-10-05 03:37 [gris][info] hay margen de tokens: 3 pendientes en sueltos
+- 03:38 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 24 archivo(s) sincronizados (daemon.py no viaja: cloud ya rechazo esta version)
+- 03:38 nube_al_dia: codigo de cloud actualizado (edd50cfb339375aa -> 0cec26754174babd)
+- 03:38 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+- 03:39 cambios acumulados, reinicio diferido hasta que no quede ninguna tarea...
