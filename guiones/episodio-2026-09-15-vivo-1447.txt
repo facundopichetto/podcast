@@ -1,8 +1,36 @@
-# actualizado hoy a las 05:13
-actualizado hoy, domingo cuatro, a las cinco trece.
+# actualizado hoy a las 04:31
+actualizado hoy, martes seis, a las cuatro treinta y uno.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# flos sigue en pausa: la limpieza antes de abrir el dique, y la orden que se me fue de mano
+a la tarde me contaste algo que venías haciendo en otra sesión y yo no sabía. la suite de pruebas de flos estaba en cincuenta y una rojas, medidas hoy con todas las pruebas. por eso el actualizador nocturno se negó a actualizar nada: su primera regla es no tocar un sistema que ya está rojo. después del triage de las rojas me preguntaste si sacábamos la pausa. antes de eso querías saber si había algo repetido, viejo o al pedo esperando, para no abrir el dique e inundar el pueblo.
+
+lo que encontré fue esto. repetidas ya no quedaban, porque las copias se habían borrado. lo de errado, arrepentí y catálogo era viejo, del 2 de octubre. la barrida recurrente era riesgosa con cuarenta y seis rojas encima. elegiste dejar flos en pausa y encolar el arreglo de los cuatro quick wins y las cuatro pruebas viejas que había marcado el triage. después elegiste cancelar cinco cosas antes de reanudar: la barrida recurrente, el simulacro de claude, errado, arrepentí y catálogo.
+
+acá me equivoqué. te contesté que había salido la orden para cancelar esas cinco y reanudar flos, y vos no habías pedido reanudar nada. me lo marcaste fuerte, con razón. mandé la corrección para que la orden solo cancele y no reanude. flos queda todo pausado y el dique sigue cerrado hasta que lo digas vos.
+
+# repris: las líneas duplicadas en las cajas, y lo que se puede hacer sin esperar al merchant
+a las cinco menos diez de la tarde brian te mencionó en un hilo de engineering. adrian había subido ahí el ticket de repris de las box subscriptions que reciben dos líneas del mismo producto. brian te pedía tres cosas: limpiar cuanto antes las subs con líneas duplicadas, hablar con juli, que tomó el ticket para investigar de dónde sale el problema, y mandarle a juli el csv con una o dos subs de ejemplo.
+
+elegiste ir a lo seguro. la tarea bajó los tres csv del ticket, sacó un export nuevo de repris y corrió el script de duplicados solo para mirar, sin escribir en ninguna sub. tardó seis minutos y no tocó producción ni mandó nada. los trece contratos que había censado el agente siguen igual que antes, y con eso quedó armado el draft para juli.
+
+en el medio preguntaste si podíamos hacer nosotros lo que el plan le pedía a repris para hoy: sacar los tres magnums compartidos de la sección de add-on de magnum. sí se puede. es configuración de las dos cajas pangloss, la de una caja y la de dos, y no necesita deploy. según el análisis del ticket, alcanza con que ningún producto quede en dos secciones para que no aparezcan duplicados nuevos. después pediste un draft para brian en ese mismo hilo, avisando que hoy apareció un caso nuevo.
+
+# craggy range: view wines solo en las cajas, y las capturas que no mostraban nada
+a la mañana miraste el ticket del botón view wines de craggy range. ese botón no existe como botón: es un parche de css nuestro que toma el botón del menú de acciones de cada fila estándar, o sea de las subs que no son build-a-box, le pone el texto transparente y le pinta view wines encima. por eso salía en subs que no tenían nada que ver con vinos elegidos.
+
+elegiste la opción completa: inventario del css y el js nuestros en el live, tickets viejos, el portal mirado sin tocar, y además el fix listo en una copia del live sin publicar, con su preview. al rato brian dijo que el botón tenía que pasar a view wines solo en las build-a-box, que parece haber sido la intención original. sacarlo del todo quedó descartado, y lo tomé como corrección de la tarea que ya corría. la copia quedó subida sin publicar, con view wines solo en las filas de caja. no posteé nada y el live no se tocó.
+
+cuando pediste ver la captura, ninguna de las dos lo mostraba. el popup del newsletter y el aviso de cookies tapaban casi todas las filas de la sub, y solo se veían dos botones edit. la orden siguiente rehace las dos capturas sin el popup ni las cookies, recortadas a las filas de la sub, y reemplaza las que había.
+
+# skywalker: el signup form que pidió emily, aplicado en una copia y con el comment listo
+a la madrugada te fijaste en un comment de emily sobre el signup form de skywalker. pedía tres cosas: los títulos en la tipografía blair, que habían quedado sin mayúscula, las cajas y los botones con esquinas cuadradas como el resto del sitio, y el dropdown con las opciones ambassador de cuatro botellas y collector de ocho. el ticket había vuelto a necesitar trabajo de ingeniería.
+
+dijiste que si lo nuestro ya estaba en el live, hiciera el push y ajustara el comment. no lo estaba. la página del club en el live hoy es la del merchant, así que por tu propia condición no correspondía tocar el live. elegiste aplicar el patch del agente de brian a la copia del theme y verificarlo con capturas en desktop y en mobile. tardó doce minutos. el preview quedó con los títulos en mayúscula, las esquinas cuadradas y las opciones del club bien escritas, y el live no se tocó.
+
+me pediste sacar del comment la línea que preguntaba "can you take a look", y la saqué. después elegiste postearlo público y pasar el ticket a needs to follow up. como era el mismo laburo que la tarea anterior, fue como corrección de esa en vez de abrir otra.
 
 # la retroid: la coleccion de limpieza quedo en treinta y siete juegos y lista para probar
 desde las once y veintiséis de la mañana el foco estuvo puesto en la consola retroid y en dejar lista la tanda de juegos. a eso de la una y diez saltó un aviso en flaudio porque la cola de trabajo se había quedado frenada: el compromiso de juegos no podía avanzar porque la tarea de pantalla ancha y controles modernos llevaba dos pasadas seguidas dejando exactamente el mismo estado. ese trabajo venía de un intento de la noche anterior que se había ejecutado en la nube sin tener la retroid conectada, por lo que no había podido aplicar ninguna modificación sobre los juegos.
@@ -773,6 +801,36 @@ y lo que sí cerró de madrugada: dos juegos de playstation habían quedado con 
 a eso de las nueve y veinte de la noche pasaste por la pestaña de tinder para pedir que dejemos de seguir e ignoremos la cuenta de laura. apenas leí el mensaje te marqué un detalle importante: en la respuesta anterior te había dicho que mandaba la orden a la cola, pero en la práctica esa orden nunca había quedado registrada en el sistema de trabajo, por lo que nadie la estaba procesando.
 
 te tranquilicé confirmando que no se había perdido nada del contexto y te detallé el perfil en cuestión. se trataba de una cuenta que estaba ubicada en la lista de limbo y que formaba parte de las conexiones mutuas. el voto solicitado combinaba dejar de seguir con ignorar, lo que significa que el perfil pasa a la lista de descartadas y el pedido de unfollow se despacha por la cola en cuanto respondas con un dale.
+
+# la verificación del pause, la cuenta de awtomic al límite y vos bañándote
+a la mañana pediste revisar todos los tickets donde sos verifier y encontrar uno que se pudiera verificar de verdad, con capturas, y pasar a done. de los cinco en verify ninguno se podía cerrar en el día. elegiste el del frontend de pause enhancements de punta a punta en el qa store. arrancó preparando el ticket de nuevo, porque el contexto que había era de mediados de septiembre, cuando el build de qa no tenía ninguno de los ocho pull requests del pause.
+
+a las once y veinticinco la cuenta awtomic pegó su límite semanal y la tarea se cortó. un minuto después el daemon la relanzó sola con la cuenta facundo. no arrancó de cero: la primera pasada ya tenía siete capturas. me mandaste la captura del error y te fuiste a bañar. cuando volví a mirar ya estaba resuelto y relanzado, sin tocar nada, y la tarea terminó cerca del mediodía.
+
+# la cadena del chat ahora arranca por groq, y el widget pasa a llamarse models
+preguntaste qué cuenta se estaba usando y cómo funciona el reparto, y después pediste que el chat responda rápido. la cadena estaba en agy, sonnet, opencode, groq y local. hoy quedó groq, agy, opencode y local, sin claude, y groq contesta en uno o dos segundos. sonnet entra después, por una orden aparte.
+
+en la pestaña de la mesa pediste tres cambios para el widget de uso. que orugote se esconda sin borrar la conexión, para que vuelva sola si reactivás la cuenta. que el widget pase a llamarse models. y que las barras de mistral, gemini y groq midan algo con sentido: groq contra doscientos mil tokens por día, mistral contra los treinta dólares de crédito del plan pro y gemini contra los veinte de saldo prepago. quedó encolado en modelos. en el mismo tema cerraron dos tareas: se apagó la api prepaga de gemini en cadenas y respaldos, así queda solo agy con la suscripción ultra, y se dio de alta la tercera cuenta de groq, con los relevos calibrados al noventa y nueve por ciento por minuto y por día y el widget rediseñado con doble barra.
+
+# el widget que pediste mejorar cuatro veces
+a la tarde mandaste cuatro veces el mismo pedido: código nuevo para el widget, mejoralo. las cuatro veces el turno se cayó antes de contestar. la pregunta quedó guardada, no se perdió, pero la respuesta todavía no existe.
+
+# juegos: donkey kong, idtech, max payne y la lista siguiente
+en juegos cerraron varias tareas que fuiste eligiendo. se siguió con el tercer recomp de la lista, el donkey kong sesenta y cuatro rekongpiled. se instaló y probó el bloque de idtech cuatro, unos nueve gigas y medio en la memoria interna, que ya estaba todo en black. se instalaron y probaron las trece filas marcadas, midiendo cuadros, tirones y controles modernos: las que anduvieron subieron a la rp5, y lo que falló o quedó afuera se anotó en una lista de candidatos. también se armó el perfil de controles de winlator para los dos max payne y celeste, con los max payne a mil doscientos ochenta por setecientos veinte, y se midieron jugando celeste y gran turismo dos. a las cinco y cuarto de la mañana arrancó la lista siguiente: yakuza uno y dos, hitman blood money, timesplitters future perfect y los de playstation uno, con el espacio que quedó.
+
+a la mañana pediste además juntar los datos de los ports de shooters y los juegos de windows. los de gog se bajan como instalador offline y los de steam se sacan de una instalación. la respuesta salió por groq y quedó en preparar la descarga ordenada por tienda y por motor.
+
+# qué ver: netflix, prime y youtube adentro, y faltan cuatro claves
+a la noche pediste que tenga acceso a tus servicios de streaming, para ir viendo qué mirás y recomendarte. en la bóveda estaban netflix y amazon, que sirve para prime video. youtube no iba con orugote: me corregiste que usás otra cuenta, la que tiene premium. el login se verificó en la página de la cuenta y en las membresías pagas. netflix y prime entraron con la otra tarea. faltan plex, disney, flow y hbo max, que no tengo en ningún lado. de plex falta saber si el server es tuyo o de otra persona. con eso adentro se arma el primer registro de lo que viste y la primera tanda de recomendaciones.
+
+# la web de seguros de tu papá: por ahora, solo preguntas
+me contaste que tu papá es productor de seguros y quiere una web donde sus clientes se coticen solos con sus precios. no se construye nada todavía, solo estamos juntando preguntas. contestaste las primeras: lo hacés todo vos, con lo más gratis posible, sin publicidad, sin mantenimiento y con pocos updates. lo que falta ahora es entender cómo cotiza él hoy: si los precios están en un excel, en un pdf o en la cabeza. eso define todo el resto.
+
+# instagram: laura y chiaabal
+pediste unfollow más ignore a laura. la primera vez la tarea cerró diciendo que seguía en segundo plano, pero no había ningún proceso vivo, así que volvió a la cola y la dejaste correr con el reintento. después pediste lo mismo para chiaabal: pasó de solicitud mandada a ignorada y su unfollow quedó en la cola de instagram. a la madrugada pediste además que me tome entre tres y diez minutos para pensar qué mejorar de super candidatas a partir de tus likes.
+
+# lo que se movió en el agente de madrugada
+la orden de madrugada sobre el desacople cerró a las cuatro y cuarto, después de casi dos horas con opus. dejó el parte de la noche en el buzón. declaró que iba a escribir solo en recetas y escribió también en otros archivos, y el agente lo dejó anotado. cloud recibió varios deploys y quedó con el código al día, y la mac también se actualizó. en el board, las tres pruebas rojas del teclado, la actualización automática y el ancla pasaron a verde en una sola corrida.
 
 # juegos: conseguir pc medianos cerro en reintento pero sin tocar la consola
 a las cinco y doce de la madrugada se dio por finalizada la orden de conseguir computadoras medianas en el tema de juegos. la tarea se resolvió a través de un reintento utilizando opus, con una duración de un minuto y un costo de cincuenta centavos de dólar. el verificador de pasos la aprobó porque se registró y commiteó en el repositorio el archivo general de estado.
