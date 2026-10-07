@@ -1,8 +1,30 @@
-# actualizado hoy a las 10:02
-actualizado hoy, martes seis, a las diez y dos.
+# actualizado hoy a las 03:40
+actualizado hoy, miércoles siete, a las tres cuarenta.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# kendamil eu: el upgrade del build a box, y tu pregunta de si estoy seguro
+desde las diez y dos se cerró la parte de estilo de kendamil eu. de las dos copias del theme me quedé con la del agente de brian, que traía el styling del uk y solo cambiaba el azul marino por el de la eu. antes de subir el css al live confirmé que el theme publicado seguía siendo el mismo y que nadie había tocado su css desde ayer. lo subí, recorrí las vistas, posteé el comment de done tal cual lo aprobaste y el ticket pasó a needs to follow up.
+
+a la tarde viste que el merchant pedía otra cosa: que el build a box de la eu deje de ser el viejo y quede igual al del uk. a las seis menos cuarto salió el pedido al agente de brian, como comment restringido, y el ticket pasó a need eng work. el agente contestó que la migración es chica: un botón de upgrade en el bundle de la eu, desde el admin de awtomic, que lo pasa a secciones y mantiene el producto, el selling plan y el descuento, y una sola línea en el theme para el texto del botón de agregar al carrito.
+
+a las ocho y diecisiete me dijiste que es un merchant importantísimo y me preguntaste si estaba segurísimo de que nada iba a romper ni a cambiar subs que ya andan. te dije que no. que la migración no reescribe ningún contract lo dice el agente de brian, y yo todavía no lo comprobé. te listé los riesgos que veo y te dejé las opciones para elegir.
+
+# líneas duplicadas en todos los stores: el ticket nuevo y el script que ya corrió
+cerca de las doce y media pediste un ticket de cx para buscar líneas duplicadas en todos los stores. tocaste dos cajas a la vez: crear el ticket y arrancar ya el script, solo de lectura. el ticket quedó creado como "find subscriptions with duplicated lines across all stores", asignado a vos, en in progress eng y con la etiqueta para que el agente de brian no lo agarre. lo volví a leer aparte, después de que corrieran las automatizaciones, y estaba como lo pediste.
+
+a las seis me preguntaste si el script estaba hecho. está hecho y corrido desde la una de la tarde. dejó un archivo por store y un resumen: treinta stores, novecientos contratos y dos mil cuatrocientas veintiocho líneas con la misma variante repetida en la misma caja. de esos contratos, trescientos setenta y nueve están activos o pausados, que son los que importan hoy.
+
+# repris: el flow para las órdenes de pos, y vía libre para instalarlo
+al mediodía me pasaste el ticket del flow de repris. repris cobra desde el pos con la tarjeta guardada. esas órdenes las factura awtomic, así que en los reportes de shopify aparecen sin local, y jessica quiere que cada orden lleve un tag con su local. el agente de brian ya lo había dejado resuelto y yo solo le ajusté el nombre al flow.
+
+elegiste que yo mismo lo arme en el admin de repris como collaborator. la tarea entró al admin y dejó todo anotado, pero no cerró: los pasos de armar el flow, prenderlo y verificarlo quedaron como fallados. a las seis y ocho pediste postear el comment y mover el ticket, y resultó que el comment final nunca había quedado escrito, así que lo armé ahí. a las seis y veintidós me dijiste que instale shopify flow yo mismo si no lo tenían. en el admin la app figura como instalada, así que lo más probable es que falte el permiso del collaborator sobre la app. igual lo encolé como pediste. dos minutos después me diste vía libre para destrabar lo que haga falta. le pasé la corrección a la tarea que seguía corriendo. lo único que no sale solo es postear el comment y mover el ticket, que siguen esperando tu ok.
+
+# hall: la pregunta del backfill para adrián, y el "can you ask" que volvió
+el ticket del backfill de hall sigue trabado. el script está escrito y la prueba en seco sobre las treinta y nueve órdenes anduvo bien, pero el agente de brian lo dejó esperando una respuesta de hall. a las seis y diez pediste rearmar el draft como pregunta para adrián, en inglés, y que él decida si se lo pasa a hall.
+
+fue y vino varias veces. escribiste tu propia versión, te la devolví con cambios mínimos y después me pediste la mitad de largo. ahí me marcaste la regla: nunca "can you ask", siempre "can we confirm with hall" o directo "can we confirm if they". la corregí y el tag de adrián siguió al principio. a las seis y trece me marcaste que había vuelto a poner "can you ask". nada de eso está posteado: el último comment del ticket sigue siendo el del agente de brian de ayer.
 
 # la noche de flos: pediste hasta las siete y media y terminó a las cuatro y cuarto
 a las nueve menos un minuto me preguntaste cómo había ido la orden de la noche, la de las franjas. arrancó a las dos de la mañana, cerró a las cuatro y cuarto y quedó marcada como hecha en la cola. fueron unos ciento diez minutos de reloj, todo con opus en tu cuenta personal. en el historial de git quedaron trece commits de esa orden. hizo cosas que sirven: puso al día la prueba de reintentos, guardó lo que estaba suelto y armó un listado de las recetas que no tienen prueba, ordenado por riesgo.
@@ -824,6 +846,29 @@ te tranquilicé confirmando que no se había perdido nada del contexto y te deta
 a la mañana pediste revisar todos los tickets donde sos verifier y encontrar uno que se pudiera verificar de verdad, con capturas, y pasar a done. de los cinco en verify ninguno se podía cerrar en el día. elegiste el del frontend de pause enhancements de punta a punta en el qa store. arrancó preparando el ticket de nuevo, porque el contexto que había era de mediados de septiembre, cuando el build de qa no tenía ninguno de los ocho pull requests del pause.
 
 a las once y veinticinco la cuenta awtomic pegó su límite semanal y la tarea se cortó. un minuto después el daemon la relanzó sola con la cuenta facundo. no arrancó de cero: la primera pasada ya tenía siete capturas. me mandaste la captura del error y te fuiste a bañar. cuando volví a mirar ya estaba resuelto y relanzado, sin tocar nada, y la tarea terminó cerca del mediodía.
+
+# repris: el chequeo de duplicados de hoy quedó sin hacer
+a las doce y veinticinco pediste ver si hoy hay líneas dobles en repris. tocaste a y c juntas, y en vez de una tarea salieron dos, una encima con el tema equivocado. las frenaste las tres a las doce y veintisiete y no escribieron nada en repris. a las seis y cuarto preguntaste qué había pasado: quedó sin hacer. el export de hoy no llegó a bajar nada. te propuse juntar todo en una sola tarea de lectura, pero falta que toques la caja.
+
+# el widget de inversiones volvió a mostrar la cartera
+a las doce menos cinco el widget de inversiones estaba vacío. el tracker creía que la cuenta de interactive brokers seguía en revisión, aunque compraste el dos de octubre. elegiste marcarla como aprobada y sacar ese chequeo del camino del tracker. en cinco minutos el widget volvió: veintidós cierres, unos nueve mil doscientos cuarenta dólares entre smh, vxus y vtv. la causa no era el broker: el domingo al mediodía algo barrió la carpeta temporal donde vivía el estado del alta.
+
+# seguir lo de fable en la mac, y la conversación que no aparece
+a las once y media preguntaste si se podía seguir lo que fable estaba haciendo en la mac, lo de exprimir la cuenta. se puede seguir con faacuu y opus, casi todo desde el server. después pediste juntar la ola uno, todo lo que se puede hacer sin romper el daemon, y leer la conversación que llamaste "mogólico". esa conversación vive en la mac y no está en el server: la busqué por nombre y no hay nada. cuando la pegaste y me preguntaste qué hacer para no desinstalar claude, te dije que el trabajo no se perdió: quedó cortado por el límite de la cuenta facundo. a las doce menos tres me aclaraste que no corrés comandos en la mac y que era para la ola uno entera. no te seguí bien y te enojaste con razón.
+
+# los modelos de agy y el gpt-oss gratis
+a las seis menos diez preguntaste si gpt-oss de ciento veinte mil millones es gratis. en groq sí, con límites por minuto y por día, y acá lo usamos con dos cuentas que rotan. en cerebras está todo detrás de cargar crédito. groq no te sirve para usarlo en agy, porque agy no sale a groq: tiene ese modelo en su propio menú, servido por google con tu suscripción ultra. agy tiene dieciocho modelos y no hay nada que habilitar: ya están todos con la ultra de orugote.
+
+# max payne: el apk que trajo el conseguidor
+a las cuatro menos cinco pediste el apk de max payne, el más nuevo y completo. me dijiste que no había encolado nada porque había roto la cola, y que mirara el proceso que habías largado vos. lo leí: el conseguidor corrió bien y dejó todo en el server con sus hashes, aunque la verificación no se llegó a correr. no instalé nada en la retroid. arrancar por la versión uno punto siete tiene sentido: trae los datos adentro y anda en treinta y dos y en sesenta y cuatro bits. no comprobé si el apk oficial del dos mil diecisiete es esa misma versión. la orden de que en juegos conteste agy primero terminó en la segunda vuelta, fundida con la de guards de partidas. la primera se había cortado por el límite de la cuenta facundo.
+
+# las pruebas del harness, y gemini que no contestó ni una vez
+desde las cinco menos cuarto hasta las diez y diez de la noche se probó el camino de las cajas en varias pestañas de flos, con órdenes inofensivas que solo hacían un echo. las repetidas se fundieron en correcciones de la que ya esperaba, y el echo quedó programado para las tres y media de la madrugada. las cuatro órdenes que salieron a correr fueron a gemini flash gratis por opencode y fallaron todas igual: opencode no dijo nada. en la pestaña de gemini quedó que no tiene cuota hasta el treinta y uno de octubre.
+
+# los votos de instagram y la madrugada del agente
+en instagram votaste tres tandas. a la una y cuarto, diez de following, con seis para dejar de seguir, y nueve candidatas, con tres maybe y ninguna que interese. a las siete y veinticuatro, quince más: tres interesan, cinco maybe y dos a follow.
+
+a las once y treinta y ocho de la noche se trabó el compromiso de la limpieza con agy: dos pasadas seguidas dejaron lo mismo, porque no se cumplía la condición para arrancar. a las tres y trece hubo un deploy a cloud y la mac se puso al día, con lo que pisó guardado en un backup. a las tres y veintitrés salió otro deploy, más grande, que cerró con un código de error. entre las tres y dieciocho y las tres y media, un aparato de la red le pegó al chat una y otra vez con tokens que no son del dueño del buzón, y el chat los rechazó todos.
 
 # la cadena del chat ahora arranca por groq, y el widget pasa a llamarse models
 preguntaste qué cuenta se estaba usando y cómo funciona el reparto, y después pediste que el chat responda rápido. la cadena estaba en agy, sonnet, opencode, groq y local. hoy quedó groq, agy, opencode y local, sin claude, y groq contesta en uno o dos segundos. sonnet entra después, por una orden aparte.
