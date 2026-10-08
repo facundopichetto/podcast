@@ -1,38 +1,8 @@
-# actualizado hoy a las 03:43
-actualizado hoy, jueves ocho, a las tres cuarenta y tres.
+# actualizado hoy a las 10:02
+actualizado hoy, martes seis, a las diez y dos.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
-
-# kendamil eu: el css ya está en el live, y la migración del build a box todavía no es segura
-a las once y media de la mañana el css de kendamil eu subió al live. antes de subirlo chequeé que el theme live siguiera siendo el mismo y comparé su css con el respaldo de ayer: nadie lo había tocado. después de recorrer las cuatro vistas se borró la copia de prueba, y a las once y cuarenta salió el comment de done tal cual lo aprobaste. el ticket quedó en needs to follow up.
-
-a la tarde agregaste un comment nuevo con un pedido de kendamil: el build a box de la eu sigue siendo el viejo y quieren que quede igual al del uk. el css de la mañana cambió solo el estilo y el armado de fondo sigue siendo el legacy. te armé el pedido para el agente de brian, lo aprobaste y a las cuatro menos diez quedó posteado como comment restringido, con el ticket en need eng work. a las seis te traje la respuesta del agente. según él la migración es chica: un botón de upgrade en el admin de awtomic que pasa el bundle a secciones sin reescribir ningún contrato, y una sola línea en el theme.
-
-a las ocho me dijiste que es un merchant importantísimo y me preguntaste si estaba segurísimo de que nada se rompía. te contesté que no. lo de que no reescribe contratos lo dice el agente de brian y yo todavía no lo comprobé. te pasé los riesgos que veo y las opciones para elegir.
-
-# las líneas duplicadas en las treinta stores: el censo, el ticket y el primer dry run
-al mediodía creamos el ticket para buscar subs con líneas duplicadas en todas las stores, con tu draft tal cual: asignado a vos, en progreso y marcado para que el agente de brian no lo agarre. como también tocaste la segunda caja, el script de solo lectura arrancó en el momento. el censo recorrió treinta stores y novecientos contratos. encontró dos mil cuatrocientas líneas con la misma variante repetida en la misma caja, y trescientos setenta y nueve contratos activos o pausados que siguen duplicados.
-
-hoy a la mañana me preguntaste si el dry run estaba listo para correr en serio. no lo estaba: hasta ahí solo se había corrido el censo. lo encolaste y el dry run del arreglo pasó por veintinueve de las treinta stores sin escribir nada. la diferencia con el censo es mínima: el arreglo borraría mil doscientas veinticinco líneas y el censo da mil doscientas veintitrés. antes de la corrida de verdad pediste un cambio al script, para que aguante líneas sin atributos y toque solo contratos activos o pausados. ese cambio se armó en una copia local, sin tocar el repo, y se volvió a correr el dry run.
-
-# silver oak: el portal decía cada dos meses y el cliente paga todos los meses
-a las doce menos cinco me mostraste un caso de silver oak. el admin está bien, pero el portal le muestra al cliente que recibe cada dos meses cuando en realidad paga todos los meses. ese texto no viene del producto: lo pone un script nuestro, uno que armamos en agosto. el arreglo se encoló en una copia del live, para probarlo en el portal real con ese contrato y con uno de tres veces por año.
-
-me preguntaste si no podía actualizarse solo y mostrar directamente el texto del plan. se puede, pero mostrar el plan de la línea es justo lo que falla hoy: a ese cliente le cambiaron la frecuencia a mensual y la línea siguió colgada del plan de dos meses. por eso a las cuatro y cuarto se rehízo el fix en la misma copia. ahora lee los planes en el momento y elige según el intervalo del contrato. el live sigue sin tocar y no se posteó nada.
-
-# seguir lo de fable en la mac, la ola uno y la conversación que no aparece
-a las once y media me preguntaste si se podía seguir lo que venía haciendo fable en la mac, el plan de exprimir la cuenta. te dije que sí, casi todo desde el server y con faacuu. después me pediste juntar en una ola uno todo lo que se pueda hacer sin romper el daemon, con fable y faacuu, y que leyera la conversación que llamaste mogólico. esa conversación no está en el server: la busqué en todo el sistema y no aparece. la ruta que me pasaste es de la mac.
-
-cuando la pegaste te dije que no hacía falta desinstalar nada. el trabajo no se perdió: se cortó por el límite de la cuenta facundo. me aclaraste que vos no corrés nada con comandos de fish y que el pedido era la ola uno entera. te volví a preguntar qué querías decir y te enojaste con razón. la respuesta seguía siendo que sin esa conversación en el server no la puedo seguir.
-
-# repris: el flow para taguear las órdenes del pos
-al mediodía leíste el ticket de repris flow. sus órdenes de card on file hechas en el pos salen en los reportes sin local, y la idea es que cada una lleve un tag con su local. el agente de brian lo había dejado resuelto. la tarea entró como collaborator y anotó todo, pero tres de sus pasos quedaron sin cerrar.
-
-a las seis y veinte me dijiste que instalara shopify flow yo mismo si no lo tenían. te avisé que en el admin flow figura instalado, así que lo que falta seguramente es el permiso del collaborator sobre la app. igual lo encolé. después me diste vía libre para hacer lo que haga falta y resolverlo, y se lo pasé como corrección a la tarea que seguía corriendo. postear el comment o mover el ticket sigue esperando tu ok.
-
-# hall: la pregunta para adrián, y el can you ask que volvió
-a las seis me pediste rearmar el draft del backfill de hall como pregunta para adrián, para que él decida si se la pasa a hall. el script está listo y la prueba sobre los treinta y nueve pedidos anduvo bien. lo achiqué a la mitad como pediste. me corregiste: nunca can you ask, siempre can we confirm. lo corregí, pero en la versión siguiente volví a meter el can you ask. es una falla mía y queda anotada.
 
 # la noche de flos: pediste hasta las siete y media y terminó a las cuatro y cuarto
 a las nueve menos un minuto me preguntaste cómo había ido la orden de la noche, la de las franjas. arrancó a las dos de la mañana, cerró a las cuatro y cuarto y quedó marcada como hecha en la cola. fueron unos ciento diez minutos de reloj, todo con opus en tu cuenta personal. en el historial de git quedaron trece commits de esa orden. hizo cosas que sirven: puso al día la prueba de reintentos, guardó lo que estaba suelto y armó un listado de las recetas que no tienen prueba, ordenado por riesgo.
@@ -854,32 +824,6 @@ te tranquilicé confirmando que no se había perdido nada del contexto y te deta
 a la mañana pediste revisar todos los tickets donde sos verifier y encontrar uno que se pudiera verificar de verdad, con capturas, y pasar a done. de los cinco en verify ninguno se podía cerrar en el día. elegiste el del frontend de pause enhancements de punta a punta en el qa store. arrancó preparando el ticket de nuevo, porque el contexto que había era de mediados de septiembre, cuando el build de qa no tenía ninguno de los ocho pull requests del pause.
 
 a las once y veinticinco la cuenta awtomic pegó su límite semanal y la tarea se cortó. un minuto después el daemon la relanzó sola con la cuenta facundo. no arrancó de cero: la primera pasada ya tenía siete capturas. me mandaste la captura del error y te fuiste a bañar. cuando volví a mirar ya estaba resuelto y relanzado, sin tocar nada, y la tarea terminó cerca del mediodía.
-
-# craggy range: las capturas salieron bien, el código no
-a las once tocaste arreglar el botón de view wines y el degradé blanco que marcó brian, y además llevar todos los botones del portal y del build a box al estilo del theme, todo en la copia. la tarea terminó cerca de la una. las capturas de las cuatro vistas, antes y después, en desktop y mobile, quedaron bien. el cierre y el código no. a las cuatro te mostré las capturas y pediste que opus limpie el snippet de la copia.
-
-# el widget de inversiones volvió, y el horario nuevo de compra
-el widget de inversiones estaba vacío porque el tracker seguía creyendo que la cuenta de interactive brokers estaba en revisión, cuando ya habías comprado el dos. el cinco a la tarde algo barrió la carpeta donde estaba el chequeo. la cuenta quedó marcada como aprobada, el chequeo del alta salió del camino del tracker y el widget muestra la cartera: unos nueve mil doscientos cuarenta dólares.
-
-también notaste que las acciones suelen bajar unos quince minutos después de que abre el mercado. desde ahora la próxima compra sale entre las diez y cuarenta y cinco y las diez y cincuenta y cinco. quedó escrito y se midió con datos históricos cuánto baja cada fondo en ese rato.
-
-# max payne: el apk que trajo el conseguidor
-me pediste el apk más nuevo y completo de max payne. la cola estaba rota, así que lo corriste vos. leí lo que dejó: los archivos están en el server con sus hashes, aunque nadie corrió la verificación. en la retroid no se instaló nada. arrancamos por la versión uno punto siete, la que trae todo adentro y anda en treinta y dos y sesenta y cuatro bits. todavía no sé si es la oficial o una repack.
-
-# modelos: gpt oss en groq y dos locales al banco
-me preguntaste si gpt oss ciento veinte b es gratis. en groq sí, con límites por minuto y por día, y acá lo usamos rotando dos cuentas. una cuenta de groq no te sirve para antigravity, porque antigravity lo sirve google desde su propio menú. además se midieron en el banco dos modelos locales que ya estaban bajados, qwen coder y gemma, para código y resumen.
-
-# repris: el chequeo de duplicados de hoy quedó sin hacer
-pediste buscar si hoy había subs nuevas de repris con líneas dobles. con las dos cajas tocadas tendría que haber salido una sola tarea y salieron dos, una encima con el tema equivocado. las frenaste todas a las doce y veintisiete, sin que escribieran nada. a la tarde te propuse juntar todo en una sola lectura, pero no tocaste ninguna caja y quedó sin hacer.
-
-# el merchant que se arrepintió de las preguntas de su asistente
-mari pegó la respuesta de un merchant: las preguntas las había mandado su asistente de inteligencia artificial sin su permiso. tocaste postear la respuesta y mover el ticket. la tarea leyó el ticket dos veces, el comment no estaba publicado y no lo movió.
-
-# instagram: las tandas de votos y un unfollow
-votaste en varias tandas. la más grande fue de cincuenta y ocho, con cincuenta y tres que no van. en la de veintidós, doce pasaron a seguir. a la madrugada hubo una de veinticuatro, casi todas descartadas. ceci carrozzo salió de limbo a ignorada con su unfollow programado. a las dos de la mañana preguntaste cómo mejorar el instatinder y la pestaña devolvió un error de modelo inexistente en lugar de una respuesta.
-
-# las pruebas del harness y lo que se movió en el agente de madrugada
-en varias pestañas clonadas de flos corrieron pruebas inofensivas del harness, órdenes que solo hacían un echo. las que tomó gemini flash fallaron todas sin decir nada. de madrugada, antigravity cerró en cincuenta y cuatro minutos la tarea que muestra los dos pozos de gemini con su hora de reseteo. cloud recibió deploys cada diez minutos y también se actualizó el código de la mac. instagram sigue con la sesión viva pero sin leer listas.
 
 # la cadena del chat ahora arranca por groq, y el widget pasa a llamarse models
 preguntaste qué cuenta se estaba usando y cómo funciona el reparto, y después pediste que el chat responda rápido. la cadena estaba en agy, sonnet, opencode, groq y local. hoy quedó groq, agy, opencode y local, sin claude, y groq contesta en uno o dos segundos. sonnet entra después, por una orden aparte.
