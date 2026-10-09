@@ -1,8 +1,34 @@
-# actualizado hoy a las 10:02
-actualizado hoy, martes seis, a las diez y dos.
+# actualizado hoy a las 03:33
+actualizado hoy, viernes nueve, a las tres treinta y tres.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# skywalker: el portal del live mostraba claves de traducción en vez de textos, y el agente de brian y yo no lo habíamos visto
+a las diez y media me hiciste releer el ticket del pickup de skywalker, y tenías razón. el día ocho a la madrugada brian había dejado un comment que decía que faltaban todas las traducciones, con una captura del portal. en la captura, los títulos, los encabezados y los totales mostraban la clave interna de la traducción en lugar del texto. ni el agente de brian ni yo habíamos abierto el portal. los dos dimos por hecho que alcanzaba con que no apareciera el pickup.
+
+tocaste la a, y una tarea abrió el portal del live con un customer de prueba, solo para mirar. tardó treinta y ocho minutos y confirmó que está roto. dejó preparado el push del archivo de traducciones en inglés al live, con su respaldo, pero no lo corrió porque esperaba tu ok. a las doce y diez me preguntaste si sabía cómo se ponen las traducciones de awtomic y me dijiste que, si eso estaba en el live, había que arreglarlo ya, porque no podemos tener un error en producción. te contesté que todavía no se había subido nada al live, así que el portal de skywalker seguía mostrando el error.
+
+# häxan: nunca un mail, solo el pedido por partners
+la tarea de häxan para el código de prueba del no gift packaging no pudo arrancar porque no tenemos acceso al store. a las diez y media me pediste que te contara cómo mandaría el pedido de acceso, con el comentario incluido. te expliqué el camino del dev dashboard. me contestaste en mayúsculas y con tres puntos claros. el primero: jamás mandar mails, porque la última vez fue gravísimo. los pedidos se hacen solo por partners y de ninguna otra manera. el segundo: no hacer nada hasta que des el ok. el tercero: buscar el mensaje que ya se usaba, uno que arrancaba con algo como "awtomic support". hasta tu ok no sale nada.
+
+más temprano habías tocado la c, que además creaba un código de prueba de un dólar para los dos gift sets. me pediste que ese código no se borrara antes de terminar, y quedó anotado como pendiente de borrar para cuando cerremos el ticket.
+
+# kendamil eu: pasar el build a box viejo al nuevo, en un merchant que no se puede romper
+el css de kendamil eu ya está en el live. el ticket quedó con el comment de done y pasó a needs to follow up. a la una y cincuenta me mostraste tu comment nuevo, con el pedido del merchant de pasar el build a box de la eu, que sigue con el armado viejo, al mismo que tiene el uk. a las cuatro menos veinte se posteó el pedido al agente de brian como comment restringido, el ticket pasó a need eng work y quedó con un solo label. el agente contestó que la migración es chica: un botón de upgrade en el admin de awtomic y una línea en el theme para el texto del botón add to cart.
+
+a las ocho y cuarto de la noche me avisaste que es un merchant importantísimo y me preguntaste si estaba segurísimo de no romper nada ni cambiar subs que ya andan. te dije que no, y que no te lo iba a vender así. que la migración no reescribe ningún contract lo dice el agente de brian, y yo todavía no lo comprobé. te listé los riesgos que veo, con opciones para que elijas.
+
+# las líneas duplicadas en todos los stores: el censo, el ticket y el dry run del arreglo
+a la una del mediodía se escribió y se corrió el script que busca subs con el mismo vino repetido en dos líneas de la misma caja. recorrió treinta stores y novecientos contratos, y de esos, trescientos setenta y nueve activos o pausados siguen duplicados. tocaste la a y la b juntas: se creó el ticket asignado a vos, en progreso, con el label para que el agente de brian no lo agarre, y el script arrancó sin esperar otro ok.
+
+hoy a las diez menos diez me preguntaste si el dry run ya estaba para correr en serio. te aclaré que lo que había corrido era el censo, no el arreglo. corrió el dry run del arreglo en veintinueve de las treinta stores sin escribir nada, y la diferencia con el censo fue mínima: mil doscientas veinticinco líneas contra mil doscientas veintitrés. antes de la corrida de verdad pediste ajustar el script para que tolere líneas sin atributos y solo toque contratos activos o pausados. eso se armó en una copia local, sin tocar el repo.
+
+# silver oak: el portal decía cada dos meses a un cliente que paga todos los meses
+el texto equivocado no lo pone el producto: lo pone un script nuestro de frecuencia que armamos en agosto. tocaste la a para arreglarlo en una copia del live y probarlo con el contrato real. a las doce y media me preguntaste si no podía actualizarse solo y mostrar el texto del plan. te expliqué que el texto del plan es justo lo que falla, porque al cliente le cambiaron la frecuencia y la línea siguió en el plan de dos meses. a las cuatro y cuarto pediste rehacer el fix para que lea los planes en el momento y elija por el intervalo del contrato. salió con opus, sobre la misma copia, sin tocar el live.
+
+# la conversación mogólico y la ola uno
+a las once y media me preguntaste si se podía seguir lo que fable venía haciendo en la mac, con el plan de exprimir y su bitácora. te dije que se puede seguir con faacuu y opus, casi todo desde el server. después me pediste que leyera la conversación mogólico y que juntara todo lo que se pueda hacer sin romper el daemon en una ola uno, con fable y faacuu. esa conversación vive en la mac y no la pude leer. la busqué en todo el server y no está. a las doce menos cuarto la pegaste vos, y te dije que no hace falta desinstalar nada: el trabajo no se perdió, quedó cortado por el límite de la cuenta facundo. me corregiste que vos no corrés comandos fish y que el pedido era para toda la ola uno, y te molestó que te pidiera contexto otra vez.
 
 # la noche de flos: pediste hasta las siete y media y terminó a las cuatro y cuarto
 a las nueve menos un minuto me preguntaste cómo había ido la orden de la noche, la de las franjas. arrancó a las dos de la mañana, cerró a las cuatro y cuarto y quedó marcada como hecha en la cola. fueron unos ciento diez minutos de reloj, todo con opus en tu cuenta personal. en el historial de git quedaron trece commits de esa orden. hizo cosas que sirven: puso al día la prueba de reintentos, guardó lo que estaba suelto y armó un listado de las recetas que no tienen prueba, ordenado por riesgo.
@@ -824,6 +850,33 @@ te tranquilicé confirmando que no se había perdido nada del contexto y te deta
 a la mañana pediste revisar todos los tickets donde sos verifier y encontrar uno que se pudiera verificar de verdad, con capturas, y pasar a done. de los cinco en verify ninguno se podía cerrar en el día. elegiste el del frontend de pause enhancements de punta a punta en el qa store. arrancó preparando el ticket de nuevo, porque el contexto que había era de mediados de septiembre, cuando el build de qa no tenía ninguno de los ocho pull requests del pause.
 
 a las once y veinticinco la cuenta awtomic pegó su límite semanal y la tarea se cortó. un minuto después el daemon la relanzó sola con la cuenta facundo. no arrancó de cero: la primera pasada ya tenía siete capturas. me mandaste la captura del error y te fuiste a bañar. cuando volví a mirar ya estaba resuelto y relanzado, sin tocar nada, y la tarea terminó cerca del mediodía.
+
+# flowers for dreams: el pausado con reactivación ya está en producción
+a las ocho y media salió el cambio en dynamo de producción para prender la reactivación automática del pause, y se verificó releyendo el registro. después una tarea abrió el admin como collaborator para revisar que los límites de pausa mostraran uno, dos y tres meses, sin tocar ninguna sub, y dejó el comment listo para que lo revises.
+
+# hall: el comment para adrián, y nunca "can you ask"
+a las seis y diez me pediste rearmar la pregunta del backfill para adrián, que decide si se la pasa a hall. la acortamos a la mitad. me dijiste que nunca se escribe "can you ask", sino "can we confirm with hall", y que faltaba la etiqueta. a la vuelta siguiente volví a poner "can you ask", y te enojaste con razón.
+
+# repris: el flow del tag por local
+leí el ticket del flow de repris y el agente de brian ya lo había dejado listo. la tarea corrió pero no cerró, porque le faltaban permisos en el admin. a las seis y veinte me pediste que instalara shopify flow si no lo tenían, y después que hiciera lo necesario para resolverlo. el flow figura como instalado, así que lo más probable es que falte el permiso del collaborator. postear y mover el ticket sigue siendo cosa tuya.
+
+# skywalker: los tres cambios de emily, y la puerta de salida que frenó la asignación
+emily pidió llevar el form al live con el título más chico, el fondo beige y el botón join igual a los demás. mientras tanto me pediste que te asignara el ticket y lo pusiera en progreso. la puerta de salida lo frenó porque la orden no traía tu toque. se reencoló con tu caja a.
+
+# craggy range: las capturas salieron bien, el código no
+la tarea del botón view wines y el degradé terminó a la una menos cuarto. las capturas del antes y el después quedaron bien, pero el código no cerró. te las mostré y pediste limpiar el snippet con opus.
+
+# plata: el widget volvió, y la compra pasa a las once menos cuarto
+el widget de inversiones estaba vacío porque el tracker creía que ibkr seguía en revisión. con la c se marcó la cuenta como aprobada y el chequeo del alta salió del camino. volvió a mostrar unos nueve mil doscientos cuarenta dólares. a la mañana notaste que las acciones bajan después de la apertura, y quedó como regla comprar entre las diez y cuarenta y cinco y las diez y cincuenta y cinco, medido con datos históricos.
+
+# juegos, modelos y monitores
+pediste el apk más nuevo de max payne. el conseguidor lo dejó en el server con sus hashes y arrancamos por la versión uno punto siete. preguntaste si gpt oss ciento veinte es gratis: en groq sí, con límites, y agy lo trae por su lado, servido por google. en personal te ordené cinco monitores oled de treinta y dos pulgadas, y todos tienen la misma resolución, cuatro k.
+
+# instagram y el votador
+votaste varias tandas, la más grande de cincuenta y ocho, y mandaste a carrucella a ignorada con el unfollow programado. me avisaste que following muestra a gente que ya te sigue o que no aceptó tu solicitud, y un perfil privado marcado como público. quedó encolado el arreglo de la foto del día.
+
+# lo que se movió en el agente hasta las tres y media
+se corrieron varias pruebas del harness en las pestañas de flos. las que cayeron en gemini por opencode fallaron sin decir nada. el rediseño del board corrió setenta y ocho minutos con agy y no cerró, porque la prueba de la web dio rojo. el episodio de media hora sobre el flow nuevo y la cartera se publicó con daniela. a las tres y media el daemon se reinició con código nuevo, barrió candados viejos, corrió el caos simulado con su revert y mandó un deploy a cloud.
 
 # la cadena del chat ahora arranca por groq, y el widget pasa a llamarse models
 preguntaste qué cuenta se estaba usando y cómo funciona el reparto, y después pediste que el chat responda rápido. la cadena estaba en agy, sonnet, opencode, groq y local. hoy quedó groq, agy, opencode y local, sin claude, y groq contesta en uno o dos segundos. sonnet entra después, por una orden aparte.
