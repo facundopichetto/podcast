@@ -3164,7 +3164,65 @@
    },
    "duracion": 1806.5,
    "ts": "2026-10-02T23:48:37-03:00"
+  },
+  {
+   "id": "ep-2026-10-09-flow-y-cartera",
+   "fecha": "2026-10-09",
+   "titulo": "el nuevo flow, la salida del atasco y qué sumar en la cartera",
+   "temas": [
+    "tools",
+    "plata",
+    "server"
+   ],
+   "palabras": 5643,
+   "guion": "guion-flow-y-cartera.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-10-09-flow-y-cartera-daniela.mp3",
+     "duracion": 1772.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 110.1,
+       "archivo": "audio/ep-2026-10-09-flow-y-cartera-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 110.1,
+       "titulo": "el nuevo flow: agy, gemini y los cuatro niveles",
+       "duracion": 326.3,
+       "archivo": "audio/ep-2026-10-09-flow-y-cartera-2-el-nuevo-flow-agy.daniela.mp3"
+      },
+      {
+       "t": 436.4,
+       "titulo": "la salida del atasco: auditoría, saneamiento y aire fresco",
+       "duracion": 217.6,
+       "archivo": "audio/ep-2026-10-09-flow-y-cartera-3-la-salida-del-atasco.daniela.mp3"
+      },
+      {
+       "t": 654.0,
+       "titulo": "la casa blindada: socorro, verificadores y reglas como datos",
+       "duracion": 252.2,
+       "archivo": "audio/ep-2026-10-09-flow-y-cartera-4-la-casa-blindada.daniela.mp3"
+      },
+      {
+       "t": 906.2,
+       "titulo": "el siete de octubre en wall street: tasas, petróleo y fundamentos",
+       "duracion": 292.6,
+       "archivo": "audio/ep-2026-10-09-flow-y-cartera-5-el-siete-de-octubre-en.daniela.mp3"
+      },
+      {
+       "t": 1198.8,
+       "titulo": "qué sumar en la cartera: los veinte mil dólares en seis meses",
+       "duracion": 574.0,
+       "archivo": "audio/ep-2026-10-09-flow-y-cartera-6-que-sumar-en-la-cartera.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1772.9,
+   "ts": "2026-10-09T01:37:57-03:00"
   }
  ],
- "actualizado": "2026-10-09 00:49"
+ "actualizado": "2026-10-09 01:37"
 }
