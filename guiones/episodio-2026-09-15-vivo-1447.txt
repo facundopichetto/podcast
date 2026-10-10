@@ -1,8 +1,13 @@
-# actualizado hoy a las 03:33
-actualizado hoy, viernes nueve, a las tres treinta y tres.
+# actualizado hoy a las 03:56
+actualizado hoy, sábado diez, a las tres cincuenta y seis.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# flos de madrugada: la tercera pasada dice que no queda nada, pero todavía no se cierra
+a las tres y treinta y cuatro terminó la tercera pasada del compromiso de flos de esta noche. la corrió antigravity con la cuenta de orugote, en cuatro minutos y sin gastar plata. fue un reintento: la primera vez no había salido.
+
+según esa pasada, no queda nada por hacer. igual eso no alcanza para dar el compromiso por cumplido. la regla es que lo cierra el veredicto de un verificador distinto del que hizo el trabajo, y ese veredicto todavía no llegó. cuando terminó la pasada, el agente estaba esperando que terminara la prueba completa del daemon para poder verificar. así que quedó abierto, en espera de que alguien de afuera confirme que lo que se hizo está hecho de verdad.
 
 # skywalker: el portal del live mostraba claves de traducción en vez de textos, y el agente de brian y yo no lo habíamos visto
 a las diez y media me hiciste releer el ticket del pickup de skywalker, y tenías razón. el día ocho a la madrugada brian había dejado un comment que decía que faltaban todas las traducciones, con una captura del portal. en la captura, los títulos, los encabezados y los totales mostraban la clave interna de la traducción en lugar del texto. ni el agente de brian ni yo habíamos abierto el portal. los dos dimos por hecho que alcanzaba con que no apareciera el pickup.
@@ -856,6 +861,13 @@ a las ocho y media salió el cambio en dynamo de producción para prender la rea
 
 # hall: el comment para adrián, y nunca "can you ask"
 a las seis y diez me pediste rearmar la pregunta del backfill para adrián, que decide si se la pasa a hall. la acortamos a la mitad. me dijiste que nunca se escribe "can you ask", sino "can we confirm with hall", y que faltaba la etiqueta. a la vuelta siguiente volví a poner "can you ask", y te enojaste con razón.
+
+# lo que se movió en el agente entre las tres y media y las cuatro menos cuarto
+hubo dos deploys a cloud en este rato, los dos sin errores. el de las tres y treinta y siete subió diecisiete archivos y el de las tres y cuarenta y ocho subió dieciocho. después de cada uno, el código de cloud quedó al día con el del server.
+
+a las tres y cuarenta y uno, el chat por la red de casa no pudo subir al buzón una foto de instagram porque el buzón la rechazó. queda para reintentar más tarde. en el mismo minuto volvió el aviso de instagram: la sesión sigue viva, pero tiene frenadas las lecturas de las listas. la foto del día se reintenta sola y no hace falta volver a cargar las cookies. el aviso no hizo sonar el celu.
+
+a las tres y cincuenta y cuatro arrancó otra vuelta del caos simulado, la prueba de cambios de sistema que tiene revert automático. hasta las cuatro menos cuatro no había resultado.
 
 # repris: el flow del tag por local
 leí el ticket del flow de repris y el agente de brian ya lo había dejado listo. la tarea corrió pero no cerró, porque le faltaban permisos en el admin. a las seis y veinte me pediste que instalara shopify flow si no lo tenían, y después que hiciera lo necesario para resolverlo. el flow figura como instalado, así que lo más probable es que falte el permiso del collaborator. postear y mover el ticket sigue siendo cosa tuya.
