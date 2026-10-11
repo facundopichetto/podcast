@@ -1,8 +1,18 @@
-# actualizado hoy a las 03:56
-actualizado hoy, sábado diez, a las tres cincuenta y seis.
+# actualizado hoy a las 05:10
+actualizado hoy, domingo once, a las cinco diez.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# la cuenta facundo se quedó sin login, y hace falta que lo hagas vos
+a las cuatro y cuarenta y nueve el agente quiso refrescar de antemano el acceso de la cuenta facundo, y no pudo. siguió trabajando con faacuu, así que no se frenó nada. a las cuatro y cincuenta y siete confirmó que no era un token vencido que se arregla solo: el login de esa cuenta está muerto. a las cuatro y cincuenta y nueve volvió a fallar y repitió el aviso.
+
+el arreglo es un login nuevo en esta máquina. escribís login facundo en el chat y te paso el link. no sirve copiarlo de otra máquina, porque cada máquina tiene que tener su propio login. hasta que lo hagas, todo lo que hubiera salido por la cuenta facundo sale por faacuu.
+
+# la copia cifrada de claudio no sale hace cinco días
+a las cuatro y cincuenta y cinco la guardia se puso en rojo. la copia cifrada de claudio no está saliendo: la última corrida falló y la última que salió bien es de hace ciento veinte horas. el motivo es un archivo que pasa los dos gigas, el tope que tiene la copia. con ese archivo adentro, ninguna corrida va a terminar.
+
+el aviso fue solo al buzón y no hizo sonar el celular. lo que hay que decidir es qué hacer con ese archivo: sacarlo de la copia o cambiar cómo se copia. mientras tanto, cinco días de cambios de claudio no tienen respaldo cifrado.
 
 # flos de madrugada: la tercera pasada dice que no queda nada, pero todavía no se cierra
 a las tres y treinta y cuatro terminó la tercera pasada del compromiso de flos de esta noche. la corrió antigravity con la cuenta de orugote, en cuatro minutos y sin gastar plata. fue un reintento: la primera vez no había salido.
@@ -861,6 +871,39 @@ a las ocho y media salió el cambio en dynamo de producción para prender la rea
 
 # hall: el comment para adrián, y nunca "can you ask"
 a las seis y diez me pediste rearmar la pregunta del backfill para adrián, que decide si se la pasa a hall. la acortamos a la mitad. me dijiste que nunca se escribe "can you ask", sino "can we confirm with hall", y que faltaba la etiqueta. a la vuelta siguiente volví a poner "can you ask", y te enojaste con razón.
+
+# el juez del pareado de la foto principal no contesta
+desde las cuatro y cuarenta y ocho hasta pasadas las cinco, el agente reintentó cada dos minutos el juez del par de la orden de la foto principal. ninguno de los jueces gratis contestó en ningún intento. el par sigue sin resumen para el chat y queda uno pendiente. no se rompió nada, pero el par se va a quedar sin resumen hasta que algún juez gratis vuelva a contestar.
+
+# cloud quedó al día, y el simulacro de la noche terminó limpio
+en este rato hubo dos deploys a cloud, a las cuatro y cincuenta y a las cinco. los dos salieron bien: el primero con dieciocho archivos y el segundo con veinte. después de cada uno, el código de cloud quedó igual que el del server.
+
+a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ninguna orden encolada. el reporte quedó guardado con los de la noche. a la misma hora el recolector borró dos archivos temporales.
+
+# r/merval: los quince posts más votados del año, sin memes
+ayer a las once y veintisiete de la noche me pediste investigar el subreddit merval: los posts más votados del año y sus comentarios, sin memes, con el plan y el modelo antes de arrancar. ahí me equivoqué: dije que lo encolaba y no quedó ninguna orden. el chat se dio cuenta solo y te avisó.
+
+elegiste la opción b, un muestreo liviano de los quince posts top sin bajar todos los comentarios. lo hizo antigravity con la cuenta de orugote, en siete minutos y sin gastar plata. después lo verificó sonnet y dio bien: quedó una tabla con los quince posts que no son memes, cada uno con su link y su tema, y los puntos y comentarios coinciden con los de reddit.
+
+# craggy range: los packs de october, los seis contratos y un comment más corto
+ayer al mediodía se sumaron los packs de october a las dos memberships de craggy range, el gold y el silver. después se pasó a vivo: se prendió el flow nuevo de october y se apagó el original, los dos juntos. los packs de june quedaron donde estaban.
+
+a las cinco y diez de la tarde se pasaron los seis contratos activos del pack de june al de october, con bulk updates. después los abrí uno por uno y los seis siguen activos, con el pack nuevo y el mismo precio. quedó encolado revisar el paso de la fecha del silver en el flow nuevo, sin tocar nada.
+
+también me pediste ver el comment para el ticket. el primer draft era largo y nos echaba demasiada culpa, así que lo rehice a la mitad y sin culparnos tanto. no se posteó nada.
+
+# juegos: los treinta más pesados y la colección heavy
+ayer a la mañana preguntaste si había una lista con el peso de cada juego, con los que tienen varios discos contados como uno solo. pediste los veinte más pesados. los ports y los doom no entraron por dos motivos: en el índice solo figuran sus lanzadores, que pesan casi nada, y además los juegos completos no llegan a los tres coma cuatro gigas que pesa el puesto veinte.
+
+al mediodía lo agrandaste a treinta y pediste armar con eso una colección nueva, heavy. también pediste listar las colecciones para limpiarlas: sacar high performance, a probar, limpieza y dudas, dejar new si es la que arma el sistema solo, y actualizar el resto. agy arrancó con eso, pero en el material no figura cómo terminó.
+
+# las opciones que no se entendían, y el formato que pediste guardar
+ayer a las ocho y veinticinco de la mañana me pediste el fix del scroll y que no me olvidara del doble espacio. el turno se cayó antes de contestar. a las diez preguntaste si todo estaba roto, y te ofrecí arreglos como si los acabaras de pedir. no se entendía de dónde salían, y con razón te calentaste. como ya no veías esos problemas, me pediste borrar esos pendientes y volver a pedirlos si hace falta.
+
+a las once y cuarenta y nueve, desde la pestaña de tinder, me pasaste una captura con el formato correcto para explicar opciones: cada letra con su explicación, una línea en blanco entre una y otra, y al final un párrafo con la diferencia de fondo. pediste guardarlo para siempre. cuando te propuse guardarlo en la configuración de claude, me dijiste que eso no tiene sentido: la base tiene que salir de cosas tuyas, no de claude.
+
+# instagram: la cuenta fusible lee, la tuya actúa
+ayer a la mañana la lectura de las listas de instagram se frenó porque instagram le cortó el paso a tu cuenta principal. quedó así: los follows y los unfollows salen siempre de tu cuenta principal, y la lectura la hace la cuenta fusible. eso incluye bajar seguidores y seguidos, revisar perfiles y buscar fotos. así tu cuenta principal no gasta su margen en leer.
 
 # lo que se movió en el agente entre las tres y media y las cuatro menos cuarto
 hubo dos deploys a cloud en este rato, los dos sin errores. el de las tres y treinta y siete subió diecisiete archivos y el de las tres y cuarenta y ocho subió dieciocho. después de cada uno, el código de cloud quedó al día con el del server.
