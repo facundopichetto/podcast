@@ -1,8 +1,41 @@
-# actualizado hoy a las 05:10
-actualizado hoy, domingo once, a las cinco diez.
+# actualizado hoy a las 03:45
+actualizado hoy, miércoles catorce, a las tres cuarenta y cinco.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# las pestañas del board: el pedido que no se notó, y tu bronca
+el pedido de las pestañas venía de antes: que siempre se lea el nombre de verdad de cada pestaña y nunca algo como atomic ochenta y cuatro, un poco más de espacio entre las letras, más aire entre el nombre, el más y la cruz, los íconos más grandes y las subpestañas en la misma línea. la primera tarea lo tomó agy y cerró a las doce y cuarenta y siete. no cerró con un resultado: dijo que estaba mirando las pruebas en segundo plano y que después iba a seguir.
+
+a la una y cuarto me dijiste que no se veía nada de lo que pediste. con lo del espacio entre letras hablabas del nombre de la pestaña: la palabra board se ve toda pegada y tiene que respirar un poco más. la captura que mandaste era del votador de super candidates y no de la barra. me mandaste otra y yo me fui por las ramas analizando widgets en vez de mirar las pestañas. me dijiste que te daban ganas de llorar, y tenías razón en enojarte. te pedí perdón, y la orden con tus cuatro puntos al pie de la letra quedó corriendo como corrección del mismo laburo. a las tres menos cuarto de la tarde cerró la parte de la caja que tocaste: espaciado entre letras, el menú del más con su margen y scroll horizontal en la barra cuando no entran todas las pestañas.
+
+# tinder: natalia estaba en following y era una solicitud colgada
+al mediodía me marcaste que natalia figuraba en following cuando en realidad es una cuenta privada: le mandaste la solicitud y todavía no te aceptó, así que va en follow request sent. no me pediste que la movieras a ella sola. me pediste que entienda qué parte del cálculo la puso ahí, para que no le pase a nadie más. eso quedó para revisar la regla que arma las listas, no el caso suelto.
+
+a la mañana también hubo otra cosa en tinder. me preguntaste por qué había vuelto el botón de bajar la foto en hd, y era porque había vuelto con la orden de forzar el votador. elegiste sacarlo y que tocar un arroba del widget de ig follow abra el votador de su lista. eso cerró a las diez menos diez, sin probarlo en el browser y sin captura. a las diez se te abrió el votador individual, el que ya no querías ver más, y me preguntaste por qué todavía no hay un votador único si me lo pediste mil veces. esa respuesta se cortó por timeout.
+
+# las líneas duplicadas: la corrida real arregló doscientos dieciocho contratos
+a la noche aprobaste la última versión del csv, con el precio de antes, el de después y el método que se usó en cada contrato. se armó la corrida por etapas: primero un store, verificar, después tres más, verificar y recién ahí todos, frenando sola ante cualquier diferencia.
+
+frenó en ponzi, en la tercera etapa. hasta ahí había arreglado y verificado diecisiete contratos de nueve stores. el choque era un descuento que quedaba sin línea. decidiste seguir con todo lo pendiente y, en los siete contratos con ese choque, borrar en el mismo draft el descuento suelto, solo si la línea que queda tiene uno con el mismo título. a las doce y media de la noche terminó: doscientos dieciocho contratos arreglados en shopify y ninguno con diferencia al releerlo. comparé cada uno en shopify y en dynamo: el box, el precio, las otras líneas, el status, la fecha del próximo cobro y los descuentos. después me pediste el draft del cierre del ticket.
+
+# hafner: el paso del mensaje de regalo quedó armado en el flow y probado
+el ticket del gift flow de hafner estaba en need eng work, sin nadie asignado. elegiste que arme yo el paso del mensaje de regalo en el flow. le diste el ok a probarlo con una draft order con descuento, que después se cancela y se archiva.
+
+antes de tocar saqué captura del flow, y después agregué la condición y el paso que escribe el metafield de la orden. la orden de prueba salió con is this a gift en true y con la nota de regalo escrita, y el run dio completo. la orden quedó cancelada y archivada. al mediodía me preguntaste si estaba arreglado. te dije que sí en lo que se pudo probar, con un límite que te dejé escrito, y te armé el draft del comment y el seguimiento.
+
+# hafner: el flow del rose addon cambió en el live, y el draft afirmaba de más
+arrancamos el paso uno del rename de los atributos de contrato de hafner, teniendo en cuenta los tickets que cuelgan de ese. la tarea leyó los flows del store, cambió rose addon charge en el live para que acepte las dos keys, la vieja y la nueva, y pasó el ticket a in progress eng. la rama vieja y el chequeo del valor quedaron como estaban.
+
+cuando te pasé el draft del comment final, reescribiste el primer párrafo y me preguntaste qué quería decir el segundo. ese párrafo decía que había abierto los otros treinta y siete flows y que ninguno lee las keys viejas en el contrato. mirando tu captura no pude sostenerlo, y te dije que el draft afirmaba más de lo que probé. ese párrafo no sale así.
+
+# streamside: los cobros de un día tarde, verificados sin tocar nada
+me pediste que investigue el ticket de streamside organics, de nueva zelanda. sus contratos con batching por día de la semana cobraron un día tarde en la primera renovación. la lectura en vivo de jira se colgó, así que trabajé con la ficha local y te avisé que podía haber comments nuevos que no vi.
+
+tocaste las tres opciones juntas, y salieron las tres. la verificación en shopify, solo lectura, dio que las tres subs del martes cobraron el martes trece y que hoy quedan veintiocho subs de streamside corridas un día. lo leí por la api de shopify y en dynamo sin escribir nada. en paralelo se revisó en el código si el ticket de subscriptions charge at the wrong time ya cubre este bug, y se armó el draft del comment. el guard de escritura le marcó al draft una línea tipo título, que ya me habías corregido otras veces. el ticket sigue en need eng work.
+
+# chat limpio salió a la fuerza, pero el hecho no está verificado
+a las dos de la tarde me preguntaste qué había pasado con chat limpio. el daemon la había frenado por la lista negra, porque tocaba el archivo del chat, que solo se edita desde una sesión conducida. elegiste forzarla. la largué salteando esa protección y la tomó agy. cerró en quince minutos, pero sin el chequeo de dos lados: sonnet encontró las piezas en el código y no pudo confirmar que se haya sacado lo que se tenía que sacar. a las tres menos diez me preguntaste si todo lo del contexto nuevo había quedado hecho para que no vuelva el mismo problema. eso todavía no lo puedo dar por cerrado.
 
 # la cuenta facundo se quedó sin login, y hace falta que lo hagas vos
 a las cuatro y cuarenta y nueve el agente quiso refrescar de antemano el acceso de la cuenta facundo, y no pudo. siguió trabajando con faacuu, así que no se frenó nada. a las cuatro y cincuenta y siete confirmó que no era un token vencido que se arregla solo: el login de esa cuenta está muerto. a las cuatro y cincuenta y nueve volvió a fallar y repitió el aviso.
@@ -879,6 +912,26 @@ desde las cuatro y cuarenta y ocho hasta pasadas las cinco, el agente reintentó
 en este rato hubo dos deploys a cloud, a las cuatro y cincuenta y a las cinco. los dos salieron bien: el primero con dieciocho archivos y el segundo con veinte. después de cada uno, el código de cloud quedó igual que el del server.
 
 a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ninguna orden encolada. el reporte quedó guardado con los de la noche. a la misma hora el recolector borró dos archivos temporales.
+
+# groq sale del banco y queda solo para tareas chiquitas
+me preguntaste para qué usamos groq, porque llega al límite muy rápido en las dos cuentas. el problema era cómo lo usábamos: lo teníamos de juez en el banco y en ráfagas de sombra, y así lo quemábamos. te recomendé no sacarlo del todo, porque para clasificar en milisegundos no tiene rival. elegiste sacarle el banco y las ráfagas. la tarea cerró verificada: groq quedó afuera del banco y de las ráfagas, y en el router sigue solo para microtareas, con un reintento y respuestas cortas.
+
+a la noche me preguntaste si el chat de awtomic podía ir con gemini flash en low. te dije que para la charla rápida anda bien y te expliqué el riesgo. elegiste mantener sonnet en todo awtomic para no arriesgar el criterio.
+
+# el reparto entre claude y agy, en un documento
+le pasaste a gemini el borrador de cómo repartir la cola en diez géneros, mitad para agy y mitad para claude, para que escriba su parte. después le pediste una review en prosa para escucharla. elegiste consolidar el reparto así: el frontend del board para claude, verificación cruzada entre los dos y las recetas para agy. por ahora eso solo queda escrito en el documento. en la cola todavía no cambió quién hace qué. también preguntaste quién contesta el chat más rápido: gemini flash, por lejos.
+
+# juegos: tres colecciones nuevas para la retroid
+a la noche pediste una colección de acción en tres d, del estilo de prince of persia, assassin's creed, dark souls y spyro. elegiste la versión de combate y aventura, con spyro y medievil. quedó con cincuenta y cinco juegos y ya figura en la consola. después pediste opciones para una de isométricos y otra de cámara atrás, y elegiste armar las dos, unos cuarenta isométricos y unos treinta y ocho de cámara atrás, aunque se pisen con la de acción.
+
+# plata: el rango del widget, y el pesimista que no puede ser positivo
+dudaste del más treinta y nueve por ciento a un año con la cartera en rojo, y tenías razón en desconfiar: es un estimado, no una promesa. elegiste mostrar un rango pesimista, medio y optimista sacado de la volatilidad, y quedó armado. a las dos me marcaste que el pesimista nunca puede dar positivo, menos si venís perdiendo, y que el medio de hoy se parece más a un optimista. me quedaste esperando que te explique de dónde sale cada número. también anotaste para más adelante mirar nke, avuv, algo más de vxus, quizá vtv, y comprar más smh si baja.
+
+# awtomic: la pregunta a adrián y el comment de tamara
+adrián dejó un comment que decía can we not update the ones that are on hold, y parecía un error de tipeo. preferiste preguntarle en el ticket si quiso decir now. el comment arranca con la mención a adrián y cierra con tu línea sobre reprogramar la sub que él arregló. tocaste la caja para postearlo, pasar el ticket a in progress eng y dejar solo el label de skip. cuando me pediste el link, el comment todavía no existía, porque en la cola no había nada. en el ticket de quién es el flow sí salió todo: el comment con lo de tamara en una línea se posteó tal cual y el ticket pasó a needs to follow up.
+
+# wise todavía espera tus fotos
+la verificación de wise sigue pendiente. faltan las fotos de tu dni y de tu cara, y se sacan desde el celu.
 
 # r/merval: los quince posts más votados del año, sin memes
 ayer a las once y veintisiete de la noche me pediste investigar el subreddit merval: los posts más votados del año y sus comentarios, sin memes, con el plan y el modelo antes de arrancar. ahí me equivoqué: dije que lo encolaba y no quedó ninguna orden. el chat se dio cuenta solo y te avisó.
