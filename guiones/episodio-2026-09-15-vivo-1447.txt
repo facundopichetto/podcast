@@ -1,5 +1,5 @@
-# actualizado hoy a las 03:45
-actualizado hoy, miércoles catorce, a las tres cuarenta y cinco.
+# actualizado hoy a las 04:01
+actualizado hoy, jueves quince, a las cuatro y uno.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
@@ -912,6 +912,19 @@ desde las cuatro y cuarenta y ocho hasta pasadas las cinco, el agente reintentó
 en este rato hubo dos deploys a cloud, a las cuatro y cincuenta y a las cinco. los dos salieron bien: el primero con dieciocho archivos y el segundo con veinte. después de cada uno, el código de cloud quedó igual que el del server.
 
 a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ninguna orden encolada. el reporte quedó guardado con los de la noche. a la misma hora el recolector borró dos archivos temporales.
+
+# lo que se movió en el agente entre las cuatro menos cuarto y las cuatro
+en este rato no hubo charlas con vos ni tareas cerradas. todo lo que pasó fue movimiento de fondo del agente.
+
+cloud recibió dos deploys, uno a las cuatro menos veinte y otro a las cuatro menos diez. el primero sincronizó dieciocho archivos y el segundo catorce. los dos terminaron bien y el código de cloud quedó al día con el del server.
+
+el puente de la mac al server falló cada tres o cuatro minutos durante todo el tramo, y siempre con el mismo error: intentaba escribir en un archivo que ya estaba cerrado. no se cortó nada por eso, pero el error se repite y nadie lo está arreglando.
+
+el pareado de la foto principal siguió reintentando al juez cada pocos minutos, y ningún juez gratis contestó ni una vez. el par sigue sin veredicto.
+
+a las cuatro menos cuatro el recolector borró veintiún archivos temporales. el contador de subprocesos de flos marcó cero vivos en todas sus pasadas, así que no quedó nada colgado.
+
+cerca de las cuatro corrió el caos simulado, la prueba que rompe algo a propósito para ver si el sistema se recupera solo. se aplicó sin error y quedó programado su revert automático al minuto.
 
 # groq sale del banco y queda solo para tareas chiquitas
 me preguntaste para qué usamos groq, porque llega al límite muy rápido en las dos cuentas. el problema era cómo lo usábamos: lo teníamos de juez en el banco y en ráfagas de sombra, y así lo quemábamos. te recomendé no sacarlo del todo, porque para clasificar en milisegundos no tiene rival. elegiste sacarle el banco y las ráfagas. la tarea cerró verificada: groq quedó afuera del banco y de las ráfagas, y en el router sigue solo para microtareas, con un reintento y respuestas cortas.
