@@ -1,8 +1,37 @@
-# actualizado hoy a las 04:01
-actualizado hoy, jueves quince, a las cuatro y uno.
+# actualizado hoy a las 03:55
+actualizado hoy, viernes dieciséis, a las tres cincuenta y cinco.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# juegos: los noventa y dos revisados por sistema, y quedan cuarenta y seis
+a las nueve de la mañana me preguntaste por los juegos que quedaban por debajo de cuarenta y cinco cuadros. querías saber si ya había hecho todo lo posible o si se podía llevarlos a sesenta, o al menos arriba de cuarenta y cinco. elegiste revisar la lista completa de noventa y dos por sistema, empezando por playstation dos y gamecube.
+
+el primer intento lo corrió agy y se cayó después de una hora y media, mientras probaba mega man x command mission con un parche nuevo de sesenta cuadros y pantalla ancha. el reintento lo tomó sonnet en tu cuenta personal. tardó casi cuatro horas y costó catorce dólares con setenta y siete. jugó uno por uno los de playstation dos y gamecube, clasificó los de psp con el contador del emulador y dejó cuarenta y seis sin probar en partida. a tu pregunta, la respuesta es que no: no estaba hecho todo lo posible.
+
+a las dos y veinticuatro de la tarde elegiste seguir con los cuarenta y seis que faltan, que son de tres de, dreamcast, vita, los de disparos y los ports de pc. también pediste averiguar por qué metroid prime trilogy arranca en negro. esa orden quedó encolada y ya arrancó.
+
+# cupitt's: el acceso por partners estaba, y ahora es regla
+a la tarde preguntaste cómo resolver el ticket de cupitt's. pide el estilo del build a box con la barra de botellas de vino, las fuentes y los colores del merchant, el rollup del carrito y el customer portal. agy contestó que estaba trabado porque no había acceso al store. le pediste que lo comprobara y le preguntaste si había probado entrar por partners. no lo había hecho: explicó cómo se conecta el cli y por qué fallaba.
+
+me mandaste dos capturas. en partners el store de cupitt's figura como collaborator activo y tenés entrada directa al admin. me pediste que me acordara de esto para siempre y que nunca más te venga con lo de collaborator si no lo probé de verdad. querés que quede como regla general para todo awtomic. en el mismo mensaje elegiste arrancar: crear una copia sin publicar del theme pipeline y empezar el estilo ahí. la regla quedó guardada y la orden encolada.
+
+# shiny apple cider: el sign up form, y el acceso que el cli no ve
+al mediodía me pediste un draft de solución para el sign up form de shiny apple cider. el ticket estaba frenado por cuatro bloqueos que había levantado el agente de brian. me preguntaste si había algo que pudiéramos hacer sin esperar al merchant. separé lo que sí se podía: el login del cli lo hago yo entrando como collaborator, y la página se arma en una copia sin publicar con los dos clubs puestos de relleno. también se podía revisar si con ese acceso salen los build a box. los tres flags de dynamo los ponés vos.
+
+la orden se frenó en el primer paso. el cli contestó que no tenía acceso a ese dev store, así que no armé nada. a la tarde elegiste reenviar el pedido de collaborator con el mismo mensaje y los mismos permisos. un minuto después me dijiste que seguro el acceso ya estaba y que siempre me fije antes de decirte que no hay. lo volví a probar y el cli sigue diciendo lo mismo. con häxan había pasado igual: en partners figuraba activo y el cli no entraba. con la regla de cupitt's, lo que corresponde es probar el admin por partners antes de dar el acceso por perdido.
+
+# smh no te sacó el quince por ciento, y el widget de inversiones nuevo
+al mediodía me preguntaste qué pasaba con smh y si habías perdido el quince por ciento de lo que pusiste. no fue tanto. con los precios de ese momento, smh valía unos tres mil trescientos ochenta y ocho dólares contra los tres mil setecientos ochenta que pusiste. es un diez coma cuatro por ciento abajo, unos trescientos noventa dólares. vtv estaba arriba un uno coma siete por ciento, unos cuarenta y cuatro dólares, y vxus abajo un uno coma ocho, unos cuarenta y ocho.
+
+después pediste rediseñar el widget de inversiones. el título pasa a ser us$. la primera fila se llama total y la segunda anual. por ahora el valor del medio de anual copia el de la derecha de total, y después del primer año anual deja de contar lo viejo. cada etf muestra su porcentaje total y el anual, y el gráfico de abajo muestra la ganancia diaria acumulada. la orden salió con sonnet por agy.
+
+esa orden dio muchas vueltas. pasó por cinco pasadas por lo menos, y varias terminaron en "corrió pero no cierra" porque no marcó ninguno de sus pasos como hecho. en una corrió desde la carpeta equivocada. en la quinta, la parte de después del año anduvo de punta a punta con los datos reales de tu cuenta y el reloj puesto en octubre del año que viene. el compromiso igual sigue sin cumplirse y la pasada siguiente vuelve sola a la cola.
+
+# el ticket de los metafields en el sign up form: vamos y volvemos
+a la mañana me preguntaste cuál de los tickets de qa era el más fácil de avanzar. hay seis en verify con vos de verifier. el más adelantado era el del tier en el timeline, que ya tenía draft. elegiste el de los metafields en el sign up form: solo lectura, con capturas, un draft sin postear y decirte si el fix ya está en producción.
+
+quedó verificado a medias. la parte de la tienda no se pudo probar porque el store de qa no tiene prendido el flag de los signup forms ni hay ningún form creado. me autorizaste a prenderlo y a crear un form de prueba con pins. esa orden no avanzó: el flag siguió apagado y no se probó nada. me dijiste que no entendías por qué íbamos y volvíamos y me pediste que intentara verificarlo. lo mandé como corrección de la verificación original, que era el mismo laburo con los mismos archivos, en vez de abrir otra orden.
 
 # las pestañas del board: el pedido que no se notó, y tu bronca
 el pedido de las pestañas venía de antes: que siempre se lea el nombre de verdad de cada pestaña y nunca algo como atomic ochenta y cuatro, un poco más de espacio entre las letras, más aire entre el nombre, el más y la cruz, los íconos más grandes y las subpestañas en la misma línea. la primera tarea lo tomó agy y cerró a las doce y cuarenta y siete. no cerró con un resultado: dijo que estaba mirando las pruebas en segundo plano y que después iba a seguir.
@@ -912,6 +941,32 @@ desde las cuatro y cuarenta y ocho hasta pasadas las cinco, el agente reintentó
 en este rato hubo dos deploys a cloud, a las cuatro y cincuenta y a las cinco. los dos salieron bien: el primero con dieciocho archivos y el segundo con veinte. después de cada uno, el código de cloud quedó igual que el del server.
 
 a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ninguna orden encolada. el reporte quedó guardado con los de la noche. a la misma hora el recolector borró dos archivos temporales.
+
+# flos: el trabajo vivo commiteado, y el comandante que no se entiende
+temprano tocaste la opción de commitear el trabajo que estaba suelto en los dos archivos del chat en vivo y reintegrar su rama. lo hizo agy en veintiocho minutos y quedó integrado con lo del chat limpio. el verificador avisó que los números de línea que citaba la tarea no coincidían con el disco, aunque las funciones existían. a las nueve menos cinco me preguntaste si quedaba algo, y en la cola no había nada pendiente ni corriendo.
+
+al mediodía me mostraste una captura de una respuesta del comandante. te costaba entenderla: tenía demasiados links sin sentido y explicaba poco lo que iba a hacer. elegiste ajustar el prompt del comandante para que sea más claro.
+
+# tinder: el votador de following y los request sent, otra vez
+a las nueve volviste con dos cosas que ya habías pedido y no estaban arregladas: en following no podías votar, y en esa lista seguía apareciendo gente en request sent. me pediste masticarlo para que el comandante trajera órdenes. salieron dos en paralelo, una para destrabar el votador y otra para sacar los request sent de raíz. la segunda cerró en doce minutos. el verificador no la dio por buena: la prueba de las tarjetas quedó roja con dos fallas del botón de volver, y la tarea no pudo descartar que fueran culpa suya.
+
+# el board: las cajas de orden en dos tonos, y la pulida del celular
+pediste sacarle el tercer color a las cajas de orden y escupir: la verde tiene que ser verde y negro, sin el fucsia del borde. lo hizo flash en doce minutos. el verificador confirmó que en las dos hojas de estilo ya no queda ninguno de esos colores de contraste y que las cajas usan un borde simple.
+
+la pulida del board para el celular corrió seis minutos, pero el verificador dijo que no cambió nada. no hubo commits, no pudo confirmar las pruebas y no mencionaba el panel del chat, que era lo principal. la reencolaste desde la pestaña de flos con el tema board.
+
+# models: el rojo de awtomic, groq tres y cuándo renueva cada cuota
+a la tarde me preguntaste por qué awtomic estaba en rojo en el widget. si era porque no tiene fable, ya lo sabías: querías sacarle el rojo y esconder groq tres mientras no esté disponible. también pediste los indicadores de cinco horas y de la semana a la derecha, junto a cuándo renuevan, y que los días de la renovación lleven también las horas. todo salió en una sola orden.
+
+me preguntaste si la cuota de terceros de gemini de verdad renueva en seis días o si es cada tantas horas como la otra. después pediste que agy con claude quede solo de respaldo: primero tu cuenta personal activa, y agy con claude cuando no quede otra. hoy agy con claude casi no se usa, pero tampoco está metido en la escalera como red de seguridad.
+
+# la mudanza y los traspasos de eva
+a la noche charlamos de la mudanza. vas a quedar a unas cuarenta y cinco cuadras, y el traspaso de eva que hoy se hace caminando pasa a ser un viaje en cabify pets. pensabas en una semana con ella y dos con vos, que baja los viajes a dos por mes. me reclamaste que te tirara opciones con cajas en una charla, y tenías razón.
+
+ella te dijo que dos semanas le parecía un montón. desde que se separaron en mayo del año pasado vienen sosteniendo lo de los findes, aunque la perra es más tuya. quedaron en ir subiendo de a poco: arrancar con semana por medio, que ya corta los viajes a la mitad, e ir estirando hasta encontrar el máximo sin que nadie la extrañe demasiado.
+
+# las tandas de votos de instagram del jueves
+votaste nueve tandas a lo largo del día. las más grandes fueron de candidatas: sesenta y nueve, noventa y seis y sesenta, con ocho a catorce que se quedan en interesan en cada una, y cinco follows en la primera y en la última. en las listas de siempre mandaste once a ignoradas, cinco a unfollow con ignorar, seis a limbo dos, una a activar y una de vuelta a activa.
 
 # lo que se movió en el agente entre las cuatro menos cuarto y las cuatro
 en este rato no hubo charlas con vos ni tareas cerradas. todo lo que pasó fue movimiento de fondo del agente.
