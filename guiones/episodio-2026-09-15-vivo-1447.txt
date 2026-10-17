@@ -1,8 +1,17 @@
-# actualizado hoy a las 03:55
-actualizado hoy, viernes dieciséis, a las tres cincuenta y cinco.
+# actualizado hoy a las 04:01
+actualizado hoy, sábado diecisiete, a las cuatro y uno.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# skywalker: el flow de waitlist quedó activo y las cuatro subs viejas ya tienen el flag
+el ticket del waitlist de skywalker pedía una sola cosa: que cada sign up nuevo del form quede marcado con el flag waitlist. el plan ya estaba en el ticket, lo había dejado el agente de brian, y no hacía falta código. era un shopify flow en el admin de skywalker que se dispara cuando se crea un contrato, espera cinco minutos y pone el flag.
+
+el flow lo armé con el acceso de collaborator, pero al principio lo dejé apagado porque el sign up de prueba no salió. me dijiste que lo dejara activo, sin probarlo, y que hiciera lo que pedía el ticket. ahora está activo en skywalker.
+
+después me pediste que leyera el ticket y te diera un draft para resolverlo. quedaban cuatro subs viejas, de antes del flow, que no tenían el flag. elegiste flaguearlas a mano, con captura de cada una. pegaste el comment final y pediste que se postee y que el ticket pase a needs to follow up solo cuando las cuatro estén verificadas. la tarea terminó y las cuatro ya tienen el flag waitlist.
+
+en el medio dejaste una regla que quedó guardada para siempre: cuando me decís que lea algo, es el estado de ese momento, no lo que tenga en memoria de antes. desde ahora el ticket, sus comments y el recurso real se vuelven a leer en vivo en ese turno. el estado y lo que charlamos antes sirven de contexto, pero no reemplazan esa lectura.
 
 # juegos: los noventa y dos revisados por sistema, y quedan cuarenta y seis
 a las nueve de la mañana me preguntaste por los juegos que quedaban por debajo de cuarenta y cinco cuadros. querías saber si ya había hecho todo lo posible o si se podía llevarlos a sesenta, o al menos arriba de cuarenta y cinco. elegiste revisar la lista completa de noventa y dos por sistema, empezando por playstation dos y gamecube.
@@ -946,6 +955,14 @@ a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ningun
 temprano tocaste la opción de commitear el trabajo que estaba suelto en los dos archivos del chat en vivo y reintegrar su rama. lo hizo agy en veintiocho minutos y quedó integrado con lo del chat limpio. el verificador avisó que los números de línea que citaba la tarea no coincidían con el disco, aunque las funciones existían. a las nueve menos cinco me preguntaste si quedaba algo, y en la cola no había nada pendiente ni corriendo.
 
 al mediodía me mostraste una captura de una respuesta del comandante. te costaba entenderla: tenía demasiados links sin sentido y explicaba poco lo que iba a hacer. elegiste ajustar el prompt del comandante para que sea más claro.
+
+# una caja de hace tres semanas que volvió como orden nueva
+en la pestaña de awtomic salió una orden que decía que esperaba al push verificado para postear un comment. la tomó sonnet con tu cuenta personal, tardó tres minutos y costó un dólar con veinte. al revisarla vio que era un eco: la caja que la disparó tenía el mismo texto exacto que una de hace tres semanas, de un trabajo que ya estaba hecho. no posteó nada. igual quedó marcada como no verificada, porque el cierre salió sin el chequeo de dos lados.
+
+# la madrugada del agente: tres deploys a cloud y el juez que no contesta
+entre las tres y media y las cuatro menos cinco el agente subió el código a cloud tres veces. fueron veintiocho, diecisiete y quince archivos, y las tres salieron bien. el daemon no viajó porque cloud ya había rechazado esa versión. la mac también recibió un archivo, y lo que se pisó quedó respaldado en la misma mac.
+
+el juez gratis del pareado siguió sin contestar. reintentó cada dos o tres minutos con el mismo par y ninguno respondió. el resumen de fondo marcó cero subprocesos vivos en flos, así que de ese lado no quedó nada colgado.
 
 # tinder: el votador de following y los request sent, otra vez
 a las nueve volviste con dos cosas que ya habías pedido y no estaban arregladas: en following no podías votar, y en esa lista seguía apareciendo gente en request sent. me pediste masticarlo para que el comandante trajera órdenes. salieron dos en paralelo, una para destrabar el votador y otra para sacar los request sent de raíz. la segunda cerró en doce minutos. el verificador no la dio por buena: la prueba de las tarjetas quedó roja con dos fallas del botón de volver, y la tarea no pudo descartar que fueran culpa suya.
