@@ -1,8 +1,22 @@
-# actualizado hoy a las 04:01
-actualizado hoy, sábado diecisiete, a las cuatro y uno.
+# actualizado hoy a las 05:12
+actualizado hoy, domingo dieciocho, a las cinco doce.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el chat no arma órdenes: escucha, mastica y se lo pasa al comandante
+el sábado a las cinco menos cuarto de la tarde me mandaste una captura y me preguntaste si esa tarea había pasado por el comandante. no había pasado. fue un turno del chat, lo contestó agy directo en el server, y dejó una caja de orden armada por su cuenta, nada menos que la de renombrar gemini.
+
+me preguntaste si no habíamos quedado en que toda orden, y más una de ese calibre, pasaba por el comandante. tenías toda la razón. la regla ya decía que el chat solo mastica y deja la caja para escupir, y que el que lee código y razona es el comandante. igual pasó.
+
+después lo dijiste sin vueltas: no vas a aceptar una orden escrita por un modelo que razona poco. el chat escucha tu pedido, lo escupe masticado y el razonamiento lo hace el comandante. hoy, mañana y siempre.
+
+tocaste la opción que lo blinda. si una respuesta del chat trae una línea de orden cerrada, el sistema la descarta y la convierte en una caja para escupir hacia el comandante, que razona en alto. toca el chat del agente, la receta del comandante y el documento de reglas del agente, y quedó encolada. en el material no está que haya terminado, así que por ahora es una orden en la cola, no un hecho.
+
+# cupitt's: los comentarios en el código del merchant, y las veces que me lo dijiste
+en la pestaña de awtomic, el sábado a las cuatro y media de la tarde, primero tocaste la opción de asignarte el ticket de cupitt's del style del build a box, pasarlo a in progress y aplicar el fix en la copia sin publicar. al toque te arrepentiste. frené todo: el ticket no se asignó, siguió en el estado que tenía y la copia sin publicar quedó como estaba.
+
+enseguida viste en el css un comentario en castellano que explicaba la barra de progreso, sin línea arriba, con las botellas centradas y forma de vino. me dijiste que nunca van comentarios en nada que llega a un merchant, y menos en castellano, y me pediste que contara cuántas veces me lo habías dicho. en los registros de reglas y memoria hay tres veces explícitas, la primera el veinticinco de septiembre. que encima apareciera en el código muestra que tenerlo anotado no alcanzó.
 
 # skywalker: el flow de waitlist quedó activo y las cuatro subs viejas ya tienen el flag
 el ticket del waitlist de skywalker pedía una sola cosa: que cada sign up nuevo del form quede marcado con el flag waitlist. el plan ya estaba en el ticket, lo había dejado el agente de brian, y no hacía falta código. era un shopify flow en el admin de skywalker que se dispara cuando se crea un contrato, espera cinco minutos y pone el flag.
@@ -955,6 +969,28 @@ a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ningun
 temprano tocaste la opción de commitear el trabajo que estaba suelto en los dos archivos del chat en vivo y reintegrar su rama. lo hizo agy en veintiocho minutos y quedó integrado con lo del chat limpio. el verificador avisó que los números de línea que citaba la tarea no coincidían con el disco, aunque las funciones existían. a las nueve menos cinco me preguntaste si quedaba algo, y en la cola no había nada pendiente ni corriendo.
 
 al mediodía me mostraste una captura de una respuesta del comandante. te costaba entenderla: tenía demasiados links sin sentido y explicaba poco lo que iba a hacer. elegiste ajustar el prompt del comandante para que sea más claro.
+
+# el widget de models: gemini ahora dice agy
+el sábado a las cuatro y media de la tarde me mandaste tres cosas para el widget de models: que la línea del ritmo baje hasta gemini y lo de abajo, que gemini pase a llamarse agy con sus indicadores a la derecha y que se vea cuándo renuevan groq y gemini. a las cinco me frenaste: querías masticarlo antes de que lo hiciera directo. lo separamos en esas tres partes, y la orden salió con el dibujo del widget y sus dos hojas de estilo como lo que se toca.
+
+corrió con sonnet en la cuenta awtomic y tardó veintitrés minutos. la fila de gemini ya dice agy y el tick del ritmo baja hasta agy y groq. quedaron dos cosas pendientes: terceros sigue sin tick y hubo tres pruebas que no entraron en la corrida. el cierre no dice si las renovaciones de groq y agy ya aparecen, así que eso todavía no está confirmado.
+
+# juegos: los nueve de playstation dos a sesenta cuadros, y la tanda que rebotó
+el sábado a las diez de la mañana me pasaste nueve juegos de playstation dos para meter en la retroid y llevar a sesenta cuadros, en este orden: hitman dos, red faction dos, the warriors, hitman blood money, contra shattered soldier, hitman contracts, psi-ops, tenchu wrath of heaven y black. elegiste arrancar con los primeros cinco, hasta donde dé la sd sin pasarse, con perfiles a sesenta y probados en partida.
+
+también preguntaste cuánto lugar hay en la memoria interna y si conviene pasar algo liviano para hacerle espacio a la sd. en la interna quedan ocho gigas y medio libres. la respuesta sobre qué tiene sentido mover llegó a medias.
+
+a las once la tanda falló a los cincuenta y dos minutos: agy rebotó con un error de credenciales vencidas en la cuenta orugote. elegiste dejar que corra el reintento, y el material no dice cómo salió.
+
+# reprocann, y el archivo de juegos que aparecía en otra pestaña
+el sábado a las diez y media de la noche preguntaste si para el reprocann hace falta sí o sí un médico registrado. sí hace falta. el trámite lo arrancás vos en mi argentina y ahí completás la declaración jurada, pero tenés que vincular tu perfil con un profesional inscripto en el programa, y es el médico el que carga la indicación, el consentimiento y el plan.
+
+en la misma charla viste que la bolita decía que estaba leyendo un archivo con juegos en el nombre y preguntaste qué tenía que ver juegos. es un valor por defecto que quedó escrito a mano en la receta de la cadena: cuando el chat corre con agy, el archivo del prompt se llama como si fuera de la pestaña de juegos, sea la pestaña que sea. el error está solo en el nombre, no en lo que lee.
+
+# lo que se movió en el agente desde las cuatro y uno
+desde las cuatro y uno hasta las cinco y doce hubo poco movimiento. a las cuatro y cuarenta y dos se actualizó el código en la mac. lo que había antes quedó guardado en el backup de ese día. a las cuatro y cincuenta y dos y a las cinco y dos salieron dos deploys a cloud, los dos bien, con diecisiete y veintiocho archivos. el daemon no viajó en ninguno de los dos, porque cloud ya había rechazado esa versión.
+
+a las cinco terminó el simulacro de la noche sin fallos, sin nada nuevo y sin órdenes encoladas. en todo el rato no quedó ningún subproceso de flos vivo. el juez gratis del pareado siguió sin contestar: se reintentó cada dos o tres minutos y no respondió ninguna vez.
 
 # una caja de hace tres semanas que volvió como orden nueva
 en la pestaña de awtomic salió una orden que decía que esperaba al push verificado para postear un comment. la tomó sonnet con tu cuenta personal, tardó tres minutos y costó un dólar con veinte. al revisarla vio que era un eco: la caja que la disparó tenía el mismo texto exacto que una de hace tres semanas, de un trabajo que ya estaba hecho. no posteó nada. igual quedó marcada como no verificada, porque el cierre salió sin el chequeo de dos lados.
