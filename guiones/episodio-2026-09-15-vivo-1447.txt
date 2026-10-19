@@ -1,8 +1,27 @@
-# actualizado hoy a las 04:01
-actualizado hoy, sábado diecisiete, a las cuatro y uno.
+# actualizado hoy a las 04:32
+actualizado hoy, lunes diecinueve, a las cuatro treinta y dos.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# el chat ya no arma órdenes: todo pasa por el comandante
+viste una captura y preguntaste si esa orden había pasado por el comandante. no había pasado. el chat contestó directo en un turno normal, lo atendió agy en el server, y dejó lista una caja de orden para renombrar gemini. nadie con razonamiento alto había mirado esa orden antes de que llegara a vos.
+
+me recordaste que esto ya lo habíamos hablado: cualquier orden, y más una de ese tamaño, tiene que pasar por el comandante. tenías razón. lo dijiste sin vueltas: no vas a aceptar una orden escrita por un modelo que razona poco. el chat escucha lo que pedís, lo mastica y lo pasa, y el que razona es el comandante. ahora, mañana y siempre.
+
+tocaste la opción para prohibirlo del todo. después confirmaste la orden que lo hace cumplir en el código: si una respuesta del chat trae una orden ya cerrada, el sistema la descarta y la convierte en una caja que va al comandante. la orden toca el chat del daemon, la receta del comandante y el documento de reglas del agente. quedó encolada para que la corra agy con esfuerzo alto. no la vi cerrar, así que todavía no está hecha.
+
+# cupitt's: un comentario en castellano en el código de un merchant, y van tres veces
+en el ticket del style del build a box de cupitt's tocaste la opción que te asignaba el ticket, lo pasaba a in progress y aplicaba el fix en la copia sin publicar. en el mismo minuto te arrepentiste. frené todo y quedó como estaba: el ticket sin asignar, en su estado de antes, y la copia sin tocar.
+
+el motivo estaba en el código. el fix traía un comentario en castellano sobre la barra de progreso, las botellas centradas y la forma de vino. me dijiste que nunca van comentarios en nada que llegue a un merchant, y menos en castellano, y me pediste contar cuántas veces me lo dijiste. en las reglas y en la memoria hay tres veces registradas, y la primera es del veinticinco de septiembre. esta es la cuarta. el problema no era la regla, que ya estaba escrita, sino que el código salió igual.
+
+# hafner: las ciento noventa y seis subs que no renuevan ya tienen el hold
+preguntaste si se podía hacer el ticket de hafner que pide poner el flag de hold en todas las subs que no se renuevan solas. se podía, y el análisis ya lo había dejado el agente de brian en el ticket. son ciento noventa y seis subs activas sin renovación automática, y solo una tenía el flag de chequeo de renovación.
+
+armé la orden: correr el script que ya existía sobre las que faltaban, marcar a mano la que quedaba suelta, verificar con capturas y no postear nada. cuando preguntaste si estaba, ya estaba hecho en hafner y verificado. el conteo final da ciento noventa y seis contratos con el flag, todos activos y ninguno con otro flag: ciento noventa y cuatro por el script, uno que ya lo tenía y uno a mano. las capturas quedaron guardadas en la carpeta de qa del ticket.
+
+después tocaste postear ese mismo comment en el ticket y pasarlo a needs to follow up, sin tocar el assignee y releyendo el ticket aparte para confirmar. esa orden quedó armada con sonnet. que el comment esté publicado no lo vi, así que eso queda abierto.
 
 # skywalker: el flow de waitlist quedó activo y las cuatro subs viejas ya tienen el flag
 el ticket del waitlist de skywalker pedía una sola cosa: que cada sign up nuevo del form quede marcado con el flag waitlist. el plan ya estaba en el ticket, lo había dejado el agente de brian, y no hacía falta código. era un shopify flow en el admin de skywalker que se dispara cuando se crea un contrato, espera cinco minutos y pone el flag.
@@ -955,6 +974,40 @@ a las cinco se apagó el simulacro de la noche: cero fallos, nada nuevo y ningun
 temprano tocaste la opción de commitear el trabajo que estaba suelto en los dos archivos del chat en vivo y reintegrar su rama. lo hizo agy en veintiocho minutos y quedó integrado con lo del chat limpio. el verificador avisó que los números de línea que citaba la tarea no coincidían con el disco, aunque las funciones existían. a las nueve menos cinco me preguntaste si quedaba algo, y en la cola no había nada pendiente ni corriendo.
 
 al mediodía me mostraste una captura de una respuesta del comandante. te costaba entenderla: tenía demasiados links sin sentido y explicaba poco lo que iba a hacer. elegiste ajustar el prompt del comandante para que sea más claro.
+
+# hafner: el stepper del rosé, escondido en el live, y el comment para cerrarlo
+en el ticket del rosé de hafner me pediste postear y pasar a needs to follow up. el draft todavía no lo habías visto, así que te lo mostré primero, en inglés, sin saludo y sin nombres de customers. dice que en el customer portal se escondió el selector de cantidad de la fila del rosé, en el theme live, en desktop y en mobile. la fila sigue mostrando la cantidad, y el botón para sacarlo sigue andando.
+
+tocaste la opción de postear ese comment, pasar el ticket a needs to follow up sin tocar el assignee y verificar después que el comment y el estado quedaron bien. la orden quedó armada con sonnet. como en el ticket del hold, no vi la verificación del posteo.
+
+# el widget models: gemini pasa a llamarse agy
+marcaste tres cosas del widget models con una captura. la línea de ritmo no bajaba hasta gemini, gemini tenía que llamarse agy con sus indicadores a la derecha, y faltaba cuándo renuevan groq y gemini. antes de tocar nada me pediste que lo masticáramos, y lo separé en esas tres partes. tocaste la opción y salió la orden con sonnet.
+
+terminó en veintitrés minutos, en la cuenta de awtomic, por un dólar con nueve. la fila de gemini ahora dice agy y el tick de ritmo baja hasta agy y groq. lo que no quedó: la fila de terceros sigue sin tick y hubo tres pruebas que quedaron afuera de la corrida. no está entero.
+
+# juegos: los nueve de playstation dos a sesenta cuadros, y la tanda que se cayó por el login
+me pasaste nueve juegos de playstation dos para meter en la retroid y llevar a sesenta cuadros, en este orden: hitman dos, red faction dos, the warriors, hitman blood money, contra shattered soldier, hitman contracts, psi-ops, tenchu wrath of heaven y black. elegiste empezar por los primeros cinco, hasta el límite seguro de la sd, con perfiles a sesenta y prueba en partida.
+
+preguntaste cuánto lugar hay en la interna. quedan ocho gigas y medio libres. después preguntaste si había algo de pocos gigas para pasar de la sd a la interna, y fui a mirar qué carpetas livianas tiene la sd.
+
+la tanda de los cinco corrió cincuenta y dos minutos con agy y se cayó. no era el trabajo: agy perdió el login de google a mitad de camino. elegiste dejar que corriera el reintento. quedó encolado, y el resultado del reintento todavía no está.
+
+# la mula de instagram, y la principal que todavía lee
+con la cuenta ya restaurada, preguntaste cómo traerla de a poco y qué hacer para usar menos la principal. hoy la principal hace tus follows, tus unfollows y lee tus propias listas de seguidores y seguidos. la mula lee perfiles ajenos, fotos y candidatas.
+
+preguntaste si eso no era lo que ya hacíamos. casi: la principal todavía baja tus listas para sincronizar, y de ahí salían las mil trescientas cincuenta y cuatro lecturas que había en cola. usarla al mínimo sería que no lea nada y solo mande follows y unfollows.
+
+# el reprocann, y el archivo que decía juegos
+preguntaste si para el reprocann hace falta un médico registrado o si alcanza con mi argentina. hace falta el médico. vos arrancás el trámite y completás la declaración jurada en mi argentina, pero el sistema te pide vincular tu perfil a un profesional inscripto en el programa. ese profesional carga la indicación, el consentimiento informado y el plan.
+
+en la misma pestaña viste que el chat decía que estaba leyendo un archivo de prompt de juegos, y preguntaste qué tenía que ver juegos. no tenía nada que ver. era un nombre que quedó fijo en la receta de la cadena: cuando el chat corre con agy, el archivo del prompt sale con el nombre de juegos sin importar la pestaña. es un nombre mal puesto, no una charla que se haya mezclado con juegos.
+
+# lo que se movió en el agente entre las cuatro y las cuatro y media
+desde las cuatro y uno hubo dos deploys a cloud, uno a las cuatro y catorce y otro a las cuatro y veinticinco. los dos salieron bien y cloud quedó con el código al día. el daemon no viajó en ninguno de los dos, porque cloud ya había rechazado esa versión.
+
+en todo el rato falló el script que lee los votos del buzón, nueve veces por cada diez minutos. siempre es el mismo error: falta el dato que dice si un voto venía premarcado. no se arregló solo y los votos que pasan por ahí no se están procesando.
+
+el juez del pareado siguió sin contestar, con reintentos cada dos minutos. a las cuatro y veinticuatro el recolector borró cuarenta y nueve archivos temporales. el contador de subprocesos de flos dio cero vivos todo el tiempo. a las cuatro y media se aplicó un caos simulado con revert automático a los sesenta segundos. el registro lo marca como simulado, no como un cambio real.
 
 # una caja de hace tres semanas que volvió como orden nueva
 en la pestaña de awtomic salió una orden que decía que esperaba al push verificado para postear un comment. la tomó sonnet con tu cuenta personal, tardó tres minutos y costó un dólar con veinte. al revisarla vio que era un eco: la caja que la disparó tenía el mismo texto exacto que una de hace tres semanas, de un trabajo que ya estaba hecho. no posteó nada. igual quedó marcada como no verificada, porque el cierre salió sin el chequeo de dos lados.
