@@ -1,8 +1,39 @@
-# actualizado hoy a las 04:32
-actualizado hoy, lunes diecinueve, a las cuatro treinta y dos.
+# actualizado hoy a las 03:36
+actualizado hoy, martes veinte, a las tres treinta y seis.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# las respuestas que caen en la pestaña equivocada, otra vez
+volvió el problema de las respuestas que aparecen en una pestaña que no es la suya. me mandaste la captura: el cierre de una tarea de awtomic, la de postear un comment, había caído adentro del chat de tinder. la causa está en cómo se elige el destino de un cierre. hay un solo lugar que decide a qué pestaña va, y si la orden no guardó la pestaña de donde salió, el cierre cae en la pestaña general del tema. además, la web puede pintarlo en la pestaña que tenés abierta en ese momento.
+
+tocaste la opción de auditar las dos puntas, el servidor y la web, y arreglarlo de raíz. la orden quedó armada, pero no salió: quedó retenida porque toca el archivo central del daemon, y ese archivo está en la lista de lo que la cola no puede tocar sola. para tocarlo hace falta una sesión conducida. te expliqué que hay dos caminos y que no se pueden mezclar. sin tocar el daemon, la tarea corre sola pero solo puede arreglar la web y las pruebas. el punto donde se elige la pestaña está en el daemon, así que con ese camino el arreglo de raíz queda afuera. la decisión entre los dos sigue abierta.
+
+# hall: la planilla cambió después del fix, y las fechas nuevas van al live
+me pediste que mirara si las fechas de cierre de personalización de hall estaban como tenían que estar. de entrada no pude abrir la planilla: el server no tenía viva la sesión de google de awtomic, la última guardada era del veintiocho de septiembre y el login automático se frenaba en la pantalla de elegir cuenta. armé la orden para destrabar ese acceso y comparar las fechas contra las siete ventanas del live, sin tocar nada.
+
+cuando la pude leer, la respuesta fue simple. lo que pusimos en el live era exactamente la planilla del dieciocho de septiembre, y después la planilla cambió. de las siete ventanas cambiaron seis. me pediste dos cosas: actualizar el live según la planilla y entender por qué los datos no coincidían. quedó armada la orden para cambiar las seis fechas en el archivo del theme, con backup, revert y una captura del portal.
+
+mientras tanto me pediste una explicación cortita en inglés para mandar, y después la misma con las fechas de antes y las de después. va así: las fechas del theme salían del cronograma original del dieciocho de septiembre, la planilla extendió los plazos en seis niveles y estamos alineando el theme con eso.
+
+hiciste además dos preguntas sobre cómo funciona el código de hall, y la respuesta a las dos es sí. el código usa la hora del navegador, así que todo se calcula en la zona horaria de quien abre el portal. y si una ventana cierra hoy, sigue abierta hasta la medianoche de hoy. las dos cosas las confirmé en el código del live.
+
+# hall: el portal que cerraba antes de tiempo ya está corregido en el live
+en el ticket de hall del portal del collection club que cerraba antes de tiempo me pediste tres cosas: asignártelo y pasarlo a in progress, ver si la fecha ya estaba corregida en el archivo del theme y armar el draft del comment con el pase a needs to follow up. la revisión tardó un minuto: el live de hall ya tiene collection y custom con cierre el veintiuno de octubre. no toqué jira. preguntaste si eso ya estaba o no, y la respuesta es que en la tienda sí y en jira todavía no: el comment y el cambio de estado esperan tu ok sobre el draft.
+
+# hafner: el plan ya dice november con mayúscula, y ahora pasa a delivers
+en el ticket de hafner, emily pedía que en el checkout el plan dijera november con ene mayúscula. brian ya había dejado el análisis y un script borrador. bajé ese script, corrí el dry run y frené antes del live. de los nueve planes que tiene el store, solo uno cambiaba, porque los otros ocho no llevan el mes en el nombre. con tu ok corrí el live solo sobre ese plan: escribió uno, sin errores, y el checkout lo muestra como deliver every november. no posteé nada en jira.
+
+después preguntaste si se podía poner delivers, con ese. se puede. te aclaré que no sé si emily lo ve así de verdad o si lo citó de memoria. me dijiste que lo cambie igual, y quedó en marcha con el mismo script de brian, aflojando el control para que acepte ese cambio y sobre ese único plan.
+
+# skywalker: el cambio de la confirmación del signup va directo al live
+me pediste los drafts de la solución, del comment y del needs to follow up para el ticket de skywalker sobre la fecha de cobro en la confirmación del signup. la idea es sacar la fila de billing date de la confirmación y cambiar el texto del checkbox por uno que acepte términos, condiciones y cobro del wine club. primero lo pediste en una copia, después te arrepentiste y dijiste que se haga todo en el live. quedó armada así: directo al theme live de skywalker, con backup antes, verificación con capturas y el comment y el needs to follow up listos para tu ok. cuando preguntaste si iba a ser live, te confirmé que sí y que en ese momento todavía no había corrido nada.
+
+# ponzi: el flow ya renombra el envío a fex, y la prueba fue real
+el ticket de ponzi estaba frenado esperando un cambio de producto que agregaba una action nueva a flow. me dijiste que eso ya estaba en producción. el flow existía como placeholder, capturando subs para actualizarlo después. la tarea confirmó que la action está en producción desde el primero de octubre, actualizó el flow para que renombre el método de envío a fex y lo probó con una corrida real sobre la sub de prueba de emily. no posteé nada ni toqué el ticket. lo que falta definir con emily es si se vuelve a correr sobre todas las subs viejas.
+
+# tu instagram personal: solo follows y unfollows
+me preguntaste si tu cuenta personal iba a hacer solamente follows y unfollows, con todo lo demás a cargo de la cuenta fantasma. hoy no es así: tu cuenta todavía sincroniza tus propios seguidores y seguidos, y hay un fallback que, cuando la mula recibe un rechazo por exceso de pedidos, lee con tu cuenta. armé la orden para aislarla: el fallback pasa a la mula, la sincronización propia sale de tu cuenta y se apaga el relogin automático. el freno queda puesto hasta que me pases la contraseña nueva para guardarla en la bóveda.
 
 # el chat ya no arma órdenes: todo pasa por el comandante
 viste una captura y preguntaste si esa orden había pasado por el comandante. no había pasado. el chat contestó directo en un turno normal, lo atendió agy en el server, y dejó lista una caja de orden para renombrar gemini. nadie con razonamiento alto había mirado esa orden antes de que llegara a vos.
@@ -984,6 +1015,24 @@ tocaste la opción de postear ese comment, pasar el ticket a needs to follow up 
 marcaste tres cosas del widget models con una captura. la línea de ritmo no bajaba hasta gemini, gemini tenía que llamarse agy con sus indicadores a la derecha, y faltaba cuándo renuevan groq y gemini. antes de tocar nada me pediste que lo masticáramos, y lo separé en esas tres partes. tocaste la opción y salió la orden con sonnet.
 
 terminó en veintitrés minutos, en la cuenta de awtomic, por un dólar con nueve. la fila de gemini ahora dice agy y el tick de ritmo baja hasta agy y groq. lo que no quedó: la fila de terceros sigue sin tick y hubo tres pruebas que quedaron afuera de la corrida. no está entero.
+
+# evoi: el plan nuevo del six pack quedó armado, y el detalle del precio tachado
+para el ticket de evoi que pide sacar los doce meses del six pack, te confirmé que se hacía con configuración, sin código. de paso me marcaste algo que vale para siempre: si abrís la pestaña de un ticket y preguntás por "este", es ese ticket. la tarea creó el plan nuevo del six pack con tres, cuatro y seis meses al veinticinco por ciento, lo dejó vinculado al bundle y escribió el draft del comment sin postearlo. quedó un efecto visual: un precio de cero tachado en la página de producto. me pediste esconderlo con css apuntando al contenedor padre, y eso quedó en marcha.
+
+# el kit de signup: el arreglo del error genérico, en siete copias
+el ticket del kit de signup que esconde los errores de validación detrás de un error genérico estaba sin empezar desde el ocho de octubre. se trata de llevar a los stores que usan el kit el arreglo que ya se había hecho en skywalker. la tarea dejó el arreglo en siete copias sin publicar, una por store, con una captura por caso. ningún live se tocó: cada store espera tu ok.
+
+# fitvine y cupitt's: los dos comments para emily
+en fitvine, el theme live había cambiado. el bloque mobile del build-a-box que armó el agente de brian se subió al final del css del live nuevo. después tocaste la caja para postearle el comment a emily y pasar el ticket a needs to follow up. en cupitt's, el comment de los tres ajustes del build-a-box en la copia pasó por cuatro recortes: más corto, sin saludo, sin hablar en plural y con un please antes del let me know. lo aprobaste así y tocaste la caja para postearlo.
+
+# juegos: olli olli en la vita, y lo que entra si no se borra nada
+me dijiste que olli olli en la vita se veía mal. armé la tarea para tocar la configuración gráfica del emulador y sacarlo si no mejora. también vimos qué juegos del video de pc retro podrían entrar: dejando afuera los de pc, solo quedan no one lives forever en su versión de playstation dos y gabriel knight, y para meterlos nos pasamos del espacio. al final decidiste no borrar nada y dejarlos marcados para entrar más adelante, junto con los que ya esperan lugar en black.
+
+# la compu de tu viejo
+te pregunté si tenía acceso a la pc de tu viejo y entré por rustdesk: saqué una captura y cerré la sesión sin tocar nada. después mandaste un audio diciendo que chrome le anda lento y que usan las cosas típicas de oficina. armé la orden para limpiar lo que arranca solo y los temporales, revisar chrome y listar los programas antes de tocar algo delicado. un detalle: si la máquina tiene windows siete, las versiones nuevas de chrome no se instalan.
+
+# lo que se movió en el agente de madrugada
+cerca de las tres y cuarto, la cola quedó dormida: una orden pendiente, nada corriendo y una hora y media sin movimiento. no encontré nada que pudiera destrabar solo. en el mismo rato, el script que procesa los votos del buzón falló una y otra vez, siempre con el mismo error, por un campo que no encuentra. hubo dos deploys a cloud que dejaron el código al día, aunque el archivo central del daemon no viajó porque cloud ya había rechazado esa versión. el recolector borró sesenta y un temporales viejos.
 
 # juegos: los nueve de playstation dos a sesenta cuadros, y la tanda que se cayó por el login
 me pasaste nueve juegos de playstation dos para meter en la retroid y llevar a sesenta cuadros, en este orden: hitman dos, red faction dos, the warriors, hitman blood money, contra shattered soldier, hitman contracts, psi-ops, tenchu wrath of heaven y black. elegiste empezar por los primeros cinco, hasta el límite seguro de la sd, con perfiles a sesenta y prueba en partida.
