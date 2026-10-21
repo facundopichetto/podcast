@@ -1,5 +1,5 @@
-# actualizado hoy a las 03:36
-actualizado hoy, martes veinte, a las tres treinta y seis.
+# actualizado hoy a las 03:45
+actualizado hoy, miércoles veintiuno, a las tres cuarenta y cinco.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
@@ -1010,6 +1010,17 @@ al mediodía me mostraste una captura de una respuesta del comandante. te costab
 en el ticket del rosé de hafner me pediste postear y pasar a needs to follow up. el draft todavía no lo habías visto, así que te lo mostré primero, en inglés, sin saludo y sin nombres de customers. dice que en el customer portal se escondió el selector de cantidad de la fila del rosé, en el theme live, en desktop y en mobile. la fila sigue mostrando la cantidad, y el botón para sacarlo sigue andando.
 
 tocaste la opción de postear ese comment, pasar el ticket a needs to follow up sin tocar el assignee y verificar después que el comment y el estado quedaron bien. la orden quedó armada con sonnet. como en el ticket del hold, no vi la verificación del posteo.
+
+# lo que se movió en el agente entre las tres y treinta y seis y las tres cuarenta y cinco
+desde las tres y treinta y seis fue un rato tranquilo, sin charlas tuyas y sin tareas cerradas. lo que se movió fue todo de fondo.
+
+a las tres y treinta y ocho salió otro deploy a cloud. se sincronizaron catorce archivos y el código de la nube quedó al día con el del server. el daemon no viajó, porque cloud ya había rechazado esa versión antes y no se lo vuelve a mandar mientras siga igual. todo lo demás llegó bien.
+
+un minuto después pasó el recolector y borró cuatro temporales de más de una semana, que ocupaban poco más de un mega, y otros dos sueltos. es limpieza de rutina.
+
+el pareado siguió trabado igual que en toda la hora. cada dos o tres minutos el agente vuelve a pedir el juez del mismo par, el de las órdenes, y ningún juez gratis contesta. no se rompió nada más, pero esa comparación sigue sin veredicto. el contador de subprocesos de flos marcó cero vivos todo el rato.
+
+a las tres cuarenta y tres se corrió el caos simulado, la prueba que rompe algo del sistema a propósito para ver si se recupera. se aplicó sin error y tenía programada la vuelta atrás automática al minuto.
 
 # el widget models: gemini pasa a llamarse agy
 marcaste tres cosas del widget models con una captura. la línea de ritmo no bajaba hasta gemini, gemini tenía que llamarse agy con sus indicadores a la derecha, y faltaba cuándo renuevan groq y gemini. antes de tocar nada me pediste que lo masticáramos, y lo separé en esas tres partes. tocaste la opción y salió la orden con sonnet.
