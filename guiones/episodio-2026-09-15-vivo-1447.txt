@@ -1,29 +1,8 @@
-# actualizado hoy a las 03:40
-actualizado hoy, jueves veintidós, a las tres cuarenta.
+# actualizado hoy a las 03:45
+actualizado hoy, miércoles veintiuno, a las tres cuarenta y cinco.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
-
-# geek grind: el botón de las cajas ya anda en el live, pero el pedido del ticket era más grande
-en geek grind el botón build your box no llevaba al builder en las cinco páginas de producto. me preguntaste por qué no te proponía resolverlo directo en el live. la respuesta fue la regla de awtomic: un theme live no se toca sin confirmación explícita. además, alguien había editado templates ese mismo día en el live, y el arreglo todavía tenía que probarse con el proxy de la app bloqueado.
-
-entonces se armó una copia sin publicar a partir del live y se cambió solo el bloque de los botones de compra. en esa copia el botón abre el builder con el talle elegido, y anda con el proxy bloqueado y la cache limpia en las cinco cajas. después subí al live ese único archivo y nada más. antes de subirlo confirmé que el live seguía siendo el mismo, y las cinco páginas andan. no se posteó nada en jira ni se tocó el estado del ticket.
-
-el comment de cierre tuvo dos vueltas. primero me pediste que quedara en menos de la mitad, y lo bajé a sesenta y tres palabras, sin el formato del link del builder ni el detalle de cache. después me marcaste que seguía con cosas que no importan, como el archivo que se tocó y la prueba del proxy, y había que sacarlas también.
-
-a la noche me preguntaste si el ticket estaba hecho, y te dije que no. la primera línea de la descripción pide que la instalación local quede completa en todas las páginas y que el widget ande sin depender de la app, con el proxy bloqueado. el cambio del botón cubría solo una parte. ahí elegiste la opción b: poner el bloque nativo del subscription widget en lugar del botón del theme, otra vez en una copia. eso ya quedó probado. en la copia, el widget nativo anda con el proxy bloqueado y la cache limpia en las cinco cajas. para cerrar el ticket falta una de dos cosas: llevar ese cambio al live de geek grind o dejar el draft con lo que hay que hacer. en el live todavía no se aplicó y en el ticket no se posteó nada.
-
-# los trece tickets en verify: todos tienen el fix en producción, y el primero ya está en done
-me pediste revisar los trece tickets donde sos verifier, para cerrarlos o rebotarlos todos con la menor interacción posible, del más fácil al más difícil. después ajustaste la forma: primero reviso todos de fondo y después te traigo el más fácil con opciones, y vamos cerrando de a uno. lo ideal es que la mayoría salga con un comment y el pase a done, siempre con capturas y mirando si el cambio también está en producción.
-
-la revisión de fondo terminó. con los releases de ese día de la api, de las colas, del bundle de shopify y de las extensiones, los trece tienen el fix en producción y en main. mario no había contestado nada. el primero en salir fue el de analytics, el de que new subscription revenue cuente solo lo que corresponde: se posteó el comment, pasó a done y se releyó aparte para confirmar que quedó publicado. los demás siguen en la fila, con el orden de más fácil a más difícil ya armado.
-
-# trust the winemaker: los clubes bloqueados en un preview, y la rutina de arranque de cada ticket
-en el ticket de los clubes trust the winemaker, de tres, seis y doce botellas, el agente de brian ya había dejado casi todo hecho. extendió el bloqueo a esos clubes con css, que traba los botones de cantidad y el remove en las seis filas de club, y un js chico. como la lectura en vivo de jira daba timeout, lo leí de la ficha local.
-
-en el medio me diste una regla para siempre. cada vez que arrancamos un ticket, primero va esto: revisar que esté asignado a vos y, si no, asignártelo. después, pasarlo a in progress. y por último, sacar los labels del agente de brian y poner cx-agent-skip. quedó guardada en la memoria de awtomic y ahora se hace sola.
-
-la orden aplicó esos tres pasos y siguió con la prueba del preview con un customer de club, en escritorio y en celular, con capturas, más la revisión de la sub de hannah y el draft del comment final, sin publicar nada al live. terminó, pero sin el chequeo de dos lados, así que el "hecho" de esa tarea no está verificado.
 
 # las respuestas que caen en la pestaña equivocada, otra vez
 volvió el problema de las respuestas que aparecen en una pestaña que no es la suya. me mandaste la captura: el cierre de una tarea de awtomic, la de postear un comment, había caído adentro del chat de tinder. la causa está en cómo se elige el destino de un cierre. hay un solo lugar que decide a qué pestaña va, y si la orden no guardó la pestaña de donde salió, el cierre cae en la pestaña general del tema. además, la web puede pintarlo en la pestaña que tenés abierta en ese momento.
@@ -1042,32 +1021,6 @@ un minuto después pasó el recolector y borró cuatro temporales de más de una
 el pareado siguió trabado igual que en toda la hora. cada dos o tres minutos el agente vuelve a pedir el juez del mismo par, el de las órdenes, y ningún juez gratis contesta. no se rompió nada más, pero esa comparación sigue sin veredicto. el contador de subprocesos de flos marcó cero vivos todo el rato.
 
 a las tres cuarenta y tres se corrió el caos simulado, la prueba que rompe algo del sistema a propósito para ver si se recupera. se aplicó sin error y tenía programada la vuelta atrás automática al minuto.
-
-# crash y spyro de playstation uno salieron de la consola, y lo que queda por entrar
-la tarea de sacar los crash y los spyro de playstation uno de la retroid terminó bien. los cinco discos quedaron guardados en black, en la carpeta de sacados de ese día, con un archivo de control que coincide con lo que declaraba la tarea. el índice de la consola ya no tiene ningún crash ni spyro de playstation uno. los de game boy advance siguen.
-
-me preguntaste por los de playstation dos y si no estaban en tus trilogías. no están: las remasterizaciones, la n. sane trilogy y la reignited trilogy, cubren solo los tres juegos originales de playstation uno. los de playstation dos son entregas posteriores, como the wrath of cortex.
-
-después preguntaste cuánto espacio queda. la sd de la consola quedó con unos seis gigas libres, arriba del piso de cuatro coma siete. en playstation dos hay en black una tanda de terror y acción lista pero sin subir por falta de lugar: los silent hill más nuevos, haunting ground, rule of rose, black, gun, the godfather y los resident evil de esa generación, entre otros. la lista completa, con pc y dos incluidos, te la pasé en un cuadro.
-
-# cuando estás eligiendo, tienen que salir cajas
-me marcaste que en una charla donde estabas evaluando opciones de compra no te ofrecí cajas, y que era obvio que hacían falta. la explicación es que la regla de no tirar cajas en una charla informativa tomó tu pregunta como una consulta suelta. no detectó que estabas eligiendo. tocaste la opción de corregirlo de raíz: el clasificador del chat va a ofrecer opciones para tocar cada vez que el mensaje compare productos o pida elegir entre alternativas.
-
-en el mismo rato volvió a pasar el cruce de pestañas. me escribiste en flos y después fuiste a otra pestaña: la respuesta de flos empezó a aparecer ahí, se fue, la pestaña quedó vacía y al final volvió todo de una. el resultado final estaba bien, pero el recorrido no. la causa es que el stream de la respuesta no lleva atado el id de la pestaña en cada pedazo. elegiste la opción de aislarlo, del lado del servidor y del lado de la web.
-
-# la clave de fuzzy genetics que pisó chrome
-cuando cambiaste la contraseña de tu instagram personal, el gestor de chrome pisó la que tenías guardada de fuzzy genetics. me preguntaste si se podía recuperar la anterior. el gestor de google no guarda versiones viejas: lo que se pisa se pierde en la nube. tampoco sirve la copia del perfil de chrome de la mac, porque acá en el server no está, y aunque estuviera, las claves van cifradas con el llavero de la mac. el camino que queda es usar la sesión que todavía tenés abierta para ver el mail o el celular vinculado desde el centro de cuentas y resetearla desde ahí. aparte, actualicé en la bóveda la clave nueva de mi argentina.
-
-# las cinco pelis recomendadas: tres están en plex
-de las cinco que te recomendaron, the wizard, hackers, mallrats, brainscan y wargames, hay tres en plex. recorrí la biblioteca entera del único server compartido que tenés, el de santi, con más de dos mil trescientas películas. grandma's boy ya estaba anotada como vista y con pulgares arriba. me pediste marcar en la wishlist las dos que no están y buscarlas en tus otros servicios, y eso quedó en camino.
-
-# el pocketbook sigue sin aparecer en el server
-el lector pocketbook verse no apareció en el server en ninguno de los dos intentos. me avisaste que estaba en modo pc link y conectado al hub. igual, la segunda pasada vio solo los discos, los hubs y el control, y ningún dispositivo nuevo. no hubo nada que montar ni que listar.
-
-# lo que se movió en el agente de madrugada
-entre las tres y cuarto y las tres cuarenta hubo dos deploys a cloud. los dos salieron bien, y el código de cloud y el de la mac quedaron al día. el daemon no viajó porque cloud ya había rechazado esa versión.
-
-el juez gratis del pareado se reintentó cada dos o tres minutos con el mismo par y no contestó ninguna vez. saltó un aviso de cpu alta: media hora con carga de más de cuarenta en doce núcleos, casi todo de python. el limpiador mató un server de adb que llevaba media hora sin clientes. un parche automático sobre el guard de pruebas no dejó la prueba en verde, así que se revirtió y quedó el aviso. y a las tres treinta y seis la cola quedó dormida: una pendiente, nada corriendo y casi media hora sin movimiento, sin nada que se pudiera destrabar solo.
 
 # el widget models: gemini pasa a llamarse agy
 marcaste tres cosas del widget models con una captura. la línea de ritmo no bajaba hasta gemini, gemini tenía que llamarse agy con sus indicadores a la derecha, y faltaba cuándo renuevan groq y gemini. antes de tocar nada me pediste que lo masticáramos, y lo separé en esas tres partes. tocaste la opción y salió la orden con sonnet.
