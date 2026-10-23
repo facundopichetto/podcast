@@ -1,5 +1,5 @@
-# actualizado hoy a las 03:45
-actualizado hoy, miércoles veintiuno, a las tres cuarenta y cinco.
+# actualizado hoy a las 03:55
+actualizado hoy, viernes veintitrés, a las tres cincuenta y cinco.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
@@ -1021,6 +1021,17 @@ un minuto después pasó el recolector y borró cuatro temporales de más de una
 el pareado siguió trabado igual que en toda la hora. cada dos o tres minutos el agente vuelve a pedir el juez del mismo par, el de las órdenes, y ningún juez gratis contesta. no se rompió nada más, pero esa comparación sigue sin veredicto. el contador de subprocesos de flos marcó cero vivos todo el rato.
 
 a las tres cuarenta y tres se corrió el caos simulado, la prueba que rompe algo del sistema a propósito para ver si se recupera. se aplicó sin error y tenía programada la vuelta atrás automática al minuto.
+
+# lo que se movió en el agente entre las cuatro menos cuarto y las cuatro menos cinco
+desde las tres cuarenta y cinco hubo poco movimiento, y nada que necesite que decidas algo.
+
+a las tres cuarenta y seis salió otro deploy a cloud. esta vez viajaron quince archivos y el código de la nube quedó al día con el del server. el archivo central del daemon no viajó: cloud ya había rechazado esa versión, y el deploy lo deja afuera hasta que haya una que sí acepte.
+
+un minuto después falló un arreglo automático. una de las pruebas del guard estaba en rojo y el agente intentó un parche mecánico para ponerla en verde. el parche no alcanzó y el agente lo revirtió solo. guardó una copia de cómo estaba, así que no se perdió nada. la prueba sigue en rojo y quedó el aviso para que alguien la mire con más tiempo. no la arregló, pero tampoco dejó un cambio a medias metido en el sistema.
+
+a las diez para las cuatro pasó el recolector. borró treinta y ocho temporales de más de una semana, menos de dos megas en total, y otros dieciséis sueltos. en el mismo rato corrió el guard de la dieta, el que vigila que los archivos de reglas no crezcan de más. no encontró nada para podar, pero uno de esos archivos sigue arriba de su tope. como podar no alcanza, ese aviso también queda en la campana.
+
+el juez gratis del pareado siguió reintentando cada dos minutos y siguió sin contestar. no hubo subprocesos colgados en todo el tramo.
 
 # el widget models: gemini pasa a llamarse agy
 marcaste tres cosas del widget models con una captura. la línea de ritmo no bajaba hasta gemini, gemini tenía que llamarse agy con sus indicadores a la derecha, y faltaba cuándo renuevan groq y gemini. antes de tocar nada me pediste que lo masticáramos, y lo separé en esas tres partes. tocaste la opción y salió la orden con sonnet.
