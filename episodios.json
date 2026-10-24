@@ -3611,7 +3611,66 @@
    "ts": "2026-10-09T01:37:57-03:00",
    "audio_borrado": "2026-10-16",
    "audio_mb": 21.3
+  },
+  {
+   "id": "ep-2026-10-24-sistema-y-cartera",
+   "fecha": "2026-10-24",
+   "titulo": "el sistema desde el 9 de octubre, la cartera hoy y datitos sueltos",
+   "temas": [
+    "flos",
+    "server",
+    "plata",
+    "personal"
+   ],
+   "palabras": 5655,
+   "guion": "guion-sistema-y-cartera.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-10-24-sistema-y-cartera-daniela.mp3",
+     "duracion": 1780.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va este episodio",
+       "duracion": 123.6,
+       "archivo": "audio/ep-2026-10-24-sistema-y-cartera-1-de-que-va-este-episodio.daniela.mp3"
+      },
+      {
+       "t": 123.6,
+       "titulo": "el comandante, gemini cuatro argon y el chat sin fricción",
+       "duracion": 354.7,
+       "archivo": "audio/ep-2026-10-24-sistema-y-cartera-2-el-comandante-gemini.daniela.mp3"
+      },
+      {
+       "t": 478.3,
+       "titulo": "motores, cuentas y relojes: lo que se blindó abajo del capó",
+       "duracion": 338.9,
+       "archivo": "audio/ep-2026-10-24-sistema-y-cartera-3-motores-cuentas-y.daniela.mp3"
+      },
+      {
+       "t": 817.3,
+       "titulo": "cómo está hoy tu cartera en estados unidos",
+       "duracion": 302.6,
+       "archivo": "audio/ep-2026-10-24-sistema-y-cartera-4-como-esta-hoy-tu.daniela.mp3"
+      },
+      {
+       "t": 1119.9,
+       "titulo": "los dos aportes de diez mil dólares y la lupa sobre nike",
+       "duracion": 390.9,
+       "archivo": "audio/ep-2026-10-24-sistema-y-cartera-5-los-dos-aportes-de-diez.daniela.mp3"
+      },
+      {
+       "t": 1510.7,
+       "titulo": "datitos sueltos: la voz en dos capas, la compu de tu viejo y qué mira el mercado local",
+       "duracion": 270.1,
+       "archivo": "audio/ep-2026-10-24-sistema-y-cartera-6-datitos-sueltos-la-voz.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 1780.9,
+   "ts": "2026-10-24T01:16:16-03:00"
   }
  ],
- "actualizado": "2026-10-23 06:38"
+ "actualizado": "2026-10-24 01:16"
 }
