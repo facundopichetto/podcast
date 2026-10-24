@@ -1,8 +1,13 @@
-# actualizado hoy a las 03:55
-actualizado hoy, viernes veintitrés, a las tres cincuenta y cinco.
+# actualizado hoy a las 04:02
+actualizado hoy, sábado veinticuatro, a las cuatro y dos.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# la cola se quedó dormida, y el agente no encontró qué destrabar
+a las cuatro menos un minuto saltó el aviso de cola trabada. había dos órdenes pendientes, ninguna corriendo, y la cola llevaba ciento cuarenta y seis minutos sin moverse, casi dos horas y media. el agente probó destrabarla solo y no encontró nada que pudiera soltar, así que la dejó marcada como bloqueada para que la mires vos.
+
+lo raro es que no hay nada roto a la vista: no es que una tarea se colgó ocupando el lugar, porque no había ninguna corriendo. las dos pendientes esperan y nadie las larga. hasta que alguien mire por qué esperan, esas dos órdenes no avanzan solas.
 
 # las respuestas que caen en la pestaña equivocada, otra vez
 volvió el problema de las respuestas que aparecen en una pestaña que no es la suya. me mandaste la captura: el cierre de una tarea de awtomic, la de postear un comment, había caído adentro del chat de tinder. la causa está en cómo se elige el destino de un cierre. hay un solo lugar que decide a qué pestaña va, y si la orden no guardó la pestaña de donde salió, el cierre cae en la pestaña general del tema. además, la web puede pintarlo en la pestaña que tenés abierta en ese momento.
@@ -1021,6 +1026,15 @@ un minuto después pasó el recolector y borró cuatro temporales de más de una
 el pareado siguió trabado igual que en toda la hora. cada dos o tres minutos el agente vuelve a pedir el juez del mismo par, el de las órdenes, y ningún juez gratis contesta. no se rompió nada más, pero esa comparación sigue sin veredicto. el contador de subprocesos de flos marcó cero vivos todo el rato.
 
 a las tres cuarenta y tres se corrió el caos simulado, la prueba que rompe algo del sistema a propósito para ver si se recupera. se aplicó sin error y tenía programada la vuelta atrás automática al minuto.
+
+# lo que se movió en el agente entre las cuatro menos cinco y las cuatro y dos
+a las cuatro menos cinco pasó el recolector y borró dieciséis temporales de más de una semana, que ocupaban casi nada, y otros dos sueltos. en la misma vuelta, el guard de la dieta de los núcleos intentó podar, no encontró nada para sacar, y uno de los núcleos sigue arriba del tope. por eso dejó el aviso: podar solo ya no alcanza y alguien tiene que achicarlo a mano.
+
+el juez gratis del pareado siguió sin contestar. lo reintentó cada dos o tres minutos durante todo el rato y no respondió ninguna vez. es el mismo par que viene esperando desde antes, y sigue sin veredicto.
+
+a las cuatro menos un minuto corrió un caos simulado, de esos que rompen algo a propósito para ver si el sistema se recupera. se aplicó bien y tenía el revert automático armado a los sesenta segundos. enseguida, a las cuatro en punto, el guard intentó arreglar con un parche mecánico una prueba que estaba dando un falso resultado. el parche no la dejó en verde, así que lo revirtió y guardó una copia del archivo como estaba antes. la prueba queda con el aviso puesto, sin arreglar.
+
+a las cuatro y uno salió otro deploy a cloud, esta vez con veinticuatro archivos. el código de cloud quedó al día y el de la mac también se actualizó. el archivo central del daemon sigue sin viajar, porque cloud ya había rechazado esta versión, así que allá corre el resto del código nuevo con el daemon anterior.
 
 # lo que se movió en el agente entre las cuatro menos cuarto y las cuatro menos cinco
 desde las tres cuarenta y cinco hubo poco movimiento, y nada que necesite que decidas algo.
