@@ -4355,3 +4355,80 @@ lo que hablo facundo en la pestaña:
 - 04:01 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 24 archivo(s) sincronizados (daemon.py no viaja: cloud ya rechazo esta version)
 - 04:01 nube_al_dia: codigo de cloud actualizado (c9805a2fe874a425 -> d1eb3faad8e7de6a)
 - 04:01 nube_al_dia: codigo de la mac actualizado...
+
+### tramo 04:02-14:24 (hecho)
+## [juegos] lo que se hizo en juegos
+lo que hablo facundo en la pestaña:
+- 09:54 facundo: 1 prince en amiga tiene slowdowwns. me gusta la version pero cada tanto tiene slowdowns. se puede arreglar? 2 dark clouds 2 sigue en la lista de heavy. actualiza todas las listas 3 berserk lo intente largar desde heavy y no pude. arregla / claudio: agy respondiendo. prince of persia en amiga suele dar tirones por ciclos de cpu o el core de retroarch (puae / puae2021). para dark cloud 2 y berserk, falta purgar la lista custom-heavy y reparar la ruta o el acceso al m3u de berserk en la interna. como son tres ajustes directos en la consola y las listas, lo pasamos...
+- 09:55 facundo: A: arreglar slowdowns de prince of persia en amiga, limpiar dark cloud 2 de la lista heavy y todas las listas, y reparar el arranque de berserk desde heavy [escupir] / claudio: agy respondiendo. » revisando si hay correcciones de facundo » buscando listas y colecciones de juegos » mirando informe de prince y estado de juegos » revisando colecciones y lista heavy » verificando si hay correcciones de facundo antes de contestar quedan listos los tres ajustes para corregir el rendimiento de...
+- 10:52 facundo: (tarea reparar-heavy-berserk-prince: tema juegos: [modelo: claude/sonnet effort: high] [toca: ESTADO.md] [hilo: desde) / claudio: terminó reparar-heavy-berserk-prince (opus, reintento, cuenta facundo (opus), 12 min, $1.47): Arreglé las tres cosas. Berserk y las listas están probados en la consola; lo de Prince en partida te toca probarlo a vos. - Berserk: ES-DE le mandaba a ARMSX2 la ruta del .m3u cortada en el primer espacio...
+- 11:06 facundo: che y no me faltan juegos de amiga? no está para hacer alguna colección que valga la pena?? no se ni que es amiga, pero me sorprendio que eso se vea mejor que las consolas de la epoca / claudio: agy respondiendo. la amiga fue una computadora de commodore de fines de los 80 y principios de los 90 (amiga 500 y 1200) que revolucionó el pixel art, el sonido con chips dedicados y la animación fluida antes de que snes y genesis dominaran. hoy tenés solo Prince of Persia cargado en la consola. vale totalmente la...
+- 11:12 facundo: A: armar una colección curada de clásicos esenciales de amiga para la rp5 probados y listos para jugar [escupir] / claudio: Armo la colección de Amiga con los clásicos que te nombré, y cada juego tiene que estar probado en partida antes de darlo por listo. OPCION A: {coleccion-amiga-clasicos} [modelo: claude/sonnet effort: high] [toca: juegos/ESTADO.md...
+
+## [flos] lo que se hizo en flos
+lo que hablo facundo en la pestaña:
+- 07:01 facundo: (tarea arreglador-madrugada: [madrugada 06:00] [06:00] [modelo: agy/gemini-4-argon effort: high] [toca: recet) / claudio: terminó arreglador-madrugada (gemini-4-argon, 61 min): [agy codigo: sonnet la verifico: no se, sonnet rebotó (rc=127: FileNotFoundError: [Errno 2] No such file or directory: '/home/agente/.claudio-worktrees/4115/tools/agente') · codigo · tanteo 155/275] GUARD DE ESCRITURA: 1 cosas que facundo ya corrigio. el caso...
+- 12:18 facundo: hay varias cosas feas acá. pasale la foto tal cual al comandante y que me deje esto mas lindo ![IMG_8365.png](img/1605a333d1ab-IMG_8365.png) / claudio: entendido, le paso la captura directo al comandante para que analice la interfaz y proponga los cambios visuales. OPCION A: [escupir] pasarle la captura adjunta al comandante para que revise los detalles visuales que quedaron feos y deje la interfaz más linda
+- 12:20 facundo: A: pasarle la captura adjunta al comandante para que revise los detalles visuales que quedaron feos y deje la interfaz más linda [escupir] / claudio: Le paso la captura tal cual al comandante de cola. No la encontré en disco con ese nombre, así que la orden lleva el nombre de archivo (IMG_8365.png) y le pide buscarla antes de tocar nada. OPCION A: {embellecer-board-captura} [modelo: claude/sonnet effort: high] [toca: web/estilos.css, web/index.html] [hilo: desde...
+- 13:05 facundo: (tarea embellecer-board-captura: tema flos: [modelo: claude/sonnet effort: high] [toca: web/estilos.css, web/inde) / claudio: terminó embellecer-board-captura (fable, cuenta facundo (fable), 44 min, $9.58): [flos] terminó embellecer-board-captura. La captura IMG_8365 era el modal de pestaña nueva en el celu. Lo que estaba feo y quedó arreglado, visto a ojo en chrome headless a 390x844 (tmp/4144/despues-tema.png, despues-fin.png...
+- 06:38 facundo: (tarea arreglador-madrugada: [madrugada 06:00] [06:00] [modelo: agy/gemini-4-argon effort: high] [toca: recet) / claudio: terminó arreglador-madrugada (gemini-4-argon, 38 min): [agy codigo: sonnet la verifico: no se, sonnet rebotó (rc=127: FileNotFoundError: [Errno 2] No such file or directory: '/home/agente/.claudio-worktrees/4138/tools/agente') · codigo · tanteo 160/284] integrado: rama orden-4138 mergeada al vivo (2 archivos; verde...
+- 09:51 facundo: qué pasó con la orden "dejar-ape-escape-ezab" ??? no puede ser que haya quedado colgada mas de dos horas!!! 1 pasale LITERALMENTE el problema al comandante para...
+
+## [personal] lo que se hizo en personal
+lo que hablo facundo en la pestaña:
+- 12:38 facundo: de todos los modelso de levis jeans, cual es el o los que tienen mas finito abajo (es decir donde va la zapatilla) 510 y 512 segun entiendo... otros ? tomate tu tiempo para buscar / claudio: agy respondiendo. los mas finitos de botamanga (leg opening) son justamente el de cx-5010 skywalker facundo eligio a cerrar extreme skinny (~12.25") y el de tenes el contexto skinny (~13"). esa tarea slim taper (~12.75") es el mas angosto que no te ahorca el muslo, y si buscas corte taper mas comodo arriba tenes el de facundo eligio a para la cuenta regular taper (~14.5") o el de diseño chat con respaldo y sin athletic taper (~15.75").
+- 12:41 facundo: o sea esa tarea es mas taper que el de tenes el contexto, y mas ancho arriba, cierto ? / claudio: agy respondiendo. exacto, es tal cual. el de tenes el contexto es skinny parejo: va pegado desde la cadera y el muslo hasta el tobillo. esa tarea es slim taper: arriba tiene corte slim (te da algo de aire en cadera y muslos) y desde la rodilla hacia el tobillo se afina de golpe, terminando abajo casi tan angosto como el de tenes el contexto.
+- 12:41 facundo: casi tan angosto no.. mas angosto segun tus numeros / claudio: agy respondiendo. tenés razón, mala mía en la redacción. según las medidas oficiales de levi's para talle 32, esa tarea tiene 12.75" de botamanga frente a las 13" del 510, así que abajo termina efectivamente un cuarto de pulgada más angosto.
+- 12:42 facundo: son los mejores jeans known to man / claudio: agy respondiendo. para muchos es el corte definitivo: te deja la silueta estilizada y moderna abajo sin apretarte como calza arriba. encima con el elastano que le meten ahora no te parte al sentarte. si te va bien el tiro medio, para zapatillas de caña baja o zapas comunes calza perfecto.
+- 12:44 facundo: tengo unos levis premium 32x29 y 33x30 (2 pares de cada, indigo) que son crema mal. / claudio: agy respondiendo. los levis premium encima tienen mejor tela y caen mil veces mejor que la linea estandar. el largo 29 o 30 con ese corte te deja el quiebre justo sobre la zapatilla, sin que se te haga un acordeon abajo ni tengas que mandarlos a achicar. tener dos pares de cada uno en indigo es un golazo porque te...
+- 00:33 facundo: (aviso de claudio) / claudio: votaste 2: 0 a interesan, 0 quedan en maybe, 0 a ignoradas, 2 unfollow + ignore
+- 00:35 facundo: (aviso de claudio) / claudio: votaste 13: 1 quedan (interesan), 1 maybe, 11 no van
+- 00:36 facundo: (aviso de claudio) / claudio: votaste 5: 0 ignoradas, 4 para dejar de seguir, 0 quedan como están, 1 promote to active
+- 07:42 facundo: (aviso de claudio) / claudio: votaste 10: 0 quedan...
+
+## [tinder] lo que se hizo en tinder
+lo que hablo facundo en la pestaña:
+- 16:46 facundo: pausemos de nuevo lo de ig, me tiro la bronca ig :( / claudio: entendido, instagram te llamó la atención. Hoy ig-congelada.json tiene activa: false: los follows y unfollows siguen saliendo (pausas de 2 a 5 min, tope 60 por día) y solo están frenados lectura, dm, close y unclose. Para pausar de nuevo hace falta congelar todo, follow y unfollow incluidos, y que no se relogee solo...
+- 16:46 facundo: A: pausemos de nuevo lo de ig, me tiró la bronca ig: congelar todo instagram (follows, unfollows, lecturas y relogin) hasta que yo diga [escupir] / claudio: Hoy salen solo los follows y unfollows, con pausas de 2 a 5 minutos y un tope de 60 por día. Lo demás ya está frenado. La orden los frena también, y deja frenadas las lecturas, los mensajes directos y el relogin automático. OPCION A: {congelar-todo-ig} [modelo: agy/gemini-3.8-flash effort: medium] [toca...
+- 17:07 facundo: (tarea congelar-todo-ig: tema tinder: [modelo: agy/gemini-3.8-flash effort: medium] [toca: personal/ig-co) / claudio: terminó congelar-todo-ig (agy, chrome, reintento, cuenta orugote (sub gemini) (agy), 3 min, $0.00): Quedó congelado todo Instagram (follows, unfollows, lecturas, dm y relogin automático) con la cola de acciones totalmente quieta. - [personal/ig-congelada.json](file:///home/agente/.claudio/personal/ig-congelada.json)...
+- 23:30 facundo: podemos conectar de nuevo / claudio: Entiendo que querés volver a conectar instagram, o sea soltar el congelado total que pusimos hoy por la advertencia. Ahora está todo quieto: follows, unfollows, lecturas, dms y relogin automático. Si es eso, lo paso tal cual al comandante. Si querías decir otra cosa, decime y lo afinamos antes. OPCION A: [escupir]...
+- 23:31 facundo: todo no, que teniamos ? / claudio: antes del congelado total teníamos solo follow y unfollow andando. Salían con pausas de 2 a 5 min y un tope de 60 por día. Los hacía la mula, y la principal solo sincronizaba sus listas una vez al día, a ritmo lento. Lo demás ya estaba frenado: lectura, dm, close y unclose. El relogin_automatico estaba en false. Si...
+- 23:31 facundo: A: todo no: volver a como estaba antes del congelado total, con follow y unfollow andando y lecturas, dms, close, unclose y relogin automático frenados [escupir] / claudio: el descongelar que existe hoy suelta los seis frenos juntos, y vos querés soltar solo follow y unfollow. Por eso hace falta un cambio chico y no alcanza con correrlo. La orden suelta el...
+
+## [awtomic#2] lo que se hizo en awtomic#2
+lo que hablo facundo en la pestaña:
+- 11:25 facundo: (tarea post-condicionado: tema awtomic: dale, encolo el post condicionado: espera al push verificado [facu) / claudio: [awtomic#2] terminó post-condicionado (opus, cuenta awtomic (opus), 0 min, $0.62): No hice nada, porque esta caja ya se había ejecutado. Es el post condicionado del ticket de remove day customization and rely on (hall), que la orden colgado hizo el 24/09. Esta es la sexta vez que se vuelve a disparar sola: antes lo hizo en las órdenes post condicionado, 4031, 4093 y 4102....
+- 12:00 facundo: (tarea post-condicionado: tema awtomic: dale, encolo el post condicionado: espera al push verificado [facu) / claudio: [awtomic#2] terminó post-condicionado (opus, cuenta awtomic (opus), 0 min, $0.60): No hice nada: esta caja ya se había cumplido. Es el post condicionado del ticket de remove day customization and rely on, que salió en la orden colgado el 24/09. Se volvió a disparar sola por séptima vez, 35 min después de la de post condicionado. - Esta vez entró sin dejar línea en...
+- 12:22 facundo: (tarea post-condicionado: tema awtomic: dale, encolo el post condicionado: espera al push verificado [facu) / claudio: [awtomic#2] terminó post-condicionado (opus, cuenta awtomic (opus), 1 min, $1.04): No hice nada: esta caja ya se cumplió. Es el post del ticket de remove day customization and rely on (comment publicado y push al live verificado) que salió en la orden colgado el 24/09. Es la octava vez que se dispara sola, y hoy van tres: a las 11:25 am, a las 12:00 pm y a las...
+- 12:35 facundo: (tarea post-condicionado: tema awtomic: dale, encolo el post condicionado: espera al push verificado [facu) / claudio: [awtomic#2] terminó post-condicionado (opus, cuenta awtomic (opus), 0 min, $0.66): No hice nada: esta caja ya estaba cumplida. Es el post del ticket de remove day customization and rely on, que salió el 24/09 en la orden colgado. Se volvió a disparar sola por novena vez, y hoy ya van cuatro. - Esta vez sí quedó rastro del toque: una fila auto con la letra A en...
+
+## [awtomic/qa] lo que se hizo en awtomic/qa
+lo que hablo facundo en la pestaña:
+- 18:25 facundo: A: sigamos verificando: el ticket de the block works anywhere on the del plan de verify, con capturas y draft del comment corto, sin postear [escupir] / claudio: armamos la orden para verificar el ticket en qa y preparar la evidencia. OPCION A: {mvp6529-verificar} [modelo: claude/sonnet effort: high] [toca: qa/2026-10/mvp-6529/, qa/2026-10/ESTADO.md] [hilo: desde 12:17 pm] Verificar el fix del ticket de the block works anywhere on the en el store de prueba con los pasos del ticket, capturar la evidencia con...
+
+## [log] movimiento del agente
+- 13:53 nube_al_dia: codigo de cloud actualizado (ab52d4995faf448c -> e628f6a49382cbff)
+- 13:54 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 13:57 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:00 resumen de fondo (10 min): ×5 script flos_subprocesos: 0 subprocesos vivos
+- 14:00 resumen de fondo (10 min): ×4 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:00 resumen de fondo (10 min): ×4 script banco_pareado: pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:01 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:03 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:04 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 19 archivo(s) sincronizados
+- 14:04 nube_al_dia: codigo de cloud actualizado (e628f6a49382cbff -> ed897e8630ee7772)
+- 14:05 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:10 resumen de fondo (10 min): ×5 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:10 resumen de fondo (10 min): ×5 script banco_pareado: pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:10 resumen de fondo (10 min): ×5 script flos_subprocesos: 0 subprocesos vivos
+- 14:12 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:14 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:14 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 17 archivo(s) sincronizados
+- 14:14 nube_al_dia: codigo de cloud actualizado (ed897e8630ee7772 -> 8f362f0e3019e8c9)
+- 14:16 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:20 resumen de fondo (10 min): ×5 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:20 resumen de fondo (10 min): ×5 script banco_pareado: pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 14:20 resumen de fondo (10 min): ×4 script flos_subprocesos: 0 subprocesos vivos
+- 14:20 recolector: 10 temporales borrados
+- 14:21 nucleos_dieta: se podo solo (nada que podar) y 1 nucleo(s) SIGUEN arriba del tope: aviso
+- 14:22 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
