@@ -4432,3 +4432,57 @@ lo que hablo facundo en la pestaña:
 - 14:20 recolector: 10 temporales borrados
 - 14:21 nucleos_dieta: se podo solo (nada que podar) y 1 nucleo(s) SIGUEN arriba del tope: aviso
 - 14:22 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+
+### tramo 14:24-03:43 (hecho)
+## [awtomic/qa] lo que se hizo en awtomic/qa
+lo que hablo facundo en la pestaña:
+- 16:49 facundo: (tarea mvp6529-verificar: tema awtomic/qa: [modelo: claude/sonnet effort: high] [toca: qa/2026-10/mvp-6529) / claudio: terminó mvp6529-verificar (opus, chrome, cuenta awtomic (opus), 56 min, $6.22): GUARD DE ESCRITURA: 1 cosas que facundo ya corrigio. el caso entero en ~/w/awtomic/qa/2026-09/comments-aprendido.md: [subtitulo] linea 17: el ticket de the block works anywhere on the (comment público, 10 capturas, sin cambiar estado) -- el ticket de the block works anywhere on the (comment público, 10...
+- 17:13 facundo: se puede hacer mas corto el comment ? ws mecesario nombrar dawn ? / claudio: Sí, se puede acortar, y Dawn no hace falta nombrarlo. Es solo el theme que armé porque el qa store no tiene ninguno, y a quien lee el comment no le cambia nada. Saqué dos cosas: - Dawn y "copy", que quedan como "the theme's quick-add". - El párrafo del script viejo bloqueado. Es un dato para vos, no un caso del...
+- 17:15 facundo: 1 mas corto y con screenshots 2 proponeme postear , pasar a done y verificar el siguiente 3 paso 1 y 2 HACELO SIEMPRE que trabajemos en qa / claudio: entendí las tres cosas: - 1: el comment del ticket de the block works anywhere on the queda más corto y con las capturas adentro. - 2: al terminar de verificar un ticket me proponés postear, pasarlo a Done y seguir con el siguiente. - 3: esos dos pasos valen siempre que trabajemos en qa, así que los dejo como regla de la pestaña. La propuesta de...
+- 17:17 facundo: A: el ticket de the block works anywhere on the: 1) comment más corto y con screenshots; 2) proponerme postear, pasar a Done y verificar el siguiente; 3) los pasos 1 y 2 hacerlos SIEMPRE que trabajemos en qa, dejarlo como regla [escupir] / claudio: acá está el borrador recortado sin nombrar dawn y con las capturas listas para publicar: Verified in QA on the Subscription Widget block in an Apps section. Plan options, frequencies and variant changes update properly and reach the cart across main, secondary and quick-add forms. Other products and variants without...
+- 18:37 facundo: (tarea mvp6529-cerrar-y-mvp6530: tema awtomic/qa: [modelo: claude/sonnet effort: high] [toca: qa/2026-10/mvp-6529) / claudio: terminó mvp6529-cerrar-y-mvp6530 (opus, chrome, cuenta awtomic (opus), 17 min, $3.05): el ticket de the block works anywhere on the quedó en Done con el comment [74720]( es público, lleva el texto corto que aprobaste y las 10 capturas adentro. Releí el ticket a los 25 segundos y sigue en Done, con Brian de assignee. La regla quedó guardada en...
+- 19:08 facundo: (tarea mvp-6530-postear-uw63: tema awtomic/qa: el ticket de admin setup add the block and: postear el comment de arriba con las 7...
+
+## [juegos] lo que se hizo en juegos
+lo que hablo facundo en la pestaña:
+- 20:49 facundo: che red dead devolver y el otro no se ven / claudio: agy respondiendo. » revisando gamelist y archivos en la consola » consultando recetas de gamelist » verificando archivos de ps2 en la sd y estado de es-de » revisando gamelist xml en la consola » revisando proceso activo en la rp5 » chequeando estado de es-de » chequeando fecha del gamelist frente al arranque de es-de...
+- 20:53 facundo: y cargame todos las pantallas / claudio: agy respondiendo. fijate si te referís a que faltan las pantallas (capturas/screenshots y portadas en ES-DE) de Red Dead Revolver y Call of Duty: Finest Hour que entraron recién, o si querés scrapear las pantallas de todos los juegos de la librería que tengan huecos multimedia. aviso del guard: toca el daemon o el...
+- 22:58 facundo: no lo pasaste / claudio: agy respondiendo. no me llegó texto en el mensaje. decime qué querías pasar o qué vemos en la consola.
+- 22:59 facundo: > flaudio: agy respondiendo. > clarisimo, querias que baje las pantallas y portadas de toda la libreria, no solo de los dos que sumamos recien. > como scrapear la multimedia de todos los sistemas lleva su tiempo y no conviene frenar el chat mientras corre, lo pasam… pasaste esto... / claudio: agy respondiendo. no lo había pasado porque el turno anterior quedó en blanco y no dejó la caja. acá te dejo la caja para pasárselo en limpio al comandante y que lo ejecute.
+
+## [flos] lo que se hizo en flos
+lo que hablo facundo en la pestaña:
+- 23:01 facundo: estoy teniendo de nuevo este problema, arreglalo de raiz y lanzá la orden en cuestion ![IMG_8387.png](img/eae1e388f542-IMG_8387.png) / claudio: recibido. le paso la captura y el reclamo directo al comandante para que identifique la causa raíz del fallo en la cola y lance la orden correspondiente. OPCION A: [escupir] estoy teniendo de nuevo este problema (captura IMG_8387 adjunta), arreglalo de raiz y lanzá la orden en cuestion
+- 23:08 facundo: A: estoy teniendo de nuevo este problema (captura IMG_8387 adjunta), arreglalo de raiz y lanzá la orden en cuestion [escupir] / claudio: el subproceso perdió la charla previa por un error de nombres no definidos al armar el contexto y el interceptor dejó pasar la respuesta sin generar la caja. OPCION A: {reparar-historial-subproceso-y-cajas} [modelo: agy/gemini-4-argon effort: high] [toca: daemon_chat.py, flos/motor/subprocesos.py...
+- 00:06 facundo: (tarea reparar-historial-subproceso-y-cajas: tema flos: [modelo: agy/gemini-4-argon effort: high] [toca: flos/motor/subproces) / claudio: terminó reparar-historial-subproceso-y-cajas (agy, reintento, cuenta orugote (sub gemini) (agy), 7 min, $0.00): integrado: rama orden-4188 mergeada al vivo (2 archivos; verde; reinicio diferido pedido) reparada de raíz la carga de charla previa en...
+
+## [plata] lo que se hizo en plata
+lo que hablo facundo en la pestaña:
+- 22:27 facundo: (aviso de claudio) / claudio: wise: la verificación sigue pendiente (faltan tus fotos del dni y la cara desde el celu).
+
+## [log] movimiento del agente
+- 03:14 nube_al_dia: codigo de cloud actualizado (fd6dbb772ce32d1b -> 6e3de698c6d31850)
+- 03:14 nube_al_dia: codigo de la mac actualizado (ef67b0873f51173d -> 4ab4978af99c038b, 1 archivo(s), lo pisado en backup/codigo-del-server/2026-10-26 de la mac)
+- 03:18 resumen de fondo (10 min): ×5 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:18 resumen de fondo (10 min): ×5 script banco_pareado: pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:18 resumen de fondo (10 min): ×4 script flos_subprocesos: 0 subprocesos vivos
+- 03:20 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:22 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:24 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 16 archivo(s) sincronizados
+- 03:24 nube_al_dia: codigo de cloud actualizado (6e3de698c6d31850 -> 9cedaf83e258b425)
+- 03:25 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:28 resumen de fondo (10 min): ×4 script flos_subprocesos: 0 subprocesos vivos
+- 03:28 resumen de fondo (10 min): ×4 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:28 resumen de fondo (10 min): ×4 script banco_pareado: pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:29 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:31 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:32 cola trabada: espera de entorno vencida soltada (claude): tema flos: {python3} agrega la linea 'segunda' al final de n
+- 03:33 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:34 deploy_cloud: deploy a agente@100.87.19.20: rc=0, 14 archivo(s) sincronizados
+- 03:34 nube_al_dia: codigo de cloud actualizado (9cedaf83e258b425 -> c7f07cef8ec20a3b)
+- 03:38 resumen de fondo (10 min): ×5 script flos_subprocesos: 0 subprocesos vivos
+- 03:38 resumen de fondo (10 min): ×5 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:38 resumen de fondo (10 min): ×5 script banco_pareado: pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:39 pareado: reintente el juez del par 175 (orden): ningun juez gratis contesto
+- 03:41 cambio_sistema: caos-simulado: aplicado (rc=0); revert automatico en 60s (falso)
+- 03:42 chat lan: token...
