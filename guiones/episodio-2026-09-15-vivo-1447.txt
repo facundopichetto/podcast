@@ -1,8 +1,44 @@
-# actualizado hoy a las 14:24
-actualizado hoy, domingo veinticinco, a las catorce veinticuatro.
+# actualizado hoy a las 03:56
+actualizado hoy, martes veintisiete, a las tres cincuenta y seis.
 
 # de que va
 esto es el arranque de un episodio nuevo. cuenta desde las cinco y cuarenta y seis de la mañana del martes quince en adelante, y se va a ir alargando: cada media hora le pego un tramo con lo que pasó desde la actualización anterior. lo de este tramo llega hasta las tres menos cuarto de la tarde. hubo bastante de instagram, algo de awtomic con lafayette, el cierre de las votaciones de animaciones y unos movimientos del agente al mediodía.
+
+# awtomic qa: el ticket del bloque que anda en cualquier lado quedó en done, y ahora hay una regla fija
+en la pestaña de qa se verificó el ticket de the block works anywhere on the. la verificación tardó cincuenta y seis minutos, corrió con opus en la cuenta awtomic, con chrome, y costó seis dólares con veintidós. al terminar saltó el guard de escritura: el borrador repetía una cosa que vos ya habías corregido antes, y el caso quedó anotado en el archivo de lo aprendido de los comments.
+
+el primer borrador te pareció largo. preguntaste si se podía acortar y si hacía falta nombrar dawn. no hacía falta: dawn es solo el theme que armé porque el store de qa no tiene ninguno, y a quien lee el comment no le cambia nada. lo cambié por "el quick add del theme" y saqué un párrafo sobre un script viejo bloqueado, que era un dato para vos y no parte del caso.
+
+después pediste tres cosas: el comment todavía más corto y con las capturas adentro; que al terminar de verificar un ticket te proponga postear, pasarlo a done y seguir con el próximo; y que eso pase siempre que trabajemos en qa. quedó guardado como regla de la pestaña. la tarea de cierre tardó diecisiete minutos y tres dólares: el ticket quedó en done, con el comment público, el texto corto que aprobaste y las diez capturas. lo releí a los veinticinco segundos y seguía en done, con brian de assignee. enseguida arrancó el siguiente, el de admin setup add the block and, con la orden de postear su comment con las capturas.
+
+# el arreglo del error genérico del signup ya está en vivo en ocho de las diez tiendas
+el fix del ticket de club signup kit, generic error hides api validation errors salió al live. primero rehice los diffs contra el live de hoy, tocando solo los dos archivos del kit, y lo subí a siete tiendas, con hall primero en awtomic integrations. en cinco los archivos estaban igual que el diecinueve de octubre. después de cada subida saqué una captura del live. la tarea tardó setenta y dos minutos y costó tres dólares y medio, con opus en la cuenta awtomic.
+
+skywalker ya lo tenía de su propio ticket, así que quedaban dos: penfolds y wine club test. la revisión tardó dos minutos. penfolds ya tenía el fix, y a wine club test no tengo acceso, así que el balance queda en ocho de diez. el draft del comment final para emily, en inglés, está escrito y no lo posteé. el ticket sigue sin tocar hasta que vos digas.
+
+# flos: los subprocesos perdían la charla previa, y se arregló de raíz
+a las once de la noche me mandaste una captura: te volvía a pasar lo de siempre, y pediste que se arregle de raíz y que se lance la orden que se había perdido. eran dos fallas juntas. el subproceso armaba el contexto con unos nombres que no estaban definidos, se caía y arrancaba sin la charla previa. y el interceptor dejaba pasar la respuesta sin la caja de la orden.
+
+la orden la tomó agy con la suscripción de gemini de la cuenta orugote, en el reintento. tardó siete minutos y no costó nada. la rama se mergeó al vivo con dos archivos tocados, las pruebas en verde y el reinicio del agente diferido para cuando no haya tareas corriendo.
+
+a la mañana preguntaste qué era retrospectiva costo y por qué había corrido sola. es la retrospectiva diaria del sistema: está programada para correr una vez cada veinticuatro horas, cerca de la una y media de la madrugada, y revisa las tareas del último día.
+
+# el chat solo mastica pedidos, y pensar le toca al comandante
+en la pestaña de modelos te quejaste de que los chats razonan con poca cabeza, y preguntaste si había que subirles el effort. agy miró la captura y dijo que no era tema de inteligencia: el tope de lecturas que se puso para las preguntas de concepto también agarra a una repregunta técnica sobre una tarea ya hecha, y corta al modelo justo cuando tiene que mirar el código. quedó armada la orden para que ese corte no le caiga a las repreguntas técnicas.
+
+ahí marcaste el error de fondo: ese análisis lo hizo el chat solo, sin pasar por el comandante, y eso está muy mal. pediste dos cosas: arreglar que el chat razone de manera tonta, que pasó con sonnet en la pestaña de qa y con agy en la de modelos, y revisar de raíz lo que pasó en qa. lo cerraste con una línea: el chat solo debe masticar requerimientos, y para pensar está el comandante. agy te dio la razón y quedó dicho que ningún modelo del chat se pone a diagnosticar: escucha y le pasa el pedido en bruto al comandante.
+
+# i eat my greens: el build a box en tres pasos se puede hacer sin product, pero con código propio
+me pediste revisar el ticket de feasibility de i eat my greens sobre cómo customizar el layout del build a box, y los comments de brian. el merchant quiere tres pasos: primero el tamaño, después un selector entre compra única y subscribe and save, y las frecuencias en un desplegable. el mockup adjunto no lo abrí. después entró un comment nuevo del agente de brian, la versión corta del anterior, escrita como recomendación para mari: sugiere declinar el layout de tres pasos, y el ticket sigue esperando trabajo de ingeniería.
+
+después preguntaste dos cosas: si se puede hacer sin tocar product, y si eso nos deja mantenimiento para más adelante. a lo primero, sí, pero solo con javascript propio en los archivos custom del theme del merchant. no existe ningún setting para el selector ni para las frecuencias en desplegable, y con css solo no alcanza. eso lo dice el agente de brian; yo no lo comprobé por mi cuenta.
+
+# juegos: la multimedia de toda la librería quedó bajada, y después la consola se trabó
+arrancó con red dead revolver y call of duty finest hour, que habían entrado recién y no se veían. pediste que bajara las pantallas de todos los juegos. el turno siguiente quedó en blanco y no dejó la caja; cuando me lo marcaste la pasé, y la confirmaste para toda la librería.
+
+la tarea corrió con fable en la cuenta facundo, tardó sesenta y seis minutos y costó diez dólares. medí por adb las dos raíces de roms, la sd y la interna: son mil seiscientos sesenta y nueve juegos, los mismos que muestra es de en all games. bajé lo que faltaba, lo comprimí y lo verifiqué en la consola.
+
+más tarde me avisaste que se trabó la consola al abrir un juego. agy se puso a mirar el estado y los procesos por adb, y en lo que llegó hasta acá todavía no hay un diagnóstico.
 
 # hall: el post del ticket del día de entrega se disparó solo cuatro veces esta mañana
 en la pestaña de awtomic hay una caja vieja que sigue volviendo sola. es el post condicionado del ticket de hall de remove day customization and rely on, el que esperaba el push verificado al live para publicar el comment. eso ya salió el veinticuatro de septiembre: el comment está publicado y el push está verificado. igual, esta mañana se volvió a disparar a las once y veinticinco, a las doce, a las doce y veintidós y a las doce y treinta y cinco.
@@ -1046,6 +1082,14 @@ a las tres cuarenta y tres se corrió el caos simulado, la prueba que rompe algo
 a las once y seis preguntaste si no te faltaban juegos de amiga. te sorprendió que prince se vea mejor que en las consolas de esa época, y no sabías bien qué era la amiga. agy te contó que fue una computadora de commodore de fines de los ochenta y principios de los noventa, la quinientos y la mil doscientos, que pegó un salto en pixel art, en sonido con chips dedicados y en animación fluida, antes de que dominaran la super nintendo y la genesis. hoy en la consola tenés solamente prince of persia.
 
 a las once y doce elegiste armar una colección curada de clásicos de amiga para la rp5. quedó armada la orden de la colección de amiga con los juegos que te nombró agy, con una condición: cada juego tiene que estar probado en partida antes de darlo por listo, para que no pase lo de otras colecciones que entraron sin probar.
+
+# la tanda de votos de instagram
+votaste veintiuno en el votador de tu instagram personal. ninguno quedó en interesan, cinco fueron a maybe y dieciséis no van.
+
+# lo que se movió en el agente de madrugada
+entre las tres y media y las cuatro hubo tres deploys a cloud, todos sin error, y el código de la nube quedó al día con lo último. el juez del pareado siguió reintentando el mismo par cada dos minutos, y ningún juez gratis contestó en todo el rato.
+
+a las cuatro menos diez saltó un aviso de seguridad: hacía media hora que la cpu estaba alta, con una carga de ciento veintiséis en doce núcleos, casi toda de python. fue solo al buzón, sin despertar a nadie. a las cuatro menos seis corrió el caos simulado, con el revert automático a los sesenta segundos. y un minuto después el chat de la red de casa rechazó un token que no era tuyo.
 
 # el board en el celular: el modal de pestaña nueva quedó más lindo
 a las doce y dieciocho mandaste una captura del board con varias cosas feas y pediste que se le pase tal cual al comandante para que lo deje más lindo. en el chat te dije que no encontraba la captura en el disco con ese nombre, así que la orden salió con el nombre del archivo y la indicación de buscarla antes de tocar nada.
