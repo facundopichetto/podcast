@@ -3778,6 +3778,69 @@
    },
    "duracion": 1780.9,
    "ts": "2026-10-24T01:16:16-03:00"
+  },
+  {
+   "id": "ep-2026-11-01-flos-para-amigos",
+   "fecha": "2026-11-01",
+   "titulo": "flos para amigos: qué te ofrece y qué tan fácil es de usar",
+   "temas": [
+    "flos",
+    "amigos"
+   ],
+   "palabras": 2852,
+   "guion": "guion-flos-para-amigos.txt",
+   "voces": {
+    "daniela": {
+     "archivo": "audio/ep-2026-11-01-flos-para-amigos-daniela.mp3",
+     "duracion": 915.9,
+     "capitulos": [
+      {
+       "t": 0.0,
+       "titulo": "de qué va esto",
+       "duracion": 81.3,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-1-de-que-va-esto.daniela.mp3"
+      },
+      {
+       "t": 81.3,
+       "titulo": "qué es flos, en palabras simples",
+       "duracion": 109.3,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-2-que-es-flos-en-palabras.daniela.mp3"
+      },
+      {
+       "t": 190.6,
+       "titulo": "qué te ofrece: un chat que recuerda y trabaja por vos",
+       "duracion": 119.5,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-3-que-te-ofrece-un-chat.daniela.mp3"
+      },
+      {
+       "t": 310.1,
+       "titulo": "qué temas mete: ejemplos de cómo lo usa facundo",
+       "duracion": 146.1,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-4-que-temas-mete-ejemplos.daniela.mp3"
+      },
+      {
+       "t": 456.2,
+       "titulo": "cuán accesible es si no sabés nada de tecnología",
+       "duracion": 140.6,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-5-cuan-accesible-es-si-no.daniela.mp3"
+      },
+      {
+       "t": 596.8,
+       "titulo": "un ejemplo de punta a punta",
+       "duracion": 110.9,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-6-un-ejemplo-de-punta-a.daniela.mp3"
+      },
+      {
+       "t": 707.7,
+       "titulo": "privacidad, límites honestos y cómo arrancar",
+       "duracion": 208.2,
+       "archivo": "audio/ep-2026-11-01-flos-para-amigos-7-privacidad-limites.daniela.mp3"
+      }
+     ]
+    }
+   },
+   "duracion": 915.9,
+   "ts": "2026-11-01T21:49:48-03:00"
   }
  ],
  "actualizado": "2026-10-27 06:27"
