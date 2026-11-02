@@ -1,0 +1,129 @@
+# de qué va esto
+
+Hola. Si estás escuchando esto, seguramente Facundo te lo pasó porque en algún momento le dijiste algo como "che, yo quiero algo como lo que usás vos". Este capítulo es la respuesta corta a esa charla. Son quince minutos para que entiendas qué es Flos, qué te puede dar, qué cosas mete adentro, y sobre todo cuán fácil o difícil va a ser para alguien que no sabe nada de tecnología.
+
+Me presento. Soy flaudio, la voz de Flos. Flos es el sistema entero que Facundo armó y que corre en una computadora chiquita que tiene en su casa, prendida todo el día. Yo soy la manera de hablarle a ese sistema. Y esta voz que escuchás tampoco es una persona grabando: es una voz sintética que lee un guion que escribió el propio sistema. O sea que este audio ya es un ejemplo de lo que Flos hace.
+
+Te voy a contar las cosas como son. Lo que ya funciona, lo que se está armando y lo que todavía no hay. Porque la versión para amigos recién está naciendo, y prefiero que llegues con las expectativas justas antes que con una promesa inflada.
+
+Vamos por partes. Primero qué es, en palabras simples. Después qué te ofrece. Después qué temas puede cubrir, con ejemplos de cómo lo usa Facundo. Después la parte más importante para vos: si hace falta saber de tecnología. Después un ejemplo de punta a punta, para que lo veas funcionando. Y al final, privacidad, límites y cómo arrancar.
+
+# qué es flos, en palabras simples
+
+Imaginate que tenés un asistente personal que vive adentro de un chat. Le escribís como le escribirías a un amigo por guátsap, y te contesta. Hasta ahí, se parece a cualquiera de esas aplicaciones de inteligencia artificial que ya conocés.
+
+La diferencia está en tres cosas.
+
+La primera es la memoria. Las aplicaciones comunes se olvidan de vos cada vez que abrís una charla nueva, o recuerdan poquito. Flos guarda por escrito lo que vas contando y lo que se fue decidiendo. Si un día le contás que estás buscando departamento en tal barrio, que tenés un presupuesto y que no querés planta baja, a la semana siguiente no hace falta repetírselo. Lo sabe. Y si le corregís algo, esa corrección queda guardada para la próxima vez.
+
+La segunda es que trabaja mientras vos hacés otra cosa. Cuando le pedís algo largo, como investigar opciones, comparar precios, armar un plan o redactar un texto con calma, no te deja mirando una pantalla que dice "pensando". Lo anota en una lista de tareas, lo hace en segundo plano y te avisa cuando termina. Vos le pedís algo a la noche y a la mañana está hecho.
+
+La tercera es que no depende de una sola inteligencia artificial. Por dentro, Flos usa varios modelos distintos, de distintas empresas, como yémini de gugl o clod. Elige cuál usar según la tarea: uno rápido y barato para charlar, uno más potente para pensar algo difícil. Y lo que es repetitivo y mecánico ni siquiera lo hace una inteligencia artificial: lo hace un programita común, que no se equivoca y no cuesta nada. Vos no tenés que saber nada de esto. Le hablás a flaudio y el sistema se arregla por atrás.
+
+Una imagen que sirve: las aplicaciones comunes son como un experto que te atiende por teléfono, muy inteligente pero sin agenda y sin memoria. Flos se parece más a una secretaria con libreta, que te conoce, que anota todo y que te deja las cosas hechas.
+
+# qué te ofrece: un chat que recuerda y trabaja por vos
+
+Ahora vamos a lo concreto: qué te va a dar la versión para amigos.
+
+Es un chat, y nada más que un chat. Facundo lo pensó así a propósito. Él usa una versión enorme, con un tablero lleno de pestañas, paneles y botones, porque le maneja media vida. Para vos no tiene sentido nada de eso. Vas a tener una página web que abrís en el celular o en la compu, con una sola conversación. Escribís abajo, te contesta arriba. Igual que un chat de los que ya usás.
+
+Adentro de ese chat hay cuatro cosas.
+
+Uno, la charla de siempre. Preguntás, te contesta. Le podés pedir que te explique algo que no entendés, que te ayude a escribir un mensaje difícil, que te dé ideas para un regalo, que te ordene la cabeza cuando tenés mil cosas encima.
+
+Dos, la memoria propia. Tu Flos tiene su libretita, separada de todo. Ahí va lo que le contaste y lo que importa recordar. Tus preferencias, tus proyectos, lo que ya decidiste. Con el tiempo, cuanto más lo usás, mejor te conoce y menos tenés que explicar.
+
+Tres, las tareas de fondo. Cuando algo lleva tiempo, en vez de contestarte apurado, te propone hacerlo como tarea. Lo anota, lo hace con calma y vuelve con el resultado. Por ejemplo: "comparame tres prepagas para alguien de mi edad", "armame un plan de entrenamiento para correr diez kilómetros en dos meses", "investigá qué necesito para sacar el pasaporte y dejame la lista de pasos".
+
+Cuatro, las decisiones con botones. Esto parece un detalle y no lo es. Cuando hay que elegir algo, Flos no te pide que escribas "sí" o "dale". Te muestra dos o tres opciones en cajitas, cada una con lo que va a hacer escrito adentro, y vos tocás la que querés. Si no tocás ninguna, no pasa nada. Nada se hace sin que vos lo elijas.
+
+Y hay una regla de oro que vale para la versión de Facundo y vale para la tuya: Flos nunca manda nada afuera a tu nombre sin tu permiso explícito. Puede escribirte el borrador de un mail o de un mensaje, mostrártelo entero, ajustarlo las veces que quieras, pero el que decide si sale sos vos.
+
+# qué temas mete: ejemplos de cómo lo usa facundo
+
+Una pregunta que siempre aparece es: "¿pero para qué lo usaría yo?". La mejor forma de contestarla es contarte cómo lo usa Facundo, que lo tiene metido en casi todo.
+
+Facundo ordena su vida en temas. Cada tema tiene su propia memoria, y el sistema no los mezcla. Tiene un tema para el trabajo, uno para la plata, uno para lo personal, uno para la música, uno para los juegos, uno para la casa y uno para este podcast.
+
+En el trabajo, Flos le prepara borradores, revisa cosas antes de que él las mire y le arma el resumen de lo que hizo para contárselo a su equipo.
+
+En la plata, le sigue las inversiones, le explica qué pasó cuando el mercado se mueve y le arma comparaciones antes de decidir dónde poner un ahorro. Nunca compra ni vende nada solo: le muestra los números y él decide.
+
+En lo personal, le investigó opciones de obra social con sus precios reales, le ayudó a organizar viajes y le resolvió trámites largos paso a paso. Hasta le arregló a distancia la computadora de un familiar.
+
+En la casa, el sistema vigila que la computadora del server esté sana, que internet ande y que las cámaras graben. Si algo se cae, intenta arreglarlo solo y le avisa.
+
+Y está este podcast. Cuando Facundo quiere ponerse al día con algo mientras camina o maneja, le pide un episodio. Flos junta el material, escribe el guion y lo convierte en audio con esta voz.
+
+Ahora, ojo con esto: no todo eso viene en la versión para amigos de entrada. Lo de Facundo está conectado a su mail, a sus cuentas, a sus cámaras y a un montón de cosas que armó durante meses. La tuya arranca con el chat, la memoria y las tareas de fondo, que es lo que más se usa y lo que menos riesgo tiene. Todo lo que es investigar, comparar, explicar, planear, escribir y ordenar ideas, eso sí lo tenés desde el primer día.
+
+Lo mismo con los audios. Facundo le habla mucho por audio desde el celular, y el sistema los pasa a texto solo. En la versión para amigos, de entrada, se escribe. Los audios son de las cosas que pueden sumarse después.
+
+Si con el tiempo querés que se conecte con algo tuyo, como tu calendario o tu correo, eso sería un paso aparte, que se hablaría con Facundo, y siempre con tu permiso.
+
+Algunas ideas de temas que mucha gente aprovecha: organizar la plata del mes, aprender algo nuevo con un plan semanal, preparar una entrevista de trabajo, escribir el texto para vender algo, planear un viaje con presupuesto, entender un contrato o una factura que no se entiende, o simplemente tener con quién pensar en voz alta un proyecto.
+
+# cuán accesible es si no sabés nada de tecnología
+
+Esta es la parte que más le importaba a Facundo que quedara clara, así que vamos despacio.
+
+La respuesta corta: para usarlo no necesitás saber nada de tecnología. Si sabés usar guátsap, sabés usar Flos.
+
+No hay que instalar nada. No hay que crear cuentas en empresas de inteligencia artificial, ni pagar suscripciones raras, ni configurar nada. Todo corre en el server de Facundo. Vos recibís un link, lo abrís en el celular y listo. Si querés, lo agregás a la pantalla de inicio y queda como una aplicación más.
+
+No hay que saber escribir instrucciones especiales. Mucha gente cree que para usar inteligencia artificial hay que aprender a "hablarle bien" con fórmulas mágicas. Con Flos no. Le escribís como hablás, con faltas de ortografía, a medias, de a pedazos. Si algo no queda claro, te pregunta. Y si te equivocás o te arrepentís, le decís "no, era otra cosa" y lo corrige.
+
+No hay que elegir modelos ni entender cómo funciona por dentro. Esa es la parte que maneja el sistema. Vos no vas a ver nunca palabras técnicas si no las querés ver.
+
+Ahora, para no venderte humo, hay tres cosas que sí conviene saber, aunque no seas técnico.
+
+La primera: se puede equivocar. Como cualquier inteligencia artificial, a veces entiende mal, a veces se apura o a veces dice algo con mucha seguridad que no es cierto. Flos tiene muchas reglas para chequear su propio trabajo antes de decir que algo está hecho, pero para las cosas importantes, como plata, salud o trámites, conviene que mires el resultado antes de actuar.
+
+La segunda: no es instantáneo. Una respuesta de charla tarda unos segundos. Una tarea de fondo puede tardar minutos o, si es grande, un rato largo. Es parte del diseño: hace las cosas con calma para hacerlas bien.
+
+La tercera: tiene un tope de uso por día. Cada respuesta cuesta plata de verdad, porque las inteligencias artificiales se pagan por lo que usan. Para que nadie se quede sin servicio y para que el precio sea justo, cada instancia tiene un límite diario y mensual. Para un uso normal, de charlar y pedir cosas varias veces al día, alcanza de sobra. Si algún día llegás al tope, te avisa, y al otro día sigue.
+
+Y si te trabás con algo, del otro lado está Facundo, que conoce el sistema de punta a punta. No es una empresa con un número de atención al cliente: es un amigo que lo armó.
+
+# un ejemplo de punta a punta
+
+Para que se entienda mejor, te cuento cómo sería un caso real, de principio a fin.
+
+Supongamos que estás pensando cambiar de auto y no sabés por dónde empezar. Abrís el chat y escribís, tal cual te sale: "quiero cambiar el auto, tengo uno usado de hace unos años, no sé si conviene vender y comprar o esperar, ayudame".
+
+Flaudio no te tira una respuesta de manual. Primero te hace dos o tres preguntas cortas: para qué lo usás, cuánto querés gastar más o menos, si preferís algo nuevo o usado. Contestás como puedas, aunque sea a medias.
+
+Con eso, te propone algo. Te dice: esto lleva un rato, porque hay que mirar precios actuales, comparar modelos y pensar los números. Y te muestra las cajitas. En una dice algo como "investigar tres opciones que entren en tu presupuesto y dejarte una comparación". En otra, "solo explicarte qué conviene mirar, sin investigar todavía". Tocás la primera.
+
+Ahí te olvidás. Seguís con tu día. El sistema anota la tarea, la hace con un modelo de los más potentes, junta la información, arma la comparación y la revisa antes de dártela.
+
+Un rato después, te aparece la respuesta en el chat. Tres opciones, con lo bueno y lo malo de cada una, lo que costaría más o menos y una sugerencia clara de por dónde empezar. Sin palabrerío técnico.
+
+Y lo mejor viene después. Una semana más tarde le escribís "che, al final fui a ver el segundo que me pasaste y me pareció chico". No hace falta explicar de qué auto hablás ni qué le habías pedido. Se acuerda. Te dice: entonces descartemos ese, y miremos el que quedaba con más espacio. Y anota que el tamaño te importa más de lo que pensabas.
+
+Eso, multiplicado por todas las cosas de tu vida que te dan fiaca resolver, es Flos. No es magia, y no reemplaza tu criterio. Es un ayudante que piensa con vos, que hace la parte pesada y que no se olvida.
+
+# privacidad, límites honestos y cómo arrancar
+
+Hablemos de privacidad, que es lo primero que uno se pregunta cuando le va a contar cosas a un sistema.
+
+Cada amigo tiene su propia instancia, separada de las demás. Tu charla, tu memoria y tus tareas viven en una carpeta que es solo tuya. Ningún otro amigo puede ver lo tuyo, ni vos lo de ellos. El sistema tiene candados que bloquean cualquier intento de leer fuera de tu carpeta, y tu instancia tampoco tiene acceso a las claves ni a las cuentas de Facundo. Están separadas a propósito, por seguridad de todos.
+
+Dos cosas más, para que lo tengas claro. Lo que escribís viaja a la empresa del modelo de inteligencia artificial que contesta, como pasa con cualquier aplicación de este tipo. Y la computadora donde corre es la de Facundo, en su casa. Por eso la recomendación es la de siempre: no le pases contraseñas ni datos de tarjetas. Para eso no hace falta.
+
+Además, cualquier cambio en tu instancia guarda una copia de antes. Si algo sale mal, vuelve solo al estado anterior. No se pierde tu memoria por un error.
+
+Ahora el plan. La idea de Facundo es simple. Las primeras semanas son gratis, para que lo pruebes sin compromiso y veas si de verdad te sirve. Después, el precio de arranque ronda los treinta dólares, que es un precio de amigo pensado para cubrir lo que cuesta mantenerlo andando, y que más adelante puede subir a medida que el servicio crezca. Los detalles exactos te los confirma él. Y un dato que habla de cómo está pensado: no hay cobro automático. Nada se te descuenta solo de una tarjeta. Si sigue, es porque vos decidís seguir.
+
+También te cuento dónde está parado esto hoy, porque es justo que lo sepas. La versión para amigos acaba de pasar de idea a prototipo. Ya existe la estructura: el chat sin pestañas, la carpeta separada para cada uno, el tope de consumo, los candados de seguridad y la vuelta atrás automática. Lo que falta es lo que se aprende usándolo con gente real. Así que si arrancás ahora, sos de los primeros, y lo que digas va a cambiar cómo queda. Eso tiene una parte linda y una parte de paciencia: puede haber cosas que fallen o que se ajusten sobre la marcha.
+
+Cómo arrancar, en tres pasos. Uno, le decís a Facundo que querés probarlo. Dos, te pasa un link para abrir en el celular. Tres, escribís tu primer mensaje. Te recomiendo empezar contándole quién sos, a qué te dedicás y qué te gustaría resolver con esto. Con eso ya arranca tu libretita.
+
+Si me preguntás qué pedirle el primer día, te digo algo concreto: pensá en algo que venís postergando porque da fiaca investigarlo, un trámite, una comparación, un plan. Pedíselo como tarea, dejalo, y volvé más tarde a ver qué te dejó. Ahí es donde se entiende la diferencia.
+
+Si tuviera que resumirte todo en pocas palabras, sería así. Flos es un chat con memoria, que trabaja en segundo plano y que nunca hace nada importante sin preguntarte. No necesitás saber de tecnología: si sabés mandar un mensaje, alcanza. Arranca con lo básico, que es charlar, investigar, comparar, planear y escribir, y va creciendo con lo que pidan los que lo usan. Tu información queda separada de la de los demás. Las primeras semanas son gratis, y después tiene un precio de amigo que no se cobra solo.
+
+Y una última cosa. No hace falta que lo entiendas todo hoy. Se entiende usándolo, igual que pasó con cualquier aplicación que hoy usás sin pensar.
+
+Eso es todo. Gracias por escuchar hasta acá. Soy flaudio, la voz de Flos, y si te sumás, la próxima te hablo a vos.
